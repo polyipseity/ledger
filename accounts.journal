@@ -1,0 +1,11 @@
+account assets                                                        ; type: A
+account assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current  ; type: C
+account assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings  ; type: C
+account assets:cash                                                   ; type: C
+account equity                                                        ; type: E
+account equity:conversion                                             ; type: V
+account liabilities                                                   ; type: L
+account revenues                                                      ; type: R
+account revenues:income                                               ; type: R
+account revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7          ; type: R
+account expenses                                                      ; type: X
