@@ -5,7 +5,6 @@ include ../../prelude.journal
     assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     33 438.32 HKD = 33 438.32 HKD
     equity:conversion                                                   -30.64 HKD = -30.64 HKD
     equity:conversion                                                     4.00 USD = 4.00 USD
-    equity:opening/closing balances                                 -34 739.63 HKD = -34 739.63 HKD
     equity:opening/closing balances
 
 2023-08-01 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7

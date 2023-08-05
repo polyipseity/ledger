@@ -2,7 +2,6 @@ include ../../prelude.journal
 
 2023-06-01 opening balances
     assets:cash                        17 000.00 HKD = 17 000.00 HKD
-    equity:opening/closing balances    -5 150.00 HKD = -5 150.00 HKD
     equity:opening/closing balances
 
 2023-06-01 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
@@ -67,5 +66,4 @@ include ../../prelude.journal
 
 2023-06-30 closing balances
     assets:cash                        -21 335.00 HKD = 0.00 HKD
-    equity:opening/closing balances     17 000.00 HKD = 0.00 HKD
     equity:opening/closing balances
