@@ -1,7 +1,6 @@
 include ../../prelude.journal
 
 2023-03-01 opening balances
-    assets:cash                                   0 = 0.00 HKD
     equity:opening/closing balances
 
 2023-03-03 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
