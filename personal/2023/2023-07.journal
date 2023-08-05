@@ -15,7 +15,7 @@ include ../../prelude.journal
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-07-09 One time support for polyipseity - ******@***************.com,
+2023-07-09 One time support for polyipseity - ******@***************.com, c89bab9b-373c-481d-a59b-93fa3b01ce7a
     revenues:donations:Buy Me a Coffee:polyipseity       -1.00 USD
     expenses:fees:Buy Me a Coffee                         0.38 HKD
     expenses:fees:Stripe                                  2.61 HKD
