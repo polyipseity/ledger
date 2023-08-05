@@ -1,0 +1,47 @@
+include ../../prelude.journal
+
+2023-04-01 opening balances
+    assets:cash                        2 950.00 HKD = 2 950.00 HKD
+    equity:opening/closing balances               0 = 0.00 HKD
+    equity:opening/closing balances
+
+2023-04-05 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-06 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-07 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    assets:cash
+
+2023-04-12 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-13 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-14 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-28 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
+    assets:cash
+
+2023-04-29 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-30 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    assets:cash
+
+2023-04-30 closing balances
+    assets:cash                        -5 150.00 HKD = 0.00 HKD
+    equity:opening/closing balances     2 950.00 HKD = 0.00 HKD
+    equity:opening/closing balances

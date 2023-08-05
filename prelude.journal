@@ -5,11 +5,18 @@ account assets:cash                                                   ; type: C
 account equity                                                        ; type: E
 account equity:conversion                                             ; type: V
 account equity:opening/closing balances                               ; type: E
+account equity:pending                                                ; type: E
 account liabilities                                                   ; type: L
 account revenues                                                      ; type: R
+account revenues:donations:Buy Me a Coffee:polyipseity                ; type: R
 account revenues:income                                               ; type: R
+account revenues:income:tutoring                                      ; type: R
 account revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7          ; type: R
+account revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7:bonus    ; type: R
+account revenues:interests                                            ; type: R
 account expenses                                                      ; type: X
+account expenses:fees:Buy Me a Coffee                                 ; type: X
+account expenses:fees:Stripe                                          ; type: X
 
 commodity 99 999 999.00
 commodity 99 999 999.00 HKD
