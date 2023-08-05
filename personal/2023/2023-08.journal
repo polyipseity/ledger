@@ -1,8 +1,8 @@
 include ../../prelude.journal
 
 2023-08-01 opening balances
-    assets:cash                                                      24 535.00 HKD = 24 535.00 HKD
     assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     33 438.32 HKD = 33 438.32 HKD
+    assets:cash                                                      24 535.00 HKD = 24 535.00 HKD
     equity:conversion                                                   -30.64 HKD = -30.64 HKD
     equity:conversion                                                     4.00 USD = 4.00 USD
     equity:opening/closing balances
