@@ -33,7 +33,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-06 ! (a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
+2023-08-06 ! (a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, time: 01:03:55, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
     revenues:donations:Buy Me a Coffee:polyipseity      -309.00 USD  ; @ 7.65434 HKD
     equity:conversions:HKD-USD:USD                       309.00 USD
     equity:conversions:HKD-USD:HKD                    -2 365.19 HKD
