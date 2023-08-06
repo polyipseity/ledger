@@ -10,7 +10,7 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-02 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: lunch
@@ -42,7 +42,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-06-06 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-07 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1  ; timezone: UTC+08:00, activity: tutoring
@@ -50,7 +50,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-06-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-08 transport  ; timezone: UTC+08:00, activity: transport
@@ -71,15 +71,15 @@ include ../../prelude.journal
     assets:cash
 
 2023-06-11 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
+    revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
 2023-06-12 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-13 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: lunch
@@ -99,11 +99,11 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-19 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-24 b05861a9-99cb-454d-95d4-e5ce13ef100a  ; timezone: UTC+08:00, activity: tutoring, duration: PT1H
@@ -111,7 +111,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-06-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-26 7-Eleven  ; timezone: UTC+08:00, activity: add value
@@ -123,7 +123,7 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-06-28 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: lunch

@@ -10,7 +10,7 @@ include ../../prelude.journal
     equity:opening/closing balances
 
 2023-08-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-08-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: dinner
@@ -22,7 +22,7 @@ include ../../prelude.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-08-03 49c186e5-f575-43ec-b73b-48d200eb27be  ; timezone: UTC+08:00, activity: tutoring
@@ -30,7 +30,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-04 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-08-06 ! (a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28

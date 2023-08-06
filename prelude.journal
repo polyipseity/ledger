@@ -38,9 +38,8 @@ account revenues                                                           ; typ
 account revenues:donations                                                 ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                     ; type: R
 account revenues:incomes                                                   ; type: R
+account revenues:incomes:bonuses                                           ; type: R
 account revenues:incomes:tutoring                                          ; type: R
-account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7              ; type: R
-account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7:bonus        ; type: R
 account revenues:interests                                                 ; type: R
 account revenues:special                                                   ; type: R
 

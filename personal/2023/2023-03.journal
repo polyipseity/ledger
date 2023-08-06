@@ -4,31 +4,31 @@ include ../../prelude.journal
     equity:opening/closing balances
 
 2023-03-03 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    revenues:incomes:tutoring     -200.00 HKD
     assets:cash
 
 2023-03-15 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
+    revenues:incomes:tutoring     -200.00 HKD
     assets:cash
 
 2023-03-17 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
+    revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
 2023-03-18 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -350.00 HKD
+    revenues:incomes:tutoring     -350.00 HKD
     assets:cash
 
 2023-03-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
+    revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
 2023-03-24 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
+    revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
 2023-03-31 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -700.00 HKD
+    revenues:incomes:tutoring     -700.00 HKD
     assets:cash
 
 2023-03-31 closing balances  ; timezone: UTC+08:00
