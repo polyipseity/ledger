@@ -1,5 +1,6 @@
 account assets                                                             ; type: A
 account assets:banks                                                       ; type: A
+account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                  ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current      ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      ; type: C
 account assets:cash                                                        ; type: C
