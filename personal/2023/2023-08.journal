@@ -7,19 +7,19 @@ include ../../prelude.journal
     equity:conversion                                                     4.00 USD = 4.00 USD
     equity:opening/closing balances
 
-2023-08-01 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-08-01 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-08-02 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-08-02 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-08-03 tutoring, 49c186e5-f575-43ec-b73b-48d200eb27be secondary 2 student
+2023-08-03 tutoring: 49c186e5-f575-43ec-b73b-48d200eb27be secondary 2 student
     revenues:income:tutoring     -150.00 HKD
     assets:cash
 
-2023-08-04 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-08-04 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 

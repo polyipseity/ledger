@@ -4,31 +4,31 @@ include ../../prelude.journal
     assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     13 404.63 HKD = 13 404.63 HKD
     equity:opening/closing balances
 
-2023-03-03 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-03 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
     assets:cash
 
-2023-03-15 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-15 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
     assets:cash
 
-2023-03-17 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-17 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
     assets:cash
 
-2023-03-18 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-18 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -350.00 HKD
     assets:cash
 
-2023-03-21 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-21 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
     assets:cash
 
-2023-03-24 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-24 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
     assets:cash
 
-2023-03-31 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-03-31 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -700.00 HKD
     assets:cash
 
