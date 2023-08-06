@@ -49,3 +49,33 @@ commodity 99 999 999.00 HKD
 commodity 99 999 999.00 USD
 
 decimal-mark .
+
+payee ******************@******.com
+payee ******@***************.com
+payee ***@*******.com
+payee Circle K
+payee Hong Kong Government
+payee Stripe
+payee 49c186e5-f575-43ec-b73b-48d200eb27be
+payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
+payee 6ff58fb3-4579-4533-aab9-8575033136c7
+payee 7-Eleven
+payee 810c451f-b2e5-4c98-8433-b1451593c457
+payee 82050afc-aac6-41aa-8066-d436a2c5434d
+payee b05861a9-99cb-454d-95d4-e5ce13ef100a
+payee bank
+payee closing balances
+payee f599f52c-f397-4316-843f-b5b8285a9dba
+payee opening balances
+payee self
+payee transport
+
+tag activity
+tag bounty
+tag consumption
+tag dining
+tag duration
+tag valid
+tag vouchers
+tag time
+tag type

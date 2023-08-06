@@ -5,44 +5,44 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.60 HKD = -4.6 HKD
     equity:opening/closing balances
 
-2023-05-01 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
     assets:cash
 
-2023-05-02 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -200.00 HKD
     assets:cash
 
-2023-05-03 add value via 7-Eleven
+2023-05-03 7-Eleven  ; activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
-2023-05-03 consumption: 7-Eleven
+2023-05-03 7-Eleven  ; activity: consumption
     expenses:consumption                                                   16.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-03 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-03 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-06 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-06 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -600.00 HKD
     assets:cash
 
-2023-05-07 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7            -300.00 HKD
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7:bonus    -5 000.00 HKD
     assets:cash
 
-2023-05-08 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-08 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-09 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-09 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-10 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-10 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
@@ -54,15 +54,15 @@ include ../../prelude.journal
     expenses:transport:buses:41b33891-3b43-4ac6-9ebb-42d8737ae227            5.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-11 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-11 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-12 add value via 7-Eleven
+2023-05-12 7-Eleven  ; activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-05-12 dining (breakfast): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-12 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: breakfast
     expenses:food:restaurants                                              34.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -73,31 +73,31 @@ include ../../prelude.journal
     expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           2.80 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-14 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-14 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-16 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-16 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-17 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-17 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-19 consumption: 7-Eleven
+2023-05-19 7-Eleven  ; activity: consumption
     expenses:consumption                                                    8.50 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-20 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-21 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-21 consumption: 7-Eleven
+2023-05-21 7-Eleven  ; activity: consumption
     expenses:consumption                                                   16.50 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -106,59 +106,59 @@ include ../../prelude.journal
     expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          7.10 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-22 add value via 810c451f-b2e5-4c98-8433-b1451593c457
+2023-05-22 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-05-23 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-23 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: lunch
     expenses:food:restaurants                                              51.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-23 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-23 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-24 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-24 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-25 dining (afternoon tea): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-25 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: afternoon tea
     expenses:food:restaurants                                              35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-25 add value via 7-Eleven
+2023-05-25 7-Eleven  ; activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:cash
 
-2023-05-25 dining (dinner): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-25 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: dinner
     expenses:food:restaurants                                             140.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-26 dining (breakfast): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-26 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: breakfast
     expenses:food:restaurants                                              31.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-26 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-26 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -400.00 HKD
     assets:cash
 
-2023-05-27 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-27 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: lunch
     expenses:food:restaurants                                              35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-28 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-28 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-29 dining (breakfast): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-29 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: breakfast
     expenses:food:restaurants                                              35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-29 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-29 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: lunch
     expenses:food:restaurants                                              50.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-29 add value via 7-Eleven
+2023-05-29 7-Eleven  ; activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
@@ -169,15 +169,15 @@ include ../../prelude.journal
     expenses:transport:buses:41b33891-3b43-4ac6-9ebb-42d8737ae227            9.60 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-30 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -350.00 HKD
     assets:cash
 
-2023-05-31 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
+2023-05-31 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
-2023-05-31 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd. Co. Ltd.
+2023-05-31 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: dining, dining: lunch
     expenses:food:restaurants                                              39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
