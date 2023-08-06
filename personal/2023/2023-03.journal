@@ -1,7 +1,6 @@
 include ../../prelude.journal
 
 2023-03-01 opening balances
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    13 404.63 HKD = 13 404.63 HKD
     equity:opening/closing balances
 
 2023-03-03 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
@@ -33,6 +32,5 @@ include ../../prelude.journal
     assets:cash
 
 2023-03-31 closing balances
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -13 404.63 HKD = 0.00 HKD
-    assets:cash                                                       -2 950.00 HKD = 0.00 HKD
+    assets:cash                        -2 950.00 HKD = 0.00 HKD
     equity:opening/closing balances
