@@ -1,26 +1,26 @@
 include ../../prelude.journal
 
 2023-08-01 opening balances
-    assets:bank:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    33 438.32 HKD = 33 438.32 HKD
-    assets:cash                                                     24 535.00 HKD = 24 535.00 HKD
-    equity:conversion                                                  -30.64 HKD = -30.64 HKD
-    equity:conversion                                                    4.00 USD = 4.00 USD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    33 438.32 HKD = 33 438.32 HKD
+    assets:cash                                                      24 535.00 HKD = 24 535.00 HKD
+    equity:conversion                                                   -30.64 HKD = -30.64 HKD
+    equity:conversion                                                     4.00 USD = 4.00 USD
     equity:opening/closing balances
 
 2023-08-01 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
-    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
 2023-08-02 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
-    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
 2023-08-03 tutoring: 49c186e5-f575-43ec-b73b-48d200eb27be secondary 2 student
-    revenues:income:tutoring     -150.00 HKD
+    revenues:incomes:tutoring     -150.00 HKD
     assets:cash
 
 2023-08-04 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
-    revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
+    revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
 
 2023-08-06 bounty: https://github.com/obsidianmd/obsidian-importer/issues/28, One time support for polyipseity - ***@*******.com, a9c06521-12ee-49dc-9ea4-90f275f3de94
