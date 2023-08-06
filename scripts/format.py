@@ -7,7 +7,7 @@ from asyncio import (
     gather as _gather,
     run as _run,
 )
-from asyncio.subprocess import PIPE as _PIPE
+from asyncio.subprocess import DEVNULL as _DEVNULL, PIPE as _PIPE
 from dataclasses import dataclass as _dc
 from functools import wraps as _wraps
 from glob import iglob as _iglob
@@ -58,12 +58,20 @@ async def main(_: Arguments):
 
     async def formatJournal(journal: _Path):
         proc = await _new_sproc(
-            hledger_prog, "--strict", "--file", journal, "print", stdout=_PIPE
+            hledger_prog,
+            "--strict",
+            "--file",
+            journal,
+            "print",
+            stdin=_DEVNULL,
+            stdout=_PIPE,
+            stderr=_PIPE,
         )
-        stdout, _ = await proc.communicate()
-        stdout = stdout.decode().replace("\r\n", "\n")
+        stdout, stderr = (
+            std.decode().replace("\r\n", "\n") for std in await proc.communicate()
+        )
         if proc.returncode:
-            raise ChildProcessError(proc.returncode)
+            raise ChildProcessError(proc.returncode, stderr)
 
         async with await journal.open(
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
@@ -80,7 +88,13 @@ async def main(_: Arguments):
             await file.write(text)
             await file.truncate()
 
-    await _gather(*map(formatJournal, journals))
+    formatErrs = tuple(
+        err
+        for err in await _gather(*map(formatJournal, journals), return_exceptions=True)
+        if err
+    )
+    if formatErrs:
+        raise ExceptionGroup("", formatErrs)
 
     _exit(0)
 
