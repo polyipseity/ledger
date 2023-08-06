@@ -22,3 +22,10 @@ include ../../prelude.journal
 2023-08-04 tutoring, 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:income:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
+
+2023-08-06 bounty: https://github.com/obsidianmd/obsidian-importer/issues/28, One time support for polyipseity - ***@*******.com, a9c06521-12ee-49dc-9ea4-90f275f3de94
+    revenues:donations:Buy Me a Coffee:polyipseity        -309 USD
+    expenses:fees:Buy Me a Coffee                       114.82 HKD
+    expenses:fees:Stripe                                 82.77 HKD
+    equity:pending                                      2167.6 HKD
+    equity:conversion                                               ; 7.65434 HKD/USD
