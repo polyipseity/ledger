@@ -1,6 +1,6 @@
 include ../../prelude.journal
 
-2023-03-01 opening balances  ; timezone: UTC+08:00
+2023-03-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     equity:opening/closing balances
 
 2023-03-03 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
@@ -31,6 +31,6 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -700.00 HKD
     assets:cash
 
-2023-03-31 closing balances  ; timezone: UTC+08:00
+2023-03-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:cash                        -2 950.00 HKD = 0.00 HKD
     equity:opening/closing balances

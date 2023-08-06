@@ -1,12 +1,12 @@
 include ../../prelude.journal
 
-2023-07-01 opening balances  ; timezone: UTC+08:00
+2023-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
     assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
     equity:opening/closing balances
 
-2023-07-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:43, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                              38.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -14,11 +14,11 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
-2023-07-03 82050afc-aac6-41aa-8066-d436a2c5434d  ; timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-03 82050afc-aac6-41aa-8066-d436a2c5434d  ; time: 13:04, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                              42.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-04 Circle K  ; timezone: UTC+08:00, activity: add value
+2023-07-04 Circle K  ; time: 13:57, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
@@ -27,16 +27,16 @@ include ../../prelude.journal
     assets:cash
 
 2023-07-07 transport  ; timezone: UTC+08:00, activity: transport
-    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          7.20 HKD
-    expenses:transport:trams:31d42ab2-c800-4210-b6ee-aff943b6e8c8           3.00 HKD
-    expenses:transport:buses:82de8d96-c247-49eb-9bd7-87b00f16d25c          19.60 HKD
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          7.20 HKD  ; time: 17:33
+    expenses:transport:trams:31d42ab2-c800-4210-b6ee-aff943b6e8c8           3.00 HKD  ; time: 22:39
+    expenses:transport:buses:82de8d96-c247-49eb-9bd7-87b00f16d25c          19.60 HKD  ; time: 22:45
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-09 7-Eleven  ; timezone: UTC+08:00, activity: add value
+2023-07-09 7-Eleven  ; time: 19:29, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-07-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: dinner
+2023-07-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 20:02, timezone: UTC+08:00, activity: dining, dining: dinner
     expenses:food:restaurants                                             137.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -48,19 +48,19 @@ include ../../prelude.journal
     expenses:fees:Stripe                                  2.61 HKD
     equity:pending                                        4.68 HKD
 
-2023-07-13 Circle K  ; timezone: UTC+08:00, activity: add value
+2023-07-13 Circle K  ; time: 11:56, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
-2023-07-14 7-Eleven  ; timezone: UTC+08:00, activity: add value
+2023-07-14 7-Eleven  ; time: 18:27, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-07-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., timezone: UTC+08:00, activity: dining, dining: dinner
+2023-07-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 19:17, timezone: UTC+08:00, activity: dining, dining: dinner
     expenses:food:restaurants                                              66.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-16 (a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; via Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), timezone: UTC+08:00, activity: vouchers, vouchers: consumption, valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
+2023-07-16 (a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; via Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), time: 00:00:00, timezone: UTC+08:00, activity: vouchers, vouchers: consumption, valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD
     revenues:special
 
@@ -72,7 +72,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-19 82050afc-aac6-41aa-8066-d436a2c5434d  ; timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-19 82050afc-aac6-41aa-8066-d436a2c5434d  ; time: 11:02, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                              43.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -97,7 +97,7 @@ include ../../prelude.journal
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-07-21 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-21 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:56, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                          54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -105,11 +105,11 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-22 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: afternoon tea
+2023-07-22 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 15:41, timezone: UTC+08:00, activity: dining, dining: afternoon tea
     expenses:food:restaurants                                          36.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-07-23 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-23 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:41, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                          43.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -129,24 +129,24 @@ include ../../prelude.journal
     equity:pending                                                     -18.69 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-07-28 7-Eleven  ; timezone: UTC+08:00, activity: add value
+2023-07-28 7-Eleven  ; time: 12:50, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      300.00 HKD
     assets:cash
 
 2023-07-28 transport  ; timezone: UTC+08:00, activity: transport
-    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           4.80 HKD
-    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        7.80 HKD
-    expenses:transport:buses:41b33891-3b43-4ac6-9ebb-42d8737ae227            4.80 HKD
-    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD
-    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD
-    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           6.00 HKD
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           4.80 HKD  ; time: 10:09
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        7.80 HKD  ; time: 10:15
+    expenses:transport:buses:41b33891-3b43-4ac6-9ebb-42d8737ae227            4.80 HKD  ; time: 13:01
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD  ; time: 13:19
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD  ; time: 13:27
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           6.00 HKD  ; time: 14:39
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-29 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: lunch
+2023-07-29 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:08, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                          60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-07-29 7-Eleven  ; timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
+2023-07-29 7-Eleven  ; time: 23:00, timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
     expenses:food                                                      20.50 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -154,7 +154,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-30 f599f52c-f397-4316-843f-b5b8285a9dba  ; timezone: UTC+08:00, activity: dining, dining: dinner
+2023-07-30 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 19:36, timezone: UTC+08:00, activity: dining, dining: dinner
     expenses:food:restaurants                                          66.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -162,7 +162,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-31 closing balances  ; timezone: UTC+08:00
+2023-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -33 438.32 HKD = 0.00 HKD
     assets:cash                                                         -22 635.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
