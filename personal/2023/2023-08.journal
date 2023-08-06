@@ -1,10 +1,11 @@
 include ../../prelude.journal
 
 2023-08-01 opening balances
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    33 438.32 HKD = 33 438.32 HKD
-    assets:cash                                                      24 535.00 HKD = 24 535.00 HKD
-    equity:conversion                                                   -30.64 HKD = -30.64 HKD
-    equity:conversion                                                     4.00 USD = 4.00 USD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       33 438.32 HKD = 33 438.32 HKD
+    assets:cash                                                         22 635.00 HKD = 22 635.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       272.80 HKD = 272.8 HKD
+    equity:conversion                                                      -30.64 HKD = -30.64 HKD
+    equity:conversion                                                        4.00 USD = 4.00 USD
     equity:opening/closing balances
 
 2023-08-01 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7

@@ -1,17 +1,44 @@
 include ../../prelude.journal
 
 2023-07-01 opening balances
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    13 404.63 HKD = 13 404.63 HKD
-    assets:cash                                                      21 335.00 HKD = 21 335.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
+    assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
     equity:opening/closing balances
+
+2023-07-01 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd.
+    expenses:food:restaurants                                              38.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-02 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -500.00 HKD
     assets:cash
 
+2023-07-03 dining (lunch): 82050afc-aac6-41aa-8066-d436a2c5434d
+    expenses:food:restaurants                                              42.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-07-04 add value via Circle K
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
+    assets:cash
+
 2023-07-07 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
+
+2023-07-07 transport
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          7.20 HKD
+    expenses:transport:trams:31d42ab2-c800-4210-b6ee-aff943b6e8c8           3.00 HKD
+    expenses:transport:buses:82de8d96-c247-49eb-9bd7-87b00f16d25c          19.60 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-07-09 add value via 7-Eleven
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:cash
+
+2023-07-09 dining (dinner): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd.
+    expenses:food:restaurants                                             137.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-09 One time support for polyipseity - ******@***************.com, c89bab9b-373c-481d-a59b-93fa3b01ce7a
     revenues:donations:Buy Me a Coffee:polyipseity       -1.00 USD
@@ -20,6 +47,18 @@ include ../../prelude.journal
     equity:pending                                        4.68 HKD
     equity:conversion                                               ; 7.67188 HKD/USD
 
+2023-07-13 add value via Circle K
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
+    assets:cash
+
+2023-07-14 add value via 7-Eleven
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:cash
+
+2023-07-14 dining (dinner): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd.
+    expenses:food:restaurants                                              66.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2023-07-17 STRIPE PAYMENTS EURO 8f456eee-19cf-4809-bbc7-437ab7185228 17JUL, 7707cc6c-8021-4dc5-802a-cde90c58ce2a
     equity:pending                                                      -4.68 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
@@ -27,6 +66,10 @@ include ../../prelude.journal
 2023-07-18 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
+
+2023-07-19 dining (lunch): 82050afc-aac6-41aa-8066-d436a2c5434d
+    expenses:food:restaurants                                              43.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-19 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7             -300.00 HKD
@@ -68,6 +111,19 @@ include ../../prelude.journal
     equity:pending                                                     -18.69 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
+2023-07-28 add value via 7-Eleven
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      300.00 HKD
+    assets:cash
+
+2023-07-28 transport
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           4.80 HKD
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        7.80 HKD
+    expenses:transport:buses:41b33891-3b43-4ac6-9ebb-42d8737ae227            4.80 HKD
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD
+    expenses:transport:minibuses:a19a3525-a11c-40de-9726-79b0738910d7        6.00 HKD
+    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           6.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2023-07-30 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
@@ -77,8 +133,9 @@ include ../../prelude.journal
     assets:cash
 
 2023-07-31 closing balances
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -33 438.32 HKD = 0.00 HKD
-    assets:cash                                                      -24 535.00 HKD = 0.00 HKD
-    equity:conversion                                                     30.64 HKD = 0.00 HKD
-    equity:conversion                                                     -4.00 USD = 0.00 USD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -33 438.32 HKD = 0.00 HKD
+    assets:cash                                                         -22 635.00 HKD = 0.00 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
+    equity:conversion                                                        30.64 HKD = 0.00 HKD
+    equity:conversion                                                        -4.00 USD = 0.00 USD
     equity:opening/closing balances
