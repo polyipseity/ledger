@@ -59,9 +59,9 @@ async def main(_: Arguments):
     async def formatJournal(journal: _Path):
         proc = await _new_sproc(
             hledger_prog,
-            "--strict",
             "--file",
             journal,
+            "--strict",
             "print",
             stdin=_DEVNULL,
             stdout=_PIPE,
@@ -104,7 +104,7 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
 
     parser = (_ArgParser if parent is None else parent)(
         prog=prog,
-        description="reformat journals",
+        description="format journals",
         add_help=True,
         allow_abbrev=False,
         exit_on_error=False,
