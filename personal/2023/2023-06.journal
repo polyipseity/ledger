@@ -53,9 +53,12 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-08 transport  ; timezone: UTC+08:00, activity: transport
-    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          6.20 HKD  ; time: 14:43
-    expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457          6.20 HKD  ; time: 17:47
+2023-06-08 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 14:43, timezone: UTC+08:00, activity: transport
+    expenses:transport:trains                                               6.20 HKD
+    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-06-08 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 17:47, timezone: UTC+08:00, activity: transport
+    expenses:transport:trains                                               6.20 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-09 b05861a9-99cb-454d-95d4-e5ce13ef100a  ; timezone: UTC+08:00, activity: tutoring
