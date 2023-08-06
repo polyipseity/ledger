@@ -5,8 +5,8 @@ include ../../prelude.journal
     assets:cash                                                         22 635.00 HKD = 22 635.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       272.80 HKD = 272.8 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236         2 720.50 HKD = 2 720.5 HKD
-    equity:conversion                                                      -30.64 HKD = -30.64 HKD
-    equity:conversion                                                        4.00 USD = 4.00 USD
+    equity:conversions:HKD-USD:HKD                                         -30.64 HKD = -30.64 HKD
+    equity:conversions:HKD-USD:USD                                           4.00 USD = 4.00 USD
     equity:opening/closing balances
 
 2023-08-01 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
@@ -34,11 +34,12 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-06 bounty: https://github.com/obsidianmd/obsidian-importer/issues/28, One time support for polyipseity - ***@*******.com, a9c06521-12ee-49dc-9ea4-90f275f3de94
-    revenues:donations:Buy Me a Coffee:polyipseity     -309.00 USD
-    expenses:fees:Buy Me a Coffee                       114.82 HKD
-    expenses:fees:Stripe                                 82.77 HKD
-    equity:pending                                    2 167.60 HKD
-    equity:conversion                                               ; 7.65434 HKD/USD
+    revenues:donations:Buy Me a Coffee:polyipseity      -309.00 USD  ; @ 7.65434 HKD
+    equity:conversions:HKD-USD:USD                       309.00 USD
+    equity:conversions:HKD-USD:HKD                    -2 365.19 HKD
+    expenses:fees:Buy Me a Coffee                        114.82 HKD
+    expenses:fees:Stripe                                  82.77 HKD
+    equity:pending                                     2 167.60 HKD
 
 2023-08-07 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba
     expenses:food:restaurants                                          54.00 HKD

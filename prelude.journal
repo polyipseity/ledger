@@ -11,7 +11,9 @@ account assets:special                                                     ; typ
 account assets:special:vouchers                                            ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236       ; type: A
 account equity                                                             ; type: E
-account equity:conversion                                                  ; type: V
+account equity:conversions                                                 ; type: V
+account equity:conversions:HKD-USD:HKD                                     ; type: E
+account equity:conversions:HKD-USD:USD                                     ; type: E
 account equity:opening/closing balances                                    ; type: E
 account equity:pending                                                     ; type: E
 account expenses                                                           ; type: X

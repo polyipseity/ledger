@@ -4,7 +4,6 @@ include ../../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
     assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                    0 = 0 HKD
     equity:opening/closing balances
 
 2023-07-01 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd.
@@ -42,11 +41,12 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-09 One time support for polyipseity - ******@***************.com, c89bab9b-373c-481d-a59b-93fa3b01ce7a
-    revenues:donations:Buy Me a Coffee:polyipseity       -1.00 USD
+    revenues:donations:Buy Me a Coffee:polyipseity       -1.00 USD  ; @ 7.67188 HKD
+    equity:conversions:HKD-USD:USD                        1.00 USD
+    equity:conversions:HKD-USD:HKD                       -7.67 HKD
     expenses:fees:Buy Me a Coffee                         0.38 HKD
     expenses:fees:Stripe                                  2.61 HKD
     equity:pending                                        4.68 HKD
-    equity:conversion                                               ; 7.67188 HKD/USD
 
 2023-07-13 add value via Circle K
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
@@ -86,11 +86,12 @@ include ../../prelude.journal
     assets:cash
 
 2023-07-20 One time support for polyipseity - ******************@******.com, be084437-5146-4c2a-b083-89c5b0d35237
-    revenues:donations:Buy Me a Coffee:polyipseity       -3.00 USD
+    revenues:donations:Buy Me a Coffee:polyipseity       -3.00 USD  ; @ 7.65512 HKD
+    equity:conversions:HKD-USD:USD                        3.00 USD
+    equity:conversions:HKD-USD:HKD                      -22.97 HKD
     expenses:fees:Buy Me a Coffee                         1.15 HKD
     expenses:fees:Stripe                                  3.13 HKD
     equity:pending                                       18.69 HKD
-    equity:conversion                                               ; 7.65512 HKD/USD
 
 2023-07-21 QDM CASH DEP (21JUL23)
     assets:cash                                                      -20 000.00 HKD
@@ -166,6 +167,6 @@ include ../../prelude.journal
     assets:cash                                                         -22 635.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236         -2 720.50 HKD = 0 HKD
-    equity:conversion                                                        30.64 HKD = 0.00 HKD
-    equity:conversion                                                        -4.00 USD = 0.00 USD
+    equity:conversions:HKD-USD:HKD                                           30.64 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                           -4.00 USD = 0.00 USD
     equity:opening/closing balances
