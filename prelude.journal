@@ -1,4 +1,5 @@
 account assets                                                         ; type: A
+account assets:banks                                                   ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current  ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings  ; type: C
 account assets:cash                                                    ; type: C
@@ -8,6 +9,7 @@ account equity:opening/closing balances                                ; type: E
 account equity:pending                                                 ; type: E
 account liabilities                                                    ; type: L
 account revenues                                                       ; type: R
+account revenues:donations                                             ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                 ; type: R
 account revenues:incomes                                               ; type: R
 account revenues:incomes:tutoring                                      ; type: R
@@ -15,6 +17,7 @@ account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7          ; type: R
 account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7:bonus    ; type: R
 account revenues:interests                                             ; type: R
 account expenses                                                       ; type: X
+account expenses:fees                                                  ; type: X
 account expenses:fees:Buy Me a Coffee                                  ; type: X
 account expenses:fees:Stripe                                           ; type: X
 
