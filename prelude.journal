@@ -6,6 +6,9 @@ account assets:cash                                                        ; typ
 account assets:digital                                                     ; type: A
 account assets:digital:Octopus card                                        ; type: C
 account assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521   ; type: C
+account assets:special                                                     ; type: A
+account assets:special:vouchers                                            ; type: A
+account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236       ; type: A
 account equity                                                             ; type: E
 account equity:conversion                                                  ; type: V
 account equity:opening/closing balances                                    ; type: E
@@ -19,6 +22,7 @@ account revenues:incomes:tutoring                                          ; typ
 account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7              ; type: R
 account revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7:bonus        ; type: R
 account revenues:interests                                                 ; type: R
+account revenues:special                                                   ; type: R
 account expenses                                                           ; type: X
 account expenses:consumption                                               ; type: X
 account expenses:fees                                                      ; type: X

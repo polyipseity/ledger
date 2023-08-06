@@ -4,6 +4,7 @@ include ../../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
     assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                    0 = 0 HKD
     equity:opening/closing balances
 
 2023-07-01 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba, Union Cash Register Co. Ltd.
@@ -59,6 +60,10 @@ include ../../prelude.journal
     expenses:food:restaurants                                              66.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-07-16 consumption vouchers via Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD
+    revenues:special
+
 2023-07-17 STRIPE PAYMENTS EURO 8f456eee-19cf-4809-bbc7-437ab7185228 17JUL, 7707cc6c-8021-4dc5-802a-cde90c58ce2a
     equity:pending                                                      -4.68 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
@@ -91,9 +96,21 @@ include ../../prelude.journal
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
+2023-07-21 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba
+    expenses:food:restaurants                                          54.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-07-21 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
+
+2023-07-22 dining (afternoon tea): f599f52c-f397-4316-843f-b5b8285a9dba
+    expenses:food:restaurants                                          36.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-07-23 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba
+    expenses:food:restaurants                                          43.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-25 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
@@ -124,9 +141,21 @@ include ../../prelude.journal
     expenses:transport:trains:810c451f-b2e5-4c98-8433-b1451593c457           6.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-07-29 dining (lunch): f599f52c-f397-4316-843f-b5b8285a9dba
+    expenses:food:restaurants                                          60.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-07-29 consumption: 7-Eleven, 03cf0b7a-169c-4c8b-97e4-16ba889782f5
+    expenses:food                                                      20.50 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-07-30 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
     assets:cash
+
+2023-07-30 dining (dinner): f599f52c-f397-4316-843f-b5b8285a9dba
+    expenses:food:restaurants                                          66.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-31 tutoring: 6ff58fb3-4579-4533-aab9-8575033136c7
     revenues:incomes:6ff58fb3-4579-4533-aab9-8575033136c7     -300.00 HKD
@@ -136,6 +165,7 @@ include ../../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -33 438.32 HKD = 0.00 HKD
     assets:cash                                                         -22 635.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236         -2 720.50 HKD = 0 HKD
     equity:conversion                                                        30.64 HKD = 0.00 HKD
     equity:conversion                                                        -4.00 USD = 0.00 USD
     equity:opening/closing balances
