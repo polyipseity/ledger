@@ -41,6 +41,10 @@ include ../../prelude.journal
     expenses:fees:Stripe                                  82.77 HKD
     equity:pending                                     2 167.60 HKD
 
-2023-08-07 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48, timezone: UTC+08:00, activity: dining, dining: lunch
+2023-08-06 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                          54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-08-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 18:31, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring     -300.00 HKD
+    assets:cash
