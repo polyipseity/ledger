@@ -2,7 +2,8 @@
 from anyio import Path as _Path
 from argparse import ArgumentParser as _ArgParser, Namespace as _NS
 from asyncio import (
-    TaskGroup as TaskGrp,
+    BoundedSemaphore as _BSemp,
+    TaskGroup as _TaskGrp,
     create_subprocess_exec as _new_sproc,
     gather as _gather,
     run as _run,
@@ -13,9 +14,12 @@ from functools import wraps as _wraps
 from glob import iglob as _iglob
 from inspect import currentframe as _curframe, getframeinfo as _frameinfo
 from logging import INFO as _INFO, basicConfig as _basicConfig, info as _info
+from os import cpu_count as _cpu_c
 from shutil import which as _which
 from sys import argv as _argv, exit as _exit
 from typing import Callable as _Call, final as _fin
+
+_SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
 
 
 @_fin
@@ -57,19 +61,20 @@ async def main(_: Arguments):
         raise FileNotFoundError(hledger_prog)
 
     async def formatJournal(journal: _Path):
-        proc = await _new_sproc(
-            hledger_prog,
-            "--file",
-            journal,
-            "--strict",
-            "print",
-            stdin=_DEVNULL,
-            stdout=_PIPE,
-            stderr=_PIPE,
-        )
-        stdout, stderr = (
-            std.decode().replace("\r\n", "\n") for std in await proc.communicate()
-        )
+        async with _SUBPROCESS_SEMAPHORE:
+            proc = await _new_sproc(
+                hledger_prog,
+                "--file",
+                journal,
+                "--strict",
+                "print",
+                stdin=_DEVNULL,
+                stdout=_PIPE,
+                stderr=_PIPE,
+            )
+            stdout, stderr = (
+                std.decode().replace("\r\n", "\n") for std in await proc.communicate()
+            )
         if proc.returncode:
             raise ChildProcessError(proc.returncode, stderr)
 
@@ -77,7 +82,7 @@ async def main(_: Arguments):
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
         ) as file:
             lines = await file.readlines()
-            async with TaskGrp() as group:
+            async with _TaskGrp() as group:
                 group.create_task(file.seek(0))
                 header = "\n".join(
                     line for line in lines if line.startswith("include ")
