@@ -66,8 +66,8 @@ include ../../prelude.journal
     expenses:food:restaurants                                              66.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-16 (a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; via Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), time: 00:00:00, timezone: UTC+08:00, activity: vouchers, vouchers: consumption, valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD
+2023-07-16 (a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; via Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), time: 00:00:00, timezone: UTC+08:00, activity: vouchers, vouchers: consumption
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD  ; valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
 
 2023-07-17 (7707cc6c-8021-4dc5-802a-cde90c58ce2a) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED 8f456eee-19cf-4809-bbc7-437ab7185228 17Jul, time: 15:20:41, timezone: UTC+08:00, activity: payout
