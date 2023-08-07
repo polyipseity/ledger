@@ -9,7 +9,7 @@ include ../../prelude.journal
     equity:conversions:HKD-USD:USD                                           4.00 USD = 4.00 USD
     equity:opening/closing balances
 
-2023-08-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-08-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 14:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
@@ -21,15 +21,15 @@ include ../../prelude.journal
     expenses:food                                                      20.50 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-08-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:30, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-03 49c186e5-f575-43ec-b73b-48d200eb27be  ; timezone: UTC+08:00, activity: tutoring
+2023-08-03 49c186e5-f575-43ec-b73b-48d200eb27be  ; time: 20:35, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -150.00 HKD
     assets:cash
 
-2023-08-04 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-08-04 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 

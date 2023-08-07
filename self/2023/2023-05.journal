@@ -66,7 +66,7 @@ include ../../prelude.journal
     expenses:transport:buses                                                5.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-11 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-11 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 17:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
@@ -94,15 +94,15 @@ include ../../prelude.journal
     expenses:transport:trains                                               2.80 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-14 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-14 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-05-16 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-16 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
-2023-05-17 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-17 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
@@ -110,11 +110,11 @@ include ../../prelude.journal
     expenses:consumption                                                    8.50 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
-2023-05-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
@@ -138,11 +138,11 @@ include ../../prelude.journal
     expenses:food:restaurants                                              51.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-23 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-23 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
-2023-05-24 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-24 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
@@ -162,7 +162,7 @@ include ../../prelude.journal
     expenses:food:restaurants                                              31.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-26 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-26 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -400.00 HKD
     assets:cash
 
@@ -170,7 +170,7 @@ include ../../prelude.journal
     expenses:food:restaurants                                              35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-28 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-28 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
@@ -202,17 +202,17 @@ include ../../prelude.journal
     expenses:transport:buses                                                9.60 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
+2023-05-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -350.00 HKD
-    assets:cash
-
-2023-05-31 6ff58fb3-4579-4533-aab9-8575033136c7  ; timezone: UTC+08:00, activity: tutoring
-    revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-05-31 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 15:04, timezone: UTC+08:00, activity: dining, dining: lunch
     expenses:food:restaurants                                              39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-05-31 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring     -300.00 HKD
+    assets:cash
 
 2023-05-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:cash                                                         -16 300.00 HKD = 0.00 HKD
