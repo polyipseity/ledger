@@ -56,3 +56,7 @@ include ../../prelude.journal
 2023-08-08 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 10:40, timezone: UTC+08:00, activity: dining, dining: breakfast
     expenses:food:restaurants                                          35.00 HKD  ; food: garlic butter on toast, food: hot ovaltine, food: scrambled egg with mushroom, food: shredded ham with macaroni in soup (light)
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-08-08 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:53, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring     -300.00 HKD
+    assets:cash
