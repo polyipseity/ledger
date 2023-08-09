@@ -28,6 +28,8 @@ account expenses:transport:buses                                          ; type
 account expenses:transport:minibuses                                      ; type: X
 account expenses:transport:trains                                         ; type: X
 account expenses:transport:trams                                          ; type: X
+account expenses:tuition                                                  ; type: X
+account expenses:tuition:universities                                     ; type: X
 account liabilities                                                       ; type: L
 account revenues                                                          ; type: R
 account revenues:donations                                                ; type: R
@@ -49,6 +51,7 @@ payee ******@***************.com
 payee ***@*******.com
 payee Circle K
 payee Hong Kong Government
+payee Joint University Programmes Admissions System
 payee Stripe
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
@@ -78,4 +81,5 @@ tag via
 tag vouchers
 tag time
 tag timezone
+tag tuition
 tag type
