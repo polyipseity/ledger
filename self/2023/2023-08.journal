@@ -13,11 +13,11 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 19:52, timezone: UTC+08:00, activity: eating, eating: dinner
+2023-08-01 (identifiers.Alipay.753a37a7-f488-4d41-a275-6757763a482d) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 19:52:15, timezone: UTC+08:00, activity: eating, eating: dinner
     expenses:food:dining                                               60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-01 7-Eleven  ; time: 21:35, timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
+2023-08-01 (identifiers.Alipay.e687b34f-8851-45d0-95aa-c9f50d9dd4a3) 7-Eleven  ; time: 21:35:26, timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
     expenses:food                                                      20.50 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -41,7 +41,7 @@ include ../../prelude.journal
     expenses:fees:Stripe                                  82.77 HKD
     equity:pending                                     2 167.60 HKD
 
-2023-08-06 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48, timezone: UTC+08:00, activity: eating, eating: lunch
+2023-08-06 (identifiers.Alipay.e79f7424-cde0-43fd-b2cd-b320a361c70c) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48:37, timezone: UTC+08:00, activity: eating, eating: lunch
     expenses:food:dining                                               54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -49,11 +49,11 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-07 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 20:53, timezone: UTC+08:00, activity: eating, eating: dinner
+2023-08-07 (identifiers.Alipay.634758b7-9e5d-44f9-8de7-4de8ec5ca067) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 20:53:27, timezone: UTC+08:00, activity: eating, eating: dinner
     expenses:food:dining                                               62.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-08 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 10:40, timezone: UTC+08:00, activity: eating, eating: breakfast
+2023-08-08 (identifiers.Alipay.8ebfb93e-2b67-4f73-840a-bb6f0d9a391a) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 10:40:39, timezone: UTC+08:00, activity: eating, eating: breakfast
     expenses:food:dining                                               35.00 HKD  ; food: garlic butter on toast, food: hot ovaltine, food: scrambled egg with mushroom, food: shredded ham with macaroni in soup (light)
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -69,6 +69,6 @@ include ../../prelude.journal
     expenses:tuition:universities                                    5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-08-10 Maxim's Cakes  ; time: 18:13:20, timezone: UTC+08:00, activity: eating, eating: snacks
+2023-08-10 (identifiers.Alipay.bb9343dd-5a85-459b-b89f-f6da14563f4b) Maxim's Cakes  ; time: 18:13:20, timezone: UTC+08:00, activity: eating, eating: snacks
     expenses:food:snacks                                                9.00 HKD  ; food: 2 chocolate cakes
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
