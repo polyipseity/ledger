@@ -100,3 +100,7 @@ include ../../prelude.journal
 2023-08-11 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:37, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
+
+2023-08-11 3833b42e-dad3-425c-b254-904be68993e4  ; time: 23:29:10, timezone: UTC+08:00, activity: transfer
+    equity:families      100.00 HKD
+    assets:cash
