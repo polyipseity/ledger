@@ -68,3 +68,7 @@ include ../../prelude.journal
 2023-08-09 (c4f3759a-76d8-4c77-9b6a-5ea062519666) Joint University Programmes Admissions System  ; JOINT UNIVERSITY PROGRAMMES ADMISSIONS SYSTEM 3319d4af-d9d1-4451-b2f6-e95472a9c4bc 9Aug, time: 20:02, timezone: UTC+08:00, activity: tuition, tuition: reservation fee, via: Faster Payment System
     expenses:tuition:universities                                    5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-08-10 Maxim's Cakes  ; time: 18:13:20, timezone: UTC+08:00, activity: eating, eating: snacks
+    expenses:food:snacks                                                9.00 HKD  ; food: 2 chocolate cakes
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236

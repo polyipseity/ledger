@@ -23,6 +23,7 @@ account expenses:fees:Buy Me a Coffee                                     ; type
 account expenses:fees:Stripe                                              ; type: X
 account expenses:food                                                     ; type: X
 account expenses:food:restaurants                                         ; type: X
+account expenses:food:snacks                                              ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X
 account expenses:transport:minibuses                                      ; type: X
@@ -52,6 +53,7 @@ payee ***@*******.com
 payee Circle K
 payee Hong Kong Government
 payee Joint University Programmes Admissions System
+payee Maxim's Cakes
 payee Stripe
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
@@ -75,6 +77,7 @@ tag bounty
 tag consumption
 tag dining
 tag duration
+tag eating
 tag food
 tag valid
 tag via
