@@ -33,7 +33,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-06 ! (a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, time: 01:03:55, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
+2023-08-06 ! (identifiers.Stripe.a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, time: 01:03:55, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
     revenues:donations:Buy Me a Coffee:polyipseity      -309.00 USD  ; @ 7.65434 HKD
     equity:conversions:HKD-USD:USD                       309.00 USD
     equity:conversions:HKD-USD:HKD                    -2 365.19 HKD
@@ -65,7 +65,7 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-09 (c4f3759a-76d8-4c77-9b6a-5ea062519666) Joint University Programmes Admissions System  ; JOINT UNIVERSITY PROGRAMMES ADMISSIONS SYSTEM 3319d4af-d9d1-4451-b2f6-e95472a9c4bc 9Aug, time: 20:02, timezone: UTC+08:00, activity: tuition, tuition: reservation fee, via: Faster Payment System
+2023-08-09 (identifiers.banks.c4f3759a-76d8-4c77-9b6a-5ea062519666) Joint University Programmes Admissions System  ; JOINT UNIVERSITY PROGRAMMES ADMISSIONS SYSTEM identifiers.banks.3319d4af-d9d1-4451-b2f6-e95472a9c4bc 9Aug, time: 20:02, timezone: UTC+08:00, activity: tuition, tuition: reservation fee, via: Faster Payment System
     expenses:tuition:universities                                    5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
