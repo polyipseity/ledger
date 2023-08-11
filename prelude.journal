@@ -22,7 +22,7 @@ account expenses:fees                                                     ; type
 account expenses:fees:Buy Me a Coffee                                     ; type: X
 account expenses:fees:Stripe                                              ; type: X
 account expenses:food                                                     ; type: X
-account expenses:food:restaurants                                         ; type: X
+account expenses:food:dining                                              ; type: X
 account expenses:food:snacks                                              ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X

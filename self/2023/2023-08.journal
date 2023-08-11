@@ -14,7 +14,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 19:52, timezone: UTC+08:00, activity: eating, eating: dinner
-    expenses:food:restaurants                                          60.00 HKD
+    expenses:food:dining                                               60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-01 7-Eleven  ; time: 21:35, timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
@@ -42,7 +42,7 @@ include ../../prelude.journal
     equity:pending                                     2 167.60 HKD
 
 2023-08-06 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food:restaurants                                          54.00 HKD
+    expenses:food:dining                                               54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 18:31, timezone: UTC+08:00, activity: tutoring
@@ -50,11 +50,11 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-07 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 20:53, timezone: UTC+08:00, activity: eating, eating: dinner
-    expenses:food:restaurants                                          62.00 HKD
+    expenses:food:dining                                               62.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-08 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 10:40, timezone: UTC+08:00, activity: eating, eating: breakfast
-    expenses:food:restaurants                                          35.00 HKD  ; food: garlic butter on toast, food: hot ovaltine, food: scrambled egg with mushroom, food: shredded ham with macaroni in soup (light)
+    expenses:food:dining                                               35.00 HKD  ; food: garlic butter on toast, food: hot ovaltine, food: scrambled egg with mushroom, food: shredded ham with macaroni in soup (light)
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-08 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:53, timezone: UTC+08:00, activity: tutoring
