@@ -14,6 +14,7 @@ account equity                                                            ; type
 account equity:conversions                                                ; type: V
 account equity:conversions:HKD-USD:HKD                                    ; type: E
 account equity:conversions:HKD-USD:USD                                    ; type: E
+account equity:families                                                   ; type: E
 account equity:opening/closing balances                                   ; type: E
 account equity:pending                                                    ; type: E
 account expenses                                                          ; type: X
@@ -24,6 +25,8 @@ account expenses:fees:Stripe                                              ; type
 account expenses:food                                                     ; type: X
 account expenses:food:dining                                              ; type: X
 account expenses:food:snacks                                              ; type: X
+account expenses:healthcare                                               ; type: X
+account expenses:healthcare:medication                                    ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X
 account expenses:transport:minibuses                                      ; type: X
@@ -55,7 +58,9 @@ payee Hong Kong Government
 payee Joint University Programmes Admissions System
 payee Maxim's Cakes
 payee Stripe
+payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
+payee 3833b42e-dad3-425c-b254-904be68993e4
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
 payee 49c186e5-f575-43ec-b73b-48d200eb27be
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
