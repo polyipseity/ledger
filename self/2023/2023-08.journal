@@ -17,8 +17,8 @@ include ../../prelude.journal
     expenses:food:dining                                               60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-01 (identifiers.Alipay.e687b34f-8851-45d0-95aa-c9f50d9dd4a3) 7-Eleven  ; time: 21:35:26, timezone: UTC+08:00, activity: consumption, consumption: 03cf0b7a-169c-4c8b-97e4-16ba889782f5
-    expenses:food                                                      20.50 HKD
+2023-08-01 (identifiers.Alipay.e687b34f-8851-45d0-95aa-c9f50d9dd4a3) 7-Eleven  ; time: 21:35:26, timezone: UTC+08:00, activity: consumption
+    expenses:food:snacks                                               20.50 HKD  ; food: Yakult
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:30, timezone: UTC+08:00, activity: tutoring
