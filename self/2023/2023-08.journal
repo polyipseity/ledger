@@ -104,3 +104,7 @@ include ../../prelude.journal
 2023-08-11 3833b42e-dad3-425c-b254-904be68993e4  ; time: 23:29:10, timezone: UTC+08:00, activity: transfer
     equity:families      100.00 HKD
     assets:cash
+
+2023-08-12 (identifiers.Alipay.0979286d-c076-437d-9b80-8a7d0f641e07) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:07:53, timezone: UTC+08:00, activity: eating, eating: lunch
+    expenses:food:dining                                               54.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
