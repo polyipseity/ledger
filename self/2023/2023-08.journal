@@ -106,5 +106,9 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-12 (identifiers.Alipay.0979286d-c076-437d-9b80-8a7d0f641e07) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:07:53, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food:dining                                               54.00 HKD
+    expenses:food:dining                                               54.00 HKD  ; food: baked pork chop, food: hot Ovaltine, food: spicy bolognese sauce
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-08-13 (identifiers.Alipay.7dcbee76-e136-40f0-bbc3-157bf68d6070) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:33:32, timezone: UTC+08:00, activity: eating, eating: lunch
+    expenses:food:dining                                               35.00 HKD  ; food: hot Ovaltine, food: instant noodles in soup, food: no-flip over easy egg, food: spiced pork cubes
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
