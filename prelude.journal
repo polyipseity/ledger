@@ -15,6 +15,7 @@ account equity:conversions                                                ; type
 account equity:conversions:HKD-USD:HKD                                    ; type: E
 account equity:conversions:HKD-USD:USD                                    ; type: E
 account equity:families                                                   ; type: E
+account equity:families:3833b42e-dad3-425c-b254-904be68993e4              ; type: E
 account equity:opening/closing balances                                   ; type: E
 account equity:pending                                                    ; type: E
 account expenses                                                          ; type: X
@@ -27,6 +28,8 @@ account expenses:food:dining                                              ; type
 account expenses:food:snacks                                              ; type: X
 account expenses:healthcare                                               ; type: X
 account expenses:healthcare:medication                                    ; type: X
+account expenses:maintenance                                              ; type: X
+account expenses:services                                                 ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X
 account expenses:transport:minibuses                                      ; type: X
@@ -58,9 +61,9 @@ payee Hong Kong Government
 payee Joint University Programmes Admissions System
 payee Maxim's Cakes
 payee Stripe
+payee 0d184a06-c627-4e69-b161-51b74e1a9bf9
 payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
-payee 3833b42e-dad3-425c-b254-904be68993e4
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
 payee 49c186e5-f575-43ec-b73b-48d200eb27be
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
@@ -72,6 +75,7 @@ payee 82de8d96-c247-49eb-9bd7-87b00f16d25c
 payee a19a3525-a11c-40de-9726-79b0738910d7
 payee b05861a9-99cb-454d-95d4-e5ce13ef100a
 payee bank
+payee barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3
 payee closing balances
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee opening balances
@@ -82,9 +86,11 @@ tag bounty
 tag duration
 tag eating
 tag food
+tag maintenance
 tag valid
 tag via
 tag vouchers
+tag service
 tag time
 tag timezone
 tag tuition
