@@ -143,11 +143,11 @@ include ../../prelude.journal
     equity:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2023-08-19 * (identifiers.Alipay.814571df-c90d-49f5-afec-331d11357360) 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; time: 19:09:02, timezone: UTC+08:00, activity: maintenance, maintenance: glasses
-    expenses:maintenance:deferred                                     772.00 HKD
+    assets:deferred-expenses:maintenance                              772.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-20 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; time: 13:10:30, timezone: UTC+08:00, activity: adjust
-    expenses:maintenance:deferred     -772.00 HKD
+    assets:deferred-expenses:maintenance     -772.00 HKD
     expenses:maintenance
 
 2023-08-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 15:00:00, timezone: UTC+08:00, activity: tutoring

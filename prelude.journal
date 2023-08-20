@@ -1,9 +1,12 @@
 account assets                                                            ; type: A
+account assets:accrued-revenues                                           ; type: A
 account assets:banks                                                      ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                 ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current     ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     ; type: C
 account assets:cash                                                       ; type: C
+account assets:deferred-expenses                                          ; type: A
+account assets:deferred-expenses:maintenance                              ; type: A
 account assets:digital                                                    ; type: A
 account assets:digital:Octopus card                                       ; type: C
 account assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521  ; type: C
@@ -31,7 +34,6 @@ account expenses:food:snacks                                              ; type
 account expenses:healthcare                                               ; type: X
 account expenses:healthcare:medication                                    ; type: X
 account expenses:maintenance                                              ; type: X
-account expenses:maintenance:deferred                                     ; type: A
 account expenses:services                                                 ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X
@@ -41,6 +43,8 @@ account expenses:transport:trams                                          ; type
 account expenses:tuition                                                  ; type: X
 account expenses:tuition:universities                                     ; type: X
 account liabilities                                                       ; type: L
+account liabilities:accrued-expenses                                      ; type: L
+account liabilities:deferred-revenues                                     ; type: L
 account revenues                                                          ; type: R
 account revenues:donations                                                ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                    ; type: R
