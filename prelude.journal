@@ -7,6 +7,9 @@ account assets:cash                                                       ; type
 account assets:digital                                                    ; type: A
 account assets:digital:Octopus card                                       ; type: C
 account assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521  ; type: C
+account assets:digital:Stripe                                             ; type: A
+account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a        ; type: A
+account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        ; type: A
 account assets:special                                                    ; type: A
 account assets:special:vouchers                                           ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      ; type: A
@@ -17,7 +20,6 @@ account equity:conversions:HKD-USD:USD                                    ; type
 account equity:families                                                   ; type: E
 account equity:families:3833b42e-dad3-425c-b254-904be68993e4              ; type: E
 account equity:opening/closing balances                                   ; type: E
-account equity:pending                                                    ; type: E
 account expenses                                                          ; type: X
 account expenses:consumption                                              ; type: X
 account expenses:fees                                                     ; type: X
@@ -29,6 +31,7 @@ account expenses:food:snacks                                              ; type
 account expenses:healthcare                                               ; type: X
 account expenses:healthcare:medication                                    ; type: X
 account expenses:maintenance                                              ; type: X
+account expenses:maintenance:deferred                                     ; type: A
 account expenses:services                                                 ; type: X
 account expenses:transport                                                ; type: X
 account expenses:transport:buses                                          ; type: X

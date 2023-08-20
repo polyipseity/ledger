@@ -34,12 +34,12 @@ include ../../prelude.journal
     assets:cash
 
 2023-08-06 * (identifiers.Stripe.a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, time: 01:03:55, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
-    revenues:donations:Buy Me a Coffee:polyipseity      -309.00 USD  ; @ 7.65434 HKD
-    equity:conversions:HKD-USD:USD                       309.00 USD
-    equity:conversions:HKD-USD:HKD                    -2 365.19 HKD
-    expenses:fees:Buy Me a Coffee                        114.82 HKD
-    expenses:fees:Stripe                                  82.77 HKD
-    equity:pending                                     2 167.60 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                  -309.00 USD  ; @ 7.65434 HKD
+    equity:conversions:HKD-USD:USD                                   309.00 USD
+    equity:conversions:HKD-USD:HKD                                -2 365.19 HKD
+    expenses:fees:Buy Me a Coffee                                    114.82 HKD
+    expenses:fees:Stripe                                              82.77 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc     2 167.60 HKD
 
 2023-08-06 (identifiers.Alipay.e79f7424-cde0-43fd-b2cd-b320a361c70c) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:48:37, timezone: UTC+08:00, activity: eating, eating: lunch
     expenses:food:dining                                               54.00 HKD
@@ -117,8 +117,8 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-14 (identifiers.banks.d3a4a8e3-994b-4d07-b24f-ad5d3af4c647) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED identifiers.banks.e711bbe4-26ab-4a54-a5d8-41a2bc093528 14Aug, time: 15:14:38, timezone: UTC+08:00, activity: payout, via: Faster Payment System
-    equity:pending                                                   -2 167.60 HKD
+2023-08-14 (identifiers.banks.d3a4a8e3-994b-4d07-b24f-ad5d3af4c647) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED identifiers.banks.e711bbe4-26ab-4a54-a5d8-41a2bc093528 14Aug, time: 15:14:38, timezone: UTC+08:00, activity: deposit, via: Faster Payment System
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       -2 167.60 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-15 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 18:00, timezone: UTC+08:00, activity: tutoring
@@ -143,5 +143,5 @@ include ../../prelude.journal
     equity:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2023-08-19 ! (identifiers.Alipay.814571df-c90d-49f5-afec-331d11357360) 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; time: 19:09:02, timezone: UTC+08:00, activity: maintenance, maintenance: glasses
-    equity:pending                                                    772.00 HKD
+    expenses:maintenance:deferred                                     772.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
