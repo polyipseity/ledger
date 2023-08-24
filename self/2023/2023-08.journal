@@ -153,3 +153,12 @@ include ../../prelude.journal
 2023-08-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 15:00:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
+
+2023-08-21 (identifiers.Alipay.dc1aa200-8de1-40c9-9b2b-dd44df9ae0e2) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 10:29:16, timezone: UTC+08:00, activity: eating, eating: breakfast
+    expenses:food:dining                                               37.00 HKD  ; food: garlic butter on toast, food: hot chocolate, food: macaroni in soup (light), food: scrambled egg with mushroom, food: shredded ham
+    expenses:food:dining                                               37.00 HKD  ; food: garlic butter on toast, food: hot chocolate, food: macaroni in soup (light), food: scrambled egg with mushroom, food: shredded ham
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-08-21 self  ; QDM CASH DEP (21AUG23), timezone: UTC+08:00, activity: deposit
+    assets:cash                                                      -20 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
