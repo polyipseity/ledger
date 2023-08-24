@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-gpg --output '../private.yaml.gpg' --yes --encrypt --recipient 'polyipseity@gmail.com' '../private.yaml'
+gpg --encrypt --output '../private.yaml.gpg' --recipient 'polyipseity@gmail.com' --yes '../private.yaml'

@@ -1,2 +1,2 @@
 @echo off
-gpg --output "../private.yaml" --yes --decrypt "../private.yaml.gpg"
+gpg --decrypt --output "../private.yaml" --yes "../private.yaml.gpg"
