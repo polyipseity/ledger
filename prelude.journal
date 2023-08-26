@@ -58,6 +58,7 @@ account revenues:interests                                                ; type
 account revenues:special                                                  ; type: R
 
 commodity 99 999 999.00
+commodity 99 999 999.00 CNY
 commodity 99 999 999.00 HKD
 commodity 99 999 999.00 USD
 
@@ -105,5 +106,6 @@ tag vouchers
 tag service
 tag time
 tag timezone
+tag transfer
 tag tuition
 tag type
