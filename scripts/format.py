@@ -81,17 +81,19 @@ async def main(_: Arguments):
         async with await journal.open(
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
         ) as file:
-            lines = await file.readlines()
+            read = await file.read()
             async with _TaskGrp() as group:
                 group.create_task(file.seek(0))
                 header = "\n".join(
-                    line for line in lines if line.startswith("include ")
+                    line for line in read.splitlines() if line.startswith("include ")
                 )
                 text = f"""{header}
+
 {stdout.strip()}
 """
-            await file.write(text)
-            await file.truncate()
+            if text != read:
+                await file.write(text)
+                await file.truncate()
 
     formatErrs = tuple(
         err
