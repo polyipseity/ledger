@@ -181,12 +181,12 @@ include ../../prelude.journal
     assets:cash                                                   5 000.00 HKD  ; 4842.4743 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-08-26 self  ; QDM CASH DEP (26AUG23), time: 18:33:13, timezone: UTC+08:00, activity: deposit
-    assets:cash                                                      -5 000.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
-
 2023-08-26 self  ; time: 18:42:21, timezone: UTC+08:00, duration: PT2H2M39S, activity: transfer, transfer: 3 red envelopes
     equity:kins      -20.00 HKD  ; time: 18:42:21
     equity:kins      -20.00 HKD  ; time: 19:03:52
     equity:kins      -50.00 HKD  ; time: 20:45
     assets:cash
+
+2023-08-28 self  ; QDM CASH DEP (26AUG23), timezone: UTC+08:00, posted: 2023-08-26T18:33:13+08:00, activity: deposit
+    assets:cash                                                      -5 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
