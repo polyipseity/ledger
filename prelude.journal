@@ -1,5 +1,7 @@
 account assets                                                            ; type: A
 account assets:accrued-revenues                                           ; type: A
+account assets:accrued-revenues:incomes                                   ; type: A
+account assets:accrued-revenues:incomes:tutoring                          ; type: A
 account assets:banks                                                      ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                 ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current     ; type: C
@@ -73,6 +75,7 @@ payee Joint University Programmes Admissions System
 payee Maxim's Cakes
 payee Stripe
 payee 0d184a06-c627-4e69-b161-51b74e1a9bf9
+payee 13fabcbb-072d-47a2-afab-cace6eb95fdb
 payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227

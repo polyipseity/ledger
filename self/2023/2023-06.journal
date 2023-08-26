@@ -1,6 +1,7 @@
 include ../../prelude.journal
 
 2023-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued-revenues:incomes:tutoring                               640.00 HKD = 640 HKD
     assets:cash                                                         16 300.00 HKD = 16 300.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       106.40 HKD = 106.40 HKD
     equity:opening/closing balances
@@ -93,6 +94,10 @@ include ../../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
+2023-06-15 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
+
 2023-06-15 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:40, timezone: UTC+08:00, activity: eating, eating: lunch
     expenses:food:dining                                                   39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
@@ -133,11 +138,16 @@ include ../../prelude.journal
     expenses:food:dining                                                   39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-06-29 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
+
 2023-06-30 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:36, timezone: UTC+08:00, activity: eating, eating: lunch
     expenses:food:dining                                                   35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued-revenues:incomes:tutoring                               -960.00 HKD = 0 HKD
     assets:cash                                                         -20 035.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        -64.00 HKD = 0.00 HKD
     equity:opening/closing balances

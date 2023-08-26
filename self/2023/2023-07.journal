@@ -1,6 +1,7 @@
 include ../../prelude.journal
 
 2023-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued-revenues:incomes:tutoring                               960.00 HKD = 960 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
     assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
@@ -184,6 +185,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued-revenues:incomes:tutoring                               -960.00 HKD = 0 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -33 438.32 HKD = 0.00 HKD
     assets:cash                                                         -22 635.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD

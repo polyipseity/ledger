@@ -62,6 +62,10 @@ include ../../prelude.journal
     expenses:transport:minibuses                                            4.90 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-05-11 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
+
 2023-05-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; time: 16:54, timezone: UTC+08:00, activity: transport
     expenses:transport:buses                                                5.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
@@ -106,6 +110,14 @@ include ../../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
+2023-05-18 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
+
+2023-05-19 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
+
 2023-05-19 7-Eleven  ; time: 21:35, timezone: UTC+08:00, activity: consumption
     expenses:consumption                                                    8.50 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
@@ -125,6 +137,10 @@ include ../../prelude.journal
 2023-05-22 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 16:15, timezone: UTC+08:00, activity: transport
     expenses:transport:trains                                               7.10 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-05-22 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 16:15, duration: PT1H, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring                    -160.00 HKD
+    assets:accrued-revenues:incomes:tutoring
 
 2023-05-22 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 17:37, timezone: UTC+08:00, activity: add value
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
@@ -215,6 +231,7 @@ include ../../prelude.journal
     assets:cash
 
 2023-05-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued-revenues:incomes:tutoring                               -640.00 HKD = 0 HKD
     assets:cash                                                         -16 300.00 HKD = 0.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -106.40 HKD = 0 HKD
     equity:opening/closing balances
