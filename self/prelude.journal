@@ -1,5 +1,5 @@
-account assets                                                            ; type: A
-account assets:accrued-revenues                                           ; type: A
+include ../prelude.journal
+
 account assets:accrued-revenues:incomes                                   ; type: A
 account assets:accrued-revenues:incomes:tutoring                          ; type: A
 account assets:banks                                                      ; type: A
@@ -7,7 +7,6 @@ account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                 ; type
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current     ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     ; type: C
 account assets:cash                                                       ; type: C
-account assets:deferred-expenses                                          ; type: A
 account assets:deferred-expenses:maintenance                              ; type: A
 account assets:deferred-expenses:tuition                                  ; type: A
 account assets:deferred-expenses:tuition:universities                     ; type: A
@@ -20,15 +19,11 @@ account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        ; type
 account assets:special                                                    ; type: A
 account assets:special:vouchers                                           ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      ; type: A
-account equity                                                            ; type: E
-account equity:conversions                                                ; type: V
 account equity:conversions:HKD-USD:HKD                                    ; type: E
 account equity:conversions:HKD-USD:USD                                    ; type: E
 account equity:kins                                                       ; type: E
 account equity:kins:families                                              ; type: E 
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         ; type: E
-account equity:opening/closing balances                                   ; type: E
-account expenses                                                          ; type: X
 account expenses:consumption                                              ; type: X
 account expenses:fees                                                     ; type: X
 account expenses:fees:Buy Me a Coffee                                     ; type: X
@@ -47,10 +42,6 @@ account expenses:transport:trains                                         ; type
 account expenses:transport:trams                                          ; type: X
 account expenses:tuition                                                  ; type: X
 account expenses:tuition:universities                                     ; type: X
-account liabilities                                                       ; type: L
-account liabilities:accrued-expenses                                      ; type: L
-account liabilities:deferred-revenues                                     ; type: L
-account revenues                                                          ; type: R
 account revenues:donations                                                ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                    ; type: R
 account revenues:incomes                                                  ; type: R
@@ -59,12 +50,9 @@ account revenues:incomes:tutoring                                         ; type
 account revenues:interests                                                ; type: R
 account revenues:special                                                  ; type: R
 
-commodity 99 999 999.00
 commodity 99 999 999.00 CNY
 commodity 99 999 999.00 HKD
 commodity 99 999 999.00 USD
-
-decimal-mark .
 
 payee ******************@******.com
 payee ******@***************.com
@@ -91,10 +79,7 @@ payee a19a3525-a11c-40de-9726-79b0738910d7
 payee b05861a9-99cb-454d-95d4-e5ce13ef100a
 payee bank
 payee barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3
-payee closing balances
 payee f599f52c-f397-4316-843f-b5b8285a9dba
-payee opening balances
-payee self
 
 tag activity
 tag bounty
