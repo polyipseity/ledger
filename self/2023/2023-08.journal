@@ -206,5 +206,5 @@ include ../prelude.journal
 2023-08-28 (identifiers.banks.0a10cfed-045e-4409-952d-070e248a2715) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; BoC Bill - e65bf2ea-643c-4058-9981-843e153ae96c identifiers.banks.cdcb21ec-87ef-4cab-8ac4-7e42b1558031, activity: tuition, time: 01:14:50, timezone: UTC+08:00, via: Faster Payment System
     assets:deferred expenses:tuition:universities                    16 050.00 HKD  ; due: 2023-09-04+08:00, posted: 2023-08-11+08:00, tuition: tuition fee - undergraduate
     assets:deferred expenses:tuition:universities                       400.00 HKD  ; due: 2023-09-04+08:00, posted: 2023-08-11+08:00, tuition: caution money
-    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; due: 2023-09-08+08:00, posted: 2023-08-21T07:16:12+08:00, tuition: accommodation
+    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; due: 2023-09-08+08:00, posted: 2023-08-23T20:13:09+08:00, tuition: accommodation
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
