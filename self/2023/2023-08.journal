@@ -35,8 +35,8 @@ include ../prelude.journal
     assets:cash
 
 2023-08-06 * (identifiers.Stripe.a9c06521-12ee-49dc-9ea4-90f275f3de94) ***@*******.com  ; One time support for polyipseity, time: 01:03:55, timezone: UTC+08:00, activity: bounty, bounty: https://github.com/obsidianmd/obsidian-importer/issues/28
-    revenues:donations:Buy Me a Coffee:polyipseity                  -309.00 USD  ; @ 7.65434 HKD
-    equity:conversions:HKD-USD:USD                                   309.00 USD
+    revenues:donations:Buy Me a Coffee:polyipseity                  -309.00 USD
+    equity:conversions:HKD-USD:USD                                   309.00 USD  ; rate: 7.65434
     equity:conversions:HKD-USD:HKD                                -2 365.19 HKD
     expenses:fees:Buy Me a Coffee                                    114.82 HKD
     expenses:fees:Stripe                                              82.77 HKD
@@ -177,8 +177,8 @@ include ../prelude.journal
     assets:cash
 
 2023-08-26 self  ; time: 17:00:00, timezone: UTC+08:00, activity: transfer
-    assets:cash                                                  -4 500.00 CNY  ; @ 1.0761054 HKD
-    assets:cash                                                   5 000.00 HKD  ; 4842.4743 HKD
+    assets:cash                                                  -4 500.00 CNY  ; rate: 1.0761054, rate: rounded
+    assets:cash                                                   5 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2023-08-26 self  ; time: 18:42:21, timezone: UTC+08:00, duration: PT2H2M39S, activity: transfer, transfer: 3 red envelopes

@@ -48,8 +48,8 @@ include ../prelude.journal
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-09 * (identifiers.Stripe.c89bab9b-373c-481d-a59b-93fa3b01ce7a) ******@***************.com  ; One time support for polyipseity, time: 20:55:31, timezone: UTC+08:00, activity: donation
-    revenues:donations:Buy Me a Coffee:polyipseity                   -1.00 USD  ; @ 7.67188 HKD
-    equity:conversions:HKD-USD:USD                                    1.00 USD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -1.00 USD
+    equity:conversions:HKD-USD:USD                                    1.00 USD  ; rate: 7.67188
     equity:conversions:HKD-USD:HKD                                   -7.67 HKD
     expenses:fees:Buy Me a Coffee                                     0.38 HKD
     expenses:fees:Stripe                                              2.61 HKD
@@ -93,8 +93,8 @@ include ../prelude.journal
     assets:cash
 
 2023-07-20 * (identifiers.Stripe.be084437-5146-4c2a-b083-89c5b0d35237) ******************@******.com  ; One time support for polyipseity, time: 23:17:58, timezone: UTC+08:00, activity: donation
-    revenues:donations:Buy Me a Coffee:polyipseity                   -3.00 USD  ; @ 7.65512 HKD
-    equity:conversions:HKD-USD:USD                                    3.00 USD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -3.00 USD
+    equity:conversions:HKD-USD:USD                                    3.00 USD  ; rate: 7.65512
     equity:conversions:HKD-USD:HKD                                  -22.97 HKD
     expenses:fees:Buy Me a Coffee                                     1.15 HKD
     expenses:fees:Stripe                                              3.13 HKD
