@@ -1,0 +1,166 @@
+include ../prelude.journal
+
+2022-12-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      1 417 616.00 SheepIt_Render_Farm_points = 1 417 616 SheepIt_Render_Farm_points
+    equity:opening/closing balances
+    (assets:digital:SheepIt Render Farm:polyipseity)                            9 287.00 frames = 9 287 frames
+
+2022-12-01 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 477.00 SheepIt_Render_Farm_points = 1 421 093 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           10.00 frames = 9 297 frames
+
+2022-12-02 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 157.00 SheepIt_Render_Farm_points = 1 424 250 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           29.00 frames = 9 326 frames
+
+2022-12-03 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      2 657.00 SheepIt_Render_Farm_points = 1 426 907 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           16.00 frames = 9 342 frames
+
+2022-12-04 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      87 323.00 SheepIt_Render_Farm_points = 1 514 230 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            25.00 frames = 9 367 frames
+
+2022-12-05 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      13 542.00 SheepIt_Render_Farm_points = 1 527 772 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            22.00 frames = 9 389 frames
+
+2022-12-06 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 566.00 SheepIt_Render_Farm_points = 1 531 338 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           20.00 frames = 9 409 frames
+
+2022-12-07 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 223.00 SheepIt_Render_Farm_points = 1 534 561 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           20.00 frames = 9 429 frames
+
+2022-12-08 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      5 208.00 SheepIt_Render_Farm_points = 1 539 769 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           34.00 frames = 9 463 frames
+
+2022-12-09 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      22 132.00 SheepIt_Render_Farm_points = 1 561 901 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            11.00 frames = 9 474 frames
+
+2022-12-10 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      10 231.00 SheepIt_Render_Farm_points = 1 572 132 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            47.00 frames = 9 521 frames
+
+2022-12-11 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 261.00 SheepIt_Render_Farm_points = 1 575 393 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           14.00 frames = 9 535 frames
+
+2022-12-12 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      31 860.00 SheepIt_Render_Farm_points = 1 607 253 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            14.00 frames = 9 549 frames
+
+2022-12-13 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      9 313.00 SheepIt_Render_Farm_points = 1 616 566 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           33.00 frames = 9 582 frames
+
+2022-12-14 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      1.00 SheepIt_Render_Farm_points = 1 616 567 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                                  0 = 9 582 frames
+
+2022-12-15 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      15 190.00 SheepIt_Render_Farm_points = 1 631 757 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            22.00 frames = 9 604 frames
+
+2022-12-16 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      6 976.00 SheepIt_Render_Farm_points = 1 638 733 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           50.00 frames = 9 654 frames
+
+2022-12-17 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      36 542.00 SheepIt_Render_Farm_points = 1 675 275 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            17.00 frames = 9 671 frames
+
+2022-12-18 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      12 231.00 SheepIt_Render_Farm_points = 1 687 506 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            61.00 frames = 9 732 frames
+
+2022-12-19 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      11 932.00 SheepIt_Render_Farm_points = 1 699 438 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            26.00 frames = 9 758 frames
+
+2022-12-20 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      46 875.00 SheepIt_Render_Farm_points = 1 746 313 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            54.00 frames = 9 812 frames
+
+2022-12-21 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      32 487.00 SheepIt_Render_Farm_points = 1 778 800 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            93.00 frames = 9 905 frames
+
+2022-12-22 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      5 260.00 SheepIt_Render_Farm_points = 1 784 060 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           14.00 frames = 9 919 frames
+
+2022-12-23 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      17 257.00 SheepIt_Render_Farm_points = 1 801 317 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            25.00 frames = 9 944 frames
+
+2022-12-24 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      105 983.00 SheepIt_Render_Farm_points = 1 907 300 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                              6.00 frames = 9 950 frames
+
+2022-12-25 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      27 481.00 SheepIt_Render_Farm_points = 1 934 781 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            82.00 frames = 10 032 frames
+
+2022-12-26 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      30 960.00 SheepIt_Render_Farm_points = 1 965 741 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            46.00 frames = 10 078 frames
+
+2022-12-27 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      2 573.00 SheepIt_Render_Farm_points = 1 968 314 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           10.00 frames = 10 088 frames
+
+2022-12-28 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      6 747.00 SheepIt_Render_Farm_points = 1 975 061 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           41.00 frames = 10 129 frames
+
+2022-12-29 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      1 611.00 SheepIt_Render_Farm_points = 1 976 672 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            5.00 frames = 10 134 frames
+
+2022-12-30 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      3 220.00 SheepIt_Render_Farm_points = 1 979 892 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           42.00 frames = 10 176 frames
+
+2022-12-31 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      10 626.00 SheepIt_Render_Farm_points = 1 990 518 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            58.00 frames = 10 234 frames
+
+2022-12-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      -1 990 518.00 SheepIt_Render_Farm_points = 0 SheepIt_Render_Farm_points
+    equity:opening/closing balances
+    (assets:digital:SheepIt Render Farm:polyipseity)                           -10 234.00 frames = 0 frames

@@ -2,6 +2,7 @@ include ../prelude.journal
 
 account assets:digital:GREEN@COMMMUNITY                                       ; type: A
 account assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704  ; type: A
+account assets:digital:SheepIt Render Farm:polyipseity                        ; type: A
 account assets:recycables                                                     ; type: A
 account equity:conversions:GREEN$-metals                                      ; type: E
 account equity:conversions:GREEN$-metals:GREEN$                               ; type: E
@@ -12,18 +13,25 @@ account equity:conversions:GREEN$-other_plastics:other_plastics               ; 
 account equity:conversions:GREEN$-plastics                                    ; type: E
 account equity:conversions:GREEN$-plastics:GREEN$                             ; type: E
 account equity:conversions:GREEN$-plastics:plastics                           ; type: E, rate: 0.08, rate: minimum 100
+account expenses:compute                                                      ; type: X
+account expenses:compute:SheepIt Render Farm                                  ; type: X
+account revenues:compute                                                      ; type: R
+account revenues:compute:SheepIt Render Farm                                  ; type: R
 account revenues:recycables                                                   ; type: R
 account revenues:recycables:food                                              ; type: R
 account revenues:recycables:food and drinks:dining                            ; type: R
 
 commodity 99 999 999.00 GREEN$
-commodity 99 999 999.00 metals          ; unit: gram
-commodity 99 999 999.00 other_plastics  ; unit: gram
-commodity 99 999 999.00 paper           ; unit: gram
-commodity 99 999 999.00 plastics        ; unit: gram
+commodity 99 999 999.00 SheepIt_Render_Farm_points
+commodity 99 999 999.00 frames
+commodity 99 999 999.00 metals                      ; unit: gram
+commodity 99 999 999.00 other_plastics              ; unit: gram
+commodity 99 999 999.00 paper                       ; unit: gram
+commodity 99 999 999.00 plastics                    ; unit: gram
 
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee GREEN@d7380790-52e2-4728-94db-1572bc922104
+payee SheepIt Render Farm
 payee b0d2d642-7692-421f-bd20-4d03911caa54
 
 tag activity
