@@ -1,55 +1,55 @@
 include ../prelude.journal
 
-account assets:accrued-revenues:incomes                                   ; type: A
-account assets:accrued-revenues:incomes:tutoring                          ; type: A
-account assets:banks                                                      ; type: A
-account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                 ; type: A
-account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current     ; type: C
-account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     ; type: C
-account assets:cash                                                       ; type: C
-account assets:deferred-expenses:maintenance                              ; type: A
-account assets:deferred-expenses:tuition                                  ; type: A
-account assets:deferred-expenses:tuition:universities                     ; type: A
-account assets:digital                                                    ; type: A
-account assets:digital:Octopus card                                       ; type: C
-account assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521  ; type: C
-account assets:digital:Stripe                                             ; type: A
-account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a        ; type: A
-account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        ; type: A
-account assets:special                                                    ; type: A
-account assets:special:vouchers                                           ; type: A
-account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      ; type: A
-account equity:conversions:HKD-USD                                        ; type: E
-account equity:conversions:HKD-USD:HKD                                    ; type: E
-account equity:conversions:HKD-USD:USD                                    ; type: E
-account equity:kins                                                       ; type: E
-account equity:kins:families                                              ; type: E 
-account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         ; type: E
-account expenses:consumption                                              ; type: X
-account expenses:fees                                                     ; type: X
-account expenses:fees:Buy Me a Coffee                                     ; type: X
-account expenses:fees:Stripe                                              ; type: X
-account expenses:food                                                     ; type: X
-account expenses:food-and-drinks:dining                                   ; type: X
-account expenses:food-and-drinks:snacks                                   ; type: X
-account expenses:healthcare                                               ; type: X
-account expenses:healthcare:medication                                    ; type: X
-account expenses:maintenance                                              ; type: X
-account expenses:services                                                 ; type: X
-account expenses:transport                                                ; type: X
-account expenses:transport:buses                                          ; type: X
-account expenses:transport:minibuses                                      ; type: X
-account expenses:transport:trains                                         ; type: X
-account expenses:transport:trams                                          ; type: X
-account expenses:tuition                                                  ; type: X
-account expenses:tuition:universities                                     ; type: X
-account revenues:donations                                                ; type: R
-account revenues:donations:Buy Me a Coffee:polyipseity                    ; type: R
-account revenues:incomes                                                  ; type: R
-account revenues:incomes:bonuses                                          ; type: R
-account revenues:incomes:tutoring                                         ; type: R
-account revenues:interests                                                ; type: R
-account revenues:special                                                  ; type: R
+account assets:accrued revenues:incomes                                    ; type: A
+account assets:accrued revenues:incomes:tutoring                           ; type: A
+account assets:banks                                                       ; type: A
+account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                  ; type: A
+account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current      ; type: C
+account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      ; type: C
+account assets:cash                                                        ; type: C
+account assets:deferred expenses:maintenance                               ; type: A
+account assets:deferred expenses:tuition                                   ; type: A
+account assets:deferred expenses:tuition:universities                      ; type: A
+account assets:digital                                                     ; type: A
+account assets:digital:Octopus cards                                       ; type: C
+account assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521  ; type: C
+account assets:digital:Stripe                                              ; type: A
+account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a         ; type: A
+account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         ; type: A
+account assets:special                                                     ; type: A
+account assets:special:vouchers                                            ; type: A
+account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236       ; type: A
+account equity:conversions:HKD-USD                                         ; type: E
+account equity:conversions:HKD-USD:HKD                                     ; type: E
+account equity:conversions:HKD-USD:USD                                     ; type: E
+account equity:kins                                                        ; type: E
+account equity:kins:families                                               ; type: E 
+account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4          ; type: E
+account expenses:consumption                                               ; type: X
+account expenses:fees                                                      ; type: X
+account expenses:fees:Buy Me a Coffee                                      ; type: X
+account expenses:fees:Stripe                                               ; type: X
+account expenses:food                                                      ; type: X
+account expenses:food and drinks:dining                                    ; type: X
+account expenses:food and drinks:snacks                                    ; type: X
+account expenses:healthcare                                                ; type: X
+account expenses:healthcare:medication                                     ; type: X
+account expenses:maintenance                                               ; type: X
+account expenses:services                                                  ; type: X
+account expenses:transport                                                 ; type: X
+account expenses:transport:buses                                           ; type: X
+account expenses:transport:minibuses                                       ; type: X
+account expenses:transport:trains                                          ; type: X
+account expenses:transport:trams                                           ; type: X
+account expenses:tuition                                                   ; type: X
+account expenses:tuition:universities                                      ; type: X
+account revenues:donations                                                 ; type: R
+account revenues:donations:Buy Me a Coffee:polyipseity                     ; type: R
+account revenues:incomes                                                   ; type: R
+account revenues:incomes:bonuses                                           ; type: R
+account revenues:incomes:tutoring                                          ; type: R
+account revenues:interests                                                 ; type: R
+account revenues:special                                                   ; type: R
 
 commodity 99 999 999.00 CNY
 commodity 99 999 999.00 HKD
@@ -86,7 +86,7 @@ tag activity
 tag bounty
 tag duration
 tag eating
-tag food-and-drink
+tag food_and_drink
 tag maintenance
 tag posted
 tag valid

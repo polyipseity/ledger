@@ -1,26 +1,26 @@
 include ../prelude.journal
 
 2023-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:accrued-revenues:incomes:tutoring                               960.00 HKD = 960 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13 404.63 HKD = 13 404.63 HKD
-    assets:cash                                                         20 035.00 HKD = 20 035.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
+    assets:accrued revenues:incomes:tutoring                                960.00 HKD = 960 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        13 404.63 HKD = 13 404.63 HKD
+    assets:cash                                                          20 035.00 HKD = 20 035.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        64.00 HKD = 64.00 HKD
     equity:opening/closing balances
 
 2023-07-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:43, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                        38.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:food and drinks:dining                                         38.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 10:30, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
 2023-07-03 82050afc-aac6-41aa-8066-d436a2c5434d  ; time: 13:04, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                        42.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:food and drinks:dining                                         42.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-04 Circle K  ; time: 13:57, timezone: UTC+08:00, activity: add value
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
 2023-07-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 10:00, timezone: UTC+08:00, activity: tutoring
@@ -28,24 +28,24 @@ include ../prelude.journal
     assets:cash
 
 2023-07-07 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 17:33, timezone: UTC+08:00, activity: transport
-    expenses:transport:trains                                               7.20 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:trains                                                7.20 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-07 31d42ab2-c800-4210-b6ee-aff943b6e8c8  ; time: 22:39, timezone: UTC+08:00, activity: transport
-    expenses:transport:trams                                                3.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:trams                                                 3.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-07 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; time: 22:45, timezone: UTC+08:00, activity: transport
-    expenses:transport:buses                                               19.60 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:buses                                                19.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-09 7-Eleven  ; time: 19:29, timezone: UTC+08:00, activity: add value
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
 2023-07-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 20:02, timezone: UTC+08:00, activity: eating, eating: dinner
-    expenses:food-and-drinks:dining                                       137.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:food and drinks:dining                                        137.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-09 * (identifiers.Stripe.c89bab9b-373c-481d-a59b-93fa3b01ce7a) ******@***************.com  ; One time support for polyipseity, time: 20:55:31, timezone: UTC+08:00, activity: donation
     revenues:donations:Buy Me a Coffee:polyipseity                   -1.00 USD
@@ -56,16 +56,16 @@ include ../prelude.journal
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        4.68 HKD
 
 2023-07-13 Circle K  ; time: 11:56, timezone: UTC+08:00, activity: add value
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
 2023-07-14 7-Eleven  ; time: 18:27, timezone: UTC+08:00, activity: add value
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
 2023-07-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 19:17, timezone: UTC+08:00, activity: eating, eating: dinner
-    expenses:food-and-drinks:dining                                        66.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:food and drinks:dining                                         66.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-16 (identifiers.a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; time: 00:00:00, timezone: UTC+08:00, activity: vouchers, vouchers: consumption, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f)
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD  ; valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
@@ -80,8 +80,8 @@ include ../prelude.journal
     assets:cash
 
 2023-07-19 82050afc-aac6-41aa-8066-d436a2c5434d  ; time: 11:02, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                        43.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:food and drinks:dining                                         43.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-19 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring       -300.00 HKD
@@ -105,7 +105,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-07-21 (identifiers.Alipay.d09c60e4-2b71-4959-b383-9f043bca4640) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:56:01, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                    54.00 HKD
+    expenses:food and drinks:dining                                    54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 14:00, timezone: UTC+08:00, activity: tutoring
@@ -113,11 +113,11 @@ include ../prelude.journal
     assets:cash
 
 2023-07-22 (identifiers.Alipay.179dc7f9-0dda-45d6-892e-4e4bcca67dfb) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 15:41:12, timezone: UTC+08:00, activity: eating, eating: afternoon tea
-    expenses:food-and-drinks:dining                                    36.00 HKD
+    expenses:food and drinks:dining                                    36.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-23 (identifiers.Alipay.bb7ae321-874e-403d-bd78-5242d9f5bd93) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:41:18, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                    43.00 HKD
+    expenses:food and drinks:dining                                    43.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:30, timezone: UTC+08:00, activity: tutoring
@@ -137,47 +137,47 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-07-28 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 10:09, timezone: UTC+08:00, activity: transport
-    expenses:transport:trains                                               4.80 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:trains                                                4.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 a19a3525-a11c-40de-9726-79b0738910d7  ; time: 10:15, timezone: UTC+08:00, activity: transport
-    expenses:transport:minibuses                                            7.80 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:minibuses                                             7.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 7-Eleven  ; time: 12:50, timezone: UTC+08:00, activity: add value
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521      300.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      300.00 HKD
     assets:cash
 
 2023-07-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; time: 13:01, timezone: UTC+08:00, activity: transport
-    expenses:transport:buses                                                4.80 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:buses                                                 4.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 a19a3525-a11c-40de-9726-79b0738910d7  ; time: 13:19, timezone: UTC+08:00, activity: transport
-    expenses:transport:minibuses                                            6.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:minibuses                                             6.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 a19a3525-a11c-40de-9726-79b0738910d7  ; time: 13:27, timezone: UTC+08:00, activity: transport
-    expenses:transport:minibuses                                            6.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:minibuses                                             6.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 14:39, timezone: UTC+08:00, activity: transport
-    expenses:transport:trains                                               6.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
+    expenses:transport:trains                                                6.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-07-28 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 15:00, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-07-29 (identifiers.Alipay.e116adff-8544-43d2-bb14-593058cc22ce) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:08:25, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drinks:dining                                    60.00 HKD
+    expenses:food and drinks:dining                                    60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-29 (identifiers.Alipay.570b1a6d-f12e-44a3-ad56-3b98fbc44a46) 7-Eleven  ; time: 23:00:10, timezone: UTC+08:00, activity: consumption
-    expenses:food-and-drinks:snacks                                    20.50 HKD  ; food-and-drink: Yakult
+    expenses:food and drinks:snacks                                    20.50 HKD  ; food_and_drink: Yakult
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-30 (identifiers.Alipay.1d6cb5f0-2cd8-42c4-8d35-2592ba49508b) f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 19:36:07, timezone: UTC+08:00, activity: eating, eating: dinner
-    expenses:food-and-drinks:dining                                    66.00 HKD
+    expenses:food and drinks:dining                                    66.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-07-31 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 14:00, timezone: UTC+08:00, activity: tutoring
@@ -185,11 +185,11 @@ include ../prelude.journal
     assets:cash
 
 2023-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued-revenues:incomes:tutoring                               -960.00 HKD = 0 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -33 438.32 HKD = 0.00 HKD
-    assets:cash                                                         -22 635.00 HKD = 0.00 HKD
-    assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236         -2 720.50 HKD = 0 HKD
-    equity:conversions:HKD-USD:HKD                                           30.64 HKD = 0.00 HKD
-    equity:conversions:HKD-USD:USD                                           -4.00 USD = 0.00 USD
+    assets:accrued revenues:incomes:tutoring                                -960.00 HKD = 0 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        -33 438.32 HKD = 0.00 HKD
+    assets:cash                                                          -22 635.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -272.80 HKD = 0 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236          -2 720.50 HKD = 0 HKD
+    equity:conversions:HKD-USD:HKD                                            30.64 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                            -4.00 USD = 0.00 USD
     equity:opening/closing balances
