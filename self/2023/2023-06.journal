@@ -7,7 +7,7 @@ include ../prelude.journal
     equity:opening/closing balances
 
 2023-06-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:55, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         54.00 HKD
+    expenses:food-and-drinks:dining                                        54.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-01 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 16:00, timezone: UTC+08:00, activity: tutoring
@@ -15,7 +15,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-02 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 15:13, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         39.00 HKD
+    expenses:food-and-drinks:dining                                        39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-03 7-Eleven  ; time: 12:44, timezone: UTC+08:00, activity: add value
@@ -23,7 +23,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-03 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:10, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         38.00 HKD
+    expenses:food-and-drinks:dining                                        38.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-04 7-Eleven  ; time: 13:20, timezone: UTC+08:00, activity: add value
@@ -31,11 +31,11 @@ include ../prelude.journal
     assets:cash
 
 2023-06-04 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:51, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                        118.00 HKD
+    expenses:food-and-drinks:dining                                       118.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-05 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 12:52, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         50.00 HKD
+    expenses:food-and-drinks:dining                                        50.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-05 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1  ; timezone: UTC+08:00, activity: tutoring
@@ -67,7 +67,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:25, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         54.00 HKD
+    expenses:food-and-drinks:dining                                        54.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-10 b05861a9-99cb-454d-95d4-e5ce13ef100a  ; timezone: UTC+08:00, activity: tutoring
@@ -87,7 +87,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:51, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         54.00 HKD
+    expenses:food-and-drinks:dining                                        54.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-15 7-Eleven  ; time: 13:57, timezone: UTC+08:00, activity: add value
@@ -99,11 +99,11 @@ include ../prelude.journal
     assets:accrued-revenues:incomes:tutoring
 
 2023-06-15 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:40, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         39.00 HKD
+    expenses:food-and-drinks:dining                                        39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-18 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:28, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         53.00 HKD
+    expenses:food-and-drinks:dining                                        53.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-19 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
@@ -127,7 +127,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-26 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 13:07, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         57.00 HKD
+    expenses:food-and-drinks:dining                                        57.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:00, timezone: UTC+08:00, activity: tutoring
@@ -135,7 +135,7 @@ include ../prelude.journal
     assets:cash
 
 2023-06-28 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 15:07, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         39.00 HKD
+    expenses:food-and-drinks:dining                                        39.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-29 * 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; time: 15:45, duration: PT1H, timezone: UTC+08:00, activity: tutoring
@@ -143,7 +143,7 @@ include ../prelude.journal
     assets:accrued-revenues:incomes:tutoring
 
 2023-06-30 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., time: 14:36, timezone: UTC+08:00, activity: eating, eating: lunch
-    expenses:food-and-drink:dining                                         35.00 HKD
+    expenses:food-and-drinks:dining                                        35.00 HKD
     assets:digital:Octopus card:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00

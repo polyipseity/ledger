@@ -30,8 +30,8 @@ account expenses:fees                                                     ; type
 account expenses:fees:Buy Me a Coffee                                     ; type: X
 account expenses:fees:Stripe                                              ; type: X
 account expenses:food                                                     ; type: X
-account expenses:food-and-drink:dining                                    ; type: X
-account expenses:food-and-drink:snacks                                    ; type: X
+account expenses:food-and-drinks:dining                                   ; type: X
+account expenses:food-and-drinks:snacks                                   ; type: X
 account expenses:healthcare                                               ; type: X
 account expenses:healthcare:medication                                    ; type: X
 account expenses:maintenance                                              ; type: X

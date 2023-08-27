@@ -14,7 +14,7 @@ account equity:conversions:GREEN$-plastics:GREEN$                   ; type: E
 account equity:conversions:GREEN$-plastics:plastics                 ; type: E, rate: 0.08, rate: minimum 100
 account revenues:recycables                                         ; type: R
 account revenues:recycables:food                                    ; type: R
-account revenues:recycables:food-and-drink:dining                   ; type: R
+account revenues:recycables:food-and-drinks:dining                  ; type: R
 
 commodity 99 999 999.00 GREEN$
 commodity 99 999 999.00 metals          ; unit: gram
