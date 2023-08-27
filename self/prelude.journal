@@ -7,6 +7,8 @@ account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                  ; typ
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current      ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      ; type: C
 account assets:cash                                                        ; type: C
+account assets:deferred expenses:accommodations                            ; type: A
+account assets:deferred expenses:accommodations:universities               ; type: A
 account assets:deferred expenses:maintenance                               ; type: A
 account assets:deferred expenses:tuition                                   ; type: A
 account assets:deferred expenses:tuition:universities                      ; type: A
@@ -25,6 +27,8 @@ account equity:conversions:HKD-USD:USD                                     ; typ
 account equity:kins                                                        ; type: E
 account equity:kins:families                                               ; type: E 
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4          ; type: E
+account expenses:accommodations                                            ; type: X
+account expenses:accommodations:universities                               ; type: X
 account expenses:consumption                                               ; type: X
 account expenses:fees                                                      ; type: X
 account expenses:fees:Buy Me a Coffee                                      ; type: X
