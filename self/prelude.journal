@@ -19,6 +19,7 @@ account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        ; type
 account assets:special                                                    ; type: A
 account assets:special:vouchers                                           ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      ; type: A
+account equity:conversions:HKD-USD                                        ; type: E
 account equity:conversions:HKD-USD:HKD                                    ; type: E
 account equity:conversions:HKD-USD:USD                                    ; type: E
 account equity:kins                                                       ; type: E
