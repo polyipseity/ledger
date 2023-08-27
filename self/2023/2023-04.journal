@@ -1,4 +1,4 @@
-include ../../prelude.journal
+include ../prelude.journal
 
 2023-04-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:cash                        2 950.00 HKD = 2 950.00 HKD
