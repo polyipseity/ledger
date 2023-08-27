@@ -125,21 +125,26 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                            40.00 frames = 11 740 frames
 
-2023-05-28 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      43 903.00 SheepIt_Render_Farm_points = 1 899 153 SheepIt_Render_Farm_points
+2023-05-27 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT15016.642S, time: 17:12:43, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      26 704.00 SheepIt_Render_Farm_points
     revenues:compute:SheepIt Render Farm
-    (assets:digital:SheepIt Render Farm:polyipseity)                           113.00 frames = 11 853 frames
+    (assets:digital:SheepIt Render Farm:polyipseity)                            80.00 frames
+
+2023-05-28 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      17 199.00 SheepIt_Render_Farm_points = 1 899 153 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                            33.00 frames = 11 853 frames
 
 2023-05-29 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity                 0 = 1 899 153 SheepIt_Render_Farm_points
     (assets:digital:SheepIt Render Farm:polyipseity)               0 = 11 853 frames
 
-2023-05-30 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+2023-05-29 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT11097.78S, time: 07:31:37, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      90 078.00 SheepIt_Render_Farm_points = 1 989 231 SheepIt_Render_Farm_points
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                            25.00 frames = 11 878 frames
 
-2023-05-31 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
+2023-05-30 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT9595.004S, time: 10:11:24, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      20 080.00 SheepIt_Render_Farm_points = 2 009 311 SheepIt_Render_Farm_points
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                            43.00 frames = 11 921 frames
