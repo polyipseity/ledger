@@ -17,3 +17,7 @@ decimal-mark .
 payee closing balances
 payee opening balances
 payee self
+
+tag _conversion-matched
+tag _price-matched
+tag rate

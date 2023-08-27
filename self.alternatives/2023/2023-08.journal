@@ -1,0 +1,28 @@
+include ../prelude.journal
+
+2023-08-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    equity:opening/closing balances
+
+2023-08-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 19:00, timezone: UTC+08:00, activity: collect
+    revenues:recycables:food         -20.00 plastics  ; collect: 1 plastic bottle
+    revenues:recycables:food    -5.00 other_plastics  ; collect: 2 other plastics
+    assets:recycables
+
+2023-08-26 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; time: 11:19:49, duration: PT22S, timezone: UTC+08:00, activity: recycle
+    assets:recycables                                                  -20.00 plastics  ; time: 11:19:49, timezone: UTC+08:00, recycle: 1 plastic bottle
+    assets:recycables                                             -5.00 other_plastics  ; time: 11:20:11, timezone: UTC+08:00, recycle: 2 other plastics
+    equity:conversions:GREEN$-plastics:plastics                         20.00 plastics
+    equity:conversions:GREEN$-plastics:GREEN$                                        0
+    equity:conversions:GREEN$-other_plastics:other_plastics        5.00 other_plastics
+    equity:conversions:GREEN$-other_plastics:GREEN$                                  0
+    assets:digital:GREEN$:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-08-26 b0d2d642-7692-421f-bd20-4d03911caa54  ; time: 18:31, duration: PT2H19M, timezone: UTC+08:00, activity: collect
+    revenues:recycables:food:dining    -90.00 metals  ; collect: 10 drink cans
+    assets:recycables
+
+2023-08-27 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; time: 13:03:49, timezone: UTC+08:00, activity: recycle
+    assets:recycables                                             -90.00 metals  ; time: 13:03:49, timezone: UTC+08:00, recycle: 10 drink cans
+    equity:conversions:GREEN$-metals:metals                        90.00 metals
+    equity:conversions:GREEN$-metals:GREEN$                                   0
+    assets:digital:GREEN$:1683f1aa-61c7-43cc-b9f3-58da24a81704
