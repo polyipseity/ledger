@@ -191,6 +191,10 @@ include ../prelude.journal
     expenses:food:dining                                               37.00 HKD  ; food: garlic butter on toast, food: hot coffee, food: macaroni in soup (light), food: scrambled egg with mushroom, food: shredded ham
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
+2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 12:30:00, duration: PT5H26M40S, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring     -300.00 HKD  ; time: 13:23:30, timezone: UTC+08:00
+    assets:cash
+
 2023-08-28 self  ; QDM CASH DEP (26AUG23), timezone: UTC+08:00, posted: 2023-08-26T18:33:13+08:00, activity: deposit
     assets:cash                                                      -5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
