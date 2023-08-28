@@ -212,3 +212,32 @@ include ../prelude.journal
 2023-08-28 self  ; time: 07:59:32, timezone: UTC+08:00, activity: transfer, transfer: 1 red envelope
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -50.00 HKD  ; time: 07:59:32
     assets:cash
+
+2023-08-28 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 08:51, timezone: UTC+08:00, activity: transport
+    expenses:transport:trains                                                4.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-08-28 a19a3525-a11c-40de-9726-79b0738910d7  ; time: 09:07, timezone: UTC+08:00, activity: transport
+    expenses:transport:minibuses                                             7.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-08-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; time: 09:45, timezone: UTC+08:00, activity: vouchers, vouchers: consumption
+    assets:special:vouchers       35.00 HKD  ; valid: 2023-08-28T00:00:00+08:00/2023-08-28:59:59+08:00
+    revenues:special
+
+2023-08-28 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 13:55:37, timezone: UTC+08:00, activity: eating, eating: lunch
+    expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: 三色芝士焗肉醬長通粉
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-08-28 f599f52c-f397-4316-843f-b5b8285a9dba  ; time: 14:19:37, timezone: UTC+08:00, activity: consumption
+    expenses:food and drinks:snacks                                         36.00 HKD  ; food_and_drink: 4 cans of Fanta
+    assets:special:vouchers                                                -35.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-08-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; time: 14:47, timezone: UTC+08:00, activity: transport
+    expenses:transport:buses                                                 8.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-08-28 810c451f-b2e5-4c98-8433-b1451593c457  ; time: 16:10, timezone: UTC+08:00, activity: transport
+    expenses:transport:trains                                                4.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
