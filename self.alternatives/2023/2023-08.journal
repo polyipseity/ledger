@@ -154,3 +154,8 @@ include ../prelude.journal
     assets:digital:SheepIt Render Farm:polyipseity      45 091.00 SheepIt_Render_Farm_points = 4 493 505 SheepIt_Render_Farm_points
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                            38.00 frames = 14 577 frames
+
+2023-08-28 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13204.4S, time: 17:51:36, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      87 742.00 SheepIt_Render_Farm_points = 4 581 247 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                           100.00 frames = 14 677 frames
