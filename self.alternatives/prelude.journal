@@ -18,7 +18,7 @@ account expenses:compute:SheepIt Render Farm                                  ; 
 account revenues:compute                                                      ; type: R
 account revenues:compute:SheepIt Render Farm                                  ; type: R
 account revenues:recycables                                                   ; type: R
-account revenues:recycables:food                                              ; type: R
+account revenues:recycables:food and drinks                                   ; type: R
 account revenues:recycables:food and drinks:dining                            ; type: R
 
 commodity 99 999 999.00 GREEN$
