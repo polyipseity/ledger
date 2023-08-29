@@ -24,6 +24,7 @@ account revenues:recycables:food and drinks:dining                            ; 
 
 commodity 99 999 999.00 GREEN$
 commodity 99 999 999.00 SheepIt_Render_Farm_points
+commodity 99 999 999.00 Tetra_Pak_cartons           ; unit: gram
 commodity 99 999 999.00 frames
 commodity 99 999 999.00 metals                      ; unit: gram
 commodity 99 999 999.00 other_plastics              ; unit: gram
