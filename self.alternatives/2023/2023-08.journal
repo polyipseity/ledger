@@ -164,8 +164,9 @@ include ../prelude.journal
     assets:recycables
 
 2023-08-27 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks:dining      -745.00 metals  ; collect: 44 drink cans
-    revenues:recycables:food and drinks:dining    -100.00 plastics  ; collect: 3 plastic bottles
+    revenues:recycables:food and drinks:dining          -745.00 metals  ; collect: 44 drink cans
+    revenues:recycables:food and drinks           -8.00 other_plastics  ; collect: 3 other plastics
+    revenues:recycables:food and drinks:dining         -92.00 plastics  ; collect: 3 plastic bottles
     assets:recycables
 
 2023-08-28 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13204.4S, time: 17:51:36, timezone: UTC+08:00
@@ -174,5 +175,6 @@ include ../prelude.journal
     (assets:digital:SheepIt Render Farm:polyipseity)                           100.00 frames = 14 677 frames
 
 2023-08-29 self  ; activity: collect, time: 10:42:51, timezone: UTC+08:00
-    revenues:recycables:food and drinks    -27.00 plastics  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks    -2.00 other_plastics  ; collect: 1 other plastic
+    revenues:recycables:food and drinks         -25.00 plastics  ; collect: 1 plastic bottle
     assets:recycables
