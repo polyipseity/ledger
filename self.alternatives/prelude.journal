@@ -25,6 +25,7 @@ account revenues:recycables                                                   ; 
 account revenues:recycables:academia                                          ; type: R
 account revenues:recycables:food and drinks                                   ; type: R
 account revenues:recycables:food and drinks:dining                            ; type: R
+account revenues:recycables:personal care                                     ; type: R
 
 commodity 99 999 999.00 GREEN$
 commodity 99 999 999.00 SheepIt_Render_Farm_points
