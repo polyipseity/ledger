@@ -178,3 +178,20 @@ include ../prelude.journal
     revenues:recycables:food and drinks    -2.00 other_plastics  ; collect: 1 other plastic
     revenues:recycables:food and drinks         -25.00 plastics  ; collect: 1 plastic bottle
     assets:recycables
+
+2023-08-29 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M45S, time: 12:06:03, timezone: UTC+08:00
+    assets:recycables                                                       -21.00 Tetra_Pak_cartons = 0  ; recycle: 2 Tetra Pak beverage cartons
+    expenses:recycling                                                       21.00 Tetra_Pak_cartons
+    assets:recycables                                                                  -248.00 paper = 0  ; recycle: 1 magazine, recycle: 5 sheets of paper, time: 12:06:03, timezone: UTC+08:00
+    equity:conversions:GREEN$-paper:paper                                               248.00 paper  ; rate: 0.01, rate: minimum 100
+    equity:conversions:GREEN$-paper:GREEN$                                              -3.00 GREEN$
+    assets:recycables                                                               -253.00 plastics = 0  ; recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
+    equity:conversions:GREEN$-plastics:plastics                                      253.00 plastics  ; rate: 0.08, rate: minimum 100
+    equity:conversions:GREEN$-plastics:GREEN$                                          -16.00 GREEN$
+    assets:recycables                                                          -72.00 other_plastics = 0  ; recycle: 22 other plastics, time: 12:07:14, timezone: UTC+08:00
+    equity:conversions:GREEN$-other_plastics:other_plastics                     72.00 other_plastics  ; rate: 0.01, rate: minimum 100
+    equity:conversions:GREEN$-other_plastics:GREEN$                                                0
+    assets:recycables                                                                 -755.00 metals = 0  ; recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
+    equity:conversions:GREEN$-metals:metals                                            755.00 metals  ; rate: 0.01, rate: minimum 100
+    equity:conversions:GREEN$-metals:GREEN$                                             -6.00 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704

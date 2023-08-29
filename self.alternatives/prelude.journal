@@ -10,11 +10,15 @@ account equity:conversions:GREEN$-metals:metals                               ; 
 account equity:conversions:GREEN$-other_plastics                              ; type: E
 account equity:conversions:GREEN$-other_plastics:GREEN$                       ; type: E
 account equity:conversions:GREEN$-other_plastics:other_plastics               ; type: E, rate: 0.01, rate: minimum 100
+account equity:conversions:GREEN$-paper                                       ; type: E
+account equity:conversions:GREEN$-paper:GREEN$                                ; type: E
+account equity:conversions:GREEN$-paper:paper                                 ; type: E, rate: 0.01, rate: minimum 100
 account equity:conversions:GREEN$-plastics                                    ; type: E
 account equity:conversions:GREEN$-plastics:GREEN$                             ; type: E
 account equity:conversions:GREEN$-plastics:plastics                           ; type: E, rate: 0.08, rate: minimum 100
 account expenses:compute                                                      ; type: X
 account expenses:compute:SheepIt Render Farm                                  ; type: X
+account expenses:recycling                                                    ; type: X
 account revenues:compute                                                      ; type: R
 account revenues:compute:SheepIt Render Farm                                  ; type: R
 account revenues:recycables                                                   ; type: R
