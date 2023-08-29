@@ -164,3 +164,7 @@ include ../prelude.journal
     assets:digital:SheepIt Render Farm:polyipseity      87 742.00 SheepIt_Render_Farm_points = 4 581 247 SheepIt_Render_Farm_points
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                           100.00 frames = 14 677 frames
+
+2023-08-29 self  ; activity: collect, time: 10:42:51, timezone: UTC+08:00
+    revenues:recycables:food and drinks    -27.00 plastics  ; collect: 1 plastic bottle
+    assets:recycables
