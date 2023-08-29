@@ -242,6 +242,14 @@ include ../prelude.journal
     expenses:transport:trains                                                4.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-08-29 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:00:00, duration: PT5H10M, timezone: UTC+08:00, activity: tutoring
+    revenues:incomes:tutoring     -300.00 HKD  ; time: 14:29:57, timezone: UTC+08:00
+    assets:cash
+
+2023-08-29 (identifiers.Alipay.907376ad-01a7-45ae-a550-c811e51f544d) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 19:02:32, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    63.00 HKD  ; food_and_drink: Yangzhou fried rice
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-08-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; time: 23:59:59, timezone: UTC+08:00, activity: adjust
     expenses:accommodations:universities                      395.00 HKD
     assets:deferred expenses:accommodations:universities
