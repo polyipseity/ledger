@@ -155,6 +155,14 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     (assets:digital:SheepIt Render Farm:polyipseity)                            38.00 frames = 14 577 frames
 
+2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5TH30M, time: 12:30, timezone: UTC+08:00
+    revenues:recycables:academia                   -248.00 paper  ; collect: 1 magazine, collect: 5 sheets of paper
+    revenues:recycables:food and drinks            -10.00 metals  ; collect: 1 metal
+    revenues:recycables:food and drinks    -62.00 other_plastics  ; collect: 18 other plastics
+    revenues:recycables:food and drinks             -21.00 paper  ; collect: 2 Tetra Pak cartons
+    revenues:recycables:food and drinks         -136.00 plastics  ; collect: 6 plastic bottles
+    assets:recycables
+
 2023-08-27 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food and drinks:dining      -745.00 metals  ; collect: 44 drink cans
     revenues:recycables:food and drinks:dining    -100.00 plastics  ; collect: 3 plastic bottles
