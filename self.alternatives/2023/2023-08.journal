@@ -211,3 +211,15 @@ include ../prelude.journal
 2023-08-29 self  ; activity: collect, time: 20:04:30, timezone: UTC+08:00
     revenues:recycables:food and drinks    -3.00 other_plastics  ; collect: 2 plastic cutleries
     assets:recycables
+
+2023-08-30 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M56S, time: 09:56:29, timezone: UTC+08:00
+    assets:recycables                                                              -316.00 metals = 0  ; recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
+    equity:conversions:GREEN$-metals:metals                                         316.00 metals  ; rate: 0.01, rate: minimum 100
+    equity:conversions:GREEN$-metals:GREEN$                                          -3.00 GREEN$
+    assets:recycables                                                            -279.00 plastics = 0  ; recycle: 11 plastic bottles, time: 09:57:47, timezone: UTC+08:00
+    equity:conversions:GREEN$-plastics:plastics                                   279.00 plastics  ; rate: 0.08, rate: minimum 100
+    equity:conversions:GREEN$-plastics:GREEN$                                       -16.00 GREEN$
+    assets:recycables                                                       -46.00 other_plastics = 0  ; recycle: 12 other plastics, recycle: 2 plastic bags, recycle: 2 plastic cutleries, time: 09:58:25, timezone: UTC+08:00
+    equity:conversions:GREEN$-other_plastics:other_plastics                  46.00 other_plastics  ; rate: 0.01, rate: minimum 100
+    equity:conversions:GREEN$-other_plastics:GREEN$                                             0
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
