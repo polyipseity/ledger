@@ -6,16 +6,16 @@ account assets:digital:SheepIt Render Farm:polyipseity                        ; 
 account assets:recycables                                                     ; type: A
 account equity:conversions:GREEN$-metals                                      ; type: E
 account equity:conversions:GREEN$-metals:GREEN$                               ; type: E
-account equity:conversions:GREEN$-metals:metals                               ; type: E, rate: 0.01, rate: minimum 100
+account equity:conversions:GREEN$-metals:metals                               ; type: E, rate: 0.01, rate: unit 100
 account equity:conversions:GREEN$-other_plastics                              ; type: E
 account equity:conversions:GREEN$-other_plastics:GREEN$                       ; type: E
-account equity:conversions:GREEN$-other_plastics:other_plastics               ; type: E, rate: 0.01, rate: minimum 100
+account equity:conversions:GREEN$-other_plastics:other_plastics               ; type: E, rate: 0.01, rate: unit 100
 account equity:conversions:GREEN$-paper                                       ; type: E
 account equity:conversions:GREEN$-paper:GREEN$                                ; type: E
-account equity:conversions:GREEN$-paper:paper                                 ; type: E, rate: 0.01, rate: minimum 100
+account equity:conversions:GREEN$-paper:paper                                 ; type: E, rate: 0.01, rate: unit 100
 account equity:conversions:GREEN$-plastics                                    ; type: E
 account equity:conversions:GREEN$-plastics:GREEN$                             ; type: E
-account equity:conversions:GREEN$-plastics:plastics                           ; type: E, rate: 0.08, rate: minimum 100
+account equity:conversions:GREEN$-plastics:plastics                           ; type: E, rate: 0.08, rate: unit 100
 account expenses:compute                                                      ; type: X
 account expenses:compute:SheepIt Render Farm                                  ; type: X
 account expenses:recycling                                                    ; type: X
