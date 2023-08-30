@@ -211,6 +211,11 @@ include ../prelude.journal
     revenues:recycables:food and drinks    -3.00 other_plastics  ; collect: 2 plastic cutleries
     assets:recycables
 
+2023-08-30 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13508.96S, time: 08:15:47, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      118 405.00 SheepIt_Render_Farm_points = 4 699 652 SheepIt_Render_Farm_points
+    revenues:compute:SheepIt Render Farm
+    (assets:digital:SheepIt Render Farm:polyipseity)                             66.00 frames = 14 743 frames
+
 2023-08-30 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M56S, time: 09:56:29, timezone: UTC+08:00
     assets:recycables                                                              -316.00 metals = 0  ; recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
     equity:conversions:GREEN$-metals:metals                                         316.00 metals  ; rate: 0.01, rate: unit 100
