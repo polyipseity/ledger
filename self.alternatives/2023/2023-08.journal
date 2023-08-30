@@ -198,13 +198,14 @@ include ../prelude.journal
 
 2023-08-29 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5TH10M, time: 13:00, timezone: UTC+08:00
     revenues:recycables:food and drinks             -9.00 metals  ; collect: 1 metal
-    revenues:recycables:food and drinks    -23.00 other_plastics  ; collect: 12 other plastics
+    revenues:recycables:food and drinks    -33.00 other_plastics  ; collect: 1 plastic bag, collect: 12 other plastics
     revenues:recycables:food and drinks         -223.00 plastics  ; collect: 10 plastic bottles
     revenues:recycables:personal care            -56.00 plastics  ; collect: 1 plastic bottle
     assets:recycables
 
 2023-08-29 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks:dining    -307.00 metals  ; collect: 20 drink cans
+    revenues:recycables:food and drinks:dining           -307.00 metals  ; collect: 20 drink cans
+    revenues:recycables:food and drinks:dining    -10.00 other_plastics  ; collect: 1 plastic bag
     assets:recycables
 
 2023-08-29 self  ; activity: collect, time: 20:04:30, timezone: UTC+08:00
