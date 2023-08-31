@@ -254,13 +254,21 @@ include ../prelude.journal
     expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-30 (identifiers.Alipay.86d726d7-1a11-4060-94c8-dcdd2a6243a8) Subway  ; activity: eating, eating: lunch, time: 11:41:39, timezone: UTC+08:00
+2023-08-30 (identifiers.Alipay.86d726d7-1a11-4060-94c8-dcdd2a6243a8) Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb  ; activity: eating, eating: lunch, time: 11:41:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                    40.00 HKD  ; food_and_drink: 6-inch Subway Melt with barbecue sauce
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 13:00, duration: PT4H10M, timezone: UTC+08:00, activity: tutoring
     revenues:incomes:tutoring     -300.00 HKD  ; time: 14:35:50, timezone: UTC+08:00
     assets:cash
+
+2023-08-30 (identifiers.Alipay.b61c0599-8144-4363-b4ac-bcf24b8589d5) Genki 4aa5d1b8-35f6-4770-8af3-482d754d0de7  ; activity: eating, eating: dinner, time: 21:51:44, timezone: UTC+08:00
+    expenses:food and drinks:dining                                   745.80 HKD  ; food_and_drink: many sushi
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-08-31 (identifiers.Alipay.11ba1264-6acc-4e9a-960c-44d55966df63) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 10:43:19, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
 2023-08-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; time: 23:59:59, timezone: UTC+08:00, activity: adjust
     expenses:accommodations:universities                      395.00 HKD
