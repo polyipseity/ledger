@@ -1,31 +1,34 @@
 include ../prelude.journal
 
-account assets:digital:GREEN@COMMMUNITY                                       ; type: A
-account assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704  ; type: A
-account assets:digital:SheepIt Render Farm:polyipseity                        ; type: A
-account assets:recycables                                                     ; type: A
-account equity:conversions:GREEN$-metals                                      ; type: E
-account equity:conversions:GREEN$-metals:GREEN$                               ; type: E
-account equity:conversions:GREEN$-metals:metals                               ; type: E, rate: 0.01, rate: unit 100
-account equity:conversions:GREEN$-other_plastics                              ; type: E
-account equity:conversions:GREEN$-other_plastics:GREEN$                       ; type: E
-account equity:conversions:GREEN$-other_plastics:other_plastics               ; type: E, rate: 0.01, rate: unit 100
-account equity:conversions:GREEN$-paper                                       ; type: E
-account equity:conversions:GREEN$-paper:GREEN$                                ; type: E
-account equity:conversions:GREEN$-paper:paper                                 ; type: E, rate: 0.01, rate: unit 100
-account equity:conversions:GREEN$-plastics                                    ; type: E
-account equity:conversions:GREEN$-plastics:GREEN$                             ; type: E
-account equity:conversions:GREEN$-plastics:plastics                           ; type: E, rate: 0.08, rate: unit 100
-account expenses:compute                                                      ; type: X
-account expenses:compute:SheepIt Render Farm                                  ; type: X
-account expenses:recycling                                                    ; type: X
-account revenues:compute                                                      ; type: R
-account revenues:compute:SheepIt Render Farm                                  ; type: R
-account revenues:recycables                                                   ; type: R
-account revenues:recycables:academia                                          ; type: R
-account revenues:recycables:food and drinks                                   ; type: R
-account revenues:recycables:food and drinks:dining                            ; type: R
-account revenues:recycables:personal care                                     ; type: R
+account assets:digital:GREEN@COMMMUNITY                                                  ; type: A
+account assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704             ; type: A
+account assets:digital:SheepIt Render Farm:polyipseity                                   ; type: A
+account assets:recycables                                                                ; type: A
+account equity:conversions:GREEN$-metals                                                 ; type: E
+account equity:conversions:GREEN$-metals:GREEN$                                          ; type: E
+account equity:conversions:GREEN$-metals:metals                                          ; type: E, rate: 0.01, rate: unit 100
+account equity:conversions:GREEN$-other_plastics                                         ; type: E
+account equity:conversions:GREEN$-other_plastics:GREEN$                                  ; type: E
+account equity:conversions:GREEN$-other_plastics:other_plastics                          ; type: E, rate: 0.01, rate: unit 100
+account equity:conversions:GREEN$-paper                                                  ; type: E
+account equity:conversions:GREEN$-paper:GREEN$                                           ; type: E
+account equity:conversions:GREEN$-paper:paper                                            ; type: E, rate: 0.01, rate: unit 100
+account equity:conversions:GREEN$-plastics                                               ; type: E
+account equity:conversions:GREEN$-plastics:GREEN$                                        ; type: E
+account equity:conversions:GREEN$-plastics:plastics                                      ; type: E, rate: 0.08, rate: unit 100
+account equity:conversions:SheepIt_Render_Farm_points-frames                             ; type: E
+account equity:conversions:SheepIt_Render_Farm_points-frames:SheepIt_Render_Farm_points  ; type: E, rate: dynamic
+account equity:conversions:SheepIt_Render_Farm_points-frames:frames                      ; type: E, rate: dynamic
+account expenses:compute                                                                 ; type: X
+account expenses:compute:SheepIt Render Farm                                             ; type: X
+account expenses:recycling                                                               ; type: X
+account revenues:compute                                                                 ; type: R
+account revenues:compute:SheepIt Render Farm                                             ; type: R
+account revenues:recycables                                                              ; type: R
+account revenues:recycables:academia                                                     ; type: R
+account revenues:recycables:food and drinks                                              ; type: R
+account revenues:recycables:food and drinks:dining                                       ; type: R
+account revenues:recycables:personal care                                                ; type: R
 
 commodity 99 999 999.00 GREEN$
 commodity 99 999 999.00 SheepIt_Render_Farm_points
