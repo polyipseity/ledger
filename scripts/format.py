@@ -17,7 +17,7 @@ from logging import INFO as _INFO, basicConfig as _basicConfig, info as _info
 from os import cpu_count as _cpu_c
 from shutil import which as _which
 from sys import argv as _argv, exit as _exit
-from typing import Callable as _Call, final as _fin
+from typing import Callable as _Call, Iterable as _Iter, cast as _cast, final as _fin
 
 _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
 
@@ -91,6 +91,43 @@ async def main(_: Arguments):
 
 {stdout.strip()}
 """
+
+                def sortProps(line: str):
+                    components = line.split("  ;", 1)
+                    if len(components) != 2:
+                        return line
+                    code, cmt = components
+
+                    def group(sections: _Iter[str]):
+                        ret = list[tuple[str, str]]()
+                        for section in sections:
+                            section = _cast(
+                                tuple[str] | tuple[str, str],
+                                tuple(section.split(":", 1)),
+                            )
+                            if len(section) == 2:
+                                ret.append(section)
+                                continue
+                            if ret:
+                                yield ret
+                                ret = []
+                            yield section[0]
+                        if ret:
+                            yield ret
+
+                    return f"""{code}  ;{",".join(
+                        group
+                        if isinstance(group, str)
+                        else ",".join(
+                            ":".join(prop)
+                            for prop in sorted(
+                                group, key=lambda group: group[0].strip()
+                            )
+                        )
+                        for group in group(cmt.split(","))
+                    )}"""
+
+                text = "\n".join(map(sortProps, text.splitlines()))
             if text != read:
                 await file.write(text)
                 await file.truncate()
