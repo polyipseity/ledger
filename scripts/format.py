@@ -84,10 +84,12 @@ async def main(_: Arguments):
             read = await file.read()
             async with _TaskGrp() as group:
                 group.create_task(file.seek(0))
-                header = "\n".join(
-                    line for line in read.splitlines() if line.startswith("include ")
+                header = "".join(
+                    line
+                    for line in read.splitlines(True)
+                    if line.startswith("include ")
                 )
-                text = f"""{header}
+                text = f"""{header.strip()}
 
 {stdout.strip()}
 """
@@ -127,7 +129,7 @@ async def main(_: Arguments):
                         for group in group(cmt.split(","))
                     )}"""
 
-                text = "\n".join(map(sortProps, text.splitlines()))
+                text = "".join(map(sortProps, text.splitlines(True)))
             if text != read:
                 await file.write(text)
                 await file.truncate()
