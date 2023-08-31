@@ -114,7 +114,7 @@ include ../prelude.journal
     assets:digital:SheepIt Render Farm:polyipseity                 0 = 4 448 414 SheepIt_Render_Farm_points
     (assets:digital:SheepIt Render Farm:polyipseity)               0 = 14 539 frames
 
-2023-08-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; time: 19:00, timezone: UTC+08:00, activity: collect
+2023-08-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, time: 19:00, timezone: UTC+08:00
     revenues:recycables:food and drinks         -20.00 plastics  ; collect: 1 plastic bottle
     revenues:recycables:food and drinks    -5.00 other_plastics  ; collect: 2 other plastics
     assets:recycables
@@ -123,15 +123,15 @@ include ../prelude.journal
     assets:digital:SheepIt Render Farm:polyipseity                 0 = 4 448 414 SheepIt_Render_Farm_points
     (assets:digital:SheepIt Render Farm:polyipseity)               0 = 14 539 frames
 
-2023-08-26 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; time: 11:19:49, duration: PT22S, timezone: UTC+08:00, activity: recycle
-    assets:recycables                                                            -20.00 plastics  ; time: 11:19:49, timezone: UTC+08:00, recycle: 1 plastic bottle
-    assets:recycables                                                       -5.00 other_plastics  ; time: 11:20:11, timezone: UTC+08:00, recycle: 2 other plastics    equity:conversions:GREEN$-plastics:plastics                                   20.00 plastics  ; rate: 0.08, rate: unit 100
+2023-08-26 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT22S, time: 11:19:49, timezone: UTC+08:00
+    assets:recycables                                                            -20.00 plastics  ; recycle: 1 plastic bottle, time: 11:19:49, timezone: UTC+08:00
+    assets:recycables                                                       -5.00 other_plastics  ; rate: unit 100, recycle: 2 other plastics    equity:conversions:GREEN$-plastics:plastics                                   20.00 plastics  ; rate: 0.08, time: 11:20:11, timezone: UTC+08:00
     equity:conversions:GREEN$-plastics:GREEN$                                                  0
     equity:conversions:GREEN$-other_plastics:other_plastics                  5.00 other_plastics  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-other_plastics:GREEN$                                            0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2023-08-26 b0d2d642-7692-421f-bd20-4d03911caa54  ; time: 18:31, duration: PT2H19M, timezone: UTC+08:00, activity: collect
+2023-08-26 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT2H19M, time: 18:31, timezone: UTC+08:00
     revenues:recycables:food and drinks:dining    -90.00 metals  ; collect: 10 drink cans
     assets:recycables
 
@@ -139,8 +139,8 @@ include ../prelude.journal
     assets:digital:SheepIt Render Farm:polyipseity                 0 = 4 448 414 SheepIt_Render_Farm_points
     (assets:digital:SheepIt Render Farm:polyipseity)               0 = 14 539 frames
 
-2023-08-27 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; time: 13:03:49, timezone: UTC+08:00, activity: recycle
-    assets:recycables                                                       -90.00 metals  ; time: 13:03:49, timezone: UTC+08:00, recycle: 10 drink cans
+2023-08-27 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 13:03:49, timezone: UTC+08:00
+    assets:recycables                                                       -90.00 metals  ; recycle: 10 drink cans, time: 13:03:49, timezone: UTC+08:00
     equity:conversions:GREEN$-metals:metals                                  90.00 metals  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-metals:GREEN$                                             0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
