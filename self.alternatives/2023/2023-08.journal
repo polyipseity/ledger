@@ -190,16 +190,16 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T4H10M, time: 13:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks    -35.00 other_plastics  ; collect: 1 plastic bag, collect: 9 other plastics
-    revenues:recycables:food and drinks          -67.00 plastics  ; collect: 3 plastic bottles
+    revenues:recycables:food and drinks    -37.00 other_plastics  ; collect: 1 plastic bag, collect: 10 other plastics
+    revenues:recycables:food and drinks          -92.00 plastics  ; collect: 4 plastic bottles
     assets:recycables
 
 2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                          -44.00 GREEN$ = 0.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                        -20.00 plastics = 0.00 plastics
     assets:digital:SheepIt Render Farm:polyipseity                                     -4 699 652.00 SheepIt_Render_Farm_points = 0.00 SheepIt_Render_Farm_points
-    assets:recycables                                                                                     -35.00 other_plastics = 0.00 other_plastics
-    assets:recycables                                                                                           -67.00 plastics = 0.00 plastics
+    assets:recycables                                                                                     -37.00 other_plastics = 0.00 other_plastics
+    assets:recycables                                                                                           -92.00 plastics = 0.00 plastics
     equity:conversions:GREEN$-metals:GREEN$                                                                         9.00 GREEN$ = 0.00 GREEN$
     equity:conversions:GREEN$-metals:metals                                                                    -1 161.00 metals = 0.00 metals
     equity:conversions:GREEN$-other_plastics:other_plastics                                              -123.00 other_plastics = 0.00 other_plastics

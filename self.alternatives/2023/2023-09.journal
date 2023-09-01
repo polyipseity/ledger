@@ -4,8 +4,8 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                           44.00 GREEN$ = 44.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                         20.00 plastics = 20.00 plastics
     assets:digital:SheepIt Render Farm:polyipseity                                      4 699 652.00 SheepIt_Render_Farm_points = 4 699 652.00 SheepIt_Render_Farm_points
-    assets:recycables                                                                                      35.00 other_plastics = 35.00 other_plastics
-    assets:recycables                                                                                            67.00 plastics = 67.00 plastics
+    assets:recycables                                                                                      37.00 other_plastics = 37.00 other_plastics
+    assets:recycables                                                                                            92.00 plastics = 92.00 plastics
     equity:conversions:GREEN$-metals:GREEN$                                                                        -9.00 GREEN$ = -9.00 GREEN$
     equity:conversions:GREEN$-metals:metals                                                                     1 161.00 metals = 1 161.00 metals
     equity:conversions:GREEN$-other_plastics:other_plastics                                               123.00 other_plastics = 123.00 other_plastics
