@@ -16,3 +16,9 @@ include ../prelude.journal
     equity:conversions:SheepIt_Render_Farm_points-frames:SheepIt_Render_Farm_points    -4 699 652.00 SheepIt_Render_Farm_points = -4 699 652.00 SheepIt_Render_Farm_points
     equity:conversions:SheepIt_Render_Farm_points-frames:frames                                                36 935.00 frames = 36 935.00 frames
     equity:opening/closing balances
+
+2023-09-01 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT39M12S, time: 09:21:48, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity                                     24 083.00 SheepIt_Render_Farm_points = 4 723 735 SheepIt_Render_Farm_points
+    expenses:compute:SheepIt Render Farm                                                                        1.00 frames
+    equity:conversions:SheepIt_Render_Farm_points-frames:frames                                                -1.00 frames
+    equity:conversions:SheepIt_Render_Farm_points-frames:SheepIt_Render_Farm_points
