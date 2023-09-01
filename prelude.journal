@@ -21,4 +21,5 @@ payee self
 tag _conversion-matched
 tag _price-matched
 tag due
+tag full
 tag rate

@@ -1,212 +1,212 @@
 include ../prelude.journal
 
 2023-08-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      3 536 738.00 SheepIt_Render_Farm_points = 3 536 738 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      3 536 738.00 _SRF = 3 536 738 _SRF
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]                           35 311.00 frames = 35 311 frames
+    [assets:digital:SheepIt Render Farm:polyipseity]       35 311.00 _FRM = 35 311 _FRM
     [equity:opening/closing balances]
 
 2023-08-01 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT15314.772S, time: 08:58:07, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      141 128.00 SheepIt_Render_Farm_points = 3 677 866 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      141 128.00 _SRF = 3 677 866 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       14.00 frames
+    [expenses:compute:SheepIt Render Farm]                   14.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-02 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT11706.24S, time: 09:11:02, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      110 337.00 SheepIt_Render_Farm_points = 3 788 203 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      110 337.00 _SRF = 3 788 203 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       34.00 frames
+    [expenses:compute:SheepIt Render Farm]                   34.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-03 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13504.371S, time: 16:47:11, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      72 114.00 SheepIt_Render_Farm_points = 3 860 317 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      72 114.00 _SRF = 3 860 317 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      39.00 frames
+    [expenses:compute:SheepIt Render Farm]                  39.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-05 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT11705.822S, time: 07:51:58, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      72 728.00 SheepIt_Render_Farm_points = 3 933 045 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      72 728.00 _SRF = 3 933 045 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      16.00 frames
+    [expenses:compute:SheepIt Render Farm]                  16.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-06 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT12004.302S, time: 09:00:59, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      10 073.00 SheepIt_Render_Farm_points = 3 943 118 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      10 073.00 _SRF = 3 943 118 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      16.00 frames
+    [expenses:compute:SheepIt Render Farm]                  16.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-07 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT12606.559S, time: 19:20:34, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      93 767.00 SheepIt_Render_Farm_points = 4 036 885 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      93 767.00 _SRF = 4 036 885 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                     100.00 frames
+    [expenses:compute:SheepIt Render Farm]                 100.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-08 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13209.994S, time: 20:06:38, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      113 826.00 SheepIt_Render_Farm_points = 4 150 711 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      113 826.00 _SRF = 4 150 711 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       31.00 frames
+    [expenses:compute:SheepIt Render Farm]                   31.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-12 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13207.841S, time: 08:15:50, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      91 278.00 SheepIt_Render_Farm_points = 4 241 989 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      91 278.00 _SRF = 4 241 989 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      50.00 frames
+    [expenses:compute:SheepIt Render Farm]                  50.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-13 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT11737.801S, time: 11:55:36, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      50 191.00 SheepIt_Render_Farm_points = 4 292 180 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      50 191.00 _SRF = 4 292 180 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      16.00 frames
+    [expenses:compute:SheepIt Render Farm]                  16.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-15 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT17585.723S, time: 10:02:56, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      189 213.00 SheepIt_Render_Farm_points = 4 481 393 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      189 213.00 _SRF = 4 481 393 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       11.00 frames
+    [expenses:compute:SheepIt Render Farm]                   11.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-18 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13207.943S, time: 08:06:34, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      20 408.00 SheepIt_Render_Farm_points = 4 501 801 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      20 408.00 _SRF = 4 501 801 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      21.00 frames
+    [expenses:compute:SheepIt Render Farm]                  21.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-19 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13505.207S, time: 09:46:27, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      111 819.00 SheepIt_Render_Farm_points = 4 613 620 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      111 819.00 _SRF = 4 613 620 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       53.00 frames
+    [expenses:compute:SheepIt Render Farm]                   53.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-21 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      -165 206.00 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      -165 206.00 _SRF
     expenses:compute:SheepIt Render Farm
-    [revenues:compute:SheepIt Render Farm]                                    -2 229.00 frames
+    [revenues:compute:SheepIt Render Farm]                -2 229.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, time: 19:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks         -20.00 plastics  ; collect: 1 plastic bottle
-    revenues:recycables:food and drinks    -5.00 other_plastics  ; collect: 2 other plastics
+    revenues:recycables:food and drinks     -20.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks      -5.00 _OPL  ; collect: 2 other _PLA
     assets:recycables
 
 2023-08-26 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT22S, time: 11:19:49, timezone: UTC+08:00
-    assets:recycables                                                            -20.00 plastics  ; recycle: 1 plastic bottle, time: 11:19:49, timezone: UTC+08:00
-    assets:recycables                                                       -5.00 other_plastics  ; rate: unit 100, recycle: 2 other plastics    equity:conversions:GREEN$-plastics:plastics                                   20.00 plastics  ; rate: 0.08, time: 11:20:11, timezone: UTC+08:00
-    equity:conversions:GREEN$-plastics:GREEN$                                                  0
-    equity:conversions:GREEN$-other_plastics:other_plastics                  5.00 other_plastics  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-other_plastics:GREEN$                                            0
+    assets:recycables                                                        -20.00 _PLA  ; recycle: 1 plastic bottle, time: 11:19:49, timezone: UTC+08:00
+    assets:recycables                                                         -5.00 _OPL  ; rate: unit 100, recycle: 2 other _PLA    equity:conversions:GREEN$-_PLA:_PLA                                   20.00 _PLA  ; rate: 0.08, time: 11:20:11, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:GREEN$                                              0
+    equity:conversions:GREEN$-_OPL:_OPL                                        5.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-26 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT2H19M, time: 18:31, timezone: UTC+08:00
-    revenues:recycables:food and drinks:dining    -90.00 metals  ; collect: 10 drink cans
+    revenues:recycables:food and drinks:dining     -90.00 _MET  ; collect: 10 drink cans
     assets:recycables
 
 2023-08-27 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 13:03:49, timezone: UTC+08:00
-    assets:recycables                                                       -90.00 metals  ; recycle: 10 drink cans, time: 13:03:49, timezone: UTC+08:00
-    equity:conversions:GREEN$-metals:metals                                  90.00 metals  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-metals:GREEN$                                             0
+    assets:recycables                                                        -90.00 _MET  ; recycle: 10 drink cans, time: 13:03:49, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       90.00 _MET  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_MET:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-27 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT12908.524S, time: 08:32:27, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      45 091.00 SheepIt_Render_Farm_points = 4 493 505 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      45 091.00 _SRF = 4 493 505 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                      38.00 frames
+    [expenses:compute:SheepIt Render Farm]                  38.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5TH30M, time: 12:30, timezone: UTC+08:00
-    revenues:recycables:academia                      -248.00 paper  ; collect: 1 magazine, collect: 5 sheets of paper
-    revenues:recycables:food and drinks    -21.00 Tetra_Pak_cartons  ; collect: 2 Tetra Pak beverage cartons
-    revenues:recycables:food and drinks               -10.00 metals  ; collect: 1 metal
-    revenues:recycables:food and drinks       -62.00 other_plastics  ; collect: 18 other plastics
-    revenues:recycables:food and drinks            -136.00 plastics  ; collect: 6 plastic bottles
+    revenues:recycables:academia           -248.00 _PAP  ; collect: 1 magazine, collect: 5 sheets of _PAP
+    revenues:recycables:food and drinks     -21.00 _TPC  ; collect: 2 Tetra Pak beverage cartons
+    revenues:recycables:food and drinks     -10.00 _MET  ; collect: 1 metal
+    revenues:recycables:food and drinks     -62.00 _OPL  ; collect: 18 other _PLA
+    revenues:recycables:food and drinks    -136.00 _PLA  ; collect: 6 plastic bottles
     assets:recycables
 
 2023-08-27 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks:dining          -745.00 metals  ; collect: 44 drink cans
-    revenues:recycables:food and drinks           -8.00 other_plastics  ; collect: 3 other plastics
-    revenues:recycables:food and drinks:dining         -92.00 plastics  ; collect: 3 plastic bottles
+    revenues:recycables:food and drinks:dining    -745.00 _MET  ; collect: 44 drink cans
+    revenues:recycables:food and drinks             -8.00 _OPL  ; collect: 3 other _PLA
+    revenues:recycables:food and drinks:dining     -92.00 _PLA  ; collect: 3 plastic bottles
     assets:recycables
 
 2023-08-28 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13204.4S, time: 17:51:36, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      87 742.00 SheepIt_Render_Farm_points = 4 581 247 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      87 742.00 _SRF = 4 581 247 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                     100.00 frames
+    [expenses:compute:SheepIt Render Farm]                 100.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-29 self  ; activity: collect, time: 10:42:51, timezone: UTC+08:00
-    revenues:recycables:food and drinks    -2.00 other_plastics  ; collect: 1 other plastic
-    revenues:recycables:food and drinks         -25.00 plastics  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks      -2.00 _OPL  ; collect: 1 other plastic
+    revenues:recycables:food and drinks     -25.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
 
 2023-08-29 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M45S, time: 12:06:03, timezone: UTC+08:00
-    assets:recycables                                                       -21.00 Tetra_Pak_cartons = 0  ; recycle: 2 Tetra Pak beverage cartons
-    expenses:recycling                                                       21.00 Tetra_Pak_cartons
-    assets:recycables                                                                  -248.00 paper = 0  ; recycle: 1 magazine, recycle: 5 sheets of paper, time: 12:06:03, timezone: UTC+08:00
-    equity:conversions:GREEN$-paper:paper                                               248.00 paper  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-paper:GREEN$                                              -3.00 GREEN$
-    assets:recycables                                                               -253.00 plastics = 0  ; recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
-    equity:conversions:GREEN$-plastics:plastics                                      253.00 plastics  ; rate: 0.08, rate: unit 100
-    equity:conversions:GREEN$-plastics:GREEN$                                          -16.00 GREEN$
-    assets:recycables                                                          -72.00 other_plastics = 0  ; recycle: 22 other plastics, time: 12:07:14, timezone: UTC+08:00
-    equity:conversions:GREEN$-other_plastics:other_plastics                     72.00 other_plastics  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-other_plastics:GREEN$                                                0
-    assets:recycables                                                                 -755.00 metals = 0  ; recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
-    equity:conversions:GREEN$-metals:metals                                            755.00 metals  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-metals:GREEN$                                             -6.00 GREEN$
+    assets:recycables                                                         -21.00 _TPC = 0  ; recycle: 2 Tetra Pak beverage cartons
+    expenses:recycling                                                         21.00 _TPC
+    assets:recycables                                                        -248.00 _PAP = 0  ; recycle: 1 magazine, recycle: 5 sheets of _PAP, time: 12:06:03, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:_PAP                                       248.00 _PAP  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_PAP:GREEN$                                    -3.00 GREEN$
+    assets:recycables                                                        -253.00 _PLA = 0  ; recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       253.00 _PLA  ; rate: 0.08, rate: unit 100
+    equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
+    assets:recycables                                                         -72.00 _OPL = 0  ; recycle: 22 other _PLA, time: 12:07:14, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                        72.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:GREEN$                                               0
+    assets:recycables                                                        -755.00 _MET = 0  ; recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       755.00 _MET  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_MET:GREEN$                                    -6.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-29 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T5H10M, time: 13:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks             -9.00 metals  ; collect: 1 metal
-    revenues:recycables:food and drinks    -33.00 other_plastics  ; collect: 1 plastic bag, collect: 12 other plastics
-    revenues:recycables:food and drinks         -223.00 plastics  ; collect: 10 plastic bottles
-    revenues:recycables:personal care            -56.00 plastics  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks      -9.00 _MET  ; collect: 1 metal
+    revenues:recycables:food and drinks     -33.00 _OPL  ; collect: 1 plastic bag, collect: 12 other _PLA
+    revenues:recycables:food and drinks    -223.00 _PLA  ; collect: 10 plastic bottles
+    revenues:recycables:personal care       -56.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
 
 2023-08-29 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks:dining           -307.00 metals  ; collect: 20 drink cans
-    revenues:recycables:food and drinks:dining    -10.00 other_plastics  ; collect: 1 plastic bag
+    revenues:recycables:food and drinks:dining    -307.00 _MET  ; collect: 20 drink cans
+    revenues:recycables:food and drinks:dining     -10.00 _OPL  ; collect: 1 plastic bag
     assets:recycables
 
 2023-08-29 self  ; activity: collect, time: 20:04:30, timezone: UTC+08:00
-    revenues:recycables:food and drinks    -3.00 other_plastics  ; collect: 2 plastic cutleries
+    revenues:recycables:food and drinks      -3.00 _OPL  ; collect: 2 plastic cutleries
     assets:recycables
 
 2023-08-30 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13508.96S, time: 08:15:47, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      118 405.00 SheepIt_Render_Farm_points = 4 699 652 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      118 405.00 _SRF = 4 699 652 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       66.00 frames
+    [expenses:compute:SheepIt Render Farm]                   66.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-30 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M56S, time: 09:56:29, timezone: UTC+08:00
-    assets:recycables                                                              -316.00 metals = 0  ; recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
-    equity:conversions:GREEN$-metals:metals                                         316.00 metals  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-metals:GREEN$                                          -3.00 GREEN$
-    assets:recycables                                                            -279.00 plastics = 0  ; recycle: 11 plastic bottles, time: 09:57:47, timezone: UTC+08:00
-    equity:conversions:GREEN$-plastics:plastics                                   279.00 plastics  ; rate: 0.08, rate: unit 100
-    equity:conversions:GREEN$-plastics:GREEN$                                       -16.00 GREEN$
-    assets:recycables                                                       -46.00 other_plastics = 0  ; recycle: 12 other plastics, recycle: 2 plastic bags, recycle: 2 plastic cutleries, time: 09:58:25, timezone: UTC+08:00
-    equity:conversions:GREEN$-other_plastics:other_plastics                  46.00 other_plastics  ; rate: 0.01, rate: unit 100
-    equity:conversions:GREEN$-other_plastics:GREEN$                                             0
+    assets:recycables                                                        -316.00 _MET = 0  ; recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       316.00 _MET  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_MET:GREEN$                                    -3.00 GREEN$
+    assets:recycables                                                        -279.00 _PLA = 0  ; recycle: 11 plastic bottles, time: 09:57:47, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       279.00 _PLA  ; rate: 0.08, rate: unit 100
+    equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
+    assets:recycables                                                         -46.00 _OPL = 0  ; recycle: 12 other _PLA, recycle: 2 plastic bags, recycle: 2 plastic cutleries, time: 09:58:25, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                        46.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:GREEN$                                               0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T4H10M, time: 13:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks    -37.00 other_plastics  ; collect: 1 plastic bag, collect: 10 other plastics
-    revenues:recycables:food and drinks          -92.00 plastics  ; collect: 4 plastic bottles
+    revenues:recycables:food and drinks     -37.00 _OPL  ; collect: 1 plastic bag, collect: 10 other _PLA
+    revenues:recycables:food and drinks     -92.00 _PLA  ; collect: 4 plastic bottles
     assets:recycables
 
 2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               -44.00 GREEN$ = 0.00 GREEN$
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                             -20.00 plastics = 0.00 plastics
-    assets:digital:SheepIt Render Farm:polyipseity                          -4 699 652.00 SheepIt_Render_Farm_points = 0.00 SheepIt_Render_Farm_points
-    assets:recycables                                                                          -37.00 other_plastics = 0.00 other_plastics
-    assets:recycables                                                                                -92.00 plastics = 0.00 plastics
-    equity:conversions:GREEN$-metals:GREEN$                                                              9.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-metals:metals                                                         -1 161.00 metals = 0.00 metals
-    equity:conversions:GREEN$-other_plastics:other_plastics                                   -123.00 other_plastics = 0.00 other_plastics
-    equity:conversions:GREEN$-paper:GREEN$                                                               3.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-paper:paper                                                              -248.00 paper = 0.00 paper
-    equity:conversions:GREEN$-plastics:GREEN$                                                           32.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-plastics:plastics                                                     -532.00 plastics = 0.00 plastics
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704         -44.00 GREEN$ = 0.00 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704           -20.00 _PLA = 0.00 _PLA
+    assets:digital:SheepIt Render Farm:polyipseity                          -4 699 652.00 _SRF = 0.00 _SRF
+    assets:recycables                                                              -37.00 _OPL = 0.00 _OPL
+    assets:recycables                                                              -92.00 _PLA = 0.00 _PLA
+    equity:conversions:GREEN$-_MET:GREEN$                                          9.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                         -1 161.00 _MET = 0.00 _MET
+    equity:conversions:GREEN$-_OPL:_OPL                                           -123.00 _OPL = 0.00 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                          3.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                           -248.00 _PAP = 0.00 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                         32.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                           -532.00 _PLA = 0.00 _PLA
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]                                               -36 935.00 frames = 0 frames
+    [assets:digital:SheepIt Render Farm:polyipseity]                           -36 935.00 _FRM = 0 _FRM
     [equity:opening/closing balances]

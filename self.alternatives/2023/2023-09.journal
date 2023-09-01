@@ -1,24 +1,24 @@
 include ../prelude.journal
 
 2023-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               44.00 GREEN$ = 44.00 GREEN$
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                             20.00 plastics = 20.00 plastics
-    assets:digital:SheepIt Render Farm:polyipseity                          4 699 652.00 SheepIt_Render_Farm_points = 4 699 652.00 SheepIt_Render_Farm_points
-    assets:recycables                                                                          37.00 other_plastics = 37.00 other_plastics
-    assets:recycables                                                                                92.00 plastics = 92.00 plastics
-    equity:conversions:GREEN$-metals:GREEN$                                                            -9.00 GREEN$ = -9.00 GREEN$
-    equity:conversions:GREEN$-metals:metals                                                         1 161.00 metals = 1 161.00 metals
-    equity:conversions:GREEN$-other_plastics:other_plastics                                   123.00 other_plastics = 123.00 other_plastics
-    equity:conversions:GREEN$-paper:GREEN$                                                             -3.00 GREEN$ = -3.00 GREEN$
-    equity:conversions:GREEN$-paper:paper                                                              248.00 paper = 248.00 paper
-    equity:conversions:GREEN$-plastics:GREEN$                                                         -32.00 GREEN$ = -32.00 GREEN$
-    equity:conversions:GREEN$-plastics:plastics                                                     532.00 plastics = 532.00 plastics
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704         44.00 GREEN$ = 44.00 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704           20.00 _PLA = 20.00 _PLA
+    assets:digital:SheepIt Render Farm:polyipseity                          4 699 652.00 _SRF = 4 699 652.00 _SRF
+    assets:recycables                                                              37.00 _OPL = 37.00 _OPL
+    assets:recycables                                                              92.00 _PLA = 92.00 _PLA
+    equity:conversions:GREEN$-_MET:GREEN$                                        -9.00 GREEN$ = -9.00 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                         1 161.00 _MET = 1 161.00 _MET
+    equity:conversions:GREEN$-_OPL:_OPL                                           123.00 _OPL = 123.00 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                        -3.00 GREEN$ = -3.00 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                           248.00 _PAP = 248.00 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                       -32.00 GREEN$ = -32.00 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                           532.00 _PLA = 532.00 _PLA
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]                                               36 935.00 frames = 36 935 frames
+    [assets:digital:SheepIt Render Farm:polyipseity]                           36 935.00 _FRM = 36 935 _FRM
     [equity:opening/closing balances]
 
 2023-09-01 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT39M12S, time: 09:21:48, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      24 083.00 SheepIt_Render_Farm_points = 4 723 735 SheepIt_Render_Farm_points
+    assets:digital:SheepIt Render Farm:polyipseity      24 083.00 _SRF = 4 723 735 _SRF
     revenues:compute:SheepIt Render Farm
-    [expenses:compute:SheepIt Render Farm]                                       1.00 frames
+    [expenses:compute:SheepIt Render Farm]                   1.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
