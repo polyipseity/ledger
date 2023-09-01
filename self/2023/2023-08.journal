@@ -306,6 +306,6 @@ include ../prelude.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4       40.00 HKD
     assets:cash
 
-2023-08-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+2023-08-31 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                      395.00 HKD
     assets:deferred expenses:accommodations:universities
