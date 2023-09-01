@@ -188,3 +188,8 @@ include ../prelude.journal
     equity:conversions:GREEN$-other_plastics:other_plastics                  46.00 other_plastics  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-other_plastics:GREEN$                                             0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-08-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T4H10M, time: 13:00, timezone: UTC+08:00
+    revenues:recycables:food and drinks    -35.00 other_plastics  ; collect: 1 plastic bag, collect: 9 other plastics
+    revenues:recycables:food and drinks          -67.00 plastics  ; collect: 3 plastic bottles
+    assets:recycables
