@@ -16,9 +16,6 @@ account equity:conversions:GREEN$-paper:paper                                   
 account equity:conversions:GREEN$-plastics                                               ; type: E
 account equity:conversions:GREEN$-plastics:GREEN$                                        ; type: E
 account equity:conversions:GREEN$-plastics:plastics                                      ; type: E, rate: 0.08, rate: unit 100
-account equity:conversions:SheepIt_Render_Farm_points-frames                             ; type: E
-account equity:conversions:SheepIt_Render_Farm_points-frames:SheepIt_Render_Farm_points  ; type: E, rate: dynamic
-account equity:conversions:SheepIt_Render_Farm_points-frames:frames                      ; type: E, rate: dynamic
 account expenses:compute                                                                 ; type: X
 account expenses:compute:SheepIt Render Farm                                             ; type: X
 account expenses:recycling                                                               ; type: X
