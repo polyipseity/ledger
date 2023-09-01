@@ -309,3 +309,18 @@ include ../prelude.journal
 2023-08-31 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                      395.00 HKD
     assets:deferred expenses:accommodations:universities
+
+2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        -28 279.53 HKD = 0.00 HKD
+    assets:cash                                                           -8 685.00 HKD = 0.00 HKD
+    assets:deferred expenses:accommodations:universities                 -10 507.00 HKD = 0.00 HKD
+    assets:deferred expenses:tuition:universities                        -21 450.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -143.30 HKD = 0.00 HKD
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236            -480.20 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:HKD                                         2 395.83 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                          -313.00 USD = 0.00 USD
+    equity:kins                                                            4 500.00 CNY = 0.00 CNY
+    equity:kins                                                               90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4             -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4              5 810.00 HKD = 0.00 HKD
+    equity:opening/closing balances

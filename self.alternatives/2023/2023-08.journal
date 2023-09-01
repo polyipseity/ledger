@@ -193,3 +193,20 @@ include ../prelude.journal
     revenues:recycables:food and drinks    -35.00 other_plastics  ; collect: 1 plastic bag, collect: 9 other plastics
     revenues:recycables:food and drinks          -67.00 plastics  ; collect: 3 plastic bottles
     assets:recycables
+
+2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                          -44.00 GREEN$ = 0.00 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                                        -20.00 plastics = 0.00 plastics
+    assets:digital:SheepIt Render Farm:polyipseity                                     -4 699 652.00 SheepIt_Render_Farm_points = 0.00 SheepIt_Render_Farm_points
+    assets:recycables                                                                                     -35.00 other_plastics = 0.00 other_plastics
+    assets:recycables                                                                                           -67.00 plastics = 0.00 plastics
+    equity:conversions:GREEN$-metals:GREEN$                                                                         9.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-metals:metals                                                                    -1 161.00 metals = 0.00 metals
+    equity:conversions:GREEN$-other_plastics:other_plastics                                              -123.00 other_plastics = 0.00 other_plastics
+    equity:conversions:GREEN$-paper:GREEN$                                                                          3.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-paper:paper                                                                         -248.00 paper = 0.00 paper
+    equity:conversions:GREEN$-plastics:GREEN$                                                                      32.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-plastics:plastics                                                                -532.00 plastics = 0.00 plastics
+    equity:conversions:SheepIt_Render_Farm_points-frames:SheepIt_Render_Farm_points     4 699 652.00 SheepIt_Render_Farm_points = 0.00 SheepIt_Render_Farm_points
+    equity:conversions:SheepIt_Render_Farm_points-frames:frames                                               -36 935.00 frames = 0.00 frames
+    equity:opening/closing balances
