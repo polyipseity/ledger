@@ -50,3 +50,15 @@ include ../prelude.journal
 2023-09-02 self  ; activity: collect, time: 21:27:23, timezone: UTC+08:00
     revenues:recycables:education     -24.00 _PAP  ; collect: 5 pieces of paper
     assets:recycables
+
+2023-09-02 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT6H33M8S, time: 16:33:43, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      20 364.00 _SRF = 5 155 745 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  69.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-09-02 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT39M52S, time: 23:34:47, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      25 709.00 _SRF = 5 181 454 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                   3.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
