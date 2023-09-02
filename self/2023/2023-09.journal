@@ -22,6 +22,14 @@ include ../prelude.journal
     expenses:food and drinks:dining                                    52.00 HKD  ; food_and_drink: barbecue pork, food_and_drink: hot Ovaltine, food_and_drink: scrambled egg, food_and_drink: shrimp with quinoa
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
+2023-09-02 * (139807108023814523107029720230904199400) 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: billing, time: 15:50:04, timezone: UTC+08:00
+    expenses:education                        1 994.00 HKD
+    liabilities:accrued expenses:education
+
+2023-09-02 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: adjust, time: 21:08:52, timezone: UTC+08:00
+    liabilities:accrued expenses:education                       1 994.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:tuition:universities
