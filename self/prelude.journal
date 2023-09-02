@@ -13,8 +13,8 @@ account assets:cash                                                             
 account assets:deferred expenses:accommodations                                            ; type: A
 account assets:deferred expenses:accommodations:universities                               ; type: A
 account assets:deferred expenses:maintenance                                               ; type: A
-account assets:deferred expenses:tuition                                                   ; type: A
-account assets:deferred expenses:tuition:universities                                      ; type: A
+account assets:deferred expenses:education:tuition                                         ; type: A
+account assets:deferred expenses:education:tuition:universities                            ; type: A
 account assets:digital                                                                     ; type: A
 account assets:digital:Octopus cards                                                       ; type: C
 account assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                  ; type: C
@@ -34,6 +34,8 @@ account expenses:accommodations                                                 
 account expenses:accommodations:universities                                               ; type: X
 account expenses:consumption                                                               ; type: X
 account expenses:education                                                                 ; type: X
+account expenses:education:tuition                                                         ; type: X
+account expenses:education:tuition:universities                                            ; type: X
 account expenses:fees                                                                      ; type: X
 account expenses:fees:Buy Me a Coffee                                                      ; type: X
 account expenses:fees:Stripe                                                               ; type: X
@@ -53,8 +55,6 @@ account expenses:transport:buses                                                
 account expenses:transport:minibuses                                                       ; type: X
 account expenses:transport:trains                                                          ; type: X
 account expenses:transport:trams                                                           ; type: X
-account expenses:tuition                                                                   ; type: X
-account expenses:tuition:universities                                                      ; type: X
 account liabilities:accrued expenses:education                                             ; type: L
 account liabilities:accrued expenses:insurances                                            ; type: L
 account liabilities:accrued expenses:insurances:levy                                       ; type: L

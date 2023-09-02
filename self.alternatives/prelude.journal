@@ -22,7 +22,7 @@ account expenses:recycling                                                    ; 
 account revenues:compute                                                      ; type: R
 account revenues:compute:SheepIt Render Farm                                  ; type: R
 account revenues:recycables                                                   ; type: R
-account revenues:recycables:academia                                          ; type: R
+account revenues:recycables:education                                         ; type: R
 account revenues:recycables:food and drinks                                   ; type: R
 account revenues:recycables:food and drinks:dining                            ; type: R
 account revenues:recycables:personal care                                     ; type: R

@@ -48,5 +48,5 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-09-02 self  ; activity: collect, time: 21:27:23, timezone: UTC+08:00
-    revenues:recycables:academia     -24.00 _PAP  ; collect: 5 pieces of paper
+    revenues:recycables:education     -24.00 _PAP  ; collect: 5 pieces of paper
     assets:recycables

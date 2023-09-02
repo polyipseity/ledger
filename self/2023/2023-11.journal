@@ -1,8 +1,8 @@
 include ../prelude.journal
 
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
-    expenses:tuition:universities                    5 850.00 HKD
-    assets:deferred expenses:tuition:universities
+    expenses:education:tuition:universities                    5 850.00 HKD
+    assets:deferred expenses:education:tuition:universities
 
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                    2 370.00 HKD
