@@ -62,6 +62,12 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                   3.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
+2023-09-03 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT2H34M20S, time: 09:29:29, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      102 160.00 _SRF = 5 283 614 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                   16.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
 2023-09-03 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M57S, time: 11:11:19, timezone: UTC+08:00
     assets:recycables                                                        -24.00 _PAP = 0 _PAP  ; recycle: 5 pieces of paper, time: 11:11:19, timezone: UTC+08:00
     assets:recycables                                                        -92.00 _PLA = 0 _PLA  ; recycle: 4 plastic bottles, time: 11:12:39, timezone: UTC+08:00
