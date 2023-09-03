@@ -30,6 +30,11 @@ include ../prelude.journal
     liabilities:accrued expenses:education                       1 994.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
+2023-09-03 (identifiers.Alipay.69a7574f-9b2f-4d9b-b006-17aca118ac67) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 11:06:39, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    33.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 火腿絲濃湯通粉, food_and_drink: 蒜香牛油多士
+    expenses:food and drinks:dining                                    33.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 火腿絲濃湯通粉, food_and_drink: 蒜香牛油多士
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
