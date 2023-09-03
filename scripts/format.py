@@ -122,7 +122,8 @@ async def main(_: Arguments):
                         else ",".join(
                             ":".join(prop)
                             for prop in sorted(
-                                group, key=lambda group: group[0].strip()
+                                group,
+                                key=lambda group: tuple(cmp.strip() for cmp in group),
                             )
                         )
                         for group in group(cmt.split(","))
