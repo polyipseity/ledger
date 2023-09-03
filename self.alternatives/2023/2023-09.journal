@@ -2,7 +2,6 @@ include ../prelude.journal
 
 2023-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704         44.00 GREEN$ = 44.00 GREEN$
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704           20.00 _PLA = 20.00 _PLA
     assets:digital:SheepIt Render Farm:polyipseity                          4 699 652.00 _SRF = 4 699 652.00 _SRF
     assets:recycables                                                              37.00 _OPL = 37.00 _OPL
     assets:recycables                                                              92.00 _PLA = 92.00 _PLA
@@ -12,7 +11,7 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PAP:GREEN$                                        -3.00 GREEN$ = -3.00 GREEN$
     equity:conversions:GREEN$-_PAP:_PAP                                           248.00 _PAP = 248.00 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                       -32.00 GREEN$ = -32.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                           532.00 _PLA = 532.00 _PLA
+    equity:conversions:GREEN$-_PLA:_PLA                                           552.00 _PLA = 552.00 _PLA
     equity:opening/closing balances
     [assets:digital:SheepIt Render Farm:polyipseity]                           36 935.00 _FRM = 36 935 _FRM
     [equity:opening/closing balances]
@@ -65,12 +64,12 @@ include ../prelude.journal
 
 2023-09-03 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M57S, time: 11:11:19, timezone: UTC+08:00
     assets:recycables                                                        -24.00 _PAP = 0 _PAP  ; recycle: 5 pieces of paper, time: 11:11:19, timezone: UTC+08:00
+    assets:recycables                                                        -92.00 _PLA = 0 _PLA  ; recycle: 4 plastic bottles, time: 11:12:39, timezone: UTC+08:00
+    assets:recycables                                                        -37.00 _OPL = 0 _OPL  ; recycle: 1 plastic bag, recycle: 10 other plastics, time: 11:13:16, timezone: UTC+08:00
     equity:conversions:GREEN$-_PAP:_PAP                                       24.00 _PAP  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-_PAP:GREEN$                                              0
-    assets:recycables                                                        -92.00 _PLA = 0 _PLA  ; recycle: 4 plastic bottles, time: 11:12:39, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:_PLA                                       92.00 _PLA  ; rate: 0.08, rate: unit 100
     equity:conversions:GREEN$-_PLA:GREEN$                                              0
-    assets:recycables                                                        -37.00 _OPL = 0 _OPL  ; recycle: 1 plastic bag, recycle: 10 other plastics, time: 11:13:16, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:_OPL                                       37.00 _OPL  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-_OPL:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
