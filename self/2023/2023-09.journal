@@ -40,6 +40,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                    19.50 HKD  ; food_and_drink: butter and condensed milk hard roll, food_and_drink: set hot Horlicks
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
+2023-09-04 (identifiers.Alipay.288e151f-a2b7-494c-a30f-47c24e558e29) McDonald's  ; activity: eating, eating: dinner, time: 16:24:12, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    28.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: medium-sized fries, food_and_drink: nuggets 6pcs, food_and_drink: smoky nacho cheese sauce
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
