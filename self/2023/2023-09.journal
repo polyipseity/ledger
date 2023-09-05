@@ -35,14 +35,30 @@ include ../prelude.journal
     expenses:food and drinks:dining                                    33.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 火腿絲濃湯通粉, food_and_drink: 蒜香牛油多士
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-09-03 (identifiers.Alipay.60b766de-bf10-4fea-8883-02f0cd84da7c) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: afternoon tea, time: 16:55:17, timezone: UTC+08:00
+2023-09-03 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: transfer, time: 13, timezone: UTC+08:00
+    assets:cash                                                     82.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
+2023-09-03 (identifiers.Alipay.60b766de-bf10-4fea-8883-02f0cd84da7c) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 16:55:17, timezone: UTC+08:00
     expenses:food and drinks:dining                                    29.50 HKD  ; food_and_drink: pork chop bun with onion, food_and_drink: set hot Ovaltine
     expenses:food and drinks:dining                                    19.50 HKD  ; food_and_drink: butter and condensed milk hard roll, food_and_drink: set hot Horlicks
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
+2023-09-04 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 13, timezone: UTC+08:00
+    assets:cash                          -40.00 HKD
+    expenses:food and drinks:dining
+
 2023-09-04 (identifiers.Alipay.288e151f-a2b7-494c-a30f-47c24e558e29) McDonald's  ; activity: eating, eating: dinner, time: 16:24:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                    28.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: medium-sized fries, food_and_drink: nuggets 6pcs, food_and_drink: smoky nacho cheese sauce
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-09-05 (identifiers.Alipay.11bf6874-5e33-4baa-bd2b-e1608040e38a) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:10:22, timezone: UTC+08:00
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -31.50 HKD
+    expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork with rice, food_and_drink: iced coffee
+
+2023-09-05 (identifiers.bakns.32cfcdb0-3d42-4517-b501-6d1d3aa05d17) McDonald's  ; ANSON 32cfcdb0-3d42-4517-b501-6d1d3aa05d17 05SEP, activity: eating, eating: dinner, time: 23:15:00, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -39.00 HKD
+    expenses:food and drinks:dining                                                ; food_and_drink: Big Mac, food_and_drink: cold Fanta, food_and_drink: medium-sized fries
 
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
