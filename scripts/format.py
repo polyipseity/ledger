@@ -116,7 +116,7 @@ async def main(_: Arguments):
                         if ret:
                             yield ret
 
-                    return f"""{code}  ;{",".join(
+                    return f"""{code}  {f''';{",".join(
                         group
                         if isinstance(group, str)
                         else ",".join(
@@ -127,7 +127,7 @@ async def main(_: Arguments):
                             )
                         )
                         for group in group(cmt.split(","))
-                    )}"""
+                    )}'''.strip()}"""
 
                 text = "\n".join(map(sortProps, text.splitlines()))
             if text != read:
