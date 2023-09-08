@@ -37,6 +37,7 @@ account expenses:education                                                      
 account expenses:education:tuition                                                         ; type: X
 account expenses:education:tuition:universities                                            ; type: X
 account expenses:fees                                                                      ; type: X
+account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                 ; type: X
 account expenses:fees:Buy Me a Coffee                                                      ; type: X
 account expenses:fees:Stripe                                                               ; type: X
 account expenses:food                                                                      ; type: X
@@ -77,6 +78,7 @@ commodity 99 999 999.00 HKD
 commodity 99 999 999.00 USD
 
 payee ******************@******.com
+payee ******@***********.com.au
 payee ******@***************.com
 payee ***@*******.com
 payee Circle K
@@ -111,6 +113,7 @@ payee barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 
 tag activity
+tag billing
 tag bounty
 tag duration
 tag eating

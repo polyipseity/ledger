@@ -68,6 +68,30 @@ include ../prelude.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -40.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 
+2023-09-07 (identifiers.Alipay.7bc37a1c-908b-43e3-afdc-c8e860e3ccbb) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:04:38, timezone: UTC+08:00
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -34.50 HKD
+    expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice, food_and_drink: iced orange juice
+
+2023-09-07 ! (identifiers.Stripe.9f9a4afb-89fb-42c7-8aea-d6e37451e59e) ******@***********.com.au  ; One time support for polyipseity, activity: donation, time: 15:45:48, timezone: UTC+08:00
+    revenues:donations:Buy Me a Coffee:polyipseity                   -5.45 USD
+    equity:conversions:HKD-USD:USD                                    5.45 USD  ; rate: 7.68565
+    equity:conversions:HKD-USD:HKD                                  -41.89 HKD
+    expenses:fees:Buy Me a Coffee                                     1.92 HKD
+    expenses:fees:Stripe                                              3.77 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       36.20 HKD
+
+2023-09-07 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 21:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
+    expenses:transport:minibuses
+
+2023-09-07 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 23:03, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
+    expenses:transport:trains
+
+2023-09-08 (identifiers.Octopus card.c9d8c987-bf59-4cb7-8be1-63f510775eca) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 09:34:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
+    expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
