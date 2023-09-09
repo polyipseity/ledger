@@ -92,6 +92,15 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457
 
+2023-09-08 Wellcome 2bae54dc-467f-459c-9202-5149f419152f  ; activity: consumption, time: 18:46:56, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                 34.00 HKD  ; food_and_drink: Yakult ×2
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
+2023-09-08 (identifiers.Alipay.b2fbf2e9-0fa7-4b1e-9bbe-24ba4577bd06) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 18:49:36, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    72.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 漁香肉碎茄子煲
+    expenses:food and drinks:dining                                    18.00 HKD  ; food_and_drink: hot chocolate
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
