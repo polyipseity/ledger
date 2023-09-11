@@ -109,6 +109,10 @@ include ../prelude.journal
     assets:cash                    500.00 HKD  ; time: 13:23
     revenues:incomes:tutoring
 
+2023-09-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:02, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
 2023-09-10 (identifiers.Alipay.6e2a40c4-1f85-4054-a73d-b523faacdd0a) McDonald's  ; activity: eating, eating: breakfast, time: 10:07:13, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -33.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: hash browns, food_and_drink: hot coffee, food_and_drink: sausage McMuffin with egg
@@ -116,6 +120,10 @@ include ../prelude.journal
 2023-09-10 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H42M, time: 10:30:00, timezone: UTC+08:00
     assets:cash                    300.00 HKD  ; time: 12:12
     revenues:incomes:tutoring
+
+2023-09-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:33, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
 
 2023-09-10 7bd75d7e-9a54-4c0e-ad73-72e628308ffc  ; activity: tutoring, duration: PT2H50M, time: 14:49:30, timezone: UTC+08:00
     assets:cash                    600.00 HKD  ; time: 17:39:00
