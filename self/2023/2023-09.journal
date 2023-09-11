@@ -133,6 +133,10 @@ include ../prelude.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -27.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice + less rice
 
+2023-09-11 McDonald's  ; activity: eating, eating: afternoon tea, time: 16:18, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.40 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: double cheese McMuffin, food_and_drink: iced Fanta, food_and_drink: medium-sized fries
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
