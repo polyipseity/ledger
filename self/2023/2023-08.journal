@@ -70,8 +70,8 @@ include ../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-09 (identifiers.banks.c4f3759a-76d8-4c77-9b6a-5ea062519666) Joint University Programmes Admissions System  ; JOINT UNIVERSITY PROGRAMMES ADMISSIONS SYSTEM identifiers.banks.3319d4af-d9d1-4451-b2f6-e95472a9c4bc 9Aug, activity: tuition, time: 20:02, timezone: UTC+08:00, tuition: reservation fee, via: Faster Payment System
-    assets:deferred expenses:education:tuition:universities          5 000.00 HKD  ; posted: 2023-08-11, tuition: tuition fee - undergraduate
+2023-08-09 (identifiers.banks.c4f3759a-76d8-4c77-9b6a-5ea062519666) Joint University Programmes Admissions System  ; JOINT UNIVERSITY PROGRAMMES ADMISSIONS SYSTEM identifiers.banks.3319d4af-d9d1-4451-b2f6-e95472a9c4bc 9Aug, activity: tuition, time: 20:02, timezone: UTC+08:00, via: Faster Payment System
+    assets:deferred expenses:education:tuition:universities          5 000.00 HKD  ; tuition fee - undergraduate, posted: 2023-08-11
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 13:02, timezone: UTC+08:00
@@ -208,9 +208,9 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-28 (identifiers.banks.0a10cfed-045e-4409-952d-070e248a2715) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; BoC Bill - e65bf2ea-643c-4058-9981-843e153ae96c identifiers.banks.cdcb21ec-87ef-4cab-8ac4-7e42b1558031, activity: tuition, time: 01:14:50, timezone: UTC+08:00, via: Faster Payment System
-    assets:deferred expenses:education:tuition:universities          16 050.00 HKD  ; due: 2023-09-04+08:00, posted: 2023-08-11+08:00, tuition: tuition fee - undergraduate
-    assets:deferred expenses:education:tuition:universities             400.00 HKD  ; due: 2023-09-04+08:00, posted: 2023-08-11+08:00, tuition: caution money
-    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; due: 2023-09-08+08:00, posted: 2023-08-23T20:13:09+08:00, tuition: hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02
+    assets:deferred expenses:education:tuition:universities          16 050.00 HKD  ; tuition fee - undergraduate, due: 2023-09-04+08:00, posted: 2023-08-11+08:00
+    assets:deferred expenses:education:tuition:universities             400.00 HKD  ; caution money, due: 2023-09-04+08:00, posted: 2023-08-11+08:00
+    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02, due: 2023-09-08+08:00, posted: 2023-08-23T20:13:09+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-28 self  ; activity: transfer, time: 07:59:32, timezone: UTC+08:00, transfer: 1 red envelope
@@ -300,7 +300,7 @@ include ../prelude.journal
 
 2023-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    21 050.00 HKD
-    revenues:education:scholarships
+    revenues:education:scholarships                                                                            ; Admission Scholarship 23/24, posted: 2023-08-31
 
 2023-08-31 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; NET BILPYT (31AUG23) "022610af-1c78-43f3-aeca-f00b02a16d79", activity: adjust, time: 00:58, timezone: UTC+08:00
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
