@@ -36,6 +36,7 @@ account expenses:accommodations                                                 
 account expenses:accommodations:universities                                                      ; type: X
 account expenses:consumption                                                                      ; type: X
 account expenses:education                                                                        ; type: X
+account expenses:education:books                                                                  ; type: X
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
 account expenses:fees                                                                             ; type: X
@@ -85,6 +86,7 @@ payee ******************@******.com
 payee ******@***********.com.au
 payee ******@***************.com
 payee ***@*******.com
+payee Academic & Professional Book Centre
 payee Circle K
 payee Genki 4aa5d1b8-35f6-4770-8af3-482d754d0de7
 payee Hong Kong Government
