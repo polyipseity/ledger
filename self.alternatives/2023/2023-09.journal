@@ -258,3 +258,9 @@ include ../prelude.journal
     revenues:recycables:personal care     -26.00 _OPL  ; collect: 1 other plastic
     revenues:recycables:personal care     -80.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
+
+2023-09-17 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT8H15M51S, time: 12:51:49, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      145 339.00 _SRF = 8 788 804 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  252.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
