@@ -13,6 +13,8 @@ account assets:cash                                                             
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:maintenance                                                      ; type: A
+account assets:deferred expenses:education                                                        ; type: A 
+account assets:deferred expenses:education:books                                                  ; type: A 
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:digital                                                                            ; type: A
