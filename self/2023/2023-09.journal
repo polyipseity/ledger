@@ -206,6 +206,34 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
+2023-09-18 (5900269209) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:10:29, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
+
+2023-09-18 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 19:51, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Coca-Cola with Lemon, food_and_drink: beef stew, food_and_drink: curry fish ball, food_and_drink: instant noodle, food_and_drink: red sausage, food_and_drink: turnip, food_and_drink: vegetable
+
+2023-09-19 (5600159145) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 14:16:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
+
+2023-09-19 self  ; CASH WITHDRAWAL, activity: withdraw, time: 14:35, timezone: UTC+08:00
+    assets:cash                                                        500.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-09-19 7-Eleven  ; activity: add value, time: 14:38, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      500.00 HKD
+    assets:cash
+
+2023-09-19 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 20:42, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 10 fried dumplings
+
+2023-09-20 (5900270175) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 11:56:48, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
