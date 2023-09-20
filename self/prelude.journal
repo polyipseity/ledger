@@ -13,8 +13,8 @@ account assets:cash                                                             
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:maintenance                                                      ; type: A
-account assets:deferred expenses:education                                                        ; type: A 
-account assets:deferred expenses:education:books                                                  ; type: A 
+account assets:deferred expenses:education                                                        ; type: A
+account assets:deferred expenses:education:books                                                  ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:digital                                                                            ; type: A
@@ -32,7 +32,7 @@ account equity:conversions:HKD-USD                                              
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:kins                                                                               ; type: E
-account equity:kins:families                                                                      ; type: E 
+account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
 account expenses:accommodations:universities                                                      ; type: X
