@@ -94,7 +94,7 @@ include ../prelude.journal
     expenses:transport:trains                                                6.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-11 self  ; activity: transfer, time: 09:45, timezone: UTC+08:00
+2023-08-11 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 09:45, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -400.00 HKD
     assets:cash
 
@@ -106,7 +106,7 @@ include ../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-11 self  ; activity: transfer, time: 23:29:10, timezone: UTC+08:00
+2023-08-11 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 23:29:10, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      100.00 HKD
     assets:cash
 
@@ -168,11 +168,11 @@ include ../prelude.journal
     assets:accrued revenues:incomes:tutoring     -960.00 HKD
     assets:cash
 
-2023-08-21 self  ; QDM CASH DEP (21AUG23), activity: deposit, time: 10:41, timezone: UTC+08:00
+2023-08-21 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21AUG23), activity: deposit, time: 10:41, timezone: UTC+08:00
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-08-22 self  ; activity: transfer, duration: PT8H7M, time: 11:08:00, timezone: UTC+08:00, transfer: about 50 red envelopes
+2023-08-22 kins  ; activity: transfer, duration: PT8H7M, time: 11:08:00, timezone: UTC+08:00, transfer: about 50 red envelopes
     equity:kins    -4 500.00 CNY
     assets:cash
 
@@ -180,12 +180,12 @@ include ../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-08-26 self  ; activity: transfer, time: 17:00:00, timezone: UTC+08:00
+2023-08-26 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 17:00:00, timezone: UTC+08:00
     assets:cash                                                  -4 500.00 CNY  ; rate: 1.0761054, rate: rounded
     assets:cash                                                   5 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-08-26 self  ; activity: transfer, duration: PT2H2M39S, time: 18:42:21, timezone: UTC+08:00, transfer: 3 red envelopes
+2023-08-26 kins  ; activity: transfer, duration: PT2H2M39S, time: 18:42:21, timezone: UTC+08:00, transfer: 3 red envelopes
     equity:kins      -20.00 HKD  ; time: 18:42:21
     equity:kins      -20.00 HKD  ; time: 19:03:52
     equity:kins      -50.00 HKD  ; time: 20:45
@@ -203,7 +203,7 @@ include ../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD  ; time: 13:23:30, timezone: UTC+08:00
     assets:cash
 
-2023-08-28 self  ; QDM CASH DEP (26AUG23), activity: deposit, posted: 2023-08-26T18:33:13+08:00, timezone: UTC+08:00
+2023-08-28 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (26AUG23), activity: deposit, posted: 2023-08-26T18:33:13+08:00, timezone: UTC+08:00
     assets:cash                                                      -5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -213,7 +213,7 @@ include ../prelude.journal
     assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02, due: 2023-09-08+08:00, posted: 2023-08-23T20:13:09+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-08-28 self  ; activity: transfer, time: 07:59:32, timezone: UTC+08:00, transfer: 1 red envelope
+2023-08-28 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 07:59:32, timezone: UTC+08:00, transfer: 1 red envelope
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -50.00 HKD  ; time: 07:59:32
     assets:cash
 
@@ -294,7 +294,7 @@ include ../prelude.journal
     expenses:transport:buses                                                 6.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-30 self  ; activity: transfer, time: 23, timezone: UTC+08:00
+2023-08-30 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 23, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -440.00 HKD
     assets:cash
 
@@ -317,7 +317,7 @@ include ../prelude.journal
     expenses:healthcare:medication      400.00 HKD  ; duration: P3D
     assets:cash
 
-2023-08-31 self  ; activity: transfer, time: 21:09:30, timezone: UTC+08:00
+2023-08-31 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 21:09:30, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4       40.00 HKD
     assets:cash
 

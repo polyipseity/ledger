@@ -104,7 +104,7 @@ include ../prelude.journal
     expenses:fees:Stripe                                              3.13 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       18.69 HKD
 
-2023-07-21 self  ; QDM CASH DEP (21JUL23), activity: deposit, timezone: UTC+08:00
+2023-07-21 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21JUL23), activity: deposit, timezone: UTC+08:00
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
