@@ -249,9 +249,9 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-09-16 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P15DT12H39M50S, time: 12:39:50, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -24.00 _BEC  ; collect: 2 Tetra Pak beverage cartons
     revenues:recycables:food and drinks:dining     -18.00 _MET  ; collect: 1 drink can
     revenues:recycables:food and drinks:dining    -128.00 _OPL  ; collect: 1 plastic bag, collect: 26 other plastics
-    revenues:recycables:food and drinks:dining     -24.00 _TPC  ; collect: 2 Tetra Pak beverage cartons
     assets:recycables
 
 2023-09-16 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, time: 23:30, timezone: UTC+08:00

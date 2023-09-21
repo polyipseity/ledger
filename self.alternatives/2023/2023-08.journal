@@ -115,8 +115,8 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5TH30M, time: 12:30, timezone: UTC+08:00
+    revenues:recycables:food and drinks     -21.00 _BEC  ; collect: 2 Tetra Pak beverage cartons
     revenues:recycables:education          -248.00 _PAP  ; collect: 1 magazine, collect: 5 sheets of paper
-    revenues:recycables:food and drinks     -21.00 _TPC  ; collect: 2 Tetra Pak beverage cartons
     revenues:recycables:food and drinks     -10.00 _MET  ; collect: 1 metal
     revenues:recycables:food and drinks     -62.00 _OPL  ; collect: 18 other plastics
     revenues:recycables:food and drinks    -136.00 _PLA  ; collect: 6 plastic bottles
@@ -140,12 +140,12 @@ include ../prelude.journal
     assets:recycables
 
 2023-08-29 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M45S, time: 12:06:03, timezone: UTC+08:00
-    assets:recycables                                                         -21.00 _TPC = 0 _TPC  ; recycle: 2 Tetra Pak beverage cartons
+    assets:recycables                                                         -21.00 _BEC = 0 _BEC  ; recycle: 2 Tetra Pak beverage cartons
     assets:recycables                                                        -248.00 _PAP = 0 _PAP  ; recycle: 1 magazine, recycle: 5 sheets of paper, time: 12:06:03, timezone: UTC+08:00
     assets:recycables                                                        -253.00 _PLA = 0 _PLA  ; recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
     assets:recycables                                                         -72.00 _OPL = 0 _OPL  ; recycle: 22 other plastics, time: 12:07:14, timezone: UTC+08:00
     assets:recycables                                                        -755.00 _MET = 0 _MET  ; recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
-    expenses:recycling                                                         21.00 _TPC
+    expenses:recycling                                                         21.00 _BEC
     equity:conversions:GREEN$-_PAP:_PAP                                       248.00 _PAP  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-_PAP:GREEN$                                    -3.00 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                       253.00 _PLA  ; rate: 0.08, rate: unit 100

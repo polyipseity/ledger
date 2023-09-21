@@ -27,13 +27,13 @@ account revenues:recycables:food and drinks                                   ; 
 account revenues:recycables:food and drinks:dining                            ; type: R
 account revenues:recycables:personal care                                     ; type: R
 
+commodity 99 999 999.00 _BEC    ; full: beverage cartons, unit: gram
 commodity 99 999 999.00 _FRM    ; full: frames
 commodity 99 999 999.00 _MET    ; full: metals, unit: gram
 commodity 99 999 999.00 _OPL    ; full: other plastics, unit: gram
 commodity 99 999 999.00 _PAP    ; full: paper, unit: gram
 commodity 99 999 999.00 _PLA    ; full: plastics, unit: gram
 commodity 99 999 999.00 _SRF    ; full: SheepIt Render Farm points
-commodity 99 999 999.00 _TPC    ; full: Tetra Pak cartons, unit: gram
 commodity 99 999 999.00 GREEN$
 
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
