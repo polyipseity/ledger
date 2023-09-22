@@ -306,3 +306,24 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     [revenues:compute:SheepIt Render Farm]                -2 820.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-09-21 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: -P4D, time: 23, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food and drinks:dining    -403.00 _MET  ; collect: 27 drink cans
+    revenues:recycables:food and drinks:dining     -13.00 _OPL  ; collect: 1 plastic bag, collect: 2 other plastics
+    revenues:recycables:food and drinks:dining     -66.00 _PLA  ; collect: 2 plastic bottles
+    assets:recycables
+
+2023-09-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4D4H, time: 23, timezone: UTC+08:00
+    revenues:recycables:food and drinks     -30.00 _BEC  ; collect: 2 beverage cartons
+    revenues:recycables:food and drinks     -42.00 _MET  ; collect: 3 drink cans
+    revenues:recycables:food and drinks    -105.00 _OPL  ; collect: 1 plastic bag, collect: 22 other plastics
+    assets:recycables
+
+2023-09-21 SF Express  ; activity: collect, time: 23:20, timezone: UTC+08:00
+    revenues:recycables:packaging    -456.00 _PAP  ; collect: 1 cardboard box
+    assets:recycables
+
+2023-09-22 self  ; activity: collect, time: 09, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -13.00 _BEC  ; collect: 1 beverage carton
+    revenues:recycables:food and drinks:dining      -5.00 _OPL  ; collect: 2 other plastics
+    assets:recycables
