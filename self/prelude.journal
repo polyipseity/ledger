@@ -1,5 +1,7 @@
 include ../prelude.journal
 
+account assets:accrued revenues:education                                                         ; type: A
+account assets:accrued revenues:education:scholarships                                            ; type: A
 account assets:accrued revenues:incomes                                                           ; type: A
 account assets:accrued revenues:incomes:tutoring                                                  ; type: A
 account assets:accrued revenues:insurances                                                        ; type: A
