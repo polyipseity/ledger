@@ -314,9 +314,9 @@ include ../prelude.journal
     assets:recycables
 
 2023-09-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4D4H, time: 23, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -30.00 _BEC  ; collect: 2 beverage cartons
-    revenues:recycables:food and drinks     -42.00 _MET  ; collect: 3 drink cans
-    revenues:recycables:food and drinks    -105.00 _OPL  ; collect: 1 plastic bag, collect: 22 other plastics
+    revenues:recycables:food and drinks:snacks     -30.00 _BEC  ; collect: 2 beverage cartons
+    revenues:recycables:food and drinks:snacks     -42.00 _MET  ; collect: 3 drink cans
+    revenues:recycables:food and drinks:snacks    -105.00 _OPL  ; collect: 1 plastic bag, collect: 22 other plastics
     assets:recycables
 
 2023-09-21 SF Express  ; activity: collect, time: 23:20, timezone: UTC+08:00
@@ -341,8 +341,8 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-09-22 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: PT5H48M, time: 16:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -20.00 _OPL  ; collect: 1 plastic bag, collect: 6 other plastics
-    revenues:recycables:food and drinks    -134.00 _PLA  ; collect: 6 plastic bottles
+    revenues:recycables:food and drinks:snacks     -20.00 _OPL  ; collect: 1 plastic bag, collect: 6 other plastics
+    revenues:recycables:food and drinks:snacks    -134.00 _PLA  ; collect: 6 plastic bottles
     assets:recycables
 
 2023-09-22 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT3H30M, time: 19:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -363,6 +363,6 @@ include ../prelude.journal
     assets:recycables
 
 2023-09-24 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: collect, duration: PT1H38M44S, time: 11:35:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks      -2.00 _OPL  ; collect: 1 other plastic
-    revenues:recycables:food and drinks     -26.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks:snacks      -2.00 _OPL  ; collect: 1 other plastic
+    revenues:recycables:food and drinks:snacks     -26.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
