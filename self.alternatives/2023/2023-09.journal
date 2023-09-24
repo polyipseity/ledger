@@ -357,3 +357,7 @@ include ../prelude.journal
     revenues:recycables:food and drinks:dining     -23.00 _OPL  ; collect: 4 other plastics
     revenues:recycables:food and drinks:dining     -26.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
+
+2023-09-24 self  ; activity: collect, duration: PT41M, time: 08:30, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -11.00 _OPL  ; collect: 1 other plastic
+    assets:recycables
