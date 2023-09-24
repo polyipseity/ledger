@@ -270,6 +270,22 @@ include ../prelude.journal
     assets:cash                    500.00 HKD  ; time: 13:30:43
     revenues:incomes:tutoring
 
+2023-09-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-09-24 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H38M44S, time: 11:35:00, timezone: UTC+08:00
+    assets:cash                    300.00 HKD  ; time: 12:13:44
+    revenues:incomes:tutoring
+
+2023-09-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-09-24 (74207834) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 12:42:48, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -48.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: scrambled egg, food_and_drink: spiced pork cubes
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities

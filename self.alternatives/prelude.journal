@@ -37,6 +37,7 @@ commodity 99 999 999.00 _PLA    ; full: plastics, unit: gram
 commodity 99 999 999.00 _SRF    ; full: SheepIt Render Farm points
 commodity 99 999 999.00 GREEN$
 
+payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee GREEN@d7380790-52e2-4728-94db-1572bc922104
