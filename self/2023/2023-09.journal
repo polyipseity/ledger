@@ -294,6 +294,26 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Yanzhou style fried rice
 
+2023-09-26 (5200409405) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:42:53, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: baked rice with fish and sweet corn in cream sauce
+
+2023-09-26 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 22:50, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thick egg noodle
+
+2023-09-26 bank  ; CREDIT INTEREST, activity: interests, posted: 2023-09-27T21:48:18+08:00, timezone: UTC+08:00
+    revenues:interests                                                 -18.57 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-09-27 (5100317730) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:02:56, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: baked pork chop with rice
+
+2023-09-27 (58C7BF/2404) McDonald's  ; activity: eating, eating: dinner, time: 21:58:55, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Filet-O-Fish, food_and_drink: iced Fanta, food_and_drink: medium-sized fries
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
