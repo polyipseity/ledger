@@ -338,6 +338,18 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2023-09-29 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 10, timezone: UTC+08:00
+    assets:cash                                                    500.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
+2023-09-29 2147e96b-adf0-45f5-bdb9-1e201b39b858  ; common cold, activity: healthcare, time: 12:28:28, timezone: UTC+08:00
+    assets:cash                        -400.00 HKD
+    expenses:healthcare:medication                  ; duration: P3D
+
+2023-09-29 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT3H9M39S, time: 15:30:00, timezone: UTC+08:00
+    assets:cash                    500.00 HKD  ; time: 15:57:15
+    revenues:incomes:tutoring
+
 2023-09-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
