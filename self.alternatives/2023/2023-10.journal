@@ -17,3 +17,9 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PLA:GREEN$                                        -64.00 GREEN$ = -64.00 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                          1 115.00 _PLA = 1 115.00 _PLA
     equity:opening/closing balances
+
+2023-10-02 self  ; activity: collect, duration: -PT3D2H22M48S, time: 09:22:48, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks     -16.00 _BEC  ; collect: 1 beverage carton
+    revenues:recycables:food and drinks:snacks     -30.00 _MET  ; collect: 2 drink cans
+    revenues:recycables:food and drinks:dining     -17.00 _OPL  ; collect: 1 foam food container, collect: 2 other plastics
+    assets:recycables

@@ -68,6 +68,8 @@ account liabilities:accrued expenses:insurances                                 
 account liabilities:accrued expenses:insurances:levy                                              ; type: L
 account liabilities:accrued expenses:insurances:life                                              ; type: L
 account liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         ; type: L
+account liabilities:deferred revenues:incomes                                                     ; type: L
+account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
 account revenues:donations                                                                        ; type: R
 account revenues:donations:Buy Me a Coffee                                                        ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                                            ; type: R
