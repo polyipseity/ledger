@@ -27,7 +27,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2023-10-01 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:39:00, timezone: UTC+08:00
+2023-10-01 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:39:00, timezone: UTC+08:00
     revenues:incomes:tutoring                          -300.00 HKD  ; time: 12:11:00, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring     -300.00 HKD  ; valid: 2023-10-01T12:11:00+08:00/2023-10-08T10:30:00+08:00
     assets:cash
@@ -52,6 +52,10 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -417.15 HKD
     assets:deferred expenses:insurances:health                         373.09 HKD
     expenses:insurances:health
+
+2023-10-09 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 11:30:00, timezone: UTC+08:00
+    liabilities:deferred revenues:incomes:tutoring      300.00 HKD
+    revenues:incomes:tutoring                                       ; time: 2023-10-01T12:13:44+08:00, timezone: UTC+08:00
 
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD
