@@ -53,7 +53,7 @@ include ../prelude.journal
     assets:deferred expenses:insurances:health                         373.09 HKD
     expenses:insurances:health
 
-2023-10-09 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 11:30:00, timezone: UTC+08:00
+2023-10-09 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
     revenues:incomes:tutoring                                       ; time: 2023-10-01T12:13:44+08:00, timezone: UTC+08:00
 
