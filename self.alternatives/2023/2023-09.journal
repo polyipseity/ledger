@@ -418,3 +418,21 @@ include ../prelude.journal
     revenues:recycables:food and drinks:dining     -46.00 _OPL  ; collect: 1 foam food container, collect: 1 plastic bag, collect: 10 other plastics
     revenues:recycables:food and drinks:dining     -43.00 _PLA  ; collect: 2 plastic bottles
     assets:recycables
+
+2023-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:recycables                                                              -100.00 _BEC = 0.00 _BEC
+    assets:recycables                                                               -52.00 _MET = 0.00 _MET
+    assets:recycables                                                              -133.00 _OPL = 0.00 _OPL
+    assets:recycables                                                               -43.00 _PLA = 0.00 _PLA
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704         -135.00 GREEN$ = 0.00 GREEN$
+    assets:digital:SheepIt Render Farm:polyipseity                              -33 588.00 _FRM = 0.00 _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                          -11 996 812.00 _SRF = 0.00 _SRF
+    equity:conversions:GREEN$-_MET:GREEN$                                          13.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                          -1 954.00 _MET = 0.00 _MET
+    equity:conversions:GREEN$-_OPL:GREEN$                                           3.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                            -506.00 _OPL = 0.00 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                          55.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                          -5 551.00 _PAP = 0.00 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                          64.00 GREEN$ = 0.00 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                          -1 115.00 _PLA = 0.00 _PLA
+    equity:opening/closing balances
