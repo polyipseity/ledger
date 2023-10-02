@@ -48,6 +48,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        1.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
+2023-10-02 (identifiers.banks.efd06ab4-d1d6-483f-a053-d97b94bb0e8e) Blue Cross Insurance  ; Blue Cross (Asia-Pacific) Ins Ltd, activity: invest, time: 19:52, timezone: UTC+08:00, via: Faster Payment System
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -417.15 HKD
+    assets:deferred expenses:insurances:health                         373.09 HKD
+    expenses:insurances:health
+
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD
     assets:deferred expenses:education:tuition:universities
@@ -55,3 +60,7 @@ include ../prelude.journal
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                    2 449.00 HKD
     assets:deferred expenses:accommodations:universities
+
+2023-10-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+    assets:deferred expenses:insurances:health      -39.93 HKD
+    expenses:insurances:health

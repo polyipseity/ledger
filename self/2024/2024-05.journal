@@ -1,0 +1,5 @@
+include ../prelude.journal
+
+2024-05-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+    assets:deferred expenses:insurances:health      -42.68 HKD
+    expenses:insurances:health
