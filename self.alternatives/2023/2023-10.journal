@@ -35,3 +35,9 @@ include ../prelude.journal
     revenues:recycables:personal care              -10.00 _OPL  ; collect: 1 other plastic
     revenues:recycables:personal care              -56.00 _PLA  ; collect: 1 plastic bottle
     assets:recycables
+
+2023-10-02 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 18:44:31, timezone: UTC+08:00
+    assets:recycables                                                       -180.00 _OPL = 0 _OPL  ; recycle: all other plastics, time: 18:44:31, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                      180.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:GREEN$                                              0
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
