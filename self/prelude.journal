@@ -22,6 +22,8 @@ account assets:deferred expenses:education:tuition:universities                 
 account assets:digital                                                                            ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd                                       ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f  ; type: A
+account assets:digital:Octopus                                                                    ; type: C
+account assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                               ; type: C
 account assets:digital:Octopus cards                                                              ; type: C
 account assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         ; type: C
 account assets:digital:Stripe                                                                     ; type: A

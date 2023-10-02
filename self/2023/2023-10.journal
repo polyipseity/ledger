@@ -40,6 +40,14 @@ include ../prelude.journal
     assets:cash                    400.00 HKD
     revenues:incomes:tutoring                  ; time: 17:10:54, timezone: UTC+08:00
 
+2023-10-02 (banks.identifiers.e6d51441-34be-49ae-ae3b-f958c731bd15) self  ; Octopu Cards Limited identifiers.banks.2401ea07-bada-4410-a2a6-8a464c40b170 2OCt, activity: transfer, time: 10:37, timezone: UTC+08:00, via: Faster Payment System
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2          1.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-10-02 self  ; activity: transfer, time: 11:08:55, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        1.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD
     assets:deferred expenses:education:tuition:universities
