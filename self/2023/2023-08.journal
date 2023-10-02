@@ -303,7 +303,7 @@ include ../prelude.journal
     assets:accrued revenues:education:scholarships                                              21 050.00 HKD
     revenues:education:scholarships
 
-2023-08-31 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; NET BILPYT (31AUG23) "022610af-1c78-43f3-aeca-f00b02a16d79", activity: adjust, time: 00:58, timezone: UTC+08:00
+2023-08-31 * 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; NET BILPYT (31AUG23) "022610af-1c78-43f3-aeca-f00b02a16d79", activity: adjust, time: 00:58, timezone: UTC+08:00
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
     liabilities:accrued expenses:insurances:levy                                             5.88 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            47.70 HKD
