@@ -53,6 +53,14 @@ include ../prelude.journal
     assets:deferred expenses:insurances:health                         373.09 HKD
     expenses:insurances:health
 
+2023-10-02 (5600165333) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 14:10:13, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: steamed egg with diced pork, food_and_drink: vegetables
+
+2023-10-02 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 18:40, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+
 2023-10-09 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
     revenues:incomes:tutoring                                       ; time: 2023-10-01T12:13:44+08:00, timezone: UTC+08:00
