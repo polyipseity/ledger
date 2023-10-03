@@ -24,7 +24,7 @@ include ../prelude.journal
     revenues:recycables:food and drinks:dining     -17.00 _OPL  ; collect: 1 foam food container, collect: 2 other plastics
     assets:recycables
 
-2023-10-02 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -PT3DT2H43M, time: 14:45, timezone: UTC+08:00
+2023-10-02 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -P3DT2H43M, time: 14:45, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      1 271 277.00 _SRF = 13 268 089 _SRF
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    946.00 _FRM
