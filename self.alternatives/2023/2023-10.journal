@@ -41,3 +41,9 @@ include ../prelude.journal
     equity:conversions:GREEN$-_OPL:_OPL                                      180.00 _OPL  ; rate: 0.01, rate: unit 100
     equity:conversions:GREEN$-_OPL:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-10-03 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT17H5M7S, time: 00:49:48, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      265 397.00 _SRF = 13 533 486 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  170.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
