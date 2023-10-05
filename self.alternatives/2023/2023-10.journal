@@ -53,3 +53,9 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   85.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-04 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT12H53M35S, time: 23:46:38, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      416 745.00 _SRF = 14 085 050 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  128.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
