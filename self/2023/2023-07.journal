@@ -75,7 +75,7 @@ include ../prelude.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD  ; valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
 
-2023-07-17 (identifiers.banks.7707cc6c-8021-4dc5-802a-cde90c58ce2a) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED identifiers.banks.8f456eee-19cf-4809-bbc7-437ab7185228 17Jul, activity: deposit, time: 15:20:41, timezone: UTC+08:00, via: Faster Payment System
+2023-07-17 (identifiers.banks.8f456eee-19cf-4809-bbc7-437ab7185228/identifiers.references.7707cc6c-8021-4dc5-802a-cde90c58ce2a) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:20:41, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc          -4.68 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -136,7 +136,7 @@ include ../prelude.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-27 (identifiers.banks.32469fdf-1f76-460c-8c11-43154447ebbb) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED identifiers.banks.5ffbb304-adee-405c-9505-cfd28bbbbe4b 27Jul, activity: deposit, time: 15:18:31, timezone: UTC+08:00, via: Faster Payment System
+2023-07-27 (identifiers.banks.5ffbb304-adee-405c-9505-cfd28bbbbe4b/identifiers.references.32469fdf-1f76-460c-8c11-43154447ebbb) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:18:31, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -18.69 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

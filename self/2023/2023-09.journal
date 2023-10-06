@@ -142,7 +142,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice, food_and_drink: iced coffee
 
-2023-09-14 (identifiers.banks.df772885-0f40-498c-8e56-e46e911290aa) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED identifiers.banks.60101804-8f4e-486f-9276-d22289a59d89 14Sep, activity: deposit, time: 15:01:02, timezone: UTC+08:00, via: Faster Payment System
+2023-09-14 (identifiers.banks.60101804-8f4e-486f-9276-d22289a59d89/identifiers.references.df772885-0f40-498c-8e56-e46e911290aa) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:01:02, timezone: UTC+08:00, via: Faster Payment System
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       36.20 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc
 
@@ -174,7 +174,7 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 16:05:00, timezone: UTC+08:00
 
-2023-09-16 * (identifiers.banks.c1960deb-a0aa-4111-9add-dc376bc28313) Academic & Professional Book Centre  ; identifiers.68cb0381-99b7-42f4-8b21-1590bf5902bb, activity: education, time: 09:35, timezone: UTC+08:00
+2023-09-16 * (identifiers.references.c1960deb-a0aa-4111-9add-dc376bc28313) Academic & Professional Book Centre  ; identifiers.68cb0381-99b7-42f4-8b21-1590bf5902bb, activity: education, time: 09:35, timezone: UTC+08:00
     assets:deferred expenses:education:books                       560.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
