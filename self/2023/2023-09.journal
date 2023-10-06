@@ -89,7 +89,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:trains
 
-2023-09-08 (identifiers.Octopus card.c9d8c987-bf59-4cb7-8be1-63f510775eca) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 09:34:30, timezone: UTC+08:00
+2023-09-08 (identifiers.Octopus.c9d8c987-bf59-4cb7-8be1-63f510775eca) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 09:34:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457
 
