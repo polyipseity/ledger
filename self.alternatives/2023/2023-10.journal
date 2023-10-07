@@ -60,8 +60,21 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                  128.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
+2023-10-05 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -71.00 _MET  ; collect: 5 drink cans
+    revenues:recycables:food and drinks:dining     -66.00 _OPL  ; collect: 3 plastic bags, collect: 7 other plastics
+    assets:recycables
+
 2023-10-06 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT14H16M42S, time: 01:51:38, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      30 561.00 _SRF = 14 115 611 _SRF
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  36.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-08 self  ; activity: collect, duration: -P2DT1H20M28S, time: 00:20:28, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks     -14.00 _MET  ; collect: 1 drink can
+    revenues:recycables:food and drinks:snacks     -29.00 _OPL  ; collect: 7 other plastics
+    revenues:recycables:food and drinks:snacks     -65.00 _PLA  ; collect: 2 plastic bottes
+    revenues:recycables:packaging                  -66.00 _PAP  ; collect: 1 cardboard box
+    revenues:recycables:personal care              -54.00 _PLA  ; collect: 1 plastic botte
+    assets:recycables
