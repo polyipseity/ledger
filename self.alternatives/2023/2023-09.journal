@@ -313,7 +313,7 @@ include ../prelude.journal
     revenues:recycables:food and drinks:dining     -66.00 _PLA  ; collect: 2 plastic bottles
     assets:recycables
 
-2023-09-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4D4H, time: 23, timezone: UTC+08:00
+2023-09-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks     -30.00 _BEC  ; collect: 2 beverage cartons
     revenues:recycables:food and drinks:snacks     -42.00 _MET  ; collect: 3 drink cans
     revenues:recycables:food and drinks:snacks    -105.00 _OPL  ; collect: 1 plastic bag, collect: 22 other plastics
@@ -408,7 +408,7 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                  163.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-09-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4D4H, time: 23, timezone: UTC+08:00
+2023-09-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00
     revenues:recycables:food and drinks:dining     -16.00 _BEC  ; collect: 1 beverage carton
     revenues:recycables:food and drinks:dining     -52.00 _MET  ; collect: 4 drink cans
     revenues:recycables:food and drinks:dining     -29.00 _OPL  ; collect: 1 plastic bag, collect: 7 other plastics
