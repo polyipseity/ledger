@@ -82,3 +82,11 @@ include ../prelude.journal
     revenues:recycables:packaging                  -66.00 _PAP  ; collect: 1 cardboard box
     revenues:recycables:personal care              -54.00 _PLA  ; collect: 1 plastic botte
     assets:recycables
+
+2023-10-08 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H42M34S, time: 10:42:26, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks     -15.00 _BEC  ; collect: 1 beverage carton
+    assets:recycables
+
+2023-10-08 self  ; activity: collect, time: 13:32:04, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks      -7.00 _OPL  ; collect: 1 plastic bag, collect: 2 other plastics
+    assets:recycables
