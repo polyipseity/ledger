@@ -101,9 +101,21 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 13:33:21, timezone: UTC+08:00
 
-2023-10-09 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
+2023-10-08 (73256503) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT24M14S, eating: breakfast, time: 09:46:46, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2023-10-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-10-08 * 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H42M34S, time: 10:42:26, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
-    revenues:incomes:tutoring                                       ; time: 2023-10-01T12:13:44+08:00, timezone: UTC+08:00
+    revenues:incomes:tutoring                                       ; datetime: 2023-10-01T12:13:44+08:00, timezone: UTC+08:00
+
+2023-10-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:41, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
 
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD

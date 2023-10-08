@@ -142,6 +142,7 @@ payee kins
 tag activity
 tag billing
 tag bounty
+tag datetime
 tag duration
 tag eating
 tag food_and_drink
