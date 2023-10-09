@@ -90,3 +90,9 @@ include ../prelude.journal
 2023-10-08 self  ; activity: collect, time: 13:32:04, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks      -7.00 _OPL  ; collect: 1 plastic bag, collect: 2 other plastics
     assets:recycables
+
+2023-10-09 self  ; activity: collect, duration: PT4H, time: 09, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks     -16.00 _BEC  ; collect: 1 beverage carton
+    revenues:recycables:food and drinks:snacks    -200.00 _MET  ; collect: 1 mooncake metal container
+    revenues:recycables:food and drinks:snacks     -36.00 _OPL  ; collect: 2 other plastics
+    assets:recycables
