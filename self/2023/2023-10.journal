@@ -117,6 +117,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
+2023-10-09 (58C7BF/4172) McDonald's  ; activity: eating, eating: dinner, time: 16:37:11, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: iced Fanta, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
+
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD
     assets:deferred expenses:education:tuition:universities
