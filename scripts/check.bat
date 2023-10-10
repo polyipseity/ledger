@@ -1,2 +1,2 @@
 @echo off
-hledger --file "../index.journal" --strict check accounts assertions balancednoautoconversion commodities ordereddates parseable payees tags
+hledger --file "../index.journal" --strict check accounts assertions autobalanced balanced commodities ordereddates parseable payees tags
