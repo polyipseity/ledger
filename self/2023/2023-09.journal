@@ -6,7 +6,7 @@ include ../prelude.journal
     assets:cash                                                                                   8 685.00 HKD = 8 685.00 HKD
     assets:deferred expenses:accommodations:universities                                         10 507.00 HKD = 10 507.00 HKD
     assets:deferred expenses:education:tuition:universities                                      21 450.00 HKD = 21 450.00 HKD
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 21 050 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 21 050.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               143.30 HKD = 143.30 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                                    480.20 HKD = 480.20 HKD
     equity:conversions:HKD-USD:HKD                                                               -2 395.83 HKD = -2 395.83 HKD
