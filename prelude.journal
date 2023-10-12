@@ -5,6 +5,7 @@ account equity                           ; type: E
 account equity:conversions               ; type: V
 account equity:opening/closing balances  ; type: E
 account expenses                         ; type: X
+account expenses:lost                    ; type: X
 account liabilities                      ; type: L
 account liabilities:accrued expenses     ; type: L
 account liabilities:deferred revenues    ; type: L

@@ -53,6 +53,7 @@ account expenses:fees:Buy Me a Coffee                                           
 account expenses:fees:Stripe                                                                      ; type: X
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
+account expenses:food and drinks:fruits                                                           ; type: X
 account expenses:food and drinks:snacks                                                           ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
@@ -100,6 +101,7 @@ payee ***@*******.com
 payee Academic & Professional Book Centre
 payee Blue Cross Insurance
 payee Circle K
+payee Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee Genki 4aa5d1b8-35f6-4770-8af3-482d754d0de7
 payee Hong Kong Government
 payee Joint University Programmes Admissions System

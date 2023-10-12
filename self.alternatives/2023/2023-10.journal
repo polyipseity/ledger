@@ -114,3 +114,32 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  154.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-12 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13H23M11S, time: 02:38:44, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      364 330.00 _SRF = 15 843 043.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  217.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-12 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -30.00 _BEC  ; collect: 2 beverage cartons
+    revenues:recycables:food and drinks:dining     -30.00 _MET  ; collect: 2 drink cans
+    revenues:recycables:food and drinks:dining     -46.00 _OPL  ; collect: 3 plastic bags, collect: 9 other plastics
+    assets:recycables
+
+2023-10-12 self  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food and drinks:dining    -199.00 _MET  ; collect: 1 mooncake metal container
+    revenues:recycables:food and drinks:dining     -21.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:packaging                  -83.00 _OPL  ; collect: 1 plastic bag, collect: 6 other plastics
+    revenues:recycables:personal care              -37.00 _OPL  ; collect: 2 other plastics
+    revenues:recycables:personal care             -135.00 _PLA  ; collect: 1 plastic, collect: 3 plastic bottles
+    assets:recycables
+
+2023-10-13 self  ; activity: collect, time: 09, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks      -9.00 _BEC  ; collect: 1 beverage carton
+    revenues:recycables:food and drinks:snacks      -2.00 _OPL  ; collect: 4 other plastics
+    assets:recycables
+
+2023-10-13 self  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
+    assets:recycables       -116 _BEC
+    expenses:lost
