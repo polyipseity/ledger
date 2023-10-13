@@ -136,14 +136,14 @@ include ../prelude.journal
     revenues:recycables:personal care             -135.00 _PLA  ; collect: 1 plastic, collect: 3 plastic bottles
     assets:recycables
 
+2023-10-13 self  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
+    assets:recycables       -116 _BEC
+    expenses:lost
+
 2023-10-13 self  ; activity: collect, time: 09, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks      -9.00 _BEC  ; collect: 1 beverage carton
     revenues:recycables:food and drinks:snacks      -2.00 _OPL  ; collect: 4 other plastics
     assets:recycables
-
-2023-10-13 self  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
-    assets:recycables       -116 _BEC
-    expenses:lost
 
 2023-10-13 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M43S, time: 11:24:38, timezone: UTC+08:00
     assets:recycables                                                       -1 692.00 _MET = 0 _MET
