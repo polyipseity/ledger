@@ -163,3 +163,7 @@ include ../prelude.journal
 2023-10-13 self  ; activity: collect, duration: PT2H, time: 13, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks      -2.00 _OPL  ; collect: 5 other plastics
     assets:recycables
+
+2023-10-13 self  ; activity: collect, time: 23:04:13, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks      -2.00 _OPL  ; collect: 3 other plastics
+    assets:recycables
