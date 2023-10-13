@@ -130,6 +130,7 @@ include ../prelude.journal
 2023-10-12 self  ; activity: collect, duration: -P4DT4H, time: 23, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food and drinks:dining    -199.00 _MET  ; collect: 1 mooncake metal container
     revenues:recycables:food and drinks:dining     -21.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:packaging                  -10.00 _PAP  ; collect: 1 paper bag
     revenues:recycables:packaging                  -83.00 _OPL  ; collect: 1 plastic bag, collect: 6 other plastics
     revenues:recycables:personal care              -37.00 _OPL  ; collect: 2 other plastics
     revenues:recycables:personal care             -135.00 _PLA  ; collect: 1 plastic, collect: 3 plastic bottles
@@ -143,3 +144,18 @@ include ../prelude.journal
 2023-10-13 self  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
     assets:recycables       -116 _BEC
     expenses:lost
+
+2023-10-13 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M43S, time: 11:24:38, timezone: UTC+08:00
+    assets:recycables                                                       -1 692.00 _MET = 0 _MET  ; recycle: all metals, time: 11:24:38, timezone: UTC+08:00
+    assets:recycables                                                         -374.00 _PLA = 0 _PLA  ; recycle: all plastics, time: 11:25:59, timezone: UTC+08:00
+    assets:recycables                                                         -306.00 _OPL = 0 _OPL  ; recycle: all other plastics, time: 11:26:36, timezone: UTC+08:00
+    assets:recycables                                                          -76.00 _PAP = 0 _PAP  ; recycle: all paper, time: 11:27:21, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                        1 692. _MET  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_MET:GREEN$                                       -16 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                           374 _PLA  ; rate: 0.08, rate: unit 100
+    equity:conversions:GREEN$-_PLA:GREEN$                                       -24 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                        306.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:GREEN$                                        -3 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                         76.00 _PAP  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_PAP:GREEN$                                                0
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
