@@ -37,8 +37,8 @@ include ../prelude.journal
     assets:recycables
 
 2023-10-02 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 18:44:31, timezone: UTC+08:00
-    assets:recycables                                                       -180.00 _OPL = 0 _OPL  ; recycle: all other plastics, time: 18:44:31, timezone: UTC+08:00
-    equity:conversions:GREEN$-_OPL:_OPL                                      180.00 _OPL  ; rate: 0.01, rate: unit 100
+    assets:recycables                                                       -180.00 _OPL = 0 _OPL
+    equity:conversions:GREEN$-_OPL:_OPL                                      180.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 18:44:31, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
@@ -146,16 +146,16 @@ include ../prelude.journal
     expenses:lost
 
 2023-10-13 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M43S, time: 11:24:38, timezone: UTC+08:00
-    assets:recycables                                                       -1 692.00 _MET = 0 _MET  ; recycle: all metals, time: 11:24:38, timezone: UTC+08:00
-    assets:recycables                                                         -374.00 _PLA = 0 _PLA  ; recycle: all plastics, time: 11:25:59, timezone: UTC+08:00
-    assets:recycables                                                         -306.00 _OPL = 0 _OPL  ; recycle: all other plastics, time: 11:26:36, timezone: UTC+08:00
-    assets:recycables                                                          -76.00 _PAP = 0 _PAP  ; recycle: all paper, time: 11:27:21, timezone: UTC+08:00
-    equity:conversions:GREEN$-_MET:_MET                                        1 692. _MET  ; rate: 0.01, rate: unit 100
+    assets:recycables                                                       -1 692.00 _MET = 0 _MET
+    assets:recycables                                                         -306.00 _OPL = 0 _OPL
+    assets:recycables                                                          -76.00 _PAP = 0 _PAP
+    assets:recycables                                                         -374.00 _PLA = 0 _PLA
+    equity:conversions:GREEN$-_MET:_MET                                        1 692. _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 11:24:38, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                       -16 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                           374 _PLA  ; rate: 0.08, rate: unit 100
+    equity:conversions:GREEN$-_PLA:_PLA                                           374 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 11:25:59, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                       -24 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                        306.00 _OPL  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_OPL:_OPL                                        306.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 11:26:36, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                        -3 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                         76.00 _PAP  ; rate: 0.01, rate: unit 100
+    equity:conversions:GREEN$-_PAP:_PAP                                         76.00 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 11:27:21, timezone: UTC+08:00
     equity:conversions:GREEN$-_PAP:GREEN$                                                0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
