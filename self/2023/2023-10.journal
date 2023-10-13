@@ -165,6 +165,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2023-10-13 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H7M13S, time: 16:29:00, timezone: UTC+08:00
+    assets:cash                    500.00 HKD
+    revenues:incomes:tutoring                  ; time: 16:29:00, timezone: UTC+08:00
+
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD
     assets:deferred expenses:education:tuition:universities
