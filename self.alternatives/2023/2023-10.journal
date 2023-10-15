@@ -179,3 +179,14 @@ include ../prelude.journal
 2023-10-15 self  ; activity: collect, time: 08, timezone: UTC+08:00
     revenues:recycables:food and drinks:dining      -2.00 _OPL  ; collect: 4 other plastics
     assets:recycables
+
+2023-10-15 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: collect, duration: PT1H38M7S, time: 10:41:38, timezone: UTC+08:00
+    revenues:recycables:food and drinks:snacks     -25.00 _BEC  ; collect: 2 beverage cartons
+    revenues:recycables:food and drinks:snacks      -1.00 _OPL  ; collect: 2 other plastics
+    assets:recycables
+
+2023-10-15 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -P2DT19H2M31S, time: 20:24:31, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      1 312 707.00 _SRF = 17 155 750.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                    764.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
