@@ -73,7 +73,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
-2023-10-05 (identifiers.Octopus.7fd10bac-066e-402d-baf6-fcbcd5bfd27b) self  ; activity: transfer, time: 12:58, timezone: UTC+08:00, via: eDDA
+2023-10-05 (FRN20231005PAYD0101269646020) self  ; activity: transfer, time: 12:58, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -133,7 +133,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 
-2023-10-11 (identifiers.Octopus.dfc399ea-3305-4ae0-8453-66e8d015f3e0) self  ; activity: transfer, time: 11:58:19, timezone: UTC+08:00, via: eDDA
+2023-10-11 (FRN20231011PAYD0101278966543) self  ; activity: transfer, time: 11:58:19, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -185,7 +185,7 @@ include ../prelude.journal
     assets:cash                    300.00 HKD
     revenues:incomes:tutoring                  ; time: 10:41:38, timezone: UTC+08:00
 
-2023-10-15 (identifiers.Octopus.51d99677-ef3a-492b-962f-2497e234c8cd) self  ; activity: transfer, time: 12:41:00, timezone: UTC+08:00, via: eDDA
+2023-10-15 (FRN20231015PAYD0101285116013) self  ; activity: transfer, time: 12:41:00, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        500.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

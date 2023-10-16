@@ -89,7 +89,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:trains
 
-2023-09-08 (identifiers.Octopus.c9d8c987-bf59-4cb7-8be1-63f510775eca) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 09:34:30, timezone: UTC+08:00
+2023-09-08 (2023090809343006196) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 09:34:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457
 
@@ -174,7 +174,7 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 16:05:00, timezone: UTC+08:00
 
-2023-09-16 * (identifiers.references.c1960deb-a0aa-4111-9add-dc376bc28313) Academic & Professional Book Centre  ; identifiers.68cb0381-99b7-42f4-8b21-1590bf5902bb, activity: education, time: 09:35, timezone: UTC+08:00
+2023-09-16 * (identifiers.references.c1960deb-a0aa-4111-9add-dc376bc28313/identifiers.references.68cb0381-99b7-42f4-8b21-1590bf5902bb) Academic & Professional Book Centre  ; activity: education, time: 09:35, timezone: UTC+08:00
     assets:deferred expenses:education:books                       560.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
