@@ -297,13 +297,13 @@ include ../prelude.journal
 
 2023-09-21 (666743) SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT1H36M, time: 08:41:31, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      -7 934.00 _SRF = 9 964 440.00 _SRF
-    revenues:compute:SheepIt Render Farm
+    expenses:compute:SheepIt Render Farm
     [revenues:compute:SheepIt Render Farm]                -140.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-09-21 (666744) SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT4H47M, time: 11:12:44, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      -173 623.00 _SRF = 9 790 817.00 _SRF
-    revenues:compute:SheepIt Render Farm
+    expenses:compute:SheepIt Render Farm
     [revenues:compute:SheepIt Render Farm]                -2 820.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
