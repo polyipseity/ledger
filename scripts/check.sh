@@ -1,2 +1,7 @@
 #!/usr/bin/env sh
-hledger --file '../index.journal' --strict check accounts assertions autobalanced balanced commodities ordereddates parseable payees tags
+
+args='--strict check accounts assertions autobalanced balanced commodities ordereddates parseable payees tags'
+hledger --file '../index.journal' $args
+for file in ../**/index.journal; do
+  hledger --file "$file" $args
+done
