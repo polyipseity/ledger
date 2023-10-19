@@ -30,13 +30,13 @@ account revenues:recycables:food and drinks:snacks                            ; 
 account revenues:recycables:packaging                                         ; type: R 
 account revenues:recycables:personal care                                     ; type: R
 
-commodity 99 999 999.00 _BEC    ; full: beverage cartons, unit: gram
-commodity 99 999 999.00 _FRM    ; full: frames
-commodity 99 999 999.00 _MET    ; full: metals, unit: gram
-commodity 99 999 999.00 _OPL    ; full: other plastics, unit: gram
-commodity 99 999 999.00 _PAP    ; full: paper, unit: gram
-commodity 99 999 999.00 _PLA    ; full: plastics, unit: gram
-commodity 99 999 999.00 _SRF    ; full: SheepIt Render Farm points
+commodity 99 999 999.00 _BEC    ; fullname: beverage cartons, unit: gram
+commodity 99 999 999.00 _FRM    ; fullname: frames
+commodity 99 999 999.00 _MET    ; fullname: metals, unit: gram
+commodity 99 999 999.00 _OPL    ; fullname: other plastics, unit: gram
+commodity 99 999 999.00 _PAP    ; fullname: paper, unit: gram
+commodity 99 999 999.00 _PLA    ; fullname: plastics, unit: gram
+commodity 99 999 999.00 _SRF    ; fullname: SheepIt Render Farm points
 commodity 99 999 999.00 GREEN$
 
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
@@ -47,9 +47,7 @@ payee SF Express
 payee SheepIt Render Farm
 payee b0d2d642-7692-421f-bd20-4d03911caa54
 
-tag activity
 tag achievement
 tag collect
 tag compute
 tag recycle
-tag unit

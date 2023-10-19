@@ -208,9 +208,9 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-28 (identifiers.banks.cdcb21ec-87ef-4cab-8ac4-7e42b1558031/identifiers.references.0a10cfed-045e-4409-952d-070e248a2715) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; BoC Bill - e65bf2ea-643c-4058-9981-843e153ae96c, activity: education, time: 01:14:50, timezone: UTC+08:00, via: Faster Payment System
-    assets:deferred expenses:education:tuition:universities          16 050.00 HKD  ; tuition fee - undergraduate, due: 2023-09-04+08:00, posted: 2023-08-11+08:00
-    assets:deferred expenses:education:tuition:universities             400.00 HKD  ; caution money, due: 2023-09-04+08:00, posted: 2023-08-11+08:00
-    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02, due: 2023-09-08+08:00, posted: 2023-08-23T20:13:09+08:00
+    assets:deferred expenses:education:tuition:universities          16 050.00 HKD  ; tuition fee - undergraduate, valid: 2023-08-11T00:00:00+08:00/2023-09-04T23:59:59+08:00
+    assets:deferred expenses:education:tuition:universities             400.00 HKD  ; caution money, valid: 2023-08-11T00:00:00+08:00/2023-09-04T23:59:59+08:00
+    assets:deferred expenses:accommodations:universities             10 902.00 HKD  ; hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02, valid: 2023-08-23T20:13:09+08:00/2023-09-08T23:59:59+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-28 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 07:59:32, timezone: UTC+08:00, transfer: 1 red envelope
@@ -299,7 +299,7 @@ include ../prelude.journal
     assets:cash
 
 2023-08-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    21 050.00 HKD  ; Admission Scholarship 23/24, posted: 2023-08-31
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    21 050.00 HKD  ; achievement: Admission Scholarship 23/24, posted: 2023-08-31
     assets:accrued revenues:education:scholarships                                              21 050.00 HKD
     revenues:education:scholarships
 

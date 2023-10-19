@@ -22,6 +22,16 @@ payee unknown
 
 tag _conversion-matched
 tag _price-matched
-tag due
-tag full
+tag activity
+tag datetime
+tag duration
+tag fullname
+tag installment
+tag posted
 tag rate
+tag time
+tag timezone
+tag type
+tag unit
+tag valid
+tag via

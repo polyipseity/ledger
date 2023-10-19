@@ -142,21 +142,12 @@ payee euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee kins
 
-tag activity
+tag achievement
 tag billing
 tag bounty
-tag datetime
-tag duration
 tag eating
 tag food_and_drink
-tag installment
 tag maintenance
-tag posted
-tag valid
-tag via
 tag vouchers
 tag service
-tag time
-tag timezone
 tag transfer
-tag type
