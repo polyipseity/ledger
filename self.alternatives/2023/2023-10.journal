@@ -196,3 +196,25 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  106.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-16 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: P1DT1H6M9S, time: 16:55:46, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      279 142.00 _SRF = 17 573 538.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  260.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-17 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT11H26M15S, time: 23:18:51, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      237 660.00 _SRF = 17 811 198.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  156.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-18 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT10H52M35S, time: 23:59:50, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      187 782.00 _SRF = 17 998 980.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  120.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-19 SheepIt Render Farm  ; activity: compute, time: 01:00:14, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity    15 000.00 _SRF = 18 013 980. _SRF
+    revenues:compute:SheepIt Render Farm:awards                       ; achievement: 25000 frames rendered
