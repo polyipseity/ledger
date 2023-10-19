@@ -218,3 +218,9 @@ include ../prelude.journal
 2023-10-19 SheepIt Render Farm  ; activity: compute, time: 01:00:14, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    15 000.00 _SRF = 18 013 980. _SRF
     revenues:compute:SheepIt Render Farm:awards                       ; achievement: 25000 frames rendered
+
+2023-10-19 (678494) SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT15M, time: 14:20:47, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      -11 545.00 _SRF = 18 002 435.00 _SRF
+    expenses:compute:SheepIt Render Farm
+    [revenues:compute:SheepIt Render Farm]                 -178.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
