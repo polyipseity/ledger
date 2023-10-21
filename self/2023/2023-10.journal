@@ -177,6 +177,10 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 13:25:25, timezone: UTC+08:00
 
+2023-10-14 (0000326151) c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f)  ; activity: eating, eating: snacks, time: 22:49:30, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         -29 HKD
+    expenses:food and drinks:snacks                                            ; food_and_drink: 3Q milk tea
+
 2023-10-15 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
@@ -208,6 +212,66 @@ include ../prelude.journal
 2023-10-16 (identifiers.a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; activity: vouchers, time: 00:00:00, timezone: UTC+08:00, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), vouchers: consumption
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    2 000.00 HKD  ; valid: 2023-10-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
+
+2023-10-16 (1K1/342) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:05:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti bolognese
+
+2023-10-16 (5700386463/2f474e88-33c3-4bfc-81f2-90114cd86e07/231016130948) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:09:53, timezone: UTC+08:00
+    equity:friends                       -28.50 HKD
+    expenses:food and drinks:dining                  ; food_and_drink: BBQ pork · red sausage with rice
+
+2023-10-16 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 19:37, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+
+2023-10-17 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:17, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+
+2023-10-18 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 23:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: rice vermicelli, food_and_drink: seaweed
+
+2023-10-19 (1K3/543) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:04:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: rice bolognese
+
+2023-10-19 (5600173013) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 18:07:52, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork with rice
+
+2023-10-19 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
+    expenses:transport:buses
+
+2023-10-19 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:59, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2023-10-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT3H52M25S, time: 18:00, timezone: UTC+08:00
+    assets:cash                    500.00 HKD
+    revenues:incomes:tutoring                  ; time: 18:00, timezone: UTC+08:00
+
+2023-10-21 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:10, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2023-10-21 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 12:12, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
+    expenses:transport:minibuses
+
+2023-10-21 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:06, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
+    expenses:transport:buses
+
+2023-10-21 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2023-10-21 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT3H5M52S, time: 17:16:52, timezone: UTC+08:00
+    assets:cash                    500.00 HKD
+    revenues:incomes:tutoring                  ; time: 17:39:55, timezone: UTC+08:00
 
 2023-10-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD

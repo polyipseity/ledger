@@ -37,6 +37,7 @@ account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236            
 account equity:conversions:HKD-USD                                                                ; type: E
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
+account equity:friends                                                                            ; type: E
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
@@ -138,6 +139,7 @@ payee ab0fa934-c94b-40e9-8243-ad1c486fc251
 payee b05861a9-99cb-454d-95d4-e5ce13ef100a
 payee bank
 payee barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3
+payee c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f)
 payee euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee kins
