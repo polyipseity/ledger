@@ -194,8 +194,8 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2023-10-15 (HK060096-20231015123730D19/2023101512413003915/C120231015124117668681443) euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -134 HKD  ; food_and_drink: 全千島海鮮👑 + cheese
-    expenses:food and drinks:dining
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -134 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 全千島海鮮👑 + cheese
 
 2023-10-15 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:25, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
