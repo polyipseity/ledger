@@ -246,6 +246,6 @@ include ../prelude.journal
 2023-10-22 self  ; activity: collect, duration: -P2DT5H46M36S, time: 12:46:36, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks     -50.00 _BEC  ; collect: 3 beverage cartons
     revenues:recycables:food and drinks:snacks     -10.00 _OPL  ; collect: 1 other plastic
-    revenues:recycables:food and drinks:snacks       -859 _PAP  ; collect: 8 paper packagings
+    revenues:recycables:food and drinks:snacks       -474 _PAP  ; collect: 8 paper packagings
     revenues:recycables:packaging                     -84 _PAP  ; collect: 1 paper bag
     assets:recycables
