@@ -239,6 +239,10 @@ include ../prelude.journal
     revenues:recycables:personal care                 -27 _MET  ; collect: 2 metals
     assets:recycables
 
+2023-10-22 SheepIt Render Farm  ; activity: compute, time: 06:08:15, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity    200 000.00 _SRF = 18 096 598.00 _SRF
+    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 30-day session
+
 2023-10-22 self  ; activity: collect, duration: -P2DT5H46M36S, time: 12:46:36, timezone: UTC+08:00
     revenues:recycables:food and drinks:snacks     -50.00 _BEC  ; collect: 3 beverage cartons
     revenues:recycables:food and drinks:snacks     -10.00 _OPL  ; collect: 1 other plastic
