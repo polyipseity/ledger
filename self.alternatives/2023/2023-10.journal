@@ -239,6 +239,18 @@ include ../prelude.journal
     revenues:recycables:personal care                 -27 _MET  ; collect: 2 metals
     assets:recycables
 
+2023-10-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 953.00 _PT/A = 4 953.00 _PT/A
+    revenues:activities:walking
+
+2023-10-20 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    8 540.00 _PT/A = 13 493.00 _PT/A
+    revenues:activities:walking
+
+2023-10-21 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 056.00 _PT/A = 16 549.00 _PT/A
+    revenues:activities:walking
+
 2023-10-22 SheepIt Render Farm  ; activity: compute, time: 06:08:15, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    200 000.00 _SRF = 18 096 598.00 _SRF
     revenues:compute:SheepIt Render Farm:awards                        ; achievement: 30-day session
@@ -262,17 +274,33 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PAP:GREEN$                                      -5 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
+2023-10-22 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 884.00 _PT/A = 21 433.00 _PT/A
+    revenues:activities:walking
+
+2023-10-23 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 641.00 _PT/A = 24 074.00 _PT/A
+    revenues:activities:walking
+
 2023-10-24 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -P4DT7H36M, time: 10:46:00, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      2 454 600.00 _SRF = 20 551 198.00 _SRF
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  1 301.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
+2023-10-24 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 946.00 _PT/A = 28 020.00 _PT/A
+    revenues:activities:walking
+
 2023-10-25 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -PT17H44M3S, time: 08:45:13, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      350 699.00 _SRF = 20 901 897.00 _SRF
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  276.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-25 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 964.00 _PT/A = 31 984.00 _PT/A
+    revenues:activities:walking
 
 2023-10-26 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT7H9M10S, time: 02:07:09, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      130 064.00 _SRF = 21 031 961.00 _SRF
