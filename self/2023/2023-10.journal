@@ -209,7 +209,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:buses
 
-2023-10-16 (identifiers.a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; activity: vouchers, time: 00:00:00, timezone: UTC+08:00, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), vouchers: consumption
+2023-10-16 (identifiers.a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; activity: vouchers, time: 00:00:00, timezone: UTC+08:00, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), vouchers: 7c271977-704b-40c2-81c2-3a95c2aee236
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    2 000.00 HKD  ; valid: 2023-10-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
 
