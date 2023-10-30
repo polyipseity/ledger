@@ -239,15 +239,15 @@ include ../prelude.journal
     revenues:recycables:personal care                 -27 _MET  ; collect: 2 metals
     assets:recycables
 
-2023-10-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 953.00 _PT/A = 4 953.00 _PT/A
     revenues:activities:walking
 
-2023-10-20 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-20 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    8 540.00 _PT/A = 13 493.00 _PT/A
     revenues:activities:walking
 
-2023-10-21 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-21 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 056.00 _PT/A = 16 549.00 _PT/A
     revenues:activities:walking
 
@@ -274,11 +274,11 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PAP:GREEN$                                      -5 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2023-10-22 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-22 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 884.00 _PT/A = 21 433.00 _PT/A
     revenues:activities:walking
 
-2023-10-23 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-23 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 641.00 _PT/A = 24 074.00 _PT/A
     revenues:activities:walking
 
@@ -298,7 +298,7 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                  276.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-10-25 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-25 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 964.00 _PT/A = 31 984.00 _PT/A
     revenues:activities:walking
 
@@ -314,7 +314,7 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                 138.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-10-26 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-26 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 573.00 _PT/A = 33 557.00 _PT/A
     revenues:activities:walking
 
@@ -324,15 +324,15 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                   59.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-10-27 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-27 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 664.00 _PT/A = 36 221.00 _PT/A
     revenues:activities:walking
 
-2023-10-28 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-28 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 320.00 _PT/A = 40 541.00 _PT/A
     revenues:activities:walking
 
-2023-10-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+2023-10-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 052.00 _PT/A = 42 593.00 _PT/A
     revenues:activities:walking
 
