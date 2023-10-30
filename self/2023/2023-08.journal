@@ -225,7 +225,7 @@ include ../prelude.journal
     expenses:transport:minibuses                                             7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: vouchers, time: 09:45, timezone: UTC+08:00, vouchers: consumption
+2023-08-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 09:45, timezone: UTC+08:00, voucher: consumption
     assets:special:vouchers       35.00 HKD  ; valid: 2023-08-28T00:00:00+08:00/2023-08-28:59:59+08:00
     revenues:special
 
