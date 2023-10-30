@@ -35,6 +35,7 @@ account revenues:recycables:food and drinks:dining                              
 account revenues:recycables:food and drinks:snacks                                                ; type: R
 account revenues:recycables:packaging                                                             ; type: R 
 account revenues:recycables:personal care                                                         ; type: R
+account revenues:rewards                                                                          ; type: R
 
 commodity 99 999 999.00 _BEC    ; fullname: beverage cartons, unit: gram
 commodity 99 999 999.00 _FRM    ; fullname: frames
@@ -59,3 +60,4 @@ tag achievement
 tag collect
 tag compute
 tag recycle
+tag vouchers
