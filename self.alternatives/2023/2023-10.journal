@@ -345,3 +345,17 @@ include ../prelude.journal
 2023-10-30 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, duration: -P1D, time: 11:55:30, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000.00 _PT/A
     revenues:rewards
+
+2023-10-30 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 178.00 _PT/A = 46 771.00 _PT/A
+    revenues:activities:walking
+
+2023-10-31 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: -PT15H58M, time: 17:46:18, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      295 442.00 _SRF = 22 135 146.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  299.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
+2023-10-31 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 111.00 _PT/A = 47 882.00 _PT/A
+    revenues:activities:walking
