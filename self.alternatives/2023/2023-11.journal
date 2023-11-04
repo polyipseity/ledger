@@ -18,6 +18,12 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PLA:_PLA                                                              1 489.00 _PLA = 1 489.00 _PLA
     equity:opening/closing balances
 
+2023-11-01 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT2H39M20S, time: 01:20:43, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      48 430.00 _SRF = 22 183 576.00 _SRF
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                  27.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
+
 2023-11-01 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 093.00 _PT/A = 48 975.00 _PT/A
     revenues:activities:walking
