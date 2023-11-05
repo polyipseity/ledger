@@ -3,7 +3,7 @@ include ../prelude.journal
 2023-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      2 009 311.00 _SRF = 2 009 311.00 _SRF
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]          -37.00 _FRM = -37 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]          -37.00 _FRM = -37.00 _FRM
     [equity:opening/closing balances]
 
 2023-06-01 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
@@ -107,7 +107,7 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      -2 775 196.00 _SRF = 0 _SRF
+    assets:digital:SheepIt Render Farm:polyipseity      -2 775 196.00 _SRF = 0.00 _SRF
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]       -20 036.00 _FRM = 0 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]       -20 036.00 _FRM = 0.00 _FRM
     [equity:opening/closing balances]

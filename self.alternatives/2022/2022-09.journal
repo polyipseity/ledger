@@ -187,7 +187,7 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      -1 076 076.00 _SRF = 0 _SRF
+    assets:digital:SheepIt Render Farm:polyipseity      -1 076 076.00 _SRF = 0.00 _SRF
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]         3 650.00 _FRM = 0 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]         3 650.00 _FRM = 0.00 _FRM
     [equity:opening/closing balances]
