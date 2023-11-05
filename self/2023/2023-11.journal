@@ -60,6 +60,18 @@ include ../prelude.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4       -1 100.00 HKD
     expenses:food and drinks:dining
 
+2023-11-05 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-11-05 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H25M58S, time: 11:03:40, timezone: UTC+08:00
+    assets:cash                    300.00 HKD
+    revenues:incomes:tutoring                  ; time: 12:29:38, timezone: UTC+08:00
+
+2023-11-05 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:42, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
