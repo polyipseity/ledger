@@ -32,6 +32,12 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 212.00 _PT/A = 51 187.00 _PT/A
     revenues:activities:walking
 
+2023-11-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P12DT4H, time: 23, timezone: UTC+08:00
+    revenues:recycables:food and drinks:dining     -30.00 _BEC
+    revenues:recycables:food and drinks:dining     -71.00 _MET
+    revenues:recycables:food and drinks:dining     -43.00 _OPL
+    assets:recycables
+
 2023-11-03 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 146.00 _PT/A = 54 333.00 _PT/A
     revenues:activities:walking
@@ -39,3 +45,13 @@ include ../prelude.journal
 2023-11-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 090.00 _PT/A = 56 423.00 _PT/A
     revenues:activities:walking
+
+2023-11-05 self  ; activity: collect, duration: -P11D8H, time: 16:00:00, timezone: UTC+08:00
+    revenues:recycables:education                  -83.00 _PAP
+    revenues:recycables:food and drinks:snacks     -13.00 _BEC
+    revenues:recycables:food and drinks:snacks    -179.00 _MET
+    revenues:recycables:food and drinks:snacks     -47.00 _OPL
+    revenues:recycables:food and drinks:snacks    -175.00 _PLA
+    revenues:recycables:food and drinks:snacks     -20.00 _PAP
+    revenues:recycables:packaging                  -68.00 _PAP
+    assets:recycables
