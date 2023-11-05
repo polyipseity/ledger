@@ -50,8 +50,8 @@ include ../prelude.journal
     revenues:recycables:education                  -83.00 _PAP
     revenues:recycables:food and drinks:snacks     -13.00 _BEC
     revenues:recycables:food and drinks:snacks    -179.00 _MET
-    revenues:recycables:food and drinks:snacks     -47.00 _OPL
-    revenues:recycables:food and drinks:snacks    -175.00 _PLA
+    revenues:recycables:food and drinks:snacks     -53.00 _OPL
+    revenues:recycables:food and drinks:snacks    -210.00 _PLA
     revenues:recycables:food and drinks:snacks     -20.00 _PAP
     revenues:recycables:packaging                  -68.00 _PAP
     assets:recycables
