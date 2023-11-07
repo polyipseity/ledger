@@ -34,6 +34,10 @@ account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc              
 account assets:special                                                                            ; type: A
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                              ; type: A
+account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
+account equity:conversions:HKD-_PT/A                                                              ; type: E
+account equity:conversions:HKD-_PT/A:HKD                                                          ; type: E
+account equity:conversions:HKD-_PT/A:_PT/A                                                        ; type: E
 account equity:conversions:HKD-USD                                                                ; type: E
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
@@ -91,9 +95,10 @@ account revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           
 account revenues:interests                                                                        ; type: R
 account revenues:special                                                                          ; type: R
 
-commodity 99 999 999.00 CNY
-commodity 99 999 999.00 HKD
-commodity 99 999 999.00 USD
+commodity 99 999 999.00 CNY    ; fullname: Renminbi
+commodity 99 999 999.00 HKD    ; fullname: Hong Kong dollars
+commodity 99 999 999.00 USD    ; fullname: United State dollars
+commodity 99 999 999.00 _PT/A  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 
 payee ******************@******.com
 payee ******@***********.com.au
@@ -136,6 +141,7 @@ payee 82de8d96-c247-49eb-9bd7-87b00f16d25c
 payee 88e71e74-7f85-4a0a-ab31-ecab094622a5
 payee 937f7345-cbe9-48d1-9746-d79fd001d2a6
 payee 96da94cc-4caf-4935-92e6-409046be8486
+payee 96f69720-5471-4e88-bebe-3db7a77a086c
 payee a19a3525-a11c-40de-9726-79b0738910d7
 payee ab0fa934-c94b-40e9-8243-ad1c486fc251
 payee b05861a9-99cb-454d-95d4-e5ce13ef100a

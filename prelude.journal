@@ -1,15 +1,18 @@
-account assets                           ; type: A
-account assets:accrued revenues          ; type: A
-account assets:deferred expenses         ; type: A
-account equity                           ; type: E
-account equity:conversions               ; type: V
-account equity:opening/closing balances  ; type: E
-account expenses                         ; type: X
-account expenses:lost                    ; type: X
-account liabilities                      ; type: L
-account liabilities:accrued expenses     ; type: L
-account liabilities:deferred revenues    ; type: L
-account revenues                         ; type: R
+account assets                             ; type: A
+account assets:accrued revenues            ; type: A
+account assets:deferred expenses           ; type: A
+account equity                             ; type: E
+account equity:conversions                 ; type: V
+account equity:external                    ; type: E
+account equity:external:self               ; type: E
+account equity:external:self.alternatives  ; type: E
+account equity:opening/closing balances    ; type: E
+account expenses                           ; type: X
+account expenses:lost                      ; type: X
+account liabilities                        ; type: L
+account liabilities:accrued expenses       ; type: L
+account liabilities:deferred revenues      ; type: L
+account revenues                           ; type: R
 
 commodity 99 999 999.00
 
