@@ -342,7 +342,7 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                  288.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-10-30 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:30, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
+2023-10-30 (COUPON#0009#985) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:30, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000.00 _PT/A
     revenues:rewards
 

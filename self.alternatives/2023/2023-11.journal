@@ -81,7 +81,7 @@ include ../prelude.journal
     [expenses:compute:SheepIt Render Farm]                   97.00 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-11-06 (COUPON#0009#985) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000.00 _PT/A = 8 360.00 _PT/A
     equity:external:self
 
