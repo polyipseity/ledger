@@ -73,9 +73,9 @@ include ../prelude.journal
     expenses:transport:trains
 
 2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000.00 _PT/A
-    equity:conversions:HKD-_PT/A:_PT/A                               50 000.00 _PT/A
-    equity:conversions:HKD-_PT/A:HKD                                      -20.00 HKD
+    equity:external:self.alternatives                               -50 000.00 _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                               50 000.00 _PT/B
+    equity:conversions:HKD-_PT/B:HKD                                      -20.00 HKD
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-11-06 (K1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:26, timezone: UTC+08:00

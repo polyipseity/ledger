@@ -35,9 +35,9 @@ account assets:special                                                          
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                              ; type: A
 account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
-account equity:conversions:HKD-_PT/A                                                              ; type: E
-account equity:conversions:HKD-_PT/A:HKD                                                          ; type: E
-account equity:conversions:HKD-_PT/A:_PT/A                                                        ; type: E
+account equity:conversions:HKD-_PT/B                                                              ; type: E
+account equity:conversions:HKD-_PT/B:HKD                                                          ; type: E
+account equity:conversions:HKD-_PT/B:_PT/B                                                        ; type: E
 account equity:conversions:HKD-USD                                                                ; type: E
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
@@ -98,7 +98,7 @@ account revenues:special                                                        
 commodity 99 999 999.00 CNY    ; fullname: Renminbi
 commodity 99 999 999.00 HKD    ; fullname: Hong Kong dollars
 commodity 99 999 999.00 USD    ; fullname: United State dollars
-commodity 99 999 999.00 _PT/A  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
+commodity 99 999 999.00 _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 
 payee ******************@******.com
 payee ******@***********.com.au

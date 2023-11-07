@@ -37,15 +37,15 @@ account revenues:recycables:packaging                                           
 account revenues:recycables:personal care                                                         ; type: R
 account revenues:rewards                                                                          ; type: R
 
+commodity 99 999 999.00 GREEN$  ; fullname: GREEN$
 commodity 99 999 999.00 _BEC    ; fullname: beverage cartons, unit: gram
 commodity 99 999 999.00 _FRM    ; fullname: frames
 commodity 99 999 999.00 _MET    ; fullname: metals, unit: gram
 commodity 99 999 999.00 _OPL    ; fullname: other plastics, unit: gram
 commodity 99 999 999.00 _PAP    ; fullname: paper, unit: gram
 commodity 99 999 999.00 _PLA    ; fullname: plastics, unit: gram
-commodity 99 999 999.00 _PT/A   ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
-commodity 99 999 999.00 _SRF    ; fullname: SheepIt Render Farm points
-commodity 99 999 999.00 GREEN$
+commodity 99 999 999.00 _PT/B   ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
+commodity 99 999 999.00 _PT/A   ; fullname: SheepIt Render Farm points
 
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
