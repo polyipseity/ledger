@@ -22,7 +22,7 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -23 506.28 HKD = -23 506.28 HKD
     equity:opening/closing balances
 
-2023-11-01 (identifiers.Alipay.86f2de0c-642c-4ca9-9b73-c36854af0b6b) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 11:59:50, timezone: UTC+08:00
+2023-11-01 (identifiers.Alipay.86f2de0c-642c-4ca9-9b73-c36854af0b6b) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:50, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -42.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: cream of sweet corn, food_and_drink: spaghetti with spicy pepperoni sausage
 
