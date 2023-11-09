@@ -75,7 +75,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 937.00 _PT/B = 58 360.00 _PT/B
     revenues:activities:walking
 
-2023-11-06 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT7H26M54S time: 03:17:06, timezone: UTC+08:00
+2023-11-06 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT7H26M54S, time: 03:17:06, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      188 494.00 _PT/A = 22 372 070.00 _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    97.00 _FRM
@@ -88,6 +88,12 @@ include ../prelude.journal
 2023-11-06 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 537.00 _PT/B = 10 897.00 _PT/B
     revenues:activities:walking
+
+2023-11-07 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT14H30M, time: 01:50, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      369 359.00 _PT/A = 22 741 429.00 _PT/A
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                   336.00 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-11-07 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    614.00 _PT/B = 11 511.00 _PT/B
