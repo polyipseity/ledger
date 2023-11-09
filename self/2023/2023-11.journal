@@ -90,6 +90,30 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
+2023-11-08 (1K2#427) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 15:09:38, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
+
+2023-11-08 (5700397027) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 19:59:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Japanese dumplings with ramen in soup
+
+2023-11-08 (FRN20231108PAYD0101326500572) self  ; activity: transfer, time: 15:09:25, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-11-08 self  ; activity: transfer, time: 15:09:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-11-09 (1K2#470) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 13:32:44, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
+
+2023-11-09 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:10, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
