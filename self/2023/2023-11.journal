@@ -114,6 +114,34 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
+2023-11-10 (5600182921) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:31:00, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: boiled egg, food_and_drink: oat-crusted pork cutlet, food_and_drink: sausage, food_and_drink: set hot Ovaltine
+
+2023-11-10 314a66c3-cc75-45df-a3c2-794d696c70a6  ; activity: eating, eating: snacks, time: 15:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.00 HKD
+    expenses:food and drinks:snacks                                                    ; food_and_drink: brown sugar cocoa croissant
+
+2023-11-10 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 15:45, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
+    expenses:transport:minibuses
+
+2023-11-10 (FRN20231110PAYD0101330301389) self  ; activity: transfer, time: 15:58:27, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-11-10 self  ; activity: transfer, time: 15:58:31, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-11-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:37, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.30 HKD
+    expenses:transport:trains
+
+2023-11-10 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H28M, time: 16:50, timezone: UTC+08:00
+    assets:cash                    500.00 HKD
+    revenues:incomes:tutoring                  ; time: 16:50, timezone: UTC+08:00
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
