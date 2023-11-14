@@ -163,6 +163,12 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti with bacon and mushroom (cream sauce)
 
+2023-11-13 (T1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 17:53:30, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: 焗野菌忌廉豬扒飯
+    expenses:food and drinks:dining                                          6.50 HKD  ; food_and_drink: 是日餐湯
+    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
