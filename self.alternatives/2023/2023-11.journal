@@ -122,3 +122,7 @@ include ../prelude.journal
 2023-11-13 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 456.00 _PT/B = 27 930.00 _PT/B
     revenues:activities:walking
+
+2023-11-14 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 478.00 _PT/B = 30 408.00 _PT/B
+    revenues:activities:walking

@@ -169,6 +169,19 @@ include ../prelude.journal
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2023-11-14 (1K1#309) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: afternoon tea, time: 16:57:32, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
+
+2023-11-14 (identifiers.Alipay.2008337c-2527-4d31-9868-236168b0654e) McDonald's  ; activity: eating, eating: dinner, time: 19:20:15, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    20.20 HKD  ; food_and_drink: McCafe Americano (small)
+    expenses:food and drinks:dining                                    15.00 HKD  ; food_and_drink: cheese burger
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+
+2023-11-15 (K1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 12:02:14, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti bolognese + more spaghetti
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
