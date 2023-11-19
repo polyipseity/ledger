@@ -116,14 +116,13 @@ async def main(_: Arguments):
                         if ret:
                             yield ret
 
-                    return f"""{code}  {f''';{",".join(
-                        group
+                    return f"""{code}  {f'''; {", ".join(
+                        group.strip()
                         if isinstance(group, str)
-                        else ",".join(
-                            ":".join(prop)
+                        else ", ".join(
+                            ": ".join(prop)
                             for prop in sorted(
-                                group,
-                                key=lambda group: tuple(cmp.strip() for cmp in group),
+                                tuple(cmp.strip() for cmp in group) for group in group
                             )
                         )
                         for group in group(cmt.split(","))
