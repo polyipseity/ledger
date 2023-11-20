@@ -159,6 +159,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:trains
 
+2023-11-13 (identifiers.vouchers.9db0b8d8-e806-4e9a-8a17-9f87febdace2) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 11:14:40, timezone: UTC+08:00, voucher: Starbucks HK/MOP $50 Gift Certificate
+    assets:special:vouchers:Starbucks       50.00 HKD  ; valid: 2023-11-13T00:00:00+08:00/2024-11-30T23:59:59+08:00
+    revenues:education
+
 2023-11-13 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 12:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti with bacon and mushroom (cream sauce)
