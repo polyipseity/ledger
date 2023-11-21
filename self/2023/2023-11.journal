@@ -285,6 +285,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 hash browns, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: pickled cabbage and shredded pork with vermicelli in soup, food_and_drink: roasted egg
 
+2023-11-21 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
