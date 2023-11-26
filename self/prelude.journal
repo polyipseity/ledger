@@ -46,6 +46,7 @@ account equity:friends                                                          
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
+account equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
 account expenses:accommodations:universities                                                      ; type: X
 account expenses:consumption                                                                      ; type: X
@@ -154,6 +155,7 @@ payee b0d2d642-7692-421f-bd20-4d03911caa54
 payee bank
 payee barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3
 payee c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f)
+payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639
 payee f599f52c-f397-4316-843f-b5b8285a9dba
