@@ -341,6 +341,26 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       14.15 HKD
     revenues:interests
 
+2023-11-26 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-11-26 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H39M40S, time: 10:41:48, timezone: UTC+08:00
+    assets:cash                    300.00 HKD
+    revenues:incomes:tutoring                  ; time: 12:31:28, timezone: UTC+08:00
+
+2023-11-26 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:46, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-11-26 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H25M13S, time: 14:58:08, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring                  ; time: 16:23:21, timezone: UTC+08:00
+
+2023-11-26 (73260659) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT29M29S, eating: dinner, time: 18:16:31, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -62.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 金菇扒時蔬, food_and_drink: 香軟白飯
+
 2023-11-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    5 850.00 HKD
     assets:deferred expenses:education:tuition:universities
