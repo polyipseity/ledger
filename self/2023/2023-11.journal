@@ -315,7 +315,7 @@ include ../prelude.journal
 
 2023-11-24 (5800359077) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:30:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.70 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: friend egg, food_and_drink: ham, food_and_drink: hash brown, food_and_drink: hash brown, food_and_drink: hot Ovaltine, food_and_drink: instant noodle in soup, food_and_drink: satay beef
+    expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hash brown, food_and_drink: hash brown, food_and_drink: hot Ovaltine, food_and_drink: instant noodle in soup, food_and_drink: satay beef
 
 2023-11-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
