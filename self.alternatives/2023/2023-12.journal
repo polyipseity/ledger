@@ -18,3 +18,15 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PLA:_PLA                                                               1 699.00 _PLA = 1 699.00 _PLA
     equity:external:self                                                                           100 000.00 _PT/B = 100 000.00 _PT/B
     equity:opening/closing balances
+
+2023-12-01 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 095.00 _PT/B = 15 127.00 _PT/B
+    revenues:activities:walking
+
+2023-12-02 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 916.00 _PT/B = 19 043.00 _PT/B
+    revenues:activities:walking
+
+2023-12-02 SheepIt Render Farm  ; activity: compute, time: 23:29:35, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity    15 000.00 _PT/A = 22 756 429.00 _PT/A
+    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 2023-12-02@advent calendar 2023
