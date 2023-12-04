@@ -31,8 +31,6 @@ account revenues:compute:SheepIt Render Farm:awards                             
 account revenues:recycables                                                                       ; type: R
 account revenues:recycables:education                                                             ; type: R
 account revenues:recycables:food and drinks                                                       ; type: R
-account revenues:recycables:food and drinks:dining                                                ; type: R
-account revenues:recycables:food and drinks:snacks                                                ; type: R
 account revenues:recycables:packaging                                                             ; type: R
 account revenues:recycables:personal care                                                         ; type: R
 account revenues:recycables:waste                                                                 ; type: R

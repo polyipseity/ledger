@@ -33,9 +33,9 @@ include ../prelude.journal
     revenues:activities:walking
 
 2023-11-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P12DT4H, time: 23, timezone: UTC+08:00
-    revenues:recycables:food and drinks:dining     -30.00 _BEC
-    revenues:recycables:food and drinks:dining     -71.00 _MET
-    revenues:recycables:food and drinks:dining     -43.00 _OPL
+    revenues:recycables:food and drinks     -30.00 _BEC
+    revenues:recycables:food and drinks     -71.00 _MET
+    revenues:recycables:food and drinks     -43.00 _OPL
     assets:recycables
 
 2023-11-03 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
@@ -47,13 +47,13 @@ include ../prelude.journal
     revenues:activities:walking
 
 2023-11-05 self  ; activity: collect, duration: -P11D8H, time: 16:00:00, timezone: UTC+08:00
-    revenues:recycables:education                  -83.00 _PAP
-    revenues:recycables:food and drinks:snacks     -13.00 _BEC
-    revenues:recycables:food and drinks:snacks    -179.00 _MET
-    revenues:recycables:food and drinks:snacks     -53.00 _OPL
-    revenues:recycables:food and drinks:snacks    -210.00 _PLA
-    revenues:recycables:food and drinks:snacks     -20.00 _PAP
-    revenues:recycables:packaging                  -68.00 _PAP
+    revenues:recycables:education           -83.00 _PAP
+    revenues:recycables:food and drinks     -13.00 _BEC
+    revenues:recycables:food and drinks    -179.00 _MET
+    revenues:recycables:food and drinks     -53.00 _OPL
+    revenues:recycables:food and drinks    -210.00 _PLA
+    revenues:recycables:food and drinks     -20.00 _PAP
+    revenues:recycables:packaging           -68.00 _PAP
     assets:recycables
 
 2023-11-05 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M15S, time: 16:44:58, timezone: UTC+08:00
