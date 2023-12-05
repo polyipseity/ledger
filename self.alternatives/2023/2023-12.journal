@@ -65,3 +65,7 @@ include ../prelude.journal
     equity:conversions:GREEN$-_OPL:_OPL                                        605.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 14:07:14, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                     -6.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-12-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 497.00 _PT/B = 21 540.00 _PT/B
+    revenues:activities:walking

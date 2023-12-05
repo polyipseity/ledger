@@ -13,6 +13,7 @@ account liabilities                        ; type: L
 account liabilities:accrued expenses       ; type: L
 account liabilities:deferred revenues      ; type: L
 account revenues                           ; type: R
+account revenues:rewards                   ; type: R
 
 commodity 99 999 999.00
 
@@ -30,6 +31,7 @@ tag datetime
 tag duration
 tag fullname
 tag installment
+tag item
 tag posted
 tag rate
 tag time

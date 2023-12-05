@@ -34,7 +34,6 @@ account revenues:recycables:food and drinks                                     
 account revenues:recycables:packaging                                                             ; type: R
 account revenues:recycables:personal care                                                         ; type: R
 account revenues:recycables:waste                                                                 ; type: R
-account revenues:rewards                                                                          ; type: R
 
 commodity 99 999 999.00 GREEN$  ; fullname: GREEN$
 commodity 99 999 999.00 _BEC    ; fullname: beverage cartons, unit: gram

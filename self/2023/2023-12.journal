@@ -49,6 +49,64 @@ include ../prelude.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 20:30, timezone: UTC+08:00
 
+2023-12-03 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:42, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-03 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M52S, time: 10:50, timezone: UTC+08:00
+    assets:cash                    300.00 HKD
+    revenues:incomes:tutoring                  ; time: 12:20:52, timezone: UTC+08:00
+
+2023-12-03 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-03 (6566-2312-00249) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:22:23, timezone: UTC+08:00
+    assets:equipment                                                 4 599.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:equipment                                                    79.00 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8       100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:22:23+08:00/2024-01-31T23:59:59+08:00
+    revenues:rewards                                                  -150.00 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
+
+2023-12-03 (6566-2312-00250) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:24:23, timezone: UTC+08:00
+    assets:equipment                                                 2 089.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8       100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:24:23+08:00/2024-01-31T23:59:59+08:00
+    revenues:rewards                                                  -100.00 HKD
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8      -100.00 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
+
+2023-12-03 (120386203109) 4ce799a2-472e-4c3f-8266-badcb03bef3b  ; activity: eating, eating: dinner, time: 17:06:45, timezone: UTC+08:00
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -245.00 HKD
+    expenses:food and drinks:dining                                                ; food_and_drink: 2 cans of Sparkling VLT, food_and_drink: C1（大批）2–3人套餐, food_and_drink: 夏威夷風情, food_and_drink: 黑松露車厘茄雜菌白汁意粉
+
+2023-12-04 (NC0405374857) self  ; activity: repayment, time: 00:46:25, timezone: UTC+08:00
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    6 862.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-12-04 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 08:27:00, timezone: UTC+08:00
+    assets:cash                                                    500.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
+2023-12-04 (72214568) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT38M30S, eating: breakfast, time: 08:37:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2023-12-04 2147e96b-adf0-45f5-bdb9-1e201b39b858  ; mild common cold & sore throat, activity: healthcare, time: 11:15, timezone: UTC+08:00
+    expenses:healthcare:medication      300.00 HKD  ; duration: P2D
+    assets:cash
+
+2023-12-05 (FRN20231205PAYD0101371340221) self  ; activity: transfer, time: 10:08:14, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-12-05 self  ; activity: transfer, time: 10:08:17, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-12-05 (5700408427) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:09:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: pickled cabbage and shredded pork with vermicelli in soup
+
 2023-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    3 705.00 HKD
     assets:deferred expenses:education:tuition:universities

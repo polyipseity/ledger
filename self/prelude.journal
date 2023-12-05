@@ -31,9 +31,11 @@ account assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       
 account assets:digital:Stripe                                                                     ; type: A
 account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                ; type: A
 account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                ; type: A
+account assets:equipment                                                                          ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
+account assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                              ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                              ; type: A
 account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
 account equity:conversions:HKD-_PT/B                                                              ; type: E
@@ -121,6 +123,7 @@ payee Starbucks
 payee Stripe
 payee Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb
 payee Wellcome 2bae54dc-467f-459c-9202-5149f419152f
+payee 016707c8-8d24-47a5-940f-e687942b4ce8
 payee 02337778-bf4b-4675-be04-ea1270e22e5f
 payee 0d184a06-c627-4e69-b161-51b74e1a9bf9
 payee 1100f5b8-ddaa-4269-91b9-cd79d704a77b
@@ -133,6 +136,7 @@ payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
 payee 3833b42e-dad3-425c-b254-904be68993e4
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
 payee 49c186e5-f575-43ec-b73b-48d200eb27be
+payee 4ce799a2-472e-4c3f-8266-badcb03bef3b
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
 payee 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
