@@ -413,13 +413,13 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-11-29 (1K3#533) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 18:23:26, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
-
 2023-11-29 self  ; activity: transfer, time: 18:22:36, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-11-29 (1K3#533) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 18:23:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
 
 2023-11-30 (5600192025) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 11:38:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -26.50 HKD
