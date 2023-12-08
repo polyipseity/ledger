@@ -76,6 +76,7 @@ account expenses:services                                                       
 account expenses:transport                                                                        ; type: X
 account expenses:transport:buses                                                                  ; type: X
 account expenses:transport:minibuses                                                              ; type: X
+account expenses:transport:taxis                                                                  ; type: X
 account expenses:transport:trains                                                                 ; type: X
 account expenses:transport:trams                                                                  ; type: X
 account liabilities:accrued expenses:education                                                    ; type: L
@@ -165,6 +166,7 @@ payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee kins
+payee taxis
 
 tag achievement
 tag billing
