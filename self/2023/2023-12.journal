@@ -167,6 +167,26 @@ include ../prelude.journal
     assets:cash                                                   -133.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
 
+2023-12-09 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H33M38S, time: 13:52:56, timezone: UTC+08:00
+    assets:cash                    600.00 HKD
+    revenues:incomes:tutoring                  ; time: 13:52:56, timezone: UTC+08:00
+
+2023-12-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:39, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-10 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H47M57S, time: 10:45:50, timezone: UTC+08:00
+    assets:cash                    300.00 HKD
+    revenues:incomes:tutoring                  ; time: 12:33:47, timezone: UTC+08:00
+
+2023-12-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:44, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-10 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H27M31S, time: 14:01:50, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring                  ; time: 15:29:21, timezone: UTC+08:00
+
 2023-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    3 705.00 HKD
     assets:deferred expenses:education:tuition:universities
