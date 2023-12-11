@@ -187,6 +187,22 @@ include ../prelude.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 15:29:21, timezone: UTC+08:00
 
+2023-12-11 (1K1#327) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: breakfast, time: 11:55:59, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
+
+2023-12-11 (FRN20231211PAYD0101382631867) self  ; activity: transfer, time: 15:13:52, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-12-11 self  ; activity: transfer, time: 15:13:54, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-12-11 (11/112483) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 15:14:19, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 芝士肉醬焗薯棒餐
+
 2023-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    3 705.00 HKD
     assets:deferred expenses:education:tuition:universities
