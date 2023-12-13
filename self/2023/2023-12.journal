@@ -203,6 +203,28 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 芝士肉醬焗薯棒餐
 
+2023-12-12 (5700411550) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:01:39, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: preserved vegetable and shredded pork with vermicelli in soup
+
+2023-12-12 (T1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 14:56:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: cream chesse hot dog (sautéed onion & cream cheese)
+
+2023-12-13 (5600197617) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:06:35, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: preserved vegetable and shredded pork with vermicelli in soup
+
+2023-12-13 (COUPON#0001#88) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:10:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+    equity:external:self.alternatives                               -50 000.00 _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                               50 000.00 _PT/B
+    equity:conversions:HKD-_PT/B:HKD                                      -20.00 HKD
+    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
+
+2023-12-13 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 15:15:49, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: pepperoni hot dog (cheddar cheese & hot dog sauce)
+
 2023-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    3 705.00 HKD
     assets:deferred expenses:education:tuition:universities
