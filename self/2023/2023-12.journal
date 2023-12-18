@@ -229,9 +229,81 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda, food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
+2023-12-14 (5900302311) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 09:37:40, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: preserved vegetable and shredded pork with vermicelli in soup
+
+2023-12-14 (1K1#377) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: afternoon tea, time: 15:27:04, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
+
+2023-12-14 (FRN20231214PAYD0101388328423) self  ; activity: transfer, time: 19:37:13, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2023-12-14 self  ; activity: transfer, time: 19:37:15, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2023-12-14 (13/134817) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 19:42:38, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: 番茄蝦仁炒滑蛋餐, food_and_drink: 羅宋湯
+    expenses:food and drinks:dining                                         41.50 HKD  ; food_and_drink: 羅宋湯, food_and_drink: （上海）京蔥爆牛肉
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot coffee, food_and_drink: 兩送套飯, food_and_drink: 銀湖蟹柳扒魚塊 ×2
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-12-15 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:32, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         23.00 HKD  ; food_and_drink: baked fried tomato, food_and_drink: hot coffee, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick bread with butter
+    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2023-12-15 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:49, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.10 HKD
+    expenses:transport:buses
+
+2023-12-15 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2023-12-15 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT4H2M51S, time: 16:57:09, timezone: UTC+08:00
+    assets:cash                    600.00 HKD
+    revenues:incomes:tutoring                  ; time: 21, timezone: UTC+08:00
+
+2023-12-16 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT4H46M24S, time: 14:11:55, timezone: UTC+08:00
+    assets:cash                    600.00 HKD
+    revenues:incomes:tutoring                  ; time: 14:11:55, timezone: UTC+08:00
+
+2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:33, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-17 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H27M8S, time: 10:42:45, timezone: UTC+08:00
+    revenues:incomes:tutoring                          -300.00 HKD  ; time: 12:09:53, timezone: UTC+08:00
+    liabilities:deferred revenues:incomes:tutoring     -300.00 HKD  ; valid: 2023-12-17T12:09:53+08:00/2023-12-24T10:30:00+08:00
+    assets:cash
+
+2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:24, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    expenses:transport:trains
+
+2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:19, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2023-12-17 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 20:37, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
+    expenses:transport:minibuses
+
+2023-12-18 (1K3#539) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 15:56:48, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
+
 2023-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    3 705.00 HKD
     assets:deferred expenses:education:tuition:universities
+
+2023-12-24 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
+    liabilities:deferred revenues:incomes:tutoring      300.00 HKD
+    revenues:incomes:tutoring                                       ; datetime: 2023-12-17T12:09:53+08:00, timezone: UTC+08:00
 
 2023-12-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                    2 449.00 HKD
