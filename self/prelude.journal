@@ -19,6 +19,7 @@ account assets:deferred expenses:education                                      
 account assets:deferred expenses:education:books                                                  ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
+account assets:deferred expenses:equipment                                                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:digital                                                                            ; type: A
@@ -86,6 +87,7 @@ account liabilities:accrued expenses:insurances:life                            
 account liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         ; type: L
 account liabilities:credit cards                                                                  ; type: L
 account liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                             ; type: L
+account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8                             ; type: L
 account liabilities:deferred revenues:incomes                                                     ; type: L
 account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
 account revenues:donations                                                                        ; type: R

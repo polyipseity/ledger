@@ -133,3 +133,11 @@ include ../prelude.journal
 2023-12-17 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 503.00 _PT/B = 15 218.00 _PT/B
     revenues:activities:walking
+
+2023-12-18 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 163.00 _PT/B = 20 381.00 _PT/B
+    revenues:activities:walking
+
+2023-12-19 SheepIt Render Farm  ; activity: compute, time: 00:35:07, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity    21 003.00 _PT/A = 22 802 438.00 _PT/A
+    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 2023-12-19@advent calendar 2023
