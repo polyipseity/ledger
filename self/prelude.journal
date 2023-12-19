@@ -36,6 +36,8 @@ account assets:equipment                                                        
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A
+account assets:special:rewards:credit cards                                                       ; type: A
+account assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  ; type: A
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
 account assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                              ; type: A
@@ -111,6 +113,7 @@ commodity 99 999 999.00 HKD    ; fullname: Hong Kong dollars
 commodity 99 999 999.00 USD    ; fullname: United State dollars
 commodity 99 999 999.00 _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 commodity 99 999 999.00 _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
+commodity 99 999 999.00 _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
 
 payee ******************@******.com
 payee ******@***********.com.au
