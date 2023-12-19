@@ -299,7 +299,7 @@ include ../prelude.journal
     assets:cash
 
 2023-08-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    21 050.00 HKD  ; achievement: Admission Scholarship 23/24, posted: 2023-08-31
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    21 050.00 HKD  ; posted: 2023-08-31, reward: Admission Scholarship 23/24
     assets:accrued revenues:education:scholarships                                              21 050.00 HKD
     revenues:education:scholarships
 

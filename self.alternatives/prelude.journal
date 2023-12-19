@@ -27,7 +27,7 @@ account revenues:activities                                                     
 account revenues:activities:walking                                                               ; type: R
 account revenues:compute                                                                          ; type: R
 account revenues:compute:SheepIt Render Farm                                                      ; type: R
-account revenues:compute:SheepIt Render Farm:awards                                               ; type: R
+account revenues:compute:SheepIt Render Farm:rewards                                              ; type: R
 account revenues:recycables                                                                       ; type: R
 account revenues:recycables:education                                                             ; type: R
 account revenues:recycables:food and drinks                                                       ; type: R
@@ -54,8 +54,8 @@ payee SF Express
 payee SheepIt Render Farm
 payee b0d2d642-7692-421f-bd20-4d03911caa54
 
-tag achievement
 tag collect
 tag compute
 tag recycle
+tag reward
 tag voucher

@@ -29,7 +29,7 @@ include ../prelude.journal
 
 2023-12-02 SheepIt Render Farm  ; activity: compute, time: 23:29:35, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    15 000.00 _PT/A = 22 756 429.00 _PT/A
-    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 2023-12-02@advent calendar 2023
+    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-02@advent calendar 2023
 
 2023-12-03 self  ; activity: collect, duration: -PT3H, time: 15, timezone: UTC+08:00
     revenues:recycables:packaging     -12.00 _OPL
@@ -100,7 +100,7 @@ include ../prelude.journal
 
 2023-12-12 SheepIt Render Farm  ; activity: compute, time: 00:00:15, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    25 006.00 _PT/A = 22 781 435.00 _PT/A
-    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 2023-12-12@advent calendar 2023
+    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-12@advent calendar 2023
 
 2023-12-12 (COUPON#0009#824) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 14:44:38, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000.00 _PT/B
@@ -140,4 +140,4 @@ include ../prelude.journal
 
 2023-12-19 SheepIt Render Farm  ; activity: compute, time: 00:35:07, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    21 003.00 _PT/A = 22 802 438.00 _PT/A
-    revenues:compute:SheepIt Render Farm:awards                        ; achievement: 2023-12-19@advent calendar 2023
+    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-19@advent calendar 2023
