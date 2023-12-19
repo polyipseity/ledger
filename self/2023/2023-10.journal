@@ -40,7 +40,7 @@ include ../prelude.journal
     assets:cash                    400.00 HKD
     revenues:incomes:tutoring                  ; time: 17:10:54, timezone: UTC+08:00
 
-2023-10-02 (identifiers.banks.2401ea07-bada-4410-a2a6-8a464c40b170/identifiers.references.e6d51441-34be-49ae-ae3b-f958c731bd15) self  ; Octopu Cards Limited, activity: transfer, time: 10:37:46, timezone: UTC+08:00, via: Faster Payment System
+2023-10-02 (HD123A0254412981/ed929a4b475e4bb7b8f911d3b) self  ; Octopu Cards Limited, activity: transfer, time: 10:37:46, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2          1.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -48,7 +48,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        1.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2023-10-02 (identifiers.banks.efd06ab4-d1d6-483f-a053-d97b94bb0e8e/identifiers.references.d5ae11fa-358d-47ac-95a1-32bc6eb69027) Blue Cross Insurance  ; Blue Cross (Asia-Pacific) Ins Ltd, activity: invest, time: 19:52, timezone: UTC+08:00, via: Faster Payment System
+2023-10-02 (HD123A0255350705/G00330A.GP/6628) Blue Cross Insurance  ; Blue Cross (Asia-Pacific) Ins Ltd, activity: invest, time: 19:52, timezone: UTC+08:00, via: Faster Payment System
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -417.15 HKD
     assets:deferred expenses:insurances:health                         373.09 HKD
     expenses:insurances:health
@@ -209,7 +209,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:buses
 
-2023-10-16 (identifiers.a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; activity: voucher, time: 00:00:00, timezone: UTC+08:00, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), voucher: 7c271977-704b-40c2-81c2-3a95c2aee236
+2023-10-16 (a3991dc8-2dc3-43c8-a57f-05d29d1949d4) Hong Kong Government  ; activity: voucher, time: 00:00:00, timezone: UTC+08:00, via: Alipay (24234eb6-9d11-4efe-997b-5ac44a82931f), voucher: 7c271977-704b-40c2-81c2-3a95c2aee236
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    2 000.00 HKD  ; valid: 2023-10-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
 
@@ -417,11 +417,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: chocolate milkshake, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
 
-2023-10-30 (identifiers.Alipay.a1b0ed62-9506-40f7-b4cc-29af8a84f51d) 937f7345-cbe9-48d1-9746-d79fd001d2a6  ; activity: eating, eating: dinner, time: 18:01:33, timezone: UTC+08:00
+2023-10-30 (2023103022001432591405123658) 937f7345-cbe9-48d1-9746-d79fd001d2a6  ; activity: eating, eating: dinner, time: 18:01:33, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -52.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: rabokki
 
-2023-10-31 (identifiers.Alipay.9ec377f8-12da-42ee-b875-46cacb7db5c1) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:57:47, timezone: UTC+08:00
+2023-10-31 (2023103122001432591415860217) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:57:47, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -30.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: seaweed and three tr
 

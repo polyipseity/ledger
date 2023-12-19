@@ -19,7 +19,7 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -23 506.28 HKD = -23 506.28 HKD
     equity:opening/closing balances
 
-2023-09-02 (identifiers.Alipay.daeae589-4f93-446f-985e-2ceae8cc9ef1) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 10:43:19, timezone: UTC+08:00
+2023-09-02 (2023090222001432691445102693) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 10:43:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                    52.00 HKD  ; food_and_drink: barbecue pork, food_and_drink: hot Ovaltine, food_and_drink: scrambled egg, food_and_drink: shrimp with quinoa
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -31,7 +31,7 @@ include ../prelude.journal
     liabilities:accrued expenses:education                       1 994.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-09-03 (identifiers.Alipay.69a7574f-9b2f-4d9b-b006-17aca118ac67) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 11:06:39, timezone: UTC+08:00
+2023-09-03 (2023090322001432591445808841) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 11:06:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                    33.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 火腿絲濃湯通粉, food_and_drink: 蒜香牛油多士
     expenses:food and drinks:dining                                    33.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 火腿絲濃湯通粉, food_and_drink: 蒜香牛油多士
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
@@ -40,7 +40,7 @@ include ../prelude.journal
     assets:cash                                                     82.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-09-03 (identifiers.Alipay.60b766de-bf10-4fea-8883-02f0cd84da7c) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 16:55:17, timezone: UTC+08:00
+2023-09-03 (2023090322001432591447265814) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 16:55:17, timezone: UTC+08:00
     expenses:food and drinks:dining                                    29.50 HKD  ; food_and_drink: pork chop bun with onion, food_and_drink: set hot Ovaltine
     expenses:food and drinks:dining                                    19.50 HKD  ; food_and_drink: butter and condensed milk hard roll, food_and_drink: set hot Horlicks
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
@@ -49,31 +49,31 @@ include ../prelude.journal
     assets:cash                          -40.00 HKD
     expenses:food and drinks:dining
 
-2023-09-04 (identifiers.Alipay.288e151f-a2b7-494c-a30f-47c24e558e29) McDonald's  ; activity: eating, eating: dinner, time: 16:24:12, timezone: UTC+08:00
+2023-09-04 (2023090422001432591448544002) McDonald's  ; activity: eating, eating: dinner, time: 16:24:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                    28.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: medium-sized fries, food_and_drink: nuggets 6pcs, food_and_drink: smoky nacho cheese sauce
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-09-05 (identifiers.Alipay.11bf6874-5e33-4baa-bd2b-e1608040e38a) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:10:22, timezone: UTC+08:00
+2023-09-05 (2023090522001432591453178400) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:10:22, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -31.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork with rice, food_and_drink: iced coffee
 
-2023-09-05 (identifiers.bakns.32cfcdb0-3d42-4517-b501-6d1d3aa05d17) McDonald's  ; ANSON 32cfcdb0-3d42-4517-b501-6d1d3aa05d17 05SEP, activity: eating, eating: dinner, time: 23:15:00, timezone: UTC+08:00
+2023-09-05 (HD12390501259646) McDonald's  ; ANSON 32cfcdb0-3d42-4517-b501-6d1d3aa05d17 05SEP, activity: eating, eating: dinner, time: 23:15:00, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -39.00 HKD
     expenses:food and drinks:dining                                                ; food_and_drink: Big Mac, food_and_drink: cold Fanta, food_and_drink: medium-sized fries
 
-2023-09-06 (identifiers.Alipay.136e935c-14f7-4d32-a2cc-027fd07d83a5) McDonald's  ; activity: eating, eating: lunch, time: 12:09:24, timezone: UTC+08:00
+2023-09-06 (2023090622001432591453181525) McDonald's  ; activity: eating, eating: lunch, time: 12:09:24, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -28.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: cold Fanta, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
 
-2023-09-06 (identifiers.Alipay.36b1b910-d616-4542-9f19-88ddb16d8447) Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb  ; activity: eating, eating: dinner, time: 18:59:42, timezone: UTC+08:00
+2023-09-06 (2023090622001432591455775630) Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb  ; activity: eating, eating: dinner, time: 18:59:42, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -40.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 
-2023-09-07 (identifiers.Alipay.7bc37a1c-908b-43e3-afdc-c8e860e3ccbb) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:04:38, timezone: UTC+08:00
+2023-09-07 (2023090722001432591457932942) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:04:38, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -34.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice, food_and_drink: iced orange juice
 
-2023-09-07 * (identifiers.Stripe.9f9a4afb-89fb-42c7-8aea-d6e37451e59e) ******@***********.com.au  ; One time support for polyipseity, activity: donation, time: 15:45:48, timezone: UTC+08:00
+2023-09-07 * (pi_3NncuMBMoBY3wEtc20j6VPM8) ******@***********.com.au  ; One time support for polyipseity, activity: donation, time: 15:45:48, timezone: UTC+08:00
     revenues:donations:Buy Me a Coffee:polyipseity                   -5.45 USD
     equity:conversions:HKD-USD:USD                                    5.45 USD  ; rate: 7.68565
     equity:conversions:HKD-USD:HKD                                  -41.89 HKD
@@ -97,7 +97,7 @@ include ../prelude.journal
     expenses:food and drinks:snacks                                 34.00 HKD  ; food_and_drink: Yakult ×2
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-09-08 (identifiers.Alipay.b2fbf2e9-0fa7-4b1e-9bbe-24ba4577bd06) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 18:49:36, timezone: UTC+08:00
+2023-09-08 (2023090822001432591400714934) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 18:49:36, timezone: UTC+08:00
     expenses:food and drinks:dining                                    72.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 漁香肉碎茄子煲
     expenses:food and drinks:dining                                    18.00 HKD  ; food_and_drink: hot chocolate
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
@@ -114,7 +114,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2023-09-10 (identifiers.Alipay.6e2a40c4-1f85-4054-a73d-b523faacdd0a) McDonald's  ; activity: eating, eating: breakfast, time: 10:07:13, timezone: UTC+08:00
+2023-09-10 (2023091022001432591404885804) McDonald's  ; activity: eating, eating: breakfast, time: 10:07:13, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -33.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: hash browns, food_and_drink: hot Americano, food_and_drink: sausage McMuffin with egg
 
@@ -130,7 +130,7 @@ include ../prelude.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 17:39:00, timezone: UTC+08:00
 
-2023-09-11 (identifiers.Alipay.c456038e-3ace-4e29-a0f4-c5d7855ae9bc) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:03:46, timezone: UTC+08:00
+2023-09-11 (2023091122001432591408265416) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:03:46, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -27.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice + less rice
 
@@ -142,7 +142,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice, food_and_drink: iced coffee
 
-2023-09-14 (identifiers.banks.60101804-8f4e-486f-9276-d22289a59d89/identifiers.references.df772885-0f40-498c-8e56-e46e911290aa) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:01:02, timezone: UTC+08:00, via: Faster Payment System
+2023-09-14 (HD12391418492047/STRIPE BUhaecF3D) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:01:02, timezone: UTC+08:00, via: Faster Payment System
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       36.20 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc
 
@@ -174,7 +174,7 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 16:05:00, timezone: UTC+08:00
 
-2023-09-16 * (identifiers.references.c1960deb-a0aa-4111-9add-dc376bc28313/identifiers.references.68cb0381-99b7-42f4-8b21-1590bf5902bb) Academic & Professional Book Centre  ; activity: education, time: 09:35, timezone: UTC+08:00
+2023-09-16 * (51000017196/ELE-3-09-0192) Academic & Professional Book Centre  ; activity: education, time: 09:35, timezone: UTC+08:00
     assets:deferred expenses:education:books                       560.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
@@ -254,7 +254,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-09-21 (identifiers.SF Express.47e4e94b-e3ac-4c3a-8e75-6bf65858ade0) Academic & Professional Book Centre  ; activity: adjust, time: 23:20, timezone: UTC+08:00
+2023-09-21 (SF1635707872087) Academic & Professional Book Centre  ; activity: adjust, time: 23:20, timezone: UTC+08:00
     assets:deferred expenses:education:books     -185.00 HKD
     expenses:education:books
 

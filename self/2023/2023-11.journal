@@ -22,19 +22,19 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -23 506.28 HKD = -23 506.28 HKD
     equity:opening/closing balances
 
-2023-11-01 (identifiers.Alipay.86f2de0c-642c-4ca9-9b73-c36854af0b6b) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:50, timezone: UTC+08:00
+2023-11-01 (2023110122001432591419087625) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:50, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -42.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: cream of sweet corn, food_and_drink: spaghetti with spicy pepperoni sausage
 
-2023-11-01 (identifiers.Alipay.3ff7fb5f-6a35-431b-a576-5a365b259280) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 19:13:01, timezone: UTC+08:00
+2023-11-01 (2023110122001432591429234081) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 19:13:01, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -40.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork with ramen in soup
 
-2023-11-02 (identifiers.Alipay.cc8bbd3b-8235-4873-a228-6a7912adc383) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 14:28:04, timezone: UTC+08:00
+2023-11-02 (2023110222001432591442303336) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 14:28:04, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -42.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: spicy minced pork and dumplings ramen
 
-2023-11-02 (identifiers.Alipay.ce6be970-3c19-4c74-95b0-76896ade9ecc) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 19:32:04, timezone: UTC+08:00
+2023-11-02 (2023110222001432591439889543) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 19:32:04, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -28.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice
 
@@ -55,7 +55,7 @@ include ../prelude.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 13:55:00, timezone: UTC+08:00
 
-2023-11-04 (identifiers.Alipay.95d05312-7ffd-4711-ae6c-9214a0744255) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, duration: PT1H37M24S, eating: dinner, time: 21:07:24, timezone: UTC+08:00
+2023-11-04 (2023110422001432591405711957) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, duration: PT1H37M24S, eating: dinner, time: 21:07:24, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    -1 730.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4       -1 100.00 HKD
     expenses:food and drinks:dining
@@ -159,7 +159,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:trains
 
-2023-11-13 (identifiers.vouchers.9db0b8d8-e806-4e9a-8a17-9f87febdace2) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 11:14:40, timezone: UTC+08:00, voucher: Starbucks HK/MOP $50 Gift Certificate
+2023-11-13 (YXT02546248695) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 11:14:40, timezone: UTC+08:00, voucher: Starbucks HK/MOP $50 Gift Certificate
     assets:special:vouchers:Starbucks       50.00 HKD  ; valid: 2023-11-13T00:00:00+08:00/2024-11-30T23:59:59+08:00
     revenues:education
 
@@ -177,7 +177,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice
 
-2023-11-14 (identifiers.Alipay.2008337c-2527-4d31-9868-236168b0654e) McDonald's  ; activity: eating, eating: dinner, time: 19:20:15, timezone: UTC+08:00
+2023-11-14 (2023111422001432591405684660) McDonald's  ; activity: eating, eating: dinner, time: 19:20:15, timezone: UTC+08:00
     expenses:food and drinks:dining                                    20.20 HKD  ; food_and_drink: McCafe Americano (small)
     expenses:food and drinks:dining                                    15.00 HKD  ; food_and_drink: cheese burger
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
