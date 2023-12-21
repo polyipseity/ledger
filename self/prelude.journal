@@ -108,12 +108,12 @@ account revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           
 account revenues:interests                                                                        ; type: R
 account revenues:special                                                                          ; type: R
 
-commodity 99 999 999.00 CNY    ; fullname: Renminbi
-commodity 99 999 999.00 HKD    ; fullname: Hong Kong dollars
-commodity 99 999 999.00 USD    ; fullname: United State dollars
-commodity 99 999 999.00 _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
-commodity 99 999 999.00 _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
-commodity 99 999 999.00 _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
+commodity 99 999 999.00 CNY  ; fullname: Renminbi
+commodity 99 999 999.00 HKD  ; fullname: Hong Kong dollars
+commodity 99 999 999.00 USD  ; fullname: United State dollars
+commodity 99 999 999. _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
+commodity 99 999 999. _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
+commodity 99 999 999. _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
 
 payee ******************@******.com
 payee ******@***********.com.au

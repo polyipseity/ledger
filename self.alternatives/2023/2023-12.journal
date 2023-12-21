@@ -1,35 +1,35 @@
 include ../prelude.journal
 
 2023-12-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:recycables                                                                                    0.043 _BEC = 0.043 _BEC
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                              208.00 GREEN$ = 208.00 GREEN$
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        11 032.00 _PT/B = 11 032.00 _PT/B
-    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314.00 _FRM = 29 314.00 _FRM
-    assets:digital:SheepIt Render Farm:polyipseity                                              22 741 429.00 _PT/A = 22 741 429.00 _PT/A
-    equity:conversions:GREEN$-_BEC:GREEN$                                                              -2.00 GREEN$ = -2.00 GREEN$
-    equity:conversions:GREEN$-_BEC:_BEC                                                                  0.156 _BEC = 0.156 _BEC
-    equity:conversions:GREEN$-_MET:GREEN$                                                             -32.00 GREEN$ = -32.00 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                                                  3.980 _MET = 3.980 _MET
-    equity:conversions:GREEN$-_OPL:GREEN$                                                              -8.00 GREEN$ = -8.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                                                  1.229 _OPL = 1.229 _OPL
-    equity:conversions:GREEN$-_PAP:GREEN$                                                             -62.00 GREEN$ = -62.00 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                                                  6.366 _PAP = 6.366 _PAP
-    equity:conversions:GREEN$-_PLA:GREEN$                                                            -104.00 GREEN$ = -104.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                                                  1.699 _PLA = 1.699 _PLA
-    equity:external:self                                                                           100 000.00 _PT/B = 100 000.00 _PT/B
+    assets:recycables                                                                                  0.043 _BEC = 0.043 _BEC
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               208 GREEN$ = 208 GREEN$
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        11 032. _PT/B = 11 032. _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314. _FRM = 29 314. _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              22 741 429. _PT/A = 22 741 429. _PT/A
+    equity:conversions:GREEN$-_BEC:GREEN$                                                               -2 GREEN$ = -2 GREEN$
+    equity:conversions:GREEN$-_BEC:_BEC                                                                0.156 _BEC = 0.156 _BEC
+    equity:conversions:GREEN$-_MET:GREEN$                                                              -32 GREEN$ = -32 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                                                3.980 _MET = 3.980 _MET
+    equity:conversions:GREEN$-_OPL:GREEN$                                                               -8 GREEN$ = -8 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                                                1.229 _OPL = 1.229 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                                              -62 GREEN$ = -62 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                                                6.366 _PAP = 6.366 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                                             -104 GREEN$ = -104 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                                                1.699 _PLA = 1.699 _PLA
+    equity:external:self                                                                           100 000. _PT/B = 100 000. _PT/B
     equity:opening/closing balances
 
 2023-12-01 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 095.00 _PT/B = 15 127.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 095. _PT/B = 15 127. _PT/B
     revenues:activities:walking
 
 2023-12-02 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 916.00 _PT/B = 19 043.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 916. _PT/B = 19 043. _PT/B
     revenues:activities:walking
 
 2023-12-02 SheepIt Render Farm  ; activity: compute, time: 23:29:35, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    15 000.00 _PT/A = 22 756 429.00 _PT/A
-    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-02@advent calendar 2023
+    assets:digital:SheepIt Render Farm:polyipseity    15 000. _PT/A = 22 756 429. _PT/A
+    revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-02@advent calendar 2023
 
 2023-12-03 self  ; activity: collect, duration: -PT3H, time: 15, timezone: UTC+08:00
     revenues:recycables:packaging     -0.012 _OPL
@@ -49,113 +49,113 @@ include ../prelude.journal
     assets:recycables
 
 2023-12-04 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M15S, time: 14:02:51, timezone: UTC+08:00
-    assets:recycables                                                         -0.256 _BEC = 0.000 _BEC
-    assets:recycables                                                         -0.359 _MET = 0.000 _MET
-    assets:recycables                                                         -0.605 _OPL = 0.000 _OPL
-    assets:recycables                                                         -1.064 _PAP = 0.000 _PAP
-    assets:recycables                                                         -0.176 _PLA = 0.000 _PLA
-    equity:conversions:GREEN$-_BEC:_BEC                                        0.256 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 14:02:51, timezone: UTC+08:00
-    equity:conversions:GREEN$-_BEC:GREEN$                                    -3.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                        0.176 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 14:03:43, timezone: UTC+08:00
-    equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                        0.359 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 14:04:26, timezone: UTC+08:00
-    equity:conversions:GREEN$-_MET:GREEN$                                    -3.00 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                        1.064 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 14:06:19, timezone: UTC+08:00
-    equity:conversions:GREEN$-_PAP:GREEN$                                   -10.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                        0.605 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 14:07:14, timezone: UTC+08:00
-    equity:conversions:GREEN$-_OPL:GREEN$                                    -6.00 GREEN$
+    assets:recycables                                                        -0.256 _BEC = 0.000 _BEC
+    assets:recycables                                                        -0.359 _MET = 0.000 _MET
+    assets:recycables                                                        -0.605 _OPL = 0.000 _OPL
+    assets:recycables                                                        -1.064 _PAP = 0.000 _PAP
+    assets:recycables                                                        -0.176 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_BEC:_BEC                                       0.256 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 14:02:51, timezone: UTC+08:00
+    equity:conversions:GREEN$-_BEC:GREEN$                                      -3 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.176 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 14:03:43, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -16 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                       0.359 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 14:04:26, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:GREEN$                                      -3 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                       1.064 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 14:06:19, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:GREEN$                                     -10 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.605 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 14:07:14, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -6 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 497.00 _PT/B = 21 540.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 497. _PT/B = 21 540. _PT/B
     revenues:activities:walking
 
 2023-12-05 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 029.00 _PT/B = 22 569.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 029. _PT/B = 22 569. _PT/B
     revenues:activities:walking
 
 2023-12-06 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 139.00 _PT/B = 27 708.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 139. _PT/B = 27 708. _PT/B
     revenues:activities:walking
 
 2023-12-07 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 724.00 _PT/B = 31 432.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 724. _PT/B = 31 432. _PT/B
     revenues:activities:walking
 
 2023-12-08 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 001.00 _PT/B = 34 433.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 001. _PT/B = 34 433. _PT/B
     revenues:activities:walking
 
 2023-12-09 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 868.00 _PT/B = 38 301.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 868. _PT/B = 38 301. _PT/B
     revenues:activities:walking
 
 2023-12-10 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    535.00 _PT/B = 38 836.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       535 _PT/B = 38 836. _PT/B
     revenues:activities:walking
 
 2023-12-11 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 667.00 _PT/B = 42 503.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 667. _PT/B = 42 503. _PT/B
     revenues:activities:walking
 
 2023-12-12 SheepIt Render Farm  ; activity: compute, time: 00:00:15, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    25 006.00 _PT/A = 22 781 435.00 _PT/A
-    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-12@advent calendar 2023
+    assets:digital:SheepIt Render Farm:polyipseity    25 006. _PT/A = 22 781 435. _PT/A
+    revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-12@advent calendar 2023
 
 2023-12-12 (COUPON#0009#824) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 14:44:38, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000. _PT/B
     revenues:rewards
 
 2023-12-12 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 358.00 _PT/B = 50 861.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 358. _PT/B = 50 861. _PT/B
     revenues:activities:walking
 
 2023-12-13 (COUPON#0001#88) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:10:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000.00 _PT/B = 861.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 861 _PT/B
     equity:external:self
 
 2023-12-13 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 427.00 _PT/B = 7 288.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 427. _PT/B = 7 288. _PT/B
     revenues:activities:walking
 
 2023-12-14 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 873.00 _PT/B = 9 161.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 873. _PT/B = 9 161. _PT/B
     revenues:activities:walking
 
 2023-12-15 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 600.00 _PT/B = 12 761.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 600. _PT/B = 12 761. _PT/B
     revenues:activities:walking
 
 2023-12-16 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    954.00 _PT/B = 13 715.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       954 _PT/B = 13 715. _PT/B
     revenues:activities:walking
 
 2023-12-17 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 503.00 _PT/B = 15 218.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 503. _PT/B = 15 218. _PT/B
     revenues:activities:walking
 
 2023-12-18 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 163.00 _PT/B = 20 381.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 163. _PT/B = 20 381. _PT/B
     revenues:activities:walking
 
 2023-12-19 SheepIt Render Farm  ; activity: compute, time: 00:35:07, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    21 003.00 _PT/A = 22 802 438.00 _PT/A
-    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-19@advent calendar 2023
+    assets:digital:SheepIt Render Farm:polyipseity    21 003. _PT/A = 22 802 438. _PT/A
+    revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-19@advent calendar 2023
 
 2023-12-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 773.00 _PT/B = 26 154.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 773. _PT/B = 26 154. _PT/B
     revenues:activities:walking
 
 2023-12-20 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 785.00 _PT/B = 29 939.00 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 785. _PT/B = 29 939. _PT/B
     revenues:activities:walking
 
 2023-12-20 GREEN@self-service  ; activity: recycle, duration: PT3M15S, time: 22:22:40, timezone: UTC+08:00
-    revenues:recycables:food loss and waste                                   -0.580 _FLW
-    equity:conversions:GREEN$-_FLW:_FLW                                        0.580 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:22:40, timezone: UTC+08:00
-    equity:conversions:GREEN$-_FLW:GREEN$                                   -50.00 GREEN$
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704     50.00 GREEN$
+    revenues:recycables:food loss and waste                                  -0.580 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.580 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:22:40, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$
 
 2023-12-21 SheepIt Render Farm  ; activity: compute, time: 13:03:00, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    20 000.00 _PT/A = 22 822 438.00 _PT/A
-    revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-21@advent calendar 2023
+    assets:digital:SheepIt Render Farm:polyipseity    20 000. _PT/A = 22 822 438. _PT/A
+    revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-21@advent calendar 2023

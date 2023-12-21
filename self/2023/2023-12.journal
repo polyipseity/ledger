@@ -1,28 +1,28 @@
 include ../prelude.journal
 
 2023-12-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:accrued revenues:education                                                                  100.00 HKD = 100.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                    16 966.42 HKD = 16 966.42 HKD
-    assets:deferred expenses:accommodations:universities                                             3 318.00 HKD = 3 318.00 HKD
-    assets:deferred expenses:education:tuition:universities                                          3 705.00 HKD = 3 705.00 HKD
-    assets:deferred expenses:insurances:health                                                         291.86 HKD = 291.86 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                   18 578.03 HKD = 18 578.03 HKD
-    assets:cash                                                                                     24 777.00 HKD = 24 777.00 HKD
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f        21 050.00 HKD = 21 050.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                  101.70 HKD = 101.70 HKD
-    equity:conversions:HKD-_PT/B:HKD                                                                   -40.00 HKD = -40.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           100 000.00 _PT/B = 100 000.00 _PT/B
-    equity:conversions:HKD-USD:HKD                                                                  -2 437.72 HKD = -2 437.72 HKD
-    equity:conversions:HKD-USD:USD                                                                     318.45 USD = 318.45 USD
-    equity:external:self.alternatives                                                           -100 000.00 _PT/B = -100 000.00 _PT/B
-    equity:friends                                                                                     -28.50 HKD = -28.50 HKD
-    equity:kins                                                                                     -4 500.00 CNY = -4 500.00 CNY
-    equity:kins                                                                                        -90.00 HKD = -90.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                        4 500.00 CNY = 4 500.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      -39 574.25 HKD = -39 574.25 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                          -60.00 HKD = -60.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                       -23.52 HKD = -23.52 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              -23 506.28 HKD = -23 506.28 HKD
+    assets:accrued revenues:education                                                                100.00 HKD = 100.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
+    assets:deferred expenses:accommodations:universities                                           3 318.00 HKD = 3 318.00 HKD
+    assets:deferred expenses:education:tuition:universities                                        3 705.00 HKD = 3 705.00 HKD
+    assets:deferred expenses:insurances:health                                                       291.86 HKD = 291.86 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 18 578.03 HKD = 18 578.03 HKD
+    assets:cash                                                                                   24 777.00 HKD = 24 777.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 21 050.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                101.70 HKD = 101.70 HKD
+    equity:conversions:HKD-_PT/B:HKD                                                                 -40.00 HKD = -40.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                           100 000. _PT/B = 100 000. _PT/B
+    equity:conversions:HKD-USD:HKD                                                                -2 437.72 HKD = -2 437.72 HKD
+    equity:conversions:HKD-USD:USD                                                                   318.45 USD = 318.45 USD
+    equity:external:self.alternatives                                                           -100 000. _PT/B = -100 000. _PT/B
+    equity:friends                                                                                   -28.50 HKD = -28.50 HKD
+    equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
+    equity:kins                                                                                      -90.00 HKD = -90.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -39 574.25 HKD = -39 574.25 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                        -60.00 HKD = -60.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                     -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -23 506.28 HKD = -23 506.28 HKD
     equity:opening/closing balances
 
 2023-12-01 (5700406868) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 09:52:55, timezone: UTC+08:00
@@ -62,21 +62,21 @@ include ../prelude.journal
     expenses:transport:trains
 
 2023-12-03 (6566-2312-00249/00000P0022000693556) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:22:23, timezone: UTC+08:00
-    assets:equipment                                                    4 599.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:equipment                                                       79.00 HKD  ; item: AT iPad 10th 10.9″ Glass
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8          100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:22:23+08:00/2024-01-31T23:59:59+08:00
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       4 678.00 _PT/C
-    revenues:rewards                                                     -150.00 HKD
-    revenues:rewards                                                 -4 678.00 _PT/C  ; valid: 2023-12-03T16:22:23+08:00/2024-12-31T23:59:59+08:00
+    assets:equipment                                                  4 599.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:equipment                                                     79.00 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8        100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:22:23+08:00/2024-01-31T23:59:59+08:00
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       4 678. _PT/C
+    revenues:rewards                                                   -150.00 HKD
+    revenues:rewards                                                 -4 678. _PT/C  ; valid: 2023-12-03T16:22:23+08:00/2024-12-31T23:59:59+08:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
 2023-12-03 (6566-2312-00250/00000P0022000693557) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:24:23, timezone: UTC+08:00
-    assets:equipment                                                    2 089.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8          100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:24:23+08:00/2024-01-31T23:59:59+08:00
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       2 149.00 _PT/C
-    revenues:rewards                                                     -100.00 HKD
-    revenues:rewards                                                 -2 149.00 _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8         -100.00 HKD
+    assets:equipment                                                  2 089.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8        100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:24:23+08:00/2024-01-31T23:59:59+08:00
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       2 149. _PT/C
+    revenues:rewards                                                   -100.00 HKD
+    revenues:rewards                                                 -2 149. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8       -100.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
 2023-12-03 (120386203109) 4ce799a2-472e-4c3f-8266-badcb03bef3b  ; activity: eating, eating: dinner, time: 17:06:45, timezone: UTC+08:00
@@ -220,9 +220,9 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: preserved vegetable and shredded pork with vermicelli in soup
 
 2023-12-13 (COUPON#0001#88) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:10:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:_PT/B                               50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:HKD                                      -20.00 HKD
+    equity:external:self.alternatives                               -50 000. _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
+    equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-12-13 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 15:15:49, timezone: UTC+08:00
@@ -314,7 +314,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda, food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
 2023-12-18 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward, timezone: UTC+08:00
-    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     27.00 _PT/D  ; valid: 2023-12-18/2025-10-31
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        27 _PT/D  ; valid: 2023-12-18/2025-10-31
     revenues:rewards
 
 2023-12-19 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: reward, time: 09:21:41, timezone: UTC+08:00

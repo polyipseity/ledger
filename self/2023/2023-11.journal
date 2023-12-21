@@ -73,9 +73,9 @@ include ../prelude.journal
     expenses:transport:trains
 
 2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:_PT/B                               50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:HKD                                      -20.00 HKD
+    equity:external:self.alternatives                               -50 000. _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
+    equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-11-06 (K1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:26, timezone: UTC+08:00
@@ -399,9 +399,9 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fried eggs, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: pickled cabbage and shredded pork with vermicelli in soup
 
 2023-11-29 (COUPON#0001#94) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:42:45, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:_PT/B                               50 000.00 _PT/B
-    equity:conversions:HKD-_PT/B:HKD                                      -20.00 HKD
+    equity:external:self.alternatives                               -50 000. _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
+    equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-11-29 (488) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: afternoon tea, time: 15:48, timezone: UTC+08:00
@@ -442,26 +442,26 @@ include ../prelude.journal
     expenses:insurances:health
 
 2023-11-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:education                                                                 -100.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                   -16 966.42 HKD = 0.00 HKD
-    assets:deferred expenses:accommodations:universities                                            -3 318.00 HKD = 0.00 HKD
-    assets:deferred expenses:education:tuition:universities                                         -3 705.00 HKD = 0.00 HKD
-    assets:deferred expenses:insurances:health                                                        -291.86 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  -18 578.03 HKD = 0.00 HKD
-    assets:cash                                                                                    -24 777.00 HKD = 0.00 HKD
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f       -21 050.00 HKD = 0.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 -101.70 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/B:HKD                                                                    40.00 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                          -100 000.00 _PT/B = 0.00 _PT/B
-    equity:conversions:HKD-USD:HKD                                                                   2 437.72 HKD = 0.00 HKD
-    equity:conversions:HKD-USD:USD                                                                    -318.45 USD = 0.00 USD
-    equity:external:self.alternatives                                                            100 000.00 _PT/B = 0.00 _PT/B
-    equity:friends                                                                                      28.50 HKD = 0.00 HKD
-    equity:kins                                                                                      4 500.00 CNY = 0.00 CNY
-    equity:kins                                                                                         90.00 HKD = 0.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                       -4 500.00 CNY = 0.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                       39 574.25 HKD = 0.00 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                           60.00 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                        23.52 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7               23 506.28 HKD = 0.00 HKD
+    assets:accrued revenues:education                                                               -100.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
+    assets:deferred expenses:accommodations:universities                                          -3 318.00 HKD = 0.00 HKD
+    assets:deferred expenses:education:tuition:universities                                       -3 705.00 HKD = 0.00 HKD
+    assets:deferred expenses:insurances:health                                                      -291.86 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -18 578.03 HKD = 0.00 HKD
+    assets:cash                                                                                  -24 777.00 HKD = 0.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -101.70 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:HKD                                                                  40.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                          -100 000. _PT/B = 0 _PT/B
+    equity:conversions:HKD-USD:HKD                                                                 2 437.72 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                                  -318.45 USD = 0.00 USD
+    equity:external:self.alternatives                                                            100 000. _PT/B = 0 _PT/B
+    equity:friends                                                                                    28.50 HKD = 0.00 HKD
+    equity:kins                                                                                    4 500.00 CNY = 0.00 CNY
+    equity:kins                                                                                       90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     39 574.25 HKD = 0.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                         60.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                      23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             23 506.28 HKD = 0.00 HKD
     equity:opening/closing balances
