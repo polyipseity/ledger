@@ -1,21 +1,21 @@
 include ../prelude.journal
 
 2023-12-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:recycables                                                                                    43.00 _BEC = 43.00 _BEC
+    assets:recycables                                                                                    0.043 _BEC = 0.043 _BEC
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                              208.00 GREEN$ = 208.00 GREEN$
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        11 032.00 _PT/B = 11 032.00 _PT/B
     assets:digital:SheepIt Render Farm:polyipseity                                                   29 314.00 _FRM = 29 314.00 _FRM
     assets:digital:SheepIt Render Farm:polyipseity                                              22 741 429.00 _PT/A = 22 741 429.00 _PT/A
     equity:conversions:GREEN$-_BEC:GREEN$                                                              -2.00 GREEN$ = -2.00 GREEN$
-    equity:conversions:GREEN$-_BEC:_BEC                                                                 156.00 _BEC = 156.00 _BEC
+    equity:conversions:GREEN$-_BEC:_BEC                                                                  0.156 _BEC = 0.156 _BEC
     equity:conversions:GREEN$-_MET:GREEN$                                                             -32.00 GREEN$ = -32.00 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                                               3 980.00 _MET = 3 980.00 _MET
+    equity:conversions:GREEN$-_MET:_MET                                                                  3.980 _MET = 3.980 _MET
     equity:conversions:GREEN$-_OPL:GREEN$                                                              -8.00 GREEN$ = -8.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                                               1 229.00 _OPL = 1 229.00 _OPL
+    equity:conversions:GREEN$-_OPL:_OPL                                                                  1.229 _OPL = 1.229 _OPL
     equity:conversions:GREEN$-_PAP:GREEN$                                                             -62.00 GREEN$ = -62.00 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                                               6 366.00 _PAP = 6 366.00 _PAP
+    equity:conversions:GREEN$-_PAP:_PAP                                                                  6.366 _PAP = 6.366 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                                            -104.00 GREEN$ = -104.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                                               1 699.00 _PLA = 1 699.00 _PLA
+    equity:conversions:GREEN$-_PLA:_PLA                                                                  1.699 _PLA = 1.699 _PLA
     equity:external:self                                                                           100 000.00 _PT/B = 100 000.00 _PT/B
     equity:opening/closing balances
 
@@ -32,38 +32,38 @@ include ../prelude.journal
     revenues:compute:SheepIt Render Farm:rewards                       ; reward: 2023-12-02@advent calendar 2023
 
 2023-12-03 self  ; activity: collect, duration: -PT3H, time: 15, timezone: UTC+08:00
-    revenues:recycables:packaging     -12.00 _OPL
-    revenues:recycables:packaging     -62.00 _PAP
-    revenues:recycables:waste         -33.00 _OPL
+    revenues:recycables:packaging     -0.012 _OPL
+    revenues:recycables:packaging     -0.062 _PAP
+    revenues:recycables:waste         -0.033 _OPL
     assets:recycables
 
 2023-12-04 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P1M, time: 08, timezone: UTC+08:00
-    revenues:recycables:food and drinks      -213.00 _BEC
-    revenues:recycables:food and drinks      -359.00 _MET
-    revenues:recycables:food and drinks      -205.00 _OPL
-    revenues:recycables:food and drinks       -34.00 _PLA
-    revenues:recycables:packaging             -94.00 _OPL
-    revenues:recycables:packaging          -1 002.00 _PAP
-    revenues:recycables:personal care        -261.00 _OPL
-    revenues:recycables:personal care        -142.00 _PLA
+    revenues:recycables:food and drinks     -0.213 _BEC
+    revenues:recycables:food and drinks     -0.359 _MET
+    revenues:recycables:food and drinks     -0.205 _OPL
+    revenues:recycables:food and drinks     -0.034 _PLA
+    revenues:recycables:packaging           -0.094 _OPL
+    revenues:recycables:packaging           -1.002 _PAP
+    revenues:recycables:personal care       -0.261 _OPL
+    revenues:recycables:personal care       -0.142 _PLA
     assets:recycables
 
 2023-12-04 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M15S, time: 14:02:51, timezone: UTC+08:00
-    assets:recycables                                                         -256.00 _BEC = 0.00 _BEC
-    assets:recycables                                                         -359.00 _MET = 0.00 _MET
-    assets:recycables                                                         -605.00 _OPL = 0.00 _OPL
-    assets:recycables                                                       -1 064.00 _PAP = 0.00 _PAP
-    assets:recycables                                                         -176.00 _PLA = 0.00 _PLA
-    equity:conversions:GREEN$-_BEC:_BEC                                        256.00 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 14:02:51, timezone: UTC+08:00
-    equity:conversions:GREEN$-_BEC:GREEN$                                     -3.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                        176.00 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 14:03:43, timezone: UTC+08:00
-    equity:conversions:GREEN$-_PLA:GREEN$                                    -16.00 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                        359.00 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 14:04:26, timezone: UTC+08:00
-    equity:conversions:GREEN$-_MET:GREEN$                                     -3.00 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                      1 064.00 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 14:06:19, timezone: UTC+08:00
-    equity:conversions:GREEN$-_PAP:GREEN$                                    -10.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                        605.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 14:07:14, timezone: UTC+08:00
-    equity:conversions:GREEN$-_OPL:GREEN$                                     -6.00 GREEN$
+    assets:recycables                                                         -0.256 _BEC = 0.000 _BEC
+    assets:recycables                                                         -0.359 _MET = 0.000 _MET
+    assets:recycables                                                         -0.605 _OPL = 0.000 _OPL
+    assets:recycables                                                         -1.064 _PAP = 0.000 _PAP
+    assets:recycables                                                         -0.176 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_BEC:_BEC                                        0.256 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 14:02:51, timezone: UTC+08:00
+    equity:conversions:GREEN$-_BEC:GREEN$                                    -3.00 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                        0.176 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 14:03:43, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                        0.359 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 14:04:26, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:GREEN$                                    -3.00 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                        1.064 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 14:06:19, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:GREEN$                                   -10.00 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                        0.605 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 14:07:14, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:GREEN$                                    -6.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
@@ -151,8 +151,8 @@ include ../prelude.journal
     revenues:activities:walking
 
 2023-12-20 GREEN@self-service  ; activity: recycle, duration: PT3M15S, time: 22:22:40, timezone: UTC+08:00
-    revenues:recycables:food loss and waste                                  -580.00 _FLW
-    equity:conversions:GREEN$-_FLW:_FLW                                       580.00 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:22:40, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                   -0.580 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                        0.580 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:22:40, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                   -50.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704     50.00 GREEN$
 

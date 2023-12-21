@@ -85,26 +85,26 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-25 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, time: 19:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -20.00 _PLA  ; collect: 1 plastic bottle
-    revenues:recycables:food and drinks      -5.00 _OPL  ; collect: 2 other plastics
+    revenues:recycables:food and drinks     -0.020 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks     -0.005 _OPL  ; collect: 2 other plastics
     assets:recycables
 
 2023-08-26 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT22S, time: 11:19:49, timezone: UTC+08:00
-    assets:recycables                                                         -5.00 _OPL
-    assets:recycables                                                        -20.00 _PLA
-    equity:conversions:GREEN$-_PLA:_PLA                                       20.00 _PLA  ; rate: 0.08, rate: unit 100, recycle: 1 plastic bottle, time: 11:19:49, timezone: UTC+08:00
+    assets:recycables                                                        -0.005 _OPL
+    assets:recycables                                                        -0.020 _PLA
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.020 _PLA  ; rate: 0.08, rate: unit 100, recycle: 1 plastic bottle, time: 11:19:49, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                              0
-    equity:conversions:GREEN$-_OPL:_OPL                                        5.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: 2 other plastics, time: 11:20:11, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.005 _OPL  ; rate: 0.01, rate: unit 100, recycle: 2 other plastics, time: 11:20:11, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-26 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT2H19M, time: 18:31, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -90.00 _MET  ; collect: 10 drink cans
+    revenues:recycables:food and drinks     -0.090 _MET  ; collect: 10 drink cans
     assets:recycables
 
 2023-08-27 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 13:03:49, timezone: UTC+08:00
-    assets:recycables                                                        -90.00 _MET
-    equity:conversions:GREEN$-_MET:_MET                                       90.00 _MET  ; rate: 0.01, rate: unit 100, recycle: 10 drink cans, time: 13:03:49, timezone: UTC+08:00
+    assets:recycables                                                        -0.090 _MET
+    equity:conversions:GREEN$-_MET:_MET                                       0.090 _MET  ; rate: 0.01, rate: unit 100, recycle: 10 drink cans, time: 13:03:49, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                              0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
@@ -115,17 +115,17 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5TH30M, time: 12:30, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -21.00 _BEC  ; collect: 2 Tetra Pak beverage cartons
-    revenues:recycables:education          -248.00 _PAP  ; collect: 1 magazine, collect: 5 sheets of paper
-    revenues:recycables:food and drinks     -10.00 _MET  ; collect: 1 metal
-    revenues:recycables:food and drinks     -62.00 _OPL  ; collect: 18 other plastics
-    revenues:recycables:food and drinks    -136.00 _PLA  ; collect: 6 plastic bottles
+    revenues:recycables:food and drinks     -0.021 _BEC  ; collect: 2 Tetra Pak beverage cartons
+    revenues:recycables:education           -0.248 _PAP  ; collect: 1 magazine, collect: 5 sheets of paper
+    revenues:recycables:food and drinks     -0.010 _MET  ; collect: 1 metal
+    revenues:recycables:food and drinks     -0.062 _OPL  ; collect: 18 other plastics
+    revenues:recycables:food and drinks     -0.136 _PLA  ; collect: 6 plastic bottles
     assets:recycables
 
 2023-08-27 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks    -745.00 _MET  ; collect: 44 drink cans
-    revenues:recycables:food and drinks      -8.00 _OPL  ; collect: 3 other plastics
-    revenues:recycables:food and drinks     -92.00 _PLA  ; collect: 3 plastic bottles
+    revenues:recycables:food and drinks     -0.745 _MET  ; collect: 44 drink cans
+    revenues:recycables:food and drinks     -0.008 _OPL  ; collect: 3 other plastics
+    revenues:recycables:food and drinks     -0.092 _PLA  ; collect: 3 plastic bottles
     assets:recycables
 
 2023-08-28 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13204.4S, time: 17:51:36, timezone: UTC+08:00
@@ -135,41 +135,41 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-29 self  ; activity: collect, time: 10:42:51, timezone: UTC+08:00
-    revenues:recycables:food and drinks      -2.00 _OPL  ; collect: 1 other plastic
-    revenues:recycables:food and drinks     -25.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks     -0.002 _OPL  ; collect: 1 other plastic
+    revenues:recycables:food and drinks     -0.025 _PLA  ; collect: 1 plastic bottle
     assets:recycables
 
 2023-08-29 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M45S, time: 12:06:03, timezone: UTC+08:00
-    assets:recycables                                                         -21.00 _BEC = 0.00 _BEC
-    assets:recycables                                                        -755.00 _MET = 0.00 _MET
-    assets:recycables                                                         -72.00 _OPL = 0.00 _OPL
-    assets:recycables                                                        -248.00 _PAP = 0.00 _PAP
-    assets:recycables                                                        -253.00 _PLA = 0.00 _PLA
-    expenses:recycling                                                         21.00 _BEC  ; recycle: 2 Tetra Pak beverage cartons
-    equity:conversions:GREEN$-_PAP:_PAP                                       248.00 _PAP  ; rate: 0.01, rate: unit 100, recycle: 1 magazine, recycle: 5 sheets of paper, time: 12:06:03, timezone: UTC+08:00
+    assets:recycables                                                         -0.021 _BEC = 0.000 _BEC
+    assets:recycables                                                         -0.755 _MET = 0.000 _MET
+    assets:recycables                                                         -0.072 _OPL = 0.000 _OPL
+    assets:recycables                                                         -0.248 _PAP = 0.000 _PAP
+    assets:recycables                                                         -0.253 _PLA = 0.000 _PLA
+    expenses:recycling                                                         0.021 _BEC  ; recycle: 2 Tetra Pak beverage cartons
+    equity:conversions:GREEN$-_PAP:_PAP                                        0.248 _PAP  ; rate: 0.01, rate: unit 100, recycle: 1 magazine, recycle: 5 sheets of paper, time: 12:06:03, timezone: UTC+08:00
     equity:conversions:GREEN$-_PAP:GREEN$                                    -3.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                       253.00 _PLA  ; rate: 0.08, rate: unit 100, recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                        0.253 _PLA  ; rate: 0.08, rate: unit 100, recycle: 10 plastic bottles, time: 12:06:44, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                        72.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: 22 other plastics, time: 12:07:14, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                        0.072 _OPL  ; rate: 0.01, rate: unit 100, recycle: 22 other plastics, time: 12:07:14, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                               0
-    equity:conversions:GREEN$-_MET:_MET                                       755.00 _MET  ; rate: 0.01, rate: unit 100, recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                        0.755 _MET  ; rate: 0.01, rate: unit 100, recycle: 1 metal, recycle: 44 drink cans, time: 12:07:48, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                    -6.00 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-29 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T5H10M, time: 13:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks      -9.00 _MET  ; collect: 1 metal
-    revenues:recycables:food and drinks     -33.00 _OPL  ; collect: 1 plastic bag, collect: 12 other plastics
-    revenues:recycables:food and drinks    -223.00 _PLA  ; collect: 10 plastic bottles
-    revenues:recycables:personal care       -56.00 _PLA  ; collect: 1 plastic bottle
+    revenues:recycables:food and drinks     -0.009 _MET  ; collect: 1 metal
+    revenues:recycables:food and drinks     -0.033 _OPL  ; collect: 1 plastic bag, collect: 12 other plastics
+    revenues:recycables:food and drinks     -0.223 _PLA  ; collect: 10 plastic bottles
+    revenues:recycables:personal care       -0.056 _PLA  ; collect: 1 plastic bottle
     assets:recycables
 
 2023-08-29 b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: collect, duration: PT4H, time: 18:00, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
-    revenues:recycables:food and drinks    -307.00 _MET  ; collect: 20 drink cans
-    revenues:recycables:food and drinks     -10.00 _OPL  ; collect: 1 plastic bag
+    revenues:recycables:food and drinks     -0.307 _MET  ; collect: 20 drink cans
+    revenues:recycables:food and drinks     -0.010 _OPL  ; collect: 1 plastic bag
     assets:recycables
 
 2023-08-29 self  ; activity: collect, time: 20:04:30, timezone: UTC+08:00
-    revenues:recycables:food and drinks      -3.00 _OPL  ; collect: 2 plastic cutleries
+    revenues:recycables:food and drinks     -0.003 _OPL  ; collect: 2 plastic cutleries
     assets:recycables
 
 2023-08-30 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT13508.96S, time: 08:15:47, timezone: UTC+08:00
@@ -179,34 +179,34 @@ include ../prelude.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-08-30 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M56S, time: 09:56:29, timezone: UTC+08:00
-    assets:recycables                                                        -316.00 _MET = 0.00 _MET
-    assets:recycables                                                         -46.00 _OPL = 0.00 _OPL
-    assets:recycables                                                        -279.00 _PLA = 0.00 _PLA
-    equity:conversions:GREEN$-_MET:_MET                                       316.00 _MET  ; rate: 0.01, rate: unit 100, recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
+    assets:recycables                                                         -0.316 _MET = 0.000 _MET
+    assets:recycables                                                         -0.046 _OPL = 0.000 _OPL
+    assets:recycables                                                         -0.279 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_MET:_MET                                        0.316 _MET  ; rate: 0.01, rate: unit 100, recycle: 1 metal, recycle: 20 drink cans, time: 09:56:29, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                    -3.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                       279.00 _PLA  ; rate: 0.08, rate: unit 100, recycle: 11 plastic bottles, time: 09:57:47, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                        0.279 _PLA  ; rate: 0.08, rate: unit 100, recycle: 11 plastic bottles, time: 09:57:47, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                   -16.00 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                        46.00 _OPL  ; rate: 0.01, rate: unit 100, recycle: 12 other plastics, recycle: 2 plastic bags, recycle: 2 plastic cutleries, time: 09:58:25, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                        0.046 _OPL  ; rate: 0.01, rate: unit 100, recycle: 12 other plastics, recycle: 2 plastic bags, recycle: 2 plastic cutleries, time: 09:58:25, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                               0
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-08-30 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: collect, duration: 5T4H10M, time: 13:00, timezone: UTC+08:00
-    revenues:recycables:food and drinks     -37.00 _OPL  ; collect: 1 plastic bag, collect: 10 other plastics
-    revenues:recycables:food and drinks     -92.00 _PLA  ; collect: 4 plastic bottles
+    revenues:recycables:food and drinks     -0.037 _OPL  ; collect: 1 plastic bag, collect: 10 other plastics
+    revenues:recycables:food and drinks     -0.092 _PLA  ; collect: 4 plastic bottles
     assets:recycables
 
 2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704          -44.00 GREEN$ = 0.00 GREEN$
     assets:digital:SheepIt Render Farm:polyipseity                          -4 699 652.00 _PT/A = 0.00 _PT/A
-    assets:recycables                                                               -37.00 _OPL = 0.00 _OPL
-    assets:recycables                                                               -92.00 _PLA = 0.00 _PLA
+    assets:recycables                                                               -0.037 _OPL = 0.000 _OPL
+    assets:recycables                                                               -0.092 _PLA = 0.000 _PLA
     equity:conversions:GREEN$-_MET:GREEN$                                           9.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                          -1 161.00 _MET = 0.00 _MET
-    equity:conversions:GREEN$-_OPL:_OPL                                            -123.00 _OPL = 0.00 _OPL
+    equity:conversions:GREEN$-_MET:_MET                                             -1.161 _MET = 0.000 _MET
+    equity:conversions:GREEN$-_OPL:_OPL                                             -0.123 _OPL = 0.000 _OPL
     equity:conversions:GREEN$-_PAP:GREEN$                                           3.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-_PAP:_PAP                                            -248.00 _PAP = 0.00 _PAP
+    equity:conversions:GREEN$-_PAP:_PAP                                             -0.248 _PAP = 0.000 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                          32.00 GREEN$ = 0.00 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                            -552.00 _PLA = 0.00 _PLA
+    equity:conversions:GREEN$-_PLA:_PLA                                             -0.552 _PLA = 0.000 _PLA
     equity:opening/closing balances
     [assets:digital:SheepIt Render Farm:polyipseity]                            -36 935.00 _FRM = 0.00 _FRM
     [equity:opening/closing balances]
