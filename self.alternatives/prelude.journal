@@ -8,6 +8,9 @@ account assets:recycables                                                       
 account equity:conversions:GREEN$-_BEC                                                            ; type: E
 account equity:conversions:GREEN$-_BEC:GREEN$                                                     ; type: E
 account equity:conversions:GREEN$-_BEC:_BEC                                                       ; type: E, rate: 0.01, rate: unit 100
+account equity:conversions:GREEN$-_FLW                                                            ; type: E
+account equity:conversions:GREEN$-_FLW:GREEN$                                                     ; type: E
+account equity:conversions:GREEN$-_FLW:_FLW                                                       ; type: E, rate: 50 per time
 account equity:conversions:GREEN$-_MET                                                            ; type: E
 account equity:conversions:GREEN$-_MET:GREEN$                                                     ; type: E
 account equity:conversions:GREEN$-_MET:_MET                                                       ; type: E, rate: 0.01, rate: unit 100
@@ -31,12 +34,14 @@ account revenues:compute:SheepIt Render Farm:rewards                            
 account revenues:recycables                                                                       ; type: R
 account revenues:recycables:education                                                             ; type: R
 account revenues:recycables:food and drinks                                                       ; type: R
+account revenues:recycables:food loss and waste                                                   ; type: R
 account revenues:recycables:packaging                                                             ; type: R
 account revenues:recycables:personal care                                                         ; type: R
 account revenues:recycables:waste                                                                 ; type: R
 
 commodity 99 999 999.00 GREEN$  ; fullname: GREEN$
 commodity 99 999 999.00 _BEC    ; fullname: beverage cartons, unit: gram
+commodity 99 999 999.00 _FLW    ; fullname: food loss and waste, unit: gram
 commodity 99 999 999.00 _FRM    ; fullname: frames
 commodity 99 999 999.00 _MET    ; fullname: metals, unit: gram
 commodity 99 999 999.00 _OPL    ; fullname: other plastics, unit: gram
@@ -49,6 +54,7 @@ payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee 96f69720-5471-4e88-bebe-3db7a77a086c
+payee GREEN@self-service
 payee GREEN@d7380790-52e2-4728-94db-1572bc922104
 payee SF Express
 payee SheepIt Render Farm
