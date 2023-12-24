@@ -197,3 +197,42 @@ include ../prelude.journal
 2023-12-24 SheepIt Render Farm  ; activity: compute, time: 10:04:10, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    100 000. _PT/A = 22 932 438. _PT/A
     revenues:compute:SheepIt Render Farm:rewards                      ; reward: 2023-12-24@advent calendar 2023
+
+2023-12-24 self  ; activity: collect, duration: -P20DT8H, time: 16, timezone: UTC+08:00
+    revenues:recycables:education           -0.187 _PAP
+    revenues:recycables:food and drinks     -0.117 _BEC
+    revenues:recycables:food and drinks     -0.630 _MET
+    revenues:recycables:packaging           -0.276 _OPL
+    revenues:recycables:packaging           -0.619 _PAP
+    revenues:recycables:packaging           -0.500 _PLA
+    revenues:recycables:personal care       -0.010 _OPL
+    revenues:recycables:personal care       -0.250 _PLA
+    assets:recycables
+
+2023-12-24 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M20S, time: 16:52:40, timezone: UTC+08:00
+    assets:recycables                                                        -0.117 _BEC = 0.000 _BEC
+    assets:recycables                                                        -0.630 _MET = 0.000 _MET
+    assets:recycables                                                        -0.286 _OPL = 0.000 _OPL
+    assets:recycables                                                        -0.806 _PAP = 0.000 _PAP
+    assets:recycables                                                        -0.750 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_BEC:_BEC                                       0.117 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 16:52:40, timezone: UTC+08:00
+    equity:conversions:GREEN$-_BEC:GREEN$                                      -1 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                       0.630 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 16:53:06, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:GREEN$                                      -5 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.286 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 16:53:35, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -2 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.750 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 16:54:10, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -56 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                       0.806 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 16:56:00, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:GREEN$                                      -8 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-12-24 GREEN@self-service  ; activity: recycle, time: 22:12:17, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -0.500 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.500 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:12:17, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$
+
+2023-12-24 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 683. _PT/B = 44 351. _PT/B
+    revenues:activities:walking

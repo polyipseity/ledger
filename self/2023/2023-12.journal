@@ -401,9 +401,13 @@ include ../prelude.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 13:18:27, timezone: UTC+08:00
 
-2023-12-24 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
+2023-12-24 * 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H27M3S, time: 10:43:50, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
     revenues:incomes:tutoring                                       ; datetime: 2023-12-17T12:09:53+08:00, timezone: UTC+08:00
+
+2023-12-24 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 14:30:00, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring                  ; time: 16:00:00, timezone: UTC+08:00
 
 2023-12-31 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                    2 449.00 HKD
