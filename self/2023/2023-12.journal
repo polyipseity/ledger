@@ -393,6 +393,14 @@ include ../prelude.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 14:50:55, timezone: UTC+08:00
 
+2023-12-23 (72216414) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT22M14S, eating: breakfast, time: 10:33:46, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2023-12-23 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT1H1M33S, time: 13:18:27, timezone: UTC+08:00
+    assets:cash                    600.00 HKD
+    revenues:incomes:tutoring                  ; time: 13:18:27, timezone: UTC+08:00
+
 2023-12-24 ! 2cef1acf-32e6-45bc-b261-d7378f136ded  ; activity: tutoring, duration: PT1H30M, time: 10:30:00, timezone: UTC+08:00
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
     revenues:incomes:tutoring                                       ; datetime: 2023-12-17T12:09:53+08:00, timezone: UTC+08:00
