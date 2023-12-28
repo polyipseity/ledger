@@ -10,7 +10,7 @@ account equity:conversions:GREEN$-_BEC:GREEN$                                   
 account equity:conversions:GREEN$-_BEC:_BEC                                                       ; type: E, rate: 0.01, rate: unit 100
 account equity:conversions:GREEN$-_FLW                                                            ; type: E
 account equity:conversions:GREEN$-_FLW:GREEN$                                                     ; type: E
-account equity:conversions:GREEN$-_FLW:_FLW                                                       ; type: E, rate: 50 per time
+account equity:conversions:GREEN$-_FLW:_FLW                                                       ; type: E, rate: 50 per time, rate: max 50 per day
 account equity:conversions:GREEN$-_MET                                                            ; type: E
 account equity:conversions:GREEN$-_MET:GREEN$                                                     ; type: E
 account equity:conversions:GREEN$-_MET:_MET                                                       ; type: E, rate: 0.01, rate: unit 100
