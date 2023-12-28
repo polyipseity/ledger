@@ -237,6 +237,12 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 683. _PT/B = 44 351. _PT/B
     revenues:activities:walking
 
+2023-12-25 GREEN@self-service  ; activity: recycle, time: 17:25:16, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -0.500 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.500 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 17:25:16, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$
+
 2023-12-25 SheepIt Render Farm  ; activity: compute, time: 17:43:44, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity    10 000. _PT/A = 22 942 438. _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: Christmas 2023
@@ -245,9 +251,27 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 342. _PT/B = 46 693. _PT/B
     revenues:activities:walking
 
+2023-12-26 GREEN@self-service  ; activity: recycle, time: 22:23:58, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -0.500 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.500 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:23:58, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$
+
 2023-12-26 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 605. _PT/B = 53 298. _PT/B
     revenues:activities:walking
+
+2023-12-27 GREEN@self-service  ; activity: recycle, time: 18:48:22, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -0.500 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.500 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 18:48:22, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2023-12-27 GREEN@self-service  ; activity: recycle, time: 22:10:00, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -0.500 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.500 _FLW  ; rate: 50 per time, recycle: food loss and waste, time: 22:10:00, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704        0 GREEN$
 
 2023-12-27 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 965. _PT/B = 59 263. _PT/B
