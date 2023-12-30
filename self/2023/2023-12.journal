@@ -11,10 +11,10 @@ include ../prelude.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 21 050.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                101.70 HKD = 101.70 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                 -40.00 HKD = -40.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           100 000. _PT/B = 100 000. _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                                                           100 000. _PT/B = 100 000 _PT/B
     equity:conversions:HKD-USD:HKD                                                                -2 437.72 HKD = -2 437.72 HKD
     equity:conversions:HKD-USD:USD                                                                   318.45 USD = 318.45 USD
-    equity:external:self.alternatives                                                           -100 000. _PT/B = -100 000. _PT/B
+    equity:external:self.alternatives                                                           -100 000. _PT/B = -100 000 _PT/B
     equity:friends                                                                                   -28.50 HKD = -28.50 HKD
     equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
     equity:kins                                                                                      -90.00 HKD = -90.00 HKD
