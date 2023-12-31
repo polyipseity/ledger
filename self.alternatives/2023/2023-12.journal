@@ -280,3 +280,48 @@ include ../prelude.journal
 2023-12-28 (COUPON#0001#83) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 10:32:43, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 9 263 _PT/B
     equity:external:self
+
+2023-12-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 906. _PT/B = 12 169 _PT/B
+    revenues:activities:walking
+
+2023-12-30 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 275. _PT/B = 13 444 _PT/B
+    revenues:activities:walking
+
+2023-12-31 self  ; activity: collect, duration: -P6DT18H, time: 16, timezone: UTC+08:00
+    revenues:recycables:food and drinks     -0.136 _MET
+    revenues:recycables:food and drinks     -0.100 _OPL
+    revenues:recycables:food and drinks     -0.056 _PAP
+    revenues:recycables:packaging           -0.020 _OPL
+    revenues:recycables:packaging           -0.150 _PAP
+    revenues:recycables:personal care       -0.240 _PLA
+    revenues:recycables:waste               -1.182 _OPL
+    assets:recycables
+
+2023-12-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P6DT8H, time: 16, timezone: UTC+08:00
+    revenues:recycables:food and drinks     -0.074 _BEC
+    revenues:recycables:food and drinks     -0.030 _MET
+    revenues:recycables:food and drinks     -0.020 _OPL
+    revenues:recycables:food and drinks     -0.180 _PAP
+    revenues:recycables:packaging           -0.020 _OPL
+    revenues:recycables:packaging           -0.020 _PAP
+    assets:recycables
+
+2023-12-31 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT6M5S, time: 16:41:51, timezone: UTC+08:00
+    assets:recycables                                                        -0.074 _BEC = 0.000 _BEC
+    assets:recycables                                                        -0.166 _MET = 0.000 _MET
+    assets:recycables                                                        -1.342 _OPL = 0.000 _OPL
+    assets:recycables                                                        -0.406 _PAP = 0.000 _PAP
+    assets:recycables                                                        -0.240 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_MET:_MET                                       0.166 _MET  ; rate: 0.01, rate: unit 100, recycle: all metals, time: 16:41:51, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:GREEN$                                       0 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                       0.406 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 16:43:10, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:GREEN$                                      -2 GREEN$
+    equity:conversions:GREEN$-_BEC:_BEC                                       0.074 _BEC  ; rate: 0.01, rate: unit 100, recycle: all beverage cartons, time: 16:45, timezone: UTC+08:00
+    equity:conversions:GREEN$-_BEC:GREEN$                                       0 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.240 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 16:47:30, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:GREEN$                                      -8 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                       1.342 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 16:47:56, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -6 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
