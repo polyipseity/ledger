@@ -572,3 +572,31 @@ include ../prelude.journal
 2023-12-31 * Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
+
+2023-12-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:education                                                        -135.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
+    assets:deferred expenses:accommodations:universities                                     -869.00 HKD = 0.00 HKD
+    assets:deferred expenses:insurances:health                                               -249.18 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -29 940.01 HKD = 0.00 HKD
+    assets:cash                                                                           -32 627.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -235.20 HKD = 0.00 HKD
+    assets:equipment                                                                       -8 616.00 HKD = 0.00 HKD
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                            -8 676. _PT/C = 0 _PT/C
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   -27 _PT/D = 0 _PT/D
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                             -150.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                   -200 000. _PT/B = 0 _PT/B
+    equity:conversions:HKD-USD:HKD                                                          2 437.72 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                           -318.45 USD = 0.00 USD
+    equity:external:self.alternatives                                                     200 000. _PT/B = 0 _PT/B
+    equity:friends                                                                             28.50 HKD = 0.00 HKD
+    equity:kins                                                                             4 500.00 CNY = 0.00 CNY
+    equity:kins                                                                                90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              40 377.05 HKD = 0.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 527.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                               23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7      23 506.28 HKD = 0.00 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                             302.80 HKD = 0.00 HKD
+    equity:opening/closing balances
