@@ -28,6 +28,14 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                            -302.80 HKD = -302.80 HKD
     equity:opening/closing balances
 
+2024-01-01 (72217284) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT27M11S, eating: breakfast, time: 10:46:49, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2024-01-01 (71265970) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M46S, eating: dinner, time: 16:05:14, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         41.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 芝士迷你焗火腿肉醬意粉
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2024-01-11 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                      869.00 HKD
     assets:deferred expenses:accommodations:universities
