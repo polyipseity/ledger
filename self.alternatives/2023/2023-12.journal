@@ -37,6 +37,10 @@ include ../prelude.journal
     revenues:recycables:waste         -0.033 _OPL
     assets:recycables
 
+2023-12-03 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 19 043 _PT/B
+    revenues:activities:walking
+
 2023-12-04 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P1M, time: 08, timezone: UTC+08:00
     revenues:recycables:food and drinks     -0.213 _BEC
     revenues:recycables:food and drinks     -0.359 _MET
@@ -280,6 +284,10 @@ include ../prelude.journal
 2023-12-28 (COUPON#0001#83) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 10:32:43, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 9 263 _PT/B
     equity:external:self
+
+2023-12-28 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 9 263 _PT/B
+    revenues:activities:walking
 
 2023-12-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 906. _PT/B = 12 169 _PT/B
