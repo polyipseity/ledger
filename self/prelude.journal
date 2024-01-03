@@ -50,6 +50,7 @@ account equity:conversions:HKD-USD                                              
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:friends                                                                            ; type: E
+account equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                       ; type: E
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
@@ -78,6 +79,7 @@ account expenses:insurances:life                                                
 account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: X
 account expenses:maintenance                                                                      ; type: X
 account expenses:services                                                                         ; type: X
+account expenses:special                                                                          ; type: X
 account expenses:transport                                                                        ; type: X
 account expenses:transport:buses                                                                  ; type: X
 account expenses:transport:minibuses                                                              ; type: X
@@ -94,6 +96,8 @@ account liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156           
 account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8                             ; type: L
 account liabilities:deferred revenues:incomes                                                     ; type: L
 account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
+account liabilities:friends                                                                       ; type: L
+account liabilities:friends:5e758af5-23c0-4038-b161-06757132e875                                  ; type: L
 account revenues:donations                                                                        ; type: R
 account revenues:donations:Buy Me a Coffee                                                        ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                                            ; type: R
@@ -122,6 +126,7 @@ payee ***@*******.com
 payee Academic & Professional Book Centre
 payee Blue Cross Insurance
 payee Circle K
+payee Deliveroo
 payee Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee Genki 4aa5d1b8-35f6-4770-8af3-482d754d0de7
 payee Holiday Inn Golden Mile, Loong Yuen
@@ -147,8 +152,10 @@ payee 3833b42e-dad3-425c-b254-904be68993e4
 payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
 payee 49c186e5-f575-43ec-b73b-48d200eb27be
 payee 4ce799a2-472e-4c3f-8266-badcb03bef3b
+payee 4d3562ae-b4d4-4444-b428-33f0aced1462
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
 payee 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6
+payee 5e758af5-23c0-4038-b161-06757132e875
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7-Eleven
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc
