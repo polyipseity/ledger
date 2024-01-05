@@ -59,3 +59,13 @@ include ../prelude.journal
 2024-01-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       408 _PT/B = 17 892 _PT/B
     revenues:activities:walking
+
+2024-01-05 GREEN@self-service  ; activity: recycle, time: 23:13:37, timezone: UTC+08:00
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:13:37, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-01-05 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 559. _PT/B = 23 451 _PT/B
+    revenues:activities:walking
