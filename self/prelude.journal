@@ -20,6 +20,7 @@ account assets:deferred expenses:education:books                                
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:deferred expenses:equipment                                                        ; type: A
+account assets:deferred expenses:equipment:consumer electronics                                   ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:digital                                                                            ; type: A
@@ -33,6 +34,8 @@ account assets:digital:Stripe                                                   
 account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                ; type: A
 account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                ; type: A
 account assets:equipment                                                                          ; type: A
+account assets:equipment:clothing                                                                 ; type: A
+account assets:equipment:consumer electronics                                                     ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A

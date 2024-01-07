@@ -8,7 +8,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                          29 940.01 HKD = 29 940.01 HKD
     assets:cash                                                                            32 627.00 HKD = 32 627.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         235.20 HKD = 235.20 HKD
-    assets:equipment                                                                        8 616.00 HKD = 8 616.00 HKD
+    assets:equipment:consumer electronics                                                   8 616.00 HKD = 8 616.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                             8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                    27 _PT/D = 27 _PT/D
     assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                              150.00 HKD = 150.00 HKD
