@@ -1,0 +1,6 @@
+include ../prelude.journal
+
+2028-02-29 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+    assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:equipment:consumer electronics      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    expenses:depreciation

@@ -8,6 +8,7 @@ account equity:external:self               ; type: E
 account equity:external:self.alternatives  ; type: E
 account equity:opening/closing balances    ; type: E
 account expenses                           ; type: X
+account expenses:depreciation              ; type: X
 account expenses:lost                      ; type: X
 account liabilities                        ; type: L
 account liabilities:accrued expenses       ; type: L
@@ -20,6 +21,7 @@ commodity 99 999 999.00
 decimal-mark .
 
 payee closing balances
+payee depreciation
 payee opening balances
 payee self
 payee unknown
@@ -28,12 +30,14 @@ tag _conversion-matched
 tag _price-matched
 tag activity
 tag datetime
+tag depreciation
 tag duration
 tag fullname
 tag installment
 tag item
 tag posted
 tag rate
+tag residual
 tag time
 tag timezone
 tag type

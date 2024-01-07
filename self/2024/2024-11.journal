@@ -1,12 +1,8 @@
 include ../prelude.journal
 
-2024-03-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
-    assets:deferred expenses:insurances:health      -42.68 HKD
-    expenses:insurances:health
-
-2024-03-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-11-30 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:equipment:consumer electronics       -6.62 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:equipment:consumer electronics      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
     assets:equipment:consumer electronics      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:equipment:clothing                  -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
