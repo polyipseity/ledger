@@ -127,7 +127,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                     26.00 HKD  ; food_and_drink: 10% service charge
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
-2024-01-06 (OS326P22401061504110006) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 15:09:37, timezone: UTC+08:00
+2024-01-06 (OS326P22401061504110006) G2000  ; activity: consumption, time: 15:09:37, timezone: UTC+08:00
     assets:equipment:clothing                                      580.00 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:equipment:clothing                                      299.00 HKD  ; item: 361520529934 500-SUIT PANTS
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
