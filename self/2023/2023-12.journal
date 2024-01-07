@@ -357,6 +357,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2023-12-20 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward, timezone: UTC+08:00
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
+    revenues:rewards
+
 2023-12-21 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
@@ -583,7 +587,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -235.20 HKD = 0.00 HKD
     assets:equipment:consumer electronics                                                  -8 616.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                            -8 676. _PT/C = 0 _PT/C
-    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   -27 _PT/D = 0 _PT/D
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   -30 _PT/D = 0 _PT/D
     assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                             -150.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                   -200 000. _PT/B = 0 _PT/B
