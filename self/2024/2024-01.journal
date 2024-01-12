@@ -241,13 +241,13 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-01-11 ! self  ; activity: repayment, posted: 2024-01-10T19:21:57+08:00, timezone: UTC+08:00
-    liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8       50.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
-
 2024-01-11 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:accommodations:universities                      869.00 HKD
     assets:deferred expenses:accommodations:universities
+
+2024-01-12 * self  ; activity: repayment, posted: 2024-01-10T19:21:57+08:00, timezone: UTC+08:00
+    liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8       50.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
