@@ -49,7 +49,7 @@ include ../prelude.journal
     expenses:transport:trains
 
 2024-01-02 (#3429) Deliveroo  ; activity: eating, eating: lunch, time: 13:11, timezone: UTC+08:00
-    liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -107.00 HKD
+    liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -100.00 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: broccoli, food_and_drink: fried shrimp
 
 2024-01-02 (5600203438) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: breakfast, time: 10:15:01, timezone: UTC+08:00
@@ -77,7 +77,7 @@ include ../prelude.journal
     equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6
 
 2024-01-03 5e758af5-23c0-4038-b161-06757132e875  ; activity: betting, time: 16:30, timezone: UTC+08:00
-    liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -103.00 HKD
+    liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -100.00 HKD
     expenses:special
 
 2024-01-03 self  ; activity: transfer, time: 18:02:54, timezone: UTC+08:00
