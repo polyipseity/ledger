@@ -65,7 +65,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked seafood rice, food_and_drink: black truffle sauce
 
-2023-10-04 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 14:30, timezone: UTC+08:00
+2023-10-04 * (HD123C2839912316/0000152933) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 14:30, timezone: UTC+08:00
     assets:accrued revenues:education      100.00 HKD
     revenues:education
 
