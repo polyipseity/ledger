@@ -295,6 +295,26 @@ include ../prelude.journal
     liabilities:friends:5e758af5-23c0-4038-b161-06757132e875           365.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
+2024-01-17 f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 09:31, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2024-01-17 (73265034) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M, eating: dinner, time: 14:56:00, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: no-flip over easy egg, food_and_drink: spiced pork cubes
+
+2024-01-17 (72219068) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT37M42S, eating: dinner, time: 19:37:18, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -62.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: black fungus, food_and_drink: eggplant, food_and_drink: hot Ovaltine, food_and_drink: lotus root, food_and_drink: sliced pumpkin, food_and_drink: stir-fried mixed vegetables, food_and_drink: string bean
+
+2024-01-17 (FRN20240117PAYD0101446922823) self  ; activity: transfer, time: 22:56:20, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-01-17 self  ; activity: transfer, time: 22:56:23, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
 2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
