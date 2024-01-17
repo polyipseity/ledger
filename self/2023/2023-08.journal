@@ -110,7 +110,7 @@ include ../prelude.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      100.00 HKD
     assets:cash
 
-2023-08-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
+2023-08-11 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities                                     21 050.00 HKD  ; tuition fee - undergraduate, valid: 2023-08-11T00:00:00+08:00/2023-09-04T23:59:59+08:00
     assets:deferred expenses:education:tuition:universities                                        400.00 HKD  ; caution money, valid: 2023-08-11T00:00:00+08:00/2023-09-04T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f
@@ -181,7 +181,7 @@ include ../prelude.journal
     equity:kins    -4 500.00 CNY
     assets:cash
 
-2023-08-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 20:13:09, timezone: UTC+08:00
+2023-08-23 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 20:13:09, timezone: UTC+08:00
     assets:deferred expenses:accommodations:universities                                        10 902.00 HKD  ; hall fee - 1f4fe701-9d21-4690-9612-329a1092cc02, valid: 2023-08-23T20:13:09+08:00/2023-09-08T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f
 
