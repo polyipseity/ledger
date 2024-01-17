@@ -199,7 +199,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-12-11 self  ; activity: transfer, time: 15:13:54, timezone: UTC+08:00
+2023-12-11 self  ; activity: transfer, time: 15:13:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
@@ -241,11 +241,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
 
-2023-12-14 (FRN20231214PAYD0101388328423) self  ; activity: transfer, time: 19:37:13, timezone: UTC+08:00, via: eDDA
+2023-12-14 (FRN20231214PAYD0101388328423) self  ; activity: transfer, time: 19:37:12, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-12-14 self  ; activity: transfer, time: 19:37:15, timezone: UTC+08:00
+2023-12-14 self  ; activity: transfer, time: 19:37:14, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
@@ -337,7 +337,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         23.00 HKD  ; food_and_drink: baked fried tomato, food_and_drink: hot coffee, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick toast with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-20 (FRN20231220PAYD0101397333218) self  ; activity: transfer, time: 15:09:47, timezone: UTC+08:00, via: eDDA
+2023-12-20 (FRN20231220PAYD0101397333218) self  ; activity: transfer, time: 15:09:48, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -462,11 +462,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: sausage McMuffin with egg
 
-2023-12-26 (FRN20231226PAYD0101406304237) self  ; activity: transfer, time: 17:42:48, timezone: UTC+08:00, via: eDDA
+2023-12-26 (FRN20231226PAYD0101406304237) self  ; activity: transfer, time: 17:42:47, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-12-26 self  ; activity: transfer, time: 17:42:51, timezone: UTC+08:00
+2023-12-26 self  ; activity: transfer, time: 17:42:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
@@ -545,11 +545,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.10 HKD
     expenses:transport:buses
 
-2023-12-31 (FRN20231231PAYD0101414499429) self  ; activity: transfer, time: 09:13:00, timezone: UTC+08:00, via: eDDA
+2023-12-31 (FRN20231231PAYD0101414499429) self  ; activity: transfer, time: 09:12:59, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-12-31 self  ; activity: transfer, time: 09:13:04, timezone: UTC+08:00
+2023-12-31 self  ; activity: transfer, time: 09:13:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
