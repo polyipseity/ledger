@@ -334,7 +334,7 @@ include ../prelude.journal
     assets:deferred expenses:accommodations:universities
 
 2023-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                -16 966.42 HKD = 0 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                -16 966.42 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                               -22 397.08 HKD = 0.00 HKD
     assets:cash                                                                                  -8 685.00 HKD = 0.00 HKD
     assets:deferred expenses:accommodations:universities                                        -10 507.00 HKD = 0.00 HKD
@@ -348,6 +348,6 @@ include ../prelude.journal
     equity:kins                                                                                      90.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -4 500.00 CNY = 0.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    35 222.25 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                     23.52 HKD = 0 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            23 506.28 HKD = 0 HKD
+    liabilities:accrued expenses:insurances:levy                                                     23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            23 506.28 HKD = 0.00 HKD
     equity:opening/closing balances

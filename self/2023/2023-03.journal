@@ -36,9 +36,9 @@ include ../prelude.journal
     assets:cash
 
 2023-03-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         -16 918.72 HKD = 0 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         -16 918.72 HKD = 0.00 HKD
     assets:cash                                                                           -2 950.00 HKD = 0.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             29 412.25 HKD = 0 HKD
-    liabilities:accrued expenses:insurances:levy                                              29.40 HKD = 0 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     29 382.85 HKD = 0 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             29 412.25 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                              29.40 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     29 382.85 HKD = 0.00 HKD
     equity:opening/closing balances
