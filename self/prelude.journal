@@ -57,6 +57,7 @@ account equity:conversions:HKD-USD:HKD                                          
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:friends                                                                            ; type: E
 account equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                       ; type: E
+account equity:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                       ; type: E
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
@@ -77,6 +78,7 @@ account expenses:food                                                           
 account expenses:food and drinks:dining                                                           ; type: X
 account expenses:food and drinks:fruits                                                           ; type: X
 account expenses:food and drinks:snacks                                                           ; type: X
+account expenses:food and drinks:water                                                            ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
 account expenses:insurances                                                                       ; type: X
@@ -89,6 +91,7 @@ account expenses:services                                                       
 account expenses:special                                                                          ; type: X
 account expenses:transport                                                                        ; type: X
 account expenses:transport:buses                                                                  ; type: X
+account expenses:transport:ferries                                                                ; type: X
 account expenses:transport:minibuses                                                              ; type: X
 account expenses:transport:taxis                                                                  ; type: X
 account expenses:transport:trains                                                                 ; type: X
@@ -142,6 +145,7 @@ payee Hong Kong Government
 payee Joint University Programmes Admissions System
 payee McDonald's
 payee Maxim's Cakes
+payee ParknShop
 payee Starbucks
 payee Stripe
 payee Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb
@@ -152,8 +156,10 @@ payee 02337778-bf4b-4675-be04-ea1270e22e5f
 payee 0d184a06-c627-4e69-b161-51b74e1a9bf9
 payee 1100f5b8-ddaa-4269-91b9-cd79d704a77b
 payee 13fabcbb-072d-47a2-afab-cace6eb95fdb
+payee 1d056933-413d-4fd7-97b2-f58f2493baca
 payee 20b484a5-3c01-42f3-875c-e95509b3de22
 payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
+payee 2344b1fe-cab8-4245-a24e-61caf7e93a74
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 314a66c3-cc75-45df-a3c2-794d696c70a6
 payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
@@ -167,6 +173,7 @@ payee 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6
 payee 5e758af5-23c0-4038-b161-06757132e875
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7-Eleven
+payee 76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee 7fc76083-5175-421d-8c6f-d15897b5ee8e
@@ -190,6 +197,7 @@ payee dfd2814d-d498-4b66-9a46-9c06aa74f635
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639
 payee f599f52c-f397-4316-843f-b5b8285a9dba
+payee friends
 payee kins
 payee taxis
 
