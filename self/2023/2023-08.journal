@@ -293,7 +293,7 @@ include ../prelude.journal
     expenses:transport:trains                                                4.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-30 (2023083022001432591436873803) Genki 4aa5d1b8-35f6-4770-8af3-482d754d0de7  ; activity: eating, eating: dinner, time: 21:51:44, timezone: UTC+08:00
+2023-08-30 (2023083022001432591436873803) Genki  ; activity: eating, eating: dinner, time: 21:51:44, timezone: UTC+08:00
     expenses:food and drinks:dining                                   745.80 HKD  ; food_and_drink: many sushi
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
