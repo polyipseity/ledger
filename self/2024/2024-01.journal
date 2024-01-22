@@ -398,6 +398,26 @@ include ../prelude.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2024-01-19/2025-10-31
     revenues:rewards
 
+2024-01-20 (74216740) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT20M44S, eating: breakfast, time: 09:25:16, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2024-01-21 (71266641) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT39M6S, eating: dinner, time: 20:06:54, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot Ovaltine, food_and_drink: spaghetti
+
+2024-01-22 (FRN20240122PAYD0101453448218) self  ; activity: transfer, time: 08:16:10, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-01-22 self  ; activity: transfer, time: 08:16:12, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-01-22 (72219481) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M33S, eating: breakfast, time: 08:31:27, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
 2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
