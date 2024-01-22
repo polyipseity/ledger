@@ -418,6 +418,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
+2024-01-22 (73265521) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M42S, eating: dinner, time: 16:18:18, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: baked spaghetti bolognese with ham and cheese (mini), food_and_drink: hot Ovaltine
+
 2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
