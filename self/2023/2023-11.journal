@@ -10,9 +10,10 @@ include ../prelude.journal
     assets:deferred expenses:insurances:health                                                      333.16 HKD = 333.16 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 21 050.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               103.70 HKD = 103.70 HKD
+    assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                       15.65 HKD = 15.65 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                                  1 918.20 HKD = 1 918.20 HKD
-    equity:conversions:HKD-USD:HKD                                                               -2 437.72 HKD = -2 437.72 HKD
-    equity:conversions:HKD-USD:USD                                                                  318.45 USD = 318.45 USD
+    equity:conversions:HKD-USD:HKD                                                               -2 453.37 HKD = -2 453.37 HKD
+    equity:conversions:HKD-USD:USD                                                                  320.45 USD = 320.45 USD
     equity:friends                                                                                  -28.50 HKD = -28.50 HKD
     equity:kins                                                                                  -4 500.00 CNY = -4 500.00 CNY
     equity:kins                                                                                     -90.00 HKD = -90.00 HKD
@@ -451,10 +452,11 @@ include ../prelude.journal
     assets:cash                                                                                  -24 777.00 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -101.70 HKD = 0.00 HKD
+    assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                       -15.65 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  40.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                          -100 000. _PT/B = 0 _PT/B
-    equity:conversions:HKD-USD:HKD                                                                 2 437.72 HKD = 0.00 HKD
-    equity:conversions:HKD-USD:USD                                                                  -318.45 USD = 0.00 USD
+    equity:conversions:HKD-USD:HKD                                                                 2 453.37 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                                  -320.45 USD = 0.00 USD
     equity:external:self.alternatives                                                            100 000. _PT/B = 0 _PT/B
     equity:friends                                                                                    28.50 HKD = 0.00 HKD
     equity:kins                                                                                    4 500.00 CNY = 0.00 CNY

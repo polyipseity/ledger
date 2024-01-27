@@ -112,6 +112,8 @@ account liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                
 account revenues:donations                                                                        ; type: R
 account revenues:donations:Buy Me a Coffee                                                        ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                                            ; type: R
+account revenues:donations:GitHub Sponsors                                                        ; type: R
+account revenues:donations:GitHub Sponsors:polyipseity                                            ; type: R
 account revenues:education                                                                        ; type: R
 account revenues:education:scholarships                                                           ; type: R
 account revenues:incomes                                                                          ; type: R
@@ -130,6 +132,7 @@ commodity 99 999 999. _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c po
 commodity 99 999 999. _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
 commodity 99 999 999. _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
 
+payee **** (***********)
 payee ******************@******.com
 payee ******@***********.com.au
 payee ******@***************.com
