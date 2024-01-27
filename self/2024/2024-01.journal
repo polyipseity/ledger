@@ -530,6 +530,10 @@ include ../prelude.journal
     liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6           187.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
+2024-01-27 (72220093) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT32M58S, eating: dinner, time: 19:43:02, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -63.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Yangzhou fried rice
+
 2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
