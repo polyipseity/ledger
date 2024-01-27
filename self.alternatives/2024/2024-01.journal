@@ -28,13 +28,13 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 228. _PT/B = 16 673 _PT/B
     revenues:activities:walking
 
-2024-01-02 GREEN@self-service  ; activity: recycle, time: 22:02:39, timezone: UTC+08:00
+2024-01-02 GREEN@self-service  ; activity: recycle, time: 22:02:39, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:02:39, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-03 GREEN@self-service  ; activity: recycle, time: 23:04:46, timezone: UTC+08:00
+2024-01-03 GREEN@self-service  ; activity: recycle, time: 23:04:46, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:04:46, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -44,13 +44,13 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       811 _PT/B = 17 484 _PT/B
     revenues:activities:walking
 
-2024-01-04 GREEN@self-service  ; activity: recycle, time: 18:07:24, timezone: UTC+08:00
+2024-01-04 GREEN@self-service  ; activity: recycle, time: 18:07:24, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 18:07:24, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-04 GREEN@self-service  ; activity: recycle, time: 22:22:53, timezone: UTC+08:00
+2024-01-04 GREEN@self-service  ; activity: recycle, time: 22:22:53, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:22:53, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
@@ -60,7 +60,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       408 _PT/B = 17 892 _PT/B
     revenues:activities:walking
 
-2024-01-05 GREEN@self-service  ; activity: recycle, time: 23:13:37, timezone: UTC+08:00
+2024-01-05 GREEN@self-service  ; activity: recycle, time: 23:13:37, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:13:37, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -70,7 +70,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 559. _PT/B = 23 451 _PT/B
     revenues:activities:walking
 
-2024-01-06 GREEN@self-service  ; activity: recycle, time: 13:22:17, timezone: UTC+08:00
+2024-01-06 GREEN@self-service  ; activity: recycle, time: 13:22:17, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 13:22:17, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -80,7 +80,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 561. _PT/B = 25 012 _PT/B
     revenues:activities:walking
 
-2024-01-07 GREEN@self-service  ; activity: recycle, time: 22:17:32, timezone: UTC+08:00
+2024-01-07 GREEN@self-service  ; activity: recycle, time: 22:17:32, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 13:22:17, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -90,7 +90,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 200. _PT/B = 28 212 _PT/B
     revenues:activities:walking
 
-2024-01-08 GREEN@self-service  ; activity: recycle, time: 23:21:30, timezone: UTC+08:00
+2024-01-08 GREEN@self-service  ; activity: recycle, time: 23:21:30, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 13:22:17, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -100,7 +100,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 712. _PT/B = 34 924 _PT/B
     revenues:activities:walking
 
-2024-01-09 GREEN@self-service  ; activity: recycle, time: 20:21:41, timezone: UTC+08:00
+2024-01-09 GREEN@self-service  ; activity: recycle, time: 20:21:41, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 20:21:41, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -114,7 +114,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 889. _PT/B = 43 378 _PT/B
     revenues:activities:walking
 
-2024-01-11 GREEN@self-service  ; activity: recycle, time: 22:21:55, timezone: UTC+08:00
+2024-01-11 GREEN@self-service  ; activity: recycle, time: 22:21:55, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:21:55, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -153,7 +153,7 @@ include ../prelude.journal
     equity:conversions:GREEN$-_OPL:GREEN$                                      -3 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-12 GREEN@self-service  ; activity: recycle, time: 23:13:03, timezone: UTC+08:00
+2024-01-12 GREEN@self-service  ; activity: recycle, time: 23:13:03, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:13:03, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -167,7 +167,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000. _PT/B
     revenues:rewards
 
-2024-01-13 GREEN@self-service  ; activity: recycle, time: 23:30:15, timezone: UTC+08:00
+2024-01-13 GREEN@self-service  ; activity: recycle, time: 23:30:15, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:30:15, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -177,7 +177,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 776. _PT/B = 53 911 _PT/B
     revenues:activities:walking
 
-2024-01-14 GREEN@self-service  ; activity: recycle, time: 22:11:45, timezone: UTC+08:00
+2024-01-14 GREEN@self-service  ; activity: recycle, time: 22:11:45, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:11:45, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -187,7 +187,7 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 643. _PT/B = 59 554 _PT/B
     revenues:activities:walking
 
-2024-01-15 GREEN@self-service  ; activity: recycle, time: 22:02:07, timezone: UTC+08:00
+2024-01-15 GREEN@self-service  ; activity: recycle, time: 22:02:07, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:02:07, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
@@ -213,37 +213,37 @@ include ../prelude.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 875. _PT/B = 74 000 _PT/B
     revenues:activities:walking
 
-2024-01-22 GREEN@self-service  ; activity: recycle, time: 21:36:22, timezone: UTC+08:00
+2024-01-22 GREEN@self-service  ; activity: recycle, time: 21:36:22, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 21:36:22, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-23 GREEN@self-service  ; activity: recycle, time: 22:10:01, timezone: UTC+08:00
+2024-01-23 GREEN@self-service  ; activity: recycle, time: 22:10:01, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:10:01, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-24 GREEN@self-service  ; activity: recycle, time: 23:12:58, timezone: UTC+08:00
+2024-01-24 GREEN@self-service  ; activity: recycle, time: 23:12:58, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:12:58, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-25 GREEN@self-service  ; activity: recycle, time: 23:37:59, timezone: UTC+08:00
+2024-01-25 GREEN@self-service  ; activity: recycle, time: 23:37:59, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:37:59, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-26 GREEN@self-service  ; activity: recycle, time: 22:41:38, timezone: UTC+08:00
+2024-01-26 GREEN@self-service  ; activity: recycle, time: 22:41:38, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:41:38, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
-2024-01-27 GREEN@self-service  ; activity: recycle, time: 22:46:39, timezone: UTC+08:00
+2024-01-27 GREEN@self-service  ; activity: recycle, time: 22:46:39, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 22:46:39, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
