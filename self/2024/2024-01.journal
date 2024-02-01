@@ -656,11 +656,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-01-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+2024-01-31 * Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
 
-2024-01-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-01-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:equipment:consumer electronics      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
@@ -668,3 +668,34 @@ include ../prelude.journal
     assets:equipment:clothing                  -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:equipment:clothing                  -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
     expenses:depreciation
+
+2024-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
+    assets:deferred expenses:insurances:health                                                      -206.50 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -26 588.43 HKD = 0.00 HKD
+    assets:cash                                                                                  -34 142.00 HKD = 0.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -16.90 HKD = 0.00 HKD
+    assets:equipment:clothing                                                                       -805.75 HKD = 0.00 HKD
+    assets:equipment:consumer electronics                                                         -8 237.34 HKD = 0.00 HKD
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                         -364 _PT/D = 0 _PT/D
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                                    -150.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                                  30.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                                -30 _PT/D = 0 _PT/D
+    equity:conversions:HKD-USD:HKD                                                                 2 453.37 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                                  -320.45 USD = 0.00 USD
+    equity:external:self.alternatives                                                            200 000. _PT/B = 0 _PT/B
+    equity:friends                                                                                    28.50 HKD = 0.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                               35.10 HKD = 0.00 HKD
+    equity:kins                                                                                    4 500.00 CNY = 0.00 CNY
+    equity:kins                                                                                       90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     41 256.05 HKD = 0.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                        527.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                      23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             23 506.28 HKD = 0.00 HKD
+    equity:opening/closing balances
