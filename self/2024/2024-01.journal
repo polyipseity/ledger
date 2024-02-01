@@ -71,12 +71,12 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: Italian hot dog (bolognaise & cheese powder)
 
 2024-01-03 (218673) 4d3562ae-b4d4-4444-b428-33f0aced1462  ; activity: helping, time: 14:59:46, timezone: UTC+08:00
-    equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                     47.00 HKD  ; food_and_drink: small salad box
+    assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6               47.00 HKD  ; food_and_drink: small salad box
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-01-03 (FRN20240103PAYC0101421204758) 4d3562ae-b4d4-4444-b428-33f0aced1462  ; activity: repayment, time: 14:59:46, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       47.00 HKD
-    equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6
+    assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6        -47.00 HKD = 0.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2024-01-03 5e758af5-23c0-4038-b161-06757132e875  ; activity: betting, time: 16:30, timezone: UTC+08:00
     liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -100.00 HKD
@@ -361,27 +361,27 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2024-01-19 friends  ; activity: repayment, time: 14:04, timezone: UTC+08:00
-    assets:cash         283.00 HKD
-    equity:friends
+    assets:cash               283.00 HKD
+    assets:loans:friends
 
 2024-01-19 (120366) 1d056933-413d-4fd7-97b2-f58f2493baca  ; activity: eating, eating: lunch, time: 14:05, timezone: UTC+08:00
-    equity:friends                                                          55.00 HKD  ; food_and_drink: 日式叉燒拉麵
-    equity:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                     55.00 HKD  ; food_and_drink: 日式叉燒拉麵
-    equity:friends                                                          53.00 HKD  ; food_and_drink: 泡菜魚餅拉麵
-    equity:friends                                                          52.00 HKD  ; food_and_drink: 咖喱豚肉飯
-    equity:friends                                                          52.00 HKD  ; food_and_drink: 日式蛋包飯
+    assets:loans:friends                                                    55.00 HKD  ; food_and_drink: 日式叉燒拉麵
+    assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10               55.00 HKD  ; food_and_drink: 日式叉燒拉麵
+    assets:loans:friends                                                    53.00 HKD  ; food_and_drink: 泡菜魚餅拉麵
+    assets:loans:friends                                                    52.00 HKD  ; food_and_drink: 咖喱豚肉飯
+    assets:loans:friends                                                    52.00 HKD  ; food_and_drink: 日式蛋包飯
     expenses:food and drinks:dining                                         52.00 HKD  ; food_and_drink: 日式蛋包飯
-    equity:friends                                                          65.00 HKD  ; food_and_drink: 野菜炒牛肉便當
-    equity:friends                                                           3.00 HKD  ; food_and_drink: 凍奶茶
-    equity:friends                                                           0.00 HKD  ; food_and_drink: 熱麵豉湯 ×2
-    equity:friends                                                           3.00 HKD  ; food_and_drink: 凍檸椽茶
+    assets:loans:friends                                                    65.00 HKD  ; food_and_drink: 野菜炒牛肉便當
+    assets:loans:friends                                                     3.00 HKD  ; food_and_drink: 凍奶茶
+    assets:loans:friends                                                     0.00 HKD  ; food_and_drink: 熱麵豉湯 ×2
+    assets:loans:friends                                                     3.00 HKD  ; food_and_drink: 凍檸椽茶
     expenses:food and drinks:dining                                          1.00 HKD  ; food_and_drink: 熱好立克
-    equity:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                      5.00 HKD  ; food_and_drink: 凍柚子蜜
+    assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                5.00 HKD  ; food_and_drink: 凍柚子蜜
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-01-19 (FRN20240119PAYC0101449364256) 76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10  ; activity: repayment, time: 14:07, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       60.00 HKD
-    equity:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10
+    assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10        -60.00 HKD = 0.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2024-01-19 2344b1fe-cab8-4245-a24e-61caf7e93a74  ; activity: transport, time: 14:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -14.80 HKD

@@ -36,6 +36,10 @@ account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc              
 account assets:equipment                                                                          ; type: A
 account assets:equipment:clothing                                                                 ; type: A
 account assets:equipment:consumer electronics                                                     ; type: A
+account assets:loans                                                                              ; type: A
+account assets:loans:friends                                                                      ; type: A
+account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                 ; type: A
+account assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                 ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A
@@ -57,8 +61,6 @@ account equity:conversions:HKD-USD:HKD                                          
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:friends                                                                            ; type: E
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
-account equity:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                       ; type: E
-account equity:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                       ; type: E
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
