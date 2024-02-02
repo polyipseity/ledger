@@ -41,7 +41,7 @@ include ../prelude.journal
 
 2024-02-01 (14/146845) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 19:28:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 叉燒紅腸套餐 + less rice
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork, food_and_drink: hot Ovaltine, food_and_drink: rice set + less rice, food_and_drink: sausage
 
 2024-02-01 (FRN20240201PAYD01010474041686) self  ; activity: transfer, time: 22:13:28, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
