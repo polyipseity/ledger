@@ -154,7 +154,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2024-01-07 (000-3993/51550029005) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, eating: lunch, time: 13:50:51, timezone: UTC+08:00
+2024-01-07 (000-3993/51550029005) Pizza Hut  ; activity: eating, eating: lunch, time: 13:50:51, timezone: UTC+08:00
     expenses:food and drinks:dining                                               238.00 HKD  ; food_and_drink: 三文魚扭紋
     expenses:food and drinks:dining                                                24.00 HKD  ; food_and_drink: 忌𠗳雞湯 ×2
     expenses:food and drinks:dining                                                26.20 HKD  ; food_and_drink: 10% service charge

@@ -11,4 +11,5 @@ include ../prelude.journal
     assets:equipment:consumer electronics      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:equipment:clothing                  -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:equipment:clothing                  -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
+    assets:equipment:clothing                  -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
     expenses:depreciation
