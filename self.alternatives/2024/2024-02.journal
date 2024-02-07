@@ -94,3 +94,15 @@ include ../prelude.journal
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 12:17:41, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-02-06 GREEN@self-service  ; activity: recycle, time: 18:20:02, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 18:20:02, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-02-06 GREEN@self-service  ; activity: recycle, time: 23:45:51, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:45:51, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
