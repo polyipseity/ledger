@@ -238,6 +238,30 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -21.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: grilled pork chop crispy bun, food_and_drink: hot Ovaltine
 
+2024-02-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:01, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-02-07 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:14, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.30 HKD
+    expenses:transport:trains
+
+2024-02-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:44, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-02-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:12, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-02-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 17:13, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-02-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 17:47, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+    expenses:transport:buses
+
 2024-02-29 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -38.54 HKD
     expenses:insurances:health
