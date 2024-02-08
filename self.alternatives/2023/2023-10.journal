@@ -136,7 +136,7 @@ include ../prelude.journal
     revenues:recycables:personal care       -0.135 _PLA  ; collect: 1 plastic, collect: 3 plastic bottles
     assets:recycables
 
-2023-10-13 self  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
+2023-10-13 adjustment  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
     assets:recycables     -0.116 _BEC
     expenses:lost
 
