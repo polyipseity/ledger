@@ -669,6 +669,10 @@ include ../prelude.journal
     assets:equipment:clothing                  -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
     expenses:depreciation
 
+2024-01-31 * adjustment  ; activity: expiration, time: 23:59:59, timezone: UTC+08:00
+    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8     -150.00 HKD = 0.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×3
+    expenses:expiration
+
 2024-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
@@ -681,7 +685,6 @@ include ../prelude.journal
     assets:equipment:consumer electronics                                                         -8 237.34 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                         -364 _PT/D = 0 _PT/D
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                                    -150.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B
     equity:conversions:HKD-_PT/D:HKD                                                                  30.00 HKD = 0.00 HKD
