@@ -292,7 +292,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked spaghetti bolognese with ham and cheese (mini), food_and_drink: hot Ovaltine
 
-2024-01-16 (N11725494345/HD12411785935360) 5e758af5-23c0-4038-b161-06757132e875  ; 691357fb-5b45-4668-b350-32ea81713c42 HD12411785935360 17JAN, activity: repayment, time: 23:59:59, timezone: UTC+08:00, via: Faster Payment System
+2024-01-16 (N11725494345/HD12411785935360) 5e758af5-23c0-4038-b161-06757132e875  ; activity: repayment, time: 23:59:59, timezone: UTC+08:00, via: Faster Payment System
     liabilities:friends:5e758af5-23c0-4038-b161-06757132e875           365.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -526,7 +526,7 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       96.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-01-27 (N12753152478/HD12412708512427) d43f45a7-5dda-4f56-b441-c82b76b743c6  ; b085823d-bc84-40e0-bf55-0042a13ac2f2 HD12412708512427 27JAN, activity: repayment, time: 19:17:33, timezone: UTC+08:00, via: Faster Payment System
+2024-01-27 (N12753152478/HD12412708512427) d43f45a7-5dda-4f56-b441-c82b76b743c6  ; activity: repayment, time: 19:17:33, timezone: UTC+08:00, via: Faster Payment System
     liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6           187.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

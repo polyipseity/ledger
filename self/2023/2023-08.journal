@@ -216,7 +216,7 @@ include ../prelude.journal
     assets:cash                                                      -5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-08-28 (HD12382882618827/02-SWP202308283136772002) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; BoC Bill - e65bf2ea-643c-4058-9981-843e153ae96c, activity: education, time: 01:14:50, timezone: UTC+08:00, via: Faster Payment System
+2023-08-28 (HD12382882618827/02-SWP202308283136772002) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 01:14:50, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    27 352.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -310,7 +310,7 @@ include ../prelude.journal
     assets:accrued revenues:education:scholarships                                              21 050.00 HKD
     revenues:education:scholarships
 
-2023-08-31 * 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; NET BILPYT (31AUG23) "022610af-1c78-43f3-aeca-f00b02a16d79", activity: adjust, time: 00:58, timezone: UTC+08:00
+2023-08-31 * 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, time: 00:58, timezone: UTC+08:00
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
     liabilities:accrued expenses:insurances:levy                                             5.88 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            47.70 HKD
