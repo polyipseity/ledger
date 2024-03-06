@@ -151,6 +151,14 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 田園熱狗 · 春卷餐
 
+2024-03-06 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 19:18, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
+    expenses:transport:minibuses
+
+2024-03-06 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:32, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.80 HKD
+    expenses:transport:trains
+
 2024-03-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
