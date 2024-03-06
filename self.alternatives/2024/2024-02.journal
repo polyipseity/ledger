@@ -148,3 +148,23 @@ include ../prelude.journal
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 13:53:01, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-02-29 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            -2 546. GREEN$ = 0 GREEN$
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        -74 000. _PT/B = 0 _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   -29 314. _FRM = 0 _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              -22 942 438. _PT/A = 0 _PT/A
+    equity:conversions:GREEN$-_BEC:GREEN$                                                                10 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_BEC:_BEC                                                                -1.016 _BEC = 0.000 _BEC
+    equity:conversions:GREEN$-_FLW:GREEN$                                                            2 150. GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_FLW:_FLW                                                               -50.290 _FLW = 0.000 _FLW
+    equity:conversions:GREEN$-_MET:GREEN$                                                                42 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                                                -5.648 _MET = 0.000 _MET
+    equity:conversions:GREEN$-_OPL:GREEN$                                                                28 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                                                -3.916 _OPL = 0.000 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                                               100 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                                               -10.358 _PAP = 0.000 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                                               216 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                                                -3.275 _PLA = 0.000 _PLA
+    equity:external:self                                                                           -200 000. _PT/B = 0 _PT/B
+    equity:opening/closing balances
