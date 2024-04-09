@@ -330,7 +330,7 @@ include ../prelude.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 16:47:00, timezone: UTC+08:00
 
-2023-11-25 barbershop fa09ea8c-f5f9-4b3e-b73a-4589a93e9be3  ; activity: service, service: haircutting, time: 13:03, timezone: UTC+08:00
+2023-11-25 barbershop  ; activity: service, service: haircutting, time: 13:03, timezone: UTC+08:00
     expenses:services                                               60.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
 

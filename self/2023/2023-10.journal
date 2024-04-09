@@ -129,7 +129,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
 
-2023-10-10 (1/A-552637) Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb  ; activity: eating, eating: afternoon tea, time: 15:08:28, timezone: UTC+08:00
+2023-10-10 (1/A-552637) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: afternoon tea, time: 15:08:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 
@@ -197,7 +197,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      500.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2023-10-15 (HK060096-20231015123730D19/2023101512413003915/C120231015124117668681443) euro go go b9cf52a0-caa7-42d4-ab3c-6f4158ffc639  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
+2023-10-15 (HK060096-20231015123730D19/2023101512413003915/C120231015124117668681443) euro go go  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -134 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 全千島海鮮👑 + cheese
 

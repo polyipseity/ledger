@@ -65,7 +65,7 @@ include ../prelude.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -28.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: cold Fanta, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
 
-2023-09-06 (2023090622001432591455775630) Subway ba63c4cd-b044-42c4-91e4-dd017dbea5fb  ; activity: eating, eating: dinner, time: 18:59:42, timezone: UTC+08:00
+2023-09-06 (2023090622001432591455775630) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: dinner, time: 18:59:42, timezone: UTC+08:00
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -40.00 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 
