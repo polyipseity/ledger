@@ -136,6 +136,8 @@ account revenues:insurances:life                                                
 account revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: R
 account revenues:interests                                                                        ; type: R
 account revenues:special                                                                          ; type: R
+account revenues:subsidies                                                                        ; type: R
+account revenues:subsidies:Public Transport Fare Subsidy Scheme                                   ; type: R
 
 commodity 99 999 999.00 CNY  ; fullname: Renminbi
 commodity 99 999 999.00 HKD  ; fullname: Hong Kong dollars
