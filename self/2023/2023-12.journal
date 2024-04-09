@@ -331,8 +331,8 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: Italian hot dog (bolognaise & cheese powder)
 
 2023-12-19 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
-    expenses:education:tuition:universities                    3 705.00 HKD
-    assets:deferred expenses:education:tuition:universities
+    assets:deferred expenses:education:tuition:universities    -3 705.00 HKD = 0.00 HKD
+    expenses:education:tuition:universities
 
 2023-12-20 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:01, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_and_drink: baked fried tomato, food_and_drink: hot coffee, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick toast with butter
@@ -530,7 +530,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         23.00 HKD  ; food_and_drink: baked fried tomato, food_and_drink: hot chocolate, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick bread with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-30 ! self  ; activity: education, time: 12:10:25, timezone: UTC+08:00
+2023-12-30 * self  ; activity: education, time: 12:10:25, timezone: UTC+08:00
     assets:accrued revenues:education       35.00 HKD
     revenues:education
 

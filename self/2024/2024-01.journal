@@ -259,7 +259,7 @@ include ../prelude.journal
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8       50.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-01-12 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
+2024-01-12 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities                                     -21 050.00 HKD  ; 23/24 spring deferral - pay plan installment - UGC UG
     assets:deferred expenses:education:tuition:universities                                      21 050.00 HKD  ; 23/24 spring deferral - tuition installment - UGC UG, valid: 2024-01-12T00:00:00+08:00/2024-04-01T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f
@@ -430,6 +430,14 @@ include ../prelude.journal
 2024-01-22 (73265521) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M42S, eating: dinner, time: 16:18:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked spaghetti bolognese with ham and cheese (mini), food_and_drink: hot Ovaltine
+
+2024-01-23 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: competition, timezone: UTC+08:00
+    assets:accrued revenues:rewards      250.00 HKD
+    revenues:rewards                                 ; reward: 79cb7662-ed31-434d-8569-ebcdcfd457e7 2024 4th overall
+
+2024-01-23 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: competition, timezone: UTC+08:00
+    assets:accrued revenues:rewards      375.00 HKD
+    revenues:rewards                                 ; reward: 79cb7662-ed31-434d-8569-ebcdcfd457e7 2024 2nd internal
 
 2024-01-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 15:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
@@ -656,6 +664,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2024-01-31 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+    assets:deferred expenses:education:tuition:universities     -175.50 HKD
+    expenses:education:tuition:universities
+
 2024-01-31 * Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
@@ -676,6 +688,7 @@ include ../prelude.journal
 2024-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
+    assets:accrued revenues:rewards                                                                 -625.00 HKD = 0.00 HKD
     assets:deferred expenses:insurances:health                                                      -206.50 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -26 588.43 HKD = 0.00 HKD
     assets:cash                                                                                  -34 142.00 HKD = 0.00 HKD

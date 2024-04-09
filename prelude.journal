@@ -1,5 +1,6 @@
 account assets                             ; type: A
 account assets:accrued revenues            ; type: A
+account assets:accrued revenues:rewards    ; type: A
 account assets:deferred expenses           ; type: A
 account equity                             ; type: E
 account equity:conversions                 ; type: V

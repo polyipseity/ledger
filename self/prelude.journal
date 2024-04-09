@@ -12,6 +12,8 @@ account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                       
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current                             ; type: C
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                             ; type: C
 account assets:cash                                                                               ; type: C
+account assets:cheques                                                                            ; type: A
+account assets:cheques:certified                                                                  ; type: C
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:maintenance                                                      ; type: A
@@ -94,6 +96,7 @@ account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           
 account expenses:maintenance                                                                      ; type: X
 account expenses:services                                                                         ; type: X
 account expenses:special                                                                          ; type: X
+account expenses:special:gifts                                                                    ; type: X
 account expenses:transport                                                                        ; type: X
 account expenses:transport:buses                                                                  ; type: X
 account expenses:transport:ferries                                                                ; type: X
@@ -226,6 +229,7 @@ payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
 payee dfd2814d-d498-4b66-9a46-9c06aa74f635
 payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
+payee ef234023-8df0-4705-bb73-cd9b194a5b92
 payee euro go go
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee friends
