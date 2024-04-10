@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 from anyio import Path as _Path
 from argparse import ArgumentParser as _ArgParser, Namespace as _NS
-from asyncio import TaskGroup as _TaskGrp, gather as _gather, run as _run
+from asyncio import create_task, gather as _gather, run as _run
 from dataclasses import dataclass as _dc
 from functools import wraps as _wraps
 from glob import iglob as _iglob
@@ -51,12 +51,14 @@ async def main(args: Arguments):
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
         ) as file:
             read = await file.read()
-            async with _TaskGrp() as group:
-                group.create_task(file.seek(0))
-                text = read.replace(args.find, args.replace)
-            if text != read:
-                await file.write(text)
-                await file.truncate()
+            seek = create_task(file.seek(0))
+            try:
+                if (text := read.replace(args.find, args.replace)) != read:
+                    await seek
+                    await file.write(text)
+                    await file.truncate()
+            finally:
+                seek.cancel()
 
     formatErrs = tuple(
         err

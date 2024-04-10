@@ -3,8 +3,8 @@ from anyio import Path as _Path
 from argparse import ArgumentParser as _ArgParser, Namespace as _NS
 from asyncio import (
     BoundedSemaphore as _BSemp,
-    TaskGroup as _TaskGrp,
     create_subprocess_exec as _new_sproc,
+    create_task,
     gather as _gather,
     run as _run,
 )
@@ -82,8 +82,8 @@ async def main(_: Arguments):
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
         ) as file:
             read = await file.read()
-            async with _TaskGrp() as group:
-                group.create_task(file.seek(0))
+            seek = create_task(file.seek(0))
+            try:
                 header = "\n".join(
                     line for line in read.splitlines() if line.startswith("include ")
                 )
@@ -128,10 +128,12 @@ async def main(_: Arguments):
                         for group in group(cmt.split(","))
                     )}'''.strip()}"""
 
-                text = "\n".join(map(sortProps, text.splitlines()))
-            if text != read:
-                await file.write(text)
-                await file.truncate()
+                if (text := "\n".join(map(sortProps, text.splitlines()))) != read:
+                    await seek
+                    await file.write(text)
+                    await file.truncate()
+            finally:
+                seek.cancel()
 
     formatErrs = tuple(
         err
