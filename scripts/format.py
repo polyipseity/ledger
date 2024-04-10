@@ -139,7 +139,7 @@ async def main(_: Arguments):
         if err
     )
     if formatErrs:
-        raise ExceptionGroup("", formatErrs)
+        raise BaseExceptionGroup("", formatErrs)
 
     _exit(0)
 
