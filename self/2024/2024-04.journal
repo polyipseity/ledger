@@ -305,6 +305,31 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       28.40 HKD
     revenues:subsidies:Public Transport Fare Subsidy Scheme
 
+2024-04-16 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 11:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-04-16 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 12:09, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-04-16 (0200131262) Starbucks  ; activity: eating, eating: lunch, time: 13:31:38, timezone: UTC+08:00
+    assets:special:vouchers:Starbucks                                      -25.00 HKD  ; item: WMK162002
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.70 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Java chip Frappuccino® blended beverage; venti (20 fl oz)
+
+2024-04-16 (1K2#436) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 17:27:13, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: roast mushroom and bean curd rice + less rice
+
+2024-04-16 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 21:10, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-04-16 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 21:32, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+    expenses:transport:buses
+
 2024-04-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities    -5 262.50 HKD
     expenses:education:tuition:universities

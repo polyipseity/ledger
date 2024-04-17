@@ -272,7 +272,7 @@ include ../prelude.journal
 2023-11-20 (0200051724) Starbucks  ; activity: eating, eating: dinner, time: 17:54, timezone: UTC+08:00
     assets:special:vouchers:Starbucks                                  -50.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -3.90 HKD
-    expenses:food and drinks:snacks                                                ; food_and_drink: Java chip Frappuccino® blended beverage; venti (20 fl oz), food_and_drink: chocolate orange loaf
+    expenses:food and drinks:dining                                                ; food_and_drink: Java chip Frappuccino® blended beverage; venti (20 fl oz), food_and_drink: chocolate orange loaf
 
 2023-11-20 (T2#256) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 18:02:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
