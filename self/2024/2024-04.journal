@@ -378,6 +378,42 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2024-04-18 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 11:00, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-04-18 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 11:34, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-04-18 (082-2020) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:27:14, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 忌廉湯, food_and_drink: 熱即磨咖啡, food_and_drink: 迷你肉醬意粉
+
+2024-04-18 (9/093391) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 19:23:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork, food_and_drink: hot Ovaltine, food_and_drink: rice set, food_and_drink: 什錦瓜粒湯
+
+2024-04-18 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 23:16, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-04-18 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 23:44, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+    expenses:transport:buses
+
+2024-04-19 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 12:49, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-04-19 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 13:11, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-04-19 (082-2293) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:34:17, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 熱即磨咖啡, food_and_drink: 迷你肉醬意粉, food_and_drink: 迷你雙層沙律三文治
+
 2024-04-30 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities    -5 262.50 HKD
     expenses:education:tuition:universities
