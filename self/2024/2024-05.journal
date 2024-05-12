@@ -349,6 +349,14 @@ include ../prelude.journal
     equity:conversions:HKD-_PT/D:HKD                                             -129.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  -0.80 HKD
 
+2024-05-12 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H32M45S, time: 14:40:00, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring                  ; time: 16:12:45, timezone: UTC+08:00
+
+2024-05-12 (41021969) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT23M6S, eating: dinner, time: 19:53:54, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         63.00 HKD  ; food_and_drink: 惹味星洲炒米
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2024-05-29 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities    -5 087.00 HKD  ; = 0.00 HKD
     expenses:education:tuition:universities
