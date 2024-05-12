@@ -123,6 +123,7 @@ account liabilities:friends                                                     
 account liabilities:friends:3344b973-41df-45a9-bc47-0004ed1049db                                  ; type: L
 account liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                  ; type: L
 account liabilities:friends:5e758af5-23c0-4038-b161-06757132e875                                  ; type: L
+account liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45                                  ; type: L
 account liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                  ; type: L
 account liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                  ; type: L
 account revenues:donations                                                                        ; type: R
@@ -185,6 +186,7 @@ payee 6fb019f7-d2fd-49a8-8a7f-11fa413aa072
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7-Eleven
 payee 76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10
+payee 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee 7fc76083-5175-421d-8c6f-d15897b5ee8e
@@ -215,6 +217,7 @@ payee McDonald's
 payee ParknShop
 payee Pizza Hut
 payee Rosewood
+payee Saizeriya
 payee Starbucks
 payee Stripe
 payee Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd
