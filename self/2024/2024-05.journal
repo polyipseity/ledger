@@ -100,19 +100,24 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 叉燒飯配飲品, food_and_drink: 奶茶
 
+2024-05-03 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: snacks, time: 20:34, timezone: UTC+08:00
+    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca       -8.00 HKD
+    expenses:food and drinks:snacks                                           ; food_and_drink: 奶醬多
+
 2024-05-03 82de8d96-c247-49eb-9bd7-87b00f16d25c  ; activity: transport, time: 21:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-05-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 22:25, timezone: UTC+08:00
+2024-05-03 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 23:00 timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                            -2.00 HKD
+    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                        8.00 HKD = 0.00 HKD
+
+2024-05-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 23:00, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:credits
 
-2024-05-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 22:40, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
-
-2024-05-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 22:55, timezone: UTC+08:00
+2024-05-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 23:15, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:credits
 
