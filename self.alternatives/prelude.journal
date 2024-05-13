@@ -23,6 +23,9 @@ account equity:conversions:GREEN$-_PAP:_PAP                                     
 account equity:conversions:GREEN$-_PLA                                                            ; type: E
 account equity:conversions:GREEN$-_PLA:GREEN$                                                     ; type: E
 account equity:conversions:GREEN$-_PLA:_PLA                                                       ; type: E, rate: 0.08, rate: unit 100
+account equity:conversions:GREEN$-_REB                                                            ; type: E
+account equity:conversions:GREEN$-_REB:GREEN$                                                     ; type: E
+account equity:conversions:GREEN$-_REB:_REB                                                       ; type: E, rate: 0.01, rate: unit 100
 account expenses:compute                                                                          ; type: X
 account expenses:compute:SheepIt Render Farm                                                      ; type: X
 account expenses:recycling                                                                        ; type: X
@@ -47,6 +50,7 @@ commodity 99 999 999.000 _MET  ; fullname: metals, unit: kilogram
 commodity 99 999 999.000 _OPL  ; fullname: other plastics, unit: kilogram
 commodity 99 999 999.000 _PAP  ; fullname: paper, unit: kilogram
 commodity 99 999 999.000 _PLA  ; fullname: plastics, unit: kilogram
+commodity 99 999 999.000 _REB  ; fullname: rechargeable batteries, unit: kilogram
 commodity 99 999 999. _PT/A    ; fullname: SheepIt Render Farm points
 commodity 99 999 999. _PT/B    ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 
