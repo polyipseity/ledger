@@ -281,7 +281,7 @@ include ../prelude.journal
     liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45           114.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-05-09 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (09MAY24), activity: withdraw, time: 20:50:54, timezone: UTC+08:00
+2024-05-09 (4A61) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (09MAY24), activity: withdraw, time: 20:50:54, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
