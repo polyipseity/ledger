@@ -442,7 +442,7 @@ include ../prelude.journal
 2024-04-20 (000-9101/51550016002) Pizza Hut  ; activity: eating, duration: PT1H4M22S, eating: lunch, time: 14:46:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                                55.00 HKD  ; food_and_drink: 卡邦尼煙肉意粉
     expenses:food and drinks:dining                                                 3.00 HKD  ; food_and_drink: 忌廉雞湯
-    expenses:food and drinks:dining                                                 5.80 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                                   5.80 HKD  ; food_and_drink: 10% service charge
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -63 _PT/D
     equity:conversions:HKD-_PT/D:_PT/D                                              63 _PT/D
     equity:conversions:HKD-_PT/D:HKD                                              -63.00 HKD
@@ -600,7 +600,7 @@ include ../prelude.journal
 2024-04-28 (000-0256/51550027002) Pizza Hut  ; activity: eating, duration: PT37M19s, eating: lunch, time: 13:40:52, timezone: UTC+08:00
     expenses:food and drinks:dining                                     68.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 卡邦尼煙肉意粉, food_and_drink: 忌廉雞湯
     expenses:food and drinks:dining                                     12.00 HKD  ; food_and_drink: 忌廉雞湯
-    expenses:food and drinks:dining                                      8.00 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                        8.00 HKD  ; food_and_drink: 10% service charge
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -88.00 HKD
 
 2024-04-29 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:31, timezone: UTC+08:00

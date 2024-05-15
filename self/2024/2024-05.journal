@@ -343,7 +343,7 @@ include ../prelude.journal
 
 2024-05-11 (000-2205/51550016001) Pizza Hut  ; activity: eating, duration: PT1H30M27S, eating: dinner, time: 19:22:40, timezone: UTC+08:00
     expenses:food and drinks:dining                                               118.00 HKD  ; food_and_drink: 炒温泉蛋 ×2, food_and_drink: 百事無糖（杯）, food_and_drink: 豐盛全日早餐
-    expenses:food and drinks:dining                                                11.80 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                                  11.80 HKD  ; food_and_drink: 10% service charge
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -129 _PT/D
     equity:conversions:HKD-_PT/D:_PT/D                                             129 _PT/D
     equity:conversions:HKD-_PT/D:HKD                                             -129.00 HKD
@@ -451,7 +451,7 @@ include ../prelude.journal
 
 2024-05-15 Sushiro  ; activity: eating, eating: lunch, time: 14:30, timezone: UTC+08:00
     expenses:food and drinks:dining                                97.00 HKD  ; food_and_drink: (unknown)
-    expenses:food and drinks:dining                                 9.70 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                   9.70 HKD  ; food_and_drink: 10% service charge
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9     -106.70 HKD
 
 2024-05-15 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 15:18, timezone: UTC+08:00

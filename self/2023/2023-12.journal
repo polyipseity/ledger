@@ -451,7 +451,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                     46.00 HKD  ; food_and_drink: tea ×2
     expenses:food and drinks:dining                                    108.00 HKD  ; food_and_drink: deep-fried preserved egg with shrimp paste
     expenses:food and drinks:dining                                    138.00 HKD  ; food_and_drink: deep-fried white bait in spicy salt
-    expenses:food and drinks:dining                                     32.00 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                       32.00 HKD  ; food_and_drink: 10% service charge
     expenses:food and drinks:dining                                    -49.20 HKD  ; food_and_drink: 20% credit card discount
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 

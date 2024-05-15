@@ -85,6 +85,7 @@ account expenses:fees:Stripe                                                    
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
 account expenses:food and drinks:drinks                                                           ; type: X
+account expenses:food and drinks:fees                                                             ; type: X
 account expenses:food and drinks:fruits                                                           ; type: X
 account expenses:food and drinks:snacks                                                           ; type: X
 account expenses:food and drinks:water                                                            ; type: X

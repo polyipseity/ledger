@@ -141,7 +141,7 @@ include ../prelude.journal
 
 2024-02-04 (000-8203/51550029003) Pizza Hut  ; activity: eating, duration: PT35M48S, eating: dinner, time: 17:36:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                                96.00 HKD  ; food_and_drink: 卡邦尼煙肉意粉, food_and_drink: 忌廉雞湯, food_and_drink: 晚餐(WE), food_and_drink: 百事（杯）
-    expenses:food and drinks:dining                                                 9.60 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                                   9.60 HKD  ; food_and_drink: 10% service charge
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -105 _PT/D
     equity:conversions:HKD-_PT/D:_PT/D                                             105 _PT/D
     equity:conversions:HKD-_PT/D:HKD                                             -105.00 HKD
@@ -297,7 +297,7 @@ include ../prelude.journal
 
 2024-02-12 (74218184) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M50S, eating: breakfast, time: 10:54:10, timezone: UTC+08:00
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    expenses:food and drinks:dining                                          3.70 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                            3.70 HKD  ; food_and_drink: 10% service charge
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-02-14 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 07:59, timezone: UTC+08:00
