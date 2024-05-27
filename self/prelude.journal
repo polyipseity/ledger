@@ -82,6 +82,7 @@ account expenses:fees                                                           
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
 account expenses:fees:DBS Bank                                                                    ; type: X
+account expenses:fees:Hong Kong Government                                                        ; type: X
 account expenses:fees:Stripe                                                                      ; type: X
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
