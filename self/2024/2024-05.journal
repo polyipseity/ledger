@@ -913,6 +913,22 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cold Fanta, food_and_drink: 四重芝士孖堡配飲品 + [Crazy Offer 2] 四重芝士孖
 
+2024-05-28 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 22:29:30, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       70.00 HKD = 78.00 HKD
+    assets:cash
+
+2024-05-28 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 22:31, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-28 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 22:49, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-28 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 23:05, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 60.00 HKD
+    expenses:gaming:credits
+
 2024-05-28 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 23:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
@@ -949,6 +965,22 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
+2024-05-29 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT11M, time: 21:20, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-29 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 21:32, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-29 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 21:44, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-29 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT8M, time: 21:57, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 36.00 HKD
+    expenses:gaming:credits
+
 2024-05-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
@@ -972,6 +1004,22 @@ include ../prelude.journal
 2024-05-30 (54K10022682) Bafang Dumpling  ; activity: eating, eating: lunch, time: 14:00:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 招牌鍋貼 ×10, food_and_drink: 招貼（1號餐）, food_and_drink: 珍珠奶茶 + 去冰 + 無糖 + 凍 + 堂食
+
+2024-05-30 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 14:39, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-30 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 14:56, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-30 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 15:15, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-05-30 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 15:38, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 12.00 HKD
+    expenses:gaming:credits
 
 2024-05-30 (FRN20240530PAYD0101695003577) self  ; activity: transfer, time: 16:12:02, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
