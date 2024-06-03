@@ -21,3 +21,21 @@ include ../prelude.journal
     equity:conversions:GREEN$-_REB:_REB                                                                0.200 _REB = 0.200 _REB
     equity:external:self                                                                           200 000. _PT/B = 200 000 _PT/B
     equity:opening/closing balances
+
+2024-06-01 GREEN@self-service  ; activity: recycle, time: 22:13:51, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 60 per time, rate: max 60 per day, recycle: food loss and waste, time: 22:13:51, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -60 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-06-02 GREEN@self-service  ; activity: recycle, time: 22:05:49, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 60 per time, rate: max 60 per day, recycle: food loss and waste, time: 22:05:49, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -60 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-06-02 GREEN@self-service  ; activity: recycle, time: 22:06:29, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 60 per time, rate: max 60 per day, recycle: food loss and waste, time: 22:06:29, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                       0 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
