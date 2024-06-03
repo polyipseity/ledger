@@ -1,5 +1,36 @@
 include ../prelude.journal
 
+2024-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
+    assets:deferred expenses:insurances:health                                                        41.30 HKD = 41.30 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 39 444.86 HKD = 39 444.86 HKD
+    assets:cash                                                                                   16 344.00 HKD = 16 344.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 19.40 HKD = 19.40 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1          12.00 HKD = 12.00 HKD
+    assets:equipment:clothing                                                                        618.75 HKD = 618.75 HKD
+    assets:equipment:consumer electronics                                                          7 490.02 HKD = 7 490.02 HKD
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          244 _PT/D = 244 _PT/D
+    equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                                -483.00 HKD = -483.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                                483 _PT/D = 483 _PT/D
+    equity:conversions:HKD-USD:HKD                                                                -2 653.39 HKD = -2 653.39 HKD
+    equity:conversions:HKD-USD:USD                                                                   346.48 USD = 346.48 USD
+    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000 _PT/B
+    equity:friends                                                                                   -28.50 HKD = -28.50 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                               -2.00 HKD = -2.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                              -35.10 HKD = -35.10 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                             -185.00 HKD = -185.00 HKD
+    equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
+    equity:kins                                                                                      -90.00 HKD = -90.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -43 346.05 HKD = -43 346.05 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                     -1 127.00 HKD = -1 127.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                     -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -23 506.28 HKD = -23 506.28 HKD
+    equity:opening/closing balances
+
 2024-06-30 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -41.30 HKD
     expenses:insurances:health
