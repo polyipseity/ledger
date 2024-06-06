@@ -131,6 +131,54 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
+2024-06-05 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:41, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2024-06-05 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 16:52, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-06-05 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 17:04, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-06-05 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 17:16, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-06-05 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 17:32, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    expenses:gaming:credits
+
+2024-06-05 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 17:48, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 16.00 HKD
+    expenses:gaming:credits
+
+2024-06-05 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 18:34, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
+    expenses:transport:trains
+
+2024-06-05 (415712199233/9E9213A8AD89A88A) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, eating: dinner, time: 20:41:04, timezone: UTC+08:00
+    expenses:food and drinks:dining                                    656.00 HKD
+    expenses:food and drinks:fees                                       66.00 HKD  ; food_and_drink: 10% service charge
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -722.00 HKD
+
+2024-06-05 (57C0) 3833b42e-dad3-425c-b254-904be68993e4  ; QDM CASH DEP (05JUN24), activity: transfer, time: 20:47:12, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    1 000.00 HKD
+    assets:cash                                                       -250.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         -750.00 HKD
+
+2024-06-07 (202406070025166968d56d0e) self  ; activity: repayment, time: 00:25:17, timezone: UTC+08:00
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -88 _PT/D
+    equity:conversions:HKD-_PT/D:_PT/D                                              88 _PT/D
+    equity:conversions:HKD-_PT/D:HKD                                              -88.00 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  88.00 HKD = -634.00 HKD
+
+2024-06-07 (N60728174290) self  ; activity: repayment, time: 00:27:16, timezone: UTC+08:00
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       88.80 HKD = -545.20 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
 2024-06-30 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -41.30 HKD
     expenses:insurances:health
