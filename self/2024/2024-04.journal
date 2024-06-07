@@ -1,6 +1,7 @@
 include ../prelude.journal
 
 2024-04-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:education                                                          35.00 HKD = 35.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           16 966.42 HKD = 16 966.42 HKD
     assets:deferred expenses:education:tuition:universities                                10 349.50 HKD = 10 349.50 HKD
     assets:deferred expenses:insurances:health                                                125.28 HKD = 125.28 HKD
@@ -683,6 +684,7 @@ include ../prelude.journal
     expenses:depreciation
 
 2024-04-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                                       -5 087.00 HKD = 0.00 HKD
     assets:deferred expenses:insurances:health                                                       -83.98 HKD = 0.00 HKD

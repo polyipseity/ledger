@@ -1,6 +1,7 @@
 include ../prelude.journal
 
 2024-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:education                                                                 35.00 HKD = 35.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:deferred expenses:insurances:health                                                        41.30 HKD = 41.30 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 39 444.86 HKD = 39 444.86 HKD
@@ -168,6 +169,10 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    1 000.00 HKD
     assets:cash                                                       -250.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         -750.00 HKD
+
+2024-06-06 (0000178107) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:10, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       35.00 HKD
+    assets:accrued revenues:education                                  -35.00 HKD = 0.00 HKD
 
 2024-06-07 (202406070025166968d56d0e) self  ; activity: repayment, time: 00:25:17, timezone: UTC+08:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -88 _PT/D
