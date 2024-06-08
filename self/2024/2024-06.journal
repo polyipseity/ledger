@@ -170,7 +170,7 @@ include ../prelude.journal
     assets:cash                                                       -250.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         -750.00 HKD
 
-2024-06-06 (0000178107) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:10, timezone: UTC+08:00
+2024-06-06 (HD12460611662982/0000178107) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:10, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       35.00 HKD
     assets:accrued revenues:education                                  -35.00 HKD = 0.00 HKD
 
