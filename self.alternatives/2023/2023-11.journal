@@ -61,13 +61,13 @@ include ../prelude.journal
     assets:recycables                                                        -0.096 _OPL = 0.000 _OPL
     assets:recycables                                                        -0.171 _PAP = 0.000 _PAP
     assets:recycables                                                        -0.210 _PLA = 0.000 _PLA
-    equity:conversions:GREEN$-_PAP:_PAP                                       0.171 _PAP  ; rate: 0.01, rate: unit 100, recycle: all paper, time: 16:44:58, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:_PAP                                       0.171 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 16:44:58, timezone: UTC+08:00
     equity:conversions:GREEN$-_PAP:GREEN$                                      -2 GREEN$
-    equity:conversions:GREEN$-_MET:_MET                                       0.334 _MET  ; rate: 0.01, rate: unit 100, recycle: all metal, time: 16:45:56, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       0.334 _MET  ; rate: 10, rate: unit 0.1, recycle: all metal, time: 16:45:56, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                      -3 GREEN$
-    equity:conversions:GREEN$-_OPL:_OPL                                       0.096 _OPL  ; rate: 0.01, rate: unit 100, recycle: all other plastics, time: 16:46:30, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.096 _OPL  ; rate: 10, rate: unit 0.1, recycle: all other plastics, time: 16:46:30, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                       0 GREEN$
-    equity:conversions:GREEN$-_PLA:_PLA                                       0.210 _PLA  ; rate: 0.08, rate: unit 100, recycle: all plastics, time: 16:48:13, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.210 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 16:48:13, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                     -16 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
