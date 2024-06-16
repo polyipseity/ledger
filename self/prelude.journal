@@ -23,6 +23,7 @@ account assets:deferred expenses:education:tuition                              
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:deferred expenses:equipment                                                        ; type: A
 account assets:deferred expenses:equipment:consumer electronics                                   ; type: A
+account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:digital                                                                            ; type: A
