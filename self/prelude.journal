@@ -123,6 +123,7 @@ account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8           
 account liabilities:deferred revenues:incomes                                                     ; type: L
 account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
 account liabilities:friends                                                                       ; type: L
+account liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d                                  ; type: L
 account liabilities:friends:3344b973-41df-45a9-bc47-0004ed1049db                                  ; type: L
 account liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                  ; type: L
 account liabilities:friends:5e758af5-23c0-4038-b161-06757132e875                                  ; type: L
@@ -165,6 +166,7 @@ payee 02337778-bf4b-4675-be04-ea1270e22e5f
 payee 0aff10b0-6f95-4504-9478-98be64bf7f08
 payee 0d184a06-c627-4e69-b161-51b74e1a9bf9
 payee 1100f5b8-ddaa-4269-91b9-cd79d704a77b
+payee 12960c02-bcd6-4169-bc22-7c3fb14b1f5d
 payee 13fabcbb-072d-47a2-afab-cace6eb95fdb
 payee 1d056933-413d-4fd7-97b2-f58f2493baca
 payee 20b484a5-3c01-42f3-875c-e95509b3de22
@@ -204,6 +206,7 @@ payee 96da94cc-4caf-4935-92e6-409046be8486
 payee 96f69720-5471-4e88-bebe-3db7a77a086c
 payee 98bff82f-8bfc-428b-ba1d-3c7996f084b9
 payee 9da2b39f-64b4-4721-a033-b50e84a4a76d
+payee A1 Bakery
 payee Academic & Professional Book Centre
 payee Aeon
 payee Bafang Dumpling
@@ -228,6 +231,7 @@ payee Stripe
 payee Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee Sushiro
 payee Swire
+payee Tamjai Samgor
 payee Vitasoy
 payee Wellcome 2bae54dc-467f-459c-9202-5149f419152f
 payee Yamazaki
