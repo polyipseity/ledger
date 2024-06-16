@@ -639,6 +639,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 兩送套飯 + less rice, food_and_drink: 奶茶, food_and_drink: 日式蟹柳蒸水蛋 ×2
 
+2024-05-20 ! (C3Y4SI) HK Express  ; activity: transport, time: 21:38:19, timezone: UTC+08:00
+    assets:deferred expenses:transport:airplanes                 1 276.00 HKD
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 276.00 HKD = -1 276.00 HKD
+
 2024-05-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
@@ -1078,6 +1082,7 @@ include ../prelude.journal
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:deferred expenses:fees:Hong Kong Government                                              -370.00 HKD = 0.00 HKD
     assets:deferred expenses:insurances:health                                                       -41.30 HKD = 0.00 HKD
+    assets:deferred expenses:transport:airplanes                                                  -1 276.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -39 444.86 HKD = 0.00 HKD
     assets:cash                                                                                  -16 344.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -19.40 HKD = 0.00 HKD
@@ -1104,4 +1109,5 @@ include ../prelude.journal
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                      1 127.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:levy                                                      23.52 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             23 506.28 HKD = 0.00 HKD
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                       1 276.00 HKD = 0.00 HKD
     equity:opening/closing balances
