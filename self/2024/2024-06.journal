@@ -264,6 +264,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -14.70 HKD
     expenses:transport:trains
 
+2024-06-11 (9430a035-8e7b-419e-a012-329473e3e75f) c659b0a7-14e0-48a1-b268-b989de587b3c  ; activity: education, time: 11:20, timezone: UTC+08:00
+    assets:special:vouchers:Sino United Publishing    1 000.00 HKD  ; valid: 2024-06-11T11:20:00+08:00/2026-12-31T23:59:59+08:00
+    revenues:education:scholarships                                 ; reward: a33c9016-1a6e-48b5-8271-4024f2abfe22
+
 2024-06-11 (C708) Hong Kong Government  ; activity: fees, time: 12:39, timezone: UTC+08:00
     assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
     expenses:fees:Hong Kong Government                                  ; item: 32-page passport (adult)
