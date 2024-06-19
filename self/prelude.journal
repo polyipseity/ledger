@@ -155,6 +155,7 @@ account revenues:subsidies:Public Transport Fare Subsidy Scheme                 
 
 commodity 99 999 999.00 CNY  ; fullname: Renminbi
 commodity 99 999 999.00 HKD  ; fullname: Hong Kong dollars
+commodity 99 999 999.00 KRW  ; fullname: South Korean won
 commodity 99 999 999.00 USD  ; fullname: United State dollars
 commodity 99 999 999. _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 commodity 99 999 999. _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
@@ -228,6 +229,8 @@ payee Hong Kong Government
 payee Joint University Programmes Admissions System
 payee Maxim's Cakes
 payee McDonald's
+payee Mukyoku
+payee Nice to CU
 payee ParknShop
 payee Pizza Hut
 payee Rosewood
