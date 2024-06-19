@@ -364,9 +364,9 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 78.00 HKD
     expenses:gaming:credits
 
-2024-06-13 unknown  ; activity: eating, eating: lunch, time: 20:49:58, timezone: UTC+08:00
+2024-06-13 unknown  ; activity: eating, eating: dinner, time: 20:49:58, timezone: UTC+08:00
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d      -60.00 HKD = -60.00 HKD
-    expenses:food and drinks:snacks                                           ; food_and_drink: unknown
+    expenses:food and drinks:dining                                           ; food_and_drink: unknown
 
 2024-06-13 (N61346934905/HD12461329210118) 12960c02-bcd6-4169-bc22-7c3fb14b1f5d  ; activity: repayment, time: 20:53:34, timezone: UTC+08:00
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d            60.00 HKD = 0.00 HKD
@@ -468,6 +468,11 @@ include ../prelude.journal
 2024-06-19 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward, time: 20, timezone: UTC+09:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
     revenues:rewards
+
+2024-06-19 ! Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+08:00
+    expenses:food and drinks:dining                              36 000.00 KRW  ; food_and_drink: pig meat
+    expenses:food and drinks:dining                               2 250.00 KRW  ; food_and_drink: fries
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -38 250.00 KRW
 
 2024-06-19 ! 7-Eleven  ; activity: eating, eating: snacks, time: 21:13, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -4 400.00 KRW
