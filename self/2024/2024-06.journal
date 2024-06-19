@@ -469,7 +469,7 @@ include ../prelude.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
     revenues:rewards
 
-2024-06-19 ! Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+08:00
+2024-06-19 ! (0020-0001) Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+08:00
     expenses:food and drinks:dining                              36 000.00 KRW  ; food_and_drink: pig meat
     expenses:food and drinks:dining                               2 250.00 KRW  ; food_and_drink: fries
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -38 250.00 KRW
