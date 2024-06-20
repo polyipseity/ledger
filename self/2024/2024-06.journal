@@ -452,15 +452,15 @@ include ../prelude.journal
     assets:deferred expenses:transport:airplanes     -638.00 HKD = 638.00 HKD
     expenses:transport:airplanes
 
-2024-06-18 ! (664242406183100811) Mukyoku  ; activity: eating, duration: PT21M41S, eating: lunch, time: 13:08:19, timezone: UTC+09:00
+2024-06-18 * (664242406183100811) Mukyoku  ; activity: eating, duration: PT21M41S, eating: lunch, time: 13:08:19, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -9 000.00 KRW
     expenses:food and drinks:dining                                                 ; food_and_drink: fried shrimp ramen
 
-2024-06-18 ! Nice to CU  ; activity: eating, eating: lunch, time: 13:51:30, timezone: UTC+09:00
+2024-06-18 * Nice to CU  ; activity: eating, eating: lunch, time: 13:51:30, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -2 500.00 KRW
     expenses:food and drinks:dining                                                 ; food_and_drink: Sunkist lemon juice 500 mL
 
-2024-06-18 ! 7-Eleven  ; activity: eating, eating: dinner, time: 20:08, timezone: UTC+09:00
+2024-06-18 * 7-Eleven  ; activity: eating, eating: dinner, time: 20:08, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -6 900.00 KRW
     expenses:food and drinks:dining                                   4 800.00 KRW  ; food_and_drink: cup rice with beef
     expenses:food and drinks:dining                                   2 100.00 KRW  ; food_and_drink: orange juice 600 mL
@@ -469,7 +469,7 @@ include ../prelude.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
     revenues:rewards
 
-2024-06-19 ! (0020-0001) Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+08:00
+2024-06-19 ! (0020-0001) Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+09:00
     expenses:food and drinks:dining                              36 000.00 KRW  ; food_and_drink: pig meat
     expenses:food and drinks:dining                               2 250.00 KRW  ; food_and_drink: fries
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -38 250.00 KRW
@@ -489,7 +489,43 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      386.20 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-21 ! (UO 627) HK Express  ; activity: transport, duration: PT3H35M, time: 23:35, timezone: UTC+09:00
+2024-06-20 adjustment  ; activity: exchange, timezone: UTC+08:00
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     18 400. KRW = -4 400 KRW
+    equity:conversions:HKD-KRW:KRW                                   -18 400. KRW  ; rate: 0.00577826
+    equity:conversions:HKD-KRW:HKD                                     106.32 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -106.32 HKD = -106.32 HKD
+
+2024-06-20 ! (A22519824062055115B) Korail  ; activity: eating, duration: PT41M15S, eating: lunch, time: 13:48:45, timezone: UTC+09:00
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -11 000.00 KRW
+    expenses:food and drinks:dining                                                  ; food_and_drink: cream udon
+
+2024-06-20 ! (133615-0404/KTX-418) Korail  ; activity: transport, duration: PT59M, time: 14:38, timezone: UTC+09:00
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -18 275.00 KRW
+    expenses:transport:trains                                    18 275.00 KRW
+
+2024-06-20 ! (D002 3370 70B9 FFD3 / 2311) Seoul Metropolitan Subway  ; activity: transport, duration: PT15M, time: 15:51, timezone: UTC+09:00
+    expenses:transport:trains                                    1 500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                        500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                       -500.00 KRW  ; time: 16:06
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
+
+2024-06-20 ! (D002 3370 BB64 0984 / 2012) Seoul Metropolitan Subway  ; activity: transport, duration: PT15M21S, time: 20:56:39, timezone: UTC+09:00
+    expenses:transport:trains                                    1 500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                        500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                       -500.00 KRW  ; time: 21:12:00
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
+
+2024-06-20 ! (1F/15) Kyochon 1991  ; activity: eating, duration: PT45M, eating: dinner, time: 21:40, timezone: UTC+09:00
+    expenses:food and drinks:dining                                 0.00 KRW  ; food_and_drink: TODO
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7        0.00 KRW
+
+2024-06-20 ! (D002 3199 0499 3985 / 1711) Seoul Metropolitan Subway  ; activity: transport, duration: PT11M23S, time: 23:06:42, timezone: UTC+09:00
+    expenses:transport:trains                                    1 500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                        500.00 KRW
+    expenses:fees:Seoul Metropolitan Subway                       -500.00 KRW  ; time: 23:18:05
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
+
+2024-06-21 ! (UO 627) HK Express  ; activity: transport, duration: PT3H35M, time: 22:35, timezone: UTC+09:00
     assets:deferred expenses:transport:airplanes     -638.00 HKD = 0.00 HKD
     expenses:transport:airplanes
 

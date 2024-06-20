@@ -63,6 +63,9 @@ account equity:conversions:HKD-_PT/B:_PT/B                                      
 account equity:conversions:HKD-_PT/D                                                              ; type: E
 account equity:conversions:HKD-_PT/D:HKD                                                          ; type: E
 account equity:conversions:HKD-_PT/D:_PT/D                                                        ; type: E
+account equity:conversions:HKD-KRW                                                                ; type: E
+account equity:conversions:HKD-KRW:HKD                                                            ; type: E
+account equity:conversions:HKD-KRW:KRW                                                            ; type: E
 account equity:conversions:HKD-USD                                                                ; type: E
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
@@ -86,6 +89,7 @@ account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                      
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
 account expenses:fees:DBS Bank                                                                    ; type: X
 account expenses:fees:Hong Kong Government                                                        ; type: X
+account expenses:fees:Seoul Metropolitan Subway                                                   ; type: X
 account expenses:fees:Stripe                                                                      ; type: X
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
@@ -228,6 +232,8 @@ payee HK Express
 payee Holiday Inn Golden Mile, Loong Yuen
 payee Hong Kong Government
 payee Joint University Programmes Admissions System
+payee Korail
+payee Kyochon 1991
 payee Maxim's Cakes
 payee McDonald's
 payee Mukyoku
@@ -236,6 +242,7 @@ payee ParknShop
 payee Pizza Hut
 payee Rosewood
 payee Saizeriya
+payee Seoul Metropolitan Subway
 payee Starbucks
 payee Stripe
 payee Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd
