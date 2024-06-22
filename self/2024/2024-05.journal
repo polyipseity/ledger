@@ -639,7 +639,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 兩送套飯 + less rice, food_and_drink: 奶茶, food_and_drink: 日式蟹柳蒸水蛋 ×2
 
-2024-05-20 ! (C3Y4SI) HK Express  ; activity: transport, time: 21:38:19, timezone: UTC+08:00
+2024-05-20 * (C3Y4SI) HK Express  ; activity: transport, time: 21:38:19, timezone: UTC+08:00
     assets:deferred expenses:transport:airplanes                 1 276.00 HKD
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 276.00 HKD = -1 276.00 HKD
 
@@ -1062,11 +1062,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-05-31 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+2024-05-31 * Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
 
-2024-05-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-05-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:equipment:consumer electronics      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
