@@ -127,3 +127,9 @@ include ../prelude.journal
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 60 per time, rate: max 60 per day, recycle: food loss and waste, time: 18:23:32, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -60 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
+
+2024-06-24 SheepIt Render Farm  ; activity: compute, compute: GPU, duration: PT27M49S, time: 23:43:57, timezone: UTC+08:00
+    assets:digital:SheepIt Render Farm:polyipseity      1 109. _PT/A = 22 943 547 _PT/A
+    revenues:compute:SheepIt Render Farm
+    [expenses:compute:SheepIt Render Farm]                    3 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]
