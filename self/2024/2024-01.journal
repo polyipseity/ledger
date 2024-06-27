@@ -41,7 +41,7 @@ include ../prelude.journal
 
 2024-01-01 016707c8-8d24-47a5-940f-e687942b4ce8  ; PAPER STATEMENT FEE, activity: reward, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8      -50.00 HKD
-    expenses:fees:DBS Bank
+    expenses:fees:banking:DBS Bank
 
 2024-01-02 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 09:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
