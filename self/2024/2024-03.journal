@@ -637,6 +637,10 @@ include ../prelude.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        35 _PT/D = 524 _PT/D  ; valid: 2024-03-26/2025-10-31
     revenues:rewards
 
+2024-03-27 * New Jersey Institute of Technology  ; time: 02:20:42, timezone: UTC+08:00
+    assets:accrued revenues:rewards:competitions      125.00 USD
+    revenues:rewards:competitions                                 ; reward: JerseyCTF IV - 3rd Place in the Student Division
+
 2024-03-27 Sushiro  ; activity: eating, eating: lunch, time: 14, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -58.30 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: buffet
@@ -734,6 +738,7 @@ include ../prelude.journal
 2024-03-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education                                                         -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
+    assets:accrued revenues:rewards:competitions                                             -125.00 USD = 0.00 USD
     assets:cheques:certified                                                                 -625.00 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                               -10 349.50 HKD = 0.00 HKD
     assets:deferred expenses:insurances:health                                               -125.28 HKD = 0.00 HKD

@@ -3,6 +3,7 @@ include ../prelude.journal
 2024-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:education                                                                 35.00 HKD = 35.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
+    assets:accrued revenues:rewards:competitions                                                     125.00 USD = 125.00 USD
     assets:deferred expenses:fees:Hong Kong Government                                               370.00 HKD = 370.00 HKD
     assets:deferred expenses:insurances:health                                                        41.30 HKD = 41.30 HKD
     assets:deferred expenses:transport:airplanes                                                   1 276.00 HKD = 1 276.00 HKD
@@ -671,6 +672,17 @@ include ../prelude.journal
 2024-06-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
+
+2024-06-26 * New Jersey Institute of Technology  ; time: 18, timezone: UTC+08:00
+    assets:accrued revenues:rewards:competitions                  -125.00 USD = 0.00 USD
+    expenses:fees:banking                                            6.92 USD
+    equity:conversions:HKD-USD:USD                                 118.08 USD  ; rate: 7.78860
+    equity:conversions:HKD-USD:HKD                                -919.64 HKD
+    assets:loans:friends:e2613673-8956-40d9-8024-53163878b766      919.64 HKD
+
+2024-06-26 (HD12462657596068) e2613673-8956-40d9-8024-53163878b766  ; time: 19:12, timezone: UTC+08:00
+    assets:loans:friends:e2613673-8956-40d9-8024-53163878b766         -919.64 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-06-26 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       29.78 HKD

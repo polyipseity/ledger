@@ -7,6 +7,7 @@ account assets:accrued revenues:incomes:tutoring                                
 account assets:accrued revenues:insurances                                                        ; type: A
 account assets:accrued revenues:insurances:life                                                   ; type: A
 account assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              ; type: A
+account assets:accrued revenues:rewards:competitions                                              ; type: A
 account assets:banks                                                                              ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6                                         ; type: A
 account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD current                             ; type: C
@@ -47,6 +48,7 @@ account assets:loans:friends                                                    
 account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                 ; type: A
 account assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                 ; type: A
 account assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                 ; type: A
+account assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                 ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A
@@ -88,6 +90,7 @@ account expenses:education:tuition                                              
 account expenses:education:tuition:universities                                                   ; type: X
 account expenses:fees                                                                             ; type: X
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
+account expenses:fees:banking                                                                     ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
 account expenses:fees:DBS Bank                                                                    ; type: X
 account expenses:fees:Hong Kong Government                                                        ; type: X
@@ -157,6 +160,7 @@ account revenues:insurances                                                     
 account revenues:insurances:life                                                                  ; type: R
 account revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: R
 account revenues:interests                                                                        ; type: R
+account revenues:rewards:competitions                                                             ; type: R
 account revenues:special                                                                          ; type: R
 account revenues:subsidies                                                                        ; type: R
 account revenues:subsidies:Public Transport Fare Subsidy Scheme                                   ; type: R
@@ -236,6 +240,7 @@ payee Grill de Woowa
 payee HK Express
 payee Holiday Inn Golden Mile, Loong Yuen
 payee Hong Kong Government
+payee New Jersey Institute of Technology
 payee Joint University Programmes Admissions System
 payee KFC
 payee Korail
@@ -274,6 +279,7 @@ payee c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f
 payee d43f45a7-5dda-4f56-b441-c82b76b743c6
 payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
 payee dfd2814d-d498-4b66-9a46-9c06aa74f635
+payee e2613673-8956-40d9-8024-53163878b766
 payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee ef234023-8df0-4705-bb73-cd9b194a5b92
