@@ -748,7 +748,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     expenses:services:cloud storages:Apple
 
-2024-06-30 (599731) Google  ; activity: service, time: 00:26:04, timezone: UTC+08:00
+2024-06-30 (599731/SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:04, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -3.80 HKD
     expenses:services:cloud storages:Google
 
