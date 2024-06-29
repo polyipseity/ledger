@@ -740,6 +740,22 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
+2024-06-29 (FRN20240629PAYD0101756689906) self  ; activity: transfer, time: 23:55:07, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-06-30 (769336) Apple  ; activity: service, time: 00:01:30, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+    expenses:services:cloud storages:Apple
+
+2024-06-30 (599731) Google  ; activity: service, time: 00:26:04, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -3.80 HKD
+    expenses:services:cloud storages:Google
+
+2024-06-30 (FRN20240630PAYD0101756730319) self  ; activity: transfer, time: 00:30:43, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
 2024-06-30 ! Blue Cross Insurance  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:insurances:health      -41.30 HKD
     expenses:insurances:health

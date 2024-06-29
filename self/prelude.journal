@@ -114,6 +114,9 @@ account expenses:insurances:life                                                
 account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: X
 account expenses:maintenance                                                                      ; type: X
 account expenses:services                                                                         ; type: X
+account expenses:services:cloud storages                                                          ; type: X
+account expenses:services:cloud storages:Apple                                                    ; type: X
+account expenses:services:cloud storages:Google                                                   ; type: X
 account expenses:special                                                                          ; type: X
 account expenses:special:gifts                                                                    ; type: X
 account expenses:transport                                                                        ; type: X
@@ -227,6 +230,7 @@ payee 9da2b39f-64b4-4721-a033-b50e84a4a76d
 payee A1 Bakery
 payee Academic & Professional Book Centre
 payee Aeon
+payee Apple
 payee Bafang Dumpling
 payee Blue Cross Insurance
 payee Circle K
@@ -236,6 +240,7 @@ payee Frontline Solvers
 payee Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee G2000
 payee Genki
+payee Google
 payee Grill de Woowa
 payee HK Express
 payee Holiday Inn Golden Mile, Loong Yuen
