@@ -744,7 +744,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-30 (769336) Apple  ; activity: service, time: 00:01:30, timezone: UTC+08:00
+2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:30, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     expenses:services:cloud storages:Apple
 
