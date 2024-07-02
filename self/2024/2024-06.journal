@@ -744,6 +744,14 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
+2024-06-30 ! f85da078-1fe9-42ae-b9d6-f2d47e62a19d  ; activity: tutoring, duration: PT1H25M, time: 10:10:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:tutoring      420.00 HKD
+    revenues:incomes:tutoring
+
+2024-06-30 (0100496668) Starbucks  ; activity: eating, eating: breakfast, time: 10:13:19, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: Mocha; venti (20 fl oz)
+
 2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:30, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     expenses:services:cloud storages:Apple
