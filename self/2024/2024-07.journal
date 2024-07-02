@@ -35,6 +35,26 @@ include ../prelude.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                              -73 975.00 KRW = -73 975.00 KRW
     equity:opening/closing balances
 
+2024-07-01 (11325256) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT24M56S, eating: breakfast, time: 11:04:04, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 茄香肉碎濃湯通粉 + 即食麵
+
+2024-07-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:42, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-07-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:22, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-07-02 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, duration: PT12M3S, eating: breakfast, time: 09:47:57, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: baked fried tomato, food_and_drink: hash brown, food_and_drink: hot chocolate, food_and_drink: mushroom (V), food_and_drink: scrambled egg
+
+2024-07-02 (082-2239) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:11:20, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 忌廉湯, food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉
+
 2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     expenses:services:cloud storages:Apple
