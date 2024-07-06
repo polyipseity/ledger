@@ -660,7 +660,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-05-20 ! Airbnb  ; activity: consumption, timezone: UTC+08:00
+2024-05-20 * Airbnb  ; activity: consumption, timezone: UTC+08:00
     assets:deferred expenses:accommodations                        99.82 HKD
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766      -99.82 HKD
 
@@ -1086,6 +1086,7 @@ include ../prelude.journal
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accrued revenues:rewards:competitions                                                    -125.00 USD = 0.00 USD
+    assets:deferred expenses:accommodations                                                          -99.82 HKD = 0.00 HKD
     assets:deferred expenses:fees:Hong Kong Government                                              -370.00 HKD = 0.00 HKD
     assets:deferred expenses:insurances:health                                                       -41.30 HKD = 0.00 HKD
     assets:deferred expenses:transport:airplanes                                                  -1 276.00 HKD = 0.00 HKD

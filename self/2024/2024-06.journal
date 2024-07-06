@@ -4,6 +4,7 @@ include ../prelude.journal
     assets:accrued revenues:education                                                                 35.00 HKD = 35.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:accrued revenues:rewards:competitions                                                     125.00 USD = 125.00 USD
+    assets:deferred expenses:accommodations                                                           99.82 HKD = 99.82 HKD
     assets:deferred expenses:fees:Hong Kong Government                                               370.00 HKD = 370.00 HKD
     assets:deferred expenses:insurances:health                                                        41.30 HKD = 41.30 HKD
     assets:deferred expenses:transport:airplanes                                                   1 276.00 HKD = 1 276.00 HKD
@@ -536,6 +537,10 @@ include ../prelude.journal
 2024-06-21 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward, timezone: UTC+09:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         1 _PT/D  ; valid: 2023-12-21/2025-10-31
     revenues:rewards
+
+2024-06-21 ! Airbnb  ; activity: consumption, time: 11, timezone: UTC+08:00
+    expenses:accommodations
+    assets:deferred expenses:accommodations      -99.82 HKD = 0.00 HKD
 
 2024-06-21 ! unknown  ; activity: eating, duration: PT24M, time: 11:30, timezone: UTC+09:00
     expenses:food and drinks:dining                              14 000.00 KRW  ; food_and_drink: ramen
