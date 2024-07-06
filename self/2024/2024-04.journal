@@ -238,7 +238,7 @@ include ../prelude.journal
 
 2024-04-12 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 17, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-12 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 17:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
@@ -286,11 +286,11 @@ include ../prelude.journal
 
 2024-04-15 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 20:54, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-15 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 21:30, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-15 (FRN20240415PAYD0101610493303) self  ; activity: transfer, time: 21:49:32, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -359,23 +359,23 @@ include ../prelude.journal
 
 2024-04-17 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 21:00, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-17 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 21:20, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-17 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 21:40, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-17 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 22:00, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-17 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 22:20, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 2.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-17 Don Don: Donki  ; activity: eating, eating: snacks, time: 22:44, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -10.00 HKD
@@ -552,11 +552,11 @@ include ../prelude.journal
 
 2024-04-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 19:30, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 96.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, time: 19:55, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
-    expenses:gaming:credits
+    expenses:gaming:maimai
 
 2024-04-24 (N42400456643/HD12442409399440) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:10:15, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            10.00 HKD = 0.00 HKD

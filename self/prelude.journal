@@ -106,7 +106,7 @@ account expenses:food and drinks:fruits                                         
 account expenses:food and drinks:snacks                                                           ; type: X
 account expenses:food and drinks:water                                                            ; type: X
 account expenses:gaming                                                                           ; type: X
-account expenses:gaming:credits                                                                   ; type: X
+account expenses:gaming:maimai                                                                    ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
 account expenses:insurances                                                                       ; type: X
