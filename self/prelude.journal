@@ -29,6 +29,8 @@ account assets:deferred expenses:insurances                                     
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:deferred expenses:transport:airplanes                                              ; type: A
 account assets:digital                                                                            ; type: A
+account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719                                       ; type: A
+account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9  ; type: A
 account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1  ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd                                       ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f  ; type: A

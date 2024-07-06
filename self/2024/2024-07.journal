@@ -116,6 +116,51 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -4.1 HKD
     expenses:transport:buses
 
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 14:41:30, timezone: UTC+08:00
+    assets:cash                                                                                   -30.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9            0.00
+    expenses:fees                                                                                             ; item: assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 14:41:30, timezone: UTC+08:00
+    assets:cash        -20.00 HKD
+    expenses:fees                  ; item: assets:digital:Aime:1a496985-8b6f-4878-8dae-e79629778e21
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 14:41:50, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       50.00 HKD = 50.00 HKD
+    assets:cash
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 15:36, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT16M, time: 15:52, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:11, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 16:29, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:46, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 17:14, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 17:31, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:credits
+
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 17:50, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD = 2.00 HKD
+    expenses:gaming:credits
+
 2024-07-04 McDonald's  ; activity: eating, eating: dinner, time: 17:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 雙層芒果新地
