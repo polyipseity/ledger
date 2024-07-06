@@ -248,7 +248,7 @@ include ../prelude.journal
     assets:cash                                                  2 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2024-06-10 (57C0) self  ; QDM CASH DEP (10JUN24), activity: transfer, time: 11:53:40, timezone: UTC+08:00
+2024-06-10 (57C0) 3833b42e-dad3-425c-b254-904be68993e4  ; QDM CASH DEP (10JUN24), activity: transfer, time: 11:53:40, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    2 000.00 HKD
     assets:cash
 
@@ -744,8 +744,8 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-30 ! f85da078-1fe9-42ae-b9d6-f2d47e62a19d  ; activity: tutoring, duration: PT1H25M, time: 10:10:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:tutoring      420.00 HKD
+2024-06-30 * f85da078-1fe9-42ae-b9d6-f2d47e62a19d  ; activity: tutoring, duration: PT1H25M, time: 10:10:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:tutoring      390.00 HKD
     revenues:incomes:tutoring
 
 2024-06-30 (0100496668) Starbucks  ; activity: eating, eating: breakfast, time: 10:13:19, timezone: UTC+08:00
@@ -781,7 +781,7 @@ include ../prelude.journal
     expenses:depreciation
 
 2024-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:incomes:tutoring                                                 -420.00 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:tutoring                                                 -390.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -37 720.32 HKD = 0.00 HKD
     assets:cash                                                                           -16 342.00 HKD = 0.00 HKD
