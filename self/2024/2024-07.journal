@@ -131,35 +131,35 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       50.00 HKD = 50.00 HKD
     assets:cash
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 15:36, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 14:42, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT16M, time: 15:52, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT16M, time: 14:52, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:11, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 15:11, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 16:29, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 15:29, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:46, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 15:46, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 17:14, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:14, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 17:31, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 16:31, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
     expenses:gaming:maimai
 
-2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 17:50, timezone: UTC+08:00
+2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 16:50, timezone: UTC+08:00
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD = 2.00 HKD
     expenses:gaming:maimai
 
@@ -182,6 +182,62 @@ include ../prelude.journal
 2024-07-06 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.00 HKD
     expenses:transport:trains
+
+2024-07-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 14:57, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.50 HKD
+    expenses:transport:trains
+
+2024-07-08 ! (c24e04b3-f889-4f63-9fcc-993cb9aaa908) Hong Kong Government  ; activity: fees, time: 15:21:30, timezone: UTC+08:00
+    assets:cash                                            -370.00 HKD
+    assets:deferred expenses:fees:Hong Kong Government                  ; item: HKID card (adult)
+
+2024-07-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:09, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+    expenses:transport:trains
+
+2024-07-08 (4A61) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (08JUL24), activity: withdraw, time: 16:15:50, timezone: UTC+08:00
+    assets:cash                                                        100.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 16:23:47, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9      120.00 HKD = 122.00 HKD
+    assets:cash
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 16:28, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 16:49, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT11M, time: 17:12, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT11M, time: 17:32, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT9M, time: 17:51, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 18:05, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD = 86.00 HKD
+    expenses:gaming:maimai
+
+2024-07-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 18:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
+2024-07-08 Circle K  ; activity: eating, eating: snacks, time: 19:00:45, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.00 HKD
+    expenses:food and drinks:snacks                                                    ; food_and_drink: Vita™ Zero Sugar Lemon Tea Drink (500 mL)
+
+2024-07-17 ! Hong Kong Government  ; activity: fees, timezone: UTC+08:00
+    assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
+    expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
 
 2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
