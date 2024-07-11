@@ -8,6 +8,7 @@ include ../prelude.journal
     assets:equipment:clothing                  -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:equipment:clothing                  -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
     assets:equipment:clothing                  -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
-    assets:equipment:consumer electronics       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:equipment:consumer electronics        0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     assets:equipment:tools                    -333.34 KRW  ; item: Leopold wire keycap remover
+    assets:equipment:consumer electronics       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation

@@ -235,6 +235,82 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.00 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: Vita™ Zero Sugar Lemon Tea Drink (500 mL)
 
+2024-07-09 (41041662) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M34S, eating: breakfast, time: 08:17:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2024-07-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:52, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-07-09 self  ; activity: transfer, time: 09:26:05, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-07-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-07-09 (11/116173) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 12:58:05 timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: 五香肉丁蒸水蛋 ×2, food_and_drink: 兩送套飯 + less rice
+
+2024-07-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:09, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-07-09 self  ; activity: wear, time: 17, timezone: UTC+08:00
+    assets:equipment:consumer electronics       -9.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    expenses:depreciation:wear
+
+2024-07-09 Aeon  ; activity: consumption, time: 17:17:05, timezone: UTC+08:00
+    assets:equipment:consumer electronics                                   12.00 HKD  ; depreciation: straight-line@P1Y, item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL), residual: 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2024-07-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:14, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
+    expenses:transport:buses
+
+2024-07-09 (5874F7/7650) McDonald's  ; activity: eating, eating: dinner, time: 19:12:11, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+
+2024-07-09 Swire  ; activity: eating, eating: snacks, time: 23:29:30, timezone: UTC+08:00, via: COKE+ vending machine
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.00 HKD
+    expenses:food and drinks:snacks                                                    ; food_and_drink: NESCAFÉ Coffee Beverage Regular 250 mL
+
+2024-07-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-07-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 00:17, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+    expenses:transport:buses
+
+2024-07-10 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 18:14:33, timezone: UTC+08:00
+    assets:cash                                                    -10.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
+
+2024-07-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:06, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-07-11 self  ; activity: transfer, time: 09:36:01, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-07-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:36, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-07-11 (081-1748) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 12:34:35, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 煙肉焗薯, food_and_drink: 酸忌廉, food_and_drink: 青菜沙律
+
+2024-07-11 (5874F6/8840) McDonald's  ; activity: eating, eating: dinner, time: 17:08:02, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+
 2024-07-17 ! Hong Kong Government  ; activity: fees, timezone: UTC+08:00
     assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
     expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
@@ -255,6 +331,7 @@ include ../prelude.journal
     assets:equipment:clothing                  -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:equipment:clothing                  -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
     assets:equipment:clothing                  -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
-    assets:equipment:consumer electronics       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:equipment:consumer electronics        0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     assets:equipment:tools                    -333.33 KRW  ; item: Leopold wire keycap remover
+    assets:equipment:consumer electronics       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation
