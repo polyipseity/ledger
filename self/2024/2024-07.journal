@@ -75,7 +75,7 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-07-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:52, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -2.6 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
 2024-07-03 (082-2362) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 16:09:19, timezone: UTC+08:00
@@ -91,7 +91,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2024-07-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:42, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -5.5 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
 2024-07-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:52, timezone: UTC+08:00
@@ -99,7 +99,7 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-07-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:32, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -2.6 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
 2024-07-04 (1K4#672) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 12:39:06, timezone: UTC+08:00
@@ -115,7 +115,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-07-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:45, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -4.1 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
     expenses:transport:buses
 
 2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 14:41:30, timezone: UTC+08:00
