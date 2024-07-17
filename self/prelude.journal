@@ -17,6 +17,7 @@ account assets:cheques                                                          
 account assets:cheques:certified                                                                  ; type: C
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
+account assets:deferred expenses:activites                                                        ; type: A
 account assets:deferred expenses:maintenance                                                      ; type: A
 account assets:deferred expenses:education                                                        ; type: A
 account assets:deferred expenses:education:books                                                  ; type: A
@@ -84,6 +85,7 @@ account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4               
 account equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
 account expenses:accommodations:universities                                                      ; type: X
+account expenses:activites                                                                        ; type: X
 account expenses:consumption                                                                      ; type: X
 account expenses:consumption:softwares                                                            ; type: X
 account expenses:education                                                                        ; type: X
@@ -130,6 +132,7 @@ account expenses:transport:minibuses                                            
 account expenses:transport:taxis                                                                  ; type: X
 account expenses:transport:trains                                                                 ; type: X
 account expenses:transport:trams                                                                  ; type: X
+account liabilities:accrued expenses:activites                                                    ; type: L
 account liabilities:accrued expenses:education                                                    ; type: L
 account liabilities:accrued expenses:insurances                                                   ; type: L
 account liabilities:accrued expenses:insurances:levy                                              ; type: L
@@ -221,12 +224,14 @@ payee 7fc76083-5175-421d-8c6f-d15897b5ee8e
 payee 810c451f-b2e5-4c98-8433-b1451593c457
 payee 82050afc-aac6-41aa-8066-d436a2c5434d
 payee 82de8d96-c247-49eb-9bd7-87b00f16d25c
+payee 83282154-a569-4443-8df3-675a5a48e4a2
 payee 88e71e74-7f85-4a0a-ab31-ecab094622a5
 payee 8e88d2b4-d2f8-431f-a5e9-1179456eb344
 payee 937f7345-cbe9-48d1-9746-d79fd001d2a6
 payee 93e360c4-2428-4e2c-969d-6b1a3a7e127f
 payee 96da94cc-4caf-4935-92e6-409046be8486
 payee 96f69720-5471-4e88-bebe-3db7a77a086c
+payee 97a86b8c-ba7b-4285-b5d5-58016fb17bda
 payee 98bff82f-8bfc-428b-ba1d-3c7996f084b9
 payee 9da2b39f-64b4-4721-a033-b50e84a4a76d
 payee A1 Bakery
@@ -287,6 +292,7 @@ payee c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f
 payee d43f45a7-5dda-4f56-b441-c82b76b743c6
 payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
 payee dfd2814d-d498-4b66-9a46-9c06aa74f635
+payee dfde1439-813b-4eb6-b7a0-a2a1cc30b714
 payee e2613673-8956-40d9-8024-53163878b766
 payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
