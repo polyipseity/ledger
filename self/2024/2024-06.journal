@@ -90,11 +90,11 @@ include ../prelude.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 16:02:28, timezone: UTC+08:00
 
-2024-06-03 (FRN20240603PAYD0101703849909) self  ; activity: transfer, time: 13:01:40, timezone: UTC+08:00, via: eDDA
+2024-06-03 (FRN20240603PAYD0101703849909) self  ; activity: transfer, time: 13:01:38, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-03 self  ; activity: transfer, time: 13:01:44, timezone: UTC+08:00
+2024-06-03 self  ; activity: transfer, time: 13:01:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
@@ -387,11 +387,11 @@ include ../prelude.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7         1 440.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-15 (FRN20240615PAYD0101729429086) self  ; activity: transfer, time: 19:45:40, timezone: UTC+08:00, via: eDDA
+2024-06-15 (FRN20240615PAYD0101729429086) self  ; activity: transfer, time: 19:45:35, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-15 self  ; activity: transfer, time: 19:45:55, timezone: UTC+08:00
+2024-06-15 self  ; activity: transfer, time: 19:45:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
@@ -698,7 +698,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-06-27 (FRN20240627PAYD0101750768080) self  ; activity: transfer, time: 08:46:08, timezone: UTC+08:00, via: eDDA
+2024-06-27 (FRN20240627PAYD0101750768080) self  ; activity: transfer, time: 08:46:10, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        400.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -758,15 +758,15 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Mocha; venti (20 fl oz)
 
-2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:30, timezone: UTC+08:00
+2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     expenses:services:cloud storages:Apple
 
-2024-06-30 (599731/SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:04, timezone: UTC+08:00
+2024-06-30 (599731/SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:03, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -3.80 HKD
     expenses:services:cloud storages:Google
 
-2024-06-30 (FRN20240630PAYD0101756730319) self  ; activity: transfer, time: 00:30:43, timezone: UTC+08:00, via: eDDA
+2024-06-30 (FRN20240630PAYD0101756730319) self  ; activity: transfer, time: 00:30:42, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
