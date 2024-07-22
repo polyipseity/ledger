@@ -28,6 +28,9 @@ account assets:deferred expenses:equipment:consumer electronics                 
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
+account assets:deferred expenses:services:clouds                                                  ; type: A
+account assets:deferred expenses:services:clouds:Apple                                            ; type: A
+account assets:deferred expenses:services:clouds:Google                                           ; type: A
 account assets:deferred expenses:transport:airplanes                                              ; type: A
 account assets:digital                                                                            ; type: A
 account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719                                       ; type: A

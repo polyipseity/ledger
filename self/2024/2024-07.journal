@@ -5,6 +5,8 @@ include ../prelude.journal
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           16 966.42 HKD = 16 966.42 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                          37 720.32 HKD = 37 720.32 HKD
     assets:cash                                                                            16 342.00 HKD = 16 342.00 HKD
+    assets:deferred expenses:services:clouds:Apple                                              8.00 HKD = 8.00 HKD
+    assets:deferred expenses:services:clouds:Google                                             3.80 HKD = 3.80 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                               188.20 HKD = 188.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         231.80 HKD = 231.80 HKD
     assets:equipment:clothing                                                                 532.25 HKD = 532.25 HKD
@@ -516,12 +518,20 @@ include ../prelude.journal
     expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
 
 2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 0.00 HKD
     expenses:services:clouds:Apple
+
+2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+    assets:deferred expenses:services:clouds:Apple                     8.00 HKD = 8.00 HKD
+
+2024-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Google       -3.80 HKD = 0.00 HKD
+    expenses:services:clouds:Google
 
 2024-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
-    expenses:services:clouds:Google
+    assets:deferred expenses:services:clouds:Google                  150.00 HKD = 150.00 HKD
 
 2024-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
