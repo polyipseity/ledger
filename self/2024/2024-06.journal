@@ -760,11 +760,11 @@ include ../prelude.journal
 
 2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
-    expenses:services:cloud storages:Apple
+    expenses:services:clouds:Apple
 
 2024-06-30 (599731/SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:03, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -3.80 HKD
-    expenses:services:cloud storages:Google
+    expenses:services:clouds:Google
 
 2024-06-30 (FRN20240630PAYD0101756730319) self  ; activity: transfer, time: 00:30:42, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        100.00 HKD
