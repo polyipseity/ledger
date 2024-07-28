@@ -585,7 +585,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
-2024-07-25 ! Hong Kong Government  ; activity: fees, timezone: UTC+08:00
+2024-07-30 ! Hong Kong Government  ; activity: fees, timezone: UTC+08:00
     assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
     expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
 
