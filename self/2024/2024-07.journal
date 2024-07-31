@@ -745,10 +745,6 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.90 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: sparkling graph juice 500 mL
 
-2024-07-30 ! Hong Kong Government  ; activity: fees, timezone: UTC+08:00
-    assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
-    expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
-
 2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 0.00 HKD
     expenses:services:clouds:Apple
@@ -764,6 +760,10 @@ include ../prelude.journal
 2024-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
     assets:deferred expenses:services:clouds:Google                  150.00 HKD = 150.00 HKD
+
+2024-07-31 * Hong Kong Government  ; activity: fees, time: 15:46:10, timezone: UTC+08:00
+    assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
+    expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
 
 2024-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
