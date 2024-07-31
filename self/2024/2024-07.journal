@@ -745,6 +745,50 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.90 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: sparkling graph juice 500 mL
 
+2024-07-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:38, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
+2024-07-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:17, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
+2024-07-30 (41048917) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT19M54S, eating: breakfast, time: 08:28:06, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: preserved vegetable, food_and_drink: rice vermicelli in soup, food_and_drink: shredded pork
+
+2024-07-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:02, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+    expenses:transport:buses
+
+2024-07-30 (FRN20240730PAYD0101816535863) self  ; activity: transfer, time: 09:43:20, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-07-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-07-30 self  ; activity: transfer, time: 09:43:30, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-07-30 (11/119754) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 12:33:53, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 兩送套飯 + 少飯, food_and_drink: 肉崧蒸水蛋 ×2
+
+2024-07-30 (082-2809) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:42:40, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉, food_and_drink: 迷你雙層沙律三文治
+
+2024-07-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:05, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-07-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:32, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+    expenses:transport:buses
+
 2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 0.00 HKD
     expenses:services:clouds:Apple
@@ -761,9 +805,25 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
     assets:deferred expenses:services:clouds:Google                  150.00 HKD = 150.00 HKD
 
+2024-07-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 15:21, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.50 HKD
+    expenses:transport:trains
+
 2024-07-31 * Hong Kong Government  ; activity: fees, time: 15:46:10, timezone: UTC+08:00
     assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
     expenses:fees:Hong Kong Government                                  ; item: HKID card (adult)
+
+2024-07-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:16, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+    expenses:transport:trains
+
+2024-07-31 (017782) Super Super Congee & Noodles  ; activity: eating, eating: dinner, time: 16:33, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: noodles, food_and_drink: red bean fleecy, food_and_drink: shrimp wonton (light portion), food_and_drink: value tea set
+
+2024-07-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:26, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
 
 2024-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
