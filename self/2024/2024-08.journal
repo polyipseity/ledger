@@ -1,5 +1,13 @@
 include ../prelude.journal
 
+2024-08-29 ! Apple  ; activity: service, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+    assets:deferred expenses:services:clouds:Apple                     8.00 HKD
+
+2024-08-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple       -8.00 HKD
+    expenses:services:clouds:Apple
+
 2024-08-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass

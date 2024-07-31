@@ -745,6 +745,14 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.90 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: sparkling graph juice 500 mL
 
+2024-07-29 * (939789/SOP.3336-8963-3580-77782..0) Google  ; activity: service, time: 00:25:56, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
+    assets:deferred expenses:services:clouds:Google                  150.00 HKD = 153.80 HKD
+
+2024-07-29 * (761425/MKB7G6HWZ6) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+    assets:deferred expenses:services:clouds:Apple                     8.00 HKD = 16.00 HKD
+
 2024-07-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
@@ -752,6 +760,14 @@ include ../prelude.journal
 2024-07-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
+
+2024-07-30 * Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 8.00 HKD
+    expenses:services:clouds:Apple
+
+2024-07-30 * Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Google       -3.80 HKD = 150.00 HKD
+    expenses:services:clouds:Google
 
 2024-07-30 (41048917) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT19M54S, eating: breakfast, time: 08:28:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
@@ -788,22 +804,6 @@ include ../prelude.journal
 2024-07-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:32, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
-
-2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
-    assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 0.00 HKD
-    expenses:services:clouds:Apple
-
-2024-07-30 ! Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
-    assets:deferred expenses:services:clouds:Apple                     8.00 HKD = 8.00 HKD
-
-2024-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
-    assets:deferred expenses:services:clouds:Google       -3.80 HKD = 0.00 HKD
-    expenses:services:clouds:Google
-
-2024-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
-    assets:deferred expenses:services:clouds:Google                  150.00 HKD = 150.00 HKD
 
 2024-07-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 15:21, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.50 HKD
