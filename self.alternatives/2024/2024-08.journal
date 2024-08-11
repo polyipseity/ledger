@@ -33,3 +33,19 @@ include ../prelude.journal
     equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 09:43:46, timezone: UTC+08:00
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$ = 6 768 GREEN$
+
+2024-08-10 self  ; activity: collect, duration: -P13D, time: 18:30, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:education    -12.800 _PAP
+    assets:recycables
+
+2024-08-10 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT9S, time: 18:51:26, timezone: UTC+08:00
+    assets:recycables                                                       -12.800 _PAP = 0.000 _PAP
+    equity:conversions:GREEN$-_PAP:_PAP                                      12.800 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 18:51:26, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:GREEN$                                    -128 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704      128 GREEN$ = 6 896 GREEN$
+
+2024-08-10 GREEN@self-service  ; activity: recycle, time: 23:58:22, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -1.000 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       1.000 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 23:58:22, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$ = 6 946 GREEN$
