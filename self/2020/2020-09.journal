@@ -7,7 +7,7 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    -47 012.56 HKD = -47 012.56 HKD
     equity:opening/closing balances
 
-2020-09-27 * 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, timezone: UTC+08:00
+2020-09-27 * (d2926e7a-1f12-4194-92be-978768d964a7) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            52.00 HKD = 101.00 HKD
     revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                          -52.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
