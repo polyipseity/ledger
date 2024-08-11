@@ -1,2 +1,2 @@
 @echo off
-python "./format.py" %*
+python -m "format" %*

@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-python './replace.py' "$@"
+python -m 'replace' "$@"

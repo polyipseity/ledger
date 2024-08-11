@@ -1,2 +1,2 @@
 @echo off
-python "./shift.py" %*
+python -m "shift" %*

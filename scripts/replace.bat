@@ -1,2 +1,2 @@
 @echo off
-python "./replace.py" %*
+python -m "replace" %*
