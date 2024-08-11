@@ -121,12 +121,12 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 14:41:30, timezone: UTC+08:00
-    assets:cash                                                                                   -30.00 HKD
+    assets:cash                                                                                   -20.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9            0.00
     expenses:fees                                                                                             ; item: assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9
 
 2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 14:41:30, timezone: UTC+08:00
-    assets:cash        -20.00 HKD
+    assets:cash        -30.00 HKD
     expenses:fees                  ; item: assets:digital:Aime:1a496985-8b6f-4878-8dae-e79629778e21
 
 2024-07-04 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 14:41:50, timezone: UTC+08:00
