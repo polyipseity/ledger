@@ -2,6 +2,7 @@ include ../prelude.journal
 
 2024-02-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:education                                                                 35.00 HKD = 35.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:accrued revenues:rewards                                                                  625.00 HKD = 625.00 HKD
     assets:deferred expenses:education:tuition:universities                                       20 874.50 HKD = 20 874.50 HKD
@@ -26,10 +27,12 @@ include ../prelude.journal
     equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
     equity:kins                                                                                      -90.00 HKD = -90.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -41 256.05 HKD = -41 256.05 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -58 528.05 HKD = -58 528.05 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                       -527.00 HKD = -527.00 HKD
     liabilities:accrued expenses:insurances:levy                                                     -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -47 498.00 HKD = -47 498.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -23 506.28 HKD = -23 506.28 HKD
+    equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
     equity:opening/closing balances
 
 2024-02-01 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 14:16, timezone: UTC+08:00
@@ -648,6 +651,7 @@ include ../prelude.journal
 
 2024-02-29 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accrued revenues:rewards                                                                 -625.00 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                                      -15 787.50 HKD = 0.00 HKD
@@ -673,8 +677,10 @@ include ../prelude.journal
     equity:kins                                                                                    4 500.00 CNY = 0.00 CNY
     equity:kins                                                                                       90.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -4 500.00 CNY = 0.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     41 646.05 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     58 918.05 HKD = 0.0 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                        527.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:levy                                                      23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             47 498.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             23 506.28 HKD = 0.00 HKD
+    equity:unaccounted                                                                            13 400.03 HKD = 0.00 HKD
     equity:opening/closing balances

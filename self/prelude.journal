@@ -6,6 +6,7 @@ account assets:accrued revenues:incomes                                         
 account assets:accrued revenues:incomes:tutoring                                                  ; type: A
 account assets:accrued revenues:insurances                                                        ; type: A
 account assets:accrued revenues:insurances:life                                                   ; type: A
+account assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              ; type: A
 account assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              ; type: A
 account assets:accrued revenues:rewards:competitions                                              ; type: A
 account assets:banks                                                                              ; type: A
@@ -28,6 +29,8 @@ account assets:deferred expenses:equipment:consumer electronics                 
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
+account assets:deferred expenses:insurances:life                                                  ; type: A
+account assets:deferred expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             ; type: A
 account assets:deferred expenses:services:clouds                                                  ; type: A
 account assets:deferred expenses:services:clouds:Apple                                            ; type: A
 account assets:deferred expenses:services:clouds:Google                                           ; type: A
@@ -119,6 +122,7 @@ account expenses:insurances                                                     
 account expenses:insurances:health                                                                ; type: X
 account expenses:insurances:levy                                                                  ; type: X
 account expenses:insurances:life                                                                  ; type: X
+account expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                             ; type: X
 account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: X
 account expenses:maintenance                                                                      ; type: X
 account expenses:services                                                                         ; type: X
@@ -141,6 +145,7 @@ account liabilities:accrued expenses:education                                  
 account liabilities:accrued expenses:insurances                                                   ; type: L
 account liabilities:accrued expenses:insurances:levy                                              ; type: L
 account liabilities:accrued expenses:insurances:life                                              ; type: L
+account liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25         ; type: L
 account liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         ; type: L
 account liabilities:credit cards                                                                  ; type: L
 account liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                             ; type: L
@@ -171,6 +176,7 @@ account revenues:incomes:bonuses                                                
 account revenues:incomes:tutoring                                                                 ; type: R
 account revenues:insurances                                                                       ; type: R
 account revenues:insurances:life                                                                  ; type: R
+account revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                             ; type: R
 account revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: R
 account revenues:interests                                                                        ; type: R
 account revenues:rewards:competitions                                                             ; type: R

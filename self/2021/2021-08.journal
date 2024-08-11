@@ -1,0 +1,21 @@
+include ../prelude.journal
+
+2021-08-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             101.00 HKD = 101.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            -21 965.35 HKD = -21 965.35 HKD
+    liabilities:accrued expenses:insurances:levy                                             -41.16 HKD = -41.16 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25    -60 452.00 HKD = -60 452.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    -41 135.99 HKD = -41 135.99 HKD
+    equity:opening/closing balances
+
+2021-08-27 * (35877ca7-a5cf-4a9a-b832-6bc2e764ced4/7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, timezone: UTC+08:00
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25    4 318.00 HKD = -56 134.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
+
+2021-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -101.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            26 283.35 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                             41.16 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25    56 134.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    41 135.99 HKD = 0.00 HKD
+    equity:opening/closing balances
