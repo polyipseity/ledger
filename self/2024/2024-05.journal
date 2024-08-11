@@ -2,7 +2,7 @@ include ../prelude.journal
 
 2024-05-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:education                                                                 35.00 HKD = 35.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                     800.00 HKD = 800.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:accrued revenues:rewards:competitions                                                     125.00 USD = 125.00 USD
     assets:deferred expenses:education:tuition:universities                                        5 087.00 HKD = 5 087.00 HKD
@@ -1087,7 +1087,7 @@ include ../prelude.journal
 
 2024-05-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accrued revenues:rewards:competitions                                                    -125.00 USD = 0.00 USD
     assets:deferred expenses:accommodations                                                          -99.82 HKD = 0.00 HKD

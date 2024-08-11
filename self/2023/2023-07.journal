@@ -2,7 +2,6 @@ include ../prelude.journal
 
 2023-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:tutoring                                                 960.00 HKD = 960 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             800.00 HKD = 800.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           7 316.00 HKD = 7 316.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         13 404.63 HKD = 13 404.63 HKD
     assets:cash                                                                           20 035.00 HKD = 20 035.00 HKD
@@ -193,7 +192,6 @@ include ../prelude.journal
 
 2023-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:incomes:tutoring                                                -960.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -7 316.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                        -33 438.32 HKD = 0.00 HKD
     assets:cash                                                                          -22 635.00 HKD = 0.00 HKD
