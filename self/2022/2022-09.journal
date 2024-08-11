@@ -1,22 +1,22 @@
 include ../prelude.journal
 
 2022-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          16 871.04 HKD = 16 871.04 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           2 818.00 HKD = 2 818.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            -23 529.80 HKD = -23 529.80 HKD
     liabilities:accrued expenses:insurances:levy                                             -35.28 HKD = -35.28 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    -35 259.42 HKD = -35 259.42 HKD
     equity:opening/closing balances
 
 2022-09-27 * 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, timezone: UTC+08:00
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
-    liabilities:accrued expenses:insurances:levy                                             5.88 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            47.68 HKD
-    revenues:interests                                                                     -47.68 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          4 498.00 HKD = 7 316.00 HKD
+    revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                        -4 498.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     5 876.57 HKD
+    liabilities:accrued expenses:insurances:levy                                              5.88 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2022-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         -16 918.72 HKD = 0.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             29 412.25 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:levy                                              29.40 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     29 382.85 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         -7 316.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            29 412.25 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                             29.40 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    29 382.85 HKD = 0.00 HKD
     equity:opening/closing balances
