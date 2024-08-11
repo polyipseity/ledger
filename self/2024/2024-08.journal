@@ -130,6 +130,22 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
+2024-08-06 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 20:54, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-06 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 21:13, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-06 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT10M, time: 21:33, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9       -6.00 HKD = 22.00 HKD
+    expenses:gaming:maimai
+
+2024-08-06 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; mysterious, activity: lost, time: 21:50, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9      -22.00 HKD = 0.00 HKD
+    expenses:lost                                                                                             ; lost: assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9
+
 2024-08-06 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
@@ -153,6 +169,35 @@ include ../prelude.journal
 2024-08-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
+
+2024-08-08 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (08AUG24), activity: withdraw, time: 20:50:25, timezone: UTC+08:00
+    assets:cash                                                        100.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: fee, time: 21:03:45, timezone: UTC+08:00
+    assets:cash                                                                                   -20.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5            0.00
+    expenses:fees                                                                                             ; item: assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 21:04:45, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       80.00 HKD = 80.00 HKD
+    assets:cash
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 21:10, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 21:31, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 21:54, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-08 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT11M, time: 22:14, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 56.00 HKD
+    expenses:gaming:maimai
 
 2024-08-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
