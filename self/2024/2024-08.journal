@@ -221,6 +221,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 芝士迷你焗火腿肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2024-08-12 (41053507) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M34S, eating: dinner, time: 16:59:26, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 野菌白汁忌廉迷你焗一口雞飯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2024-08-29 ! Apple  ; activity: service, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
