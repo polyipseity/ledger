@@ -59,6 +59,9 @@ account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10               
 account assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                 ; type: A
 account assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                 ; type: A
 account assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                 ; type: A
+account assets:loans:kins                                                                         ; type: A
+account assets:loans:kins:families                                                                ; type: A
+account assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                           ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A

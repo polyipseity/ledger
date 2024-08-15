@@ -225,6 +225,58 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
+2024-08-14 (5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (15AUG24), activity: withdraw, time: 09:14:50, timezone: UTC+08:00
+    assets:cash                                                      5 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-08-14 ! 3833b42e-dad3-425c-b254-904be68993e4  ; activity: lend, time: 09:15, timezone: UTC+08:00
+    assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4    5 000.00 HKD = 5 000.00 HKD
+    assets:cash
+
+2024-08-14 (41053949) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT27M32S, eating: breakfast, time: 09:32:28, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+
+2024-08-14 (FRN20240814PAYD0101850014902) self  ; activity: transfer, time: 18:49:02, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-08-14 self  ; activity: transfer, time: 18:49:07, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-08-14 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:20, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT11M, time: 19:39, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT17M, time: 19:54, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 20:21, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:44, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:11, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 21:35, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 20.00 HKD
+    expenses:gaming:maimai
+
+2024-08-14 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:33, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
 2024-08-29 ! Apple  ; activity: service, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
