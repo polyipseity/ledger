@@ -313,6 +313,14 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
+2024-08-16 (41054567) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT21M39S, eating: breakfast, time: 09:58:21, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: scrambled egg, food_and_drink: （早）五香肉丁麵
+
+2024-08-17 (41055136) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT17M57S, eating: dinner, time: 17:27:03, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: chicken soup, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
+
 2024-08-29 ! Apple  ; activity: service, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
