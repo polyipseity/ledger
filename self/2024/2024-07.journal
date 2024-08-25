@@ -632,6 +632,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:buses
 
+2024-07-24 * 83282154-a569-4443-8df3-675a5a48e4a2  ; activity: activity, duration: PT7H, time: 13:00:00, timezone: UTC+08:00
+    assets:deferred expenses:activites      -40.00 HKD = 700.00 HKD
+    expenses:activites
+
 2024-07-24 83282154-a569-4443-8df3-675a5a48e4a2  ; activity: activity, time: 13:53:15, timezone: UTC+08:00
     liabilities:accrued expenses:activites       40.00 HKD = 0.00 HKD
     assets:cash
@@ -908,7 +912,7 @@ include ../prelude.journal
 2024-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
-    assets:deferred expenses:activites                                                              -740.00 HKD = 0.00 HKD
+    assets:deferred expenses:activites                                                              -700.00 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                                      -21 050.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Apple                                                    -8.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
