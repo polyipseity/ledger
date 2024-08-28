@@ -534,6 +534,22 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       24.79 HKD
     revenues:interests
 
+2024-08-27 (41058213) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT27M12S, eating: breakfast, time: 09:16:48, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: ham, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: scrambled egg, food_and_drink: （早）蕃茄濃湯雙併即食麵
+
+2024-08-27 (FRN20240827PAYD0101873661429) self  ; activity: transfer, time: 16:47:06, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
+
+2024-08-27 self  ; activity: transfer, time: 16:47:08, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
+
+2024-08-27 (41058432) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT23M57S, eating: dinner, time: 16:52:03, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: chicken soup, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
+
 2024-08-29 ! Apple  ; activity: service, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
