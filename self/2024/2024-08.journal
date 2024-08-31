@@ -462,11 +462,12 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-23 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, duration: P2DT4H30M, time: 09:00:00, timezone: UTC+08:00
+2024-08-23 * dfde1439-813b-4eb6-b7a0-a2a1cc30b714  ; activity: activity, duration: P2DT4H30M, time: 09:00:00, timezone: UTC+08:00
     assets:deferred expenses:activites     -700.00 HKD = 100.00 HKD
+    assets:deferred expenses:activites       29.00 HKD = 129.00 HKD
     expenses:activites
 
-2024-08-23 (14/144051) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 11:59:17, timezone: UTC+08:00
+2024-08-23 * (14/144051) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 11:59:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: 兩送套飯 + less rice, food_and_drink: 瑤柱肉崧蒸水蛋, food_and_drink: 瑤柱蝦米蒸水蛋
 
@@ -549,6 +550,10 @@ include ../prelude.journal
 2024-08-27 (41058432) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT23M57S, eating: dinner, time: 16:52:03, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: chicken soup, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
+
+2024-08-28 (HD12482807972636) dfde1439-813b-4eb6-b7a0-a2a1cc30b714  ; activity: repayment, timezone: UTC+08:00
+    assets:deferred expenses:activites                                 -29.00 HKD = 100.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-08-29 (72231570) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT31M54S, eating: breakfast, time: 10:57:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
