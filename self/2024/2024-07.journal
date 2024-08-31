@@ -800,11 +800,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
-2024-07-30 * Apple  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+2024-07-29 * Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD = 8.00 HKD
     expenses:services:clouds:Apple
 
-2024-07-30 * Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+2024-07-29 * Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Google       -3.80 HKD = 150.00 HKD
     expenses:services:clouds:Google
 

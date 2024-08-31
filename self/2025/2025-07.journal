@@ -4,7 +4,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
     assets:deferred expenses:services:clouds:Google                  150.00 HKD
 
-2025-07-30 ! Google  ; activity: service, time: 00:00:00, timezone: UTC+08:00
+2025-07-29 ! Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Google     -150.00 HKD
     expenses:services:clouds:Google
 
