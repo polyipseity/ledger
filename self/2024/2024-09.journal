@@ -1,5 +1,47 @@
 include ../prelude.journal
 
+2024-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
+    assets:deferred expenses:activites                                                               100.00 HKD = 100.00 HKD
+    assets:deferred expenses:education:tuition:universities                                       21 050.00 HKD = 21 050.00 HKD
+    assets:deferred expenses:services:clouds:Apple                                                     8.00 HKD = 8.00 HKD
+    assets:deferred expenses:services:clouds:Google                                                  150.00 HKD = 150.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 21 242.66 HKD = 21 242.66 HKD
+    assets:cash                                                                                    6 342.00 HKD = 6 342.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          24.00 HKD = 24.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                       12.20 HKD = 12.20 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                141.60 HKD = 141.60 HKD
+    assets:equipment:clothing                                                                        359.25 HKD = 359.25 HKD
+    assets:equipment:consumer electronics                                                          6 922.03 HKD = 6 922.03 HKD
+    assets:equipment:tools                                                                         3 000.00 KRW = 3 000.00 KRW
+    assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                5 000.00 HKD = 5 000.00 HKD
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676. _PT/C
+    equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000. _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                                -731.00 HKD = -731.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                                731 _PT/D = 731 _PT/D
+    equity:conversions:HKD-KRW:HKD                                                                   827.73 HKD = 827.73 HKD
+    equity:conversions:HKD-KRW:KRW                                                              -145 008.33 KRW = -145 008.33 KRW
+    equity:conversions:HKD-USD:HKD                                                                -3 573.03 HKD = -3 573.03 HKD
+    equity:conversions:HKD-USD:USD                                                                   464.56 USD = 464.56 USD
+    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000. _PT/B
+    equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
+    equity:friends                                                                                   -28.50 HKD = -28.50 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                               -2.00 HKD = -2.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                              -35.10 HKD = -35.10 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                             -185.00 HKD = -185.00 HKD
+    equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
+    equity:kins                                                                                      -90.00 HKD = -90.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -49 071.21 HKD = -49 071.21 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                     -1 115.00 HKD = -1 115.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                     -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -43 180.00 HKD = -43 180.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -23 506.28 HKD = -23 506.28 HKD
+    equity:opening/closing balances
+
 2024-09-29 ! Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
