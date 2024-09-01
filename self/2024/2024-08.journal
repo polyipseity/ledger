@@ -608,6 +608,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
+2024-08-31 (41059508) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT29M18S, eating: dinner, time: 16:55:42, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
 2024-08-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
