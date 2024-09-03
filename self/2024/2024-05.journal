@@ -279,8 +279,8 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-05-09 (000-077291) Saizeriya  ; activity: eating, duration: PT1H25M25S, eating: dinner, time: 19:06:35, timezone: UTC+08:00
-    liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -114.00 HKD = -114.00 HKD  ; food_and_drink: 温泉蛋黑松露野菌意粉, food_and_drink: 芝士薯蓉, food_and_drink: 蒜香法包, food_and_drink: 蘑茹忌廉湯, food_and_drink: 飲品吧
-    expenses:food and drinks:dining
+    liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -114.00 HKD = -114.00 HKD
+    expenses:food and drinks:dining                                           ; food_and_drink: 温泉蛋黑松露野菌意粉, food_and_drink: 芝士薯蓉, food_and_drink: 蒜香法包, food_and_drink: 蘑茹忌廉湯, food_and_drink: 飲品吧
 
 2024-05-09 (N50947468724/HD12450947715325) 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45  ; activity: repayment, time: 20:37:14, timezone: UTC+08:00
     liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45           114.00 HKD = 0.00 HKD
