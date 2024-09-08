@@ -89,7 +89,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-08-02 ! (N80292444880/HD12480248624021) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 16:51:38, timezone: UTC+08:00
+2024-08-02 * (N80292444880/HD12480248624021) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 16:51:38, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -100.00 HKD
     assets:deferred expenses:activites
 
@@ -583,7 +583,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-30 (0269) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 14, timezone: UTC+08:00, voucher: HKD 40 meal coupon
+2024-08-30 (0269) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 14, timezone: UTC+08:00, voucher: HKD 40 meal coupon
     assets:special:vouchers       40.00 HKD  ; valid: 2024-08-30T14:00:00+08:00/2024-08-30T23:59:59+08:00
     revenues:education
 

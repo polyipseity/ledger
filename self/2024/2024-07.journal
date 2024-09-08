@@ -704,7 +704,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-07-25 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 21:39:14, timezone: UTC+08:00
+2024-07-25 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 21:39:14, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities                                      21 050.00 HKD  ; tuition fee - undergraduate, valid: 2023-07-25T00:00:00+08:00/2023-09-03T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    -21 050.00 HKD = -21 050.00 HKD
 
