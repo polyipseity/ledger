@@ -14,7 +14,7 @@ from typing import Callable as _Call, final as _fin
 
 _OPENING_BALANCES_REGEX = compile(r"opening balances", NOFLAG)
 _CLOSING_BALANCES_REGEX = compile(r"closing balances", NOFLAG)
-_NUMBER_OF_DIGITS = 6
+_NUMBER_OF_DIGITS = 2
 
 
 @_fin
@@ -116,7 +116,7 @@ async def main(args: Arguments):
                         ):
                             yield line
                             continue
-                        yield f"{match[1]}{args.account}{match[2]}{round(parse_float(match[3]) + args.amount * (opening - closing), _NUMBER_OF_DIGITS)}{match[4]}{args.currency}{match[5]}={match[6]}{round(parse_float(match[7]) + args.amount * (not closing), _NUMBER_OF_DIGITS)}{match[8]}{args.currency}{match[9]}\n"
+                        yield f"{match[1]}{args.account}{match[2]}{f'{{0:.{_NUMBER_OF_DIGITS}f}}'.format(round(parse_float(match[3]) + args.amount * (opening - closing), _NUMBER_OF_DIGITS))}{match[4]}{args.currency}{match[5]}={match[6]}{f'{{0:.{_NUMBER_OF_DIGITS}f}}'.format(round(parse_float(match[7]) + args.amount * (not closing), _NUMBER_OF_DIGITS))}{match[8]}{args.currency}{match[9]}\n"
 
                 if (text := "".join(process_lines(read))) != read:
                     await seek
