@@ -309,6 +309,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
 
+2024-09-09 7220ea99-20b2-4d5b-a05f-202875ab14c9  ; activity: fee, time: 16:53:49, timezone: UTC+08:00
+    expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9      200.00 HKD
+    assets:cash                                            -200.00 HKD
+
 2024-09-09 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 21:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: NESCAFÉ Coffee Beverage Regular 250 mL, food_and_drink: seaweed, food_and_drink: thin egg noodle

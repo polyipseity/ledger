@@ -103,6 +103,7 @@ account expenses:education:books                                                
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
 account expenses:fees                                                                             ; type: X
+account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                                        ; type: X
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
 account expenses:fees:banking                                                                     ; type: X
 account expenses:fees:banking:DBS Bank                                                            ; type: X
@@ -231,6 +232,7 @@ payee 5e758af5-23c0-4038-b161-06757132e875
 payee 6fb019f7-d2fd-49a8-8a7f-11fa413aa072
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7-Eleven
+payee 7220ea99-20b2-4d5b-a05f-202875ab14c9
 payee 76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10
 payee 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc
