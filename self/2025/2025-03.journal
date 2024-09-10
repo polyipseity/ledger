@@ -1,10 +1,10 @@
 include ../prelude.journal
 
 2025-03-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
-    assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:equipment:consumer electronics      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:equipment:consumer electronics      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
-    assets:equipment:consumer electronics        0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
-    assets:equipment:tools                    -333.33 KRW  ; item: Leopold wire keycap remover
-    assets:equipment:consumer electronics       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:depreciation         -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:depreciation         -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:depreciation         -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:depreciation           0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:equipment:tools     -333.33 KRW  ; item: Leopold wire keycap remover
+    assets:depreciation          -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation

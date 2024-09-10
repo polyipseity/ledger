@@ -586,13 +586,14 @@ include ../prelude.journal
     expenses:insurances:health
 
 2023-12-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
-    assets:equipment:consumer electronics      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:equipment:consumer electronics       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
-    assets:equipment:consumer electronics      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:equipment:consumer electronics      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:depreciation         -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:depreciation        -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:depreciation        -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     expenses:depreciation
 
 2023-12-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:depreciation                                                                              189.33 HKD = 0.00 HKD
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
@@ -604,7 +605,7 @@ include ../prelude.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -235.20 HKD = 0.00 HKD
     assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                       -15.65 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 426.67 HKD = 0.00 HKD
+    assets:equipment:consumer electronics                                                         -8 616.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -30 _PT/D = 0 _PT/D
     assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                                    -150.00 HKD = 0.00 HKD
