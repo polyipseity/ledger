@@ -1,14 +1,14 @@
 include ../prelude.journal
 
 2024-11-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
-    assets:depreciation         -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:depreciation          -6.62 HKD  ; item: AT iPad 10th 10.9″ Glass
-    assets:depreciation         -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:depreciation         -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
-    assets:depreciation         -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
-    assets:depreciation         -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
-    assets:depreciation         -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
-    assets:depreciation           0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
-    assets:equipment:tools     -333.34 KRW  ; item: Leopold wire keycap remover
-    assets:depreciation          -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:depreciation         -6.62 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:depreciation        -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:depreciation        -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:depreciation        -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
+    assets:depreciation        -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
+    assets:depreciation        -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
+    assets:depreciation          0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:depreciation       -333.34 KRW  ; item: Leopold wire keycap remover
+    assets:depreciation         -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation

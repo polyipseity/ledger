@@ -2,6 +2,7 @@ include ../prelude.journal
 
 2024-08-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:depreciation                                                                           -2 110.89 HKD = -2 110.89 HKD
+    assets:depreciation                                                                             -666.66 KRW = -666.66 KRW
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                     800.00 HKD = 800.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:deferred expenses:activites                                                               700.00 HKD = 700.00 HKD
@@ -16,7 +17,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 85.10 HKD = 85.10 HKD
     assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
     assets:equipment:consumer electronics                                                          8 631.00 HKD = 8 631.00 HKD
-    assets:equipment:tools                                                                         3 333.34 KRW = 3 333.34 KRW
+    assets:equipment:tools                                                                         4 000.00 KRW = 4 000.00 KRW
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676. _PT/C
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000. _PT/B
@@ -626,20 +627,21 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-08-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
-    assets:depreciation         -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:depreciation          -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
-    assets:depreciation         -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:depreciation         -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
-    assets:depreciation         -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
-    assets:depreciation         -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
-    assets:depreciation         -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
-    assets:depreciation           0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
-    assets:equipment:tools     -333.34 KRW  ; item: Leopold wire keycap remover
-    assets:depreciation          -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:depreciation         -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:depreciation        -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:depreciation        -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:depreciation        -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
+    assets:depreciation        -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
+    assets:depreciation        -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
+    assets:depreciation          0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:depreciation       -333.34 KRW  ; item: Leopold wire keycap remover
+    assets:depreciation         -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation
 
 2024-08-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:depreciation                                                                            2 387.72 HKD = 0.00 HKD
+    assets:depreciation                                                                            1 000.00 KRW = 0.00 KRW
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:deferred expenses:activites                                                              -100.00 HKD = 0.00 HKD
@@ -654,7 +656,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -141.60 HKD = 0.00 HKD
     assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
     assets:equipment:consumer electronics                                                         -8 631.00 HKD = 0.00 HKD
-    assets:equipment:tools                                                                        -3 000.00 KRW = 0.00 KRW
+    assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
     assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                       -125.00 HKD = 0.00 HKD
     assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                               -5 000.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
