@@ -376,8 +376,8 @@ include ../prelude.journal
     expenses:transport:trains
 
 2024-09-27 ! (d2926e7a-1f12-4194-92be-978768d964a7) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, posted: 2024-08-22, timezone: UTC+08:00
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              0.0 HKD = 16 966.42 HKD
-    revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             0.0 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             0.00 HKD = 16 966.42 HKD
+    revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                            0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
     liabilities:accrued expenses:insurances:levy                                             5.88 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings

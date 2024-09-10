@@ -717,7 +717,7 @@ include ../prelude.journal
     equity:kins                                                                                    4 500.00 CNY = 0.00 CNY
     equity:kins                                                                                       90.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -4 500.00 CNY = 0.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     60 618.05 HKD = 0.0 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     60 618.05 HKD = 0.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                        527.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:levy                                                      23.52 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             47 498.00 HKD = 0.00 HKD
