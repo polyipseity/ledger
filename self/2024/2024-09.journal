@@ -367,6 +367,10 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 52.00 HKD
     expenses:gaming:maimai
 
+2024-09-10 ! 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:19, timezone: UTC+08:00
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.10 HKD = -8.10 HKD
+    expenses:transport:buses
+
 2024-09-10 Circle K  ; activity: add value, time: 21:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
@@ -374,6 +378,10 @@ include ../prelude.journal
 2024-09-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
+
+2024-09-11 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 11:14:29, timezone: UTC+08:00
+    assets:cash                                                     50.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
 
 2024-09-27 ! (d2926e7a-1f12-4194-92be-978768d964a7) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, posted: 2024-08-22, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             0.00 HKD = 16 966.42 HKD
