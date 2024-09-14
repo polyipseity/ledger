@@ -231,7 +231,7 @@ include ../prelude.journal
     assets:cash                                                      5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-08-14 ! 3833b42e-dad3-425c-b254-904be68993e4  ; activity: lend, time: 09:15, timezone: UTC+08:00
+2024-08-14 * 3833b42e-dad3-425c-b254-904be68993e4  ; activity: lend, time: 09:15, timezone: UTC+08:00
     assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4    5 000.00 HKD = 5 000.00 HKD
     assets:cash
 
