@@ -3,9 +3,9 @@ include ../prelude.journal
 2023-12-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:recycables                                                                                  0.043 _BEC = 0.043 _BEC
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               208 GREEN$ = 208 GREEN$
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        11 032. _PT/B = 11 032. _PT/B
-    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314. _FRM = 29 314. _FRM
-    assets:digital:SheepIt Render Farm:polyipseity                                              22 741 429. _PT/A = 22 741 429. _PT/A
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        11 032. _PT/B = 11 032 _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314. _FRM = 29 314 _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              22 741 429. _PT/A = 22 741 429 _PT/A
     equity:conversions:GREEN$-_BEC:GREEN$                                                               -2 GREEN$ = -2 GREEN$
     equity:conversions:GREEN$-_BEC:_BEC                                                                0.156 _BEC = 0.156 _BEC
     equity:conversions:GREEN$-_MET:GREEN$                                                              -32 GREEN$ = -32 GREEN$
@@ -16,19 +16,19 @@ include ../prelude.journal
     equity:conversions:GREEN$-_PAP:_PAP                                                                6.366 _PAP = 6.366 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                                             -104 GREEN$ = -104 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                                                1.699 _PLA = 1.699 _PLA
-    equity:external:self                                                                           100 000. _PT/B = 100 000. _PT/B
+    equity:external:self                                                                           100 000. _PT/B = 100 000 _PT/B
     equity:opening/closing balances
 
 2023-12-01 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 095. _PT/B = 15 127. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 095. _PT/B = 15 127 _PT/B
     revenues:activities:walking
 
 2023-12-02 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 916. _PT/B = 19 043. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 916. _PT/B = 19 043 _PT/B
     revenues:activities:walking
 
 2023-12-02 SheepIt Render Farm  ; activity: compute, time: 23:29:35, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    15 000. _PT/A = 22 756 429. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    15 000. _PT/A = 22 756 429 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-02@advent calendar 2023
 
 2023-12-03 self  ; activity: collect, duration: -PT3H, time: 15, timezone: UTC+08:00
@@ -38,7 +38,7 @@ include ../prelude.journal
     assets:recycables
 
 2023-12-03 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 19 043. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 19 043 _PT/B
     revenues:activities:walking
 
 2023-12-04 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: collect, duration: -P1M, time: 08, timezone: UTC+08:00
@@ -71,39 +71,39 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 497. _PT/B = 21 540. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 497. _PT/B = 21 540 _PT/B
     revenues:activities:walking
 
 2023-12-05 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 029. _PT/B = 22 569. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 029. _PT/B = 22 569 _PT/B
     revenues:activities:walking
 
 2023-12-06 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 139. _PT/B = 27 708. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 139. _PT/B = 27 708 _PT/B
     revenues:activities:walking
 
 2023-12-07 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 724. _PT/B = 31 432. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 724. _PT/B = 31 432 _PT/B
     revenues:activities:walking
 
 2023-12-08 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 001. _PT/B = 34 433. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 001. _PT/B = 34 433 _PT/B
     revenues:activities:walking
 
 2023-12-09 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 868. _PT/B = 38 301. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 868. _PT/B = 38 301 _PT/B
     revenues:activities:walking
 
 2023-12-10 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       535 _PT/B = 38 836. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       535 _PT/B = 38 836 _PT/B
     revenues:activities:walking
 
 2023-12-11 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 667. _PT/B = 42 503. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 667. _PT/B = 42 503 _PT/B
     revenues:activities:walking
 
 2023-12-12 SheepIt Render Farm  ; activity: compute, time: 00:00:15, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    25 006. _PT/A = 22 781 435. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    25 006. _PT/A = 22 781 435 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-12@advent calendar 2023
 
 2023-12-12 (COUPON#0009#824) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 14:44:38, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
@@ -111,7 +111,7 @@ include ../prelude.journal
     revenues:rewards
 
 2023-12-12 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 358. _PT/B = 50 861. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 358. _PT/B = 50 861 _PT/B
     revenues:activities:walking
 
 2023-12-13 (COUPON#0001#88) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:10:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
@@ -119,39 +119,39 @@ include ../prelude.journal
     equity:external:self
 
 2023-12-13 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 427. _PT/B = 7 288. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 427. _PT/B = 7 288 _PT/B
     revenues:activities:walking
 
 2023-12-14 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 873. _PT/B = 9 161. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 873. _PT/B = 9 161 _PT/B
     revenues:activities:walking
 
 2023-12-15 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 600. _PT/B = 12 761. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 600. _PT/B = 12 761 _PT/B
     revenues:activities:walking
 
 2023-12-16 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       954 _PT/B = 13 715. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       954 _PT/B = 13 715 _PT/B
     revenues:activities:walking
 
 2023-12-17 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 503. _PT/B = 15 218. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 503. _PT/B = 15 218 _PT/B
     revenues:activities:walking
 
 2023-12-18 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 163. _PT/B = 20 381. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 163. _PT/B = 20 381 _PT/B
     revenues:activities:walking
 
 2023-12-19 SheepIt Render Farm  ; activity: compute, time: 00:35:07, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    21 003. _PT/A = 22 802 438. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    21 003. _PT/A = 22 802 438 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-19@advent calendar 2023
 
 2023-12-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 773. _PT/B = 26 154. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 773. _PT/B = 26 154 _PT/B
     revenues:activities:walking
 
 2023-12-20 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 785. _PT/B = 29 939. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 785. _PT/B = 29 939 _PT/B
     revenues:activities:walking
 
 2023-12-20 GREEN@self-service  ; activity: recycle, time: 22:22:40, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -161,7 +161,7 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-21 SheepIt Render Farm  ; activity: compute, time: 13:03:00, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    20 000. _PT/A = 22 822 438. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    20 000. _PT/A = 22 822 438 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-21@advent calendar 2023
 
 2023-12-21 GREEN@self-service  ; activity: recycle, time: 22:37:23, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -171,7 +171,7 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-21 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 047. _PT/B = 32 986. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 047. _PT/B = 32 986 _PT/B
     revenues:activities:walking
 
 2023-12-22 GREEN@self-service  ; activity: recycle, time: 23:02:18, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -181,11 +181,11 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-22 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 725. _PT/B = 36 711. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 725. _PT/B = 36 711 _PT/B
     revenues:activities:walking
 
 2023-12-23 SheepIt Render Farm  ; activity: compute, time: 01:45:20, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    10 000. _PT/A = 22 832 438. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    10 000. _PT/A = 22 832 438 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: 2023-12-23@advent calendar 2023
 
 2023-12-23 GREEN@self-service  ; activity: recycle, time: 22:04:26, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -195,11 +195,11 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-23 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 957. _PT/B = 41 668. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 957. _PT/B = 41 668 _PT/B
     revenues:activities:walking
 
 2023-12-24 SheepIt Render Farm  ; activity: compute, time: 10:04:10, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    100 000. _PT/A = 22 932 438. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    100 000. _PT/A = 22 932 438 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                      ; reward: 2023-12-24@advent calendar 2023
 
 2023-12-24 self  ; activity: collect, duration: -P20DT8H, time: 16, timezone: UTC+08:00
@@ -238,7 +238,7 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-24 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 683. _PT/B = 44 351. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 683. _PT/B = 44 351 _PT/B
     revenues:activities:walking
 
 2023-12-25 GREEN@self-service  ; activity: recycle, time: 17:25:16, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -248,11 +248,11 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-25 SheepIt Render Farm  ; activity: compute, time: 17:43:44, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity    10 000. _PT/A = 22 942 438. _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity    10 000. _PT/A = 22 942 438 _PT/A
     revenues:compute:SheepIt Render Farm:rewards                     ; reward: Christmas 2023
 
 2023-12-25 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 342. _PT/B = 46 693. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 342. _PT/B = 46 693 _PT/B
     revenues:activities:walking
 
 2023-12-26 GREEN@self-service  ; activity: recycle, time: 22:23:58, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -262,7 +262,7 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-26 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 605. _PT/B = 53 298. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 605. _PT/B = 53 298 _PT/B
     revenues:activities:walking
 
 2023-12-27 GREEN@self-service  ; activity: recycle, time: 18:48:22, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -278,23 +278,23 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-27 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 965. _PT/B = 59 263. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 965. _PT/B = 59 263 _PT/B
     revenues:activities:walking
 
 2023-12-28 (COUPON#0001#83) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 10:32:43, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 9 263. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 9 263 _PT/B
     equity:external:self
 
 2023-12-28 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 9 263. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 9 263 _PT/B
     revenues:activities:walking
 
 2023-12-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 906. _PT/B = 12 169. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 906. _PT/B = 12 169 _PT/B
     revenues:activities:walking
 
 2023-12-30 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 275. _PT/B = 13 444. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 275. _PT/B = 13 444 _PT/B
     revenues:activities:walking
 
 2023-12-31 self  ; activity: collect, duration: -P6DT18H, time: 16, timezone: UTC+08:00
@@ -335,7 +335,7 @@ include ../prelude.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2023-12-31 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 001. _PT/B = 15 445. _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 001. _PT/B = 15 445 _PT/B
     revenues:activities:walking
 
 2023-12-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
