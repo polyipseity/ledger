@@ -87,6 +87,7 @@ account equity:conversions:HKD-USD                                              
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:friends                                                                            ; type: E
+account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       ; type: E
 account equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                       ; type: E
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
 account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       ; type: E
