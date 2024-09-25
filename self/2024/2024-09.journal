@@ -581,7 +581,7 @@ include ../prelude.journal
     expenses:food and drinks:snacks                                 8.00 HKD  ; food_and_drink: (2042706000005) HOKKAIDO BEEF CROQUE
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.00 HKD = -8.00 HKD
 
-2024-09-24 (HD12492475870099/N92446721755) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:35, timezone: UTC+08:00
+2024-09-24 (HD12492475870099/N92446721755) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 23:25, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.00 HKD
 
