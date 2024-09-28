@@ -94,6 +94,7 @@ account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                     
 account equity:kins                                                                               ; type: E
 account equity:kins:families                                                                      ; type: E
 account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 ; type: E
+account equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                 ; type: E
 account equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
 account expenses:accommodations:universities                                                      ; type: X
@@ -111,6 +112,7 @@ account expenses:fees:banking                                                   
 account expenses:fees:banking:DBS Bank                                                            ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
 account expenses:fees:Hong Kong Government                                                        ; type: X
+account expenses:fees:Mastercard                                                                  ; type: X
 account expenses:fees:Seoul Metropolitan Subway                                                   ; type: X
 account expenses:fees:Stripe                                                                      ; type: X
 account expenses:food                                                                             ; type: X
