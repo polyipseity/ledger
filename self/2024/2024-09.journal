@@ -727,13 +727,29 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     8 702.74 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -8 702.74 HKD
 
-2024-09-29 ! Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
-    assets:deferred expenses:services:clouds:Apple                     8.00 HKD
+2024-09-28 (41068883) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT20M50S, eating: dinner, time: 15:34:10, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: chicken soup, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
 
-2024-09-29 ! Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2024-09-29 (FRN20240929PAYD0101943611525) self  ; activity: transfer, time: 15:13:18, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-09-29 self  ; activity: transfer, time: 15:13:20, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD = 169.90 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-09-29 (2024092915153445701) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 15:15:34, timezone: UTC+08:00
+    expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                      20.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
+
+2024-09-29 * (360606) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+
+2024-09-29 * Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.00 HKD
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD
-    expenses:services:clouds:Apple
 
 2024-09-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
