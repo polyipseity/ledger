@@ -565,7 +565,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-08-29 * (317985/MKB7G6HWZ6) Apple  ; activity: service, time: 16:01:54, timezone: UTC+08:00
+2024-08-29 * (317985/MKB7G6HWZ6/139831558648) Apple  ; activity: service, time: 16:01:54, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
 

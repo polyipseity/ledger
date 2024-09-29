@@ -762,7 +762,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Mocha; venti (20 fl oz)
 
-2024-06-30 (769336/MKB7BM70Y8) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
+2024-06-30 (769336/MKB7BM70Y8/194818733355) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple
 

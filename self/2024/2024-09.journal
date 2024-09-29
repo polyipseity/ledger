@@ -743,7 +743,7 @@ include ../prelude.journal
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                      20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
 
-2024-09-29 * (360606) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+2024-09-29 * (360606/MKB7MG1WVJ/206856765550) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
 

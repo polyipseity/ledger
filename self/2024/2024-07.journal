@@ -762,7 +762,7 @@ include ../prelude.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
     assets:deferred expenses:services:clouds:Google                  150.00 HKD = 153.80 HKD
 
-2024-07-29 * (761425/MKB7G6HWZ6) Apple  ; activity: service, time: 16:01:29, timezone: UTC+08:00
+2024-07-29 * (761425/MKB7G6HWZ6/139831558648) Apple  ; activity: service, time: 16:01:29, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD = 16.00 HKD
 
