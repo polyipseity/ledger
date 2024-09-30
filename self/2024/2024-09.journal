@@ -751,7 +751,21 @@ include ../prelude.journal
     expenses:services:clouds:Apple                        8.00 HKD
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD
 
-2024-09-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-09-30 (41069399) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT27M42S, eating: breakfast, time: 10:58:18, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
+
+2024-09-30 (888/071927) Café de Coral  ; activity: eating, duration: PT37M54S, eating: dinner, time: 17:53:06, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         47.00 HKD  ; food_and_drink: 叉燒四寶飯 + 加大白飯底
+    expenses:food and drinks:dining                                         15.00 HKD  ; food_and_drink: + 加紅燒竹笙素翅
+    expenses:food and drinks:dining                                         55.00 HKD  ; food_and_drink: 厚切焗豬扒飯（餐） + 可樂12OZ
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -117.00 HKD
+
+2024-09-30 Circle K  ; activity: add value, time: 18:29, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:cash
+
+2024-09-30 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:depreciation         -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:depreciation        -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
