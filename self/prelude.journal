@@ -27,6 +27,7 @@ account assets:deferred expenses:education:tuition:universities                 
 account assets:deferred expenses:equipment                                                        ; type: A
 account assets:deferred expenses:equipment:consumer electronics                                   ; type: A
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
+account assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:deferred expenses:insurances:life                                                  ; type: A
@@ -110,6 +111,7 @@ account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                      
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
 account expenses:fees:banking                                                                     ; type: X
 account expenses:fees:banking:DBS Bank                                                            ; type: X
+account expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                                        ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
 account expenses:fees:Hong Kong Government                                                        ; type: X
 account expenses:fees:Mastercard                                                                  ; type: X
@@ -137,6 +139,7 @@ account expenses:services                                                       
 account expenses:services:clouds                                                                  ; type: X
 account expenses:services:clouds:Apple                                                            ; type: X
 account expenses:services:clouds:Google                                                           ; type: X
+account expenses:services:photography                                                             ; type: X
 account expenses:special                                                                          ; type: X
 account expenses:special:gifts                                                                    ; type: X
 account expenses:transport                                                                        ; type: X
@@ -325,9 +328,11 @@ payee dfde1439-813b-4eb6-b7a0-a2a1cc30b714
 payee e2613673-8956-40d9-8024-53163878b766
 payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee e81cf14c-79fc-4958-b694-1a2a2c0c9be1
+payee e82b2a1f-fa14-4739-bf0e-df7bd7e9c714
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee ef234023-8df0-4705-bb73-cd9b194a5b92
 payee euro go go
+payee f34f8958-524c-416d-93b5-b2e35e68f08c
 payee f599f52c-f397-4316-843f-b5b8285a9dba
 payee f85da078-1fe9-42ae-b9d6-f2d47e62a19d
 payee friends
