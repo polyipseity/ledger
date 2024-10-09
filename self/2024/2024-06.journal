@@ -258,7 +258,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    2 000.00 HKD
     assets:cash
 
-2024-06-10 (000-0147) Tamjai Samgor  ; activity: eating, duration: PT55M47S, eating: lunch, time: 13:08:13, timezone: UTC+08:00
+2024-06-10 (000-0147) TamJai SamGor  ; activity: eating, duration: PT55M47S, eating: lunch, time: 13:08:13, timezone: UTC+08:00
     expenses:food and drinks:snacks                                         57.00 HKD  ; food_and_drink: 過橋米線 + 清湯（過）
     expenses:food and drinks:snacks                                          1.00 HKD  ; food_and_drink: 外賣盒
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
