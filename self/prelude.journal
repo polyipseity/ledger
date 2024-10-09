@@ -3,6 +3,7 @@ include ../prelude.journal
 account assets:accrued revenues:education                                                         ; type: A
 account assets:accrued revenues:education:scholarships                                            ; type: A
 account assets:accrued revenues:incomes                                                           ; type: A
+account assets:accrued revenues:incomes:education                                                 ; type: A
 account assets:accrued revenues:incomes:tutoring                                                  ; type: A
 account assets:accrued revenues:insurances                                                        ; type: A
 account assets:accrued revenues:insurances:life                                                   ; type: A
@@ -185,6 +186,7 @@ account revenues:education                                                      
 account revenues:education:scholarships                                                           ; type: R
 account revenues:incomes                                                                          ; type: R
 account revenues:incomes:bonuses                                                                  ; type: R
+account revenues:incomes:education                                                                ; type: R
 account revenues:incomes:tutoring                                                                 ; type: R
 account revenues:insurances                                                                       ; type: R
 account revenues:insurances:life                                                                  ; type: R

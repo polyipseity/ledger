@@ -1,6 +1,7 @@
 include ../prelude.journal
 
 2024-10-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education                                                        390.00 HKD = 390.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:deferred expenses:education:tuition:universities                                       21 050.00 HKD = 21 050.00 HKD
@@ -42,6 +43,10 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -43 180.00 HKD = -43 180.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -17 629.71 HKD = -17 629.71 HKD
     equity:opening/closing balances
+
+2024-10-01 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, timezone: UTC+08:00
+    revenues:incomes:education                     -32.50 HKD
+    assets:accrued revenues:incomes:education       32.50 HKD
 
 2024-10-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
@@ -90,6 +95,10 @@ include ../prelude.journal
 2024-10-03 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:00:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot local milk tea, food_and_drink: mushroom (V), food_and_drink: scrambled egg
+
+2024-10-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, timezone: UTC+08:00
+    revenues:incomes:education                     -97.50 HKD
+    assets:accrued revenues:incomes:education       97.50 HKD
 
 2024-10-03 (081-1067) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 15:23:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
@@ -152,6 +161,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles, food_and_drink: scrambled egg, food_and_drink: （早）雪菜肉絲即食麵
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
+2024-10-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, timezone: UTC+08:00
+    revenues:incomes:education                     -48.75 HKD
+    assets:accrued revenues:incomes:education       48.75 HKD
+
 2024-10-07 (41071961) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M34S, eating: dinner, time: 17:55:26, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）芝士迷你焗火腿肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
@@ -167,6 +180,10 @@ include ../prelude.journal
 2024-10-08 (668643) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: lunch, time: 12:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: roast chicken with rice + medium
+
+2024-10-08 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 15:00:00, timezone: UTC+08:00
+    revenues:incomes:education                    -130.00 HKD
+    assets:accrued revenues:incomes:education      130.00 HKD
 
 2024-10-08 (081-1098) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 16:57:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
