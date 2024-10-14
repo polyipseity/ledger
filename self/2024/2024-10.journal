@@ -44,9 +44,9 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -17 629.71 HKD = -17 629.71 HKD
     equity:opening/closing balances
 
-2024-10-01 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, timezone: UTC+08:00
-    revenues:incomes:education                     -32.50 HKD
-    assets:accrued revenues:incomes:education       32.50 HKD
+2024-10-01 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, timezone: UTC+08:00
+    revenues:incomes:education                     -65.00 HKD
+    assets:accrued revenues:incomes:education       65.00 HKD
 
 2024-10-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
@@ -99,6 +99,10 @@ include ../prelude.journal
 2024-10-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, timezone: UTC+08:00
     revenues:incomes:education                     -97.50 HKD
     assets:accrued revenues:incomes:education       97.50 HKD
+
+2024-10-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 14:00:00, timezone: UTC+08:00
+    revenues:incomes:education                     -65.00 HKD
+    assets:accrued revenues:incomes:education       65.00 HKD
 
 2024-10-03 (081-1067) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 15:23:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
@@ -161,9 +165,9 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles, food_and_drink: scrambled egg, food_and_drink: （早）雪菜肉絲即食麵
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
-2024-10-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, timezone: UTC+08:00
-    revenues:incomes:education                     -48.75 HKD
-    assets:accrued revenues:incomes:education       48.75 HKD
+2024-10-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, timezone: UTC+08:00
+    revenues:incomes:education                     -97.50 HKD
+    assets:accrued revenues:incomes:education       97.50 HKD
 
 2024-10-07 (41071961) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M34S, eating: dinner, time: 17:55:26, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）芝士迷你焗火腿肉醬意粉
@@ -216,6 +220,82 @@ include ../prelude.journal
 2024-10-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
+
+2024-10-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:22, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
+    expenses:transport:buses
+
+2024-10-10 (FRN20241010PAYD0101971549303) self  ; activity: transfer, time: 09:54, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-10-10 self  ; activity: transfer, time: 09:54, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-10-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:54, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+    expenses:transport:buses
+
+2024-10-10 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 11:00:00, timezone: UTC+08:00
+    revenues:incomes:education                     -65.00 HKD
+    assets:accrued revenues:incomes:education       65.00 HKD
+
+2024-10-10 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 14:00:00, timezone: UTC+08:00
+    revenues:incomes:education                     -65.00 HKD
+    assets:accrued revenues:incomes:education       65.00 HKD
+
+2024-10-10 (8/083672) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 17:54:51, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: 兩送套飯, food_and_drink: 蝦乾冬菜蒸釀豆腐 ×2
+
+2024-10-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:55, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+    expenses:transport:buses
+
+2024-10-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:38, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 78.00 HKD
+    expenses:gaming:maimai
+
+2024-10-10 (HHW-FD-241010-000490) TenRen's Tea  ; activity: eating, eating: snacks, time: 20:58:43, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         25.00 HKD  ; food_and_drink: iced pearl milk tea
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2024-10-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:52, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+    expenses:transport:trains
+
+2024-10-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 21:00:00, timezone: UTC+08:00
+    revenues:incomes:education                     -65.00 HKD
+    assets:accrued revenues:incomes:education       65.00 HKD
+
+2024-10-12 (41073263) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M2S, eating: breakfast, time: 09:51:58, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Lipton milk tea, food_and_drink: （早）茄香肉碎濃湯通粉 + instant noodles
+
+2024-10-12 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 11:30, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring                  ; time: 13:00, timezone: UTC+08:00
+
+2024-10-13 (41073726) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT42M22S, eating: dinner, time: 17:57:38, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）芝士迷你焗火腿肉醬意粉
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
+
+2024-10-14 (41073887) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M, eating: breakfast, time: 10:43:00, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
+
+2024-10-14 (41074019) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT34M46S, eating: dinner, time: 17:03:14, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
+
+2024-10-14 (FRN20241014PAYD0101980748135) self  ; activity: transfer, time: 23:13:42, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-10-14 self  ; activity: transfer, time: 23:13:45, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD = 178.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
 2024-10-22 ! (aaf0f5ba-cd47-456c-822f-d1f17e16f532) f34f8958-524c-416d-93b5-b2e35e68f08c  ; activity: fees, time: ??:??:??, timezone: UTC+08:00
     assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c     -390.00 HKD = 0.00 HKD
