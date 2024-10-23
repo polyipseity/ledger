@@ -515,6 +515,10 @@ include ../prelude.journal
     assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c     -390.00 HKD = 0.00 HKD
     expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                      390.00 HKD  ; item: unknown
 
+2024-10-23 (HD124A2352978215) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      390.00 HKD
+    assets:accrued revenues:incomes:education                         -390.00 HKD = 650.00 HKD
+
 2024-10-23 (000-874099) Saizeriya  ; activity: eating, duration: PT26M3S, eating: breakfast, time: 11:07:57, timezone: UTC+08:00
     expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: cheese mashed potato
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
