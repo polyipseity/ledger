@@ -390,6 +390,10 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
+2024-10-18 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward timezone: UTC+08:00
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        35 _PT/D  ; valid: 2024-10-18/2025-10-31
+    revenues:rewards                                                               -35 _PT/D
+
 2024-10-19 (41075385) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT31M, eating: breakfast, time: 10:26:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: （早）茄香肉碎濃湯通粉 + instant noodles
