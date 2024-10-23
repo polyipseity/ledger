@@ -511,10 +511,6 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-10-22 ! (aaf0f5ba-cd47-456c-822f-d1f17e16f532) f34f8958-524c-416d-93b5-b2e35e68f08c  ; activity: fees, time: ??:??:??, timezone: UTC+08:00
-    assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c     -390.00 HKD = 0.00 HKD
-    expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                      390.00 HKD  ; item: unknown
-
 2024-10-23 (HD124A2352978215) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      390.00 HKD
     assets:accrued revenues:incomes:education                         -390.00 HKD = 650.00 HKD
@@ -522,6 +518,14 @@ include ../prelude.journal
 2024-10-23 (000-874099) Saizeriya  ; activity: eating, duration: PT26M3S, eating: breakfast, time: 11:07:57, timezone: UTC+08:00
     expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: cheese mashed potato
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+
+2024-10-23 * (aaf0f5ba-cd47-456c-822f-d1f17e16f532) f34f8958-524c-416d-93b5-b2e35e68f08c  ; activity: fees, time: 16:25, timezone: UTC+08:00
+    expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                      390.00 HKD  ; item: unknown
+    assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c     -390.00 HKD = 0.00 HKD
+
+2024-10-23 Circle K  ; activity: eating, eating: snacks, time: 16:49, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         10.50 HKD  ; food_and_drink: KitKat 4F dark 41.5 g - wafer fingers covered with dark chocolate
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.50 HKD
 
 2024-10-29 ! Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
