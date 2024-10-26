@@ -586,14 +586,14 @@ include ../prelude.journal
     expenses:insurances:health
 
 2023-12-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
-    assets:depreciation        -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:depreciation         -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
-    assets:depreciation        -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
-    assets:depreciation        -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:accumulated depreciation       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
+    assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
+    assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     expenses:depreciation
 
 2023-12-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:depreciation                                                                              189.33 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                                  189.33 HKD = 0.00 HKD
     assets:accrued revenues:education                                                                -35.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD

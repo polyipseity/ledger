@@ -1,8 +1,8 @@
 account assets                             ; type: A
 account assets:accrued revenues            ; type: A
 account assets:accrued revenues:rewards    ; type: A
+account assets:accumulated depreciation    ; contra, type: A
 account assets:deferred expenses           ; type: A
-account assets:depreciation                ; contra, type: A
 account equity                             ; type: E
 account equity:conversions                 ; type: V
 account equity:external                    ; type: E
