@@ -36,6 +36,7 @@ account assets:deferred expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85
 account assets:deferred expenses:services:clouds                                                  ; type: A
 account assets:deferred expenses:services:clouds:Apple                                            ; type: A
 account assets:deferred expenses:services:clouds:Google                                           ; type: A
+account assets:deferred expenses:services:internet                                                ; type: A
 account assets:deferred expenses:transport:airplanes                                              ; type: A
 account assets:digital                                                                            ; type: A
 account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719                                       ; type: A
@@ -140,6 +141,7 @@ account expenses:services                                                       
 account expenses:services:clouds                                                                  ; type: X
 account expenses:services:clouds:Apple                                                            ; type: X
 account expenses:services:clouds:Google                                                           ; type: X
+account expenses:services:internet                                                                ; type: X
 account expenses:services:photography                                                             ; type: X
 account expenses:special                                                                          ; type: X
 account expenses:special:gifts                                                                    ; type: X
@@ -243,6 +245,7 @@ payee 6fb019f7-d2fd-49a8-8a7f-11fa413aa072
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7-Eleven
 payee 7220ea99-20b2-4d5b-a05f-202875ab14c9
+payee 72b80c1a-8d63-4409-ac13-b32d51a26e94
 payee 76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10
 payee 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc

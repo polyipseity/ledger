@@ -615,6 +615,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: pesto spaghetti with shrimp & broccoli
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
+2024-10-27 (1124102736674625/ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 15:41:12, timezone: UTC+08:00
+    assets:deferred expenses:services:internet                     149.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978     -149.00 HKD
+
 2024-10-29 ! Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
