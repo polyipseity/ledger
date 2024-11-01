@@ -120,11 +120,11 @@ include ../prelude.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       298 _PT/D  ; valid: 2024-02-02/2025-10-31
     revenues:rewards
 
-2024-02-03 (004/401/4016540/403416179130) Aeon  ; activity: consumption, time: 12:37:54, timezone: UTC+08:00
+2024-02-03 (004/401, 4016540, 403416179130) Aeon  ; activity: consumption, time: 12:37:54, timezone: UTC+08:00
     assets:equipment:clothing                                          159.00 HKD  ; depreciation: straight-line@P1Y, item: TV2793B7383G 男裝連帽拉鍊外套(S-XL), residual: 0.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
-2024-02-03 (000-7954/51550028001) Pizza Hut  ; activity: eating, eating: lunch, time: 12:46:45, timezone: UTC+08:00
+2024-02-03 (000-7954, 51550028001) Pizza Hut  ; activity: eating, eating: lunch, time: 12:46:45, timezone: UTC+08:00
     expenses:food and drinks:dining                                                68.00 HKD  ; food_and_drink: 午餐(WE), food_and_drink: 夏威夷風光-PMi, food_and_drink: 忌廉雞湯, food_and_drink: 百事（杯）
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -68 _PT/D
     equity:conversions:HKD-_PT/D:_PT/D                                              68 _PT/D
@@ -143,7 +143,7 @@ include ../prelude.journal
     expenses:food and drinks:snacks                                 78.00 HKD  ; food_and_drink: Van Houten提子黑朱古力禮盒 150g ×2
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -390.00 HKD
 
-2024-02-04 (000-8203/51550029003) Pizza Hut  ; activity: eating, duration: PT35M48S, eating: dinner, time: 17:36:12, timezone: UTC+08:00
+2024-02-04 (000-8203, 51550029003) Pizza Hut  ; activity: eating, duration: PT35M48S, eating: dinner, time: 17:36:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                                96.00 HKD  ; food_and_drink: 卡邦尼煙肉意粉, food_and_drink: 忌廉雞湯, food_and_drink: 晚餐(WE), food_and_drink: 百事（杯）
     expenses:food and drinks:fees                                                   9.60 HKD  ; food_and_drink: 10% service charge
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -105 _PT/D

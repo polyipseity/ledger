@@ -43,7 +43,7 @@ include ../prelude.journal
     assets:cash                    400.00 HKD
     revenues:incomes:tutoring                  ; time: 17:10:54, timezone: UTC+08:00
 
-2023-10-02 (HD123A0254412981/ed929a4b475e4bb7b8f911d3b) self  ; Octopu Cards Limited, activity: transfer, time: 10:37:46, timezone: UTC+08:00, via: Faster Payment System
+2023-10-02 (HD123A0254412981, ed929a4b475e4bb7b8f911d3b) self  ; Octopu Cards Limited, activity: transfer, time: 10:37:46, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2          1.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -51,7 +51,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        1.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2023-10-02 (HD123A0255350705/G00330A.GP/6628) Blue Cross Insurance  ; Blue Cross (Asia-Pacific) Ins Ltd, activity: invest, time: 19:52, timezone: UTC+08:00, via: Faster Payment System
+2023-10-02 (HD123A0255350705, G00330A.GP, 6628) Blue Cross Insurance  ; Blue Cross (Asia-Pacific) Ins Ltd, activity: invest, time: 19:52, timezone: UTC+08:00, via: Faster Payment System
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -417.15 HKD
     assets:deferred expenses:insurances:health                         373.09 HKD
     expenses:insurances:health
@@ -68,7 +68,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked seafood rice, food_and_drink: black truffle sauce
 
-2023-10-04 * (HD123C2839912316/0000152933) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 14:30, timezone: UTC+08:00
+2023-10-04 * (HD123C2839912316, 0000152933) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 14:30, timezone: UTC+08:00
     assets:accrued revenues:education      100.00 HKD
     revenues:education
 
@@ -200,7 +200,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      500.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2023-10-15 (HK060096-20231015123730D19/2023101512413003915/C120231015124117668681443) euro go go  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
+2023-10-15 (HK060096-20231015123730D19, 2023101512413003915, C120231015124117668681443) euro go go  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -134 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 全千島海鮮👑 + cheese
 
@@ -220,7 +220,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti bolognese
 
-2023-10-16 (5700386463/2f474e88-33c3-4bfc-81f2-90114cd86e07/231016130948) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:09:53, timezone: UTC+08:00
+2023-10-16 (5700386463, 2f474e88-33c3-4bfc-81f2-90114cd86e07, 231016130948) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:09:53, timezone: UTC+08:00
     equity:friends                       -28.50 HKD
     expenses:food and drinks:dining                  ; food_and_drink: BBQ pork · red sausage with rice
 

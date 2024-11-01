@@ -90,7 +90,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 6-inch BLT sub (6-inch daily sub), food_and_drink: barbecue sauce
 
-2024-04-08 (N40856205710/HD12440873504921) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:10:11, timezone: UTC+08:00
+2024-04-08 (N40856205710, HD12440873504921) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:10:11, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -24.00 HKD
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9
 
@@ -106,7 +106,7 @@ include ../prelude.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -17.80 HKD
     expenses:food and drinks:snacks                                           ; food_and_drink: 114929 Kinder bueno chocolate ×2
 
-2024-04-08 (N40857424538/HD12440874526914) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 21:50:30, timezone: UTC+08:00
+2024-04-08 (N40857424538, HD12440874526914) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 21:50:30, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -17.80 HKD
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9
 
@@ -385,7 +385,7 @@ include ../prelude.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -10.00 HKD
     expenses:food and drinks:snacks                                           ; food_and_drink: Nissin Cup Noodles Spicy Seafood Flavour Potato Stick Cup
 
-2024-04-17 (N41783262079/HD12441795347353) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 22:45:00, timezone: UTC+08:00
+2024-04-17 (N41783262079, HD12441795347353) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 22:45:00, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            10.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -445,7 +445,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-04-20 (000-9101/51550016002) Pizza Hut  ; activity: eating, duration: PT1H4M22S, eating: lunch, time: 14:46:19, timezone: UTC+08:00
+2024-04-20 (000-9101, 51550016002) Pizza Hut  ; activity: eating, duration: PT1H4M22S, eating: lunch, time: 14:46:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                                55.00 HKD  ; food_and_drink: 卡邦尼煙肉意粉
     expenses:food and drinks:dining                                                 3.00 HKD  ; food_and_drink: 忌廉雞湯
     expenses:food and drinks:fees                                                   5.80 HKD  ; food_and_drink: 10% service charge
@@ -482,7 +482,7 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        0.80 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-04-22 (N42295791900/HD12442205588514) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 22:33:43, timezone: UTC+08:00
+2024-04-22 (N42295791900, HD12442205588514) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 22:33:43, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.00 HKD
     liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca             8.00 HKD = 0.00 HKD
 
@@ -526,7 +526,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 煙肉焗薯, food_and_drink: 酸忌廉, food_and_drink: 青菜沙律
 
-2024-04-24 (HD12442408728087/STRIPE DDAmgB8Kj/po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD12442408728087 24Apr, activity: deposit, timezone: UTC+08:00
+2024-04-24 (HD12442408728087, STRIPE DDAmgB8Kj, po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD12442408728087 24Apr, activity: deposit, timezone: UTC+08:00
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        -180.28 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -562,7 +562,7 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
     expenses:gaming:maimai
 
-2024-04-24 (N42400456643/HD12442409399440) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:10:15, timezone: UTC+08:00
+2024-04-24 (N42400456643, HD12442409399440) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:10:15, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            10.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -603,7 +603,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       17.52 HKD
     revenues:interests
 
-2024-04-28 (000-0256/51550027002) Pizza Hut  ; activity: eating, duration: PT37M19s, eating: lunch, time: 13:40:52, timezone: UTC+08:00
+2024-04-28 (000-0256, 51550027002) Pizza Hut  ; activity: eating, duration: PT37M19s, eating: lunch, time: 13:40:52, timezone: UTC+08:00
     expenses:food and drinks:dining                                     68.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 卡邦尼煙肉意粉, food_and_drink: 忌廉雞湯
     expenses:food and drinks:dining                                     12.00 HKD  ; food_and_drink: 忌廉雞湯
     expenses:food and drinks:fees                                        8.00 HKD  ; food_and_drink: 10% service charge

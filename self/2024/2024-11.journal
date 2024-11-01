@@ -47,7 +47,7 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -17 629.71 HKD = -17 629.71 HKD
     equity:opening/closing balances
 
-2024-11-01 (HD124B0178334323/STRIPE Zka1TGHBe/po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD124B0178334323 1Nov, activity: deposit, time: 15:18:38, timezone: UTC+08:00
+2024-11-01 (HD124B0178334323, STRIPE Zka1TGHBe, po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD124B0178334323 1Nov, activity: deposit, time: 15:18:38, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       35.71 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -35.71 HKD = 0.00 HKD
 

@@ -350,7 +350,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-07-12 (N71232463273/HD12471299126869) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 13:52:41, timezone: UTC+08:00
+2024-07-12 (N71232463273, HD12471299126869) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 13:52:41, timezone: UTC+08:00
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7           73 975.00 KRW = 0.00 KRW
     liabilities:friends:4cde7f3e-81fa-4165-a2a4-1a7a52ec7400           14 000.00 KRW = 0.00 KRW
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766           12 431.41 KRW = -3 901.92 KRW
@@ -358,7 +358,7 @@ include ../prelude.journal
     equity:conversions:HKD-KRW:HKD                                        570.50 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        -570.50 HKD
 
-2024-07-12 (N71232487628/HD12471299146878) e2613673-8956-40d9-8024-53163878b766  ; activity: repayment, time: 14:01:15, timezone: UTC+08:00
+2024-07-12 (N71232487628, HD12471299146878) e2613673-8956-40d9-8024-53163878b766  ; activity: repayment, time: 14:01:15, timezone: UTC+08:00
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766             99.82 HKD = 0.00 HKD
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766          3 901.92 KRW = 0.00 KRW
     equity:conversions:HKD-KRW:KRW                                   -3 901.92 KRW  ; rate: 0.00568182
@@ -385,7 +385,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 芝士焗肉醬意粉
 
-2024-07-16 * (N71643575368/HD12471608140939) dfde1439-813b-4eb6-b7a0-a2a1cc30b714  ; activity: activity, time: 13:45:08, timezone: UTC+08:00, via: 97a86b8c-ba7b-4285-b5d5-58016fb17bda
+2024-07-16 * (N71643575368, HD12471608140939) dfde1439-813b-4eb6-b7a0-a2a1cc30b714  ; activity: activity, time: 13:45:08, timezone: UTC+08:00, via: 97a86b8c-ba7b-4285-b5d5-58016fb17bda
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -700.00 HKD
     assets:deferred expenses:activites                                 700.00 HKD
 
@@ -758,11 +758,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.90 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: sparkling graph juice 500 mL
 
-2024-07-29 * (939789/SOP.3336-8963-3580-77782..0) Google  ; activity: service, time: 00:26:00, timezone: UTC+08:00
+2024-07-29 * (939789, SOP.3336-8963-3580-77782..0) Google  ; activity: service, time: 00:26:00, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
     assets:deferred expenses:services:clouds:Google                  150.00 HKD = 153.80 HKD
 
-2024-07-29 * (761425/MKB7G6HWZ6/139831558648) Apple  ; activity: service, time: 16:01:29, timezone: UTC+08:00
+2024-07-29 * (761425, MKB7G6HWZ6, 139831558648) Apple  ; activity: service, time: 16:01:29, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD = 16.00 HKD
 

@@ -170,7 +170,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-06-05 (415712199233/9E9213A8AD89A88A) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, eating: dinner, time: 20:41:04, timezone: UTC+08:00
+2024-06-05 (415712199233, 9E9213A8AD89A88A) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, eating: dinner, time: 20:41:04, timezone: UTC+08:00
     expenses:food and drinks:dining                                    656.00 HKD
     expenses:food and drinks:fees                                       66.00 HKD  ; food_and_drink: 10% service charge
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -722.00 HKD
@@ -180,7 +180,7 @@ include ../prelude.journal
     assets:cash                                                       -250.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         -750.00 HKD
 
-2024-06-06 (HD12460611662982/0000178107) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:10, timezone: UTC+08:00
+2024-06-06 (HD12460611662982, 0000178107) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:10, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       35.00 HKD
     assets:accrued revenues:education                                  -35.00 HKD = 0.00 HKD
 
@@ -375,7 +375,7 @@ include ../prelude.journal
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d      -60.00 HKD = -60.00 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: unknown
 
-2024-06-13 (N61346934905/HD12461329210118) 12960c02-bcd6-4169-bc22-7c3fb14b1f5d  ; activity: repayment, time: 20:53:34, timezone: UTC+08:00
+2024-06-13 (N61346934905, HD12461329210118) 12960c02-bcd6-4169-bc22-7c3fb14b1f5d  ; activity: repayment, time: 20:53:34, timezone: UTC+08:00
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d            60.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -383,11 +383,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-06-14 (N61449532120/HD12461431367544) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 18:57:28, timezone: UTC+08:00
+2024-06-14 (N61449532120, HD12461431367544) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 18:57:28, timezone: UTC+08:00
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7             1.00 HKD = -1 440.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-06-14 (N61449543625/HD12461431377089) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 19:01:58, timezone: UTC+08:00
+2024-06-14 (N61449543625, HD12461431377089) a62e5375-6a8f-423e-83cf-a0b65a293ee7  ; activity: repayment, time: 19:01:58, timezone: UTC+08:00
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7         1 440.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -506,7 +506,7 @@ include ../prelude.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -11 000.00 KRW
     expenses:food and drinks:dining                                                  ; food_and_drink: cream udon
 
-2024-06-20 * (133615-0404/KTX-418) Korail  ; activity: transport, duration: PT59M, time: 14:38, timezone: UTC+09:00
+2024-06-20 * (133615-0404, KTX-418) Korail  ; activity: transport, duration: PT59M, time: 14:38, timezone: UTC+09:00
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -18 275.00 KRW
     expenses:transport:trains                                    18 275.00 KRW
 
@@ -762,11 +762,11 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Mocha; venti (20 fl oz)
 
-2024-06-30 (769336/MKB7BM70Y8/194818733355) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
+2024-06-30 (769336, MKB7BM70Y8, 194818733355) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
     assets:deferred expenses:services:clouds:Apple
 
-2024-06-30 (599731/SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:03, timezone: UTC+08:00
+2024-06-30 (599731, SOP.3336-8963-3580-77782) Google  ; activity: service, time: 00:26:03, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -3.80 HKD
     assets:deferred expenses:services:clouds:Google
 

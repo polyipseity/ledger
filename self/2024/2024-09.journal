@@ -158,7 +158,7 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 82.00 HKD
     expenses:gaming:maimai
 
-2024-09-03 * (T0000801112000138056/307185) Don Don: Donki  ; activity: eating, eating: snacks, time: 20:24, timezone: UTC+08:00
+2024-09-03 * (T0000801112000138056, 307185) Don Don: Donki  ; activity: eating, eating: snacks, time: 20:24, timezone: UTC+08:00
     assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9               22.90 HKD = 22.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.80 HKD
     expenses:food and drinks:snacks                                         10.90 HKD  ; food_and_drink: (4902986556754) DAIRY WHITE SKAL (PET)
@@ -203,7 +203,7 @@ include ../prelude.journal
     assets:cash                                                       -500.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-09-05 (HD12490529716312/N90590597400) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 11:51:09, timezone: UTC+08:00
+2024-09-05 (HD12490529716312, N90590597400) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 11:51:09, timezone: UTC+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                               -21 050.00 HKD
 
@@ -436,7 +436,7 @@ include ../prelude.journal
     expenses:food and drinks:dining       39.00 HKD  ; food_and_drink: bolognese, food_and_drink: hot Lipton milk tea, food_and_drink: no-flip over easy egg, food_and_drink: rice (light)
     expenses:food and drinks:dining        6.00 HKD  ; food_and_drink: preserved vegetables, food_and_drink: rice noodles (light), food_and_drink: shredded pork
 
-2024-09-14 (HD12491452439692/N91418153510) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 19:12:50, timezone: UTC+08:00
+2024-09-14 (HD12491452439692, N91418153510) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 19:12:50, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.10 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -461,7 +461,7 @@ include ../prelude.journal
     liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -60.00 HKD = -60.00 HKD
     assets:cash
 
-2024-09-16 (HD12491656618604/N91623451792) e81cf14c-79fc-4958-b694-1a2a2c0c9be1  ; activity: repayment, time: 13:41:45, timezone: UTC+08:00
+2024-09-16 (HD12491656618604, N91623451792) e81cf14c-79fc-4958-b694-1a2a2c0c9be1  ; activity: repayment, time: 13:41:45, timezone: UTC+08:00
     liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1            60.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -60.00 HKD
 
@@ -601,11 +601,11 @@ include ../prelude.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
     expenses:gaming:maimai
 
-2024-09-24 * (T0000801103000214649/234507) Don Don: Donki  ; activity: eating, eating: snacks, time: 22:21, timezone: UTC+08:00
+2024-09-24 * (T0000801103000214649, 234507) Don Don: Donki  ; activity: eating, eating: snacks, time: 22:21, timezone: UTC+08:00
     expenses:food and drinks:snacks                                 8.00 HKD  ; food_and_drink: (2042706000005) HOKKAIDO BEEF CROQUE
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.00 HKD = -8.00 HKD
 
-2024-09-24 (HD12492475870099/N92446721755) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 23:25, timezone: UTC+08:00
+2024-09-24 (HD12492475870099, N92446721755) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 23:25, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.00 HKD
 
@@ -690,7 +690,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.40 HKD
     expenses:transport:buses
 
-2024-09-26 * (N92653202755/d2926e7a-1f12-4194-92be-978768d964a7) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, posted: 2024-08-22, time: 23:40, timezone: UTC+08:00
+2024-09-26 * (N92653202755, d2926e7a-1f12-4194-92be-978768d964a7) 1100f5b8-ddaa-4269-91b9-cd79d704a77b  ; activity: adjust, posted: 2024-08-22, time: 23:40, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             0.00 HKD = 16 966.42 HKD
     revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                            0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7    5 876.57 HKD
@@ -731,7 +731,7 @@ include ../prelude.journal
     expenses:food and drinks:fees                                   6.00 HKD  ; food_and_drink: 10% service charge
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -64.00 HKD
 
-2024-09-27 (HD12492783313692/N92755261173) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:13, timezone: UTC+08:00
+2024-09-27 (HD12492783313692, N92755261173) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:13, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            64.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -64.00 HKD
 
@@ -787,7 +787,7 @@ include ../prelude.journal
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                      20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
 
-2024-09-29 * (360606/MKB7MG1WVJ/206856765550) Apple  ; activity: service, time: 16:01:48, timezone: UTC+08:00
+2024-09-29 * (360606, MKB7MG1WVJ, 206856765550) Apple  ; activity: service, time: 16:01:48, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
 

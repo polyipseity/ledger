@@ -233,7 +233,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:buses
 
-2024-03-08 (N30871130271/HD12430804788230/G2) e7e8e150-5a24-46c7-a900-cfe382196de5  ; activity: eating, duration: PT2H, eating: dinner, time: 18:13:08, timezone: UTC+08:00
+2024-03-08 (N30871130271, HD12430804788230, G2) e7e8e150-5a24-46c7-a900-cfe382196de5  ; activity: eating, duration: PT2H, eating: dinner, time: 18:13:08, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -388.00 HKD
     expenses:food and drinks:dining                                                ; food_and_drink: buffet
 
@@ -485,7 +485,7 @@ include ../prelude.journal
     liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca      -29.00 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: 磨菇煙肉焗牛扒意粉
 
-2024-03-20 (N32001525613/HD12432029360009) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 12:18:32, timezone: UTC+08:00
+2024-03-20 (N32001525613, HD12432029360009) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 12:18:32, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -29.00 HKD
     liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca
 
@@ -581,7 +581,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-03-24 (140339/408412111099) 0aff10b0-6f95-4504-9478-98be64bf7f08  ; activity: eating, duration: PT1H3M5S, eating: dinner, time: 19:19, timezone: UTC+08:00
+2024-03-24 (140339, 408412111099) 0aff10b0-6f95-4504-9478-98be64bf7f08  ; activity: eating, duration: PT1H3M5S, eating: dinner, time: 19:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                    138.00 HKD  ; food_and_drink: 香芒貴妃蝦球>例
     expenses:food and drinks:dining                                    128.00 HKD  ; food_and_drink: 欖角醬燒骨>例
     expenses:food and drinks:dining                                    148.00 HKD  ; food_and_drink: 醬皇粉絲海鮮煲
@@ -649,7 +649,7 @@ include ../prelude.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -58.30 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: buffet
 
-2024-03-27 (N32720104869/HD12432744609410) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:16:26, timezone: UTC+08:00
+2024-03-27 (N32720104869, HD12432744609410) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:16:26, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -58.30 HKD
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9
 

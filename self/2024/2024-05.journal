@@ -235,7 +235,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
-2024-05-08 (N50842423086/HD12450843694698) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 08:37, timezone: UTC+08:00
+2024-05-08 (N50842423086, HD12450843694698) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 08:37, timezone: UTC+08:00
     liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca             6.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -283,7 +283,7 @@ include ../prelude.journal
     liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -114.00 HKD = -114.00 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: 温泉蛋黑松露野菌意粉, food_and_drink: 芝士薯蓉, food_and_drink: 蒜香法包, food_and_drink: 蘑茹忌廉湯, food_and_drink: 飲品吧
 
-2024-05-09 (N50947468724/HD12450947715325) 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45  ; activity: repayment, time: 20:37:14, timezone: UTC+08:00
+2024-05-09 (N50947468724, HD12450947715325) 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45  ; activity: repayment, time: 20:37:14, timezone: UTC+08:00
     liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45           114.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -347,7 +347,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-05-11 (000-2205/51550016001) Pizza Hut  ; activity: eating, duration: PT1H30M27S, eating: dinner, time: 19:22:40, timezone: UTC+08:00
+2024-05-11 (000-2205, 51550016001) Pizza Hut  ; activity: eating, duration: PT1H30M27S, eating: dinner, time: 19:22:40, timezone: UTC+08:00
     expenses:food and drinks:dining                                               118.00 HKD  ; food_and_drink: 炒温泉蛋 ×2, food_and_drink: 百事無糖（杯）, food_and_drink: 豐盛全日早餐
     expenses:food and drinks:fees                                                  11.80 HKD  ; food_and_drink: 10% service charge
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -129 _PT/D
@@ -464,7 +464,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:minibuses
 
-2024-05-15 (N51562705361/HD12451560079202) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 15:20:03, timezone: UTC+08:00
+2024-05-15 (N51562705361, HD12451560079202) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 15:20:03, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9           106.70 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -106.70 HKD
 
@@ -777,7 +777,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-05-24 (202405245132/8520309) Sushiro  ; activity: eating, eating: lunch, time: 15:48, timezone: UTC+08:00
+2024-05-24 (202405245132, 8520309) Sushiro  ; activity: eating, eating: lunch, time: 15:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: $12 碟子【紅】 ×2
     expenses:food and drinks:dining                                         17.00 HKD  ; food_and_drink: $17 碟子【銀】
     expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: $40 下午茶SET
