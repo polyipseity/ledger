@@ -579,6 +579,14 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
+2024-10-25 * (pi_3QDoJtBMoBY3wEtc3MPkyVRX) ******@*****.com  ; polyipseity (@polyipseity) - Support, activity: donation, time: 14:16:57, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.61569
+    expenses:fees:Buy Me a Coffee                                     1.90 HKD
+    expenses:fees:Stripe                                              3.97 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       35.71 HKD
+    equity:conversions:HKD-USD:HKD                                  -41.58 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -5.46 USD
+
 2024-10-25 (082-2342) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 17:59:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: 惹味雞翼, food_and_drink: 烚蛋配蕃茄湯烏冬, food_and_drink: 雞肉腸
