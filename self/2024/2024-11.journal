@@ -57,9 +57,13 @@ include ../prelude.journal
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -35.71 HKD = 0.00 HKD
 
 2024-11-02 (000-875968) Saizeriya  ; activity: eating, duration: PT29M52S, eating: lunch, time: 11:46:08, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: (unknown)
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatos (fewer), food_and_drink: grilled spicy sausages
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+
+2024-11-02 (000-876098) Saizeriya  ; activity: eating, duration: PT23M51S, eating: lunch, time: 18:03:09, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: pizza with bacon & pineapple
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
