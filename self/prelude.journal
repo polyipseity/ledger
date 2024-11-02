@@ -77,6 +77,7 @@ account assets:special:vouchers:Starbucks                                       
 account assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                              ; type: A
 account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                              ; type: A
 account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
+account assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                        ; type: A
 account equity:conversions:HKD-_PT/B                                                              ; type: E
 account equity:conversions:HKD-_PT/B:HKD                                                          ; type: E
 account equity:conversions:HKD-_PT/B:_PT/B                                                        ; type: E
