@@ -65,6 +65,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: pizza with bacon & pineapple
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
+2024-11-02 7-Eleven  ; activity: eating, eating: snacks, time: 21:43, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
+    expenses:food and drinks:snacks                                                    ; food_and_drink: Ovaltine - rich chocolate malted milk drink ×2
+
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
