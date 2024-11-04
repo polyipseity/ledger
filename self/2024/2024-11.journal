@@ -81,6 +81,10 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hot local milk tea, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick toast + butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 
+2024-11-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 12:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
+
 2024-11-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:21, timezone: UTC+08:00
     expenses:transport:buses                                                 2.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -101,6 +105,43 @@ include ../prelude.journal
 2024-11-03 self  ; activity: transfer, time: 18:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-11-04 (71279618) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT41M7S, eating: breakfast, time: 08:05:53, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles, food_and_drink: sausage, food_and_drink: 半焗流心蛋, food_and_drink: （早）蕃茄濃湯雙併即食麵
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+
+2024-11-04 (000-876514) Saizeriya  ; activity: eating, duration: PT28M27S, eating: lunch, time: 14:57:10, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: cheese mashed potato
+    expenses:food and drinks:dining                                         10.00 HKD  ; food_and_drink: 佛卡夏
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+
+2024-11-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:42, timezone: UTC+08:00
+    expenses:transport:buses                                                 9.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
+
+2024-11-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:10, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+
+2024-11-04 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 19:52, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: bacon mushroom, food_and_drink: spaghetti, food_and_drink: spicy tomato
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2024-11-04 Swire  ; activity: eating, eating: dinner, time: 20:31, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:dining                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2024-11-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:32, timezone: UTC+08:00
+    expenses:transport:buses                                                 4.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
+
+2024-11-04 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:12, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2024-11-04 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 22:30:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
