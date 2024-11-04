@@ -569,6 +569,18 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash                                                           -100.00 HKD
 
+2024-10-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:20, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2024-10-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:39, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2024-10-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 21:03, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 30.00 HKD
+
 2024-10-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
@@ -796,7 +808,7 @@ include ../prelude.journal
     assets:deferred expenses:services:clouds:Apple                                                    -8.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
     assets:deferred expenses:services:internet                                                      -149.00 HKD = 0.00 HKD
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -48.00 HKD = 0.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -30.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -196.20 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -164.70 HKD = 0.00 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                       -35.71 HKD = 0.00 HKD
