@@ -400,7 +400,7 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-09-12 (9/099774) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 13:12:56, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         32.50 HKD  ; food_and_drink: 芝味厚切一哥焗一大十大日豬扒飯 + less rice
+    expenses:food and drinks:dining                                         32.50 HKD  ; food_and_drink: 芝味厚切一哥焗豬扒飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:33, timezone: UTC+08:00

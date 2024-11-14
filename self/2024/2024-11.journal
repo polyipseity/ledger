@@ -340,6 +340,10 @@ include ../prelude.journal
     assets:accrued revenues:incomes:education      146.25 HKD
     revenues:incomes:education                    -146.25 HKD
 
+2024-11-11 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 18:15:00, timezone: UTC+08:00
+    assets:deferred expenses:activites      300.00 HKD = 300.00 HKD
+    assets:cash                            -300.00 HKD
+
 2024-11-11 (406E71/9043) McDonald's  ; activity: eating, eating: dinner, time: 21:14:29, timezone: UTC+08:00
     expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: extra large potato grids, food_and_drink: sau egg combo meal (large combo)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
@@ -437,9 +441,53 @@ include ../prelude.journal
     expenses:transport:buses                                                 5.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
 
+2024-11-13 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 09:30:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2024-11-14 (FRN20241114PAYD0102050263777) self  ; activity: transfer, time: 13:10, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-11-14 self  ; activity: transfer, time: 13:10, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-11-14 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:10, timezone: UTC+08:00
+    expenses:transport:buses                                                11.70 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
+
+2024-11-14 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:41, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
+
 2024-11-14 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 14:00:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       65.00 HKD
     revenues:incomes:education                     -65.00 HKD
+
+2024-11-14 (081-1733) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 16:08:33, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         29.20 HKD  ; food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti, food_and_drink: 迷你碎蛋沙律牛角包
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
+
+2024-11-14 (8/082377) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 17:39:46, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         32.50 HKD  ; food_and_drink: 芝味厚切一哥焗豬扒飯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.50 HKD
+
+2024-11-14 ! 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: eating, eating: snacks, time: 20:20, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                 6.00 HKD  ; food_and_drink: Kinder Bueno T2 健達繽紛樂2條裝
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -6.00 HKD = -6.00 HKD
+
+2024-11-14 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:23, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+
+2024-11-14 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:45, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.50 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+
+2024-11-15 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, duration: P2D, time: 18:00:00, timezone: UTC+08:00
+    expenses:activites                      300.00 HKD
+    assets:deferred expenses:activites     -300.00 HKD = 0.00 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
