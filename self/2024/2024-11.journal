@@ -521,6 +521,35 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: BBQ sauce, food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: nuggets 6pcs combo meal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
+2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 03:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2024-11-18 (FRN20241118PAYD0102057564577) self  ; activity: transfer, time: 03:20, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-11-18 self  ; activity: transfer, time: 03:20, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD = 178.80 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-11-18 (000-879069) Saizeriya  ; activity: eating, duration: PT30M45S, eating: lunch, time: 12:04:31, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: mushrooms chicken doria
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 17:15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2024-11-18 (000-879144) Saizeriya  ; activity: eating, duration: PT31M13S, eating: lunch, time: 17:42:01, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: spaghetti with black truffle sauce
+    expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -52.00 HKD
+
+2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H15M, time: 21:30:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       81.25 HKD
+    revenues:incomes:education                     -81.25 HKD
+
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
