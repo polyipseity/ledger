@@ -546,9 +546,9 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -52.00 HKD
 
-2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H15M, time: 21:30:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       81.25 HKD
-    revenues:incomes:education                     -81.25 HKD
+2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H45M, time: 21:30:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      113.75 HKD
+    revenues:incomes:education                    -113.75 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
