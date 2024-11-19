@@ -575,7 +575,7 @@ include ../prelude.journal
     expenses:food and drinks:snacks                                          9.50 HKD  ; food_and_drink: Baby Star Snack Noodle Chicken Flavour ×2
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.50 HKD
 
-2024-11-19 (4FA9) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (19NOV24), activity: withdraw, time: 19:02, timezone: UTC+08:00
+2024-11-19 (NB1928222232, 4FA9) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (19NOV24), activity: withdraw, time: 19:02, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -100.00 HKD
 
@@ -583,7 +583,7 @@ include ../prelude.journal
     expenses:transport:buses                                                 2.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
 
-2024-11-19 (FRN20241119PAYD0102061292858) self  ; activity: transfer, time: 20:23, timezone: UTC+08:00, via: eDDA
+2024-11-19 (CBJ10508153, FRN20241119PAYD0102061292858, OCTOPUS038084565301286497) self  ; activity: transfer, time: 20:23, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
