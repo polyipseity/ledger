@@ -20,7 +20,6 @@ account assets:cheques:certified                                                
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:activites                                                        ; type: A
-account assets:deferred expenses:maintenance                                                      ; type: A
 account assets:deferred expenses:education                                                        ; type: A
 account assets:deferred expenses:education:books                                                  ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
@@ -33,6 +32,7 @@ account assets:deferred expenses:insurances                                     
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:deferred expenses:insurances:life                                                  ; type: A
 account assets:deferred expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             ; type: A
+account assets:deferred expenses:repairs                                                          ; type: A
 account assets:deferred expenses:services:clouds                                                  ; type: A
 account assets:deferred expenses:services:clouds:Apple                                            ; type: A
 account assets:deferred expenses:services:clouds:Google                                           ; type: A
@@ -138,7 +138,7 @@ account expenses:insurances:levy                                                
 account expenses:insurances:life                                                                  ; type: X
 account expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                             ; type: X
 account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: X
-account expenses:maintenance                                                                      ; type: X
+account expenses:repairs                                                                          ; type: X
 account expenses:services                                                                         ; type: X
 account expenses:services:clouds                                                                  ; type: X
 account expenses:services:clouds:Apple                                                            ; type: X
@@ -355,7 +355,7 @@ tag billing
 tag bounty
 tag eating
 tag food_and_drink
-tag maintenance
+tag repair
 tag reward
 tag service
 tag transfer

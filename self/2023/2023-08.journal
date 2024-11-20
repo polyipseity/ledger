@@ -154,13 +154,13 @@ include ../prelude.journal
     expenses:services                                               60.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2023-08-19 * (2023081922001432591446688935) 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; activity: maintenance, maintenance: glasses, time: 19:09:02, timezone: UTC+08:00
-    assets:deferred expenses:maintenance                              772.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+2023-08-19 * (2023081922001432591446688935) 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; activity: repair, time: 19:09:02, timezone: UTC+08:00
+    assets:deferred expenses:repairs                                  772.00 HKD  ; repair: glasses
+    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236     -772.00 HKD
 
 2023-08-20 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; activity: adjust, time: 13:10:30, timezone: UTC+08:00
-    assets:deferred expenses:maintenance     -772.00 HKD
-    expenses:maintenance
+    assets:deferred expenses:repairs     -772.00 HKD
+    expenses:repairs
 
 2023-08-20 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, time: 15:00:00, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD
