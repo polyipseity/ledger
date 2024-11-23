@@ -96,7 +96,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
     expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457
 
-2023-09-08 Wellcome 2bae54dc-467f-459c-9202-5149f419152f  ; activity: consumption, time: 18:46:56, timezone: UTC+08:00
+2023-09-08 Wellcome, 2bae54dc-467f-459c-9202-5149f419152f  ; activity: consumption, time: 18:46:56, timezone: UTC+08:00
     expenses:food and drinks:snacks                                 34.00 HKD  ; food_and_drink: Yakult ×2
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
