@@ -192,7 +192,7 @@ include ../prelude.journal
     revenues:incomes:education                     -97.50 HKD
 
 2024-11-06 (000-876813) Saizeriya  ; activity: eating, duration: PT25M28S, eating: lunch, time: 14:52:39, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: soft-boiled egg, food_and_drink: spaghetti "CARBONARA"
+    expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: spaghetti "CARBONARA" with a soft-boiled egg
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -52.00 HKD
 
@@ -249,7 +249,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.40 HKD
 
 2024-11-08 (000-877074) Saizeriya  ; activity: eating, duration: PT32M4S, eating: lunch, time: 11:37:17, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: meat doria, food_and_drink: soft-boiled egg
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: meat doria with a soft-boiled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2024-11-08 (FRN20241108PAYD0102037316605) self  ; activity: transfer, time: 12:16, timezone: UTC+08:00, via: eDDA
@@ -634,8 +634,8 @@ include ../prelude.journal
     expenses:transport:buses                                                 8.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.90 HKD
 
-2024-11-20 ! (R648353481, 102464828774) Apple  ; activity: repair, time: 16:10:39, timezone: UTC+08:00
-    expenses:repairs        0.00 HKD  ; repair: iPad
+2024-11-20 * (R648353481, 102464828774) Apple  ; activity: repair, time: 16:10:39, timezone: UTC+08:00
+    assets:deferred expenses:repairs        0.00 HKD  ; repair: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
 
 2024-11-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:25, timezone: UTC+08:00
     expenses:transport:buses                                                 8.90 HKD
@@ -714,6 +714,12 @@ include ../prelude.journal
     expenses:transport:minibuses                                            16.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -16.90 HKD
 
+2024-11-22 (HD124B2232772773) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     1 170.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                   58.50 HKD
+    assets:accrued revenues:incomes:education                        -1 170.00 HKD
+    revenues:incomes:education                                          -58.50 HKD
+
 2024-11-22 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:29, timezone: UTC+08:00
     expenses:transport:buses                                                 9.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
@@ -737,6 +743,43 @@ include ../prelude.journal
 2024-11-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 09:38:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       65.00 HKD
     revenues:incomes:education                     -65.00 HKD
+
+2024-11-23 (41085464) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M52S, eating: breakfast, time: 11:17:08, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2024-11-23 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H36M, time: 12:02, timezone: UTC+08:00
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 13:38, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+
+2024-11-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 17:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2024-11-23 (CBN13230326, FRN20241123PAYD0102069123350, OCTOPUS038084565301286497) self  ; activity: transfer, time: 18:21, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2024-11-23 self  ; activity: transfer, time: 18:21, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2024-11-23 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:30, timezone: UTC+08:00
+    expenses:transport:buses                                                 8.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.90 HKD
+
+2024-11-23 (R648353481) Apple  ; activity: adjust, time: 19:00:51, timezone: UTC+08:00
+    expenses:repairs                        0.00 HKD
+    assets:deferred expenses:repairs        0.00 HKD
+
+2024-11-23 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:09, timezone: UTC+08:00
+    expenses:transport:buses                                                 8.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.90 HKD
+
+2024-11-23 (000-880105) Saizeriya  ; activity: eating, duration: PT31M28S, eating: dinner, time: 19:40:03, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: meat doria with a soft-boiled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -55.00 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
