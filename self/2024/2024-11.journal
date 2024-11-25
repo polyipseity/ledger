@@ -781,6 +781,31 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: meat doria with a soft-boiled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -55.00 HKD
 
+2024-11-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 22:35, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
+
+2024-11-24 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 10:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2024-11-24 (000-880205) Saizeriya  ; activity: eating, duration: PT26M6S, eating: lunch, time: 13:25:48, timezone: UTC+08:00
+    expenses:food and drinks:dining       20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
+    expenses:food and drinks:dining       30.00 HKD  ; food_and_drink: pizza "MARGHERITA"
+    assets:cash                          -50.00 HKD
+
+2024-11-24 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 21:06, timezone: UTC+08:00
+    assets:cash                                                   10 000.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -10 000.00 HKD
+
+2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 00:15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 15:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
+
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
