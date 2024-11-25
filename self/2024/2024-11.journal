@@ -798,13 +798,45 @@ include ../prelude.journal
     assets:cash                                                   10 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -10 000.00 HKD
 
-2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 00:15:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       32.50 HKD
-    revenues:incomes:education                     -32.50 HKD
+2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 00:15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:38, timezone: UTC+08:00
+    expenses:transport:buses                                                 9.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
+
+2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:20, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
 
 2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 15:00:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education      130.00 HKD
     revenues:incomes:education                    -130.00 HKD
+
+2024-11-25 (7/075168) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 17:13:15, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: 焗米蘭三絲意粉
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2024-11-25 Swire  ; activity: eating, eating: snacks, time: 18:45, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:snacks                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:50, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
+
+2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:16, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.50 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
+
+2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 20:09:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2024-11-25 (HD124B2540703482, FRN20241125PAYC0102073638079) 49c186e5-f575-43ec-b73b-48d200eb27be  ; activity: tutoring, duration: PT1H, time: 22:03, timezone: UTC+08:00, via: 3fb4323d-96e7-4cd7-ac42-bf37ed9f833d
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      180.00 HKD
+    revenues:incomes:tutoring                                         -180.00 HKD  ; time: 22:30:15, timezone: UTC+08:00
 
 2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
