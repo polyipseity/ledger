@@ -734,7 +734,7 @@ include ../prelude.journal
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD
 
 2024-10-30 (000-875451) Saizeriya  ; activity: eating, duration: PT40M21S, eating: breakfast, time: 12:03:45, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatos, food_and_drink: package of tomato ketchup
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes, food_and_drink: package of tomato ketchup
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
 

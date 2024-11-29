@@ -57,6 +57,7 @@ account assets:equipment:clothing                                               
 account assets:equipment:consumer electronics                                                     ; type: A
 account assets:equipment:tools                                                                    ; type: A
 account assets:loans                                                                              ; type: A
+account assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be                                 ; type: A
 account assets:loans:friends                                                                      ; type: A
 account assets:loans:friends:198ce132-1e22-4afe-a0ff-cb512153036f                                 ; type: A
 account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                 ; type: A
