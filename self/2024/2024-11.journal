@@ -798,9 +798,9 @@ include ../prelude.journal
     assets:cash                                                   10 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -10 000.00 HKD
 
-2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 00:15:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       16.25 HKD
-    revenues:incomes:education                     -16.25 HKD
+2024-11-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 00:15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
 
 2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:38, timezone: UTC+08:00
     expenses:transport:buses                                                 9.60 HKD
@@ -870,9 +870,9 @@ include ../prelude.journal
     assets:accrued revenues:incomes:education       32.50 HKD
     revenues:incomes:education                     -32.50 HKD
 
-2024-11-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 10:30:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       32.50 HKD
-    revenues:incomes:education                     -32.50 HKD
+2024-11-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 10:30:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       48.75 HKD
+    revenues:incomes:education                     -48.75 HKD
 
 2024-11-27 (CBR15943315, FRN20241127PAYD0102076836948, OCTOPUS038084565301286497) self  ; activity: transfer, time: 13:35, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -887,7 +887,7 @@ include ../prelude.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
-2024-11-27 ! 49c186e5-f575-43ec-b73b-48d200eb27be  ; activity: tutoring, duration: PT1H, time: 21:35, timezone: UTC+08:00, via: 3fb4323d-96e7-4cd7-ac42-bf37ed9f833d
+2024-11-27 * 49c186e5-f575-43ec-b73b-48d200eb27be  ; activity: tutoring, duration: PT1H, time: 21:35, timezone: UTC+08:00, via: 3fb4323d-96e7-4cd7-ac42-bf37ed9f833d
     assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be      180.00 HKD = 180.00 HKD
     revenues:incomes:tutoring                                     -180.00 HKD
 
@@ -932,13 +932,34 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD = 0.00 HKD
 
-2024-11-29 * Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+2024-11-29 * (873345) Apple  ; activity: service, time: 17:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
 
 2024-11-29 * Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.00 HKD
     assets:deferred expenses:services:clouds:Apple       -8.00 HKD
+
+2024-11-30 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 08:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2024-11-30 (000-881364, 16) Saizeriya  ; activity: eating, duration: PT26M9S, eating: dinner, time: 17:38:39, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes (fewer), food_and_drink: grilled spicy sausages
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed spinach with bacon
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
+
+2024-11-30 * 49c186e5-f575-43ec-b73b-48d200eb27be  ; activity: tutoring, duration: PT1H, time: 21:10, timezone: UTC+08:00, via: 3fb4323d-96e7-4cd7-ac42-bf37ed9f833d
+    assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be      180.00 HKD = 360.00 HKD
+    revenues:incomes:tutoring                                     -180.00 HKD
+
+2024-11-30 (HD124B3055189872, 12241130F510661088, 2433506795691) 49c186e5-f575-43ec-b73b-48d200eb27be  ; activity: repayment, time: 22:32:40, timezone: UTC+08:00, via: 3fb4323d-96e7-4cd7-ac42-bf37ed9f833d
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      360.00 HKD
+    assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be         -360.00 HKD = 0.00 HKD
+
+2024-11-30 (CBU19080561, FRN20241130PAYD0102085682354, OCTOPUS03808456530) self  ; activity: transfer, time: 23:59, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        500.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -500.00 HKD
 
 2024-11-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
