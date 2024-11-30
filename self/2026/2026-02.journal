@@ -4,3 +4,7 @@ include ../prelude.journal
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+
+2026-02-28 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:support                       20.79 HKD  ; item: AppleCare+
+    assets:deferred expenses:services:support      -20.79 HKD

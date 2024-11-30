@@ -6,3 +6,7 @@ include ../prelude.journal
     assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+
+2025-06-30 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:support                       20.79 HKD  ; item: AppleCare+
+    assets:deferred expenses:services:support      -20.79 HKD

@@ -147,6 +147,7 @@ account expenses:services:clouds:Apple                                          
 account expenses:services:clouds:Google                                                           ; type: X
 account expenses:services:internet                                                                ; type: X
 account expenses:services:photography                                                             ; type: X
+account expenses:services:support                                                                 ; type: X
 account expenses:special                                                                          ; type: X
 account expenses:special:gifts                                                                    ; type: X
 account expenses:transport                                                                        ; type: X
