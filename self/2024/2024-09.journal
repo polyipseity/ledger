@@ -5,7 +5,7 @@ include ../prelude.journal
     assets:accumulated depreciation                                                               -1 000.00 KRW = -1 000.00 KRW
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
-    assets:deferred expenses:activites                                                               100.00 HKD = 100.00 HKD
+    assets:deferred expenses:activities                                                              100.00 HKD = 100.00 HKD
     assets:deferred expenses:education:tuition:universities                                       21 050.00 HKD = 21 050.00 HKD
     assets:deferred expenses:services:clouds:Apple                                                     8.00 HKD = 8.00 HKD
     assets:deferred expenses:services:clouds:Google                                                  150.00 HKD = 150.00 HKD
@@ -248,10 +248,10 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-09-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 09:58:20, timezone: UTC+08:00, voucher: HKD 40 meal coupon
-    assets:deferred expenses:activites     -100.00 HKD = 0.00 HKD
-    assets:cash                             100.00 HKD
-    assets:special:vouchers                  50.00 HKD  ; valid: 2024-09-07T00:00:00+08:00/2024-09-07T23:59:59+08:00
-    revenues:education                      -50.00 HKD
+    assets:deferred expenses:activities     -100.00 HKD = 0.00 HKD
+    assets:cash                              100.00 HKD
+    assets:special:vouchers                   50.00 HKD  ; valid: 2024-09-07T00:00:00+08:00/2024-09-07T23:59:59+08:00
+    revenues:education                       -50.00 HKD
 
 2024-09-07 (T1#142) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 13:30:15, timezone: UTC+08:00
     assets:special:vouchers                                                -50.00 HKD

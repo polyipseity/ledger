@@ -335,8 +335,8 @@ include ../prelude.journal
     expenses:food and drinks:dining                                                    ; food_and_drink: 煙肉焗薯, food_and_drink: 酸忌廉, food_and_drink: 青菜沙律
 
 2024-07-11 * 83282154-a569-4443-8df3-675a5a48e4a2  ; activity: activity, time: 15:48:15, timezone: UTC+08:00
-    liabilities:accrued expenses:activites      -40.00 HKD
-    assets:deferred expenses:activites           40.00 HKD
+    liabilities:accrued expenses:activities      -40.00 HKD
+    assets:deferred expenses:activities           40.00 HKD
 
 2024-07-11 (5874F6/8840) McDonald's  ; activity: eating, eating: dinner, time: 17:08:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
@@ -387,7 +387,7 @@ include ../prelude.journal
 
 2024-07-16 * (N71643575368, HD12471608140939) dfde1439-813b-4eb6-b7a0-a2a1cc30b714  ; activity: activity, time: 13:45:08, timezone: UTC+08:00, via: 97a86b8c-ba7b-4285-b5d5-58016fb17bda
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -700.00 HKD
-    assets:deferred expenses:activites                                 700.00 HKD
+    assets:deferred expenses:activities                                700.00 HKD
 
 2024-07-16 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
@@ -635,11 +635,11 @@ include ../prelude.journal
     expenses:transport:buses
 
 2024-07-24 * 83282154-a569-4443-8df3-675a5a48e4a2  ; activity: activity, duration: PT7H, time: 13:00:00, timezone: UTC+08:00
-    assets:deferred expenses:activites      -40.00 HKD = 700.00 HKD
-    expenses:activites
+    assets:deferred expenses:activities      -40.00 HKD = 700.00 HKD
+    expenses:activities
 
 2024-07-24 83282154-a569-4443-8df3-675a5a48e4a2  ; activity: activity, time: 13:53:15, timezone: UTC+08:00
-    liabilities:accrued expenses:activites       40.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:activities       40.00 HKD = 0.00 HKD
     assets:cash
 
 2024-07-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:18, timezone: UTC+08:00
@@ -916,7 +916,7 @@ include ../prelude.journal
     assets:accumulated depreciation                                                                  666.66 KRW = 0.00 KRW
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
-    assets:deferred expenses:activites                                                              -700.00 HKD = 0.00 HKD
+    assets:deferred expenses:activities                                                             -700.00 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                                      -21 050.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Apple                                                    -8.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD

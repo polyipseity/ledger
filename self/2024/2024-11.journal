@@ -341,8 +341,8 @@ include ../prelude.journal
     revenues:incomes:education                    -146.25 HKD
 
 2024-11-11 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 18:15:00, timezone: UTC+08:00
-    assets:deferred expenses:activites      300.00 HKD = 300.00 HKD
-    assets:cash                            -300.00 HKD
+    assets:deferred expenses:activities      300.00 HKD = 300.00 HKD
+    assets:cash                             -300.00 HKD
 
 2024-11-11 (406E71/9043) McDonald's  ; activity: eating, eating: dinner, time: 21:14:29, timezone: UTC+08:00
     expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: extra large potato grids, food_and_drink: sau egg combo meal (large combo)
@@ -505,8 +505,8 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 
 2024-11-15 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, duration: P2D, time: 18:00:00, timezone: UTC+08:00
-    expenses:activites                      300.00 HKD
-    assets:deferred expenses:activites     -300.00 HKD = 0.00 HKD
+    expenses:activities                      300.00 HKD
+    assets:deferred expenses:activities     -300.00 HKD = 0.00 HKD
 
 2024-11-17 7-Eleven  ; activity: eating, eating: snacks, time: 17:50, timezone: UTC+08:00
     expenses:food and drinks:snacks                                          7.60 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Dark and White Chocolate Flavored Cream
