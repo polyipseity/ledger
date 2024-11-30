@@ -8,5 +8,5 @@ include ../prelude.journal
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
 
 2025-06-30 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
-    expenses:services:support                       20.79 HKD  ; item: AppleCare+
+    expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
     assets:deferred expenses:services:support      -20.79 HKD
