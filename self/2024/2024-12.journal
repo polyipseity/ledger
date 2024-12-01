@@ -47,12 +47,27 @@ include ../prelude.journal
     equity:opening/closing balances
 
 2024-12-01 (792545, 278499918654, AEA2248976, MB38239464) Apple  ; activity: service, time: 00:00, timezone: UTC+08:00
-    assets:deferred expenses:services:support                        499.00 HKD  ; item: AppleCare+ for iPad 10
+    assets:deferred expenses:services:support                        499.00 HKD  ; item: AppleCare+ for iPad 10, valid: 2024-12-01T00:00:00+08:00/2026-11-30T23:59:59+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -499.00 HKD
+
+2024-12-01 (000-881502) Saizeriya  ; activity: eating, duration: PT36M9S, eating: lunch, time: 12:25:16, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         14.00 HKD  ; food_and_drink: creamy mushroom soup
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: pizza "MARGHERITA"
+    expenses:food and drinks:dining                                         40.00 HKD  ; food_and_drink: spaghetti with black truffle sauce
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -104.00 HKD
+
+2024-12-01 (8230594, 84110480B5) a2c6c8e6-2480-47db-a03b-94840933b018  ; activity: purchase, time: 13:45, timezone: UTC+08:00
+    assets:equipment:consumer electronics                           60.00 HKD  ; depreciation: straight-line@P2Y, item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger, residual: 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -60.00 HKD
 
 2024-12-26 ! (ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD
     assets:deferred expenses:services:internet     -149.00 HKD
+
+2024-12-31 ! adjustment  ; activity: expiration, time: 23:59:59, timezone: UTC+08:00
+    expenses:expiration                                             8 676.00 _PT/C
+    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8    -8 676.00 _PT/C = 0.00 _PT/C
 
 2024-12-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
@@ -65,6 +80,7 @@ include ../prelude.journal
     assets:accumulated depreciation        0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     assets:accumulated depreciation     -333.33 KRW  ; item: Leopold wire keycap remover
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
 
 2024-12-31 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10

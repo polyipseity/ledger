@@ -7,6 +7,7 @@ include ../prelude.journal
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation     -333.34 KRW  ; item: Leopold wire keycap remover
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
+    assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
 
 2025-05-31 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10

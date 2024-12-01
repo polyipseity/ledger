@@ -932,7 +932,7 @@ include ../prelude.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD = 0.00 HKD
 
-2024-11-29 * (873345) Apple  ; activity: service, time: 17:01, timezone: UTC+08:00
+2024-11-29 * (873345, MKB7VSBNFD, 134881545833) Apple  ; activity: service, time: 17:01, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
 
