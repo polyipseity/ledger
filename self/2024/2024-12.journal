@@ -46,7 +46,7 @@ include ../prelude.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -17 629.71 HKD = -17 629.71 HKD
     equity:opening/closing balances
 
-2024-12-01 (278499918654) Apple  ; activity: service, time: 00:00, timezone: UTC+08:00
+2024-12-01 (792545, 278499918654, AEA2248976, MB38239464) Apple  ; activity: service, time: 00:00, timezone: UTC+08:00
     assets:deferred expenses:services:support                        499.00 HKD  ; item: AppleCare+ for iPad 10
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -499.00 HKD
 
