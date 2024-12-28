@@ -356,6 +356,10 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
     assets:cash                                                       -500.00 HKD
 
+2024-12-22 ! (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 16:06, timezone: UTC+08:00
+    assets:deferred expenses:transport:trains:high-speed           200.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
+
 2024-12-24 (01336623) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 19:14:37, timezone: UTC+08:00
     expenses:food and drinks:dining                                 69.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: 芝士忌廉焗一口雞腸仔及半焗炒飯
     expenses:food and drinks:dining                                  1.00 HKD  ; food_and_drink: takeaway container
@@ -364,6 +368,14 @@ include ../prelude.journal
 2024-12-24 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        4.84 HKD
     revenues:interests                                                  -4.84 HKD
+
+2024-12-24 ! (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 21:58, timezone: UTC+08:00
+    assets:deferred expenses:transport:trains:high-speed           200.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
+
+2024-12-24 ! (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 22:03, timezone: UTC+08:00
+    assets:deferred expenses:transport:trains:high-speed           200.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
 
 2024-12-25 7-Eleven  ; activity: eating, eating: snacks, time: 13:20, timezone: UTC+08:00
     expenses:food and drinks:snacks                                         10.50 HKD  ; food_and_drink: Vita™️ Hong Kong Style Milk Tea Drink
@@ -377,6 +389,14 @@ include ../prelude.journal
 2024-12-28 126e93a7-c049-462a-92ae-cee03588ccc2  ; mild common cold, activity: healthcare, time: 13:20, timezone: UTC+08:00
     expenses:healthcare:medication                                  54.00 CNY  ; duration: P2D
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -54.00 CNY
+
+2024-12-29 ! (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H43M, time: 13:07, timezone: UTC+08:00
+    expenses:transport:trains:high-speed                      200.00 CNY
+    assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
+
+2024-12-31 ! (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
+    expenses:transport:trains:high-speed                      200.00 CNY
+    assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
 
 2024-12-31 * adjustment  ; activity: expiration, time: 23:59:59, timezone: UTC+08:00
     expenses:expiration                                             8 676.00 _PT/C

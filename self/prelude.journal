@@ -39,6 +39,8 @@ account assets:deferred expenses:services:clouds:Google                         
 account assets:deferred expenses:services:internet                                                ; type: A
 account assets:deferred expenses:services:support                                                 ; type: A
 account assets:deferred expenses:transport:airplanes                                              ; type: A
+account assets:deferred expenses:transport:trains                                                 ; type: A
+account assets:deferred expenses:transport:trains:high-speed                                      ; type: A
 account assets:digital                                                                            ; type: A
 account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719                                       ; type: A
 account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9  ; type: A
@@ -158,6 +160,7 @@ account expenses:transport:light rail                                           
 account expenses:transport:minibuses                                                              ; type: X
 account expenses:transport:taxis                                                                  ; type: X
 account expenses:transport:trains                                                                 ; type: X
+account expenses:transport:trains:high-speed                                                      ; type: X
 account expenses:transport:trams                                                                  ; type: X
 account liabilities:accrued expenses:activities                                                   ; type: L
 account liabilities:accrued expenses:education                                                    ; type: L
@@ -340,6 +343,7 @@ payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
 payee dfd2814d-d498-4b66-9a46-9c06aa74f635
 payee dfde1439-813b-4eb6-b7a0-a2a1cc30b714
 payee e2613673-8956-40d9-8024-53163878b766
+payee e7cd4d77-7c22-4d18-bd60-5d73b5faa76e
 payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee e81cf14c-79fc-4958-b694-1a2a2c0c9be1
 payee e82b2a1f-fa14-4739-bf0e-df7bd7e9c714
