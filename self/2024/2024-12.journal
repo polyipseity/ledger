@@ -356,7 +356,7 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
     assets:cash                                                       -500.00 HKD
 
-2024-12-22 ! (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 16:06, timezone: UTC+08:00
+2024-12-22 * (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 16:06, timezone: UTC+08:00
     assets:deferred expenses:transport:trains:high-speed           200.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
 
@@ -369,11 +369,11 @@ include ../prelude.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        4.84 HKD
     revenues:interests                                                  -4.84 HKD
 
-2024-12-24 ! (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 21:58, timezone: UTC+08:00
+2024-12-24 * (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 21:58, timezone: UTC+08:00
     assets:deferred expenses:transport:trains:high-speed           200.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
 
-2024-12-24 ! (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 22:03, timezone: UTC+08:00
+2024-12-24 * (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 22:03, timezone: UTC+08:00
     assets:deferred expenses:transport:trains:high-speed           200.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
 
@@ -381,6 +381,10 @@ include ../prelude.journal
     expenses:food and drinks:snacks                                         10.50 HKD  ; food_and_drink: Vita™️ Hong Kong Style Milk Tea Drink
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4               12.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -22.50 HKD
+
+2024-12-25 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 20, timezone: UTC+08:00
+    assets:cash                                                    100.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -100.00 CNY
 
 2024-12-26 * (ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD
@@ -390,11 +394,11 @@ include ../prelude.journal
     expenses:healthcare:medication                                  54.00 CNY  ; duration: P2D
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -54.00 CNY
 
-2024-12-29 ! (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H43M, time: 13:07, timezone: UTC+08:00
+2024-12-29 * (E786515167) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H43M, time: 13:07, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      200.00 CNY
     assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
 
-2024-12-31 ! (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
+2024-12-31 * (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      200.00 CNY
     assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
 
@@ -402,7 +406,7 @@ include ../prelude.journal
     expenses:expiration                                             8 676.00 _PT/C
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8    -8 676.00 _PT/C = 0.00 _PT/C
 
-2024-12-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-12-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
@@ -415,6 +419,6 @@ include ../prelude.journal
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
 
-2024-12-31 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+2024-12-31 * adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
     assets:deferred expenses:services:support      -20.79 HKD
