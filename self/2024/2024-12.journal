@@ -398,6 +398,19 @@ include ../prelude.journal
     expenses:transport:trains:high-speed                      200.00 CNY
     assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
 
+2024-12-29 (277284, MKB7YF4DQN, 206894849458) Apple  ; activity: service, time: 17:01, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD
+
+2024-12-29 (000-886832, 17) Saizeriya  ; activity: eating, duration: PT29M57S, eating: dinner, time: 16:57:13, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: pizza "MARGHERITA"
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
+
+2024-12-29 * Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.00 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.00 HKD
+
 2024-12-31 * (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      200.00 CNY
     assets:deferred expenses:transport:trains:high-speed     -200.00 CNY

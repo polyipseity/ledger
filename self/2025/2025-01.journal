@@ -4,6 +4,10 @@ include ../prelude.journal
     assets:deferred expenses:transport:trains:high-speed           200.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -200.00 CNY
 
+2025-01-29 ! Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.00 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.00 HKD
+
 2025-01-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
