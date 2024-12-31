@@ -23,3 +23,34 @@ include ../prelude.journal
     equity:conversions:GREEN$-_SEA:_SEA                                                                0.200 _SEA = 0.200 _SEA
     equity:external:self                                                                           200 000. _PT/B = 200 000 _PT/B
     equity:opening/closing balances
+
+2024-12-31 self  ; activity: collect, duration: -P1M, time: 10:30, timezone: UTC+08:00
+    assets:recycables
+    revenues:recycables:education           -0.050 _PAP
+    revenues:recycables:food and drinks     -0.200 _BEC
+    revenues:recycables:food and drinks     -0.050 _MET
+    revenues:recycables:food and drinks     -0.150 _OPL
+    revenues:recycables:food and drinks     -0.100 _PAP
+    revenues:recycables:food and drinks     -0.050 _PLA
+    revenues:recycables:packaging           -0.100 _OPL
+    revenues:recycables:packaging           -0.350 _PAP
+    revenues:recycables:personal care       -0.050 _OPL
+    revenues:recycables:personal care       -0.050 _PLA
+
+2024-12-31 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M2S, time: 10:46:54, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       18 GREEN$ = 7 584 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                       0.050 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 10:46:54, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.100 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 10:46:56, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.300 _OPL  ; rate: 10, rate: unit 0.1, recycle: all other plastics, time: 10:47:33, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PAP:_PAP                                       0.500 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 10:47:50, timezone: UTC+08:00
+    equity:conversions:GREEN$-_BEC:_BEC                                       0.200 _BEC  ; rate: 10, rate: unit 0.1, recycle: all beverage cartons, time: 10:48:56, timezone: UTC+08:00
+    assets:recycables                                                        -0.200 _BEC = 0.000 _BEC
+    assets:recycables                                                        -0.050 _MET = 0.000 _MET
+    assets:recycables                                                        -0.300 _OPL = 0.000 _OPL
+    assets:recycables                                                        -0.500 _PAP = 0.000 _PAP
+    assets:recycables                                                        -0.100 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_BEC:GREEN$                                      -2 GREEN$
+    equity:conversions:GREEN$-_MET:GREEN$                                       0 GREEN$
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -3 GREEN$
+    equity:conversions:GREEN$-_PAP:GREEN$                                      -5 GREEN$
+    equity:conversions:GREEN$-_PLA:GREEN$                                      -8 GREEN$
