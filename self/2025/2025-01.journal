@@ -1,8 +1,8 @@
 include ../prelude.journal
 
 2025-01-04 ! (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 17:18, timezone: UTC+08:00
-    expenses:transport:trains:high-speed                      200.00 CNY
-    assets:deferred expenses:transport:trains:high-speed     -200.00 CNY
+    expenses:transport:trains:high-speed                      204.50 CNY
+    assets:deferred expenses:transport:trains:high-speed     -204.50 CNY
 
 2025-01-29 ! Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.00 HKD
