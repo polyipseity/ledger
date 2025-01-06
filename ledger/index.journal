@@ -1,0 +1,2 @@
+include self.alternatives.journal
+include self.journal
