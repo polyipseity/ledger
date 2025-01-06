@@ -3,7 +3,6 @@ from argparse import ArgumentParser as _ArgParser, Namespace as _NS
 from asyncio import (
     BoundedSemaphore as _BSemp,
     create_subprocess_exec as _new_sproc,
-    create_task,
     gather as _gather,
     run as _run,
 )
@@ -16,7 +15,7 @@ from logging import INFO as _INFO, basicConfig as _basicConfig, info as _info
 from os import cpu_count as _cpu_c
 from shutil import which as _which
 from sys import argv as _argv, exit as _exit
-from typing import Callable as _Call, Iterable as _Iter, cast as _cast, final as _fin
+from typing import Callable as _Call, final as _fin
 
 _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
 
@@ -59,84 +58,36 @@ async def main(_: Arguments):
     if hledger_prog is None:
         raise FileNotFoundError(hledger_prog)
 
-    async def formatJournal(journal: _Path):
+    async def checkJournal(journal: _Path):
         async with _SUBPROCESS_SEMAPHORE:
             proc = await _new_sproc(
                 hledger_prog,
                 "--file",
                 journal,
                 "--strict",
-                "print",
+                "check",
+                "accounts",
+                "assertions",
+                "autobalanced",
+                "balanced",
+                "commodities",
+                "ordereddates",
+                "parseable",
+                "payees",
+                "tags",
                 stdin=_DEVNULL,
                 stdout=_PIPE,
                 stderr=_PIPE,
             )
-            stdout, stderr = (
+            _stdout, stderr = (
                 std.decode().replace("\r\n", "\n") for std in await proc.communicate()
             )
         if proc.returncode:
             raise ChildProcessError(proc.returncode, stderr)
 
-        async with await journal.open(
-            mode="r+t", encoding="UTF-8", errors="strict", newline=None
-        ) as file:
-            read = await file.read()
-            seek = create_task(file.seek(0))
-            try:
-                header = "\n".join(
-                    line for line in read.splitlines() if line.startswith("include ")
-                )
-                text = f"""{header}
-
-{stdout.strip()}
-
-"""
-
-                def sortProps(line: str):
-                    components = line.split("  ;", 1)
-                    if len(components) != 2:
-                        return line
-                    code, cmt = components
-
-                    def group(sections: _Iter[str]):
-                        ret = list[tuple[str, str]]()
-                        for section in sections:
-                            section = _cast(
-                                tuple[str] | tuple[str, str],
-                                tuple(section.split(":", 1)),
-                            )
-                            if len(section) == 2:
-                                ret.append(section)
-                                continue
-                            if ret:
-                                yield ret
-                                ret = []
-                            yield section[0]
-                        if ret:
-                            yield ret
-
-                    return f"""{code}  {f'''; {", ".join(
-                        group.strip()
-                        if isinstance(group, str)
-                        else ", ".join(
-                            ": ".join(prop)
-                            for prop in sorted(
-                                tuple(cmp.strip() for cmp in group) for group in group
-                            )
-                        )
-                        for group in group(cmt.split(","))
-                    )}'''.strip()}"""
-
-                if (text := "\n".join(map(sortProps, text.splitlines()))) != read:
-                    await seek
-                    await file.write(text)
-                    await file.truncate()
-            finally:
-                seek.cancel()
-
     errors = tuple(
         err
-        for err in await _gather(*map(formatJournal, journals), return_exceptions=True)
+        for err in await _gather(*map(checkJournal, journals), return_exceptions=True)
         if err
     )
     if errors:
@@ -150,7 +101,7 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
 
     parser = (_ArgParser if parent is None else parent)(
         prog=prog,
-        description="format journals",
+        description="check journals",
         add_help=True,
         allow_abbrev=False,
         exit_on_error=False,

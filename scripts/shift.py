@@ -70,7 +70,7 @@ async def main(args: Arguments):
         *(
             _Path(folder.parent, path).resolve(strict=True)
             for path in _iglob(
-                "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789].journal",
+                "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
                 root_dir=folder.parent,
                 recursive=True,
             )
