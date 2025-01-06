@@ -1,4 +1,4 @@
-include ../prelude.journal
+include index.journal
 
 account assets:digital:GREEN@COMMMUNITY                                                           ; type: A
 account assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                      ; type: A

@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.alternatives.journal
 
 2023-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      2 775 196. _PT/A = 2 775 196 _PT/A

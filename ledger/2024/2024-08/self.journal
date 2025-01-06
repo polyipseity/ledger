@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2024-08-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accumulated depreciation                                                               -2 119.89 HKD = -2 119.89 HKD

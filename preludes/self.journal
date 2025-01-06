@@ -1,4 +1,4 @@
-include ../prelude.journal
+include index.journal
 
 account assets:accrued revenues:education                                                         ; type: A
 account assets:accrued revenues:education:scholarships                                            ; type: A

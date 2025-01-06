@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2025-07-29 ! Google  ; activity: service, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Google                  150.00 HKD

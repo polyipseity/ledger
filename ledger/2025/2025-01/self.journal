@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2025-01-04 ! (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 17:18, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      204.50 CNY

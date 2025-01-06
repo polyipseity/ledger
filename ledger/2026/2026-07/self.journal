@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2026-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation

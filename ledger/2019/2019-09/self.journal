@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2019-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             -5 882.45 HKD = -5 882.45 HKD

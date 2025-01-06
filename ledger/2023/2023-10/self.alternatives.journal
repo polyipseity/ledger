@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.alternatives.journal
 
 2023-10-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:recycables                                                              0.100 _BEC = 0.100 _BEC

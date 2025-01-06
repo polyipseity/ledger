@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2023-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    800.00 HKD = 800.00 HKD

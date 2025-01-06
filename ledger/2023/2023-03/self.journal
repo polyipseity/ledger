@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.journal
 
 2023-03-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           7 316.00 HKD = 7 316.00 HKD

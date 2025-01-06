@@ -1,4 +1,4 @@
-include ../prelude.journal
+include ../../../preludes/self.alternatives.journal
 
 2024-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            7 021. GREEN$ = 7 021 GREEN$
