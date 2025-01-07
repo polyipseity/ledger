@@ -69,7 +69,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -44.00 HKD
 
-2024-12-05 (000-882244, 51) Saizeriya  ; activity: eating, duration: PT48M38S, eating: dinner, time: 13:45:46, timezone: UTC+08:00
+2024-12-05 (000-882244, 51) Saizeriya  ; activity: eating, duration: PT48M38S, eating: lunch, time: 13:45:46, timezone: UTC+08:00
     expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes (fewer), food_and_drink: grilled spicy sausages
     expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
@@ -453,6 +453,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                        -2 323.75 HKD
     revenues:incomes:education                                         -116.19 HKD
 
+2024-12-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 13:15, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
 2024-12-31 * (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      204.50 CNY
     assets:deferred expenses:transport:trains:high-speed     -204.50 CNY
@@ -494,7 +498,7 @@ include ../../../preludes/self.journal
     assets:cash                                                                                     -250.00 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -70.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -181.20 HKD = 0.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -129.60 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -124.70 HKD = 0.00 HKD
     assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
     assets:equipment:consumer electronics                                                         -8 700.00 HKD = 0.00 HKD
     assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
