@@ -447,6 +447,12 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
 
+2024-12-31 (HD124C3136521815, FRN20241231PAYC0302154920004) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 00:01:08, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     2 323.75 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                  116.19 HKD
+    assets:accrued revenues:incomes:education                        -2 323.75 HKD
+    revenues:incomes:education                                         -116.19 HKD
+
 2024-12-31 * (E767416897) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, duration: PT2H34M, time: 14:24, timezone: UTC+08:00
     expenses:transport:trains:high-speed                      204.50 CNY
     assets:deferred expenses:transport:trains:high-speed     -204.50 CNY
@@ -473,7 +479,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support      -20.79 HKD
 
 2024-12-31 closing balances  ; time: 23:59:59
-    assets:accrued revenues:incomes:education                                                     -2 648.75 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:education                                                       -325.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                3 500.00 HKD = 0.00 HKD
@@ -483,7 +489,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
     assets:deferred expenses:services:support                                                       -478.21 HKD = 0.00 HKD
     assets:deferred expenses:transport:trains:high-speed                                            -204.50 CNY = 0.00 CNY
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -33 114.92 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -35 438.67 HKD = 0.00 HKD
     assets:cash                                                                                     -100.00 CNY = 0.00 CNY
     assets:cash                                                                                     -250.00 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -70.00 HKD = 0.00 HKD
@@ -493,7 +499,7 @@ include ../../../preludes/self.journal
     assets:equipment:consumer electronics                                                         -8 700.00 HKD = 0.00 HKD
     assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -35 _PT/D = 0 _PT/D
-    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                               -78.00 HKD = 0.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                              -194.19 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B
     equity:conversions:HKD-_PT/D:HKD                                                                 731.00 HKD = 0.00 HKD
