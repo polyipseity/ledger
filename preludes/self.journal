@@ -169,6 +169,8 @@ account liabilities:accrued expenses:insurances:levy                            
 account liabilities:accrued expenses:insurances:life                                              ; type: L
 account liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25         ; type: L
 account liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7         ; type: L
+account liabilities:accrued expenses:services                                                     ; type: L
+account liabilities:accrued expenses:services:internet                                            ; type: L
 account liabilities:credit cards                                                                  ; type: L
 account liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                             ; type: L
 account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8                             ; type: L
