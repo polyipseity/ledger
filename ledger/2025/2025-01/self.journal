@@ -184,7 +184,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-01-10 (2025011014183864609, 000556592945, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 14:18:38, timezone: UTC+08:00
+2025-01-10 (2025011014183864609, 000556592945, IC70552046, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 14:18:38, timezone: UTC+08:00
     assets:deferred expenses:services:internet                       134.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -134.00 HKD
 
