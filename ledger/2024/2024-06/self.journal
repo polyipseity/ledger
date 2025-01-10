@@ -54,7 +54,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: JS 雙重芝士雞肉火腿包（新配方）/double cheese chicken ham bun
 
-2024-06-01 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (01JUN24), activity: withdraw, time: 15:05:12, timezone: UTC+08:00
+2024-06-01 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (01JUN24), activity: transfer, time: 15:05:12, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -198,7 +198,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-06-07 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (07JUN24), activity: withdraw, time: 17:47:45, timezone: UTC+08:00
+2024-06-07 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (07JUN24), activity: transfer, time: 17:47:45, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -327,7 +327,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-06-13 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (13JUN24), activity: withdraw, time: 16:44:30, timezone: UTC+08:00
+2024-06-13 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (13JUN24), activity: transfer, time: 16:44:30, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

@@ -130,7 +130,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       65.00 HKD
     assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          -65.00 HKD = 0.00 HKD
 
-2024-09-03 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (03SEP24), activity: withdraw, time: 18:27:09, timezone: UTC+08:00
+2024-09-03 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (03SEP24), activity: transfer, time: 18:27:09, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -199,7 +199,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-09-05 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (05SEP24), activity: deposit, time: 11:38:55, timezone: UTC+08:00
+2024-09-05 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (05SEP24), activity: transfer, time: 11:38:55, timezone: UTC+08:00
     assets:cash                                                       -500.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -427,7 +427,7 @@ include ../../../preludes/self.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 12:59:00, timezone: UTC+08:00
 
-2024-09-14 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (14SEP24), activity: deposit, time: 14:17:41, timezone: UTC+08:00
+2024-09-14 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (14SEP24), activity: transfer, time: 14:17:41, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    5 300.00 HKD
     assets:cash
 
@@ -452,7 +452,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot local milk tea, food_and_drink: mushroom (V), food_and_drink: scrambled egg
 
-2024-09-16 (4F2A) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (16SEP24), activity: withdraw, time: 13:32:55, timezone: UTC+08:00
+2024-09-16 (4F2A) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (16SEP24), activity: transfer, time: 13:32:55, timezone: UTC+08:00
     assets:cash                                                        400.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -525,7 +525,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-09-18 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (18SEP24), activity: deposit, time: 13:07, timezone: UTC+08:00
+2024-09-18 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (18SEP24), activity: transfer, time: 13:07, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    9 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
@@ -553,7 +553,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-09-21 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21SEP24), activity: deposit, time: 12:14, timezone: UTC+08:00
+2024-09-21 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21SEP24), activity: transfer, time: 12:14, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    1 000.00 HKD
     assets:cash
 
@@ -642,7 +642,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       30.00 HKD
     assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          -30.00 HKD = 0.00 HKD
 
-2024-09-25 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (25SEP24), activity: withdraw, time: 21:05:14, timezone: UTC+08:00
+2024-09-25 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (25SEP24), activity: transfer, time: 21:05:14, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -706,7 +706,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        7.47 HKD
     revenues:interests
 
-2024-09-27 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (27SEP24), activity: deposit, time: 09:21, timezone: UTC+08:00
+2024-09-27 (57C0) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (27SEP24), activity: transfer, time: 09:21, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    3 000.00 HKD
     assets:cash
 

@@ -77,7 +77,7 @@ include ../../../preludes/self.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236    3 000.00 HKD  ; valid: 2023-07-16T00:00:00+08:00/2024-02-29T23:59:59+08:00
     revenues:special
 
-2023-07-17 (HD12371705695358, STRIPE ODpwOQWsL) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:20:41, timezone: UTC+08:00, via: Faster Payment System
+2023-07-17 (HD12371705695358, STRIPE ODpwOQWsL) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, time: 15:20:41, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc          -4.68 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -106,7 +106,7 @@ include ../../../preludes/self.journal
     expenses:fees:Stripe                                              3.13 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       18.69 HKD
 
-2023-07-21 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21JUL23), activity: deposit, timezone: UTC+08:00
+2023-07-21 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (21JUL23), activity: transfer, timezone: UTC+08:00
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -138,7 +138,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-27 (HD12372722180545, STRIPE onabqJeIj) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: deposit, time: 15:18:31, timezone: UTC+08:00, via: Faster Payment System
+2023-07-27 (HD12372722180545, STRIPE onabqJeIj) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, time: 15:18:31, timezone: UTC+08:00, via: Faster Payment System
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -18.69 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

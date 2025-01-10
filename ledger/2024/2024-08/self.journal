@@ -175,7 +175,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-08-08 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (08AUG24), activity: withdraw, time: 20:50:25, timezone: UTC+08:00
+2024-08-08 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (08AUG24), activity: transfer, time: 20:50:25, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -227,7 +227,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-08-14 (5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (15AUG24), activity: withdraw, time: 09:14:50, timezone: UTC+08:00
+2024-08-14 (5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (15AUG24), activity: transfer, time: 09:14:50, timezone: UTC+08:00
     assets:cash                                                      5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
@@ -331,7 +331,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-08-17 (5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (17AUG24), activity: withdraw, time: 20:48:54, timezone: UTC+08:00
+2024-08-17 (5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (17AUG24), activity: transfer, time: 20:48:54, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

@@ -239,7 +239,7 @@ include ../../../preludes/self.journal
     assets:cash                                                   20 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -20 000.00 HKD
 
-2024-12-14 (4ACC) self  ; QDM CASH DEP (14DEC24), activity: deposit, time: 19:17, timezone: UTC+08:00
+2024-12-14 (4ACC) self  ; QDM CASH DEP (14DEC24), activity: transfer, time: 19:17, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     20 000.00 HKD
     assets:cash                                                      -20 000.00 HKD
 
@@ -348,15 +348,15 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                104.00 HKD  ; food_and_drink: split (306.00 HKD)
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -104.00 HKD
 
-2024-12-22 (4ACC) self  ; QDM CASH DEP (22DEC24), activity: deposit, time: 13:05, timezone: UTC+08:00
+2024-12-22 (4ACC) self  ; QDM CASH DEP (22DEC24), activity: transfer, time: 13:05, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     5 500.00 HKD
     assets:cash                                                      -5 500.00 HKD
 
-2024-12-22 (4ACD) self  ; QDM CASH DEP (22DEC24), activity: deposit, time: 13:08, timezone: UTC+08:00
+2024-12-22 (4ACD) self  ; QDM CASH DEP (22DEC24), activity: transfer, time: 13:08, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
     assets:cash                                                       -500.00 HKD
 
-2024-12-22 (57C0) self  ; QDM CASH DEP (22DEC24), activity: deposit, time: 14:20, timezone: UTC+08:00
+2024-12-22 (57C0) self  ; QDM CASH DEP (22DEC24), activity: transfer, time: 14:20, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
     assets:cash                                                       -500.00 HKD
 

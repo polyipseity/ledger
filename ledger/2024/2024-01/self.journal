@@ -404,7 +404,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2024-01-19/2025-10-31
     revenues:rewards
 
-2024-01-19 (ACCT1ESWN0EQSQ4) Stripe  ; CITIBANK EUROPE PLC ACCT1ESWN0EQSQ4, activity: deposit, timezone: UTC+08:00
+2024-01-19 (ACCT1ESWN0EQSQ4) Stripe  ; CITIBANK EUROPE PLC ACCT1ESWN0EQSQ4, activity: transfer, timezone: UTC+08:00
     assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a         -15.65 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
