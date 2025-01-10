@@ -1,5 +1,9 @@
 include ../../../preludes/self.journal
 
+2025-05-29 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+    expenses:education:tuition:universities                     21 050.00 HKD
+    assets:deferred expenses:education:tuition:universities    -21 050.00 HKD  ; = 0.00 HKD
+
 2025-05-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow

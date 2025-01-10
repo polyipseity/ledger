@@ -336,6 +336,10 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
 
+2024-12-20 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
+    expenses:education:tuition:universities                     21 050.00 HKD
+    assets:deferred expenses:education:tuition:universities    -21 050.00 HKD = 0.00 HKD
+
 2024-12-21 (000-885295, 37) Saizeriya  ; activity: eating, duration: PT52M7S, eating: dinner, time: 14:38:43, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: chicken doria
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
@@ -363,6 +367,10 @@ include ../../../preludes/self.journal
 2024-12-22 (E786312150) e7cd4d77-7c22-4d18-bd60-5d73b5faa76e  ; activity: transport, time: 16:06, timezone: UTC+08:00
     assets:deferred expenses:transport:trains:high-speed           204.50 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -204.50 CNY
+
+2024-12-23 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 21:39:14, timezone: UTC+08:00
+    assets:deferred expenses:education:tuition:universities                                      21 050.00 HKD  ; tuition fee - undergraduate, valid: 2024-12-23T00:00:00+08:00/2025-02-04T23:59:59+08:00
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    -21 050.00 HKD = -21 050.00 HKD
 
 2024-12-24 (01336623) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 19:14:37, timezone: UTC+08:00
     expenses:food and drinks:dining                                 69.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: 芝士忌廉焗一口雞腸仔及半焗炒飯
@@ -502,6 +510,7 @@ include ../../../preludes/self.journal
     assets:cash                                                                                     -100.00 CNY = 0.00 CNY
     assets:cash                                                                                     -500.00 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -70.00 HKD = 0.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -181.20 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -124.70 HKD = 0.00 HKD
     assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD

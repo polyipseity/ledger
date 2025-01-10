@@ -1000,8 +1000,8 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-05-29 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
-    assets:deferred expenses:education:tuition:universities    -5 087.00 HKD  ; = 0.00 HKD
-    expenses:education:tuition:universities
+    expenses:education:tuition:universities                     5 087.00 HKD
+    assets:deferred expenses:education:tuition:universities    -5 087.00 HKD = 0.00 HKD
 
 2024-05-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD

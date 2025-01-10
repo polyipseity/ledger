@@ -16,6 +16,7 @@ include ../../../preludes/self.journal
     assets:cash                                                                                      100.00 CNY = 100.00 CNY
     assets:cash                                                                                      500.00 HKD = 500.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          70.00 HKD = 70.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      181.20 HKD = 181.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                124.70 HKD = 124.70 HKD
     assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
