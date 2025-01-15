@@ -82,8 +82,8 @@ async def main(_: Arguments):
             _stdout, stderr = (
                 std.decode().replace("\r\n", "\n") for std in await proc.communicate()
             )
-        if proc.returncode:
-            raise ChildProcessError(proc.returncode, stderr)
+            if await proc.wait():
+                raise ChildProcessError(proc.returncode, stderr)
 
     errors = tuple(
         err
