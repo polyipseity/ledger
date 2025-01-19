@@ -416,6 +416,14 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         11.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Peanut Butter and Chocolate Flavored Cream ×2
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
 
+2025-01-19 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 11:05, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 12:35, timezone: UTC+08:00
+
+2025-01-19 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 14, timezone: UTC+08:00
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978       40.00 HKD
+    assets:cash                                                    -40.00 HKD
+
 2025-01-25 ! (87783321224, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
     assets:deferred expenses:services:internet         -148.90 HKD = 0.00 HKD
