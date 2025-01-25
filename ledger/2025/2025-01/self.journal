@@ -554,9 +554,13 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2025-01-25 (57C0) self  ; QDM CASH DEP (25JAN25), activity: transfer, time: ??:??, timezone: UTC+08:00
+2025-01-25 (57C0) self  ; QDM CASH DEP (25JAN25), activity: transfer, time: 18:19, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      400.00 HKD
     assets:cash                                                       -400.00 HKD
+
+2025-01-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT3H30M, time: 20:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      227.50 HKD
+    revenues:incomes:education                    -227.50 HKD
 
 2025-01-25 * (87783321224, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
