@@ -41,3 +41,34 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_MET:GREEN$                                      -2 GREEN$
     equity:conversions:GREEN$-_OPL:GREEN$                                      -1 GREEN$
     equity:conversions:GREEN$-_PAP:GREEN$                                     -17 GREEN$
+
+2025-01-22 self  ; activity: collect, duration: -P14D, time: 17, timezone: UTC+08:00
+    assets:recycables
+    revenues:recycables:food and drinks     -0.050 _BEC
+    revenues:recycables:packaging           -0.100 _OPL
+    revenues:recycables:food and drinks     -0.100 _PAP
+    revenues:recycables:food and drinks     -0.100 _PLA
+    revenues:recycables:food and drinks     -0.050 _MET
+    revenues:recycables:packaging           -0.700 _OPL
+    revenues:recycables:packaging           -1.000 _PAP
+    revenues:recycables:packaging           -0.100 _PLA
+    revenues:recycables:waste               -1.600 _SEA
+
+2025-01-22 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M20S, time: 17:30:44, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       51 GREEN$ = 7 655 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                       1.100 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 17:30:44, timezone: UTC+08:00
+    equity:conversions:GREEN$-_SEA:_SEA                                       1.600 _SEA  ; rate: 10, rate: unit 0.1, recycle: all small electrical appliances, time: 17:31:19, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.200 _PLA  ; rate: 10, rate: unit 0.1, recycle: all plastics, time: 17:31:28, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.800 _OPL  ; rate: 10, rate: unit 0.1, recycle: all other plastics, time: 17:32:04, timezone: UTC+08:00
+    expenses:recycling                                                        0.050 _BEC
+    expenses:recycling                                                        0.050 _MET
+    assets:recycables                                                        -0.050 _BEC = 0.000 _BEC
+    assets:recycables                                                        -0.050 _MET = 0.000 _MET
+    assets:recycables                                                        -0.800 _OPL = 0.000 _OPL
+    assets:recycables                                                        -1.100 _PAP = 0.000 _PAP
+    assets:recycables                                                        -0.200 _PLA = 0.000 _PLA
+    assets:recycables                                                        -1.600 _SEA = 0.000 _SEA
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -8 GREEN$
+    equity:conversions:GREEN$-_PAP:GREEN$                                     -11 GREEN$
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -16 GREEN$
+    equity:conversions:GREEN$-_SEA:GREEN$                                     -16 GREEN$

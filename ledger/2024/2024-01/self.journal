@@ -43,7 +43,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         41.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 芝士迷你焗火腿肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-01-01 016707c8-8d24-47a5-940f-e687942b4ce8  ; PAPER STATEMENT FEE, activity: reward, timezone: UTC+08:00
+2024-01-01 016707c8-8d24-47a5-940f-e687942b4ce8  ; dllm; PAPER STATEMENT FEE, activity: fees, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8      -50.00 HKD
     expenses:fees:banking:DBS Bank
 
