@@ -79,7 +79,7 @@ async def main(args: Arguments):
     journals = tuple(
         journal
         for journal in journals
-        if filter_datetime(datetime.fromisoformat(f"{journal.stem}-01"))
+        if filter_datetime(datetime.fromisoformat(f"{journal.parent.name}-01"))
     )
     _info(f'journals: {", ".join(map(str, journals))}')
 
