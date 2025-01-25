@@ -4,7 +4,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                                      1 170.00 HKD = 1 170.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
-    assets:accumulated depreciation                                                               -2 950.38 HKD = -2 950.38 HKD
+    assets:accumulated depreciation                                                               -2 938.38 HKD = -2 938.38 HKD
     assets:accumulated depreciation                                                               -1 666.66 KRW = -1 666.66 KRW
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  4 604.37 HKD = 4 604.37 HKD
     assets:cash                                                                                      300.00 HKD = 300.00 HKD
@@ -17,7 +17,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                164.70 HKD = 164.70 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                        35.71 HKD = 35.71 HKD
     assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                          8 640.00 HKD = 8 640.00 HKD
+    assets:equipment:consumer electronics                                                          8 628.00 HKD = 8 628.00 HKD
     assets:equipment:tools                                                                         4 000.00 KRW = 4 000.00 KRW
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                           35 _PT/D = 35 _PT/D
@@ -970,7 +970,6 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation      -48.33 HKD  ; item: 361120529952 100-SUIT BLAZER
     assets:accumulated depreciation      -24.92 HKD  ; item: 361520529934 500-SUIT PANTS
     assets:accumulated depreciation      -13.25 HKD  ; item: TV2793B7383G 男裝連帽拉鍊外套 (S-XL)
-    assets:accumulated depreciation        0.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     assets:accumulated depreciation     -333.34 KRW  ; item: Leopold wire keycap remover
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
 
@@ -978,7 +977,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                                     -2 323.75 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
-    assets:accumulated depreciation                                                                3 227.25 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                                3 215.25 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                2 000.00 KRW = 0.00 KRW
     assets:deferred expenses:education:tuition:universities                                      -21 050.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Apple                                                    -8.00 HKD = 0.00 HKD
@@ -989,7 +988,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -688.20 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -218.40 HKD = 0.00 HKD
     assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 640.00 HKD = 0.00 HKD
+    assets:equipment:consumer electronics                                                         -8 628.00 HKD = 0.00 HKD
     assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -35 _PT/D = 0 _PT/D
