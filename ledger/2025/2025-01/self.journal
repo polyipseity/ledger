@@ -567,6 +567,44 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:internet         -148.90 HKD = 0.00 HKD
     liabilities:accrued expenses:services:internet       -0.70 HKD = -0.70 HKD
 
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H15M, time: 10:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      146.25 HKD
+    revenues:incomes:education                    -146.25 HKD
+
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 13:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
+
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H45M, time: 16:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      178.75 HKD
+    revenues:incomes:education                    -178.75 HKD
+
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 19:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
+
+2025-01-26 7-Eleven  ; activity: eating, eating: snacks, time: 22:25, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         18.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Dark and White Chocolate Flavored Cream ×2
+    expenses:food and drinks:snacks                                         18.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Peanut Butter and Chocolate Flavored Cream ×2
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-01-26 7-Eleven  ; activity: eating, eating: snacks, time: 22:38, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         18.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Peanut Butter and Chocolate Flavored Cream ×2
+    expenses:food and drinks:snacks                                         18.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Vanilla Flavored Cream ×2
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-01-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 23:15, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       48.75 HKD
+    revenues:incomes:education                     -48.75 HKD
+
+2025-01-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
+
 2025-01-27 * self  ; activity: repayment, posted: 2025-01-25T15:23:00+08:00, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8     1 800.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -1 800.00 HKD
