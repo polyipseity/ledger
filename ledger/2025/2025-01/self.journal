@@ -452,6 +452,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         39.00 HKD  ; food_and_drink: Q1 家鄉雞學生餐 ×1, food_and_drink: 升級-大百事可樂無糖(走冰) ×1, food_and_drink: 家鄉雞2件 ×1, food_and_drink: 經典葡撻 ×1, food_and_drink: 辣汁蘑菇香飯(普通) ×1
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
 
+2025-01-21 ! 85d4d0a9-ec04-4438-8259-cbad1f2839b4  ; time: 14:30:00, timezone: UTC+08:00
+    assets:accrued revenues:rewards:competitions     3 750.00 HKD
+    revenues:rewards:competitions                   -3 750.00 HKD  ; reward: ba501a9f-dbff-4aa1-8774-2b33a6a59459
+
 2025-01-21 self  ; activity: transfer, time: 18:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash                                                           -100.00 HKD
@@ -542,6 +546,10 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
+2025-01-25 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        7.63 HKD
+    revenues:interests                                                  -7.63 HKD
+
 2025-01-25 (N12548870658, 5FCA) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (25JAN25), activity: transfer, time: 11:13, timezone: UTC+08:00
     assets:cash                                                        400.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -400.00 HKD
@@ -605,9 +613,21 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education      130.00 HKD
     revenues:incomes:education                    -130.00 HKD
 
-2025-01-27 * self  ; activity: repayment, posted: 2025-01-25T15:23:00+08:00, timezone: UTC+08:00
+2025-01-27 * (5418199114100006) self  ; activity: repayment, posted: 2025-01-25T15:23:00+08:00, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8     1 800.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -1 800.00 HKD
+
+2025-01-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H15M, time: 15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      146.25 HKD
+    revenues:incomes:education                    -146.25 HKD
+
+2025-01-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H30M, time: 21:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      162.50 HKD
+    revenues:incomes:education                    -162.50 HKD
+
+2025-01-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
 
 2025-01-29 ! Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.00 HKD
