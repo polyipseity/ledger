@@ -232,7 +232,7 @@ include ../../../preludes/self.journal
 
 2024-12-14 (000-884051, 27) Saizeriya  ; activity: eating, duration: PT46M31S, eating: lunch, time: 18:13:50, timezone: UTC+08:00
     expenses:food and drinks:dining                                 30.00 HKD  ; food_and_drink: pizza "MARGHERITA"
-    expenses:food and drinks:dining                                 42.00 HKD  ; food_and_drink: hamburger steak and gourment sausage with black pepper sauce
+    expenses:food and drinks:dining                                 42.00 HKD  ; food_and_drink: hamburg steak and gourment sausage with black pepper sauce
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -72.00 HKD
 
 2024-12-14 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 19:17, timezone: UTC+08:00

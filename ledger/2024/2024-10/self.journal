@@ -642,7 +642,7 @@ include ../../../preludes/self.journal
     revenues:interests                                                  -0.33 HKD
 
 2024-10-27 (000-874909) Saizeriya  ; activity: eating, duration: PT32M49S, eating: breakfast, time: 12:25:11, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hamburger steak with vegetable salsa
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hamburg steak with vegetable salsa
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2024-10-27 (1124102736674625, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 15:41:12, timezone: UTC+08:00
