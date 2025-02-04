@@ -17,6 +17,8 @@ account assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings           
 account assets:cash                                                                               ; type: C
 account assets:cheques                                                                            ; type: A
 account assets:cheques:certified                                                                  ; type: C
+account assets:deferred assets:equipment                                                          ; type: A
+account assets:deferred assets:equipment:consumer electronics                                     ; type: A
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:activities                                                       ; type: A
@@ -24,8 +26,6 @@ account assets:deferred expenses:education                                      
 account assets:deferred expenses:education:books                                                  ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
-account assets:deferred expenses:equipment                                                        ; type: A
-account assets:deferred expenses:equipment:consumer electronics                                   ; type: A
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
 account assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                        ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
@@ -114,6 +114,7 @@ account expenses:education                                                      
 account expenses:education:books                                                                  ; type: X
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
+account expenses:equipment                                                                        ; type: X
 account expenses:fees                                                                             ; type: X
 account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                                        ; type: X
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
@@ -290,6 +291,7 @@ payee Bafang Dumpling
 payee Blue Cross Insurance
 payee Café de Coral
 payee Circle K
+payee Daiso
 payee Deliveroo
 payee Don Don: Donki
 payee Frontline Solvers
@@ -328,6 +330,7 @@ payee TenRen's Tea
 payee The Commerical Press (CityU)
 payee Vitasoy
 payee Wellcome, 2bae54dc-467f-459c-9202-5149f419152f
+payee Yakiniku Like!!
 payee Yamazaki
 payee Yan Chai Hosptial
 payee a19a3525-a11c-40de-9726-79b0738910d7

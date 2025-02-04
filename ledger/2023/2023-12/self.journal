@@ -281,7 +281,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring                  ; time: 21, timezone: UTC+08:00
 
 2023-12-16 * (D-6566-2312-00007, 00000P0022000694789) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 11:22:39, timezone: UTC+08:00
-    assets:deferred expenses:equipment:consumer electronics          1 849.00 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
+    assets:deferred assets:equipment:consumer electronics            1 849.00 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8
 
 2023-12-16 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT4H46M24S, time: 14:11:55, timezone: UTC+08:00
@@ -395,7 +395,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8      1 849. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
     revenues:rewards                                                   -50.00 HKD
     revenues:rewards                                                -1 849. _PT/C
-    assets:deferred expenses:equipment:consumer electronics
+    assets:deferred assets:equipment:consumer electronics
 
 2023-12-22 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H33M8S, time: 13:34:19, timezone: UTC+08:00
     assets:cash                    600.00 HKD
