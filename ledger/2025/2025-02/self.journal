@@ -163,6 +163,34 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -100.00 HKD
 
+2025-02-05 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: transport, time: 10:48, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-02-05 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: transport, time: 11:31, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-02-05 (10/109187) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 13:19:54, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: 卡邦尼汁, food_and_drink: 自選意大利粉, food_and_drink: 自選意粉, food_and_drink: 馬蘇里拉芝士
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-02-05 (081-1901) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 16:06:47, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.10 HKD  ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
+
+2025-02-05 7-Eleven  ; activity: eating, eating: snacks, time: 19:43, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         10.40 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Peanut Butter and Chocolate Flavored Cream
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.40 HKD
+
+2025-02-05 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: transport, time: 19:53, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-02-05 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: transport, time: 20:20, timezone: UTC+08:00
+    expenses:transport:buses                                                 6.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
+
 2025-02-25 ! (26462940125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
     assets:deferred expenses:services:internet         -150.00 HKD = 0.00 HKD
