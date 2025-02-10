@@ -76,6 +76,7 @@ account assets:special:rewards                                                  
 account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A
 account assets:special:rewards:credit cards                                                       ; type: A
 account assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  ; type: A
+account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  ; type: A
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:Sino United Publishing                                            ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
@@ -119,6 +120,7 @@ account expenses:fees                                                           
 account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                                        ; type: X
 account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
 account expenses:fees:banking                                                                     ; type: X
+account expenses:fees:banking:7fc76083-5175-421d-8c6f-d15897b5ee8e                                ; type: X
 account expenses:fees:banking:DBS Bank                                                            ; type: X
 account expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                                        ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
@@ -175,6 +177,7 @@ account liabilities:accrued expenses:services:internet                          
 account liabilities:credit cards                                                                  ; type: L
 account liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                             ; type: L
 account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8                             ; type: L
+account liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                             ; type: L
 account liabilities:deferred revenues:incomes                                                     ; type: L
 account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
 account liabilities:friends                                                                       ; type: L
