@@ -629,6 +629,10 @@ include ../../../preludes/self.journal
     expenses:transport:trains:high-speed                      204.50 CNY
     assets:deferred expenses:transport:trains:high-speed     -204.50 CNY
 
+2025-01-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 15:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
+
 2025-01-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H15M, time: 15:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education      146.25 HKD
     revenues:incomes:education                    -146.25 HKD
@@ -672,7 +676,7 @@ include ../../../preludes/self.journal
 
 2025-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:rewards:competitions                                                  -3 750.00 HKD = 0.00 HKD
-    assets:accrued revenues:incomes:education                                                     -4 825.25 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:education                                                     -4 922.75 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                3 680.50 HKD = 0.00 HKD

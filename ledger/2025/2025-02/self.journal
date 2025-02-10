@@ -2,7 +2,7 @@ include ../../../preludes/self.journal
 
 2025-02-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:rewards:competitions                                                   3 750.00 HKD = 3 750.00 HKD
-    assets:accrued revenues:incomes:education                                                      4 825.25 HKD = 4 825.25 HKD
+    assets:accrued revenues:incomes:education                                                      4 922.75 HKD = 4 922.75 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
     assets:accumulated depreciation                                                               -3 680.50 HKD = -3 680.50 HKD
@@ -263,6 +263,10 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093     35.00 _PT/D = 35.00 _PT/D
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                -100.00 HKD = -100.00 HKD
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -35.00 _PT/D = 0.00 _PT/D
+
+2025-02-10 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 17:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
 
 2025-02-25 ! (26462940125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
