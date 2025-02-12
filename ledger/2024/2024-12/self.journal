@@ -320,6 +320,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with tomato & bacon
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
+2024-12-20 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 10:11:02, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships     40 000.00 HKD
+    revenues:education:scholarships                   -40 000.00 HKD  ; reward: 2024/25 9311f1af-8aa1-4b11-b451-9875c0098a80
+
 2024-12-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 12:45, timezone: UTC+08:00
     expenses:transport:buses                                                 9.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
@@ -494,6 +498,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support      -20.79 HKD
 
 2024-12-31 closing balances  ; time: 23:59:59
+    assets:accrued revenues:education:scholarships                                               -40 000.00 HKD = 0.00 HKD
     assets:accrued revenues:incomes:education                                                       -325.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD

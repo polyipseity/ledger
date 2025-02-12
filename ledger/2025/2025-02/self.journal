@@ -1,6 +1,7 @@
 include ../../../preludes/self.journal
 
 2025-02-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships                                                40 000.00 HKD = 40 000.00 HKD
     assets:accrued revenues:rewards:competitions                                                   3 750.00 HKD = 3 750.00 HKD
     assets:accrued revenues:incomes:education                                                      4 922.75 HKD = 4 922.75 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
@@ -248,10 +249,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2025-02-08 (N20897566269) 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 22:24, timezone: UTC+08:00
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     5 865.00 HKD
-    assets:cash                                                  -5 865.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         5 865.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -5 865.00 HKD
 
-2025-02-10 (HD12521051002460) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, timezone: UTC+08:00
+2025-02-10 (HD12521051002460, FRN20250210PAYC0302251609964) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      325.00 HKD
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                  16.25 HKD
     assets:accrued revenues:incomes:education                         -325.00 HKD
@@ -267,6 +268,92 @@ include ../../../preludes/self.journal
 2025-02-10 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 17:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       32.50 HKD
     revenues:incomes:education                     -32.50 HKD
+
+2025-02-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 07:50, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2025-02-11 (41107717, 61) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M39S, eating: breakfast, time: 10:18:21, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+
+2025-02-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:59, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-02-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 11:31, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-02-11 (11/112772) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 15:26:38, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         43.50 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: teriyaki chicken pizza
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.50 HKD
+
+2025-02-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 17:55, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-02-11 (HD12521155489889) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: prepayment, time: 18:40, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       41.00 HKD
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9           -41.00 HKD = -41.00 HKD
+
+2025-02-11 * (000-135653, 5) Saizeriya  ; activity: eating, duration: PT30M11S, eating: dinner, time: 18:46:56, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with black pepper shredded beef & broccoli
+    expenses:food and drinks:dining                                          6.00 HKD  ; food_and_drink: garlic baguette ×0.5
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                41.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -77.00 HKD
+
+2025-02-11 (C2B78157458, FRN20250211PAYD0102255524305, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:29, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-02-11 self  ; activity: transfer, time: 19:29, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-02-11 (100/111, 1111450, 1001112502111111450) Daiso  ; activity: consumption, duration: PT3S, time: 19:35:00, timezone: UTC+08:00
+    expenses:equipment                                                      12.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 19:42, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 19:59, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:16, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:31, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:47, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-02-11 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 21:07, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 16.00 HKD
+
+2025-02-11 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:00, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2025-02-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 23:42, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
+
+2025-02-12 (N21208577483) self  ; activity: repayment, time: 12:40:27, timezone: UTC+08:00
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       65.00 HKD = -35.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -65.00 HKD
+
+2025-02-12 (N21208644822, HD12521257147298, C2C78594345) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 13:02:30, timezone: UTC+08:00
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                               -21 050.00 HKD
 
 2025-02-25 ! (26462940125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
