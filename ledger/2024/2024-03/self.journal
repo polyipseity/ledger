@@ -26,8 +26,8 @@ include ../../../preludes/self.journal
     equity:friends                                                                                   -28.50 HKD = -28.50 HKD
     equity:friends:5e758af5-23c0-4038-b161-06757132e875                                              -35.10 HKD = -35.10 HKD
     equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                             -185.00 HKD = -185.00 HKD
-    equity:kins                                                                                   -4 500.00 CNY = -4 500.00 CNY
-    equity:kins                                                                                      -90.00 HKD = -90.00 HKD
+    equity:kins:special                                                                           -4 500.00 CNY = -4 500.00 CNY
+    equity:kins:special                                                                              -90.00 HKD = -90.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -58 918.05 HKD = -58 918.05 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                       -527.00 HKD = -527.00 HKD
@@ -765,8 +765,8 @@ include ../../../preludes/self.journal
     equity:friends                                                                             28.50 HKD = 0.00 HKD
     equity:friends:5e758af5-23c0-4038-b161-06757132e875                                        35.10 HKD = 0.00 HKD
     equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       185.00 HKD = 0.00 HKD
-    equity:kins                                                                             4 500.00 CNY = 0.00 CNY
-    equity:kins                                                                                90.00 HKD = 0.00 HKD
+    equity:kins:special                                                                     4 500.00 CNY = 0.00 CNY
+    equity:kins:special                                                                        90.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              -4 500.00 CNY = 0.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              60 618.05 HKD = 0.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 527.00 HKD = 0.00 HKD
