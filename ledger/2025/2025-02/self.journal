@@ -359,6 +359,50 @@ include ../../../preludes/self.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     21 050.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                               -21 050.00 HKD
 
+2025-02-12 kins  ; activity: transfer, duration: -P1M, time: 14, timezone: UTC+08:00, transfer: red envelopes
+    assets:cash              290.00 HKD
+    equity:kins:special     -290.00 HKD
+
+2025-02-12 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 14:14:00, timezone: UTC+08:00
+    assets:cash                                                   26 000.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -26 000.00 HKD
+
+2025-02-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:55, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-02-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:31, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-02-12 (1-NC26-004-5-000140) The Commercial Press (CityU)  ; activity: education, time: 16:04:18, timezone: UTC+08:00
+    expenses:education:books      384.00 HKD  ; item: 9781292437163 Fundamentals of Corporate Fina
+    assets:cash                  -384.00 HKD
+
+2025-02-12 (4FA9) self  ; QDM CASH DEP (12FEB25), activity: transfer, time: 16:13, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     25 400.00 HKD
+    assets:cash                                                      -25 400.00 HKD
+
+2025-02-12 (696042) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: dinner, time: 18:03, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.50 HKD  ; food_and_drink: roast chicken with rice + mild
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
+
+2025-02-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:20, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-02-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:42, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+
+2025-02-12 (57C0) self  ; QDM CASH DEP (12FEB25), activity: transfer, time: 19:17, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
+    assets:cash                                                       -500.00 HKD
+
+2025-02-12 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 19:30, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4        6.00 HKD
+    assets:cash                                                     -6.00 HKD
+
 2025-02-25 ! (26462940125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
     assets:deferred expenses:services:internet         -150.00 HKD = 0.00 HKD

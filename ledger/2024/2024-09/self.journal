@@ -456,7 +456,7 @@ include ../../../preludes/self.journal
     assets:cash                                                        400.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-09-16 * (1-NC26-004-4-001177) The Commerical Press (CityU)  ; activity: education, time: 13:39:45, timezone: UTC+08:00
+2024-09-16 * (1-NC26-004-4-001177) The Commercial Press (CityU)  ; activity: education, time: 13:39:45, timezone: UTC+08:00
     expenses:education:books                                      458.50 HKD  ; item: 9789813312296 Financial Accounting + CNCT OL
     liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -60.00 HKD = -60.00 HKD
     assets:cash
