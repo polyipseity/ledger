@@ -258,7 +258,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                         -325.00 HKD
     revenues:incomes:education                                         -16.25 HKD
 
-2025-02-10 ! 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: fees, time: 15:14:58, timezone: UTC+08:00
+2025-02-10 * 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: fees, time: 15:14:58, timezone: UTC+08:00
     expenses:fees:banking:7fc76083-5175-421d-8c6f-d15897b5ee8e                    100.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   0.00 HKD = 0.00 HKD
     assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093     35.00 _PT/D = 35.00 _PT/D
@@ -402,6 +402,14 @@ include ../../../preludes/self.journal
 2025-02-12 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 19:30, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4        6.00 HKD
     assets:cash                                                     -6.00 HKD
+
+2025-02-12 (N21210492870) 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 21:51, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         28 601.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -28 601.00 HKD
+
+2025-02-13 ! (N21210515159) 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, posted: 2025-02-12T21:57:00+08:00, time: 08:00, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4         1 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -1 000.00 HKD
 
 2025-02-25 ! (26462940125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.60 HKD
