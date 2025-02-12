@@ -662,6 +662,10 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
+2025-01-30 kins  ; activity: transfer, duration: -P1M, time: 23:59:59, timezone: UTC+08:00, transfer: red envelopes
+    assets:cash              500.00 CNY
+    equity:kins:special     -500.00 CNY
+
 2025-01-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
@@ -688,7 +692,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
     assets:deferred expenses:services:support                                                       -457.42 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -33 339.30 HKD = 0.00 HKD
-    assets:cash                                                                                     -100.00 CNY = 0.00 CNY
+    assets:cash                                                                                     -600.00 CNY = 0.00 CNY
     assets:cash                                                                                      -60.00 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -70.00 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
@@ -714,7 +718,7 @@ include ../../../preludes/self.journal
     equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                                2.00 HKD = 0.00 HKD
     equity:friends:5e758af5-23c0-4038-b161-06757132e875                                               35.10 HKD = 0.00 HKD
     equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                              185.00 HKD = 0.00 HKD
-    equity:kins:special                                                                            4 500.00 CNY = 0.00 CNY
+    equity:kins:special                                                                            5 000.00 CNY = 0.00 CNY
     equity:kins:special                                                                               90.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -3 206.50 CNY = 0.00 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     93 718.21 HKD = 0.00 HKD

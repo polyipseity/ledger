@@ -13,7 +13,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Google                                                  150.00 HKD = 150.00 HKD
     assets:deferred expenses:services:support                                                        457.42 HKD = 457.42 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 33 339.30 HKD = 33 339.30 HKD
-    assets:cash                                                                                      100.00 CNY = 100.00 CNY
+    assets:cash                                                                                      600.00 CNY = 600.00 CNY
     assets:cash                                                                                       60.00 HKD = 60.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          70.00 HKD = 70.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
@@ -39,7 +39,7 @@ include ../../../preludes/self.journal
     equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                               -2.00 HKD = -2.00 HKD
     equity:friends:5e758af5-23c0-4038-b161-06757132e875                                              -35.10 HKD = -35.10 HKD
     equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                             -185.00 HKD = -185.00 HKD
-    equity:kins:special                                                                           -4 500.00 CNY = -4 500.00 CNY
+    equity:kins:special                                                                           -5 000.00 CNY = -5 000.00 CNY
     equity:kins:special                                                                              -90.00 HKD = -90.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      3 206.50 CNY = 3 206.50 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -93 718.21 HKD = -93 718.21 HKD
@@ -346,6 +346,10 @@ include ../../../preludes/self.journal
 2025-02-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 23:42, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       16.25 HKD
     revenues:incomes:education                     -16.25 HKD
+
+2025-02-12 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 12, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      600.00 CNY
+    assets:cash                                                   -600.00 CNY
 
 2025-02-12 (N21208577483) self  ; activity: repayment, time: 12:40:27, timezone: UTC+08:00
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       65.00 HKD = -35.00 HKD
