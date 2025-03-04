@@ -332,7 +332,7 @@ include ../../../preludes/self.alternatives.journal
     assets:recycables                                                        -0.463 _MET = 0.000 _MET
     assets:recycables                                                        -0.334 _OPL = 0.000 _OPL
     assets:recycables                                                        -0.456 _PAP = 0.000 _PAP
-    equity:conversions:GREEN$-_MET:_MET                                       0.463 _MET  ; rate: 10, rate: unit 0.1, recycle: all metal, time: 15:49:37, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       0.463 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 15:49:37, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:GREEN$                                      -2 GREEN$
     equity:conversions:GREEN$-_OPL:_OPL                                       0.334 _OPL  ; rate: 10, rate: unit 0.1, recycle: all other plastics, time: 15:50:06, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:GREEN$                                      -3 GREEN$

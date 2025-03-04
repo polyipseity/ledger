@@ -12,10 +12,10 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Apple                                                    16.00 HKD = 16.00 HKD
     assets:deferred expenses:services:clouds:Google                                                  150.00 HKD = 150.00 HKD
     assets:deferred expenses:services:support                                                        436.63 HKD = 436.63 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  6 313.55 HKD = 6 313.55 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  6 317.49 HKD = 6 317.49 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5           2.00 HKD = 2.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      147.20 HKD = 147.20 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 29.10 HKD = 29.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 18.10 HKD = 18.10 HKD
     assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
     assets:equipment:consumer electronics                                                          8 676.00 HKD = 8 676.00 HKD
     assets:equipment:tools                                                                         4 000.00 KRW = 4 000.00 KRW
@@ -80,6 +80,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: chicken doria
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
+
+2025-03-03 7-Eleven  ; activity: eating, eating: snacks, time: 22:15, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: Vitasoy™ VitaOat™ Chocolate Oat Milk ×2
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-03-30 ! Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.00 HKD

@@ -45,11 +45,10 @@ include ../../../preludes/self.alternatives.journal
 2025-01-22 self  ; activity: collect, duration: -P14D, time: 17, timezone: UTC+08:00
     assets:recycables
     revenues:recycables:food and drinks     -0.050 _BEC
-    revenues:recycables:packaging           -0.100 _OPL
     revenues:recycables:food and drinks     -0.100 _PAP
     revenues:recycables:food and drinks     -0.100 _PLA
     revenues:recycables:food and drinks     -0.050 _MET
-    revenues:recycables:packaging           -0.700 _OPL
+    revenues:recycables:packaging           -0.800 _OPL
     revenues:recycables:packaging           -1.000 _PAP
     revenues:recycables:packaging           -0.100 _PLA
     revenues:recycables:waste               -1.600 _SEA
