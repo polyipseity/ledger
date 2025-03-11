@@ -461,7 +461,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         39.00 HKD  ; food_and_drink: Q1 家鄉雞學生餐 ×1, food_and_drink: 升級-大百事可樂無糖(走冰) ×1, food_and_drink: 家鄉雞2件 ×1, food_and_drink: 經典葡撻 ×1, food_and_drink: 辣汁蘑菇香飯(普通) ×1
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
 
-2025-01-21 ! 85d4d0a9-ec04-4438-8259-cbad1f2839b4  ; time: 14:30:00, timezone: UTC+08:00
+2025-01-21 * 85d4d0a9-ec04-4438-8259-cbad1f2839b4  ; time: 14:30:00, timezone: UTC+08:00
     assets:accrued revenues:rewards:competitions     3 750.00 HKD
     revenues:rewards:competitions                   -3 750.00 HKD  ; reward: ba501a9f-dbff-4aa1-8774-2b33a6a59459
 
