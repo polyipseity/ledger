@@ -503,8 +503,8 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -130.00 HKD
 
 2025-01-22 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT4H15M, time: 19:45, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education      275.25 HKD
-    revenues:incomes:education                    -275.25 HKD
+    assets:accrued revenues:incomes:education      276.25 HKD
+    revenues:incomes:education                    -276.25 HKD
 
 2025-01-22 (57C0) self  ; QDM CASH DEP (22JAN25), activity: transfer, time: 15:35, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      500.00 HKD
@@ -666,6 +666,10 @@ include ../../../preludes/self.journal
     assets:cash              500.00 CNY
     equity:kins:special     -500.00 CNY
 
+2025-01-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 22, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
+
 2025-01-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
@@ -682,7 +686,7 @@ include ../../../preludes/self.journal
 2025-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:education:scholarships                                               -40 000.00 HKD = 0.00 HKD
     assets:accrued revenues:rewards:competitions                                                  -3 750.00 HKD = 0.00 HKD
-    assets:accrued revenues:incomes:education                                                     -4 922.75 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:education                                                     -5 053.75 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                3 680.50 HKD = 0.00 HKD
