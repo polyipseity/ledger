@@ -57,3 +57,29 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_PAP:GREEN$                                     -11 GREEN$
     equity:conversions:GREEN$-_PLA:GREEN$                                       0 GREEN$
     equity:conversions:GREEN$-_SEA:GREEN$                                      -1 GREEN$
+
+2025-03-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            -7 677. GREEN$ = 0 GREEN$
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        -74 000. _PT/B = 0 _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   -29 311. _FRM = 0 _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              -22 943 547. _PT/A = 0 _PT/A
+    equity:conversions:GREEN$-_BEC:GREEN$                                                                81 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_BEC:_BEC                                                                -3.526 _BEC = 0.000 _BEC
+    equity:conversions:GREEN$-_FLW:GREEN$                                                            5 300. GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_FLW:_FLW                                                              -112.290 _FLW = 0.000 _FLW
+    equity:conversions:GREEN$-_MET:GREEN$                                                               127 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                                                -9.699 _MET = 0.000 _MET
+    equity:conversions:GREEN$-_OPL:GREEN$                                                               120 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_OPL:_OPL                                                                -0.200 _MET = 0.000 _MET
+    equity:conversions:GREEN$-_OPL:_OPL                                                                -9.247 _OPL = 0.000 _OPL
+    equity:conversions:GREEN$-_PAP:GREEN$                                                            1 268. GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_PAP:_PAP                                                               -49.393 _PAP = 0.000 _PAP
+    equity:conversions:GREEN$-_PLA:GREEN$                                                               760 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                                                -0.200 _BEC = 0.000 _BEC
+    equity:conversions:GREEN$-_PLA:_PLA                                                                -6.211 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_REB:GREEN$                                                                 2 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_REB:_REB                                                                -0.200 _REB = 0.000 _REB
+    equity:conversions:GREEN$-_SEA:GREEN$                                                                19 GREEN$ = 0 GREEN$
+    equity:conversions:GREEN$-_SEA:_SEA                                                                -1.900 _SEA = 0.000 _SEA
+    equity:external:self                                                                           -200 000. _PT/B = 0 _PT/B
+    equity:opening/closing balances
