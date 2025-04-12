@@ -264,10 +264,22 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
+2025-04-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 10:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
+
 2025-04-11 (7/073093) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:37:28, timezone: UTC+08:00
     expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: fried chicken thigh spicy potato wedges set, food_and_drink: hot Ovaltine
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-04-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 15:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
+
+2025-04-11 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 16:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
 
 2025-04-11 (5874F6/126) McDonald's  ; activity: eating, eating: dinner, time: 19:51:06, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg combo meal
@@ -280,6 +292,14 @@ include ../../../preludes/self.journal
 2025-04-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:47, timezone: UTC+08:00
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+
+2025-04-12 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 01:20, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2025-04-12 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 12:10, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
 
 2025-04-25 ! (80118670325, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
