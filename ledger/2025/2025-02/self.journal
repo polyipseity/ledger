@@ -277,7 +277,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       16.25 HKD
     revenues:incomes:education                     -16.25 HKD
 
-2025-02-11 (41107717, 61) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M39S, eating: breakfast, time: 10:18:21, timezone: UTC+08:00
+2025-02-11 (41107717, 61) Cafe 100%  ; activity: eating, duration: PT30M39S, eating: breakfast, time: 10:18:21, timezone: UTC+08:00
     expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
 
@@ -479,7 +479,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         11.00 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Peanut Butter and Chocolate Flavored Cream
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
 
-2025-02-16 (41109093, 42) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT35M46S, eating: breakfast, time: 11:04:14, timezone: UTC+08:00
+2025-02-16 (41109093, 42) Cafe 100%  ; activity: eating, duration: PT35M46S, eating: breakfast, time: 11:04:14, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 
@@ -657,7 +657,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: Cream Filled Digestive Biscuits Topped with Dark Chocolate
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
-2025-02-23 (41111014, 71) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT34M11S, eating: breakfast, time: 11:12:49, timezone: UTC+08:00
+2025-02-23 (41111014, 71) Cafe 100%  ; activity: eating, duration: PT34M11S, eating: breakfast, time: 11:12:49, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 

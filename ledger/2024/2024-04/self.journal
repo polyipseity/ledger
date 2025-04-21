@@ -46,11 +46,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-04-01 (41007178) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT48M43S, eating: dinner, time: 19:37:17, timezone: UTC+08:00
+2024-04-01 (41007178) Cafe 100%  ; activity: eating, duration: PT48M43S, eating: dinner, time: 19:37:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -69.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 超級三色焗鮮茄一口豚肉西蘭花意粉
 
-2024-04-02 (41007537) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT40M11S, eating: dinner, time: 20:01:49, timezone: UTC+08:00
+2024-04-02 (41007537) Cafe 100%  ; activity: eating, duration: PT40M11S, eating: dinner, time: 20:01:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot chocolate, food_and_drink: spaghetti
 
@@ -58,7 +58,7 @@ include ../../../preludes/self.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -24.00 HKD
     expenses:special:gifts
 
-2024-04-07 (41008753) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M6S, eating: dinner, time: 20:16:54, timezone: UTC+08:00
+2024-04-07 (41008753) Cafe 100%  ; activity: eating, duration: PT30M6S, eating: dinner, time: 20:16:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot Ovaltine, food_and_drink: spaghetti
 
@@ -248,11 +248,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-04-13 (41010860) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M19S, eating: dinner, time: 20:06:41, timezone: UTC+08:00
+2024-04-13 (41010860) Cafe 100%  ; activity: eating, duration: PT33M19S, eating: dinner, time: 20:06:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot Ovaltine, food_and_drink: spaghetti
 
-2024-04-14 (41011238) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT36M36S, eating: dinner, time: 20:14:24, timezone: UTC+08:00
+2024-04-14 (41011238) Cafe 100%  ; activity: eating, duration: PT36M36S, eating: dinner, time: 20:14:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot Ovaltine, food_and_drink: spaghetti
 

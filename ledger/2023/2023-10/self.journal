@@ -22,7 +22,7 @@ include ../../../preludes/self.journal
     equity:unaccounted                                                                          -13 400.03 HKD = -13 400.03 HKD
     equity:opening/closing balances
 
-2023-10-01 (72208524) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 07:30:44, timezone: UTC+08:00
+2023-10-01 (72208524) Cafe 100%  ; activity: eating, eating: breakfast, time: 07:30:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -108,7 +108,7 @@ include ../../../preludes/self.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 13:33:21, timezone: UTC+08:00
 
-2023-10-08 (73256503) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT24M14S, eating: breakfast, time: 09:46:46, timezone: UTC+08:00
+2023-10-08 (73256503) Cafe 100%  ; activity: eating, duration: PT24M14S, eating: breakfast, time: 09:46:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -276,7 +276,7 @@ include ../../../preludes/self.journal
     assets:cash                    500.00 HKD
     revenues:incomes:tutoring                  ; time: 17:39:55, timezone: UTC+08:00
 
-2023-10-22 (73257569) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT32M53S, eating: breakfast, time: 10:45:07, timezone: UTC+08:00
+2023-10-22 (73257569) Cafe 100%  ; activity: eating, duration: PT32M53S, eating: breakfast, time: 10:45:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 

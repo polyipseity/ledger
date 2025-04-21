@@ -326,7 +326,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-04-16 (41125775, 20) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 11:28:41, timezone: UTC+08:00
+2025-04-16 (41125775, 20) Cafe 100%  ; activity: eating, eating: breakfast, time: 11:28:41, timezone: UTC+08:00
     expenses:food and drinks:dining                                 29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: instant noodles, food_and_drink: sausage, food_and_drink: shredded ham
     expenses:food and drinks:dining                                 29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: mixin, food_and_drink: sausage, food_and_drink: shredded ham
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -58.00 HKD
@@ -364,7 +364,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-04-17 (41126055, 81) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 09:52:39, timezone: UTC+08:00
+2025-04-17 (41126055, 81) Cafe 100%  ; activity: eating, eating: breakfast, time: 09:52:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: sausage, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 

@@ -131,7 +131,7 @@ include ../../../preludes/self.journal
     equity:conversions:HKD-_PT/D:HKD                                              -68.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
-2024-02-04 (74217722) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT36M49S, eating: breakfast, time: 09:29:11, timezone: UTC+08:00
+2024-02-04 (74217722) Cafe 100%  ; activity: eating, duration: PT36M49S, eating: breakfast, time: 09:29:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -299,7 +299,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -180.00 HKD
     expenses:healthcare
 
-2024-02-12 (74218184) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M50S, eating: breakfast, time: 10:54:10, timezone: UTC+08:00
+2024-02-12 (74218184) Cafe 100%  ; activity: eating, duration: PT26M50S, eating: breakfast, time: 10:54:10, timezone: UTC+08:00
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     expenses:food and drinks:fees                                            3.70 HKD  ; food_and_drink: 10% service charge
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521

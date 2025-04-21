@@ -150,7 +150,7 @@ include ../../../preludes/self.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 13:46, timezone: UTC+08:00
 
-2023-11-12 (74212201) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT21M51S, eating: breakfast, time: 14:47:09, timezone: UTC+08:00
+2023-11-12 (74212201) Cafe 100%  ; activity: eating, duration: PT21M51S, eating: breakfast, time: 14:47:09, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 雪菜肉絲炆米
     expenses:food and drinks:dining                                         41.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 芝士迷你焗火腿肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
@@ -361,7 +361,7 @@ include ../../../preludes/self.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 16:23:21, timezone: UTC+08:00
 
-2023-11-26 (73260659) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT29M29S, eating: dinner, time: 18:16:31, timezone: UTC+08:00
+2023-11-26 (73260659) Cafe 100%  ; activity: eating, duration: PT29M29S, eating: dinner, time: 18:16:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -62.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 金菇扒時蔬, food_and_drink: 香軟白飯
 

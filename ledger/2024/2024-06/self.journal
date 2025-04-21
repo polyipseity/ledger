@@ -698,7 +698,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       29.78 HKD
     revenues:interests
 
-2024-06-27 (41037513) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M48S, eating: breakfast, time: 08:00:12, timezone: UTC+08:00
+2024-06-27 (41037513) Cafe 100%  ; activity: eating, duration: PT33M48S, eating: breakfast, time: 08:00:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 

@@ -12,7 +12,7 @@ include ../../../preludes/self.journal
     equity:unaccounted                                                                         4.60 HKD = 4.60 HKD
     equity:opening/closing balances
 
-2023-06-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:55, timezone: UTC+08:00
+2023-06-01 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:55, timezone: UTC+08:00
     expenses:food and drinks:dining                                         54.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -20,7 +20,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-02 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 15:13, timezone: UTC+08:00
+2023-06-02 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 15:13, timezone: UTC+08:00
     expenses:food and drinks:dining                                         39.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -28,7 +28,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-06-03 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:10, timezone: UTC+08:00
+2023-06-03 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:10, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -36,11 +36,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
-2023-06-04 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:51, timezone: UTC+08:00
+2023-06-04 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:51, timezone: UTC+08:00
     expenses:food and drinks:dining                                        118.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-05 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 12:52, timezone: UTC+08:00
+2023-06-05 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 12:52, timezone: UTC+08:00
     expenses:food and drinks:dining                                         50.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -72,7 +72,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -200.00 HKD
     assets:cash
 
-2023-06-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:25, timezone: UTC+08:00
+2023-06-09 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:25, timezone: UTC+08:00
     expenses:food and drinks:dining                                         54.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -92,7 +92,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:51, timezone: UTC+08:00
+2023-06-14 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:51, timezone: UTC+08:00
     expenses:food and drinks:dining                                         54.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -104,11 +104,11 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring                    -160.00 HKD
     assets:accrued revenues:incomes:tutoring
 
-2023-06-15 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:40, timezone: UTC+08:00
+2023-06-15 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:40, timezone: UTC+08:00
     expenses:food and drinks:dining                                         39.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-18 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:28, timezone: UTC+08:00
+2023-06-18 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:28, timezone: UTC+08:00
     expenses:food and drinks:dining                                         53.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -132,7 +132,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
-2023-06-26 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:07, timezone: UTC+08:00
+2023-06-26 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 13:07, timezone: UTC+08:00
     expenses:food and drinks:dining                                         57.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -140,7 +140,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-28 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 15:07, timezone: UTC+08:00
+2023-06-28 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 15:07, timezone: UTC+08:00
     expenses:food and drinks:dining                                         39.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -148,7 +148,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring                    -160.00 HKD
     assets:accrued revenues:incomes:tutoring
 
-2023-06-30 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:36, timezone: UTC+08:00
+2023-06-30 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:36, timezone: UTC+08:00
     expenses:food and drinks:dining                                         35.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 

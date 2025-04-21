@@ -65,7 +65,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: meat doria with a soft-boiled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
-2024-12-04 (41088709, 62) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M54S, eating: dinner, time: 16:03:06, timezone: UTC+08:00
+2024-12-04 (41088709, 62) Cafe 100%  ; activity: eating, duration: PT26M54S, eating: dinner, time: 16:03:06, timezone: UTC+08:00
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -44.00 HKD
 
@@ -74,7 +74,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
-2024-12-06 (41089234, 11) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PTM45S, eating: dinner, time: 14:56:15, timezone: UTC+08:00
+2024-12-06 (41089234, 11) Cafe 100%  ; activity: eating, duration: PTM45S, eating: dinner, time: 14:56:15, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: chicken soup, food_and_drink: hot milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 
@@ -376,7 +376,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:education:tuition:universities                                      21 050.00 HKD  ; tuition fee - undergraduate, valid: 2024-12-23T00:00:00+08:00/2025-02-04T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    -21 050.00 HKD = -21 050.00 HKD
 
-2024-12-24 (01336623) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 19:14:37, timezone: UTC+08:00
+2024-12-24 (01336623) Cafe 100%  ; activity: eating, eating: dinner, time: 19:14:37, timezone: UTC+08:00
     expenses:food and drinks:dining                                 69.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: 芝士忌廉焗一口雞腸仔及半焗炒飯
     expenses:food and drinks:dining                                  1.00 HKD  ; food_and_drink: takeaway container
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -70.00 HKD

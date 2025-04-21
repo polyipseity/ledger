@@ -106,7 +106,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2024-11-04 (71279618) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT41M7S, eating: breakfast, time: 08:05:53, timezone: UTC+08:00
+2024-11-04 (71279618) Cafe 100%  ; activity: eating, duration: PT41M7S, eating: breakfast, time: 08:05:53, timezone: UTC+08:00
     expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles, food_and_drink: sausage, food_and_drink: 半焗流心蛋, food_and_drink: （早）蕃茄濃湯雙併即食麵
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
 
@@ -744,7 +744,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       65.00 HKD
     revenues:incomes:education                     -65.00 HKD
 
-2024-11-23 (41085464) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M52S, eating: breakfast, time: 11:17:08, timezone: UTC+08:00
+2024-11-23 (41085464) Cafe 100%  ; activity: eating, duration: PT26M52S, eating: breakfast, time: 11:17:08, timezone: UTC+08:00
     expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 

@@ -13,7 +13,7 @@ include ../../../preludes/self.journal
     equity:unaccounted                                                                   -13 400.03 HKD = -13 400.03 HKD
     equity:opening/closing balances
 
-2023-07-01 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:43, timezone: UTC+08:00
+2023-07-01 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: lunch, time: 14:43, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -49,7 +49,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-07-09 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: dinner, time: 20:02, timezone: UTC+08:00
+2023-07-09 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: dinner, time: 20:02, timezone: UTC+08:00
     expenses:food and drinks:dining                                        137.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -69,7 +69,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
-2023-07-14 f599f52c-f397-4316-843f-b5b8285a9dba  ; Union Cash Register Co. Ltd., activity: eating, eating: dinner, time: 19:17, timezone: UTC+08:00
+2023-07-14 Cafe 100%  ; Union Cash Register Co. Ltd., activity: eating, eating: dinner, time: 19:17, timezone: UTC+08:00
     expenses:food and drinks:dining                                         66.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -110,7 +110,7 @@ include ../../../preludes/self.journal
     assets:cash                                                      -20 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-07-21 (2023072122001432591415412053) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 13:56:01, timezone: UTC+08:00
+2023-07-21 (2023072122001432591415412053) Cafe 100%  ; activity: eating, eating: lunch, time: 13:56:01, timezone: UTC+08:00
     expenses:food and drinks:dining                                    54.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -118,11 +118,11 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-22 (2023072222001432591419309493) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: afternoon tea, time: 15:41:12, timezone: UTC+08:00
+2023-07-22 (2023072222001432591419309493) Cafe 100%  ; activity: eating, eating: afternoon tea, time: 15:41:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                    36.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-07-23 (2023072322001432591421467496) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 14:41:18, timezone: UTC+08:00
+2023-07-23 (2023072322001432591421467496) Cafe 100%  ; activity: eating, eating: lunch, time: 14:41:18, timezone: UTC+08:00
     expenses:food and drinks:dining                                    43.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -174,7 +174,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-29 (2023072922001432591439729451) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: lunch, time: 14:08:25, timezone: UTC+08:00
+2023-07-29 (2023072922001432591439729451) Cafe 100%  ; activity: eating, eating: lunch, time: 14:08:25, timezone: UTC+08:00
     expenses:food and drinks:dining                                    60.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
@@ -182,7 +182,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                    20.50 HKD  ; food_and_drink: Yakult
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-07-30 (2023073022001432591442241980) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: dinner, time: 19:36:07, timezone: UTC+08:00
+2023-07-30 (2023073022001432591442241980) Cafe 100%  ; activity: eating, eating: dinner, time: 19:36:07, timezone: UTC+08:00
     expenses:food and drinks:dining                                    66.00 HKD
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 

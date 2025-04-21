@@ -35,11 +35,11 @@ include ../../../preludes/self.journal
     equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
     equity:opening/closing balances
 
-2024-01-01 (72217284) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT27M11S, eating: breakfast, time: 10:46:49, timezone: UTC+08:00
+2024-01-01 (72217284) Cafe 100%  ; activity: eating, duration: PT27M11S, eating: breakfast, time: 10:46:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-01-01 (71265970) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M46S, eating: dinner, time: 16:05:14, timezone: UTC+08:00
+2024-01-01 (71265970) Cafe 100%  ; activity: eating, duration: PT25M46S, eating: dinner, time: 16:05:14, timezone: UTC+08:00
     expenses:food and drinks:dining                                         41.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: 芝士迷你焗火腿肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -293,7 +293,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.20 HKD
     expenses:transport:trains
 
-2024-01-16 (71266367) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT44M36S, eating: dinner, time: 16:46:24, timezone: UTC+08:00
+2024-01-16 (71266367) Cafe 100%  ; activity: eating, duration: PT44M36S, eating: dinner, time: 16:46:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked spaghetti bolognese with ham and cheese (mini), food_and_drink: hot Ovaltine
 
@@ -301,15 +301,15 @@ include ../../../preludes/self.journal
     liabilities:friends:5e758af5-23c0-4038-b161-06757132e875           365.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-01-17 f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, eating: breakfast, time: 09:31, timezone: UTC+08:00
+2024-01-17 Cafe 100%  ; activity: eating, eating: breakfast, time: 09:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-01-17 (73265034) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M, eating: dinner, time: 14:56:00, timezone: UTC+08:00
+2024-01-17 (73265034) Cafe 100%  ; activity: eating, duration: PT25M, eating: dinner, time: 14:56:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: no-flip over easy egg, food_and_drink: spiced pork cubes
 
-2024-01-17 (72219068) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT37M42S, eating: dinner, time: 19:37:18, timezone: UTC+08:00
+2024-01-17 (72219068) Cafe 100%  ; activity: eating, duration: PT37M42S, eating: dinner, time: 19:37:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -62.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: black fungus, food_and_drink: eggplant, food_and_drink: hot Ovaltine, food_and_drink: lotus root, food_and_drink: sliced pumpkin, food_and_drink: stir-fried mixed vegetables, food_and_drink: string bean
 
@@ -321,11 +321,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-01-18 (74216637) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT23M5S, eating: breakfast, time: 10:16:55, timezone: UTC+08:00
+2024-01-18 (74216637) Cafe 100%  ; activity: eating, duration: PT23M5S, eating: breakfast, time: 10:16:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-01-18 (73265112) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT32M49S, eating: lunch, time: 13:38:11, timezone: UTC+08:00
+2024-01-18 (73265112) Cafe 100%  ; activity: eating, duration: PT32M49S, eating: lunch, time: 13:38:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -48.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: instant noodles in soup, food_and_drink: scrambled egg, food_and_drink: spiced pork cubes
 
@@ -337,7 +337,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: 美祿朱古力牛奶忌廉曲奇家庭裝
 
-2024-01-19 (72219184) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT24M43S, eating: breakfast, time: 07:10:17, timezone: UTC+08:00
+2024-01-19 (72219184) Cafe 100%  ; activity: eating, duration: PT24M43S, eating: breakfast, time: 07:10:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -408,7 +408,7 @@ include ../../../preludes/self.journal
     assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a         -15.65 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-01-20 (74216740) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT20M44S, eating: breakfast, time: 09:25:16, timezone: UTC+08:00
+2024-01-20 (74216740) Cafe 100%  ; activity: eating, duration: PT20M44S, eating: breakfast, time: 09:25:16, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -416,7 +416,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       361 _PT/D  ; valid: 2024-01-20/2025-10-31
     revenues:rewards
 
-2024-01-21 (71266641) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT39M6S, eating: dinner, time: 20:06:54, timezone: UTC+08:00
+2024-01-21 (71266641) Cafe 100%  ; activity: eating, duration: PT39M6S, eating: dinner, time: 20:06:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot Ovaltine, food_and_drink: spaghetti
 
@@ -428,11 +428,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-01-22 (72219481) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT26M33S, eating: breakfast, time: 08:31:27, timezone: UTC+08:00
+2024-01-22 (72219481) Cafe 100%  ; activity: eating, duration: PT26M33S, eating: breakfast, time: 08:31:27, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-01-22 (73265521) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT33M42S, eating: dinner, time: 16:18:18, timezone: UTC+08:00
+2024-01-22 (73265521) Cafe 100%  ; activity: eating, duration: PT33M42S, eating: dinner, time: 16:18:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked spaghetti bolognese with ham and cheese (mini), food_and_drink: hot Ovaltine
 
@@ -468,7 +468,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-01-26 (71266947) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT28M44S, eating: breakfast, time: 08:51:16, timezone: UTC+08:00
+2024-01-26 (71266947) Cafe 100%  ; activity: eating, duration: PT28M44S, eating: breakfast, time: 08:51:16, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
@@ -543,7 +543,7 @@ include ../../../preludes/self.journal
     liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6           187.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-01-27 (72220093) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT32M58S, eating: dinner, time: 19:43:02, timezone: UTC+08:00
+2024-01-27 (72220093) Cafe 100%  ; activity: eating, duration: PT32M58S, eating: dinner, time: 19:43:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -63.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Yangzhou fried rice
 
@@ -611,7 +611,7 @@ include ../../../preludes/self.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 17:26:53, timezone: UTC+08:00
 
-2024-01-29 (74217402) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT25M27S, eating: breakfast, time: 08:08:33, timezone: UTC+08:00
+2024-01-29 (74217402) Cafe 100%  ; activity: eating, duration: PT25M27S, eating: breakfast, time: 08:08:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 

@@ -378,7 +378,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
-2025-03-16 (41116918, 82) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 10:02:48, timezone: UTC+08:00
+2025-03-16 (41116918, 82) Cafe 100%  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 10:02:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 
@@ -677,7 +677,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-03-29 (41120539, 14) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 10:08:22, timezone: UTC+08:00
+2025-03-29 (41120539, 14) Cafe 100%  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 10:08:22, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Lipton milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 

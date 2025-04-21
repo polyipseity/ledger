@@ -57,7 +57,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-03-02 (72223563) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT49M42S, eating: dinner, time: 19:36:18, timezone: UTC+08:00
+2024-03-02 (72223563) Cafe 100%  ; activity: eating, duration: PT49M42S, eating: dinner, time: 19:36:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -68.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked slice chicken, food_and_drink: cream suace, food_and_drink: hot chocolate, food_and_drink: hot chocolate, food_and_drink: no-flip over easy egg, food_and_drink: sausage
 
@@ -85,7 +85,7 @@ include ../../../preludes/self.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring                  ; time: 16:28:31, timezone: UTC+08:00
 
-2024-03-03 (71270186) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT30M3S, eating: dinner, time: 20:15:57, timezone: UTC+08:00
+2024-03-03 (71270186) Cafe 100%  ; activity: eating, duration: PT30M3S, eating: dinner, time: 20:15:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -65.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: baked no-flip over easy egg and bolognese sauce, food_and_drink: hot chocolate, food_and_drink: spaghetti
 
@@ -717,7 +717,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2024-03-31 (41006817) f599f52c-f397-4316-843f-b5b8285a9dba  ; activity: eating, duration: PT16M54S, eating: dinner, time: 20:06:06, timezone: UTC+08:00
+2024-03-31 (41006817) Cafe 100%  ; activity: eating, duration: PT16M54S, eating: dinner, time: 20:06:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -63.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Yangzhou fried rice
 
