@@ -50,3 +50,9 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_OPL:GREEN$                                     -13 GREEN$
     equity:conversions:GREEN$-_PAP:GREEN$                                     -11 GREEN$
     equity:conversions:GREEN$-_PLA:GREEN$                                     -40 GREEN$
+
+2025-04-19 GREEN@self-service  ; activity: recycle, time: 12:46:23, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
+    revenues:recycables:food loss and waste                                  -0.160 _FLW
+    equity:conversions:GREEN$-_FLW:_FLW                                       0.160 _FLW  ; rate: 50 per time, rate: max 50 per day, recycle: food loss and waste, time: 12:46:23, timezone: UTC+08:00
+    equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$ = 7 792 GREEN$
