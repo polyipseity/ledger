@@ -320,7 +320,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with tomato & bacon
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
-2024-12-20 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 10:11:02, timezone: UTC+08:00
+2024-12-20 ! (361875, SF361875) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 10:11:02, timezone: UTC+08:00
     assets:accrued revenues:education:scholarships     40 000.00 HKD
     revenues:education:scholarships                   -40 000.00 HKD  ; reward: 2024/25 9311f1af-8aa1-4b11-b451-9875c0098a80
 
@@ -372,7 +372,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:transport:trains:high-speed           204.50 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4     -204.50 CNY
 
-2024-12-23 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 21:39:14, timezone: UTC+08:00
+2024-12-23 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 21:39:14, timezone: UTC+08:00
     assets:deferred expenses:education:tuition:universities                                      21 050.00 HKD  ; tuition fee - undergraduate, valid: 2024-12-23T00:00:00+08:00/2025-02-04T23:59:59+08:00
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    -21 050.00 HKD = -21 050.00 HKD
 

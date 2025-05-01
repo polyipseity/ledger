@@ -605,7 +605,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-03-26 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00
+2025-03-26 bank  ; CREDIT INTEREST, activity: interests, time: 23:59:59, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        1.43 HKD
     revenues:interests                                                  -1.43 HKD
 
