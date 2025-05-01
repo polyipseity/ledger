@@ -445,9 +445,9 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-04-22 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H15M, time: 12:30, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       81.25 HKD
-    revenues:incomes:education                     -81.25 HKD
+2025-04-22 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 12:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       48.75 HKD
+    revenues:incomes:education                     -48.75 HKD
 
 2025-04-22 (14/141909) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 14:41:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
@@ -478,9 +478,9 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-04-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 11:25, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education      130.00 HKD
-    revenues:incomes:education                    -130.00 HKD
+2025-04-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 11:25, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
 
 2025-04-23 (125295, K184) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:19:47, timezone: UTC+08:00
     expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot coffee (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
@@ -525,9 +525,9 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.40 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Dark and White Chocolate Flavored Cream
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.40 HKD
 
-2025-04-24 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H30M, time: 12:15, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education      162.50 HKD
-    revenues:incomes:education                    -162.50 HKD
+2025-04-24 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 12:15, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
 
 2025-04-24 (12/126992) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 14:48:15, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
@@ -640,9 +640,9 @@ include ../../../preludes/self.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      200.00 HKD
     assets:cash                                                   -200.00 HKD
 
-2025-04-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 07:45, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education       65.00 HKD
-    revenues:incomes:education                     -65.00 HKD
+2025-04-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 07:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
 
 2025-04-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 12:35, timezone: UTC+08:00
     assets:accrued revenues:incomes:education      130.00 HKD
@@ -664,6 +664,10 @@ include ../../../preludes/self.journal
 2025-04-30 (N43066901620) self  ; activity: repayment, time: 10:06:41, timezone: UTC+08:00
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093      150.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -150.00 HKD
+
+2025-04-30 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 13:11, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      130.00 HKD
+    revenues:incomes:education                    -130.00 HKD
 
 2025-04-30 * (MKB86LZ4T5) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
