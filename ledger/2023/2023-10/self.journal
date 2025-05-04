@@ -132,7 +132,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
 
-2023-10-10 (1/A-552637) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: afternoon tea, time: 15:08:28, timezone: UTC+08:00
+2023-10-10 (1/A-552637) Subway  ; activity: eating, eating: afternoon tea, time: 15:08:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
 

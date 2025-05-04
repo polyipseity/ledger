@@ -273,7 +273,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 
-2023-08-30 (2023083022001432591432349455) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: lunch, time: 11:41:39, timezone: UTC+08:00
+2023-08-30 (2023083022001432591432349455) Subway  ; activity: eating, eating: lunch, time: 11:41:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                    40.00 HKD  ; food_and_drink: 6-inch Subway Melt with barbecue sauce
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
 

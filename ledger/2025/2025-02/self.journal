@@ -56,7 +56,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -150.00 HKD
 
 2025-02-02 (000-893676, 52) Saizeriya  ; activity: eating, duration: PT40M38S, eating: lunch, time: 12:52:35, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         42.00 HKD  ; food_and_drink: hamburg steak and gourment sausage with black pepper sauce
+    expenses:food and drinks:dining                                         42.00 HKD  ; food_and_drink: hamburg steak and gourmet sausage with black pepper sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
 
 2025-02-02 7-Eleven  ; activity: eating, eating: snacks, time: 19:44, timezone: UTC+08:00
@@ -682,7 +682,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2025-02-24 (11/115641) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:33:31, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
 
 2025-02-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:14, timezone: UTC+08:00
@@ -743,7 +743,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
 
 2025-02-26 (13/134770) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:35:32, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
 
 2025-02-26 (77592, K071) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 19:50:51, timezone: UTC+08:00
@@ -789,7 +789,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -65.00 HKD
 
 2025-02-27 (14/149282) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:35:32, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
 
 2025-02-27 (5874F7/9835) McDonald's  ; activity: eating, eating: dinner, time: 19:25:58, timezone: UTC+08:00

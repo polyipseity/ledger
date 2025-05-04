@@ -67,12 +67,12 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-05-02 (1/A-701848) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: lunch, time: 13:55:21, timezone: UTC+08:00
+2025-05-02 (1/A-701848) Subway  ; activity: eating, eating: lunch, time: 13:55:21, timezone: UTC+08:00
     expenses:food and drinks:dining                                         33.00 HKD  ; food_and_drink: 6″ turkey & ham sub (daily subs), food_and_drink: barbecue sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
 
 2025-05-02 (12/128524) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:33:53, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 

@@ -450,7 +450,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -48.75 HKD
 
 2025-04-22 (14/141909) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 14:41:39, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
@@ -530,7 +530,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -97.50 HKD
 
 2025-04-24 (12/126992) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 14:48:15, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourment salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: preserved pickle, food_and_drink: shredded pork, food_and_drink: vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 

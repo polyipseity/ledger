@@ -94,7 +94,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
 
 2024-11-03 (000-876355) Saizeriya  ; activity: eating, duration: PT30M13S, eating: lunch, time: 17:13:55, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes (fewer), food_and_drink: gourment sausages
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_and_drink: baked dice potatoes (fewer), food_and_drink: gourmet sausages
     expenses:food and drinks:dining                                         14.00 HKD  ; food_and_drink: creamy mushroom soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
@@ -670,8 +670,8 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
 
-2024-11-21 (1/A-659984) Subway, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: lunch, time: 12:46:09, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         33.00 HKD  ; food_and_drink: 6″ egg salad sub (daily subs), food_and_drink: barbeque sauce
+2024-11-21 (1/A-659984) Subway  ; activity: eating, eating: lunch, time: 12:46:09, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         33.00 HKD  ; food_and_drink: 6″ egg salad sub (daily subs), food_and_drink: barbecue sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
 
 2024-11-21 (CBL11616959, FRN20241121PAYD0102064660566, OCTOPUS038084565301286497) self  ; activity: transfer, time: 12:58:36, timezone: UTC+08:00, via: eDDA
