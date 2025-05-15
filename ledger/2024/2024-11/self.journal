@@ -345,7 +345,7 @@ include ../../../preludes/self.journal
     assets:cash                             -300.00 HKD
 
 2024-11-11 (406E71/9043) McDonald's  ; activity: eating, eating: dinner, time: 21:14:29, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: extra large potato grids, food_and_drink: sau egg combo meal (large combo)
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: cold Fanta, food_and_drink: extra large potato grids, food_and_drink: sau egg  (large combo)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2024-11-11 (FRN20241111PAYD0102044867009) self  ; activity: transfer, time: 22:03:01, timezone: UTC+08:00, via: eDDA
@@ -518,7 +518,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -97.50 HKD
 
 2024-11-17 (5874F7/2301) McDonald's  ; activity: eating, eating: dinner, time: 23:43:25, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: BBQ sauce, food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: nuggets 6pcs combo meal
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: BBQ sauce, food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: nuggets 6pcs
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2024-11-18 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 03:00:00, timezone: UTC+08:00
@@ -904,7 +904,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -32.50 HKD
 
 2024-11-28 (5874F6/356) McDonald's  ; activity: eating, eating: dinner, time: 21:51:23, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2024-11-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:49, timezone: UTC+08:00

@@ -748,7 +748,7 @@ include ../../../preludes/self.journal
 
 2024-10-31 (58C75E/1171) McDonald's  ; activity: eating, eating: lunch, time: 12:36:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
 
 2024-10-31 (4F2A) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; QDM CASH DEP (31OCT24), activity: transfer, time: 13:05, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     7 000.00 HKD

@@ -129,7 +129,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
 
 2024-12-09 (58C75E/9221) McDonald's  ; activity: eating, eating: dinner, time: 19:40:26, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2024-12-09 (CC926756431, FRN20241209PAYD0102108199753, OCTOPUS038084565301286497) self  ; activity: transfer, time: 20:32:58, timezone: UTC+08:00, via: eDDA
@@ -256,7 +256,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
 
 2024-12-16 (5874F6/3333) McDonald's  ; activity: eating, eating: lunch, time: 11:25:58, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: BBQ sauce, food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: nuggets 6pcs combo meal
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: BBQ sauce, food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: nuggets 6pcs
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2024-12-16 (27784, K032) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 19:18:29, timezone: UTC+08:00

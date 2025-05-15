@@ -192,7 +192,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
 2025-04-10 (5874F6/7221) McDonald's  ; activity: eating, eating: lunch, time: 12:26:22, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-04-10 (14/149606) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:24:40, timezone: UTC+08:00
@@ -282,7 +282,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -97.50 HKD
 
 2025-04-11 (5874F6/126) McDonald's  ; activity: eating, eating: dinner, time: 19:51:06, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-04-11 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:29, timezone: UTC+08:00
@@ -327,7 +327,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2025-04-15 (5874F6/754) McDonald's  ; activity: eating, eating: dinner, time: 21:02:49, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-04-15 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:02, timezone: UTC+08:00
@@ -369,7 +369,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -195.00 HKD
 
 2025-04-16 (5874F6/919) McDonald's  ; activity: eating, eating: dinner, time: 21:26:41, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: nuggets 6pcs combo meal
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: nuggets 6pcs
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2025-04-16 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:46, timezone: UTC+08:00

@@ -558,7 +558,7 @@ include ../../../preludes/self.journal
 
 2024-05-18 (5874F6/2836) McDonald's  ; activity: eating, eating: dinner, time: 20:16:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: big mac sauce, food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: nuggets 6pcs combo meal
+    expenses:food and drinks:dining                                                    ; food_and_drink: big mac sauce, food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: nuggets 6pcs
 
 2024-05-18 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
@@ -795,7 +795,7 @@ include ../../../preludes/self.journal
 
 2024-05-24 (58C75E/6391) McDonald's  ; activity: eating, eating: dinner, time: 19:54:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                                    ; food_and_drink: cold Fanta, food_and_drink: medium fries, food_and_drink: sau egg
 
 2024-05-24 (2024052421032632009a2a12) self  ; activity: repayment, time: 21:03:26, timezone: UTC+08:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156       -88 _PT/D

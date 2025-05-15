@@ -111,7 +111,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
 2025-03-05 (58C7BF/1275) McDonald's  ; activity: eating, eating: lunch, time: 12:10:53, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-03-05 (10/105489) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:08:24, timezone: UTC+08:00
@@ -199,7 +199,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
 
 2025-03-09 (5874F7/993) McDonald's  ; activity: eating, eating: dinner, time: 19:31:15, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-03-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:09, timezone: UTC+08:00
@@ -255,7 +255,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -32.50 HKD
 
 2025-03-12 (5874F6/3005) McDonald's  ; activity: eating, eating: dinner, time: 20:58:53, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-03-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:22, timezone: UTC+08:00
@@ -539,7 +539,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
 2025-03-24 (589EB4/2473) McDonald's  ; activity: eating, eating: dinner, time: 22:34:20, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg combo meal
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot chocolate, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-03-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:05, timezone: UTC+08:00
@@ -662,7 +662,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -130.00 HKD
 
 2025-03-28 (58C75E/5711) McDonald's  ; activity: eating, eating: lunch, time: 12:44:19, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: chicken big mac combo meal ($35), food_and_drink: hot local milk tea, food_and_drink: medium fries
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: chicken big mac  ($35), food_and_drink: hot local milk tea, food_and_drink: medium fries
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2025-03-28 (10/100643) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 17:01:35, timezone: UTC+08:00
