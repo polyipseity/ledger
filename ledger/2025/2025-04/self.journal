@@ -125,6 +125,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.10 HKD  ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
+2025-04-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 17:20:37, timezone: UTC+08:00
+    expenses:education                      150.00 HKD
+    assets:deferred expenses:education     -150.00 HKD = 0.00 HKD
+
 2025-04-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:04, timezone: UTC+08:00
     expenses:transport:buses                                                 3.10 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
@@ -774,7 +778,6 @@ include ../../../preludes/self.journal
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
     assets:accumulated depreciation                                                         4 236.25 HKD = 0.00 HKD
     assets:accumulated depreciation                                                         3 666.66 KRW = 0.00 KRW
-    assets:deferred expenses:education                                                       -150.00 HKD = 0.00 HKD
     assets:deferred expenses:education:tuition:universities                               -21 050.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Apple                                             -8.10 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                          -150.00 HKD = 0.00 HKD

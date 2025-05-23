@@ -320,7 +320,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with tomato & bacon
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
-2024-12-20 ! (361875, SF361875) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 10:11:02, timezone: UTC+08:00
+2024-12-20 * (361875, 365486, SF361875, SF365486) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 10:11:02, timezone: UTC+08:00
     assets:accrued revenues:education:scholarships     40 000.00 HKD
     revenues:education:scholarships                   -40 000.00 HKD  ; reward: 2024/25 9311f1af-8aa1-4b11-b451-9875c0098a80
 
