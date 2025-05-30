@@ -1,5 +1,9 @@
 include ../../../preludes/self.journal
 
+2025-06-30 ! (MKB8F06LGD) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.10 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.10 HKD
+
 2025-06-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow

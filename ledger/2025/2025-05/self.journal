@@ -574,7 +574,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-05-23 (HD12552334246433, 0000241426) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:25, timezone: UTC+08:00
+2025-05-23 (HD12552334246433, FRN20250523PAYC0302494079981, 0000241426) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01:25, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     10 000.00 HKD
     assets:accrued revenues:education:scholarships                   -10 000.00 HKD = 0.00 HKD
 
@@ -586,18 +586,202 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       65.00 HKD
     revenues:incomes:education                     -65.00 HKD
 
+2025-05-23 (41136473, 12) Cafe 100%  ; activity: eating, duration: PT29M18S, eating: breakfast, time: 11:19:42, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: luncheon meat
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
 2025-05-23 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 12:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       32.50 HKD
     revenues:incomes:education                     -32.50 HKD
+
+2025-05-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:54, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-05-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:26, timezone: UTC+08:00
+    expenses:transport:buses                                                 4.20 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.20 HKD
+
+2025-05-24 (152173, K075) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:51:15, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot coffee (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
+
+2025-05-24 (14/149305) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:37:45, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-05-24 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 17:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       65.00 HKD
+    revenues:incomes:education                     -65.00 HKD
+
+2025-05-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:31, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-05-24 (54K10032805) Bafang Dumpling  ; activity: eating, duration: PT30M, eating: dinner, time: 21:06:07, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         45.00 HKD  ; food_and_drink: 台灣鮮豆漿 + 凍 + 無糖, food_and_drink: 珍珠紅油餛飩 ×6, food_and_drink: 珍珠餛飩餐（C餐）, food_and_drink: 辣味鍋貼 ×5
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
+
+2025-05-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:54, timezone: UTC+08:00
+    expenses:transport:buses                                                 6.80 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
+
+2025-05-24 (C5O59664476, FRN20250524PAYD0102497851151, OCTOPUS038084565301286497) self  ; activity: transfer, time: 21:54, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-05-24 self  ; activity: transfer, time: 21:54, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-05-25 (41137070) Cafe 100%  ; activity: eating, duration: PT34M2S, duration: PT41M7S, eating: breakfast, time: 11:26:58, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: luncheon meat, food_and_drink: scrambled egg, food_and_drink: （早）蕃茄濃湯雙併即食麵
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+
+2025-05-25 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT15M, time: 13:13, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       16.25 HKD
+    revenues:incomes:education                     -16.25 HKD
 
 2025-05-25 * (17533960425, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
     assets:deferred expenses:services:internet         -148.70 HKD = 0.00 HKD
     liabilities:accrued expenses:services:internet       -0.30 HKD = -0.30 HKD
 
+2025-05-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       48.75 HKD
+    revenues:incomes:education                     -48.75 HKD
+
+2025-05-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 07:31, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-05-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:11, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-05-26 bank  ; CREDIT INTEREST, activity: interests, time: 23:59:59, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        8.47 HKD
+    revenues:interests                                                  -8.47 HKD
+
+2025-05-26 (152464, K185) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:54:31, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot coffee (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
+
+2025-05-26 (8/086249) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:55:59, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-05-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: transport, time: 18:47, timezone: UTC+08:00
+    expenses:transport:buses                                                 6.20 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.20 HKD
+
+2025-05-26 * (000-157593, 13) Saizeriya  ; activity: eating, duration: PT55M16S, eating: dinner, time: 19:25:13, timezone: UTC+08:00
+    expenses:food and drinks:dining                                20.00 HKD  ; food_and_drink: baked dice potatoes (fewer), food_and_drink: grilled spicy sausages
+    expenses:food and drinks:dining                                20.00 HKD  ; food_and_drink: sauteed garlic broccoli with mushrooms
+    liabilities:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486      -40.00 HKD = -40.00 HKD
+
+2025-05-26 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 20:40, timezone: UTC+08:00
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       10.00 HKD = 14.00 HKD
+    assets:cash                                                                                   -10.00 HKD
+
+2025-05-26 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 20:42, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-05-26 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 20:58, timezone: UTC+08:00
+    expenses:gaming:maimai                                                                          6.00 HKD
+    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 2.00 HKD
+
+2025-05-26 * (T0000801110000019989, 46344) Don Don: Donki  ; activity: eating, eating: snacks, time: 21:17, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                 8.50 HKD  ; food_and_drink: (4582271706417) JN Milk & Yogurt Flavour Beverage
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.50 HKD = -8.50 HKD
+
+2025-05-26 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:53, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2025-05-26 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 23:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       32.50 HKD
+    revenues:incomes:education                     -32.50 HKD
+
+2025-05-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 11:00, timezone: UTC+08:00
+    expenses:transport:buses                                                12.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.10 HKD
+
+2025-05-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 11:40, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-05-28 (58C7BF/1717, #405, #43) McDonald's  ; activity: eating, eating: dinner, time: 18:29:02, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         39.90 HKD  ; food_and_drink: McCafe ice coconut medium latte, food_and_drink: honey BBQ seasoning, food_and_drink: large fries, food_and_drink: sausage egg muffin, food_and_drink: sausage egg muffin meal with ice coconut medium latte + large fries
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.90 HKD
+
+2025-05-28 (C5S62705937, FRN20250528PAYD0102507704176, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:27, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-05-28 self  ; activity: transfer, time: 19:27, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-05-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:27, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-05-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:52, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+
+2025-05-29 (41138123, 32) Cafe 100%  ; activity: eating, duration: PT29M59S, eating: breakfast, time: 08:40:41, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: pickled vegetable, food_and_drink: shredded pork
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-05-29 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:22, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-05-29 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:05, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-05-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 10:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       97.50 HKD
+    revenues:incomes:education                     -97.50 HKD
+
+2025-05-29 (14/140476) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:00:12, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-05-29 (76562, MKB8F06LGD, 198959836554) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
+
+2025-05-29 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:51, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-05-29 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:21, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+
 2025-05-29 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                     21 050.00 HKD
     assets:deferred expenses:education:tuition:universities    -21 050.00 HKD = 0.00 HKD
+
+2025-05-30 (411138490, 14) Cafe 100%  ; activity: eating, duration: PT31M6S, eating: breakfast, time: 11:24:54, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: luncheon meat
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-05-30 (N53073286840, HD12553056371546) c1fa4d34-35f7-4bee-bbb2-42f0d93b8486  ; activity: repayment, time: 15:38:40, timezone: UTC+08:00
+    liabilities:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486            40.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -40.00 HKD
+
+2025-05-30 (N53073291533, HD12553056375286) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 15:40:00, timezone: UTC+08:00
+    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.50 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.50 HKD
 
 2025-05-30 ! (MKB899Q154) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
