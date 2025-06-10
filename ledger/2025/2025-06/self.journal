@@ -46,6 +46,18 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -17 629.71 HKD = -17 629.71 HKD
     equity:opening/closing balances
 
+2025-06-01 * (pi_3RV1xCBMoBY3wEtc3Es5rEQL) **********************@********.net  ; polyipseity (@polyipseity) - Support, activity: donation, time: 10:48:56, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.68426
+    expenses:fees:Buy Me a Coffee                                     1.92 HKD
+    expenses:fees:Stripe                                              3.99 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       36.05 HKD
+    equity:conversions:HKD-USD:HKD                                  -41.96 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -5.46 USD
+
+2025-06-01 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 15:00, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 16:30, timezone: UTC+08:00
+
 2025-06-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:25, timezone: UTC+08:00
     expenses:transport:buses                                                10.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
@@ -83,6 +95,58 @@ include ../../../preludes/self.journal
 2025-06-03 (41139626, 72) Cafe 100%  ; activity: eating, duration: PT29M36S, eating: breakfast, time: 11:28:24, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: char siu, food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-04 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 14:15, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 15:45, timezone: UTC+08:00
+
+2025-06-05 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT45M, time: 14:15, timezone: UTC+08:00
+    assets:cash                    125.00 HKD
+    revenues:incomes:tutoring     -125.00 HKD  ; time: 15:07, timezone: UTC+08:00
+
+2025-06-05 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 16:00, timezone: UTC+08:00
+    assets:cash                                                     75.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -75.00 HKD
+
+2025-06-05 (57C0) self  ; QDM CASH DEP (12FEB25), activity: transfer, time: 17:13, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      600.00 HKD
+    assets:cash                                                       -600.00 HKD
+
+2025-06-05 Circle K  ; activity: add value, time: 17:14, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:cash                                                           -200.00 HKD
+
+2025-06-06 (41140443, 51) Cafe 100%  ; activity: eating, duration: PT42M12S, eating: breakfast, time: 11:29:48, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+
+2025-06-08 (41141002, 18) Cafe 100%  ; activity: eating, duration: PT39M19S, eating: breakfast, time: 09:57:41, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-08 ! (pi_3RXjPmBMoBY3wEtc1iJZK0uh) ************@***********.org  ; polyipseity (@polyipseity) - Support, activity: donation, time: 14:16:57, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.6895
+    expenses:fees:Buy Me a Coffee                                     1.92 HKD
+    expenses:fees:Stripe                                              3.99 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       36.07 HKD
+    equity:conversions:HKD-USD:HKD                                  -41.98 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -5.46 USD
+
+2025-06-09 (HD12560986829284, STRIPE zRG3sPwC3, po_1RX2h6BMoBY3wEtcx2JELePC) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD124B0178334323 1Nov, activity: transfer, time: 15:07:25, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       36.05 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -36.05 HKD = 36.07 HKD
+
+2025-06-09 (HD12560987137215) 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: transfer, time: 16, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     1 000.00 HKD
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0        -1 000.00 HKD
+
+2025-06-10 (41141592, 72) Cafe 100%  ; activity: eating, duration: PT40M27S, eating: breakfast, time: 09:26:33, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-10 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 14:15, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 15:44, timezone: UTC+08:00
 
 2025-06-25 ! (44880360525, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD

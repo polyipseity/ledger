@@ -230,7 +230,9 @@ commodity 99 999 999. _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 mo
 commodity 99 999 999. _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
 
 payee **** (***********)
+payee **********************@********.net
 payee ******************@******.com
+payee ************@***********.org
 payee ******@***************.com
 payee ******@***********.com.au
 payee ******@******.net
