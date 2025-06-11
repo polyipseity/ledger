@@ -5,6 +5,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                               2 518.75 HKD = 2 518.75 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           16 966.42 HKD = 16 966.42 HKD
+    assets:accrued revenues:rewards:competitions                                            3 500.00 HKD = 3 500.00 HKD
     assets:accumulated depreciation                                                        -4 236.25 HKD = -4 236.25 HKD
     assets:accumulated depreciation                                                        -3 666.66 KRW = -3 666.66 KRW
     assets:deferred expenses:education:tuition:universities                                21 050.00 HKD = 21 050.00 HKD
@@ -771,6 +772,10 @@ include ../../../preludes/self.journal
     expenses:education:tuition:universities                     21 050.00 HKD
     assets:deferred expenses:education:tuition:universities    -21 050.00 HKD = 0.00 HKD
 
+2025-05-30 ! (196JUW) HK Express  ; activity: transport, time: 07:30, timezone: UTC+08:00
+    assets:deferred expenses:transport:airplanes                 1 200.00 HKD
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 200.00 HKD = -1 200.00 HKD
+
 2025-05-30 (411138490, 14) Cafe 100%  ; activity: eating, duration: PT31M6S, eating: breakfast, time: 11:24:54, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: instant noodles, food_and_drink: luncheon meat
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
@@ -808,12 +813,14 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                                     -1 235.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
+    assets:accrued revenues:rewards:competitions                                                  -3 500.00 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                4 421.50 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                4 000.00 KRW = 0.00 KRW
     assets:deferred expenses:services:clouds:Apple                                                    -8.10 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
     assets:deferred expenses:services:internet                                                      -148.70 HKD = 0.00 HKD
     assets:deferred expenses:services:support                                                       -374.26 HKD = 0.00 HKD
+    assets:deferred expenses:transport:airplanes                                                  -1 200.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -50 451.19 HKD = 0.00 HKD
     assets:cash                                                                                     -200.00 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          -2.00 HKD = 0.00 HKD
@@ -848,4 +855,5 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:levy                                                      17.64 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             43 180.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             17 629.71 HKD = 0.00 HKD
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                       1 200.00 HKD = 0.00 HKD
     equity:opening/closing balances

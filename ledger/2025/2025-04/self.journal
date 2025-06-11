@@ -570,6 +570,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.40 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Dark and White Chocolate Flavored Cream
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.40 HKD
 
+2025-04-25 ! Hong Kong Polytechnic University  ; time: 14:06:23, timezone: UTC+08:00
+    assets:accrued revenues:rewards:competitions     3 500.00 HKD
+    revenues:rewards:competitions                   -3 500.00 HKD  ; reward: PolyU x NuttyShell Cybersecurity CTF 2025 - 1st Place in the Degree Category
+
 2025-04-25 (12/127268) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 14:39:32, timezone: UTC+08:00
     expenses:food and drinks:dining                                         22.00 HKD  ; food_and_drink: chicken wings spicy potato wedges set, food_and_drink: hot coffee
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: vermicelli in soup
@@ -776,6 +780,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                              -2 518.75 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25           -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
+    assets:accrued revenues:rewards:competitions                                           -3 500.00 HKD = 0.00 HKD
     assets:accumulated depreciation                                                         4 236.25 HKD = 0.00 HKD
     assets:accumulated depreciation                                                         3 666.66 KRW = 0.00 KRW
     assets:deferred expenses:education:tuition:universities                               -21 050.00 HKD = 0.00 HKD
