@@ -15,6 +15,7 @@ account expenses:depreciation              ; type: X
 account expenses:depreciation:wear         ; type: X
 account expenses:expiration                ; type: X
 account expenses:lost                      ; type: X
+account expenses:writeoffs                 ; type: X
 account liabilities                        ; type: L
 account liabilities:accrued expenses       ; type: L
 account liabilities:deferred revenues      ; type: L
@@ -50,3 +51,4 @@ tag type
 tag unit
 tag valid
 tag via
+tag writeoff

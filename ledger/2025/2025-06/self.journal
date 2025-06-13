@@ -161,7 +161,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
 
 2025-06-11 ! unknown  ; activity: education, time: 22:53, timezone: UTC+08:00
-    equity:conversions:EUR-HKD:HKD                                 27.00 HKD  ; rate: 0.333333
+    equity:conversions:EUR-HKD:HKD                                 27.00 HKD  ; rate: 0.111111
     assets:deferred assets:objects:decorations                      3.00 EUR  ; item: 0 euro paper money
     equity:conversions:EUR-HKD:EUR                                 -3.00 EUR
     liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -27.00 HKD = -27.00 HKD
@@ -182,6 +182,10 @@ include ../../../preludes/self.journal
     liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1            27.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -27.00 HKD
 
+2025-06-12 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 17:05, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
 2025-06-12 * (1548605, 67) Garden Restaurant  ; activity: eating, duration: PT34M, eating: dinner, time: 19:04, timezone: UTC+08:00
     expenses:food and drinks:dining                               110.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: 晚餐(F) 蒜香雞扒
     expenses:food and drinks:fees                                  11.00 HKD  ; food_and_drink: 10% service charge
@@ -190,6 +194,10 @@ include ../../../preludes/self.journal
 2025-06-12 (C6C75833101, N61222115616, HD12561296125837) 856ec2f9-6367-4726-9301-a2a6dde358c0  ; activity: repayment, time: 20:14, timezone: UTC+08:00
     liabilities:friends:856ec2f9-6367-4726-9301-a2a6dde358c0           121.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -121.00 HKD
+
+2025-06-12 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:17, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
 2025-06-25 ! (44880360525, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD

@@ -23,3 +23,7 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_SEA:_SEA                                                                1.900 _SEA = 1.900 _SEA
     equity:external:self                                                                           200 000. _PT/B = 200 000 _PT/B
     equity:opening/closing balances
+
+2025-06-15 * 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, time: 23:59:59, timezone: UTC+08:00
+    expenses:writeoffs                                                                           74 000. _PT/B  ; writeoff: no updates
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -74 000. _PT/B = 0 _PT/B
