@@ -19,6 +19,8 @@ account assets:cheques                                                          
 account assets:cheques:certified                                                                  ; type: C
 account assets:deferred assets:equipment                                                          ; type: A
 account assets:deferred assets:equipment:consumer electronics                                     ; type: A
+account assets:deferred assets:objects                                                            ; type: A
+account assets:deferred assets:objects:decorations                                                ; type: A
 account assets:deferred expenses:accommodations                                                   ; type: A
 account assets:deferred expenses:accommodations:universities                                      ; type: A
 account assets:deferred expenses:activities                                                       ; type: A
@@ -59,6 +61,8 @@ account assets:equipment                                                        
 account assets:equipment:clothing                                                                 ; type: A
 account assets:equipment:consumer electronics                                                     ; type: A
 account assets:equipment:tools                                                                    ; type: A
+account assets:objects                                                                            ; type: A
+account assets:objects:decorations                                                                ; type: A
 account assets:loans                                                                              ; type: A
 account assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be                                 ; type: A
 account assets:loans:friends                                                                      ; type: A
@@ -90,6 +94,9 @@ account equity:conversions:HKD-_PT/B:_PT/B                                      
 account equity:conversions:HKD-_PT/D                                                              ; type: E
 account equity:conversions:HKD-_PT/D:HKD                                                          ; type: E
 account equity:conversions:HKD-_PT/D:_PT/D                                                        ; type: E
+account equity:conversions:EUR-HKD                                                                ; type: E
+account equity:conversions:EUR-HKD:EUR                                                            ; type: E
+account equity:conversions:EUR-HKD:HKD                                                            ; type: E
 account equity:conversions:HKD-KRW                                                                ; type: E
 account equity:conversions:HKD-KRW:HKD                                                            ; type: E
 account equity:conversions:HKD-KRW:KRW                                                            ; type: E
@@ -192,6 +199,7 @@ account liabilities:friends:4cde7f3e-81fa-4165-a2a4-1a7a52ec7400                
 account liabilities:friends:5e758af5-23c0-4038-b161-06757132e875                                  ; type: L
 account liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa                                  ; type: L
 account liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45                                  ; type: L
+account liabilities:friends:856ec2f9-6367-4726-9301-a2a6dde358c0                                  ; type: L
 account liabilities:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                                  ; type: L
 account liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                  ; type: L
 account liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                  ; type: L
@@ -222,6 +230,7 @@ account revenues:subsidies                                                      
 account revenues:subsidies:Public Transport Fare Subsidy Scheme                                   ; type: R
 
 commodity 99 999 999.00 CNY  ; fullname: Renminbi
+commodity 99 999 999.00 EUR  ; fullname: euro
 commodity 99 999 999.00 HKD  ; fullname: Hong Kong dollars
 commodity 99 999 999.00 KRW  ; fullname: South Korean won
 commodity 99 999 999.00 USD  ; fullname: United State dollars
@@ -285,6 +294,7 @@ payee 810c451f-b2e5-4c98-8433-b1451593c457
 payee 82050afc-aac6-41aa-8066-d436a2c5434d
 payee 82de8d96-c247-49eb-9bd7-87b00f16d25c
 payee 83282154-a569-4443-8df3-675a5a48e4a2
+payee 856ec2f9-6367-4726-9301-a2a6dde358c0
 payee 85d4d0a9-ec04-4438-8259-cbad1f2839b4
 payee 88e71e74-7f85-4a0a-ab31-ecab094622a5
 payee 8e88d2b4-d2f8-431f-a5e9-1179456eb344
@@ -312,6 +322,7 @@ payee Don Don: Donki
 payee Frontline Solvers
 payee Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee G2000
+payee Garden Restaurant
 payee Genki
 payee Google
 payee Grill de Woowa
