@@ -12,8 +12,8 @@ include ../../../preludes/self.journal
     assets:cash                                                                            35 792.00 HKD = 35 792.00 HKD
     assets:cheques:certified                                                                  625.00 HKD = 625.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         -25.10 HKD = -25.10 HKD
-    assets:equipment:clothing                                                               1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                   8 616.00 HKD = 8 616.00 HKD
+    assets:objects:clothing                                                                 1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                     8 616.00 HKD = 8 616.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                             8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   524 _PT/D = 524 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                          -80.00 HKD = -80.00 HKD
@@ -220,7 +220,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-04-12 (1114446) Aeon  ; activity: consumption, time: 15:18:16, timezone: UTC+08:00
-    assets:equipment:consumer electronics                                   12.00 HKD  ; depreciation: straight-line@P1Y, item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL), residual: 0.00 HKD
+    assets:objects:consumer electronics                                     12.00 HKD  ; depreciation: straight-line@P1Y, item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL), residual: 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-04-12 (4A62) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; ATM WITHDRAWAL (12APR24), activity: transfer, time: 15:20:42, timezone: UTC+08:00
@@ -700,8 +700,8 @@ include ../../../preludes/self.journal
     assets:cash                                                                                  -35 792.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -107.10 HKD = 0.00 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1         -90.00 HKD = 0.00 HKD
-    assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 628.00 HKD = 0.00 HKD
+    assets:objects:clothing                                                                       -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                           -8 628.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                         -461 _PT/D = 0 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD

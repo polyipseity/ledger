@@ -16,9 +16,9 @@ include ../../../preludes/self.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5           2.00 HKD = 2.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      147.20 HKD = 147.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 18.10 HKD = 18.10 HKD
-    assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                          8 676.00 HKD = 8 676.00 HKD
-    assets:equipment:tools                                                                         4 000.00 KRW = 4 000.00 KRW
+    assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                            8 676.00 HKD = 8 676.00 HKD
+    assets:objects:tools                                                                           4 000.00 KRW = 4 000.00 KRW
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                               442.00 HKD = 442.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000 _PT/B
@@ -828,9 +828,9 @@ include ../../../preludes/self.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -12.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -139.10 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -40.10 HKD = 0.00 HKD
-    assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 676.00 HKD = 0.00 HKD
-    assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
+    assets:objects:clothing                                                                       -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                           -8 676.00 HKD = 0.00 HKD
+    assets:objects:tools                                                                          -4 000.00 KRW = 0.00 KRW
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                              -485.88 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B

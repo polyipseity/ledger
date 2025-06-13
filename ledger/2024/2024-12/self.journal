@@ -14,9 +14,9 @@ include ../../../preludes/self.journal
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          70.00 HKD = 70.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      688.20 HKD = 688.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                218.40 HKD = 218.40 HKD
-    assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                          8 628.00 HKD = 8 628.00 HKD
-    assets:equipment:tools                                                                         4 000.00 KRW = 4 000.00 KRW
+    assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                            8 628.00 HKD = 8 628.00 HKD
+    assets:objects:tools                                                                           4 000.00 KRW = 4 000.00 KRW
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                           35 _PT/D = 35 _PT/D
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                                78.00 HKD = 78.00 HKD
@@ -58,7 +58,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -104.00 HKD
 
 2024-12-01 (8230594, 84110480B5) a2c6c8e6-2480-47db-a03b-94840933b018  ; activity: purchase, time: 13:45, timezone: UTC+08:00
-    assets:equipment:consumer electronics                           60.00 HKD  ; depreciation: straight-line@P2Y, item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger, residual: 0.00 HKD
+    assets:objects:consumer electronics                             60.00 HKD  ; depreciation: straight-line@P2Y, item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger, residual: 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -60.00 HKD
 
 2024-12-03 (000-881876, 62) Saizeriya  ; activity: eating, duration: PT20M4S, eating: lunch, time: 12:43:07, timezone: UTC+08:00
@@ -517,9 +517,9 @@ include ../../../preludes/self.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -181.20 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -124.70 HKD = 0.00 HKD
-    assets:equipment:clothing                                                                     -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 688.00 HKD = 0.00 HKD
-    assets:equipment:tools                                                                        -4 000.00 KRW = 0.00 KRW
+    assets:objects:clothing                                                                       -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                           -8 688.00 HKD = 0.00 HKD
+    assets:objects:tools                                                                          -4 000.00 KRW = 0.00 KRW
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -35 _PT/D = 0 _PT/D
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                              -194.19 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD

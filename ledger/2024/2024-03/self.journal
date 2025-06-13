@@ -12,8 +12,8 @@ include ../../../preludes/self.journal
     assets:cash                                                                                   34 142.00 HKD = 34 142.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 76.80 HKD = 76.80 HKD
-    assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                          8 616.00 HKD = 8 616.00 HKD
+    assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                            8 616.00 HKD = 8 616.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          489 _PT/D = 489 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
@@ -751,8 +751,8 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -24 489.35 HKD = 0.00 HKD
     assets:cash                                                                           -35 792.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                          25.10 HKD = 0.00 HKD
-    assets:equipment:clothing                                                              -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                  -8 616.00 HKD = 0.00 HKD
+    assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                    -8 616.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                            -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  -524 _PT/D = 0 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD

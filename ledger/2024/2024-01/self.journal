@@ -13,7 +13,7 @@ include ../../../preludes/self.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                235.20 HKD = 235.20 HKD
     assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                        15.65 HKD = 15.65 HKD
-    assets:equipment:consumer electronics                                                          8 616.00 HKD = 8 616.00 HKD
+    assets:objects:consumer electronics                                                            8 616.00 HKD = 8 616.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                           30 _PT/D = 30 _PT/D
     assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                                     150.00 HKD = 150.00 HKD
@@ -143,8 +143,8 @@ include ../../../preludes/self.journal
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
 2024-01-06 (OS326P22401061504110006) G2000  ; activity: consumption, time: 15:09:37, timezone: UTC+08:00
-    assets:equipment:clothing                                      580.00 HKD  ; depreciation: straight-line@P1Y, item: 361120529952 100-SUIT BLAZER, residual: 0.00 HKD
-    assets:equipment:clothing                                      299.00 HKD  ; depreciation: straight-line@P1Y, item: 361520529934 500-SUIT PANTS, residual: 0.00 HKD
+    assets:objects:clothing                                        580.00 HKD  ; depreciation: straight-line@P1Y, item: 361120529952 100-SUIT BLAZER, residual: 0.00 HKD
+    assets:objects:clothing                                        299.00 HKD  ; depreciation: straight-line@P1Y, item: 361520529934 500-SUIT PANTS, residual: 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2024-01-07 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:40, timezone: UTC+08:00
@@ -702,8 +702,8 @@ include ../../../preludes/self.journal
     assets:cash                                                                                  -34 142.00 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -16.90 HKD = 0.00 HKD
-    assets:equipment:clothing                                                                       -879.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                         -8 616.00 HKD = 0.00 HKD
+    assets:objects:clothing                                                                         -879.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                           -8 616.00 HKD = 0.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                         -364 _PT/D = 0 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD

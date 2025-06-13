@@ -14,8 +14,8 @@ include ../../../preludes/self.journal
     assets:cash                                                                                   16 344.00 HKD = 16 344.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 19.40 HKD = 19.40 HKD
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1          12.00 HKD = 12.00 HKD
-    assets:equipment:clothing                                                                      1 038.00 HKD = 1 038.00 HKD
-    assets:equipment:consumer electronics                                                          8 628.00 HKD = 8 628.00 HKD
+    assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                            8 628.00 HKD = 8 628.00 HKD
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          244 _PT/D = 244 _PT/D
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
@@ -567,7 +567,7 @@ include ../../../preludes/self.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
 
 2024-06-21 * Leaderskey  ; activity: consumption, time: 16:04:30, timezone: UTC+09:00
-    assets:equipment:tools                                       4 000.00 KRW  ; depreciation: straight-line@P1Y, item: Leopold wire keycap remover, residual: 0.00 KRW
+    assets:objects:tools                                         4 000.00 KRW  ; depreciation: straight-line@P1Y, item: Leopold wire keycap remover, residual: 0.00 KRW
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -4 000.00 KRW
 
 2024-06-21 * (D002 3377 6417 CED2 / 2310) Seoul Metropolitan Subway  ; activity: transport, duration: PT28M16S, time: 17:26:16, timezone: UTC+09:00
@@ -802,9 +802,9 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Google                                            -3.80 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                              -188.20 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -231.80 HKD = 0.00 HKD
-    assets:equipment:clothing                                                              -1 038.00 HKD = 0.00 HKD
-    assets:equipment:consumer electronics                                                  -8 628.00 HKD = 0.00 HKD
-    assets:equipment:tools                                                                 -4 000.00 KRW = 0.00 KRW
+    assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                    -8 628.00 HKD = 0.00 HKD
+    assets:objects:tools                                                                   -4 000.00 KRW = 0.00 KRW
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                            -8 676. _PT/C = 0 _PT/C
     equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                   -200 000. _PT/B = 0 _PT/B
