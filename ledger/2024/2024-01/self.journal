@@ -687,8 +687,8 @@ include ../../../preludes/self.journal
     expenses:depreciation
 
 2024-01-31 * adjustment  ; activity: expiration, time: 23:59:59, timezone: UTC+08:00
+    expenses:writeoffs:expired                                        150.00 HKD  ; writeoff: expired
     assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8     -150.00 HKD = 0.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×3
-    expenses:expiration
 
 2024-01-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
     assets:accumulated depreciation                                                                  451.91 HKD = 0.00 HKD

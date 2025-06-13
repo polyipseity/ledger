@@ -13,9 +13,9 @@ account equity:unaccounted                 ; type: E
 account expenses                           ; type: X
 account expenses:depreciation              ; type: X
 account expenses:depreciation:wear         ; type: X
-account expenses:expiration                ; type: X
-account expenses:lost                      ; type: X
 account expenses:writeoffs                 ; type: X
+account expenses:writeoffs:expired         ; type: X
+account expenses:writeoffs:lost            ; type: X
 account liabilities                        ; type: L
 account liabilities:accrued expenses       ; type: L
 account liabilities:deferred revenues      ; type: L
@@ -41,7 +41,6 @@ tag duration
 tag fullname
 tag installment
 tag item
-tag lost
 tag posted
 tag rate
 tag residual

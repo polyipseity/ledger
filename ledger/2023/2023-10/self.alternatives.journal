@@ -137,8 +137,8 @@ include ../../../preludes/self.alternatives.journal
     assets:recycables
 
 2023-10-13 adjustment  ; activity: adjust, time: 01:02:40, timezone: UTC+08:00
-    assets:recycables     -0.116 _BEC
-    expenses:lost
+    assets:recycables           -0.116 _BEC
+    expenses:writeoffs:lost
 
 2023-10-13 self  ; activity: collect, time: 09, timezone: UTC+08:00
     revenues:recycables:food and drinks     -0.009 _BEC  ; collect: 1 beverage carton

@@ -617,9 +617,9 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai
 
 2024-06-22 * 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; 1 bad staff, activity: lost, time: 18, timezone: UTC+08:00
+    expenses:writeoffs:lost                                                                      1 024.00 HKD  ; writeoff: lost wallet
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -24.00 HKD = 0.00 HKD
     assets:special:vouchers:Sino United Publishing                                              -1 000.00 HKD = 0.00 HKD
-    expenses:lost                                                                                              ; lost: wallet
 
 2024-06-22 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 18:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD

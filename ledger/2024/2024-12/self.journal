@@ -478,7 +478,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:transport:trains:high-speed     -204.50 CNY
 
 2024-12-31 * adjustment  ; activity: expiration, time: 23:59:59, timezone: UTC+08:00
-    expenses:expiration                                             8 676.00 _PT/C
+    expenses:writeoffs:expired                                      8 676.00 _PT/C  ; writeoff: expired
     assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8    -8 676.00 _PT/C = 0.00 _PT/C
 
 2024-12-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00

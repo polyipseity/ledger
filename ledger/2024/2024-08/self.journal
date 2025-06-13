@@ -148,8 +148,8 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai
 
 2024-08-06 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; mysterious, activity: lost, time: 21:50, timezone: UTC+08:00
+    expenses:writeoffs:lost                                                                        22.00 HKD  ; writeoff: lost assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9
     assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9      -22.00 HKD = 0.00 HKD
-    expenses:lost                                                                                             ; lost: assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9
 
 2024-08-06 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
