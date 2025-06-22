@@ -227,6 +227,18 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 9.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.30 HKD
 
+2025-06-18 (500270, 000-67200A, C2/A) Yakiniku Like!!  ; activity: eating, duration: PT1H9M55S, eating: lunch, time: 12:06:23, timezone: UTC+08:00
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f       78.00 HKD  ; food_and_drink: 牛五花&豬腩200 g, food_and_drink: 牛肉蘿蔔湯, food_and_drink: 迷你沙津
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f       13.00 HKD  ; food_and_drink: 紫菜飯150 g + 温泉蛋
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f        9.10 HKD  ; food_and_drink: 10% service charge
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f     -100.10 HKD
+
+2025-06-18 (319216, 889500, 000-67200B, C2/B) Yakiniku Like!!  ; activity: eating, duration: PT1H10M47S, eating: lunch, time: 12:06:23, timezone: UTC+08:00
+    expenses:food and drinks:dining                                  116.00 HKD  ; food_and_drink: 三部合奏300 g, food_and_drink: 和風湯, food_and_drink: 泡菜
+    expenses:food and drinks:dining                                   11.00 HKD  ; food_and_drink: 炙燒芝士咖啡飯300 g
+    expenses:food and drinks:fees                                     12.70 HKD  ; food_and_drink: 10% service charge
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -139.70 HKD
+
 2025-06-18 (C6I80063907, FRN20250618PAYD0102559380710, OCTOPUS038084565301286497) self  ; activity: transfer, time: 12:20, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
@@ -255,7 +267,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-06-21 (5873AD/5805, #347) McDonald's  ; activity: eating, eating: dinner, time: 19:58:30, timezone: UTC+08:00
+2025-06-21 (5873AD/5805, 347) McDonald's  ; activity: eating, eating: dinner, time: 19:58:30, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot coffee, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 

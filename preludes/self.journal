@@ -104,6 +104,7 @@ account equity:conversions:HKD-USD:USD                                          
 account equity:friends                                                                            ; type: E
 account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       ; type: E
 account equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                       ; type: E
+account equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                                       ; type: E
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
 account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       ; type: E
 account equity:kins                                                                               ; type: E
@@ -276,6 +277,7 @@ payee 51b339c5-b778-463d-8070-9c18ff6d88c0
 payee 527dd917-f0b0-4b21-a9fa-3442f50ef719
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
 payee 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6
+payee 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f
 payee 5e758af5-23c0-4038-b161-06757132e875
 payee 6fb019f7-d2fd-49a8-8a7f-11fa413aa072
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
