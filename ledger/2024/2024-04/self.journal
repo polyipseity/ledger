@@ -526,7 +526,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 煙肉焗薯, food_and_drink: 酸忌廉, food_and_drink: 青菜沙律
 
-2024-04-24 (HD12442408728087, STRIPE DDAmgB8Kj, po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD12442408728087 24Apr, activity: transfer, timezone: UTC+08:00
+2024-04-24 (HD12442408728087, STRIPE DDAmgB8Kj, po_1P8bUKBMoBY3wEtcW5W7OIwG) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, timezone: UTC+08:00
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        -180.28 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 

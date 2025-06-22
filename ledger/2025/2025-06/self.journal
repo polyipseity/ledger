@@ -135,7 +135,7 @@ include ../../../preludes/self.journal
     equity:conversions:HKD-USD:HKD                                  -41.98 HKD
     revenues:donations:Buy Me a Coffee:polyipseity                   -5.46 USD
 
-2025-06-09 (HD12560986829284, STRIPE zRG3sPwC3, po_1RX2h6BMoBY3wEtcx2JELePC) Stripe  ; STRIPE PAYMENTS EUROPE, LIMTIED HD124B0178334323 1Nov, activity: transfer, time: 15:07:25, timezone: UTC+08:00
+2025-06-09 (HD12560986829284, STRIPE zRG3sPwC3, po_1RX2h6BMoBY3wEtcx2JELePC) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, time: 15:07:25, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       36.05 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -36.05 HKD = 36.07 HKD
 
@@ -210,6 +210,10 @@ include ../../../preludes/self.journal
 2025-06-16 (41143401. 19) Cafe 100%  ; activity: eating, duration: PT33M57S, eating: breakfast, time: 11:28:03, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-16 (HD12561605913238, STRIPE ree9bRma3, po_1RZa1xBMoBY3wEtczwezQRtD) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, time: 15:20:21, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       36.07 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -36.07 HKD = 0.00 HKD
 
 2025-06-18 (41143915. 91) Cafe 100%  ; activity: eating, duration: PT25M22S, eating: breakfast, time: 10:23:38, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
