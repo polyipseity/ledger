@@ -19,7 +19,6 @@ include ../../../preludes/self.journal
 2025-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
 

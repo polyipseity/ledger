@@ -5,7 +5,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                                                      1 267.50 HKD = 1 267.50 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
-    assets:accumulated depreciation                                                               -4 051.00 HKD = -4 051.00 HKD
+    assets:accumulated depreciation                                                               -2 675.00 HKD = -2 675.00 HKD
     assets:accumulated depreciation                                                               -3 333.33 KRW = -3 333.33 KRW
     assets:deferred expenses:education:tuition:universities                                       21 050.00 HKD = 21 050.00 HKD
     assets:deferred expenses:services:clouds:Apple                                                     8.10 HKD = 8.10 HKD
@@ -16,7 +16,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      139.10 HKD = 139.10 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 40.10 HKD = 40.10 HKD
     assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
-    assets:objects:consumer electronics                                                            8 676.00 HKD = 8 676.00 HKD
+    assets:objects:consumer electronics                                                            6 587.00 HKD = 6 587.00 HKD
     assets:objects:tools                                                                           4 000.00 KRW = 4 000.00 KRW
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                               485.88 HKD = 485.88 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
@@ -766,7 +766,6 @@ include ../../../preludes/self.journal
 2025-04-30 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
-    assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation     -333.33 KRW  ; item: Leopold wire keycap remover
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
@@ -781,7 +780,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25           -1 200.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
     assets:accrued revenues:rewards:competitions                                           -3 500.00 HKD = 0.00 HKD
-    assets:accumulated depreciation                                                         4 236.25 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                         2 774.25 HKD = 0.00 HKD
     assets:accumulated depreciation                                                         3 666.66 KRW = 0.00 KRW
     assets:deferred expenses:education:tuition:universities                               -21 050.00 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Apple                                             -8.10 HKD = 0.00 HKD
@@ -792,7 +791,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                              -131.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -164.50 HKD = 0.00 HKD
     assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
-    assets:objects:consumer electronics                                                    -8 676.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                    -6 587.00 HKD = 0.00 HKD
     assets:objects:tools                                                                   -4 000.00 KRW = 0.00 KRW
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                       -549.26 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD
