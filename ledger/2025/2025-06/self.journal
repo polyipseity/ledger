@@ -199,6 +199,12 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
+2025-06-13 (FRN20250613PAYC0302548507613, HD12561398469065) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 09:56:09, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     1 235.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                   61.75 HKD
+    assets:accrued revenues:incomes:education                        -1 235.00 HKD = 0.00 HKD
+    revenues:incomes:education                                          -61.75 HKD
+
 2025-06-14 (000-919972, 16) Saizeriya  ; activity: eating, duration: PT21M24S, eating: dinner, time: 21:20:13, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: pizza "MARGHERITA"
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
