@@ -715,7 +715,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-05-28 (58C7BF/1717, #405, #43) McDonald's  ; activity: eating, eating: dinner, time: 18:29:02, timezone: UTC+08:00
+2025-05-28 (58C7BF/1717, 405, 43) McDonald's  ; activity: eating, eating: dinner, time: 18:29:02, timezone: UTC+08:00
     expenses:food and drinks:dining                                         39.90 HKD  ; food_and_drink: McCafe ice coconut medium latte, food_and_drink: honey BBQ seasoning, food_and_drink: large fries, food_and_drink: sausage egg muffin, food_and_drink: sausage egg muffin meal with ice coconut medium latte + large fries
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.90 HKD
 

@@ -55,7 +55,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2024-01-02 (#3429) Deliveroo  ; activity: eating, eating: lunch, time: 13:11, timezone: UTC+08:00
+2024-01-02 (3429) Deliveroo  ; activity: eating, eating: lunch, time: 13:11, timezone: UTC+08:00
     liabilities:friends:5e758af5-23c0-4038-b161-06757132e875     -100.00 HKD
     expenses:food and drinks:dining                                           ; food_and_drink: broccoli, food_and_drink: fried shrimp
 

@@ -267,7 +267,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-06-21 (5873AD/5805, 347) McDonald's  ; activity: eating, eating: dinner, time: 19:58:30, timezone: UTC+08:00
+2025-06-21 (5873AD/5805, 347, 42) McDonald's  ; activity: eating, eating: dinner, time: 19:58:30, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot coffee, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 

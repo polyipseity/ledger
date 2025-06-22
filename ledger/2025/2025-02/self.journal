@@ -132,7 +132,7 @@ include ../../../preludes/self.journal
     expenses:equipment                                                      12.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.00 HKD
 
-2025-02-04 (231727, #089-107559, D3) Yakiniku Like!!  ; activity: eating, eating: dinner, time: 18:52:30, timezone: UTC+08:00
+2025-02-04 (231727, 089-107559, D3) Yakiniku Like!!  ; activity: eating, eating: dinner, time: 18:52:30, timezone: UTC+08:00
     expenses:food and drinks:dining                                   74.00 HKD  ; food_and_drink: bonito flakes and seaweed rice 300g + half-boiled egg ($22), food_and_drink: karubi set 100g, food_and_drink: kimchi
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -74.00 HKD
 
@@ -597,7 +597,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 3.10 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
 
-2025-02-20 (367929, #089-110877, B5) Yakiniku Like!!  ; activity: eating, eating: dinner, time: 20:36:02, timezone: UTC+08:00
+2025-02-20 (367929, 089-110877, B5) Yakiniku Like!!  ; activity: eating, eating: dinner, time: 20:36:02, timezone: UTC+08:00
     expenses:food and drinks:dining                                   70.00 HKD  ; food_and_drink: bonito flakes and seaweed rice 300g + half-boiled egg ($22), food_and_drink: karubi & pork belly set 100g, food_and_drink: kimchi
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -70.00 HKD
 
