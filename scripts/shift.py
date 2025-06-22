@@ -1,3 +1,4 @@
+from calendar import monthrange
 from contextlib import suppress
 from datetime import datetime
 from anyio import Path as _Path
@@ -79,7 +80,17 @@ async def main(args: Arguments):
     journals = tuple(
         journal
         for journal in journals
-        if filter_datetime(datetime.fromisoformat(f"{journal.parent.name}-01"))
+        if to_filter(to_date := datetime.fromisoformat(f"{journal.parent.name}-01"))
+        and from_filter(
+            to_date.replace(
+                day=monthrange(to_date.year, to_date.month)[1],
+                hour=24 - 1,
+                minute=60 - 1,
+                second=60 - 1,
+                microsecond=1000000 - 1,
+                fold=1,
+            )
+        )
     )
     _info(f'journals: {", ".join(map(str, journals))}')
 
