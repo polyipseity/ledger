@@ -49,7 +49,7 @@ include ../../../preludes/self.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                      -1 200.00 HKD = -1 200.00 HKD
     equity:opening/closing balances
 
-2025-06-01 * (pi_3RV1xCBMoBY3wEtc3Es5rEQL) **********************@********.net  ; polyipseity (@polyipseity) - Support, activity: donation, time: 10:48:56, timezone: UTC+08:00
+2025-06-01 * (1306-4691, pi_3RV1xCBMoBY3wEtc3Es5rEQL) **********************@********.net  ; polyipseity (@polyipseity) - Support, activity: donation, time: 10:48:56, timezone: UTC+08:00
     equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.68426
     expenses:fees:Buy Me a Coffee                                     1.92 HKD
     expenses:fees:Stripe                                              3.99 HKD
@@ -127,7 +127,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
-2025-06-08 ! (pi_3RXjPmBMoBY3wEtc1iJZK0uh) ************@***********.org  ; polyipseity (@polyipseity) - Support, activity: donation, time: 14:16:57, timezone: UTC+08:00
+2025-06-08 * (1219-6942, pi_3RXjPmBMoBY3wEtc1iJZK0uh) ************@***********.org  ; polyipseity (@polyipseity) - Support, activity: donation, time: 14:16:57, timezone: UTC+08:00
     equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.6895
     expenses:fees:Buy Me a Coffee                                     1.92 HKD
     expenses:fees:Stripe                                              3.99 HKD

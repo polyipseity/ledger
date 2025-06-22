@@ -76,7 +76,7 @@ include ../../../preludes/self.journal
     assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236      -34.50 HKD
     expenses:food and drinks:dining                                               ; food_and_drink: BBQ pork · red sausage with rice, food_and_drink: iced orange juice
 
-2023-09-07 * (pi_3NncuMBMoBY3wEtc20j6VPM8) ******@***********.com.au  ; One time support for polyipseity, activity: donation, time: 15:45:48, timezone: UTC+08:00
+2023-09-07 * (1997-2673, pi_3NncuMBMoBY3wEtc20j6VPM8) ******@***********.com.au  ; One time support for polyipseity, activity: donation, time: 15:45:48, timezone: UTC+08:00
     revenues:donations:Buy Me a Coffee:polyipseity                   -5.45 USD
     equity:conversions:HKD-USD:USD                                    5.45 USD  ; rate: 7.68565
     equity:conversions:HKD-USD:HKD                                  -41.89 HKD
