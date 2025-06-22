@@ -247,6 +247,10 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 9.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.30 HKD
 
+2025-06-18 (R673257813, 102622896788) Apple  ; activity: repair, time: 11:42, timezone: UTC+08:00
+    assets:objects:consumer electronics      348.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow, repair: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:cash                             -348.00 HKD
+
 2025-06-20 (41144479. 12) Cafe 100%  ; activity: eating, duration: PT3718S, eating: breakfast, time: 11:02:42, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
@@ -282,7 +286,7 @@ include ../../../preludes/self.journal
 
 2025-06-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
-    assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger

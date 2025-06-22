@@ -635,7 +635,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.90 HKD
 
 2024-11-20 * (R648353481, 102464828774) Apple  ; activity: repair, time: 16:10:39, timezone: UTC+08:00
-    assets:deferred expenses:repairs        0.00 HKD  ; repair: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:deferred assets:objects:consumer electronics        0.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
 
 2024-11-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:25, timezone: UTC+08:00
     expenses:transport:buses                                                 8.90 HKD
@@ -768,9 +768,9 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 8.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.90 HKD
 
-2024-11-23 (R648353481) Apple  ; activity: adjust, time: 19:00:51, timezone: UTC+08:00
-    expenses:repairs                        0.00 HKD
-    assets:deferred expenses:repairs        0.00 HKD
+2024-11-23 (R648353481, 102464828774) Apple  ; activity: adjust, time: 19:00:51, timezone: UTC+08:00
+    assets:objects:consumer electronics                        0.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow, repair: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:deferred assets:objects:consumer electronics        0.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
 
 2024-11-23 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:09, timezone: UTC+08:00
     expenses:transport:buses                                                 8.90 HKD
