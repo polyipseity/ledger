@@ -19,7 +19,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -200.00 HKD
     assets:cash
 
-2023-05-03 7-Eleven  ; activity: add value, time: 13:49, timezone: UTC+08:00
+2023-05-03 7-Eleven  ; activity: transfer, time: 13:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
@@ -80,7 +80,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-05-12 7-Eleven  ; activity: add value, time: 08:44, timezone: UTC+08:00
+2023-05-12 7-Eleven  ; activity: transfer, time: 08:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -148,7 +148,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring                    -160.00 HKD
     assets:accrued revenues:incomes:tutoring
 
-2023-05-22 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: add value, time: 17:37, timezone: UTC+08:00
+2023-05-22 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transfer, time: 17:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -172,7 +172,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-25 7-Eleven  ; activity: add value, time: 18:56, timezone: UTC+08:00
+2023-05-25 7-Eleven  ; activity: transfer, time: 18:56, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:cash
 
@@ -204,7 +204,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         50.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-05-29 7-Eleven  ; activity: add value, time: 15:05, timezone: UTC+08:00
+2023-05-29 7-Eleven  ; activity: transfer, time: 15:05, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 

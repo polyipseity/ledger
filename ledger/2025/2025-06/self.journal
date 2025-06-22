@@ -115,7 +115,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      600.00 HKD
     assets:cash                                                       -600.00 HKD
 
-2025-06-05 Circle K  ; activity: add value, time: 17:14, timezone: UTC+08:00
+2025-06-05 Circle K  ; activity: transfer, time: 17:14, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD
 
@@ -170,7 +170,7 @@ include ../../../preludes/self.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4               40.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
-2025-06-12 7-Eleven  ; activity: add value, time: 11:09, timezone: UTC+08:00
+2025-06-12 7-Eleven  ; activity: transfer, time: 11:09, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD
 
@@ -219,7 +219,7 @@ include ../../../preludes/self.journal
     assets:cash                                                        400.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -400.00 HKD
 
-2025-06-18 7-Eleven  ; activity: add value, time: 10:57, timezone: UTC+08:00
+2025-06-18 7-Eleven  ; activity: transfer, time: 10:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD
 

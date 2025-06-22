@@ -24,7 +24,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         39.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-03 7-Eleven  ; activity: add value, time: 12:44, timezone: UTC+08:00
+2023-06-03 7-Eleven  ; activity: transfer, time: 12:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -32,7 +32,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         38.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-04 7-Eleven  ; activity: add value, time: 13:20, timezone: UTC+08:00
+2023-06-04 7-Eleven  ; activity: transfer, time: 13:20, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
@@ -96,7 +96,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         54.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-15 7-Eleven  ; activity: add value, time: 13:57, timezone: UTC+08:00
+2023-06-15 7-Eleven  ; activity: transfer, time: 13:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -128,7 +128,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-26 7-Eleven  ; activity: add value, time: 12:32, timezone: UTC+08:00
+2023-06-26 7-Eleven  ; activity: transfer, time: 12:32, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 

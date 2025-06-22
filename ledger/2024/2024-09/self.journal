@@ -371,7 +371,7 @@ include ../../../preludes/self.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.10 HKD = -8.10 HKD
     expenses:transport:buses
 
-2024-09-10 Circle K  ; activity: add value, time: 21:57, timezone: UTC+08:00
+2024-09-10 Circle K  ; activity: transfer, time: 21:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
@@ -805,7 +805,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         55.00 HKD  ; food_and_drink: 厚切焗豬扒飯（餐） + 可樂12OZ
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -117.00 HKD
 
-2024-09-30 Circle K  ; activity: add value, time: 18:29, timezone: UTC+08:00
+2024-09-30 Circle K  ; activity: transfer, time: 18:29, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 

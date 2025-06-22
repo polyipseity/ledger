@@ -433,7 +433,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       16.25 HKD
     revenues:incomes:education                     -16.25 HKD
 
-2025-04-22 7-Eleven  ; activity: add value, time: 08:40, timezone: UTC+08:00
+2025-04-22 7-Eleven  ; activity: transfer, time: 08:40, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      400.00 HKD
     assets:cash                                                           -400.00 HKD
 

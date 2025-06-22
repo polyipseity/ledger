@@ -25,7 +25,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         42.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-04 Circle K  ; activity: add value, time: 13:57, timezone: UTC+08:00
+2023-07-04 Circle K  ; activity: transfer, time: 13:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
@@ -45,7 +45,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                19.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-09 7-Eleven  ; activity: add value, time: 19:29, timezone: UTC+08:00
+2023-07-09 7-Eleven  ; activity: transfer, time: 19:29, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -61,11 +61,11 @@ include ../../../preludes/self.journal
     expenses:fees:Stripe                                              2.61 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc        4.68 HKD
 
-2023-07-13 Circle K  ; activity: add value, time: 11:56, timezone: UTC+08:00
+2023-07-13 Circle K  ; activity: transfer, time: 11:56, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash
 
-2023-07-14 7-Eleven  ; activity: add value, time: 18:27, timezone: UTC+08:00
+2023-07-14 7-Eleven  ; activity: transfer, time: 18:27, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash
 
@@ -150,7 +150,7 @@ include ../../../preludes/self.journal
     expenses:transport:minibuses                                             7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-07-28 7-Eleven  ; activity: add value, time: 12:50, timezone: UTC+08:00
+2023-07-28 7-Eleven  ; activity: transfer, time: 12:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      300.00 HKD
     assets:cash
 

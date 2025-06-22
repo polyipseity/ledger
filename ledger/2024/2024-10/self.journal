@@ -442,7 +442,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: chicken soup, food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles, food_and_drink: （茶）五香肉丁半焗流心蛋即食麵
 
-2024-10-21 7-Eleven  ; activity: add value, time: 10:31, timezone: UTC+08:00
+2024-10-21 7-Eleven  ; activity: transfer, time: 10:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD
 
@@ -495,7 +495,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Lipton milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
 
-2024-10-22 Circle K  ; activity: add value, time: 14:16, timezone: UTC+08:00
+2024-10-22 Circle K  ; activity: transfer, time: 14:16, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash                                                           -200.00 HKD
 
@@ -565,7 +565,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 招牌鍋貼 ×10, food_and_drink: 招貼（1號餐）, food_and_drink: 珍珠奶茶 + 去冰 + 凍
 
-2024-10-24 Circle K  ; activity: add value, time: 21:23, timezone: UTC+08:00
+2024-10-24 Circle K  ; activity: transfer, time: 21:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     assets:cash                                                           -100.00 HKD
 

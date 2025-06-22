@@ -80,7 +80,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         29.20 HKD  ; food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti, food_and_drink: mini spagetti bolognese cream soup egg salad mini croissant
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
 
-2025-02-03 7aca1716-7bc2-4d6d-96ed-78785041c0fa  ; activity: add value, time: 17:57, timezone: UTC+08:00
+2025-02-03 7aca1716-7bc2-4d6d-96ed-78785041c0fa  ; activity: transfer, time: 17:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
     liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa              -100.00 HKD = -100.00 HKD
 
@@ -585,7 +585,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       65.00 HKD
     revenues:incomes:education                     -65.00 HKD
 
-2025-02-20 7-Eleven  ; activity: add value, time: 14:15, timezone: UTC+08:00
+2025-02-20 7-Eleven  ; activity: transfer, time: 14:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      500.00 HKD
     assets:cash                                                           -500.00 HKD
 
@@ -824,7 +824,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         26.50 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: 叉燒飯配飲品 + less rice
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -26.50 HKD
 
-2025-02-28 7-Eleven  ; activity: add value, time: 19:26, timezone: UTC+08:00
+2025-02-28 7-Eleven  ; activity: transfer, time: 19:26, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       50.00 HKD
     assets:cash                                                            -50.00 HKD
 
