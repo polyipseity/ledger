@@ -265,7 +265,7 @@ include ../../../preludes/self.journal
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978        2.00 HKD
     assets:cash                                                     -2.00 HKD
 
-2025-06-20 (41144479. 12) Cafe 100%  ; activity: eating, duration: PT3718S, eating: breakfast, time: 11:02:42, timezone: UTC+08:00
+2025-06-20 (41144479, 12) Cafe 100%  ; activity: eating, duration: PT37M18S, eating: breakfast, time: 11:02:42, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
@@ -288,6 +288,48 @@ include ../../../preludes/self.journal
 2025-06-21 (5873AD/5805, 347, 42) McDonald's  ; activity: eating, eating: dinner, time: 19:58:30, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: hot coffee, food_and_drink: medium fries, food_and_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-06-22 * (250622-000069, 041238, V2) 紅葉茶屋 (Momiji-Chaya)  ; activity: eating, duration: PT2H4M10S, eating: dinner, time: 18:03:55, timezone: UTC+08:00
+    expenses:food and drinks:dining                                92.00 HKD  ; food_and_drink: 溫泉蛋卡邦尼鳥冬
+    expenses:food and drinks:fees                                   9.20 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                 -11.00 HKD  ; food_and_drink: 住戶尊享優惠
+    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -90.20 HKD = -90.20 HKD
+
+2025-06-22 * (1029437) 松記糖水店 (Chung Kee Restaurant)  ; activity: eating, duration: PT2H, eating: dinner, time: 20, timezone: UTC+08:00
+    expenses:food and drinks:dining                                31.00 HKD  ; food_and_drink: 芒果紫米露
+    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -31.00 HKD = -121.20 HKD
+
+2025-06-23 (41145368, 16) Cafe 100%  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 09:17:48, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-23 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 14:13, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2025-06-23 (01JYE68XNQC657JZQ9KWKES23P, E0146, 58BD21/0906) 同樂素食  ; activity: eating, time: 18:45:19, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         47.00 HKD  ; food_and_drink: 三餸飯送湯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -47.00 HKD
+
+2025-06-23 (C6N84266288, FRN20250623PAYD0102571465664, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:35, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-06-23 self  ; activity: transfer, time: 19:35, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-06-23 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:09, timezone: UTC+08:00
+    expenses:transport:trains                                                4.60 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.60 HKD
+
+2025-06-25 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 10:58:23, timezone: UTC+08:00
+    assets:accrued revenues:education       25.00 HKD  ; valid: ?, voucher: HK$100 PARKnSHOP voucher
+    revenues:education                     -25.00 HKD
+
+2025-06-25 (C6P85615557, N62563624017, HD12562530100595) dfde318d-9ad1-4f25-8c57-2763ebfe1e3e  ; activity: repayment, time: 15:49:34, timezone: UTC+08:00
+    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e           121.20 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -121.20 HKD
 
 2025-06-25 ! (44880360525, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
