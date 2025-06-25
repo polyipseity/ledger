@@ -163,9 +163,9 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       670 _PT/B = 48 135 _PT/B
     revenues:activities:walking
 
-2024-01-13 (COUPON#0009#794) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 08:11:46, timezone: UTC+08:00, voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 000. _PT/B
-    revenues:rewards
+2024-01-13 (COUPON#0009#794) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 08:11:46, timezone: UTC+08:00
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0     3 000. _PT/B  ; voucher: 96f69720-5471-4e88-bebe-3db7a77a086c (Welcome Coupon! Claim this coupon for free 3000 points!)
+    revenues:rewards                                                                            -3 000. _PT/B
 
 2024-01-13 GREEN@self-service  ; activity: recycle, time: 23:30:15, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
     revenues:recycables:food loss and waste                                  -1.000 _FLW

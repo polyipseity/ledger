@@ -76,11 +76,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000. _PT/B
+2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00
     equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
+    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e         20.00 HKD  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+    equity:external:self.alternatives                               -50 000. _PT/B
     equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-11-06 (K1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59:26, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
@@ -163,9 +163,9 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:trains
 
-2023-11-13 (YXT02546248695) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 11:14:40, timezone: UTC+08:00, voucher: Starbucks HK/MOP $50 Gift Certificate
-    assets:special:vouchers:Starbucks       50.00 HKD  ; valid: 2023-11-13T00:00:00+08:00/2024-11-30T23:59:59+08:00
-    revenues:education
+2023-11-13 (YXT02546248695) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 11:14:40, timezone: UTC+08:00
+    assets:special:vouchers:Starbucks       50.00 HKD  ; valid: 2023-11-13T00:00:00+08:00/2024-11-30T23:59:59+08:00, voucher: Starbucks HK/MOP $50 Gift Certificate
+    revenues:education                     -50.00 HKD
 
 2023-11-13 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 12:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
@@ -402,11 +402,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.70 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fried eggs, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: pickled cabbage and shredded pork with vermicelli in soup
 
-2023-11-29 (COUPON#0001#94) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:42:45, timezone: UTC+08:00, voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000. _PT/B
+2023-11-29 (COUPON#0001#94) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:42:45, timezone: UTC+08:00
     equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
+    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e         20.00 HKD  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+    equity:external:self.alternatives                               -50 000. _PT/B
     equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e
 
 2023-11-29 (488) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: afternoon tea, time: 15:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         32.00 HKD  ; food_and_drink: ham & egg & cheese tortillas, food_and_drink: hot coffee

@@ -247,10 +247,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 09:58:20, timezone: UTC+08:00, voucher: HKD 40 meal coupon
-    assets:deferred expenses:activities     -100.00 HKD = 0.00 HKD
+2024-09-07 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 09:58:20, timezone: UTC+08:00
     assets:cash                              100.00 HKD
-    assets:special:vouchers                   50.00 HKD  ; valid: 2024-09-07T00:00:00+08:00/2024-09-07T23:59:59+08:00
+    assets:special:vouchers                   50.00 HKD  ; valid: 2024-09-07T00:00:00+08:00/2024-09-07T23:59:59+08:00, voucher: HKD 40 meal coupon
+    assets:deferred expenses:activities     -100.00 HKD = 0.00 HKD
     revenues:education                       -50.00 HKD
 
 2024-09-07 (T1#142) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 13:30:15, timezone: UTC+08:00

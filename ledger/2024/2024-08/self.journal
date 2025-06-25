@@ -585,9 +585,9 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-30 (0269) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 14, timezone: UTC+08:00, voucher: HKD 40 meal coupon
-    assets:special:vouchers       40.00 HKD  ; valid: 2024-08-30T14:00:00+08:00/2024-08-30T23:59:59+08:00
-    revenues:education
+2024-08-30 (0269) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: activity, time: 14, timezone: UTC+08:00
+    assets:special:vouchers       40.00 HKD  ; valid: 2024-08-30T14:00:00+08:00/2024-08-30T23:59:59+08:00, voucher: HKD 40 meal coupon
+    revenues:education           -40.00 HKD
 
 2024-08-30 (267935) 4d3562ae-b4d4-4444-b428-33f0aced1462  ; activity: eating, eating: lunch, time: 14:09:03, timezone: UTC+08:00
     expenses:food and drinks:dining                                         52.00 HKD  ; food_and_drink: coke, food_and_drink: miso & mushroom linguine

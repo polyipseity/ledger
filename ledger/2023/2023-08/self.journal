@@ -240,9 +240,9 @@ include ../../../preludes/self.journal
     expenses:transport:minibuses                                             7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 09:45, timezone: UTC+08:00, voucher: consumption
-    assets:special:vouchers       35.00 HKD  ; valid: 2023-08-28T00:00:00+08:00/2023-08-28:59:59+08:00
-    revenues:special
+2023-08-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 09:45, timezone: UTC+08:00
+    assets:special:vouchers       35.00 HKD  ; valid: 2023-08-28T00:00:00+08:00/2023-08-28:59:59+08:00, voucher: consumption
+    revenues:special             -35.00 HKD
 
 2023-08-28 Cafe 100%  ; activity: eating, eating: lunch, time: 13:55:37, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD  ; food_and_drink: 三色芝士焗肉醬長通粉
