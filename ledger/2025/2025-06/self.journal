@@ -323,29 +323,116 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.60 HKD
 
-2025-06-25 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 10:58:23, timezone: UTC+08:00
-    assets:accrued revenues:education       25.00 HKD  ; valid: ?, voucher: HK$100 PARKnSHOP voucher
-    revenues:education                     -25.00 HKD
+2025-06-25 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 10:58:23, timezone: UTC+08:00
+    assets:accrued revenues:education      100.00 HKD  ; voucher: HK$50 PARKnSHOP voucher ×2
+    revenues:education                    -100.00 HKD
 
 2025-06-25 (C6P85615557, N62563624017, HD12562530100595) dfde318d-9ad1-4f25-8c57-2763ebfe1e3e  ; activity: repayment, time: 15:49:34, timezone: UTC+08:00
     liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e           121.20 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -121.20 HKD
 
-2025-06-25 ! (44880360525, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2025-06-25 (41146076, 14) Cafe 100%  ; activity: eating, duration: PT28M54S, eating: afternoon tea, time: 16:54:06, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         42.00 HKD  ; food_and_drink: baked sliced pork & tomato with rice (mini), food_and_drink: hot coffee + more milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
+
+2025-06-25 * (44880360525, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
     assets:deferred expenses:services:internet         -148.70 HKD = 0.00 HKD
     liabilities:accrued expenses:services:internet       -0.30 HKD = -0.30 HKD
 
-2025-06-30 ! (MKB8F06LGD) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2025-06-26 (41146266, 15) Cafe 100%  ; activity: eating, duration: PT52M43S, eating: breakfast, time: 11:24:17, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-26 bank  ; CREDIT INTEREST, activity: interests, time: 23:59:59, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       10.97 HKD
+    revenues:interests                                                 -10.97 HKD
+
+2025-06-27 (41146564, 13) Cafe 100%  ; activity: eating, duration: PT43M50S, eating: breakfast, time: 11:28:10, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:14, timezone: UTC+08:00
+    expenses:transport:buses                                                12.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.10 HKD
+
+2025-06-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:38, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+
+2025-06-27 (8094077017) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:05, timezone: UTC+08:00
+    assets:special:vouchers:ParknShop       50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077017) HK$50 PARKnSHOP voucher
+    assets:accrued revenues:education      -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077017) HK$50 PARKnSHOP voucher
+
+2025-06-27 (8094077018) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:05, timezone: UTC+08:00
+    assets:special:vouchers:ParknShop       50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077018) HK$50 PARKnSHOP voucher
+    assets:accrued revenues:education      -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077018) HK$50 PARKnSHOP voucher
+
+2025-06-27 (11/118807) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:20:21, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-06-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:14, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+
+2025-06-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:44, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+
+2025-06-28 (41146896, 14) Cafe 100%  ; activity: eating, duration: PT34M23S, eating: breakfast, time: 11:28:37, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-28 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 20, timezone: UTC+08:00
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978      100.00 HKD
+    assets:special:vouchers:ParknShop                             -100.00 HKD = 0.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: HK$50 PARKnSHOP voucher ×2
+
+2025-06-29 (C6T88720527, FRN20250629PAYD0102584577590, OCTOPUS038084565301286497) self  ; activity: transfer, time: 09:38, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-06-29 self  ; activity: transfer, time: 09:38, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-06-29 (41147143, 11) Cafe 100%  ; activity: eating, duration: PT35M2S, eating: breakfast, time: 09:43:58, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: （早）茄香肉碎濃湯通粉 + instant noodles
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-06-29 Circle K  ; activity: eating, eating: snacks, time: 11:58, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                          8.50 HKD  ; food_and_drink: Orange Flavour Ice Bar with Vanilla Flavour Ice Cream Filling
+    assets:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                8.50 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -17.00 HKD
+
+2025-06-29 968eeeeb-a2b6-4c7c-a789-e315c628d24c  ; activity: repayment, time: 12:10, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                  1.50 HKD  ; food_and_drink: (sharing)
+    assets:cash                                                      7.00 HKD
+    assets:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c       -8.50 HKD = 0.00 HKD
+
+2025-06-29 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 12:30, timezone: UTC+08:00
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978        7.00 HKD
+    assets:cash                                                     -7.00 HKD
+
+2025-06-29 (159647, MKB8HS0GTG, 214973267785) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
+
+2025-06-30 (41147397, 16) Cafe 100%  ; activity: eating, duration: PT26M11S, eating: breakfast, time: 07:35:49, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk, food_and_drink: toast
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-06-30 * (MKB8F06LGD) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
 
-2025-06-30 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2025-06-30 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
 
-2025-06-30 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+2025-06-30 * adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
     assets:deferred expenses:services:support      -20.79 HKD
