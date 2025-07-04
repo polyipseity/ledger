@@ -111,7 +111,7 @@ include ../../../preludes/self.journal
     assets:cash                                                     75.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -75.00 HKD
 
-2025-06-05 (57C0) self  ; QDM CASH DEP (12FEB25), activity: transfer, time: 17:13, timezone: UTC+08:00
+2025-06-05 (57C0) self  ; QDM CASH DEP (05JUN25), activity: transfer, time: 17:13, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      600.00 HKD
     assets:cash                                                       -600.00 HKD
 
