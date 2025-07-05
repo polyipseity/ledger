@@ -210,6 +210,7 @@ account liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                
 account liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e                                  ; type: L
 account liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                  ; type: L
 account liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1                                  ; type: L
+account liabilities:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                                  ; type: L
 account revenues:donations                                                                        ; type: R
 account revenues:donations:Buy Me a Coffee                                                        ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                                            ; type: R
@@ -393,6 +394,7 @@ payee e81cf14c-79fc-4958-b694-1a2a2c0c9be1
 payee e82b2a1f-fa14-4739-bf0e-df7bd7e9c714
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee ef234023-8df0-4705-bb73-cd9b194a5b92
+payee ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa
 payee euro go go
 payee f34f8958-524c-416d-93b5-b2e35e68f08c
 payee f85da078-1fe9-42ae-b9d6-f2d47e62a19d
@@ -400,6 +402,7 @@ payee friends
 payee kins
 payee taxis
 payee 丸龜製麵
+payee 富華冰室 (Fu Wah Cafe)
 payee 小王牛肉麵
 payee 紅葉茶屋 (Momiji-Chaya)
 payee 岡山一番店拉麵
