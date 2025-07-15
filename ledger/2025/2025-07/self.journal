@@ -163,11 +163,11 @@ include ../../../preludes/self.journal
 
 2025-07-09 ! (196JUW, UO 618) HK Express  ; activity: transport, duration: PT3H35M, time: 07:15, timezone: UTC+08:00
     expenses:transport:airplanes                      600.00 HKD
-    assets:deferred expenses:transport:airplanes     -600.00 HKD  ; = 600.00 HKD
+    assets:deferred expenses:transport:airplanes     -600.00 HKD = 600.00 HKD
 
 2025-07-13 ! (196JUW, UO 679) HK Express  ; activity: transport, duration: PT3H50M, time: 20:45, timezone: UTC+09:00
     expenses:transport:airplanes                      600.00 HKD
-    assets:deferred expenses:transport:airplanes     -600.00 HKD  ; = 0.00 HKD
+    assets:deferred expenses:transport:airplanes     -600.00 HKD = 0.00 HKD
 
 2025-07-14 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 00:51, timezone: UTC+08:00
     expenses:transport:trains                                               73.00 HKD
