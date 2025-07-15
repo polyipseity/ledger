@@ -177,9 +177,9 @@ include ../../../preludes/self.journal
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093        -79.14 HKD
     equity:conversions:HKD-KRW:KRW                                   -13 500.00 KRW  ; rate: 0.0058622222
 
-2025-07-09 (20250709-0112-56-0081-19, 61638509) unknown  ; activity: transport, duration: PT2H15M, time: 14:30:00, timezone: UTC+09:00
-    expenses:transport:buses     73 500. KRW
-    equity:unknown              -73 500. KRW
+2025-07-09 (20250709-0112-56-0081-19, 61638509) Seoul Metropolitan Government  ; activity: transport, duration: PT2H15M, time: 14:30:00, timezone: UTC+09:00
+    expenses:transport:buses     73 500.00 KRW
+    revenues:subsidies          -73 500.00 KRW
 
 2025-07-09 ! (??????????, ????????) 7-Eleven  ; activity: eating, eating: snacks, time: 18, timezone: UTC+09:00
     expenses:food and drinks:snacks                                   1 800.00 KRW  ; food_and_drink: cup noodles with cheese
@@ -190,33 +190,23 @@ include ../../../preludes/self.journal
 
 2025-07-09 ! (4012795823, 157101) unknown  ; activity: eating, duration: PT1H18M8S, eating: dinner, time: 21:26, timezone: UTC+09:00
     expenses:food and drinks:dining                              15 500.00 KRW  ; food_and_drink: drinks, food_and_drink: fried chickens
-    equity:conversions:HKD-KRW:HKD                                   89.93 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766        -89.93 HKD
-    equity:conversions:HKD-KRW:KRW                              -15 500.00 KRW  ; rate: 0.0058019355
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -15 500.00 KRW
 
 2025-07-10 ! Seoul Metropolitan Government  ; activity: transport, duration: PT3D, time: 14, timezone: UTC+09:00
     expenses:transport:buses                                     1 870.00 KRW
-    equity:conversions:HKD-KRW:HKD                                  10.94 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7       -10.94 HKD
-    equity:conversions:HKD-KRW:KRW                              -1 870.00 KRW  ; rate: 0.0058502674
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 870.00 KRW
 
 2025-07-10 ! Seoul Metropolitan Subway  ; activity: transport, duration: PT3D, time: 14, timezone: UTC+09:00
-    expenses:transport:trains                                    7 480.00 KRW
-    equity:conversions:HKD-KRW:HKD                                  43.74 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7       -43.74 HKD
-    equity:conversions:HKD-KRW:KRW                              -7 480.00 KRW  ; rate: 0.0058475936
+    expenses:transport:trains                                   7 480.00 KRW
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7     -7 480. KRW
 
 2025-07-10 ! (20250710-01-0016, 20014729) Grill de Woowa  ; activity: eating, eating: dinner, time: 20:34:18, timezone: UTC+09:00
     expenses:food and drinks:dining                              31 425.00 KRW  ; food_and_drink: (unknown)
-    equity:conversions:HKD-KRW:HKD                                  183.77 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7       -183.77 HKD
-    equity:conversions:HKD-KRW:KRW                              -31 425.00 KRW  ; rate: 0.0058478918
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -31 425.00 KRW
 
 2025-07-11 ! (05893250711145200129, 00129, 52, 5229) No Brand Burger  ; activity: eating, eating: lunch, time: 14:42:10, timezone: UTC+09:00
     expenses:food and drinks:dining                              10 200.00 KRW  ; food_and_drink: French fries (L), food_and_drink: cheese burger, food_and_drink: cheese burger set, food_and_drink: cider (M)
-    equity:conversions:HKD-KRW:HKD                                   59.65 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766        -59.65 HKD
-    equity:conversions:HKD-KRW:KRW                              -10 200.00 KRW  ; rate: 0.0058480392
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -10 200.00 KRW
 
 2025-07-11 ! Airbnb  ; activity: consumption, duration: P2DT20H, time: 15, timezone: UTC+09:00
     expenses:accommodations                                       538.98 HKD
@@ -224,21 +214,15 @@ include ../../../preludes/self.journal
 
 2025-07-12 ! (20250712-01-0014, 13316455) Café de Nusi  ; activity: eating, eating: lunch, time: 13:08:05, timezone: UTC+09:00, very expensive ;(
     expenses:food and drinks:dining                              24 000.00 KRW  ; food_and_drink: (unknown)
-    equity:conversions:HKD-KRW:HKD                                  140.35 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766       -140.35 HKD
-    equity:conversions:HKD-KRW:KRW                              -24 000.00 KRW  ; rate: 0.0058479167
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -24 000.00 KRW
 
 2025-07-12 ! (22500971132130981, 47886940, #3918) Starbucks  ; activity: eating, eating: afternoon tea, time: 14:53:53, timezone: UTC+09:00
     expenses:food and drinks:dining                              8 100.00 KRW  ; food_and_drink: Chip and Chip Mocha Frappuccino; venti (20 fl oz)
-    equity:conversions:HKD-KRW:HKD                                  47.37 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766       -47.37 HKD
-    equity:conversions:HKD-KRW:KRW                              -8 100.00 KRW  ; rate: 0.0058481481
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -8 100.00 KRW
 
 2025-07-12 ! (????????-??-????, ????????) unknown  ; activity: eating, eating: dinner, time: 20, timezone: UTC+09:00
     expenses:food and drinks:dining                              39 900.00 KRW  ; food_and_drink: beef, food_and_drink: coke
-    equity:conversions:HKD-KRW:HKD                                  233.33 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7       -233.33 HKD
-    equity:conversions:HKD-KRW:KRW                              -39 900.00 KRW  ; rate: 0.0058478697
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -39 900.00 KRW
 
 2025-07-12 ! (??????????, ????????) 7-Eleven  ; activity: eating, eating: snacks, time: 22, timezone: UTC+09:00
     expenses:food and drinks:snacks                                   4 700.00 KRW  ; food_and_drink: Chocolate Creme Oreo Chocolate Sandwich Cookies ×3
@@ -248,9 +232,7 @@ include ../../../preludes/self.journal
 
 2025-07-13 ! (????????-??-????, ????????) Tokkijung Project  ; activity: eating, eating: lunch, time: 13, timezone: UTC+09:00
     expenses:food and drinks:dining                              19 800.00 KRW  ; food_and_drink: (unknown), food_and_drink: coke
-    equity:conversions:HKD-KRW:HKD                                  115.79 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766       -115.79 HKD
-    equity:conversions:HKD-KRW:KRW                              -19 800.00 KRW  ; rate: 0.0058479798
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -19 800.00 KRW
 
 2025-07-13 ! (54273, 85) KFC  ; activity: eating, eating: dinner, time: 18:42:26, timezone: UTC+09:00
     expenses:food and drinks:dining                                   10 900.00 KRW  ; food_and_drink: Zinger Super Meal
