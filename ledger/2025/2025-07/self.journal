@@ -165,6 +165,38 @@ include ../../../preludes/self.journal
     expenses:transport:airplanes                      600.00 HKD
     assets:deferred expenses:transport:airplanes     -600.00 HKD = 600.00 HKD
 
+2025-07-09 ! (9951852019, 700490) Peulleiting Incheongon  ; activity: eating, eating: lunch, time: 13:05:42, timezone: UTC+09:00
+    expenses:food and drinks:dining                                   14 500.00 KRW  ; food_and_drink: spicy grilled pork
+    equity:conversions:HKD-KRW:HKD                                        85.01 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093        -85.01 HKD
+    equity:conversions:HKD-KRW:KRW                                   -14 500.00 KRW  ; rate: 0.0058627586
+
+2025-07-09 ! (??????????, ??????) 19ddeb24-8a0c-45b3-bf08-1a9222615479  ; activity: loan, time: 13:10, timezone: UTC+09:00
+    assets:loans:friends:19ddeb24-8a0c-45b3-bf08-1a9222615479         13 500.00 KRW
+    equity:conversions:HKD-KRW:HKD                                        79.14 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093        -79.14 HKD
+    equity:conversions:HKD-KRW:KRW                                   -13 500.00 KRW  ; rate: 0.0058622222
+
+2025-07-09 ! (??????????, ??????) 7-Eleven  ; activity: eating, eating: snacks, time: 18, timezone: UTC+09:00
+    expenses:food and drinks:snacks                                   1 800.00 KRW  ; food_and_drink: cup noodles with cheese
+    expenses:food and drinks:snacks                                   3 800.00 KRW  ; food_and_drink: large bottle of orange juice
+    equity:conversions:HKD-KRW:HKD                                       32.83 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -32.83 HKD
+    equity:conversions:HKD-KRW:KRW                                   -5 600.00 KRW  ; rate: 0.0058625
+
+2025-07-12 ! (??????????, ??????) 7-Eleven  ; activity: eating, eating: snacks, time: 22, timezone: UTC+09:00
+    expenses:food and drinks:snacks                                   4 700.00 KRW  ; food_and_drink: Chocolate Creme Oreo Chocolate Sandwich Cookies ×3
+    equity:conversions:HKD-KRW:HKD                                       26.85 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -26.85 HKD
+    equity:conversions:HKD-KRW:KRW                                   -4 700.00 KRW  ; rate: 0.0057127660
+
+2025-07-13 ! (54273, 85) KFC  ; activity: eating, eating: dinner, time: 18:42:26, timezone: UTC+09:00
+    expenses:food and drinks:dining                                   10 900.00 KRW  ; food_and_drink: Zinger Super Meal
+    assets:loans:friends:19ddeb24-8a0c-45b3-bf08-1a9222615479         10 900.00 KRW
+    equity:conversions:HKD-KRW:HKD                                       127.26 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -127.26 HKD
+    equity:conversions:HKD-KRW:KRW                                   -21 800.00 KRW  ; rate: 0.0058376147
+
 2025-07-13 ! (196JUW, UO 679) HK Express  ; activity: transport, duration: PT3H50M, time: 20:45, timezone: UTC+09:00
     expenses:transport:airplanes                      600.00 HKD
     assets:deferred expenses:transport:airplanes     -600.00 HKD = 0.00 HKD
@@ -173,9 +205,15 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                               73.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -73.00 HKD
 
+2025-07-14 ! 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 01:10, timezone: UTC+08:00
+    expenses:transport:trains                                            4.90 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -4.90 HKD
+
 2025-07-14 ! (10361024002, 51036102) 7-Eleven  ; activity: eating, eating: snacks, time: 01:34, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                      9.50 HKD  ; food_and_drink: Mr. Brown Coffee (Caramel Macchiato Flavour)
-    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -9.50 HKD = -9.50 HKD
+    expenses:food and drinks:snacks                                                 9.50 HKD  ; food_and_drink: Mr. Brown Coffee (Caramel Macchiato Flavour)
+    assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         1 _PT/D = 1 _PT/D
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  -9.50 HKD = -365.49 HKD
+    revenues:rewards                                                                -1 _PT/D
 
 2025-07-14 (C7E01790170, FRN20250714PAYD0102623835164, OCTOPUS038084565301286497) self  ; activity: transfer, time: 10:46, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD

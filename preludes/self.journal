@@ -65,6 +65,7 @@ account assets:loans                                                            
 account assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be                                 ; type: A
 account assets:loans:friends                                                                      ; type: A
 account assets:loans:friends:198ce132-1e22-4afe-a0ff-cb512153036f                                 ; type: A
+account assets:loans:friends:19ddeb24-8a0c-45b3-bf08-1a9222615479                                 ; type: A
 account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10                                 ; type: A
 account assets:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                                 ; type: A
 account assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                 ; type: A
@@ -261,6 +262,7 @@ payee 126e93a7-c049-462a-92ae-cee03588ccc2
 payee 12960c02-bcd6-4169-bc22-7c3fb14b1f5d
 payee 13fabcbb-072d-47a2-afab-cace6eb95fdb
 payee 198ce132-1e22-4afe-a0ff-cb512153036f
+payee 19ddeb24-8a0c-45b3-bf08-1a9222615479
 payee 1d056933-413d-4fd7-97b2-f58f2493baca
 payee 1f60d13c-98cf-4672-8cb1-42a5b1163d60
 payee 20b484a5-3c01-42f3-875c-e95509b3de22
@@ -347,6 +349,7 @@ payee McDonald's
 payee Mukyoku
 payee Nice to CU
 payee ParknShop
+payee Peulleiting Incheongon
 payee Pizza Hut
 payee Rosewood
 payee Saizeriya
