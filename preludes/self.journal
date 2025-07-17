@@ -105,6 +105,7 @@ account equity:conversions:HKD-USD                                              
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
 account equity:friends                                                                            ; type: E
+account equity:friends:02f358e9-368a-40e8-875f-12a660a27abe                                       ; type: E
 account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       ; type: E
 account equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                       ; type: E
 account equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                                       ; type: E
@@ -339,6 +340,7 @@ payee Hong Kong Government
 payee Hong Kong Polytechnic University
 payee New Jersey Institute of Technology
 payee Itamomo
+payee Jadam Chicken
 payee Joint University Programmes Admissions System
 payee KFC
 payee Korail
