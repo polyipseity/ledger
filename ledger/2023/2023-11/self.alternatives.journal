@@ -56,7 +56,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:packaging           -0.068 _PAP
     assets:recycables
 
-2023-11-05 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M15S, time: 16:44:58, timezone: UTC+08:00
+2023-11-05 GREEN@*  ; activity: recycle, duration: PT3M15S, time: 16:44:58, timezone: UTC+08:00
     assets:recycables                                                        -0.334 _MET = 0.000 _MET
     assets:recycables                                                        -0.096 _OPL = 0.000 _OPL
     assets:recycables                                                        -0.171 _PAP = 0.000 _PAP

@@ -1,9 +1,9 @@
 include index.journal
 
+account assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0  ; type: A
 account assets:digital:GREEN@COMMMUNITY                                                           ; type: A
 account assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                      ; type: A
 account assets:digital:SheepIt Render Farm:polyipseity                                            ; type: A
-account assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0  ; type: A
 account assets:recycables                                                                         ; type: A
 account equity:conversions:GREEN$-_BEC                                                            ; type: E
 account equity:conversions:GREEN$-_BEC:GREEN$                                                     ; type: E
@@ -45,24 +45,24 @@ account revenues:recycables:packaging                                           
 account revenues:recycables:personal care                                                         ; type: R
 account revenues:recycables:waste                                                                 ; type: R
 
-commodity 99 999 999. GREEN$   ; fullname: GREEN$
+commodity 99 999 999.    GREEN$   ; fullname: GREEN$
 commodity 99 999 999.000 _BEC  ; fullname: beverage cartons, unit: kilogram
 commodity 99 999 999.000 _FLW  ; fullname: food loss and waste, unit: kilogram
-commodity 99 999 999. _FRM     ; fullname: frames
+commodity 99 999 999.    _FRM     ; fullname: frames
 commodity 99 999 999.000 _MET  ; fullname: metals, unit: kilogram
 commodity 99 999 999.000 _OPL  ; fullname: other plastics, unit: kilogram
 commodity 99 999 999.000 _PAP  ; fullname: paper, unit: kilogram
 commodity 99 999 999.000 _PLA  ; fullname: plastics, unit: kilogram
 commodity 99 999 999.000 _REB  ; fullname: rechargeable batteries, unit: kilogram
 commodity 99 999 999.000 _SEA  ; fullname: small electrical appliances, unit: kilogram
-commodity 99 999 999. _PT/A    ; fullname: SheepIt Render Farm points
-commodity 99 999 999. _PT/B    ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
+commodity 99 999 999.    _PT/A    ; fullname: SheepIt Render Farm points
+commodity 99 999 999.    _PT/B    ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 6ff58fb3-4579-4533-aab9-8575033136c7
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee 96f69720-5471-4e88-bebe-3db7a77a086c
-payee GREEN@d7380790-52e2-4728-94db-1572bc922104
+payee GREEN@*
 payee GREEN@self-service
 payee SF Express
 payee SheepIt Render Farm

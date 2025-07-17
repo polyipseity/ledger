@@ -37,11 +37,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: spaghetti with pepperoni (tomato sauce)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-01 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 15:44, timezone: UTC+08:00
+2023-12-01 public lgight bus  ; activity: transport, time: 15:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:minibuses
 
-2023-12-01 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:40, timezone: UTC+08:00
+2023-12-01 Mass Transit Railway  ; activity: transport, time: 16:40, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.30 HKD
     expenses:transport:trains
 
@@ -53,7 +53,7 @@ include ../../../preludes/self.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 20:30, timezone: UTC+08:00
 
-2023-12-03 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:42, timezone: UTC+08:00
+2023-12-03 Mass Transit Railway  ; activity: transport, time: 10:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -61,29 +61,29 @@ include ../../../preludes/self.journal
     assets:cash                    300.00 HKD
     revenues:incomes:tutoring                  ; time: 12:20:52, timezone: UTC+08:00
 
-2023-12-03 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:36, timezone: UTC+08:00
+2023-12-03 Mass Transit Railway  ; activity: transport, time: 12:36, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2023-12-03 (6566-2312-00249, 00000P0022000693556) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:22:23, timezone: UTC+08:00
+2023-12-03 (6566-2312-00249, 00000P0022000693556) Wilson  ; activity: consumption, time: 16:22:23, timezone: UTC+08:00
     assets:objects:consumer electronics                               4 599.00 HKD  ; depreciation: straight-line@P5Y, item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow, residual: 459.00 HKD
     assets:objects:consumer electronics                                  79.00 HKD  ; depreciation: straight-line@P1Y, item: AT iPad 10th 10.9″ Glass, residual: 0.00 HKD
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8        100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:22:23+08:00/2024-01-31T23:59:59+08:00
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       4 678. _PT/C  ; valid: 2023-12-03T16:22:23+08:00/2024-12-31T23:59:59+08:00
+    assets:special:vouchers:Wilson                                      100.00 HKD  ; item: Wilson $50 Shopping Coupon ×2, valid: 2023-12-03T16:22:23+08:00/2024-01-31T23:59:59+08:00
+    assets:special:rewards:Wilson                                     4 678. _PT/C  ; valid: 2023-12-03T16:22:23+08:00/2024-12-31T23:59:59+08:00
     revenues:rewards                                                   -150.00 HKD
     revenues:rewards                                                 -4 678. _PT/C
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
-2023-12-03 (6566-2312-00250, 00000P0022000693557) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 16:24:23, timezone: UTC+08:00
+2023-12-03 (6566-2312-00250, 00000P0022000693557) Wilson  ; activity: consumption, time: 16:24:23, timezone: UTC+08:00
     assets:objects:consumer electronics                               2 089.00 HKD  ; depreciation: straight-line@P2Y, item: Moto Edge 40 5G XT2303-01 (8GB/256GB), residual: 25.00 HKD
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8        100.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon ×2, valid: 2023-12-03T16:24:23+08:00/2024-01-31T23:59:59+08:00
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8       2 149. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
+    assets:special:vouchers:Wilson                                      100.00 HKD  ; item: Wilson $50 Shopping Coupon ×2, valid: 2023-12-03T16:24:23+08:00/2024-01-31T23:59:59+08:00
+    assets:special:rewards:Wilson                                     2 149. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
     revenues:rewards                                                   -100.00 HKD
     revenues:rewards                                                 -2 149. _PT/C
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8       -100.00 HKD
+    assets:special:vouchers:Wilson                                     -100.00 HKD
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156
 
-2023-12-03 (120386203109) 4ce799a2-472e-4c3f-8266-badcb03bef3b  ; activity: eating, eating: dinner, time: 17:06:45, timezone: UTC+08:00
+2023-12-03 (120386203109) Candian Pizza  ; activity: eating, eating: dinner, time: 17:06:45, timezone: UTC+08:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -245.00 HKD
     expenses:food and drinks:dining                                                ; food_and_drink: 2 cans of Sparkling VLT, food_and_drink: C1（大批）2–3人套餐, food_and_drink: 夏威夷風情, food_and_drink: 黑松露車厘茄雜菌白汁意粉
 
@@ -131,11 +131,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: pickled cabbage and shredded pork with vermicelli in soup
 
-2023-12-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:12, timezone: UTC+08:00
+2023-12-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:buses
 
-2023-12-07 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:11, timezone: UTC+08:00
+2023-12-07 Mass Transit Railway  ; activity: transport, time: 16:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
@@ -155,15 +155,15 @@ include ../../../preludes/self.journal
     expenses:healthcare:medication                                 300.00 HKD  ; duration: P2D
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
 
-2023-12-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:13, timezone: UTC+08:00
+2023-12-08 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
-2023-12-08 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:48, timezone: UTC+08:00
+2023-12-08 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:48, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.40 HKD
     expenses:transport:buses
 
-2023-12-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 17:35, timezone: UTC+08:00
+2023-12-08 Mass Transit Railway  ; activity: transport, time: 17:35, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -179,7 +179,7 @@ include ../../../preludes/self.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 13:52:56, timezone: UTC+08:00
 
-2023-12-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:39, timezone: UTC+08:00
+2023-12-10 Mass Transit Railway  ; activity: transport, time: 10:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -187,7 +187,7 @@ include ../../../preludes/self.journal
     assets:cash                    300.00 HKD
     revenues:incomes:tutoring                  ; time: 12:33:47, timezone: UTC+08:00
 
-2023-12-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:44, timezone: UTC+08:00
+2023-12-10 Mass Transit Railway  ; activity: transport, time: 12:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -268,11 +268,11 @@ include ../../../preludes/self.journal
     assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-15 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 15:49, timezone: UTC+08:00
+2023-12-15 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.10 HKD
     expenses:transport:buses
 
-2023-12-15 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:43, timezone: UTC+08:00
+2023-12-15 Mass Transit Railway  ; activity: transport, time: 16:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
@@ -280,7 +280,7 @@ include ../../../preludes/self.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 21, timezone: UTC+08:00
 
-2023-12-16 * (D-6566-2312-00007, 00000P0022000694789) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 11:22:39, timezone: UTC+08:00
+2023-12-16 * (D-6566-2312-00007, 00000P0022000694789) Wilson  ; activity: consumption, time: 11:22:39, timezone: UTC+08:00
     assets:deferred assets:objects:consumer electronics               1 849.00 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8    -1 849.00 HKD
 
@@ -288,7 +288,7 @@ include ../../../preludes/self.journal
     assets:cash                    600.00 HKD
     revenues:incomes:tutoring                  ; time: 14:11:55, timezone: UTC+08:00
 
-2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:33, timezone: UTC+08:00
+2023-12-17 Mass Transit Railway  ; activity: transport, time: 10:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -297,15 +297,15 @@ include ../../../preludes/self.journal
     liabilities:deferred revenues:incomes:tutoring     -300.00 HKD  ; valid: 2023-12-17T12:09:53+08:00/2023-12-24T10:30:00+08:00
     assets:cash
 
-2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:24, timezone: UTC+08:00
+2023-12-17 Mass Transit Railway  ; activity: transport, time: 12:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
-2023-12-17 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:19, timezone: UTC+08:00
+2023-12-17 Mass Transit Railway  ; activity: transport, time: 20:19, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-17 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 20:37, timezone: UTC+08:00
+2023-12-17 public lgight bus  ; activity: transport, time: 20:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
@@ -321,7 +321,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        27 _PT/D  ; valid: 2023-12-18/2025-10-31
     revenues:rewards
 
-2023-12-19 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: reward, time: 09:21:41, timezone: UTC+08:00
+2023-12-19 Wilson  ; activity: reward, time: 09:21:41, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8       50.00 HKD
     revenues:rewards                                                               ; reward: welcome discount
 
@@ -353,11 +353,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
 
-2023-12-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:29, timezone: UTC+08:00
+2023-12-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:29, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:buses
 
-2023-12-20 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:21, timezone: UTC+08:00
+2023-12-20 Mass Transit Railway  ; activity: transport, time: 19:21, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
@@ -365,11 +365,11 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
     revenues:rewards
 
-2023-12-21 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:59, timezone: UTC+08:00
+2023-12-21 Mass Transit Railway  ; activity: transport, time: 10:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-21 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 11:01, timezone: UTC+08:00
+2023-12-21 public lgight bus  ; activity: transport, time: 11:01, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
@@ -381,21 +381,21 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         23.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hot chocolate, food_and_drink: mushroom (V), food_and_drink: scrambled egg, food_and_drink: thick toast with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-22 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 11:06, timezone: UTC+08:00
+2023-12-22 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 11:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:buses
 
-2023-12-22 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 11:55, timezone: UTC+08:00
+2023-12-22 Mass Transit Railway  ; activity: transport, time: 11:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-22 (D-6566-2312-00007, 00000P0022000694789) 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: consumption, time: 12:13:37, timezone: UTC+08:00
-    assets:objects:consumer electronics                              1 849.00 HKD  ; depreciation: straight-line@P5Y, item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE, residual: 184.00 HKD
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8        50.00 HKD  ; item: 016707c8-8d24-47a5-940f-e687942b4ce8 $50 Shopping Coupon, valid: 2023-12-22T12:13:37+08:00/2024-01-31T23:59:59+08:00
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8      1 849. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
-    assets:deferred assets:objects:consumer electronics             -1 849.00 HKD
-    revenues:rewards                                                   -50.00 HKD
-    revenues:rewards                                                -1 849. _PT/C
+2023-12-22 (D-6566-2312-00007, 00000P0022000694789) Wilson  ; activity: consumption, time: 12:13:37, timezone: UTC+08:00
+    assets:objects:consumer electronics                     1 849.00 HKD  ; depreciation: straight-line@P5Y, item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE, residual: 184.00 HKD
+    assets:special:vouchers:Wilson                             50.00 HKD  ; item: Wilson $50 Shopping Coupon, valid: 2023-12-22T12:13:37+08:00/2024-01-31T23:59:59+08:00
+    assets:special:rewards:Wilson                           1 849. _PT/C  ; valid: 2023-12-03T16:24:23+08:00/2024-12-31T23:59:59+08:00
+    assets:deferred assets:objects:consumer electronics    -1 849.00 HKD
+    revenues:rewards                                          -50.00 HKD
+    revenues:rewards                                       -1 849. _PT/C
 
 2023-12-22 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H33M8S, time: 13:34:19, timezone: UTC+08:00
     assets:cash                    600.00 HKD
@@ -413,11 +413,11 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13.18 HKD
     revenues:interests
 
-2023-12-23 016707c8-8d24-47a5-940f-e687942b4ce8  ; activity: reward, timezone: UTC+08:00
+2023-12-23 Wilson  ; activity: reward, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8        7.00 HKD
     revenues:rewards                                                               ; reward: rebate
 
-2023-12-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:37, timezone: UTC+08:00
+2023-12-24 Mass Transit Railway  ; activity: transport, time: 10:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -425,7 +425,7 @@ include ../../../preludes/self.journal
     liabilities:deferred revenues:incomes:tutoring      300.00 HKD
     revenues:incomes:tutoring                                       ; datetime: 2023-12-17T12:09:53+08:00, timezone: UTC+08:00
 
-2023-12-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:22, timezone: UTC+08:00
+2023-12-24 Mass Transit Railway  ; activity: transport, time: 12:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -441,11 +441,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 紫菜三寶湯米粉
 
-2023-12-25 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 18:54, timezone: UTC+08:00
+2023-12-25 public lgight bus  ; activity: transport, time: 18:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:minibuses
 
-2023-12-25 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:34, timezone: UTC+08:00
+2023-12-25 Mass Transit Railway  ; activity: transport, time: 19:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.80 HKD
     expenses:transport:trains
 
@@ -509,19 +509,19 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: broccoli eggplant and cashew nut rice + less rice
 
-2023-12-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:53, timezone: UTC+08:00
+2023-12-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.10 HKD
     expenses:transport:buses
 
-2023-12-28 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:44, timezone: UTC+08:00
+2023-12-28 Mass Transit Railway  ; activity: transport, time: 19:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-29 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:06, timezone: UTC+08:00
+2023-12-29 Mass Transit Railway  ; activity: transport, time: 21:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-29 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 21:08, timezone: UTC+08:00
+2023-12-29 public lgight bus  ; activity: transport, time: 21:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
@@ -545,7 +545,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: fried egg, food_and_drink: ham, food_and_drink: hot Ovaltine, food_and_drink: preserved vegetable and shredded pork with vermicelli in soup
 
-2023-12-31 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:53, timezone: UTC+08:00
+2023-12-31 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.10 HKD
     expenses:transport:buses
 
@@ -557,11 +557,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      250.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2023-12-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 09:47, timezone: UTC+08:00
+2023-12-31 Mass Transit Railway  ; activity: transport, time: 09:47, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 10:37, timezone: UTC+08:00
+2023-12-31 Mass Transit Railway  ; activity: transport, time: 10:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -569,7 +569,7 @@ include ../../../preludes/self.journal
     assets:cash                    300.00 HKD
     revenues:incomes:tutoring                  ; time: 12:24:10, timezone: UTC+08:00
 
-2023-12-31 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 12:38, timezone: UTC+08:00
+2023-12-31 Mass Transit Railway  ; activity: transport, time: 12:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     expenses:transport:trains
 
@@ -606,9 +606,9 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -235.20 HKD = 0.00 HKD
     assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                       -15.65 HKD = 0.00 HKD
     assets:objects:consumer electronics                                                           -8 616.00 HKD = 0.00 HKD
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
+    assets:special:rewards:Wilson                                                                 -8 676. _PT/C = 0 _PT/C
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -30 _PT/D = 0 _PT/D
-    assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                                    -150.00 HKD = 0.00 HKD
+    assets:special:vouchers:Wilson                                                                  -150.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
     equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B
     equity:conversions:HKD-USD:HKD                                                                 2 453.37 HKD = 0.00 HKD

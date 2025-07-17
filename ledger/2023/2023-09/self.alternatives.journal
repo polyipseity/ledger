@@ -68,7 +68,7 @@ include ../../../preludes/self.alternatives.journal
     [expenses:compute:SheepIt Render Farm]                     16 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-09-03 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M57S, time: 11:11:19, timezone: UTC+08:00
+2023-09-03 GREEN@*  ; activity: recycle, duration: PT1M57S, time: 11:11:19, timezone: UTC+08:00
     assets:recycables                                                        -0.037 _OPL = 0.000 _OPL
     assets:recycables                                                        -0.024 _PAP = 0.000 _PAP
     assets:recycables                                                        -0.092 _PLA = 0.000 _PLA
@@ -182,7 +182,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:education     -0.143 _MET  ; collect: 1 metal container
     assets:recycables
 
-2023-09-10 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT44S, time: 18:59:09, timezone: UTC+08:00
+2023-09-10 GREEN@*  ; activity: recycle, duration: PT44S, time: 18:59:09, timezone: UTC+08:00
     assets:recycables                                                        -0.330 _MET = 0.000 _MET
     assets:recycables                                                        -0.012 _OPL = 0.057 _OPL
     assets:recycables                                                        -4.823 _PAP = 0.000 _PAP
@@ -328,7 +328,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:food and drinks     -0.005 _OPL  ; collect: 2 other plastics
     assets:recycables
 
-2023-09-22 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M19S, time: 15:49:37, timezone: UTC+08:00
+2023-09-22 GREEN@*  ; activity: recycle, duration: PT1M19S, time: 15:49:37, timezone: UTC+08:00
     assets:recycables                                                        -0.463 _MET = 0.000 _MET
     assets:recycables                                                        -0.334 _OPL = 0.000 _OPL
     assets:recycables                                                        -0.456 _PAP = 0.000 _PAP
@@ -378,7 +378,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:food and drinks     -0.050 _PLA  ; collect: 2 plastic bottles
     assets:recycables
 
-2023-09-24 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, time: 18:54:12, timezone: UTC+08:00
+2023-09-24 GREEN@*  ; activity: recycle, time: 18:54:12, timezone: UTC+08:00
     assets:recycables                                                        -0.471 _PLA = 0.000 _PLA
     equity:conversions:GREEN$-_PLA:_PLA                                       0.471 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 18:54:12, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                     -32 GREEN$

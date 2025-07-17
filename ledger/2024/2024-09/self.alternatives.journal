@@ -38,7 +38,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:packaging           -0.700 _PAP
     assets:recycables
 
-2024-09-15 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M53S, time: 13:46:04, timezone: UTC+08:00
+2024-09-15 GREEN@*  ; activity: recycle, duration: PT3M53S, time: 13:46:04, timezone: UTC+08:00
     assets:recycables                                                        -0.100 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.900 _MET = 0.000 _MET
     assets:recycables                                                        -0.050 _OPL = 0.000 _OPL
@@ -110,7 +110,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.050 _PLA
     assets:recycables
 
-2024-09-29 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT1M54S, time: 15:44:49, timezone: UTC+08:00
+2024-09-29 GREEN@*  ; activity: recycle, duration: PT1M54S, time: 15:44:49, timezone: UTC+08:00
     assets:recycables                                                        -0.300 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.025 _MET = 0.000 _MET
     assets:recycables                                                        -0.200 _OPL = 0.000 _OPL

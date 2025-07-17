@@ -29,7 +29,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:waste               -0.200 _REB
     assets:recycables
 
-2024-05-12 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT4M10S, time: 12:16:58, timezone: UTC+08:00
+2024-05-12 GREEN@*  ; activity: recycle, duration: PT4M10S, time: 12:16:58, timezone: UTC+08:00
     assets:recycables                                                        -0.200 _MET = 0.000 _MET
     assets:recycables                                                        -0.400 _OPL = 0.000 _OPL
     assets:recycables                                                        -1.100 _PAP = 0.000 _PAP

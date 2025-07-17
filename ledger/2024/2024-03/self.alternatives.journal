@@ -31,7 +31,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.086 _PLA
     assets:recycables
 
-2024-03-03 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT4M20S, time: 13:43:50, timezone: UTC+08:00
+2024-03-03 GREEN@*  ; activity: recycle, duration: PT4M20S, time: 13:43:50, timezone: UTC+08:00
     assets:recycables                                                        -0.234 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.333 _MET = 0.000 _MET
     assets:recycables                                                        -0.348 _OPL = 0.000 _OPL

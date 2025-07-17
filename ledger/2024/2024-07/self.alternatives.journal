@@ -49,7 +49,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.025 _PLA
     assets:recycables
 
-2024-07-10 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M19S, time: 17:57:45, timezone: UTC+08:00
+2024-07-10 GREEN@*  ; activity: recycle, duration: PT2M19S, time: 17:57:45, timezone: UTC+08:00
     assets:recycables                                                        -0.400 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.100 _MET = 0.000 _MET
     assets:recycables                                                        -0.200 _OPL = 0.000 _OPL
@@ -107,7 +107,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:food and drinks     -0.400 _PLA
     assets:recycables
 
-2024-07-19 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M19S, time: 18:38:54, timezone: UTC+08:00
+2024-07-19 GREEN@*  ; activity: recycle, duration: PT2M19S, time: 18:38:54, timezone: UTC+08:00
     assets:recycables                                                        -0.400 _PLA = 0.000 _PLA
     equity:conversions:GREEN$-_PLA:_PLA                                       0.400 _PLA  ; rate: 480, rate: unit 0.1, recycle: all plastics, time: 18:38:54, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:GREEN$                                    -192 GREEN$
@@ -173,7 +173,7 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_FLW:GREEN$                                     -60 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       60 GREEN$
 
-2024-07-28 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT5M49S, time: 15:37:07, timezone: UTC+08:00
+2024-07-28 GREEN@*  ; activity: recycle, duration: PT5M49S, time: 15:37:07, timezone: UTC+08:00
     assets:recycables                                                         -0.300 _BEC = 0.000 _BEC
     assets:recycables                                                         -0.100 _MET = 0.000 _MET
     assets:recycables                                                         -0.500 _OPL = 0.000 _OPL

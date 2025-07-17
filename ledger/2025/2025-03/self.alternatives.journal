@@ -37,7 +37,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:packaging           -0.500 _PAP
     revenues:recycables:waste               -0.100 _SEA
 
-2025-03-04 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M39S, time: 13:03:49, timezone: UTC+08:00
+2025-03-04 GREEN@*  ; activity: recycle, duration: PT2M39S, time: 13:03:49, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       22 GREEN$ = 7 677 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                       0.050 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 13:03:49, timezone: UTC+08:00
     equity:conversions:GREEN$-_MET:_MET                                       0.200 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 13:04:18, timezone: UTC+08:00

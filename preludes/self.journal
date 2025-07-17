@@ -43,24 +43,19 @@ account assets:deferred expenses:transport:airplanes                            
 account assets:deferred expenses:transport:trains                                                 ; type: A
 account assets:deferred expenses:transport:trains:high-speed                                      ; type: A
 account assets:digital                                                                            ; type: A
-account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719                                       ; type: A
-account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:08b9beee-29b2-4c4c-9a4f-b5b500610cc9  ; type: A
-account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5  ; type: A
-account assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:e0010ca1-4ce0-48ae-ab87-70da4b456bd1  ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd                                       ; type: A
 account assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f  ; type: A
 account assets:digital:Octopus                                                                    ; type: C
-account assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                               ; type: C
 account assets:digital:Octopus cards                                                              ; type: C
 account assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         ; type: C
+account assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                               ; type: C
 account assets:digital:Stripe                                                                     ; type: A
 account assets:digital:Stripe:8521d268-47d4-40a9-b2bb-3f187627b20a                                ; type: A
 account assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                ; type: A
-account assets:objects                                                                            ; type: A
-account assets:objects:decorations                                                                ; type: A
-account assets:objects:clothing                                                                   ; type: A
-account assets:objects:consumer electronics                                                       ; type: A
-account assets:objects:tools                                                                      ; type: A
+account assets:digital:荷里活Game Zone (Hollywood Game Zone)                                         ; type: A
+account assets:digital:荷里活Game Zone (Hollywood Game Zone):08b9beee-29b2-4c4c-9a4f-b5b500610cc9    ; type: A
+account assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5    ; type: A
+account assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1    ; type: A
 account assets:loans                                                                              ; type: A
 account assets:loans:clients:49c186e5-f575-43ec-b73b-48d200eb27be                                 ; type: A
 account assets:loans:friends                                                                      ; type: A
@@ -75,26 +70,25 @@ account assets:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1               
 account assets:loans:kins                                                                         ; type: A
 account assets:loans:kins:families                                                                ; type: A
 account assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                           ; type: A
+account assets:objects                                                                            ; type: A
+account assets:objects:clothing                                                                   ; type: A
+account assets:objects:consumer electronics                                                       ; type: A
+account assets:objects:decorations                                                                ; type: A
+account assets:objects:tools                                                                      ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
-account assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                               ; type: A
+account assets:special:rewards:Wilson                                                             ; type: A
 account assets:special:rewards:credit cards                                                       ; type: A
 account assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  ; type: A
 account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  ; type: A
 account assets:special:vouchers                                                                   ; type: A
+account assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                            ; type: A
 account assets:special:vouchers:ParknShop                                                         ; type: A
 account assets:special:vouchers:Sino United Publishing                                            ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
-account assets:special:vouchers:016707c8-8d24-47a5-940f-e687942b4ce8                              ; type: A
-account assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                              ; type: A
+account assets:special:vouchers:Wilson                                                            ; type: A
 account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
 account assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                        ; type: A
-account equity:conversions:HKD-_PT/B                                                              ; type: E
-account equity:conversions:HKD-_PT/B:HKD                                                          ; type: E
-account equity:conversions:HKD-_PT/B:_PT/B                                                        ; type: E
-account equity:conversions:HKD-_PT/D                                                              ; type: E
-account equity:conversions:HKD-_PT/D:HKD                                                          ; type: E
-account equity:conversions:HKD-_PT/D:_PT/D                                                        ; type: E
 account equity:conversions:EUR-HKD                                                                ; type: E
 account equity:conversions:EUR-HKD:EUR                                                            ; type: E
 account equity:conversions:EUR-HKD:HKD                                                            ; type: E
@@ -104,6 +98,12 @@ account equity:conversions:HKD-KRW:KRW                                          
 account equity:conversions:HKD-USD                                                                ; type: E
 account equity:conversions:HKD-USD:HKD                                                            ; type: E
 account equity:conversions:HKD-USD:USD                                                            ; type: E
+account equity:conversions:HKD-_PT/B                                                              ; type: E
+account equity:conversions:HKD-_PT/B:HKD                                                          ; type: E
+account equity:conversions:HKD-_PT/B:_PT/B                                                        ; type: E
+account equity:conversions:HKD-_PT/D                                                              ; type: E
+account equity:conversions:HKD-_PT/D:HKD                                                          ; type: E
+account equity:conversions:HKD-_PT/D:_PT/D                                                        ; type: E
 account equity:friends                                                                            ; type: E
 account equity:friends:02f358e9-368a-40e8-875f-12a660a27abe                                       ; type: E
 account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       ; type: E
@@ -131,16 +131,16 @@ account expenses:education:tuition:universities                                 
 account expenses:equipment                                                                        ; type: X
 account expenses:fees                                                                             ; type: X
 account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                                        ; type: X
-account expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                                        ; type: X
+account expenses:fees:Buy Me a Coffee                                                             ; type: X
+account expenses:fees:Hong Kong Government                                                        ; type: X
+account expenses:fees:Mass Transit Railway                                                        ; type: X
+account expenses:fees:Mastercard                                                                  ; type: X
+account expenses:fees:Seoul Metropolitan Subway                                                   ; type: X
+account expenses:fees:Stripe                                                                      ; type: X
 account expenses:fees:banking                                                                     ; type: X
 account expenses:fees:banking:7fc76083-5175-421d-8c6f-d15897b5ee8e                                ; type: X
 account expenses:fees:banking:DBS Bank                                                            ; type: X
 account expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                                        ; type: X
-account expenses:fees:Buy Me a Coffee                                                             ; type: X
-account expenses:fees:Hong Kong Government                                                        ; type: X
-account expenses:fees:Mastercard                                                                  ; type: X
-account expenses:fees:Seoul Metropolitan Subway                                                   ; type: X
-account expenses:fees:Stripe                                                                      ; type: X
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
 account expenses:food and drinks:drinks                                                           ; type: X
@@ -239,9 +239,9 @@ commodity 99 999 999.00 EUR  ; fullname: euro
 commodity 99 999 999.00 HKD  ; fullname: Hong Kong dollars
 commodity 99 999 999.00 KRW  ; fullname: South Korean won
 commodity 99 999 999.00 USD  ; fullname: United State dollars
-commodity 99 999 999. _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
-commodity 99 999 999. _PT/C  ; fullname: 016707c8-8d24-47a5-940f-e687942b4ce8 money
-commodity 99 999 999. _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
+commodity 99 999 999.   _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
+commodity 99 999 999.   _PT/C  ; fullname: Wilson money
+commodity 99 999 999.   _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
 
 payee **** (***********)
 payee **********************@********.net
@@ -252,7 +252,6 @@ payee ******@***********.com.au
 payee ******@******.net
 payee ******@*****.com
 payee ***@*******.com
-payee 016707c8-8d24-47a5-940f-e687942b4ce8
 payee 02337778-bf4b-4675-be04-ea1270e22e5f
 payee 02f358e9-368a-40e8-875f-12a660a27abe
 payee 0452863c-ea6b-44cc-9156-6782e5a0f980
@@ -268,20 +267,15 @@ payee 1d056933-413d-4fd7-97b2-f58f2493baca
 payee 1f60d13c-98cf-4672-8cb1-42a5b1163d60
 payee 20b484a5-3c01-42f3-875c-e95509b3de22
 payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
-payee 2344b1fe-cab8-4245-a24e-61caf7e93a74
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483
 payee 314a66c3-cc75-45df-a3c2-794d696c70a6
-payee 31d42ab2-c800-4210-b6ee-aff943b6e8c8
 payee 3344b973-41df-45a9-bc47-0004ed1049db
 payee 3833b42e-dad3-425c-b254-904be68993e4
-payee 41b33891-3b43-4ac6-9ebb-42d8737ae227
 payee 48d0497b-6001-49ec-8928-94936ae9eaca
 payee 49c186e5-f575-43ec-b73b-48d200eb27be
-payee 4ce799a2-472e-4c3f-8266-badcb03bef3b
 payee 4d3562ae-b4d4-4444-b428-33f0aced1462
 payee 51b339c5-b778-463d-8070-9c18ff6d88c0
-payee 527dd917-f0b0-4b21-a9fa-3442f50ef719
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
 payee 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6
 payee 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f
@@ -297,14 +291,10 @@ payee 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45
 payee 7bd75d7e-9a54-4c0e-ad73-72e628308ffc
 payee 7e049a63-ac77-450b-a5f1-4d9a984421dd
 payee 7fc76083-5175-421d-8c6f-d15897b5ee8e
-payee 810c451f-b2e5-4c98-8433-b1451593c457
 payee 82050afc-aac6-41aa-8066-d436a2c5434d
-payee 82de8d96-c247-49eb-9bd7-87b00f16d25c
 payee 83282154-a569-4443-8df3-675a5a48e4a2
 payee 856ec2f9-6367-4726-9301-a2a6dde358c0
-payee 85d4d0a9-ec04-4438-8259-cbad1f2839b4
 payee 88e71e74-7f85-4a0a-ab31-ecab094622a5
-payee 8e88d2b4-d2f8-431f-a5e9-1179456eb344
 payee 937f7345-cbe9-48d1-9746-d79fd001d2a6
 payee 93e360c4-2428-4e2c-969d-6b1a3a7e127f
 payee 968eeeeb-a2b6-4c7c-a789-e315c628d24c
@@ -323,7 +313,9 @@ payee Blue Cross Insurance
 payee Cafe 100%
 payee Café de Coral
 payee Café de Nusi
+payee Candian Pizza
 payee Circle K
+payee Citybus/New World First Bus
 payee Daiso
 payee Deliveroo
 payee Don Don: Donki
@@ -338,18 +330,22 @@ payee HK Express
 payee Holiday Inn Golden Mile, Loong Yuen
 payee Hong Kong Government
 payee Hong Kong Polytechnic University
-payee New Jersey Institute of Technology
+payee Hong Kong Productivity Council
+payee Hong Kong Tramways
 payee Itamomo
 payee Jadam Chicken
 payee Joint University Programmes Admissions System
 payee KFC
 payee Korail
+payee Kowloon Motor Bus/Long Win Bus
 payee Kyochon 1991
 payee Leaderskey
+payee Mass Transit Railway
 payee Masterbeef
 payee Maxim's Cakes
 payee McDonald's
 payee Mukyoku
+payee New Jersey Institute of Technology
 payee Nice to CU
 payee No Brand Burger
 payee ParknShop
@@ -363,6 +359,7 @@ payee Seoul Metropolitan Subway
 payee Starbucks
 payee Stripe
 payee Subway
+payee Sun Ferry
 payee Super Super Congee & Noodles
 payee Sushiro
 payee Swire
@@ -371,11 +368,11 @@ payee TenRen's Tea
 payee The Commercial Press (CityU)
 payee Tokkijung Project
 payee Vitasoy
-payee Wellcome, 2bae54dc-467f-459c-9202-5149f419152f
+payee Wellcome
+payee Wilson
 payee Yakiniku Like!!
 payee Yamazaki
 payee Yan Chai Hosptial
-payee a19a3525-a11c-40de-9726-79b0738910d7
 payee a2c6c8e6-2480-47db-a03b-94840933b018
 payee a62e5375-6a8f-423e-83cf-a0b65a293ee7
 payee ab0fa934-c94b-40e9-8243-ad1c486fc251
@@ -385,11 +382,9 @@ payee b0d2d642-7692-421f-bd20-4d03911caa54
 payee b18865fd-acc7-4fbe-b21a-b3473640ca13
 payee bank
 payee barbershop
-payee c07b5f87-d334-4a5e-b531-8b63341fdea7
 payee c1fa4d34-35f7-4bee-bbb2-42f0d93b8486
 payee c3519e26-caa7-467e-8057-ff4a3eeabd55
 payee c659b0a7-14e0-48a1-b268-b989de587b3c
-payee c9b9b581-0722-4c2b-987a-4d86fa02e7d0 (2bae54dc-467f-459c-9202-5149f419152f)
 payee d0356653-93de-4abd-9e23-26b71de1ebf2
 payee d43f45a7-5dda-4f56-b441-c82b76b743c6
 payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
@@ -398,9 +393,7 @@ payee dfde1439-813b-4eb6-b7a0-a2a1cc30b714
 payee dfde318d-9ad1-4f25-8c57-2763ebfe1e3e
 payee e2613673-8956-40d9-8024-53163878b766
 payee e7cd4d77-7c22-4d18-bd60-5d73b5faa76e
-payee e7e8e150-5a24-46c7-a900-cfe382196de5
 payee e81cf14c-79fc-4958-b694-1a2a2c0c9be1
-payee e82b2a1f-fa14-4739-bf0e-df7bd7e9c714
 payee ed096bd9-4609-4c33-9930-a0c6b67dde2e
 payee ef234023-8df0-4705-bb73-cd9b194a5b92
 payee ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa
@@ -409,15 +402,22 @@ payee f34f8958-524c-416d-93b5-b2e35e68f08c
 payee f85da078-1fe9-42ae-b9d6-f2d47e62a19d
 payee friends
 payee kins
+payee public lgight bus
 payee taxis
 payee 丸龜製麵
+payee 同樂素食
+payee 大生生活超市 (DS Groceries)
+payee 安平燒肉 (Anping Grill)
 payee 富華冰室 (Fu Wah Cafe)
 payee 小王牛肉麵
-payee 紅葉茶屋 (Momiji-Chaya)
 payee 岡山一番店拉麵
-payee 同樂素食
-payee 隨便坐車仔麵燒烤
+payee 手作功夫茶 (Kong Fu Tea)
 payee 松記糖水店 (Chung Kee Restaurant)
+payee 燒肉 DON DON
+payee 紅葉茶屋 (Momiji-Chaya)
+payee 美圖照相
+payee 荷里活Game Zone (Hollywood Game Zone)
+payee 隨便坐車仔麵燒烤
 payee 麵屋福
 
 tag billing

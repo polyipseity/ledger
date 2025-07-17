@@ -52,7 +52,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.142 _PLA
     assets:recycables
 
-2023-12-04 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M15S, time: 14:02:51, timezone: UTC+08:00
+2023-12-04 GREEN@*  ; activity: recycle, duration: PT3M15S, time: 14:02:51, timezone: UTC+08:00
     assets:recycables                                                        -0.256 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.359 _MET = 0.000 _MET
     assets:recycables                                                        -0.605 _OPL = 0.000 _OPL
@@ -213,7 +213,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.250 _PLA
     assets:recycables
 
-2023-12-24 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT3M20S, time: 16:52:40, timezone: UTC+08:00
+2023-12-24 GREEN@*  ; activity: recycle, duration: PT3M20S, time: 16:52:40, timezone: UTC+08:00
     assets:recycables                                                        -0.117 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.630 _MET = 0.000 _MET
     assets:recycables                                                        -0.286 _OPL = 0.000 _OPL
@@ -316,7 +316,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:packaging           -0.020 _PAP
     assets:recycables
 
-2023-12-31 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT6M5S, time: 16:41:51, timezone: UTC+08:00
+2023-12-31 GREEN@*  ; activity: recycle, duration: PT6M5S, time: 16:41:51, timezone: UTC+08:00
     assets:recycables                                                        -0.074 _BEC = 0.000 _BEC
     assets:recycables                                                        -0.166 _MET = 0.000 _MET
     assets:recycables                                                        -1.342 _OPL = 0.000 _OPL

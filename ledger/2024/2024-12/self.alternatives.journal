@@ -37,7 +37,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:personal care       -0.050 _OPL
     revenues:recycables:personal care       -0.050 _PLA
 
-2024-12-31 GREEN@d7380790-52e2-4728-94db-1572bc922104  ; activity: recycle, duration: PT2M2S, time: 10:46:54, timezone: UTC+08:00
+2024-12-31 GREEN@*  ; activity: recycle, duration: PT2M2S, time: 10:46:54, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       18 GREEN$ = 7 584 GREEN$
     equity:conversions:GREEN$-_MET:_MET                                       0.050 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 10:46:54, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:_PLA                                       0.100 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 10:46:56, timezone: UTC+08:00

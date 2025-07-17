@@ -60,11 +60,11 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-06-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 14:43, timezone: UTC+08:00
+2023-06-08 Mass Transit Railway  ; activity: transport, time: 14:43, timezone: UTC+08:00
     expenses:transport:trains                                                6.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-06-08 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 17:47, timezone: UTC+08:00
+2023-06-08 Mass Transit Railway  ; activity: transport, time: 17:47, timezone: UTC+08:00
     expenses:transport:trains                                                6.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 

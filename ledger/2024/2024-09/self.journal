@@ -1,48 +1,48 @@
 include ../../../preludes/self.journal
 
 2024-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:accumulated depreciation                                                               -2 384.72 HKD = -2 384.72 HKD
-    assets:accumulated depreciation                                                               -1 000.00 KRW = -1 000.00 KRW
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 200.00 HKD = 1 200.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  16 966.42 HKD = 16 966.42 HKD
-    assets:deferred expenses:activities                                                              100.00 HKD = 100.00 HKD
-    assets:deferred expenses:education:tuition:universities                                       21 050.00 HKD = 21 050.00 HKD
-    assets:deferred expenses:services:clouds:Apple                                                     8.00 HKD = 8.00 HKD
-    assets:deferred expenses:services:clouds:Google                                                  150.00 HKD = 150.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 21 242.66 HKD = 21 242.66 HKD
-    assets:cash                                                                                    6 342.00 HKD = 6 342.00 HKD
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5          12.00 HKD = 12.00 HKD
-    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -21 050.00 HKD = -21 050.00 HKD
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                       12.20 HKD = 12.20 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                141.60 HKD = 141.60 HKD
-    assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
-    assets:objects:consumer electronics                                                            8 628.00 HKD = 8 628.00 HKD
-    assets:objects:tools                                                                           4 000.00 KRW = 4 000.00 KRW
-    assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                        125.00 HKD = 125.00 HKD
-    assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                5 000.00 HKD = 5 000.00 HKD
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                    8 676. _PT/C = 8 676 _PT/C
-    equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000 _PT/B
-    equity:conversions:HKD-_PT/D:HKD                                                                -731.00 HKD = -731.00 HKD
-    equity:conversions:HKD-_PT/D:_PT/D                                                                731 _PT/D = 731 _PT/D
-    equity:conversions:HKD-KRW:HKD                                                                   827.73 HKD = 827.73 HKD
-    equity:conversions:HKD-KRW:KRW                                                              -145 008.33 KRW = -145 008.33 KRW
-    equity:conversions:HKD-USD:HKD                                                                -3 573.03 HKD = -3 573.03 HKD
-    equity:conversions:HKD-USD:USD                                                                   464.56 USD = 464.56 USD
-    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000 _PT/B
-    equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
-    equity:friends                                                                                   -28.50 HKD = -28.50 HKD
-    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                               -2.00 HKD = -2.00 HKD
-    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                              -35.10 HKD = -35.10 HKD
-    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                             -185.00 HKD = -185.00 HKD
-    equity:kins:special                                                                           -4 500.00 CNY = -4 500.00 CNY
-    equity:kins:special                                                                              -90.00 HKD = -90.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      4 500.00 CNY = 4 500.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -49 071.21 HKD = -49 071.21 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                     -1 115.00 HKD = -1 115.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                     -23.52 HKD = -23.52 HKD
-    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -43 180.00 HKD = -43 180.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            -23 506.28 HKD = -23 506.28 HKD
+    assets:accumulated depreciation                                                                -2 384.72 HKD = -2 384.72 HKD
+    assets:accumulated depreciation                                                                -1 000.00 KRW = -1 000.00 KRW
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    1 200.00 HKD = 1 200.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                   16 966.42 HKD = 16 966.42 HKD
+    assets:deferred expenses:activities                                                               100.00 HKD = 100.00 HKD
+    assets:deferred expenses:education:tuition:universities                                        21 050.00 HKD = 21 050.00 HKD
+    assets:deferred expenses:services:clouds:Apple                                                      8.00 HKD = 8.00 HKD
+    assets:deferred expenses:services:clouds:Google                                                   150.00 HKD = 150.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  21 242.66 HKD = 21 242.66 HKD
+    assets:cash                                                                                     6 342.00 HKD = 6 342.00 HKD
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5          12.00 HKD = 12.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      -21 050.00 HKD = -21 050.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                        12.20 HKD = 12.20 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 141.60 HKD = 141.60 HKD
+    assets:objects:clothing                                                                         1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                             8 628.00 HKD = 8 628.00 HKD
+    assets:objects:tools                                                                            4 000.00 KRW = 4 000.00 KRW
+    assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                         125.00 HKD = 125.00 HKD
+    assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                 5 000.00 HKD = 5 000.00 HKD
+    assets:special:rewards:Wilson                                                                   8 676. _PT/C = 8 676 _PT/C
+    equity:conversions:HKD-_PT/B:HKD                                                                  -80.00 HKD = -80.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                            200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                                 -731.00 HKD = -731.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                                 731 _PT/D = 731 _PT/D
+    equity:conversions:HKD-KRW:HKD                                                                    827.73 HKD = 827.73 HKD
+    equity:conversions:HKD-KRW:KRW                                                               -145 008.33 KRW = -145 008.33 KRW
+    equity:conversions:HKD-USD:HKD                                                                 -3 573.03 HKD = -3 573.03 HKD
+    equity:conversions:HKD-USD:USD                                                                    464.56 USD = 464.56 USD
+    equity:external:self.alternatives                                                            -200 000. _PT/B = -200 000 _PT/B
+    equity:unaccounted                                                                            -13 400.03 HKD = -13 400.03 HKD
+    equity:friends                                                                                    -28.50 HKD = -28.50 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                                -2.00 HKD = -2.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                               -35.10 HKD = -35.10 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                              -185.00 HKD = -185.00 HKD
+    equity:kins:special                                                                            -4 500.00 CNY = -4 500.00 CNY
+    equity:kins:special                                                                               -90.00 HKD = -90.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                       4 500.00 CNY = 4 500.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -49 071.21 HKD = -49 071.21 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                      -1 115.00 HKD = -1 115.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                      -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             -43 180.00 HKD = -43 180.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             -23 506.28 HKD = -23 506.28 HKD
     equity:opening/closing balances
 
 2024-09-01 (41059655) Cafe 100%  ; activity: eating, duration: PT33M51S, eating: breakfast, time: 11:24:09, timezone: UTC+08:00
@@ -57,11 +57,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Lipton milk tea, food_and_drink: instant noodles in soup, food_and_drink: preserved vegetable, food_and_drink: shredded pork
 
-2024-09-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:12, timezone: UTC+08:00
+2024-09-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
     expenses:transport:buses
 
-2024-09-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:50, timezone: UTC+08:00
+2024-09-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -81,11 +81,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: 忌廉湯, food_and_drink: 迷你肉醬意粉
 
-2024-09-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:17, timezone: UTC+08:00
+2024-09-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-02 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:45, timezone: UTC+08:00
+2024-09-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -93,11 +93,11 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      125.00 HKD
     assets:loans:friends:e2613673-8956-40d9-8024-53163878b766         -125.00 HKD = 0.00 HKD
 
-2024-09-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:51, timezone: UTC+08:00
+2024-09-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:13, timezone: UTC+08:00
+2024-09-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -109,7 +109,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
-2024-09-03 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:39, timezone: UTC+08:00
+2024-09-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
@@ -134,28 +134,28 @@ include ../../../preludes/self.journal
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 18:29, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 112.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 18:29, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 112.00 HKD
     assets:cash
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT12M, time: 18:43, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 18:43, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 19:10, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 19:10, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 19:27, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 19:27, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT17M, time: 19:44, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT17M, time: 19:44, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-03 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 20:03, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 82.00 HKD
+2024-09-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 20:03, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 82.00 HKD
     expenses:gaming:maimai
 
 2024-09-03 * (T0000801112000138056, 307185) Don Don: Donki  ; activity: eating, eating: snacks, time: 20:24, timezone: UTC+08:00
@@ -167,7 +167,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       22.90 HKD
     assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          -22.90 HKD = 0.00 HKD
 
-2024-09-03 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:27, timezone: UTC+08:00
+2024-09-03 Mass Transit Railway  ; activity: transport, time: 21:27, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
@@ -175,11 +175,11 @@ include ../../../preludes/self.journal
     assets:cash                                                    500.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978
 
-2024-09-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:02, timezone: UTC+08:00
+2024-09-04 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:35, timezone: UTC+08:00
+2024-09-04 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:35, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -191,11 +191,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
 
-2024-09-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:38, timezone: UTC+08:00
+2024-09-04 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
     expenses:transport:buses
 
-2024-09-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:51, timezone: UTC+08:00
+2024-09-04 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -215,11 +215,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-09-05 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 12:55, timezone: UTC+08:00
+2024-09-05 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 12:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
     expenses:transport:buses
 
-2024-09-05 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:23, timezone: UTC+08:00
+2024-09-05 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
@@ -227,11 +227,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
 
-2024-09-05 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:13, timezone: UTC+08:00
+2024-09-05 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-05 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:42, timezone: UTC+08:00
+2024-09-05 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -239,11 +239,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot Lipton milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-09-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:00, timezone: UTC+08:00
+2024-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:26, timezone: UTC+08:00
+2024-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:26, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -267,11 +267,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.00 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: NESCAFÉ Coffee Beverage Regular 250 mL
 
-2024-09-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:27, timezone: UTC+08:00
+2024-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:27, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-07 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:52, timezone: UTC+08:00
+2024-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.40 HKD
     expenses:transport:buses
 
@@ -295,11 +295,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-09-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 08:59, timezone: UTC+08:00
+2024-09-09 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
     expenses:transport:buses
 
-2024-09-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:28, timezone: UTC+08:00
+2024-09-09 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
@@ -319,19 +319,19 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: NESCAFÉ Coffee Beverage Regular 250 mL, food_and_drink: seaweed, food_and_drink: thin egg noodle
 
-2024-09-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:52, timezone: UTC+08:00
+2024-09-09 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 22:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-09 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:09, timezone: UTC+08:00
+2024-09-09 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:09, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-09-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:50, timezone: UTC+08:00
+2024-09-10 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-10 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:19, timezone: UTC+08:00
+2024-09-10 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:19, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -347,27 +347,27 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
 
-2024-09-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 20:02, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-10 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 20:02, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 20:22, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-10 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 20:22, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT16M, time: 20:44, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-10 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT16M, time: 20:44, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 21:04, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-10 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 21:04, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-10 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 21:29, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 52.00 HKD
+2024-09-10 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 21:29, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 52.00 HKD
     expenses:gaming:maimai
 
-2024-09-10 * 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:19, timezone: UTC+08:00
+2024-09-10 * Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:19, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.10 HKD = -8.10 HKD
     expenses:transport:buses
 
@@ -375,7 +375,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:cash
 
-2024-09-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:28, timezone: UTC+08:00
+2024-09-10 Mass Transit Railway  ; activity: transport, time: 22:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
@@ -391,11 +391,11 @@ include ../../../preludes/self.journal
     assets:cash                                                         5 000.00 HKD
     assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4    -5 000.00 HKD = 0.00 HKD
 
-2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:42, timezone: UTC+08:00
+2024-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:12, timezone: UTC+08:00
+2024-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -403,15 +403,15 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         32.50 HKD  ; food_and_drink: 芝味厚切一哥焗豬扒飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:33, timezone: UTC+08:00
+2024-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:09, timezone: UTC+08:00
+2024-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:09, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
-2024-09-12 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:23, timezone: UTC+08:00
+2024-09-12 Mass Transit Railway  ; activity: transport, time: 20:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.70 HKD
     expenses:transport:trains
 
@@ -419,7 +419,7 @@ include ../../../preludes/self.journal
     assets:cash                         -100.00 HKD
     expenses:food and drinks:dining                  ; food_and_drink: 黑蒜油豚骨沾麵 + 追加200 g
 
-2024-09-12 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:31, timezone: UTC+08:00
+2024-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:buses
 
@@ -440,11 +440,11 @@ include ../../../preludes/self.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.10 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-09-16 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:43, timezone: UTC+08:00
+2024-09-16 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
     expenses:transport:buses
 
-2024-09-16 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:14, timezone: UTC+08:00
+2024-09-16 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:14, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -469,35 +469,35 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
 
-2024-09-16 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 17:17, timezone: UTC+08:00
+2024-09-16 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 17:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.10 HKD
     expenses:transport:buses
 
-2024-09-16 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 18:11, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-16 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 18:11, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-16 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 18:39, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-16 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 18:39, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-16 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 19:08, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-16 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 19:08, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-16 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 19:31, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 28.00 HKD
+2024-09-16 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 19:31, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 28.00 HKD
     expenses:gaming:maimai
 
-2024-09-16 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 20:24, timezone: UTC+08:00
+2024-09-16 Mass Transit Railway  ; activity: transport, time: 20:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
-2024-09-17 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:51, timezone: UTC+08:00
+2024-09-17 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-17 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:14, timezone: UTC+08:00
+2024-09-17 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:14, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -517,11 +517,11 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -130.00 HKD
     assets:accrued revenues:incomes:education      130.00 HKD
 
-2024-09-17 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:52, timezone: UTC+08:00
+2024-09-17 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-17 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:26, timezone: UTC+08:00
+2024-09-17 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:26, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -529,11 +529,11 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    9 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2024-09-19 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:30, timezone: UTC+08:00
+2024-09-19 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-19 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:08, timezone: UTC+08:00
+2024-09-19 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -545,11 +545,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -26.50 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot milk tea, food_and_drink: 叉燒飯配飲品 + less rice
 
-2024-09-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 00:05, timezone: UTC+08:00
+2024-09-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 00:05, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-20 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 00:23, timezone: UTC+08:00
+2024-09-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 00:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -557,11 +557,11 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    1 000.00 HKD
     assets:cash
 
-2024-09-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:55, timezone: UTC+08:00
+2024-09-24 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 10:31, timezone: UTC+08:00
+2024-09-24 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
@@ -581,24 +581,24 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -18.00 HKD
     expenses:food and drinks:snacks                                                    ; food_and_drink: cheese mushroom wrap
 
-2024-09-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:13, timezone: UTC+08:00
+2024-09-24 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 21:04, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 21:04, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT13M, time: 21:22, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 21:22, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:38, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:38, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-24 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:57, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
+2024-09-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:57, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
     expenses:gaming:maimai
 
 2024-09-24 * (T0000801103000214649, 234507) Don Don: Donki  ; activity: eating, eating: snacks, time: 22:21, timezone: UTC+08:00
@@ -609,11 +609,11 @@ include ../../../preludes/self.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.00 HKD
 
-2024-09-24 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 23:07, timezone: UTC+08:00
+2024-09-24 Mass Transit Railway  ; activity: transport, time: 23:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
-2024-09-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:21, timezone: UTC+08:00
+2024-09-25 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:21, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
@@ -625,11 +625,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-09-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 13:57, timezone: UTC+08:00
+2024-09-25 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:51, timezone: UTC+08:00
+2024-09-25 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
@@ -646,35 +646,35 @@ include ../../../preludes/self.journal
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-09-25 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: transfer, time: 21:08, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 104.00 HKD
+2024-09-25 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 21:08, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 104.00 HKD
     assets:cash
 
-2024-09-25 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:10, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-25 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:10, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-25 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:25, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-25 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:25, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-25 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:40, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-25 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:40, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-25 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 21:55, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 80.00 HKD
+2024-09-25 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 21:55, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 80.00 HKD
     expenses:gaming:maimai
 
-2024-09-25 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 22:58, timezone: UTC+08:00
+2024-09-25 Mass Transit Railway  ; activity: transport, time: 22:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
     expenses:transport:trains
 
-2024-09-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:22, timezone: UTC+08:00
+2024-09-26 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
     expenses:transport:buses
 
-2024-09-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:52, timezone: UTC+08:00
+2024-09-26 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -682,11 +682,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot local milk tea, food_and_drink: medium fries, food_and_drink: sau egg
 
-2024-09-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 21:37, timezone: UTC+08:00
+2024-09-26 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:02, timezone: UTC+08:00
+2024-09-26 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 22:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.40 HKD
     expenses:transport:buses
 
@@ -710,11 +710,11 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    3 000.00 HKD
     assets:cash
 
-2024-09-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:26, timezone: UTC+08:00
+2024-09-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:26, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.60 HKD
     expenses:transport:buses
 
-2024-09-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 09:59, timezone: UTC+08:00
+2024-09-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
@@ -722,7 +722,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -130.00 HKD
     assets:accrued revenues:incomes:education      130.00 HKD
 
-2024-09-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 12:39, timezone: UTC+08:00
+2024-09-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 12:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
@@ -735,31 +735,31 @@ include ../../../preludes/self.journal
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            64.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -64.00 HKD
 
-2024-09-27 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 14:30, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5      -12.00 HKD
+2024-09-27 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 14:30, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5      -12.00 HKD
     expenses:gaming:maimai
 
-2024-09-27 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 14:55, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-27 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 14:55, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-27 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT15M, time: 15:21, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+2024-09-27 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 15:21, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
     expenses:gaming:maimai
 
-2024-09-27 527dd917-f0b0-4b21-a9fa-3442f50ef719  ; activity: consumption, duration: PT14M, time: 15:52, timezone: UTC+08:00
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 50.00 HKD
+2024-09-27 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 15:52, timezone: UTC+08:00
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 50.00 HKD
     expenses:gaming:maimai
 
-2024-09-27 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 16:24, timezone: UTC+08:00
+2024-09-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
-2024-09-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 00:04, timezone: UTC+08:00
+2024-09-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 00:04, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-09-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 00:22, timezone: UTC+08:00
+2024-09-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 00:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:buses
 
@@ -783,8 +783,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD = 169.90 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2024-09-29 (2024092915153445701) 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: billing, billing: e884f56b-7f88-46ee-b415-5d5f6d0e3687, time: 15:15:34, timezone: UTC+08:00
-    expenses:fees:810c451f-b2e5-4c98-8433-b1451593c457                      20.00 HKD
+2024-09-29 (2024092915153445701) Mass Transit Railway  ; activity: billing, billing: MTR Student Travel Scheme, time: 15:15:34, timezone: UTC+08:00
+    expenses:fees:Mass Transit Railway                                      20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
 
 2024-09-29 * (360606, MKB7MG1WVJ, 206856765550) Apple  ; activity: service, time: 16:01:48, timezone: UTC+08:00
@@ -822,45 +822,45 @@ include ../../../preludes/self.journal
     expenses:depreciation
 
 2024-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accrued revenues:incomes:education                                                       -390.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 200.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 -16 966.42 HKD = 0.00 HKD
-    assets:deferred expenses:education:tuition:universities                                      -21 050.00 HKD = 0.00 HKD
-    assets:deferred expenses:services:clouds:Apple                                                    -8.00 HKD = 0.00 HKD
-    assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
-    assets:accumulated depreciation                                                                2 661.55 HKD = 0.00 HKD
-    assets:accumulated depreciation                                                                1 333.33 KRW = 0.00 KRW
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 -2 517.74 HKD = 0.00 HKD
-    assets:cash                                                                                   -2 398.50 HKD = 0.00 HKD
-    assets:digital:527dd917-f0b0-4b21-a9fa-3442f50ef719:cc4e72c7-108e-44ff-bf90-49916ac984f5         -50.00 HKD = 0.00 HKD
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                       -4.20 HKD = 0.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               -204.90 HKD = 0.00 HKD
-    assets:objects:clothing                                                                       -1 038.00 HKD = 0.00 HKD
-    assets:objects:consumer electronics                                                           -8 628.00 HKD = 0.00 HKD
-    assets:objects:tools                                                                          -4 000.00 KRW = 0.00 KRW
-    assets:special:rewards:016707c8-8d24-47a5-940f-e687942b4ce8                                   -8 676. _PT/C = 0 _PT/C
-    equity:conversions:HKD-_PT/B:HKD                                                                  80.00 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                          -200 000. _PT/B = 0 _PT/B
-    equity:conversions:HKD-_PT/D:HKD                                                                 731.00 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/D:_PT/D                                                               -731 _PT/D = 0 _PT/D
-    equity:conversions:HKD-KRW:HKD                                                                  -827.73 HKD = 0.00 HKD
-    equity:conversions:HKD-KRW:KRW                                                               145 008.33 KRW = 0.00 KRW
-    equity:conversions:HKD-USD:HKD                                                                 3 573.03 HKD = 0.00 HKD
-    equity:conversions:HKD-USD:USD                                                                  -464.56 USD = 0.00 USD
-    equity:external:self.alternatives                                                            200 000. _PT/B = 0 _PT/B
-    equity:unaccounted                                                                            13 400.03 HKD = 0.00 HKD
-    equity:friends                                                                                    28.50 HKD = 0.00 HKD
-    equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                               37.00 HKD = 0.00 HKD
-    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                                2.00 HKD = 0.00 HKD
-    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                               35.10 HKD = 0.00 HKD
-    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                              185.00 HKD = 0.00 HKD
-    equity:kins:special                                                                            4 500.00 CNY = 0.00 CNY
-    equity:kins:special                                                                               90.00 HKD = 0.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -4 500.00 CNY = 0.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     58 071.21 HKD = 0.00 HKD
-    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                     -8 490.48 HKD = 0.00 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                      1 865.00 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                      17.64 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             43 180.00 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             17 629.71 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:education                                                        -390.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   -1 200.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  -16 966.42 HKD = 0.00 HKD
+    assets:deferred expenses:education:tuition:universities                                       -21 050.00 HKD = 0.00 HKD
+    assets:deferred expenses:services:clouds:Apple                                                     -8.00 HKD = 0.00 HKD
+    assets:deferred expenses:services:clouds:Google                                                  -150.00 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                                 2 661.55 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                                 1 333.33 KRW = 0.00 KRW
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  -2 517.74 HKD = 0.00 HKD
+    assets:cash                                                                                    -2 398.50 HKD = 0.00 HKD
+    assets:digital:荷里活Game Zone (Hollywood Game Zone):cc4e72c7-108e-44ff-bf90-49916ac984f5         -50.00 HKD = 0.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                        -4.20 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -204.90 HKD = 0.00 HKD
+    assets:objects:clothing                                                                        -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                            -8 628.00 HKD = 0.00 HKD
+    assets:objects:tools                                                                           -4 000.00 KRW = 0.00 KRW
+    assets:special:rewards:Wilson                                                                  -8 676. _PT/C = 0 _PT/C
+    equity:conversions:HKD-_PT/B:HKD                                                                   80.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                           -200 000. _PT/B = 0 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                                  731.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                                -731 _PT/D = 0 _PT/D
+    equity:conversions:HKD-KRW:HKD                                                                   -827.73 HKD = 0.00 HKD
+    equity:conversions:HKD-KRW:KRW                                                                145 008.33 KRW = 0.00 KRW
+    equity:conversions:HKD-USD:HKD                                                                  3 573.03 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                                   -464.56 USD = 0.00 USD
+    equity:external:self.alternatives                                                             200 000. _PT/B = 0 _PT/B
+    equity:unaccounted                                                                             13 400.03 HKD = 0.00 HKD
+    equity:friends                                                                                     28.50 HKD = 0.00 HKD
+    equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                                37.00 HKD = 0.00 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                                 2.00 HKD = 0.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                                35.10 HKD = 0.00 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                               185.00 HKD = 0.00 HKD
+    equity:kins:special                                                                             4 500.00 CNY = 0.00 CNY
+    equity:kins:special                                                                                90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      58 071.21 HKD = 0.00 HKD
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                      -8 490.48 HKD = 0.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                       1 865.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                                       17.64 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              43 180.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              17 629.71 HKD = 0.00 HKD
     equity:opening/closing balances

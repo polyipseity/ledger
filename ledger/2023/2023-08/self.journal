@@ -6,7 +6,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         33 438.32 HKD = 33 438.32 HKD
     assets:cash                                                                           22 635.00 HKD = 22 635.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        272.80 HKD = 272.80 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                           2 720.50 HKD = 2 720.50 HKD
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                         2 720.50 HKD = 2 720.50 HKD
     equity:conversions:HKD-USD:HKD                                                           -30.64 HKD = -30.64 HKD
     equity:conversions:HKD-USD:USD                                                             4.00 USD = 4.00 USD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            -42 366.25 HKD = -42 366.25 HKD
@@ -21,12 +21,12 @@ include ../../../preludes/self.journal
     assets:cash
 
 2023-08-01 (2023080122001432591451413590) Cafe 100%  ; activity: eating, eating: dinner, time: 19:52:15, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    60.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      60.00 HKD
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-01 (2023080122001432591452349718) 7-Eleven  ; activity: consumption, time: 21:35:26, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                    20.50 HKD  ; food_and_drink: Yakult
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:snacks                                      20.50 HKD  ; food_and_drink: Yakult
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-02 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, time: 13:30, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD
@@ -49,20 +49,20 @@ include ../../../preludes/self.journal
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc     2 167.60 HKD
 
 2023-08-06 (2023080622001432591404287580) Cafe 100%  ; activity: eating, eating: lunch, time: 13:48:37, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    54.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      54.00 HKD
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-07 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, time: 18:31, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
 2023-08-07 (2023080722001432591408914153) Cafe 100%  ; activity: eating, eating: dinner, time: 20:53:27, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    62.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      62.00 HKD
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-08 (2023080822001432591409313051) Cafe 100%  ; activity: eating, eating: breakfast, time: 10:40:39, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    35.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot ovaltine, food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham with macaroni in soup (light)
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      35.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot ovaltine, food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham with macaroni in soup (light)
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-08 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, time: 13:53, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD
@@ -76,23 +76,23 @@ include ../../../preludes/self.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    5 000.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-08-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 13:02, timezone: UTC+08:00
+2023-08-10 Mass Transit Railway  ; activity: transport, time: 13:02, timezone: UTC+08:00
     expenses:transport:trains                                                4.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-10 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 13:03, timezone: UTC+08:00
+2023-08-10 public lgight bus  ; activity: transport, time: 13:03, timezone: UTC+08:00
     expenses:transport:minibuses                                             7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-10 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 17:56, timezone: UTC+08:00
+2023-08-10 public lgight bus  ; activity: transport, time: 17:56, timezone: UTC+08:00
     expenses:transport:minibuses                                             6.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-08-10 (2023081022001432591417678314) Maxim's Cakes  ; activity: eating, eating: snacks, time: 18:13:20, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                     9.00 HKD  ; food_and_drink: 2 chocolate cakes
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:snacks                                       9.00 HKD  ; food_and_drink: 2 chocolate cakes
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
-2023-08-10 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 21:07, timezone: UTC+08:00
+2023-08-10 Mass Transit Railway  ; activity: transport, time: 21:07, timezone: UTC+08:00
     expenses:transport:trains                                                6.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -118,12 +118,12 @@ include ../../../preludes/self.journal
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f
 
 2023-08-12 (2023081222001432591423154870) Cafe 100%  ; activity: eating, eating: lunch, time: 14:07:53, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    54.00 HKD  ; food_and_drink: baked pork chop, food_and_drink: hot Ovaltine, food_and_drink: spicy bolognese sauce
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      54.00 HKD  ; food_and_drink: baked pork chop, food_and_drink: hot Ovaltine, food_and_drink: spicy bolognese sauce
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-13 (2023081322001432591426360537) Cafe 100%  ; activity: eating, eating: lunch, time: 14:33:32, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    35.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: no-flip over easy egg, food_and_drink: spiced pork cubes
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      35.00 HKD  ; food_and_drink: hot Ovaltine, food_and_drink: instant noodles in soup, food_and_drink: no-flip over easy egg, food_and_drink: spiced pork cubes
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-14 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, time: 14:20, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD
@@ -146,17 +146,17 @@ include ../../../preludes/self.journal
     assets:cash
 
 2023-08-19 (2023081922001432591447053862) Cafe 100%  ; activity: eating, eating: dinner, time: 13:15:13, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    48.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: insant noodles in soup, food_and_drink: scrmabled egg, food_and_drink: spiced pork cubes
-    expenses:food and drinks:dining                                    57.00 HKD  ; food_and_drink: bitter melon in black bean sauce, food_and_drink: hot chocolate, food_and_drink: rice, food_and_drink: stir-fried beef
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      48.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: insant noodles in soup, food_and_drink: scrmabled egg, food_and_drink: spiced pork cubes
+    expenses:food and drinks:dining                                      57.00 HKD  ; food_and_drink: bitter melon in black bean sauce, food_and_drink: hot chocolate, food_and_drink: rice, food_and_drink: stir-fried beef
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-19 barbershop  ; activity: service, service: haircutting, time: 13:47:40, timezone: UTC+08:00
     expenses:services                                               60.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2023-08-19 * (2023081922001432591446688935) 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; activity: repair, time: 19:09:02, timezone: UTC+08:00
-    assets:deferred expenses:repairs                                  772.00 HKD  ; repair: glasses
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236     -772.00 HKD
+    assets:deferred expenses:repairs                                    772.00 HKD  ; repair: glasses
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)     -772.00 HKD
 
 2023-08-20 0d184a06-c627-4e69-b161-51b74e1a9bf9  ; activity: adjust, time: 13:10:30, timezone: UTC+08:00
     assets:deferred expenses:repairs     -772.00 HKD
@@ -167,9 +167,9 @@ include ../../../preludes/self.journal
     assets:cash
 
 2023-08-21 (2023082122001432591449753930) Cafe 100%  ; activity: eating, eating: breakfast, time: 10:29:16, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    expenses:food and drinks:dining                                      37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-21 13fabcbb-072d-47a2-afab-cace6eb95fdb  ; activity: adjust, time: 10:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:tutoring     -960.00 HKD
@@ -213,8 +213,8 @@ include ../../../preludes/self.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
 2023-08-27 (2023082722001432591418713935) Cafe 100%  ; activity: eating, eating: breakfast, time: 09:11:57, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot coffee, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-27 6ff58fb3-4579-4533-aab9-8575033136c7  ; activity: tutoring, duration: PT5H26M40S, time: 12:30:00, timezone: UTC+08:00
     revenues:incomes:tutoring     -300.00 HKD  ; time: 13:23:30, timezone: UTC+08:00
@@ -232,11 +232,11 @@ include ../../../preludes/self.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -50.00 HKD  ; time: 07:59:32
     assets:cash
 
-2023-08-28 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 08:51, timezone: UTC+08:00
+2023-08-28 Mass Transit Railway  ; activity: transport, time: 08:51, timezone: UTC+08:00
     expenses:transport:trains                                                4.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-28 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 09:07, timezone: UTC+08:00
+2023-08-28 public lgight bus  ; activity: transport, time: 09:07, timezone: UTC+08:00
     expenses:transport:minibuses                                             7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -253,11 +253,11 @@ include ../../../preludes/self.journal
     assets:special:vouchers                                                -35.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-28 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 14:47, timezone: UTC+08:00
+2023-08-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 14:47, timezone: UTC+08:00
     expenses:transport:buses                                                 8.10 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-28 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 16:10, timezone: UTC+08:00
+2023-08-28 Mass Transit Railway  ; activity: transport, time: 16:10, timezone: UTC+08:00
     expenses:transport:trains                                                4.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -266,30 +266,30 @@ include ../../../preludes/self.journal
     assets:cash
 
 2023-08-29 (2023082922001432591432501022) Cafe 100%  ; activity: eating, eating: dinner, time: 19:02:32, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    63.00 HKD  ; food_and_drink: Yangzhou fried rice
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      63.00 HKD  ; food_and_drink: Yangzhou fried rice
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-30 (2023083022001432591433076471) Cafe 100%  ; activity: eating, eating: breakfast, time: 09:01:37, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-30 (2023083022001432591432349455) Subway  ; activity: eating, eating: lunch, time: 11:41:39, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    40.00 HKD  ; food_and_drink: 6-inch Subway Melt with barbecue sauce
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      40.00 HKD  ; food_and_drink: 6-inch Subway Melt with barbecue sauce
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
-2023-08-30 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 11:03, timezone: UTC+08:00
+2023-08-30 Mass Transit Railway  ; activity: transport, time: 11:03, timezone: UTC+08:00
     expenses:transport:trains                                                4.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-30 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 11:05, timezone: UTC+08:00
+2023-08-30 Mass Transit Railway  ; activity: transport, time: 11:05, timezone: UTC+08:00
     expenses:transport:trains                                                7.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-30 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 12:01, timezone: UTC+08:00
+2023-08-30 public lgight bus  ; activity: transport, time: 12:01, timezone: UTC+08:00
     expenses:transport:minibuses                                             6.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-08-30 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 13:06, timezone: UTC+08:00
+2023-08-30 public lgight bus  ; activity: transport, time: 13:06, timezone: UTC+08:00
     expenses:transport:minibuses                                             6.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -297,15 +297,15 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD  ; time: 14:35:50, timezone: UTC+08:00
     assets:cash
 
-2023-08-30 810c451f-b2e5-4c98-8433-b1451593c457  ; activity: transport, time: 19:38, timezone: UTC+08:00
+2023-08-30 Mass Transit Railway  ; activity: transport, time: 19:38, timezone: UTC+08:00
     expenses:transport:trains                                                4.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-08-30 (2023083022001432591436873803) Genki  ; activity: eating, eating: dinner, time: 21:51:44, timezone: UTC+08:00
-    expenses:food and drinks:dining                                   745.80 HKD  ; food_and_drink: many sushi
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                     745.80 HKD  ; food_and_drink: many sushi
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
-2023-08-30 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 22:19, timezone: UTC+08:00
+2023-08-30 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 22:19, timezone: UTC+08:00
     expenses:transport:buses                                                 6.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -326,8 +326,8 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2023-08-31 (2023083122001432591435689069) Cafe 100%  ; activity: eating, eating: breakfast, time: 10:43:19, timezone: UTC+08:00
-    expenses:food and drinks:dining                                    37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236
+    expenses:food and drinks:dining                                      37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot Horlicks, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-08-31 2147e96b-adf0-45f5-bdb9-1e201b39b858  ; serious common cold, activity: healthcare, time: 11:15, timezone: UTC+08:00
     expenses:healthcare:medication      400.00 HKD  ; duration: P3D
@@ -350,7 +350,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:education:tuition:universities                                     -21 450.00 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f    -21 050.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                              -143.30 HKD = 0.00 HKD
-    assets:special:vouchers:7c271977-704b-40c2-81c2-3a95c2aee236                                   -480.20 HKD = 0.00 HKD
+    assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                                 -480.20 HKD = 0.00 HKD
     equity:conversions:HKD-USD:HKD                                                                2 395.83 HKD = 0.00 HKD
     equity:conversions:HKD-USD:USD                                                                 -313.00 USD = 0.00 USD
     equity:kins:special                                                                           4 500.00 CNY = 0.00 CNY
