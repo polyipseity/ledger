@@ -228,20 +228,20 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-04-12 荷里活Game Zone (Hollywood Game Zone)  ; activity: fee, time: 15:26:30, timezone: UTC+08:00
-    assets:cash                                                                                    -30.00 HKD
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1            0.00
-    expenses:fees                                                                                              ; item: assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1
+    assets:cash                                                                  -30.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1            0.00
+    expenses:fees                                                                            ; item: assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1
 
 2024-04-12 荷里活Game Zone (Hollywood Game Zone)  ; activity: fee, time: 15:26:30, timezone: UTC+08:00
     assets:cash        -20.00 HKD
     expenses:fees                  ; item: assets:digital:Aime:935ce0da-b422-47b3-ab25-9fdc4369f9ce
 
 2024-04-12 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 15:32, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       50.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       50.00 HKD
     assets:cash
 
 2024-04-12 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 17, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-12 Mass Transit Railway  ; activity: transport, time: 17:46, timezone: UTC+08:00
@@ -289,11 +289,11 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-04-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 20:54, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 21:30, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-15 (FRN20240415PAYD0101610493303) self  ; activity: transfer, time: 21:49:32, timezone: UTC+08:00, via: eDDA
@@ -362,23 +362,23 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-04-17 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 21:00, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 21:20, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 21:40, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 22:00, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 22:20, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 2.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 2.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Don Don: Donki  ; activity: eating, eating: snacks, time: 22:44, timezone: UTC+08:00
@@ -551,15 +551,15 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-04-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 19:19:30, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 102.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 102.00 HKD
     assets:cash
 
 2024-04-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 19:30, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 96.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 96.00 HKD
     expenses:gaming:maimai
 
 2024-04-24 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, time: 19:55, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
     expenses:gaming:maimai
 
 2024-04-24 (N42400456643, HD12442409399440) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:10:15, timezone: UTC+08:00
@@ -689,39 +689,39 @@ include ../../../preludes/self.journal
     expenses:depreciation
 
 2024-04-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
-    assets:accumulated depreciation                                                                 1 280.40 HKD = 0.00 HKD
-    assets:accrued revenues:education                                                                 -35.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                     -800.00 HKD = 0.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                  -16 966.42 HKD = 0.00 HKD
-    assets:accrued revenues:rewards:competitions                                                     -125.00 USD = 0.00 USD
-    assets:deferred expenses:education:tuition:universities                                        -5 087.00 HKD = 0.00 HKD
-    assets:deferred expenses:insurances:health                                                        -83.98 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 -22 354.55 HKD = 0.00 HKD
-    assets:cash                                                                                   -35 792.00 HKD = 0.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -107.10 HKD = 0.00 HKD
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1         -90.00 HKD = 0.00 HKD
-    assets:objects:clothing                                                                        -1 038.00 HKD = 0.00 HKD
-    assets:objects:consumer electronics                                                            -8 628.00 HKD = 0.00 HKD
-    assets:special:rewards:Wilson                                                                  -8 676. _PT/C = 0 _PT/C
-    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                          -461 _PT/D = 0 _PT/D
-    equity:conversions:HKD-_PT/B:HKD                                                                   80.00 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           -200 000. _PT/B = 0 _PT/B
-    equity:conversions:HKD-_PT/D:HKD                                                                  266.00 HKD = 0.00 HKD
-    equity:conversions:HKD-_PT/D:_PT/D                                                                -266 _PT/D = 0 _PT/D
-    equity:conversions:HKD-USD:HKD                                                                  2 653.39 HKD = 0.00 HKD
-    equity:conversions:HKD-USD:USD                                                                   -346.48 USD = 0.00 USD
-    equity:external:self.alternatives                                                             200 000. _PT/B = 0 _PT/B
-    equity:friends                                                                                     28.50 HKD = 0.00 HKD
-    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                                35.10 HKD = 0.00 HKD
-    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                               185.00 HKD = 0.00 HKD
-    equity:kins:special                                                                             4 500.00 CNY = 0.00 CNY
-    equity:kins:special                                                                                90.00 HKD = 0.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      -4 500.00 CNY = 0.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      60 618.05 HKD = 0.00 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                         527.00 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                       23.52 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              47 498.00 HKD = 0.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              23 506.28 HKD = 0.00 HKD
-    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                                      88.00 HKD = 0.00 HKD
-    equity:unaccounted                                                                             13 400.03 HKD = 0.00 HKD
+    assets:accumulated depreciation                                                         1 280.40 HKD = 0.00 HKD
+    assets:accrued revenues:education                                                         -35.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             -800.00 HKD = 0.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7          -16 966.42 HKD = 0.00 HKD
+    assets:accrued revenues:rewards:competitions                                             -125.00 USD = 0.00 USD
+    assets:deferred expenses:education:tuition:universities                                -5 087.00 HKD = 0.00 HKD
+    assets:deferred expenses:insurances:health                                                -83.98 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -22 354.55 HKD = 0.00 HKD
+    assets:cash                                                                           -35 792.00 HKD = 0.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -107.10 HKD = 0.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1                   -90.00 HKD = 0.00 HKD
+    assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
+    assets:objects:consumer electronics                                                    -8 628.00 HKD = 0.00 HKD
+    assets:special:rewards:Wilson                                                          -8 676. _PT/C = 0 _PT/C
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  -461 _PT/D = 0 _PT/D
+    equity:conversions:HKD-_PT/B:HKD                                                           80.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                   -200 000. _PT/B = 0 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                          266.00 HKD = 0.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                        -266 _PT/D = 0 _PT/D
+    equity:conversions:HKD-USD:HKD                                                          2 653.39 HKD = 0.00 HKD
+    equity:conversions:HKD-USD:USD                                                           -346.48 USD = 0.00 USD
+    equity:external:self.alternatives                                                     200 000. _PT/B = 0 _PT/B
+    equity:friends                                                                             28.50 HKD = 0.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                        35.10 HKD = 0.00 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       185.00 HKD = 0.00 HKD
+    equity:kins:special                                                                     4 500.00 CNY = 0.00 CNY
+    equity:kins:special                                                                        90.00 HKD = 0.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              -4 500.00 CNY = 0.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                              60 618.05 HKD = 0.00 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 527.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:levy                                               23.52 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25      47 498.00 HKD = 0.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7      23 506.28 HKD = 0.00 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                              88.00 HKD = 0.00 HKD
+    equity:unaccounted                                                                     13 400.03 HKD = 0.00 HKD
     equity:opening/closing balances

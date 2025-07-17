@@ -1,45 +1,45 @@
 include ../../../preludes/self.journal
 
 2024-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:accumulated depreciation                                                                -1 557.23 HKD = -1 557.23 HKD
-    assets:accrued revenues:education                                                                  35.00 HKD = 35.00 HKD
-    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                      800.00 HKD = 800.00 HKD
-    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                   16 966.42 HKD = 16 966.42 HKD
-    assets:accrued revenues:rewards:competitions                                                      125.00 USD = 125.00 USD
-    assets:deferred expenses:accommodations                                                            99.82 HKD = 99.82 HKD
-    assets:deferred expenses:fees:Hong Kong Government                                                370.00 HKD = 370.00 HKD
-    assets:deferred expenses:insurances:health                                                         41.30 HKD = 41.30 HKD
-    assets:deferred expenses:transport:airplanes                                                    1 276.00 HKD = 1 276.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                  39 444.86 HKD = 39 444.86 HKD
-    assets:cash                                                                                    16 344.00 HKD = 16 344.00 HKD
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                  19.40 HKD = 19.40 HKD
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1          12.00 HKD = 12.00 HKD
-    assets:objects:clothing                                                                         1 038.00 HKD = 1 038.00 HKD
-    assets:objects:consumer electronics                                                             8 628.00 HKD = 8 628.00 HKD
-    assets:special:rewards:Wilson                                                                   8 676. _PT/C = 8 676 _PT/C
-    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                           244 _PT/D = 244 _PT/D
-    equity:conversions:HKD-_PT/B:HKD                                                                  -80.00 HKD = -80.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                            200 000. _PT/B = 200 000 _PT/B
-    equity:conversions:HKD-_PT/D:HKD                                                                 -483.00 HKD = -483.00 HKD
-    equity:conversions:HKD-_PT/D:_PT/D                                                                 483 _PT/D = 483 _PT/D
-    equity:conversions:HKD-USD:HKD                                                                 -2 653.39 HKD = -2 653.39 HKD
-    equity:conversions:HKD-USD:USD                                                                    346.48 USD = 346.48 USD
-    equity:external:self.alternatives                                                            -200 000. _PT/B = -200 000 _PT/B
-    equity:friends                                                                                    -28.50 HKD = -28.50 HKD
-    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                                -2.00 HKD = -2.00 HKD
-    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                               -35.10 HKD = -35.10 HKD
-    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                              -185.00 HKD = -185.00 HKD
-    equity:kins:special                                                                            -4 500.00 CNY = -4 500.00 CNY
-    equity:kins:special                                                                               -90.00 HKD = -90.00 HKD
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                       4 500.00 CNY = 4 500.00 CNY
-    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                     -60 618.05 HKD = -60 618.05 HKD
-    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                      -1 127.00 HKD = -1 127.00 HKD
-    liabilities:accrued expenses:insurances:levy                                                      -23.52 HKD = -23.52 HKD
-    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             -47 498.00 HKD = -47 498.00 HKD
-    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             -23 506.28 HKD = -23 506.28 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                       -1 276.00 HKD = -1 276.00 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                          -99.82 HKD = -99.82 HKD
-    equity:unaccounted                                                                            -13 400.03 HKD = -13 400.03 HKD
+    assets:accumulated depreciation                                                        -1 557.23 HKD = -1 557.23 HKD
+    assets:accrued revenues:education                                                          35.00 HKD = 35.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              800.00 HKD = 800.00 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           16 966.42 HKD = 16 966.42 HKD
+    assets:accrued revenues:rewards:competitions                                              125.00 USD = 125.00 USD
+    assets:deferred expenses:accommodations                                                    99.82 HKD = 99.82 HKD
+    assets:deferred expenses:fees:Hong Kong Government                                        370.00 HKD = 370.00 HKD
+    assets:deferred expenses:insurances:health                                                 41.30 HKD = 41.30 HKD
+    assets:deferred expenses:transport:airplanes                                            1 276.00 HKD = 1 276.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                          39 444.86 HKD = 39 444.86 HKD
+    assets:cash                                                                            16 344.00 HKD = 16 344.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                          19.40 HKD = 19.40 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1                    12.00 HKD = 12.00 HKD
+    assets:objects:clothing                                                                 1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                     8 628.00 HKD = 8 628.00 HKD
+    assets:special:rewards:Wilson                                                           8 676. _PT/C = 8 676 _PT/C
+    assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                   244 _PT/D = 244 _PT/D
+    equity:conversions:HKD-_PT/B:HKD                                                          -80.00 HKD = -80.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B                                                    200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/D:HKD                                                         -483.00 HKD = -483.00 HKD
+    equity:conversions:HKD-_PT/D:_PT/D                                                         483 _PT/D = 483 _PT/D
+    equity:conversions:HKD-USD:HKD                                                         -2 653.39 HKD = -2 653.39 HKD
+    equity:conversions:HKD-USD:USD                                                            346.48 USD = 346.48 USD
+    equity:external:self.alternatives                                                    -200 000. _PT/B = -200 000 _PT/B
+    equity:friends                                                                            -28.50 HKD = -28.50 HKD
+    equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                        -2.00 HKD = -2.00 HKD
+    equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       -35.10 HKD = -35.10 HKD
+    equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                      -185.00 HKD = -185.00 HKD
+    equity:kins:special                                                                    -4 500.00 CNY = -4 500.00 CNY
+    equity:kins:special                                                                       -90.00 HKD = -90.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                               4 500.00 CNY = 4 500.00 CNY
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             -60 618.05 HKD = -60 618.05 HKD
+    equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                              -1 127.00 HKD = -1 127.00 HKD
+    liabilities:accrued expenses:insurances:levy                                              -23.52 HKD = -23.52 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25     -47 498.00 HKD = -47 498.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     -23 506.28 HKD = -23 506.28 HKD
+    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                               -1 276.00 HKD = -1 276.00 HKD
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                  -99.82 HKD = -99.82 HKD
+    equity:unaccounted                                                                    -13 400.03 HKD = -13 400.03 HKD
     equity:opening/closing balances
 
 2024-06-01 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 14, timezone: UTC+08:00
@@ -59,31 +59,31 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 15:10:19, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 112.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 112.00 HKD
     assets:cash
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 16:22, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 16:50, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 17:14, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT16M, time: 17:58, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 18:22, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 18:39, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-01 Mass Transit Railway  ; activity: transport, time: 18:40, timezone: UTC+08:00
@@ -119,23 +119,23 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-06-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 16:50, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 17:09, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 17:29, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 17:46, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 17:01, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 46.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 46.00 HKD
     expenses:gaming:maimai
 
 2024-06-03 Mass Transit Railway  ; activity: transport, time: 18:57, timezone: UTC+08:00
@@ -147,23 +147,23 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-05 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 16:52, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-05 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 17:04, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-05 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT9M, time: 17:16, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-05 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT9M, time: 17:32, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-05 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT9M, time: 17:48, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 16.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 16.00 HKD
     expenses:gaming:maimai
 
 2024-06-05 Mass Transit Railway  ; activity: transport, time: 18:34, timezone: UTC+08:00
@@ -203,19 +203,19 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 19:09, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT11M, time: 19:25, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 18:39:24, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 104.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 104.00 HKD
     assets:cash
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT9M, time: 19:50, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 98.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 98.00 HKD
     expenses:gaming:maimai
 
 2024-06-07 Mass Transit Railway  ; activity: transport, time: 19:09, timezone: UTC+08:00
@@ -231,15 +231,15 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 23:17, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 23:32, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-07 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 23:46, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 80.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 80.00 HKD
     expenses:gaming:maimai
 
 2024-06-08 Mass Transit Railway  ; activity: transport, time: 00:40, timezone: UTC+08:00
@@ -288,35 +288,35 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 13:58, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 14:10, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 14:22, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 14:34, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 14:46, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 14:58, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 15:10, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 15:22, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-11 Mass Transit Railway  ; activity: transport, time: 16:36, timezone: UTC+08:00
@@ -332,43 +332,43 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 16:52:28, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 132.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 132.00 HKD
     assets:cash
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 17:00, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 17:17, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 17:34, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT8M, time: 17:51, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT10M, time: 18:02, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 18:18, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 18:35, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 19:00, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 19:21, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 78.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 78.00 HKD
     expenses:gaming:maimai
 
 2024-06-13 unknown  ; activity: eating, eating: dinner, time: 20:49:58, timezone: UTC+08:00
@@ -404,19 +404,19 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 20:28, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 20:45, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 21:03, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 21:26, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 (58B2EF/2350) McDonald's  ; activity: eating, eating: snacks, time: 21:46:15, timezone: UTC+08:00
@@ -424,15 +424,15 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                                    ; food_and_drink: hot fudge sundae
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT16M, time: 22:16, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 22:35, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT11M, time: 22:49, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 36.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 36.00 HKD
     expenses:gaming:maimai
 
 2024-06-15 Mass Transit Railway  ; activity: transport, time: 23:43, timezone: UTC+08:00
@@ -609,17 +609,17 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-22 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT11M, time: 17:27, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-06-22 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 17:52, timezone: UTC+08:00
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 24.00 HKD
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 24.00 HKD
     expenses:gaming:maimai
 
 2024-06-22 * 荷里活Game Zone (Hollywood Game Zone)  ; 1 bad staff, activity: lost, time: 18, timezone: UTC+08:00
-    expenses:writeoffs:lost                                                                       1 024.00 HKD  ; writeoff: lost wallet
-    assets:digital:荷里活Game Zone (Hollywood Game Zone):e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -24.00 HKD = 0.00 HKD
-    assets:special:vouchers:Sino United Publishing                                               -1 000.00 HKD = 0.00 HKD
+    expenses:writeoffs:lost                                                     1 024.00 HKD  ; writeoff: lost wallet
+    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -24.00 HKD = 0.00 HKD
+    assets:special:vouchers:Sino United Publishing                             -1 000.00 HKD = 0.00 HKD
 
 2024-06-22 Mass Transit Railway  ; activity: transport, time: 18:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
