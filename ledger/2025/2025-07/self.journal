@@ -281,7 +281,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
 2025-07-15 (888/072572, 072572, 340) Café de Coral  ; activity: eating, eating: dinner, time: 16:58:14, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot coffee, food_and_drink: 優豬扒, food_and_drink: 撈麵, food_and_drink: 腸仔
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: hot coffee, food_and_drink: instant noodles with onion oil, food_and_drink: pork chop, food_and_drink: sausage
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2025-07-16 (73284627, 15) Cafe 100%  ; activity: eating, duration: PT25M25S, duration: PT40M19S, eating: breakfast, time: 07:49:41, timezone: UTC+08:00
@@ -320,7 +320,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.10 HKD  ; food_and_drink: cream soup, food_and_drink: hot coffee, food_and_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
-2025-07-17 * (?????, K???) Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: snacks, time: 19:15, timezone: UTC+08:00
+2025-07-17 * (?????, K???) Fusion  ; activity: eating, eating: snacks, time: 19:15, timezone: UTC+08:00
     expenses:food and drinks:snacks                            8.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (bottle)
     equity:friends:02f358e9-368a-40e8-875f-12a660a27abe       -8.00 HKD
 

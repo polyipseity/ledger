@@ -102,7 +102,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: 煙肉焗薯, food_and_drink: 酸忌廉, food_and_drink: 青菜沙律
 
-2024-04-08 Fusion, 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: eating, eating: snacks, time: 21:50, timezone: UTC+08:00
+2024-04-08 Fusion  ; activity: eating, eating: snacks, time: 21:50, timezone: UTC+08:00
     liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -17.80 HKD
     expenses:food and drinks:snacks                                           ; food_and_drink: 114929 Kinder bueno chocolate ×2
 
