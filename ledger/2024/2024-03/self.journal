@@ -169,7 +169,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -25.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 田園熱狗 · 春卷餐
 
-2024-03-06 public lgight bus  ; activity: transport, time: 19:18, timezone: UTC+08:00
+2024-03-06 public light bus  ; activity: transport, time: 19:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:minibuses
 

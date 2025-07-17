@@ -84,7 +84,7 @@ account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                            ; type: A
 account assets:special:vouchers:ParknShop                                                         ; type: A
-account assets:special:vouchers:Sino United Pblishing                                            ; type: A
+account assets:special:vouchers:Sino United Publishing                                            ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
 account assets:special:vouchers:Super Super Congee & Noodles                                      ; type: A
 account assets:special:vouchers:Wilson                                                            ; type: A
@@ -402,7 +402,7 @@ payee f34f8958-524c-416d-93b5-b2e35e68f08c
 payee f85da078-1fe9-42ae-b9d6-f2d47e62a19d
 payee friends
 payee kins
-payee public lgight bus
+payee public light bus
 payee taxis
 payee 一粥麵 (Super Super Congee & Noodles)
 payee 丸龜製麵

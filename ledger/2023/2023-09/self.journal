@@ -84,7 +84,7 @@ include ../../../preludes/self.journal
     expenses:fees:Stripe                                              3.77 HKD
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       36.20 HKD
 
-2023-09-07 public lgight bus  ; activity: transport, time: 21:58, timezone: UTC+08:00
+2023-09-07 public light bus  ; activity: transport, time: 21:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:minibuses
 
@@ -153,7 +153,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: iced Fanta, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
 
-2023-09-14 public lgight bus  ; activity: transport, time: 19:47, timezone: UTC+08:00
+2023-09-14 public light bus  ; activity: transport, time: 19:47, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:minibuses
 

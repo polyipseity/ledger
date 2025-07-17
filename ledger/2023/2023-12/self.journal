@@ -37,7 +37,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: spaghetti with pepperoni (tomato sauce)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2023-12-01 public lgight bus  ; activity: transport, time: 15:44, timezone: UTC+08:00
+2023-12-01 public light bus  ; activity: transport, time: 15:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:minibuses
 
@@ -305,7 +305,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-17 public lgight bus  ; activity: transport, time: 20:37, timezone: UTC+08:00
+2023-12-17 public light bus  ; activity: transport, time: 20:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
@@ -369,7 +369,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-21 public lgight bus  ; activity: transport, time: 11:01, timezone: UTC+08:00
+2023-12-21 public light bus  ; activity: transport, time: 11:01, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
@@ -441,7 +441,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: hot Ovaltine, food_and_drink: 紫菜三寶湯米粉
 
-2023-12-25 public lgight bus  ; activity: transport, time: 18:54, timezone: UTC+08:00
+2023-12-25 public light bus  ; activity: transport, time: 18:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.10 HKD
     expenses:transport:minibuses
 
@@ -521,7 +521,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-12-29 public lgight bus  ; activity: transport, time: 21:08, timezone: UTC+08:00
+2023-12-29 public light bus  ; activity: transport, time: 21:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 

@@ -260,7 +260,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-10-21 public lgight bus  ; activity: transport, time: 12:12, timezone: UTC+08:00
+2023-10-21 public light bus  ; activity: transport, time: 12:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 
@@ -300,7 +300,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-10-24 public lgight bus  ; activity: transport, time: 12:34, timezone: UTC+08:00
+2023-10-24 public light bus  ; activity: transport, time: 12:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 
@@ -324,7 +324,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-10-24 public lgight bus  ; activity: transport, time: 22:22, timezone: UTC+08:00
+2023-10-24 public light bus  ; activity: transport, time: 22:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 
@@ -382,7 +382,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-10-28 public lgight bus  ; activity: transport, time: 08:44, timezone: UTC+08:00
+2023-10-28 public light bus  ; activity: transport, time: 08:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 
@@ -406,7 +406,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
     expenses:transport:trains
 
-2023-10-29 public lgight bus  ; activity: transport, time: 09:08, timezone: UTC+08:00
+2023-10-29 public light bus  ; activity: transport, time: 09:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 

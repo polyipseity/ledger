@@ -694,7 +694,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.10 HKD  ; food_and_drink: cream soup, food_and_drink: hot local milk tea, food_and_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
-2024-11-22 public lgight bus  ; activity: transport, time: 00:45, timezone: UTC+08:00
+2024-11-22 public light bus  ; activity: transport, time: 00:45, timezone: UTC+08:00
     expenses:transport:minibuses                                             9.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.80 HKD
 
@@ -706,11 +706,11 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                10.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.80 HKD
 
-2024-11-22 public lgight bus  ; dllm, activity: transport, time: 01:57, timezone: UTC+08:00
+2024-11-22 public light bus  ; dllm, activity: transport, time: 01:57, timezone: UTC+08:00
     expenses:transport:minibuses                                            15.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -15.30 HKD
 
-2024-11-22 public lgight bus  ; dllm, activity: transport, time: 02:28, timezone: UTC+08:00
+2024-11-22 public light bus  ; dllm, activity: transport, time: 02:28, timezone: UTC+08:00
     expenses:transport:minibuses                                            16.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -16.90 HKD
 
