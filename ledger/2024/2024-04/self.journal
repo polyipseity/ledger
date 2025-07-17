@@ -181,11 +181,11 @@ include ../../../preludes/self.journal
 
 2024-04-11 (WMK162002) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:56:52, timezone: UTC+08:00
     assets:special:vouchers:Starbucks       25.00 HKD  ; valid: 2024-04-11T00:00:00+08:00/2026-12-31T23:59:59+08:00, voucher: Gift Certificate $25
-    revenues:education                     -25.00 HKD
+    revenues:rewards                       -25.00 HKD
 
 2024-04-11 (WMK162003) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:56:52, timezone: UTC+08:00
     assets:special:vouchers:Starbucks       25.00 HKD  ; valid: 2024-04-11T00:00:00+08:00/2026-12-31T23:59:59+08:00, voucher: Gift Certificate $25
-    revenues:education                     -25.00 HKD
+    revenues:rewards                       -25.00 HKD
 
 2024-04-11 (8/080321) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 18:54:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.50 HKD

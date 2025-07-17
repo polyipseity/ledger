@@ -324,8 +324,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.60 HKD
 
 2025-06-25 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 10:58:23, timezone: UTC+08:00
-    assets:accrued revenues:education      100.00 HKD  ; voucher: HK$50 PARKnSHOP voucher ×2
-    revenues:education                    -100.00 HKD
+    assets:accrued revenues:rewards      100.00 HKD  ; voucher: HK$50 PARKnSHOP voucher ×2
+    revenues:rewards                    -100.00 HKD
 
 2025-06-25 (C6P85615557, N62563624017, HD12562530100595) dfde318d-9ad1-4f25-8c57-2763ebfe1e3e  ; activity: repayment, time: 15:49:34, timezone: UTC+08:00
     liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e           121.20 HKD = 0.00 HKD
@@ -362,11 +362,11 @@ include ../../../preludes/self.journal
 
 2025-06-27 (8094077017) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:05, timezone: UTC+08:00
     assets:special:vouchers:ParknShop       50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077017) HK$50 PARKnSHOP voucher
-    assets:accrued revenues:education      -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077017) HK$50 PARKnSHOP voucher
+    assets:accrued revenues:rewards        -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077017) HK$50 PARKnSHOP voucher
 
 2025-06-27 (8094077018) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: voucher, time: 16:05, timezone: UTC+08:00
     assets:special:vouchers:ParknShop       50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077018) HK$50 PARKnSHOP voucher
-    assets:accrued revenues:education      -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077018) HK$50 PARKnSHOP voucher
+    assets:accrued revenues:rewards        -50.00 HKD  ; valid: 2025-06-25T10:58:23+08:00/2027-03-31T23:59:59+08:00, voucher: (8094077018) HK$50 PARKnSHOP voucher
 
 2025-06-27 (11/118807) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 16:20:21, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot milk tea, food_and_drink: spicy potato wedges
