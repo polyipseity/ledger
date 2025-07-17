@@ -475,7 +475,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
     expenses:transport:buses
 
-2024-07-18 (017129) Super Super Congee & Noodles  ; activity: eating, eating: dinner, time: 16:41, timezone: UTC+08:00
+2024-07-18 (017129) 一粥麵 (Super Super Congee & Noodles)  ; activity: eating, eating: dinner, time: 16:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: noodles, food_and_drink: red bean fleecy, food_and_drink: shrimp wonton (light portion), food_and_drink: value tea set
 
@@ -859,7 +859,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
     expenses:transport:trains
 
-2024-07-31 (017782) Super Super Congee & Noodles  ; activity: eating, eating: dinner, time: 16:33, timezone: UTC+08:00
+2024-07-31 (017782) 一粥麵 (Super Super Congee & Noodles)  ; activity: eating, eating: dinner, time: 16:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
     expenses:food and drinks:dining                                                    ; food_and_drink: noodles, food_and_drink: red bean fleecy, food_and_drink: shrimp wonton (light portion), food_and_drink: value tea set
 

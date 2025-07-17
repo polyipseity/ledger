@@ -84,8 +84,9 @@ account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093
 account assets:special:vouchers                                                                   ; type: A
 account assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                            ; type: A
 account assets:special:vouchers:ParknShop                                                         ; type: A
-account assets:special:vouchers:Sino United Publishing                                            ; type: A
+account assets:special:vouchers:Sino United Pblishing                                            ; type: A
 account assets:special:vouchers:Starbucks                                                         ; type: A
+account assets:special:vouchers:Super Super Congee & Noodles                                      ; type: A
 account assets:special:vouchers:Wilson                                                            ; type: A
 account assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e                              ; type: A
 account assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                        ; type: A
@@ -360,7 +361,6 @@ payee Starbucks
 payee Stripe
 payee Subway
 payee Sun Ferry
-payee Super Super Congee & Noodles
 payee Sushiro
 payee Swire
 payee TamJai SamGor
@@ -404,6 +404,7 @@ payee friends
 payee kins
 payee public lgight bus
 payee taxis
+payee 一粥麵 (Super Super Congee & Noodles)
 payee 丸龜製麵
 payee 同樂素食
 payee 大生生活超市 (DS Groceries)

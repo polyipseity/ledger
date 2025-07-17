@@ -288,9 +288,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: homemade Parmesan soft bun, food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg, food_and_drink: sugar-free oatmeal in fresh milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
-2025-07-16 (022790, SS011/002) Super Super Congee & Noodles  ; activity: eating, eating: dinner, time: 18:14, timezone: UTC+08:00
+2025-07-16 (022790, SS011/002) 一粥麵 (Super Super Congee & Noodles)  ; activity: eating, eating: dinner, time: 18:14, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: wonton w/ shrimp noodles
+    assets:special:vouchers:Super Super Congee & Noodles                     2.00 HKD  ; valid: 2025-06-25T18:14+08:00/2025-09-30T23:59:59+08:00, voucher: 一粥麵價值$2優惠券
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
+    revenues:rewards                                                        -2.00 HKD
 
 2025-07-16 7-Eleven  ; activity: eating, eating: snacks, time: 20:57, timezone: UTC+08:00
     expenses:food and drinks:snacks                                          9.00 HKD  ; food_and_drink: Mr. Brown Deluxe Coffee
