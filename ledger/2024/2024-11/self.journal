@@ -128,7 +128,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
 2024-11-04 Swire  ; activity: eating, eating: dinner, time: 20:31, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:dining                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                          4.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-04 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 20:32, timezone: UTC+08:00
@@ -683,7 +683,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
 2024-11-21 Swire  ; activity: eating, eating: lunch, time: 12:59, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:dining                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                          4.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 14:00:00, timezone: UTC+08:00
@@ -819,7 +819,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2024-11-25 Swire  ; activity: eating, eating: snacks, time: 18:45, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:snacks                                          4.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-25 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 18:50, timezone: UTC+08:00
@@ -855,7 +855,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
 
 2024-11-26 Swire  ; activity: eating, eating: snacks, time: 19:28, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:snacks                                          4.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-26 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:29, timezone: UTC+08:00

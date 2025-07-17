@@ -218,7 +218,7 @@ include ../../../preludes/self.journal
 
 2024-01-09 Swire  ; activity: eating, eating: dinner, time: 20:32, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
 2024-01-10 (1K3#564) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 11:53:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
@@ -458,7 +458,7 @@ include ../../../preludes/self.journal
 
 2024-01-24 Swire  ; activity: eating, eating: dinner, time: 17:35, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
 2024-01-24 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 19:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
@@ -629,7 +629,7 @@ include ../../../preludes/self.journal
 
 2024-01-30 Swire  ; activity: eating, eating: lunch, time: 12:38, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
 2024-01-30 McDonald's  ; activity: eating, eating: afternoon tea, time: 15:10:25, timezone: UTC+08:00
     expenses:food and drinks:dining                           34.60 HKD  ; food_and_drink: medium French fries, food_and_drink: sausage combo meal

@@ -201,7 +201,7 @@ include ../../../preludes/self.journal
 
 2024-02-06 Swire  ; activity: eating, eating: dinner, time: 14:17, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
 2024-02-06 (N20685363802) self  ; activity: repayment, time: 16:28:30, timezone: UTC+08:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      159.60 HKD = 0.00 HKD
@@ -350,7 +350,7 @@ include ../../../preludes/self.journal
 
 2024-02-15 Swire  ; activity: eating, eating: lunch, time: 14:10, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" Lime Flavoured Sparkling Water
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" Lime Flavoured Sparkling Water (can)
 
 2024-02-15 a19a3525-a11c-40de-9726-79b0738910d7  ; activity: transport, time: 22:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
@@ -414,7 +414,7 @@ include ../../../preludes/self.journal
 
 2024-02-19 Swire  ; activity: eating, eating: dinner, time: 18:33, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 1 can of "Schweppes" +C Lemon Soda
+    expenses:food and drinks:dining                                                    ; food_and_drink: "Schweppes" +C Lemon Soda (can)
 
 2024-02-19 41b33891-3b43-4ac6-9ebb-42d8737ae227  ; activity: transport, time: 23:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
