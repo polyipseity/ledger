@@ -225,10 +225,10 @@ include ../../../preludes/self.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -39 900.00 KRW
 
 2025-07-12 ! (??????????, ????????) 7-Eleven  ; activity: eating, eating: snacks, time: 22, timezone: UTC+09:00
-    expenses:food and drinks:snacks                                   4 700.00 KRW  ; food_and_drink: Chocolate Creme Oreo Chocolate Sandwich Cookies ×3
+    expenses:food and drinks:snacks                                   4 600.00 KRW  ; food_and_drink: Chocolate Creme Oreo Chocolate Sandwich Cookies ×3
     equity:conversions:HKD-KRW:HKD                                       26.85 HKD
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -26.85 HKD
-    equity:conversions:HKD-KRW:KRW                                   -4 700.00 KRW  ; rate: 0.0057127660
+    equity:conversions:HKD-KRW:KRW                                   -4 600.00 KRW  ; rate: 0.0058369565
 
 2025-07-13 ! (????????-??-????, ????????) Tokkijung Project  ; activity: eating, eating: lunch, time: 13, timezone: UTC+09:00
     expenses:food and drinks:dining                              19 800.00 KRW  ; food_and_drink: (unknown), food_and_drink: coke
@@ -255,9 +255,9 @@ include ../../../preludes/self.journal
 
 2025-07-14 ! (10361024002, 819536, 51036102) 7-Eleven  ; activity: eating, eating: snacks, time: 01:34, timezone: UTC+08:00
     expenses:food and drinks:snacks                                                 9.50 HKD  ; food_and_drink: Mr. Brown Coffee (Caramel Macchiato Flavour)
-    assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         1 _PT/D = 1 _PT/D
+    assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         2 _PT/D = 2 _PT/D
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  -9.50 HKD = -365.49 HKD
-    revenues:rewards                                                                -1 _PT/D
+    revenues:rewards                                                                -2 _PT/D
 
 2025-07-14 (C7E01790170, FRN20250714PAYD0102623835164, OCTOPUS038084565301286497) self  ; activity: transfer, time: 10:46, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
