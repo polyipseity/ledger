@@ -651,6 +651,38 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       34.00 HKD
     revenues:incomes:education                     -34.00 HKD
 
+2025-07-28 7-Eleven  ; activity: eating, eating: snacks, time: 10:57, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend BREWED LATTE
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
+2025-07-28 (41156304, 42) Cafe 100%  ; activity: eating, duration: PT29M37S, eating: breakfast, time: 11:28:23, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: instant noodles in Italian tomato soup, food_and_drink: luncheon meat, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-07-28 (000-929204, 36) Saizeriya  ; activity: eating, duration: PT25M26S, eating: dinner, time: 17:03:00, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti "PEPERONCINO" with spinach
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-07-29 (41156613, 73) Cafe 100%  ; activity: eating, duration: PT32M8S, eating: breakfast, time: 11:29:52, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: instant noodles in Italian tomato soup, food_and_drink: luncheon meat, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-07-29 (C7T13300523, FRN20250729PAYD0102657966829, OCTOPUS038084565301286497) self  ; activity: transfer, time: 17:41, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-07-29 self  ; activity: transfer, time: 17:41, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-07-29 (000-929366, 16) Saizeriya  ; activity: eating, duration: PT47M49S, eating: dinner, time: 17:38:13, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: chicken doria
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-07-29 7-Eleven  ; activity: eating, eating: snacks, time: 19:57, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+
 2025-07-29 ! Google  ; activity: service, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Google                  150.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
@@ -658,6 +690,10 @@ include ../../../preludes/self.journal
 2025-07-29 ! Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Google                      150.00 HKD
     assets:deferred expenses:services:clouds:Google     -150.00 HKD
+
+2025-07-30 (000-929567, 46) Saizeriya  ; activity: eating, duration: PT36M47S, eating: dinner, time: 18:23:20, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with tomato & bacon
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-07-30 ! (MKB8HS0GTG) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
