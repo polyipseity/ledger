@@ -1,5 +1,13 @@
 include ../../../preludes/self.journal
 
+2026-07-29 ! (??????, SOP.3336-8963-3580-77782..2) Google  ; activity: service, time: ??:??:??, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Google                  150.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
+
+2026-07-29 ! (SOP.3336-8963-3580-77782..1) Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Google                      150.00 HKD
+    assets:deferred expenses:services:clouds:Google     -150.00 HKD
+
 2026-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow

@@ -663,9 +663,17 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti "PEPERONCINO" with spinach
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
+2025-07-29 * (1000524, SOP.3336-8963-3580-77782..1) Google  ; activity: service, time: 00:25:55, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Google                  150.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
+
 2025-07-29 (41156613, 73) Cafe 100%  ; activity: eating, duration: PT32M8S, eating: breakfast, time: 11:29:52, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: instant noodles in Italian tomato soup, food_and_drink: luncheon meat, food_and_drink: scrambled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
+
+2025-07-29 (855518, MKB8LGDKKF, 702000915962) Apple  ; activity: service, time: 16:01:34, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
 
 2025-07-29 (C7T13300523, FRN20250729PAYD0102657966829, OCTOPUS038084565301286497) self  ; activity: transfer, time: 17:41, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -683,11 +691,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
-2025-07-29 ! Google  ; activity: service, timezone: UTC+08:00
-    assets:deferred expenses:services:clouds:Google                  150.00 HKD
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2     -150.00 HKD
-
-2025-07-29 ! Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2025-07-29 * (SOP.3336-8963-3580-77782..0) Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Google                      150.00 HKD
     assets:deferred expenses:services:clouds:Google     -150.00 HKD
 
@@ -695,7 +699,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: spaghetti with tomato & bacon
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
-2025-07-30 ! (MKB8HS0GTG) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2025-07-30 * (MKB8HS0GTG) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
 
