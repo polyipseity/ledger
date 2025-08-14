@@ -270,7 +270,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.80 HKD
 
 2025-08-12 (00664/001#0078, 876640110203720250812) ParknShop  ; activity: eating, eating: drinks, time: 10:20, timezone: UTC+08:00
-    expenses:food and drinks:drinks                                         44.00 HKD  ; food_and_drink: 434838 雀巢雀巢咖啡1+2原
+    expenses:food and drinks:drinks                                         44.00 HKD  ; food_and_drink: 434838 雀巢 雀巢咖啡1+2原味條装 15 g×42
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -44.00 HKD
 
 2025-08-12 (41160955, 12) Cafe 100%  ; activity: eating, duration: PT31M59S, eating: breakfast, time: 11:27:01, timezone: UTC+08:00
