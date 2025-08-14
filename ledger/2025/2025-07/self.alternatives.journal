@@ -28,3 +28,21 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$ = 8 088 GREEN$
     revenues:recycables:food loss and waste                                  -1.000 _FLW
     equity:conversions:GREEN$-_FLW:GREEN$                                     -50 GREEN$
+
+2025-07-26 self  ; activity: collect, duration: -P26D, time: 18, timezone: UTC+08:00
+    assets:recycables
+    revenues:recycables:food and drinks     -0.200 _GLB
+    revenues:recycables:food and drinks     -0.050 _MET
+    revenues:recycables:food and drinks     -0.200 _PLA
+
+2025-07-26 GREEN@*  ; activity: recycle, duration: PT1M1S, time: 18:28:41, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       20 GREEN$ = 8 108 GREEN$
+    equity:conversions:GREEN$-_GLB:_GLB                                       0.200 _GLB  ; rate: 20, rate: unit 0.1, recycle: all glass bottles, time: 18:28:41, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.200 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 18:29:16, timezone: UTC+08:00
+    equity:conversions:GREEN$-_MET:_MET                                       0.050 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 18:29:42, timezone: UTC+08:00
+    equity:conversions:GREEN$-_GLB:GREEN$                                      -4 GREEN$
+    equity:conversions:GREEN$-_MET:GREEN$                                       0 GREEN$
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -16 GREEN$
+    assets:recycables                                                        -0.200 _GLB = 0.000 _GLB
+    assets:recycables                                                        -0.050 _MET = 0.000 _MET
+    assets:recycables                                                        -0.200 _PLA = 0.000 _PLA
