@@ -640,7 +640,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -136.00 HKD
 
 2025-07-27 (41156102, 91) Cafe 100%  ; activity: eating, duration: PT29M, eating: breakfast, time: 15:29:00, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: bolognese and no-flip over easy egg with rice (mini), food_and_drink: hot coffee + more milk, food_and_drink: 碗仔翅
+    expenses:food and drinks:dining                                         38.00 HKD  ; food_and_drink: bolognese and no-flip over easy egg with rice (mini), food_and_drink: faux shark's fin soup, food_and_drink: hot coffee + more milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 
 2025-07-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 15:30, timezone: UTC+08:00
