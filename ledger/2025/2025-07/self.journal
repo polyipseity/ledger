@@ -261,8 +261,8 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                            4.90 HKD
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -4.90 HKD
 
-2025-07-14 * (10361024002, 819536, 51036102) 7-Eleven  ; activity: eating, eating: snacks, time: 01:34, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                                 9.50 HKD  ; food_and_drink: Mr. Brown Coffee (Caramel Macchiato Flavour)
+2025-07-14 * (10361024002, 819536, 51036102) 7-Eleven  ; activity: eating, eating: drinks, time: 01:34, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                                 9.50 HKD  ; food_and_drink: Mr. Brown Coffee (Caramel Macchiato Flavour)
     assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         2 _PT/D = 2 _PT/D
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  -9.50 HKD = -365.49 HKD
     revenues:rewards                                                                -2 _PT/D
@@ -302,8 +302,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     revenues:rewards                                                        -2.00 HKD
 
-2025-07-16 7-Eleven  ; activity: eating, eating: snacks, time: 20:57, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                          9.00 HKD  ; food_and_drink: Mr. Brown Deluxe Coffee
+2025-07-16 7-Eleven  ; activity: eating, eating: drinks, time: 20:57, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                          9.00 HKD  ; food_and_drink: Mr. Brown Deluxe Coffee
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.00 HKD
 
 2025-07-17 (72248695, 82) Cafe 100%  ; activity: eating, duration: PT25M25S, eating: breakfast, time: 07:31:35, timezone: UTC+08:00
@@ -330,8 +330,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.10 HKD  ; food_and_drink: cream soup, food_and_drink: hot coffee, food_and_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
-2025-07-17 * (?????, K???) Fusion  ; activity: eating, eating: snacks, time: 19:15, timezone: UTC+08:00
-    expenses:food and drinks:snacks                            8.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (bottle)
+2025-07-17 * (?????, K???) Fusion  ; activity: eating, eating: drinks, time: 19:15, timezone: UTC+08:00
+    expenses:food and drinks:drinks                            8.00 HKD  ; food_and_drink: "Schweppes" +C Lemon Soda (bottle)
     equity:friends:02f358e9-368a-40e8-875f-12a660a27abe       -8.00 HKD
 
 2025-07-17 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:32, timezone: UTC+08:00
@@ -408,8 +408,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         51.00 HKD  ; food_and_drink: Ah Wood baked pork chop with rice
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -51.00 HKD
 
-2025-07-20 7-Eleven  ; activity: eating, eating: snacks, time: 19:14, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend BREWED BLACK
+2025-07-20 7-Eleven  ; activity: eating, eating: drinks, time: 19:14, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend BREWED BLACK
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-20 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 22:00, timezone: UTC+08:00
@@ -466,8 +466,8 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-07-21 7-Eleven  ; activity: eating, eating: snacks, time: 18:49, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
+2025-07-21 7-Eleven  ; activity: eating, eating: drinks, time: 18:49, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-21 (C7L07414987, N72157376680, HD12572107114210) e2613673-8956-40d9-8024-53163878b766  ; activity: repayment, time: 22:45, timezone: UTC+08:00
@@ -553,8 +553,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2025-07-24 7-Eleven  ; activity: eating, eating: snacks, time: 12:53, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
+2025-07-24 7-Eleven  ; activity: eating, eating: drinks, time: 12:53, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-24 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:05, timezone: UTC+08:00
@@ -615,8 +615,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2025-07-26 7-Eleven  ; activity: eating, eating: snacks, time: 12:24, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
+2025-07-26 7-Eleven  ; activity: eating, eating: drinks, time: 12:24, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-26 (41155823, 17) Cafe 100%  ; activity: eating, duration: PT28M34S, eating: breakfast, time: 17:22:26, timezone: UTC+08:00
@@ -647,8 +647,8 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       34.00 HKD
     revenues:incomes:education                     -34.00 HKD
 
-2025-07-28 7-Eleven  ; activity: eating, eating: snacks, time: 10:57, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend BREWED LATTE
+2025-07-28 7-Eleven  ; activity: eating, eating: drinks, time: 10:57, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend BREWED LATTE
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-28 (41156304, 42) Cafe 100%  ; activity: eating, duration: PT29M37S, eating: breakfast, time: 11:28:23, timezone: UTC+08:00
@@ -687,8 +687,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.00 HKD  ; food_and_drink: chicken doria
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
-2025-07-29 7-Eleven  ; activity: eating, eating: snacks, time: 19:57, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
+2025-07-29 7-Eleven  ; activity: eating, eating: drinks, time: 19:57, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-29 * (SOP.3336-8963-3580-77782..0) Google  ; activity: service, time: 23:59:59, timezone: UTC+08:00
@@ -748,8 +748,8 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education      204.00 HKD
     revenues:incomes:education                    -204.00 HKD
 
-2025-07-31 7-Eleven  ; activity: eating, eating: snacks, time: 23:12, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: HeySong WIN Coffee (Blue Mountain Blend Type)
+2025-07-31 7-Eleven  ; activity: eating, eating: drinks, time: 23:12, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: HeySong WIN Coffee (Blue Mountain Blend Type)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
 2025-07-31 * adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
