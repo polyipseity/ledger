@@ -78,6 +78,8 @@ account assets:objects:tools                                                    
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
 account assets:special:rewards:Wilson                                                             ; type: A
+account assets:special:rewards:club1933                                                           ; type: A
+account assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                      ; type: A
 account assets:special:rewards:credit cards                                                       ; type: A
 account assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  ; type: A
 account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  ; type: A
@@ -245,6 +247,8 @@ commodity 99 999 999.00 USD  ; fullname: United State dollars
 commodity 99 999 999.   _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 commodity 99 999 999.   _PT/C  ; fullname: Wilson money
 commodity 99 999 999.   _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
+commodity 99 999 999.   _PT/E  ; fullname: club1933 points
+commodity 99 999 999.   _PT/F  ; fullname: club1933 eCoin
 
 payee **** (***********)
 payee **********************@********.net
@@ -409,14 +413,14 @@ payee kins
 payee public light bus
 payee taxis
 payee 一粥麵 (Super Super Congee & Noodles)
-payee 老掌櫃東北菜館 (Lao Zhang Gui Dongbei Restaurant)
-payee 小方糖甜品 (Sugar Desserts)
 payee 丸龜製麵
+payee 何富記麵家
 payee 同樂素食
 payee 大快活 (Fairwood)
 payee 大生生活超市 (DS Groceries)
 payee 安平燒肉 (Anping Grill)
 payee 富華冰室 (Fu Wah Cafe)
+payee 小方糖甜品 (Sugar Desserts)
 payee 小王牛肉麵
 payee 岡山一番店拉麵
 payee 手作功夫茶 (Kong Fu Tea)
@@ -424,6 +428,7 @@ payee 松記糖水店 (Chung Kee Restaurant)
 payee 燒肉 DON DON
 payee 紅葉茶屋 (Momiji-Chaya)
 payee 美圖照相
+payee 老掌櫃東北菜館 (Lao Zhang Gui Dongbei Restaurant)
 payee 荷里活Game Zone (Hollywood Game Zone)
 payee 隨便坐車仔麵燒烤
 payee 麵屋福

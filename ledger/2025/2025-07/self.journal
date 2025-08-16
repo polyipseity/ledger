@@ -553,6 +553,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
+2025-07-24 * (375330, SF375330) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 11:25, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships     10 000.00 HKD
+    revenues:education:scholarships                   -10 000.00 HKD  ; reward: 87d50769-ee9b-4471-abe5-619521b4d0ab 2024/25
+
 2025-07-24 7-Eleven  ; activity: eating, eating: drinks, time: 12:53, timezone: UTC+08:00
     expenses:food and drinks:drinks                                         10.00 HKD  ; food_and_drink: DyDo Blend AROMA ESPRESSO LATTE -NO ADDED SUGAR-
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
@@ -763,6 +767,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support      -20.79 HKD
 
 2025-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships                                        -10 000.00 HKD = 0.00 HKD
     assets:accrued revenues:rewards:competitions                                           -3 500.00 HKD = 0.00 HKD
     assets:accrued revenues:incomes:education                                              -1 870.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25           -1 200.00 HKD = 0.00 HKD
