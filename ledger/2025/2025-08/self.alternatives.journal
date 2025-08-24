@@ -24,3 +24,13 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_SEA:_SEA                                            1.900 _SEA = 1.900 _SEA
     equity:external:self                                                       200 000. _PT/B = 200 000 _PT/B
     equity:opening/closing balances
+
+2025-08-24 self  ; activity: collect, duration: -P29D, time: 16, timezone: UTC+08:00
+    assets:recycables                        0.400 _PLA
+    revenues:recycables:food and drinks     -0.400 _PLA
+
+2025-08-24 GREEN@*  ; activity: recycle, duration: PT1M, time: 16:11:00, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       32 GREEN$ = 8 140 GREEN$
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.400 _PLA  ; rate: 80, rate: unit 0.1, recycle: all plastics, time: 16:12:00, timezone: UTC+08:00
+    assets:recycables                                                        -0.400 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -32 GREEN$
