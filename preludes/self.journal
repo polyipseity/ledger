@@ -247,8 +247,8 @@ commodity 99 999 999.00 USD  ; fullname: United State dollars
 commodity 99 999 999.   _PT/B  ; fullname: 96f69720-5471-4e88-bebe-3db7a77a086c points
 commodity 99 999 999.   _PT/C  ; fullname: Wilson money
 commodity 99 999 999.   _PT/D  ; fullname: 88ac678a-9ed5-4b2d-942a-208d090ca5a4
-commodity 99 999 999.   _PT/E  ; fullname: club1933 points
-commodity 99 999 999.   _PT/F  ; fullname: club1933 eCoin
+commodity 99 999 999.00 _PT/E  ; fullname: club1933 points
+commodity 99 999 999.00 _PT/F  ; fullname: club1933 eCoin
 
 payee **** (***********)
 payee **********************@********.net
