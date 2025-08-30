@@ -98,6 +98,15 @@ async def main(args: Arguments):
 
     async def process_journal(journal: _Path):
         journal_date = datetime.fromisoformat(f"{journal.parent.name}-01")
+        journal_last_datetime = journal_date.replace(
+            day=monthrange(journal_date.year, journal_date.month)[1],
+            hour=24 - 1,
+            minute=60 - 1,
+            second=60 - 1,
+            microsecond=1000000 - 1,
+            fold=1,
+        )
+        journal_last_date_str = journal_last_datetime.date().isoformat()
 
         async with await journal.open(
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
@@ -110,7 +119,9 @@ async def main(args: Arguments):
                     found, done = False, False
                     for line in read.splitlines(keepends=True):
                         if not found:
-                            found = bool(_DEPRECIATION_REGEX.match(line))
+                            found = bool(
+                                _DEPRECIATION_REGEX.match(line)
+                            ) and line.startswith(journal_last_date_str)
                             yield line
                             continue
 
@@ -121,18 +132,16 @@ async def main(args: Arguments):
                             continue
 
                         yield line
+                    else:
+                        if found and not done:
+                            done = True
+                            yield f"    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{_NUMBER_OF_DIGITS}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}\n"
 
                     if not done:
-                        yield f"""{journal_date.replace(
-    day=monthrange(journal_date.year, journal_date.month)[1],
-    hour=24 - 1,
-    minute=60 - 1,
-    second=60 - 1,
-    microsecond=1000000 - 1,
-    fold=1,
-).date().isoformat()} ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: {_TIMEZONE}
+                        yield f"""{journal_last_date_str} ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: {_TIMEZONE}
     {_DEPRECIATION_ACCOUNT}
     {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{_NUMBER_OF_DIGITS}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}
+
 """
 
                 if (text := "".join(process_lines(read))) != read:
