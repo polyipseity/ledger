@@ -8,4 +8,5 @@ include ../../../preludes/self.journal
 
 2025-11-30 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
-    assets:deferred expenses:services:support      -20.79 HKD
+    expenses:services:support                       16.63 HKD  ; item: AppleCare+ for Apple Watch SE Aluminum
+    assets:deferred expenses:services:support      -37.42 HKD

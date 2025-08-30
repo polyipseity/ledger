@@ -1,5 +1,9 @@
 include ../../../preludes/self.journal
 
+2027-08-24 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:support                       13.21 HKD  ; item: AppleCare+ for Apple Watch SE Aluminum
+    assets:deferred expenses:services:support      -13.21 HKD
+
 2027-08-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
