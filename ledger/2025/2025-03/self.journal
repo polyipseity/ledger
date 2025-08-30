@@ -667,7 +667,7 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -130.00 HKD
 
 2025-03-28 (58C75E/5711) McDonald's  ; activity: eating, eating: lunch, time: 12:44:19, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: chicken big mac  ($35), food_and_drink: hot local milk tea, food_and_drink: medium fries
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: chicken big mac ($35), food_and_drink: hot local milk tea, food_and_drink: medium fries
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2025-03-28 (10/100643) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 17:01:35, timezone: UTC+08:00
