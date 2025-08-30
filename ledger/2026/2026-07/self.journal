@@ -8,7 +8,7 @@ include ../../../preludes/self.journal
     expenses:services:clouds:Google                      150.00 HKD
     assets:deferred expenses:services:clouds:Google     -150.00 HKD
 
-2026-07-31 ! adjustment  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2026-07-31 ! deprecation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
