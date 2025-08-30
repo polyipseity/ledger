@@ -1,3 +1,5 @@
 include ../../../preludes/self.journal
 
-
+2028-12-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+    expenses:depreciation
+    assets:accumulated depreciation      -30.00 HKD  ; item: Apple Watch SE GPS; 40mm Starlight Aluminum Case with Starlight/Pink Nike Sport Loop
