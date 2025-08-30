@@ -626,7 +626,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_and_drink: hot milk tea, food_and_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
-2024-08-31 * deprecation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-08-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)

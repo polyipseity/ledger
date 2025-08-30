@@ -961,7 +961,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        500.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -500.00 HKD
 
-2024-11-30 * deprecation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-11-30 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation       -6.62 HKD  ; item: AT iPad 10th 10.9″ Glass

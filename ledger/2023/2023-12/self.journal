@@ -585,7 +585,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:insurances:health      -42.68 HKD
     expenses:insurances:health
 
-2023-12-31 * deprecation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2023-12-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
     assets:accumulated depreciation      -86.00 HKD  ; item: Moto Edge 40 5G XT2303-01 (8GB/256GB)

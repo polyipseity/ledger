@@ -783,7 +783,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
 
-2024-10-31 * deprecation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2024-10-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -69.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation       -6.58 HKD  ; item: AT iPad 10th 10.9″ Glass
