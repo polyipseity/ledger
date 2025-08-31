@@ -818,6 +818,10 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -2.90 _PT/E
     revenues:rewards                                                      -0.60 _PT/F
 
+2025-08-29 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 10:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      102.00 HKD
+    revenues:incomes:education                    -102.00 HKD
+
 2025-08-29 (193920, K140) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:15:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot coffee (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
@@ -865,6 +869,10 @@ include ../../../preludes/self.journal
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     20.00 _PT/E
     revenues:rewards                                                        -20.00 _PT/E
 
+2025-08-30 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 23:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       68.00 HKD
+    revenues:incomes:education                     -68.00 HKD
+
 2025-08-30 * (MKB8LGDKKF) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
@@ -872,6 +880,34 @@ include ../../../preludes/self.journal
 2025-08-30 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     22.00 _PT/E
     revenues:rewards                                                        -22.00 _PT/E
+
+2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 07:42, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       34.00 HKD
+    revenues:incomes:education                     -34.00 HKD
+
+2025-08-31 (41166724, 15) Cafe 100%  ; activity: eating, duration: PT40M21S, eating: breakfast, time: 08:14:39, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg sandwich, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 09:15, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       51.00 HKD
+    revenues:incomes:education                     -51.00 HKD
+
+2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 11:45, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       51.00 HKD
+    revenues:incomes:education                     -51.00 HKD
+
+2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 15:30, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       68.00 HKD
+    revenues:incomes:education                     -68.00 HKD
+
+2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT45M, time: 17:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       51.00 HKD
+    revenues:incomes:education                     -51.00 HKD
+
+2025-08-31 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     23.00 _PT/E
+    revenues:rewards                                                        -23.00 _PT/E
 
 2025-08-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
