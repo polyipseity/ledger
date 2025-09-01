@@ -796,12 +796,6 @@ include ../../../preludes/self.journal
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     25.00 _PT/E
     revenues:rewards                                                        -25.00 _PT/E
 
-2025-08-29 (FRN20250829PAYC0302732200481, HD12582914835493) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 08:00:00, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     1 870.00 HKD
-    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                   93.50 HKD
-    assets:accrued revenues:incomes:education                        -1 870.00 HKD
-    revenues:incomes:education                                          -93.50 HKD
-
 2025-08-29 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:03, timezone: UTC+08:00
     expenses:transport:buses                                                10.00 HKD
     assets:accrued revenues:rewards                                       10.00 _PT/E
@@ -880,6 +874,12 @@ include ../../../preludes/self.journal
 2025-08-30 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     22.00 _PT/E
     revenues:rewards                                                        -22.00 _PT/E
+
+2025-08-30 (FRN20250829PAYC0302732200481, HD12582914835493) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 11:45:47, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     1 870.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                   93.50 HKD
+    assets:accrued revenues:incomes:education                        -1 870.00 HKD
+    revenues:incomes:education                                          -93.50 HKD
 
 2025-08-31 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 07:42, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       34.00 HKD
