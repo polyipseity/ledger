@@ -906,8 +906,8 @@ include ../../../preludes/self.journal
     revenues:incomes:education                     -51.00 HKD
 
 2025-08-31 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
-    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     23.00 _PT/E
-    revenues:rewards                                                        -23.00 _PT/E
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     24.00 _PT/E
+    revenues:rewards                                                        -24.00 _PT/E
 
 2025-08-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
@@ -941,7 +941,7 @@ include ../../../preludes/self.journal
     assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
     assets:objects:consumer electronics                                                    -8 934.00 HKD = 0.00 HKD
     assets:objects:tools                                                                   -4 000.00 KRW = 0.00 KRW
-    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                   -632.90 _PT/E = 0.00 _PT/E
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                   -633.90 _PT/E = 0.00 _PT/E
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                    -10.80 _PT/F = 0.00 _PT/F
     assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                   -11 _PT/D = 0 _PT/D
     assets:deferred assets:objects:decorations                                                 -3.00 EUR = 0.00 EUR
