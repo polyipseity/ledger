@@ -1,5 +1,9 @@
 include ../../../preludes/self.journal
 
+2025-10-04 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+    expenses:depreciation
+    assets:accumulated depreciation       -0.40 EUR  ; item: 0 euro paper money
+
 2025-10-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow

@@ -160,7 +160,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         12.00 HKD  ; food_and_drink: garlic baguette
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
 
-2025-06-11 ! unknown  ; activity: consumption, time: 22:53, timezone: UTC+08:00
+2025-06-11 * unknown  ; activity: consumption, time: 22:53, timezone: UTC+08:00
     equity:conversions:EUR-HKD:HKD                                 27.00 HKD  ; rate: 0.111111
     assets:deferred assets:objects:decorations                      3.00 EUR  ; item: 0 euro paper money
     equity:conversions:EUR-HKD:EUR                                 -3.00 EUR
