@@ -134,6 +134,14 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -2.90 _PT/E
     revenues:rewards                                                      -0.60 _PT/F
 
+2025-09-02 ! (1391-6707, pi_3S2mdZBMoBY3wEtc1QBNwwgn) ********************************@*************.space  ; polyipseity (@polyipseity) - Support, activity: donation, time: 13:20:10, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                   10.61 USD  ; rate: 7.64662
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       71.80 HKD
+    expenses:fees:Buy Me a Coffee                                     3.82 HKD
+    expenses:fees:Stripe                                              5.51 HKD
+    equity:conversions:HKD-USD:HKD                                  -81.13 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                  -10.61 USD
+
 2025-09-02 (11/117063) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:35:51, timezone: UTC+08:00
     expenses:food and drinks:dining                                         26.00 HKD  ; food_and_drink: grilled pork chop crispy bun, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
     expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
@@ -156,10 +164,10 @@ include ../../../preludes/self.journal
     liabilities:friends:f8d03fa1-74ec-41f9-be6d-36036336fe34       -6.00 HKD
 
 2025-09-02 * (000-178137, 41) Saizeriya  ; activity: eating, duration: PT42M57S, eating: dinner, time: 20:50:14, timezone: UTC+08:00
-    expenses:food and drinks:dining                                13.00 HKD  ; food_and_drink: drink bar
-    expenses:food and drinks:dining                                22.00 HKD  ; food_and_drink: 三倍芝士水牛薄餅 + 比薩雙重芝士 ×0.5
+    expenses:food and drinks:dining                                13.00 HKD  ; food_and_drink: drink bar set
+    expenses:food and drinks:dining                                22.00 HKD  ; food_and_drink: pizza with triple buffalo mozzarella cheese + double cheese ×0.5
     expenses:food and drinks:dining                                30.00 HKD  ; food_and_drink: chicken doria
-    expenses:food and drinks:dining                                10.00 HKD  ; food_and_drink: 脆焗香味雞球 ×0.5
+    expenses:food and drinks:dining                                10.00 HKD  ; food_and_drink: golden crispy chicken ×0.5
     liabilities:friends:f8d03fa1-74ec-41f9-be6d-36036336fe34      -75.00 HKD
 
 2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 21:52, timezone: UTC+08:00
@@ -414,6 +422,52 @@ include ../../../preludes/self.journal
 2025-09-06 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     22.00 _PT/E
     revenues:rewards                                                        -22.00 _PT/E
+
+2025-09-07 (41168955, 20) Cafe 100%  ; activity: eating, duration: PT40M28S, eating: breakfast, time: 09:22:32, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg sandwich, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: reward, time: 13, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.90 _PT/E
+    assets:accrued revenues:rewards                                         -21.90 _PT/E
+
+2025-09-07 (000-937314, 25) Saizeriya  ; activity: eating, duration: PT45M1S, eating: afternoon tea, time: 13:07:37, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: scallop mushrooms doria
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-09-07 (C9746447582, FRN20250907PAYD0102757509057, OCTOPUS038084565301286497) self  ; activity: transfer, time: 13:51, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-09-07 self  ; activity: transfer, time: 19:16, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-09-07 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     24.00 _PT/E
+    revenues:rewards                                                        -24.00 _PT/E
+
+2025-09-08 (41169289, 91) Cafe 100%  ; activity: eating, duration: PT30M37S, eating: breakfast, time: 08:17:23, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg sandwich, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-09-08 (41169424, 92) Cafe 100%  ; activity: eating, duration: PT25M38S, eating: lunch, time: 12:26:22, timezone: UTC+08:00
+    expenses:food and drinks:dining                                 50.00 HKD  ; food_and_drink: hot Ovaltine + more milk, food_and_drink: omelette with rice in Chinese style
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0      -50.00 HKD
+
+2025-09-08 Kowloon Motor Bus/Long Win Bus  ; activity: reward, time: 13, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     17.30 _PT/E
+    assets:accrued revenues:rewards                                         -17.30 _PT/E
+
+2025-09-08 Kowloon Motor Bus/Long Win Bus  ; activity: reward, time: 20:59:54, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc      10.00 _PT/F
+    equity:conversions:_PT/E-_PT/F:_PT/E                                     800.00 _PT/E  ; rate: 0.0125
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    -800.00 _PT/E
+    equity:conversions:_PT/E-_PT/F:_PT/F                                        -10 _PT/F
+
+2025-09-08 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     20.00 _PT/E
+    revenues:rewards                                                        -20.00 _PT/E
 
 2025-09-30 ! (MKB8Q3V9H2) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD

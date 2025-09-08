@@ -107,6 +107,8 @@ account equity:conversions:HKD-_PT/B:_PT/B                                      
 account equity:conversions:HKD-_PT/D                                                              ; type: E
 account equity:conversions:HKD-_PT/D:HKD                                                          ; type: E
 account equity:conversions:HKD-_PT/D:_PT/D                                                        ; type: E
+account equity:conversions:_PT/E-_PT/F:_PT/E                                                      ; type: E
+account equity:conversions:_PT/E-_PT/F:_PT/F                                                      ; type: E
 account equity:friends                                                                            ; type: E
 account equity:friends:02f358e9-368a-40e8-875f-12a660a27abe                                       ; type: E
 account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       ; type: E
@@ -255,6 +257,7 @@ commodity 99 999 999.00 _PT/E  ; fullname: club1933 points
 commodity 99 999 999.00 _PT/F  ; fullname: club1933 eCoin
 
 payee **** (***********)
+payee ********************************@*************.space
 payee **********************@********.net
 payee ******************@******.com
 payee ************@***********.org
