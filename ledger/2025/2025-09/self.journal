@@ -416,7 +416,7 @@ include ../../../preludes/self.journal
 2025-09-08 Kowloon Motor Bus/Long Win Bus  ; activity: reward, time: 20:59:54, timezone: UTC+08:00
     equity:conversions:_PT/E-_PT/F:_PT/E                                     800.00 _PT/E  ; rate: 0.0125
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc      10.00 _PT/F
-    equity:conversions:_PT/E-_PT/F:_PT/F                                        -10 _PT/F
+    equity:conversions:_PT/E-_PT/F:_PT/F                                     -10.00 _PT/F
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    -800.00 _PT/E
 
 2025-09-08 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
@@ -573,14 +573,72 @@ include ../../../preludes/self.journal
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2025-09-12 self  ; activity: transfer, time: 14:49, timezone: UTC+08:00
+2025-09-12 self  ; activity: transfer, time: 08:20, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
+2025-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:19, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:accrued revenues:rewards                                       10.00 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+    revenues:rewards                                                     -10.00 _PT/E
+
+2025-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:22, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:accrued revenues:rewards                                        2.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+    revenues:rewards                                                      -2.90 _PT/E
+
+2025-09-12 (206427, K249) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:54:05, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot Ovaltine (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
+
+2025-09-12 (10/104652) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:57:55, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: vermicelli in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-09-12 (????, N91243220335) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (12SEP25), activity: transfer, time: 17:54, timezone: UTC+08:00
+    assets:cash                                                        600.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -600.00 HKD
+
+2025-09-12 (1-NC26-004-5-001052) The Commercial Press (CityU)  ; activity: education, time: 17:56:40, timezone: UTC+08:00
+    expenses:education:books      525.50 HKD  ; item: 9781394370504 Bundle Intermediate Accounting
+    assets:cash                  -525.50 HKD
+
+2025-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:59, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:accrued revenues:rewards                                        3.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    revenues:rewards                                                      -3.10 _PT/E
+
+2025-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:34, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:accrued revenues:rewards                                        5.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+    revenues:rewards                                                      -5.90 _PT/E
+
+2025-09-12 (206103, 4) 何富記麵家  ; activity: eating, duration: PT43M12S, eating: dinner, time: 21:03:48, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         28.00 HKD  ; food_and_drink: hot coffee, food_and_drink: 特價魚片頭 + 線
+    equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                     28.00 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -56.00 HKD
+
 2025-09-12 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
-    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     39.00 _PT/E
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     43.00 _PT/E
     assets:accrued revenues:rewards                                         -19.00 _PT/E
-    revenues:rewards                                                        -20.00 _PT/E
+    revenues:rewards                                                        -24.00 _PT/E
+
+2025-09-13 (????????, 11) Cafe 100%  ; activity: eating, duration: PT39M13S, eating: breakfast, time: 09:45:47, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg sandwich, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-09-13 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.00 _PT/E
+    assets:accrued revenues:rewards                                         -21.00 _PT/E
+
+2025-09-13 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: transfer, time: 12:08, timezone: UTC+08:00
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0        2.50 HKD
+    assets:cash                                                     -2.50 HKD
 
 2025-09-30 ! (MKB8Q3V9H2) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
