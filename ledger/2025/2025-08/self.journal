@@ -553,7 +553,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       68.00 HKD
     revenues:incomes:education                     -68.00 HKD
 
-2025-08-21 ! (51550016004, 000-9328, 25) Pizza Hut  ; activity: eating, duration: PT1H9M31S, eating: dinner, time: 20, timezone: UTC+08:00
+2025-08-21 * (51550016004, 000-9328, 25) Pizza Hut  ; activity: eating, duration: PT1H9M31S, eating: dinner, time: 20, timezone: UTC+08:00
     expenses:food and drinks:dining                                               134.00 HKD  ; food_and_drink: 檸蜜辣肉腸(PL)
     expenses:food and drinks:dining                                                29.00 HKD  ; food_and_drink: 香辣雞翼
     expenses:food and drinks:fees                                                  16.30 HKD  ; food_and_drink: 10% service charge
@@ -577,7 +577,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-08-22 ! (523405378170, 512508226020, 6020) Sushiro  ; activity: eating, duration: PT1H9M27S, eating: lunch, time: 12, timezone: UTC+08:00
+2025-08-22 * (523405378170, 512508226020, 6020) Sushiro  ; activity: eating, duration: PT1H9M27S, eating: lunch, time: 12, timezone: UTC+08:00
     expenses:food and drinks:dining                                     91.50 HKD  ; food_and_drink: (unknown)
     expenses:food and drinks:fees                                        9.00 HKD  ; food_and_drink: 10% service charge
     equity:friends:f8df2d21-37cb-4a4d-91d7-b5e4fca1b10c                100.50 HKD
@@ -715,7 +715,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-08-25 ! (20250825R4991085077) Apple  ; activity: consumption, time: 18:41:06, timezone: UTC+08:00
+2025-08-25 * (20250825R4991085077) Apple  ; activity: consumption, time: 18:41:06, timezone: UTC+08:00
     assets:objects:consumer electronics                                          1 999.00 HKD  ; depreciation: straight-line@P5Y, item: Apple Watch SE GPS; 40mm Starlight Aluminum Case with Starlight/Pink Nike Sport Loop, residual: 199.00 HKD
     assets:deferred expenses:services:support                                      399.00 HKD  ; item: AppleCare+ for Apple Watch SE Aluminum, valid: 2025-08-25T00:00:00+08:00/2027-08-24T23:59:59+08:00
     assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         10 _PT/D  ; valid: 2025-08-25T00:00:00+08:00/2026-10-31T23:59:59+08:00

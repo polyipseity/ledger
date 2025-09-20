@@ -772,7 +772,7 @@ include ../../../preludes/self.journal
     expenses:education:tuition:universities                     21 050.00 HKD
     assets:deferred expenses:education:tuition:universities    -21 050.00 HKD = 0.00 HKD
 
-2025-05-30 ! (196JUW) HK Express  ; activity: transport, time: 07:30, timezone: UTC+08:00
+2025-05-30 * (196JUW) HK Express  ; activity: transport, time: 07:30, timezone: UTC+08:00
     assets:deferred expenses:transport:airplanes                 1 200.00 HKD
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 200.00 HKD = -1 200.00 HKD
 
