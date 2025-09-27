@@ -224,6 +224,7 @@ account liabilities:friends:e2613673-8956-40d9-8024-53163878b766                
 account liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1                                  ; type: L
 account liabilities:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                                  ; type: L
 account liabilities:friends:f8d03fa1-74ec-41f9-be6d-36036336fe34                                  ; type: L
+account liabilities:friends:fe2f315f-6dee-4bd2-b4e7-9217cc9f4c56                                  ; type: L
 account revenues:donations                                                                        ; type: R
 account revenues:donations:Buy Me a Coffee                                                        ; type: R
 account revenues:donations:Buy Me a Coffee:polyipseity                                            ; type: R
@@ -383,6 +384,7 @@ payee The Commercial Press (CityU)
 payee Tokkijung Project
 payee Vitasoy
 payee Wellcome
+payee Wellent
 payee Wilson
 payee Yakiniku Like!!
 payee Yamazaki
