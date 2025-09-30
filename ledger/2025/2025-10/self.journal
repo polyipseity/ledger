@@ -4,6 +4,10 @@ include ../../../preludes/self.journal
     expenses:depreciation
     assets:accumulated depreciation       -0.40 EUR  ; item: 0 euro paper money
 
+2025-10-30 ! (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.10 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.10 HKD
+
 2025-10-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
