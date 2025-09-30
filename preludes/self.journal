@@ -25,10 +25,12 @@ account assets:deferred expenses:accommodations:universities                    
 account assets:deferred expenses:activities                                                       ; type: A
 account assets:deferred expenses:education                                                        ; type: A
 account assets:deferred expenses:education:books                                                  ; type: A
+account assets:deferred expenses:education:incidental                                             ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
 account assets:deferred expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                        ; type: A
+account assets:deferred expenses:incidental                                                       ; type: A
 account assets:deferred expenses:insurances                                                       ; type: A
 account assets:deferred expenses:insurances:health                                                ; type: A
 account assets:deferred expenses:insurances:life                                                  ; type: A
@@ -134,6 +136,7 @@ account expenses:consumption                                                    
 account expenses:consumption:softwares                                                            ; type: X
 account expenses:education                                                                        ; type: X
 account expenses:education:books                                                                  ; type: X
+account expenses:education:incidental                                                             ; type: X
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
 account expenses:equipment                                                                        ; type: X
@@ -160,6 +163,7 @@ account expenses:gaming                                                         
 account expenses:gaming:maimai                                                                    ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
+account expenses:incidental                                                                       ; type: X
 account expenses:insurances                                                                       ; type: X
 account expenses:insurances:health                                                                ; type: X
 account expenses:insurances:levy                                                                  ; type: X
