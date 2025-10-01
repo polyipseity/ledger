@@ -61,6 +61,19 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:services:internet                                                    -0.30 HKD = -0.30 HKD
     equity:opening/closing balances
 
+2025-10-01 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 11:00, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD  ; time: 12:30, timezone: UTC+08:00
+
+2025-10-01 (41176199, 12) Cafe 100%  ; activity: eating, duration: PT35M17S, eating: breakfast, time: 09:34:43, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_and_drink: hot coffee + more milk, food_and_drink: scrambled egg sandwich, food_and_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-10-01 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     44.90 _PT/E
+    assets:accrued revenues:rewards                                         -21.90 _PT/E
+    revenues:rewards                                                        -23.00 _PT/E
+
 2025-10-04 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation       -0.40 EUR  ; item: 0 euro paper money
