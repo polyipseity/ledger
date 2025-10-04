@@ -74,6 +74,51 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -21.90 _PT/E
     revenues:rewards                                                        -23.00 _PT/E
 
+2025-10-02 Kowloon Motor Bus/Long Win Bus  ; activity: reward, time: 08:21:49, timezone: UTC+08:00
+    equity:conversions:_PT/E-_PT/F:_PT/E                                     800.00 _PT/E  ; rate: 0.0125
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc      10.00 _PT/F
+    equity:conversions:_PT/E-_PT/F:_PT/F                                     -10.00 _PT/F
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    -800.00 _PT/E
+
+2025-10-02 (225654, K222) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:46:29, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: baked fried tomato beans, food_and_drink: hash brown, food_and_drink: hot Ovaltine (8 oz), food_and_drink: sauteed fresh mushroom, food_and_drink: scrambled egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
+
+2025-10-02 (14/141569) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:59:42, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_and_drink: garden gourmet salad hot dog, food_and_drink: hot coffee, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-10-02 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     23.00 _PT/E
+    revenues:rewards                                                        -23.00 _PT/E
+
+2025-10-03 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 13:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
+2025-10-03 (8/083890) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:01:19, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_and_drink: fried chicken thigh, food_and_drink: hot Ovaltine, food_and_drink: spicy potato wedges
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_and_drink: ham, food_and_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-10-03 (216241, 4) 何富記麵家  ; activity: eating, duration: PT29M14S, eating: dinner, time: 21:45:46, timezone: UTC+08:00
+    expenses:food and drinks:dining                           28.00 HKD  ; food_and_drink: hot coffee, food_and_drink: 特價雲吞 + 幼
+    equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa      -28.00 HKD
+
+2025-10-03 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     31.00 _PT/E
+    assets:accrued revenues:rewards                                         -24.00 _PT/E
+    revenues:rewards                                                         -7.00 _PT/E
+
+2025-10-04 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H, time: 11:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education       68.00 HKD
+    revenues:incomes:education                     -68.00 HKD
+
+2025-10-04 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc      6.00 _PT/E
+    revenues:rewards                                                         -6.00 _PT/E
+
 2025-10-04 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation       -0.40 EUR  ; item: 0 euro paper money
