@@ -119,7 +119,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc      6.00 _PT/E
     revenues:rewards                                                         -6.00 _PT/E
 
-2025-10-04 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2025-10-04 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation       -0.40 EUR  ; item: 0 euro paper money
 
