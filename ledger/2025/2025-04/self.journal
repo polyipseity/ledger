@@ -570,7 +570,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.40 HKD  ; food_and_drink: OREO Chocolate Sandwich Cookies with Dark and White Chocolate Flavored Cream
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.40 HKD
 
-2025-04-25 ! Hong Kong Polytechnic University  ; time: 14:06:23, timezone: UTC+08:00
+2025-04-25 * Hong Kong Polytechnic University  ; time: 14:06:23, timezone: UTC+08:00
     assets:accrued revenues:rewards:competitions     3 500.00 HKD
     revenues:rewards:competitions                   -3 500.00 HKD  ; reward: PolyU x NuttyShell Cybersecurity CTF 2025 - 1st Place in the Degree Category
 

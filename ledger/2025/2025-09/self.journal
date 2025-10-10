@@ -679,6 +679,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education      102.00 HKD
     revenues:incomes:education                    -102.00 HKD
 
+2025-09-15 * Da Mario  ; activity: eating, duration: PT45M, eating: dinner, time: 18:30, timezone: UTC+09:00
+    expenses:food and drinks:dining                               120.00 HKD  ; food_and_drink: (unknown)
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766     -120.00 HKD = -120.00 HKD
+
 2025-09-15 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.90 _PT/E
     assets:accrued revenues:rewards                                         -21.90 _PT/E
@@ -1282,4 +1286,5 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25             38 862.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7             11 753.14 HKD = 0.00 HKD
     liabilities:accrued expenses:services:internet                                                     0.30 HKD = 0.00 HKD
+    liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                         120.00 HKD = 0.00 HKD
     equity:opening/closing balances
