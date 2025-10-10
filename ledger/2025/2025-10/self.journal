@@ -348,6 +348,10 @@ include ../../../preludes/self.journal
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766           120.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -120.00 HKD
 
+2025-10-10 490034bd-fc80-4cfb-9982-4ddce743208f  ; activity: repayment, time: 11:22, timezone: UTC+08:00
+    liabilities:friends:490034bd-fc80-4cfb-9982-4ddce743208f       39.00 HKD = 0.00 HKD
+    equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa           -39.00 HKD
+
 2025-10-30 ! (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
