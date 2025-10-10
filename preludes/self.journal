@@ -211,6 +211,7 @@ account liabilities:friends:02f358e9-368a-40e8-875f-12a660a27abe                
 account liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d                                  ; type: L
 account liabilities:friends:3344b973-41df-45a9-bc47-0004ed1049db                                  ; type: L
 account liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                  ; type: L
+account liabilities:friends:490034bd-fc80-4cfb-9982-4ddce743208f                                  ; type: L
 account liabilities:friends:4cde7f3e-81fa-4165-a2a4-1a7a52ec7400                                  ; type: L
 account liabilities:friends:5e758af5-23c0-4038-b161-06757132e875                                  ; type: L
 account liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa                                  ; type: L
@@ -334,6 +335,7 @@ payee Café de Nusi
 payee Candian Pizza
 payee Circle K
 payee Citybus/New World First Bus
+payee Da Mario
 payee Daiso
 payee Deliveroo
 payee Don Don: Donki
