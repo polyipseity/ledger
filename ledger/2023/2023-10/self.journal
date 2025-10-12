@@ -24,7 +24,7 @@ include ../../../preludes/self.journal
 
 2023-10-01 (72208524) Cafe 100%  ; activity: eating, eating: breakfast, time: 07:30:44, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    expenses:food and drinks:dining                                                    ; food_or_drink: garlic butter on toast, food_or_drink: hot Ovaltine, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
 
 2023-10-01 Mass Transit Railway  ; activity: transport, time: 10:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
@@ -58,15 +58,15 @@ include ../../../preludes/self.journal
 
 2023-10-03 (5600165333) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 14:10:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: steamed egg with diced pork, food_and_drink: vegetables
+    expenses:food and drinks:dining                                                    ; food_or_drink: steamed egg with diced pork, food_or_drink: vegetables
 
 2023-10-03 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 18:40, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-04 (1K1#350) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:12:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: baked seafood rice, food_and_drink: black truffle sauce
+    expenses:food and drinks:dining                                                    ; food_or_drink: baked seafood rice, food_or_drink: black truffle sauce
 
 2023-10-04 * (HD123C2839912316, 0000152933) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT1H30M, time: 14:30, timezone: UTC+08:00
     assets:accrued revenues:education      100.00 HKD
@@ -74,7 +74,7 @@ include ../../../preludes/self.journal
 
 2023-10-04 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 22:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-05 (FRN20231005PAYD0101269646020) self  ; activity: transfer, time: 12:58:17, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -86,11 +86,11 @@ include ../../../preludes/self.journal
 
 2023-10-05 (5900275741) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:05:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: baked pork chop with rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: baked pork chop with rice
 
 2023-10-05 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: oily noodle, food_and_drink: seaweed
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: oily noodle, food_or_drink: seaweed
 
 2023-10-05 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:14, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -110,7 +110,7 @@ include ../../../preludes/self.journal
 
 2023-10-08 (73256503) Cafe 100%  ; activity: eating, duration: PT24M14S, eating: breakfast, time: 09:46:46, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot Ovaltine, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    expenses:food and drinks:dining                                                    ; food_or_drink: garlic butter on toast, food_or_drink: hot Ovaltine, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
 
 2023-10-08 Mass Transit Railway  ; activity: transport, time: 10:36, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
@@ -126,15 +126,15 @@ include ../../../preludes/self.journal
 
 2023-10-09 (58C7BF/4172) McDonald's  ; activity: eating, eating: dinner, time: 16:37:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: iced Fanta, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
+    expenses:food and drinks:dining                                                    ; food_or_drink: iced Fanta, food_or_drink: medium-sized fries, food_or_drink: sausage McMuffin with egg
 
 2023-10-10 (5100322713) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:51:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork · red sausage with rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: BBQ pork · red sausage with rice
 
 2023-10-10 (1/A-552637) Subway  ; activity: eating, eating: afternoon tea, time: 15:08:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: Subway B.M.T., food_and_drink: barbecue sauce
+    expenses:food and drinks:dining                                                    ; food_or_drink: Subway B.M.T., food_or_drink: barbecue sauce
 
 2023-10-11 (FRN20231011PAYD0101278966543) self  ; activity: transfer, time: 11:58:18, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -146,23 +146,23 @@ include ../../../preludes/self.journal
 
 2023-10-11 (1K2#447) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:07:53, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti bolognese
+    expenses:food and drinks:dining                                                    ; food_or_drink: spaghetti bolognese
 
 2023-10-11 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 23:11, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: oily noodle, food_and_drink: seaweed
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: oily noodle, food_or_drink: seaweed
 
 2023-10-12 (5800341342) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:23:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: baked rice with fish and sweet com in cream sauce
+    expenses:food and drinks:dining                                                    ; food_or_drink: baked rice with fish and sweet com in cream sauce
 
 2023-10-12 (00463/002#0083) Fusion  ; activity: eating, eating: fruits, time: 13:50:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -16.90 HKD
-    expenses:food and drinks:fruits                                                    ; food_and_drink: 3 extra-large oranges
+    expenses:food and drinks:fruits                                                    ; food_or_drink: 3 extra-large oranges
 
 2023-10-12 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 19:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: oily noodle, food_and_drink: seaweed
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: oily noodle, food_or_drink: seaweed
 
 2023-10-12 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:47, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -182,7 +182,7 @@ include ../../../preludes/self.journal
 
 2023-10-14 (0000326151) 手作功夫茶 (Kong Fu Tea)  ; activity: eating, eating: snacks, time: 22:49:30, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -29.00 HKD
-    expenses:food and drinks:snacks                                            ; food_and_drink: 3Q milk tea
+    expenses:food and drinks:snacks                                            ; food_or_drink: 3Q milk tea
 
 2023-10-15 Mass Transit Railway  ; activity: transport, time: 10:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
@@ -202,7 +202,7 @@ include ../../../preludes/self.journal
 
 2023-10-15 (HK060096-20231015123730D19, 2023101512413003915, C120231015124117668681443) euro go go  ; activity: eating, eating: lunch, time: 12:41:30, timezone: UTC+08:00, via: Eats365
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        -134 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 全千島海鮮👑 + cheese
+    expenses:food and drinks:dining                                                    ; food_or_drink: 全千島海鮮👑 + cheese
 
 2023-10-15 Mass Transit Railway  ; activity: transport, time: 21:25, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.80 HKD
@@ -218,31 +218,31 @@ include ../../../preludes/self.journal
 
 2023-10-16 (1K1#342) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:05:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: spaghetti bolognese
+    expenses:food and drinks:dining                                                    ; food_or_drink: spaghetti bolognese
 
 2023-10-16 (5700386463, 2f474e88-33c3-4bfc-81f2-90114cd86e07, 231016130948) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:09:53, timezone: UTC+08:00
     equity:friends                       -28.50 HKD
-    expenses:food and drinks:dining                  ; food_and_drink: BBQ pork · red sausage with rice
+    expenses:food and drinks:dining                  ; food_or_drink: BBQ pork · red sausage with rice
 
 2023-10-16 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 19:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-17 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-18 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 23:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: rice vermicelli, food_and_drink: seaweed
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: rice vermicelli, food_or_drink: seaweed
 
 2023-10-19 (1K3#543) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:04:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: rice bolognese
+    expenses:food and drinks:dining                                                    ; food_or_drink: rice bolognese
 
 2023-10-19 (5600173013) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 18:07:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork with rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: BBQ pork with rice
 
 2023-10-19 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -278,7 +278,7 @@ include ../../../preludes/self.journal
 
 2023-10-22 (73257569) Cafe 100%  ; activity: eating, duration: PT32M53S, eating: breakfast, time: 10:45:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: garlic butter on toast, food_and_drink: hot chocolate, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    expenses:food and drinks:dining                                                    ; food_or_drink: garlic butter on toast, food_or_drink: hot chocolate, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
 
 2023-10-23 Mass Transit Railway  ; activity: transport, time: 10:28, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
@@ -306,7 +306,7 @@ include ../../../preludes/self.journal
 
 2023-10-24 (081-1432) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: aftertoon tea, time: 16:19:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.80 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 三色芝士焗肉醬長通粉
+    expenses:food and drinks:dining                                                    ; food_or_drink: 三色芝士焗肉醬長通粉
 
 2023-10-24 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:56, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -330,7 +330,7 @@ include ../../../preludes/self.journal
 
 2023-10-25 (1K1#333) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: lunch, time: 12:00:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: classic baked pork chop, food_and_drink: spaghetti
+    expenses:food and drinks:dining                                                    ; food_or_drink: classic baked pork chop, food_or_drink: spaghetti
 
 2023-10-25 * (ch_3O50hpEQsq43iHhX07TTsmTt) **** (***********)  ; $2 one time, activity: donation, time: 14:36:38, timezone: UTC+08:00
     revenues:donations:GitHub Sponsors:polyipseity                   -2.00 USD
@@ -348,15 +348,15 @@ include ../../../preludes/self.journal
 
 2023-10-25 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 23:02, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-26 (5874F6/6145) McDonald's  ; activity: eating, eating: lunch, time: 14:25:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: chocolate milkshake, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
+    expenses:food and drinks:dining                                                    ; food_or_drink: chocolate milkshake, food_or_drink: medium-sized fries, food_or_drink: sausage McMuffin with egg
 
 2023-10-26 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 17:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-26 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       15.08 HKD
@@ -364,7 +364,7 @@ include ../../../preludes/self.journal
 
 2023-10-27 (5800347688) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 13:44:10, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork with rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: BBQ pork with rice
 
 2023-10-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 14:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -388,7 +388,7 @@ include ../../../preludes/self.journal
 
 2023-10-28 (5300344339) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:18:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: BBQ pork with rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: BBQ pork with rice
 
 2023-10-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:01, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
@@ -420,23 +420,23 @@ include ../../../preludes/self.journal
 
 2023-10-29 (1K2#475) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: afternoon tea, time: 15:54:50, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: Yanzhou style fried rice
+    expenses:food and drinks:dining                                                    ; food_or_drink: Yanzhou style fried rice
 
 2023-10-30 (5874F7/5432) McDonald's  ; activity: eating, eating: lunch, time: 12:00:09, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.50 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: chocolate milkshake, food_and_drink: medium-sized fries, food_and_drink: sausage McMuffin with egg
+    expenses:food and drinks:dining                                                    ; food_or_drink: chocolate milkshake, food_or_drink: medium-sized fries, food_or_drink: sausage McMuffin with egg
 
 2023-10-30 (2023103022001432591405123658) 937f7345-cbe9-48d1-9746-d79fd001d2a6  ; activity: eating, eating: dinner, time: 18:01:33, timezone: UTC+08:00
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)      -52.00 HKD
-    expenses:food and drinks:dining                                                 ; food_and_drink: rabokki
+    expenses:food and drinks:dining                                                 ; food_or_drink: rabokki
 
 2023-10-31 (2023103122001432591415860217) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 15:57:47, timezone: UTC+08:00
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)      -30.00 HKD
-    expenses:food and drinks:dining                                                 ; food_and_drink: seaweed and three tr
+    expenses:food and drinks:dining                                                 ; food_or_drink: seaweed and three tr
 
 2023-10-31 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: dinner, time: 22:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 2 fish cakes, food_and_drink: 2 fish skin dumplings, food_and_drink: 2 thin slices of red sausage, food_and_drink: Coca-Cola with Lemon, food_and_drink: seaweed, food_and_drink: thin egg noodle
+    expenses:food and drinks:dining                                                    ; food_or_drink: 2 fish cakes, food_or_drink: 2 fish skin dumplings, food_or_drink: 2 thin slices of red sausage, food_or_drink: Coca-Cola with Lemon, food_or_drink: seaweed, food_or_drink: thin egg noodle
 
 2023-10-31 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                    6 045.00 HKD

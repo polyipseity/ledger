@@ -52,7 +52,7 @@ include ../../../preludes/self.journal
 
 2024-06-01 Circle K  ; activity: eating, eating: snacks, time: 15:01, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.00 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: JS 雙重芝士雞肉火腿包（新配方）/double cheese chicken ham bun
+    expenses:food and drinks:snacks                                                    ; food_or_drink: JS 雙重芝士雞肉火腿包（新配方）/double cheese chicken ham bun
 
 2024-06-01 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (01JUN24), activity: transfer, time: 15:05:12, timezone: UTC+08:00
     assets:cash                                                        100.00 HKD
@@ -112,7 +112,7 @@ include ../../../preludes/self.journal
 
 2024-06-03 (081-1249) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:23:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 忌廉湯, food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉
+    expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
 2024-06-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -172,7 +172,7 @@ include ../../../preludes/self.journal
 
 2024-06-05 (415712199233, 9E9213A8AD89A88A) b0d2d642-7692-421f-bd20-4d03911caa54  ; activity: eating, eating: dinner, time: 20:41:04, timezone: UTC+08:00
     expenses:food and drinks:dining                                    656.00 HKD
-    expenses:food and drinks:fees                                       66.00 HKD  ; food_and_drink: 10% service charge
+    expenses:food and drinks:fees                                       66.00 HKD  ; food_or_drink: 10% service charge
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     -722.00 HKD
 
 2024-06-05 (57C0) 3833b42e-dad3-425c-b254-904be68993e4  ; QDM CASH DEP (05JUN24), activity: transfer, time: 20:47:12, timezone: UTC+08:00
@@ -223,7 +223,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-06-07 隨便坐車仔麵燒烤  ; activity: eating, duration: PT3H45M, eating: dinner, time: 19:15:00, timezone: UTC+08:00
-    expenses:food and drinks:snacks                               165.00 HKD  ; food_and_drink: unknown
+    expenses:food and drinks:snacks                               165.00 HKD  ; food_or_drink: unknown
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7     -165.00 HKD = -1 441.00 HKD
 
 2024-06-07 Mass Transit Railway  ; activity: transport, time: 23:08, timezone: UTC+08:00
@@ -259,8 +259,8 @@ include ../../../preludes/self.journal
     assets:cash
 
 2024-06-10 (000-0147) TamJai SamGor  ; activity: eating, duration: PT55M47S, eating: lunch, time: 13:08:13, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         57.00 HKD  ; food_and_drink: 過橋米線 + 清湯（過）
-    expenses:food and drinks:snacks                                          1.00 HKD  ; food_and_drink: 外賣盒
+    expenses:food and drinks:snacks                                         57.00 HKD  ; food_or_drink: 過橋米線 + 清湯（過）
+    expenses:food and drinks:snacks                                          1.00 HKD  ; food_or_drink: 外賣盒
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-06-11 Mass Transit Railway  ; activity: transport, time: 11:05, timezone: UTC+08:00
@@ -281,7 +281,7 @@ include ../../../preludes/self.journal
 
 2024-06-11 A1 Bakery  ; activity: eating, eating: lunch, time: 12:51:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -17.00 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: chocolate stick bread 5pcs
+    expenses:food and drinks:snacks                                                    ; food_or_drink: chocolate stick bread 5pcs
 
 2024-06-11 Mass Transit Railway  ; activity: transport, time: 13:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.20 HKD
@@ -373,7 +373,7 @@ include ../../../preludes/self.journal
 
 2024-06-13 unknown  ; activity: eating, eating: dinner, time: 20:49:58, timezone: UTC+08:00
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d      -60.00 HKD = -60.00 HKD
-    expenses:food and drinks:dining                                           ; food_and_drink: unknown
+    expenses:food and drinks:dining                                           ; food_or_drink: unknown
 
 2024-06-13 (N61346934905, HD12461329210118) 12960c02-bcd6-4169-bc22-7c3fb14b1f5d  ; activity: repayment, time: 20:53:34, timezone: UTC+08:00
     liabilities:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d            60.00 HKD = 0.00 HKD
@@ -421,7 +421,7 @@ include ../../../preludes/self.journal
 
 2024-06-15 (58B2EF/2350) McDonald's  ; activity: eating, eating: snacks, time: 21:46:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.50 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: hot fudge sundae
+    expenses:food and drinks:snacks                                                    ; food_or_drink: hot fudge sundae
 
 2024-06-15 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT16M, time: 22:16, timezone: UTC+08:00
     assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
@@ -449,11 +449,11 @@ include ../../../preludes/self.journal
 
 2024-06-18 (587B2A/1327) McDonald's  ; activity: eating, eating: breakfast, time: 04:59:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: EVB hot local milk tea, food_and_drink: EVB sau egg + hash brown
+    expenses:food and drinks:dining                                                    ; food_or_drink: EVB hot local milk tea, food_or_drink: EVB sau egg + hash brown
 
 2024-06-18 7-Eleven  ; activity: eating, eating: snacks, time: 20:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -15.00 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: 卡樂B蝦條90克
+    expenses:food and drinks:snacks                                                    ; food_or_drink: 卡樂B蝦條90克
 
 2024-06-18 * (UO 618) HK Express  ; activity: transport, duration: PT3H35M, time: 07:15, timezone: UTC+08:00
     assets:deferred expenses:transport:airplanes     -638.00 HKD = 638.00 HKD
@@ -461,30 +461,30 @@ include ../../../preludes/self.journal
 
 2024-06-18 * (664242406183100811) Mukyoku  ; activity: eating, duration: PT21M41S, eating: lunch, time: 13:08:19, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -9 000.00 KRW
-    expenses:food and drinks:dining                                                 ; food_and_drink: fried shrimp ramen
+    expenses:food and drinks:dining                                                 ; food_or_drink: fried shrimp ramen
 
 2024-06-18 * Nice to CU  ; activity: eating, eating: lunch, time: 13:51:30, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -2 500.00 KRW
-    expenses:food and drinks:dining                                                 ; food_and_drink: Sunkist lemon juice 500 mL
+    expenses:food and drinks:dining                                                 ; food_or_drink: Sunkist lemon juice 500 mL
 
 2024-06-18 * 7-Eleven  ; activity: eating, eating: dinner, time: 20:08, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -6 900.00 KRW
-    expenses:food and drinks:dining                                   4 800.00 KRW  ; food_and_drink: cup rice with beef
-    expenses:food and drinks:dining                                   2 100.00 KRW  ; food_and_drink: orange juice 600 mL
+    expenses:food and drinks:dining                                   4 800.00 KRW  ; food_or_drink: cup rice with beef
+    expenses:food and drinks:dining                                   2 100.00 KRW  ; food_or_drink: orange juice 600 mL
 
 2024-06-19 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; activity: reward, time: 20, timezone: UTC+09:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156         3 _PT/D  ; valid: 2023-12-20/2025-10-31
     revenues:rewards
 
 2024-06-19 * (0020-0001) Grill de Woowa  ; activity: eating, duration: PT45M7S, eating: dinner, time: 20:23:53, timezone: UTC+09:00
-    expenses:food and drinks:dining                              36 000.00 KRW  ; food_and_drink: pig meat
-    expenses:food and drinks:dining                               2 250.00 KRW  ; food_and_drink: fries
+    expenses:food and drinks:dining                              36 000.00 KRW  ; food_or_drink: pig meat
+    expenses:food and drinks:dining                               2 250.00 KRW  ; food_or_drink: fries
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -38 250.00 KRW
 
 2024-06-19 * 7-Eleven  ; activity: eating, eating: snacks, time: 21:13, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -4 400.00 KRW
-    expenses:food and drinks:snacks                                   1 800.00 KRW  ; food_and_drink: cup noodles with cheese
-    expenses:food and drinks:snacks                                   2 600.00 KRW  ; food_and_drink: Georgia coffee 240 mL ×2
+    expenses:food and drinks:snacks                                   1 800.00 KRW  ; food_or_drink: cup noodles with cheese
+    expenses:food and drinks:snacks                                   2 600.00 KRW  ; food_or_drink: Georgia coffee 240 mL ×2
 
 2024-06-19 (20240619212002495dea842e) self  ; activity: repayment, time: 22:20:02, timezone: UTC+09:00
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156      -159 _PT/D = 0.00 _PT/D
@@ -504,7 +504,7 @@ include ../../../preludes/self.journal
 
 2024-06-20 * (A22519824062055115B) Korail  ; activity: eating, duration: PT41M15S, eating: lunch, time: 13:48:45, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -11 000.00 KRW
-    expenses:food and drinks:dining                                                  ; food_and_drink: cream udon
+    expenses:food and drinks:dining                                                  ; food_or_drink: cream udon
 
 2024-06-20 * (133615-0404, KTX-418) Korail  ; activity: transport, duration: PT59M, time: 14:38, timezone: UTC+09:00
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -18 275.00 KRW
@@ -523,7 +523,7 @@ include ../../../preludes/self.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
 
 2024-06-20 * (1F/15) Kyochon 1991  ; activity: eating, duration: PT45M, eating: dinner, time: 21:40, timezone: UTC+09:00
-    expenses:food and drinks:dining                              16 333.33 KRW  ; food_and_drink: unknown
+    expenses:food and drinks:dining                              16 333.33 KRW  ; food_or_drink: unknown
     liabilities:friends:e2613673-8956-40d9-8024-53163878b766    -16 333.33 KRW
 
 2024-06-20 * (D002 3199 0499 3985 / 1711) Seoul Metropolitan Subway  ; activity: transport, duration: PT11M23S, time: 23:06:42, timezone: UTC+09:00
@@ -547,7 +547,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:accommodations      -99.82 HKD = 0.00 HKD
 
 2024-06-21 * unknown  ; activity: eating, duration: PT24M, time: 11:30, timezone: UTC+09:00
-    expenses:food and drinks:dining                              14 000.00 KRW  ; food_and_drink: ramen
+    expenses:food and drinks:dining                              14 000.00 KRW  ; food_or_drink: ramen
     liabilities:friends:4cde7f3e-81fa-4165-a2a4-1a7a52ec7400    -14 000.00 KRW
 
 2024-06-21 * (D002 3377 6242 80D2 / 2310) Seoul Metropolitan Subway  ; activity: transport, duration: PT12M55S, time: 12:01:30, timezone: UTC+09:00
@@ -557,7 +557,7 @@ include ../../../preludes/self.journal
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 500.00 KRW
 
 2024-06-21 * Nice to CU  ; activity: eating, eating: snacks, time: 13:00:26, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                 0.00 KRW  ; food_and_drink: orange juice 500 mL
+    expenses:food and drinks:snacks                                 0.00 KRW  ; food_or_drink: orange juice 500 mL
     liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7        0.00 KRW
 
 2024-06-21 * (D002 3370 6EED 3974 / 2311) Seoul Metropolitan Subway  ; activity: transport, duration: PT17M33S, time: 13:19:30, timezone: UTC+09:00
@@ -584,8 +584,8 @@ include ../../../preludes/self.journal
 
 2024-06-21 * (90157) KFC  ; activity: eating, duration: PT14M11S, eating: dinner, time: 21:14:54, timezone: UTC+09:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156    -6 900.00 KRW
-    expenses:food and drinks:dining                                   4 700.00 KRW  ; food_and_drink: nugget 8pcs
-    expenses:food and drinks:dining                                   2 200.00 KRW  ; food_and_drink: orange juice 500 mL
+    expenses:food and drinks:dining                                   4 700.00 KRW  ; food_or_drink: nugget 8pcs
+    expenses:food and drinks:dining                                   2 200.00 KRW  ; food_or_drink: orange juice 500 mL
 
 2024-06-21 * (UO 627) HK Express  ; activity: transport, duration: PT3H35M, time: 22:35, timezone: UTC+09:00
     assets:deferred expenses:transport:airplanes     -638.00 HKD = 0.00 HKD
@@ -596,8 +596,8 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-06-22 7-Eleven  ; activity: eating, eating: snacks, time: 03:37, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: 7-Select pork floss rice ball
-    expenses:food and drinks:snacks                                         10.00 HKD  ; food_and_drink: 7-Select teriyaki chicken rice ball
+    expenses:food and drinks:snacks                                         10.00 HKD  ; food_or_drink: 7-Select pork floss rice ball
+    expenses:food and drinks:snacks                                         10.00 HKD  ; food_or_drink: 7-Select teriyaki chicken rice ball
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-06-22 dd9bec11-84e8-4b80-b6d4-f6ca65723978  ; activity: transfer, time: 12:42:18, timezone: UTC+08:00
@@ -633,7 +633,7 @@ include ../../../preludes/self.journal
 
 2024-06-22 Circle K  ; activity: eating, eating: snacks, time: 18:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.50 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: Suntory CC lemon 500 mL
+    expenses:food and drinks:snacks                                                    ; food_or_drink: Suntory CC lemon 500 mL
 
 2024-06-23 adjustment  ; activity: exchange, timezone: UTC+08:00
     liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156     11 000.00 KRW = -6 900.00 KRW
@@ -661,19 +661,19 @@ include ../../../preludes/self.journal
 
 2024-06-25 (9/096388) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: lunch, time: 12:02:04, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 芝士焗肉醬意粉
+    expenses:food and drinks:dining                                                    ; food_or_drink: 芝士焗肉醬意粉
 
 2024-06-25 7-Eleven  ; activity: eating, eating: snacks, time: 12:06:46, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.00 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: Suntory CC lemon 500 mL
+    expenses:food and drinks:snacks                                                    ; food_or_drink: Suntory CC lemon 500 mL
 
 2024-06-25 (082-2803) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:20:29, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉, food_and_drink: 迷你雙層沙律三文治
+    expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
 2024-06-25 Swire  ; activity: eating, eating: snacks, time: 21:20:54, timezone: UTC+08:00, via: COKE+ vending machine
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.00 HKD
-    expenses:food and drinks:snacks                                                    ; food_and_drink: NESCAFÉ Coffee Beverage Regular 250 mL
+    expenses:food and drinks:snacks                                                    ; food_or_drink: NESCAFÉ Coffee Beverage Regular 250 mL
 
 2024-06-25 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:24, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -699,7 +699,7 @@ include ../../../preludes/self.journal
     revenues:interests
 
 2024-06-27 (41037513) Cafe 100%  ; activity: eating, duration: PT33M48S, eating: breakfast, time: 08:00:12, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         37.00 HKD  ; food_and_drink: garlic butter on toast, food_and_drink: hot milk tea, food_and_drink: macaroni in soup (light), food_and_drink: scrambled egg with mushroom, food_and_drink: shredded ham
+    expenses:food and drinks:dining                                         37.00 HKD  ; food_or_drink: garlic butter on toast, food_or_drink: hot milk tea, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2024-06-27 (FRN20240627PAYD0101750768080) self  ; activity: transfer, time: 08:46:10, timezone: UTC+08:00, via: eDDA
@@ -720,7 +720,7 @@ include ../../../preludes/self.journal
 
 2024-06-27 (081-1788) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:39:10, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 忌廉湯, food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉
+    expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
 2024-06-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:10, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -740,7 +740,7 @@ include ../../../preludes/self.journal
 
 2024-06-28 (082-2103) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:13:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: 熱港式伯爵奶茶, food_and_drink: 迷你肉醬意粉, food_and_drink: 迷你雙層沙律三文治
+    expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
 2024-06-28 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -760,7 +760,7 @@ include ../../../preludes/self.journal
 
 2024-06-30 (0100496668) Starbucks  ; activity: eating, eating: breakfast, time: 10:13:19, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -50.00 HKD
-    expenses:food and drinks:dining                                                    ; food_and_drink: Mocha; venti (20 fl oz)
+    expenses:food and drinks:dining                                                    ; food_or_drink: Mocha; venti (20 fl oz)
 
 2024-06-30 (769336, MKB7BM70Y8, 194818733355) Apple  ; activity: service, time: 00:01:21, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.00 HKD

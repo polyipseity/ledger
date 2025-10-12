@@ -179,7 +179,7 @@ include ../../../preludes/self.journal
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-07-29 (2023072922001432591439834050) 7-Eleven  ; activity: consumption, time: 23:00:10, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                      20.50 HKD  ; food_and_drink: Yakult
+    expenses:food and drinks:snacks                                      20.50 HKD  ; food_or_drink: Yakult
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
 2023-07-30 (2023073022001432591442241980) Cafe 100%  ; activity: eating, eating: dinner, time: 19:36:07, timezone: UTC+08:00
