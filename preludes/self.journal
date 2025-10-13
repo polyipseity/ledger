@@ -118,6 +118,7 @@ account equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                     
 account equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                                       ; type: E
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
 account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       ; type: E
+account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc                                       ; type: E
 account equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                                       ; type: E
 account equity:friends:f5cfcb84-be23-4456-923b-3ad92ddcbc97                                       ; type: E
 account equity:kins                                                                               ; type: E
@@ -224,6 +225,7 @@ account liabilities:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486                
 account liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2                                  ; type: L
 account liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                  ; type: L
 account liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e                                  ; type: L
+account liabilities:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc                                  ; type: L
 account liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                  ; type: L
 account liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1                                  ; type: L
 account liabilities:friends:ef234023-8df0-4705-bb73-cd9b194a5b92                                  ; type: L
@@ -415,6 +417,7 @@ payee dfc127f7-4733-41c8-9a84-95848e26b3f2
 payee dfd2814d-d498-4b66-9a46-9c06aa74f635
 payee dfde1439-813b-4eb6-b7a0-a2a1cc30b714
 payee dfde318d-9ad1-4f25-8c57-2763ebfe1e3e
+payee e058a619-cd7a-4ef6-a859-3825f15e8cbc
 payee e2613673-8956-40d9-8024-53163878b766
 payee e7cd4d77-7c22-4d18-bd60-5d73b5faa76e
 payee e81cf14c-79fc-4958-b694-1a2a2c0c9be1
