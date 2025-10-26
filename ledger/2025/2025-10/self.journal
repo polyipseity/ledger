@@ -731,7 +731,7 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -2.90 _PT/E
 
 2025-10-20 (12/126758) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:31:19, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         29.00 HKD  ; food_and_drink: twisty macaroni in soup with ham, food_or_drink: hot coffee, food_or_drink: pineapple bun with cheese and egg
+    expenses:food and drinks:dining                                         29.00 HKD  ; food_or_drink: hot coffee, food_or_drink: pineapple bun with cheese and egg, food_or_drink: twisty macaroni in soup with ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
 2025-10-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:31, timezone: UTC+08:00
@@ -805,6 +805,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
+2025-10-22 * 314a66c3-cc75-45df-a3c2-794d696c70a6  ; activity: eating, eating: lunch, time: 15, timezone: UTC+08:00
+    expenses:food and drinks:dining                                32.70 HKD  ; food_or_drink: (unknown)
+    liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124      -32.70 HKD = -32.70 HKD
+
 2025-10-22 Swire  ; activity: eating, eating: lunch, time: 15:21, timezone: UTC+08:00, via: COKE+ vending machine
     expenses:food and drinks:dining                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
@@ -812,6 +816,10 @@ include ../../../preludes/self.journal
 2025-10-22 (58C75E/7711, 253, 44) McDonald's  ; activity: eating, eating: dinner, time: 18:28:13, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.00 HKD  ; food_or_drink: BBQ sauce, food_or_drink: cold Fanta, food_or_drink: medium fries, food_or_drink: nuggets 6pcs
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-10-22 (NA2287526661, HD125A2278023460) af53ecef-566f-4f4e-8337-349e3f551124  ; activity: repayment, time: 18:40, timezone: UTC+08:00
+    liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124            32.70 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -32.70 HKD
 
 2025-10-22 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:51, timezone: UTC+08:00
     expenses:transport:buses                                                 3.10 HKD
@@ -907,12 +915,16 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -5.90 _PT/E
 
 2025-10-25 * dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 12:00, timezone: UTC+08:00
-    assets:accrued revenues:incomes:tutoring      250.00 HKD
+    assets:accrued revenues:incomes:tutoring      250.00 HKD = 250.00 HKD
     revenues:incomes:tutoring                    -250.00 HKD  ; time: 13:30, timezone: UTC+08:00
 
 2025-10-25 (41183559, 12) Cafe 100%  ; activity: eating, duration: PT35M19S, eating: afternoon tea, time: 15:21:41, timezone: UTC+08:00
     expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-10-25 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: repayment, time: 23:28:09, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      250.00 HKD
+    assets:accrued revenues:incomes:tutoring                          -250.00 HKD = 0.00 HKD
 
 2025-10-25 * (66548780925, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
