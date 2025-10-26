@@ -122,7 +122,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: boiled egg, food_or_drink: oat-crusted pork cutlet, food_or_drink: sausage, food_or_drink: set hot Ovaltine
 
-2023-11-10 314a66c3-cc75-45df-a3c2-794d696c70a6  ; activity: eating, eating: snacks, time: 15:43, timezone: UTC+08:00
+2023-11-10 HFT Life  ; activity: eating, eating: snacks, time: 15:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.00 HKD
     expenses:food and drinks:snacks                                                    ; food_or_drink: brown sugar cocoa croissant
 
