@@ -1185,6 +1185,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
+2025-09-30 * (381962, SF381962, SAS B#69264) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships     20 000.00 HKD
+    revenues:education:scholarships                   -20 000.00 HKD  ; reward: 69160f11-7d0b-4f89-aaad-2f8f7e18f68b 2025/26
+
 2025-09-30 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT30M, time: 13:15, timezone: UTC+08:00
     assets:accrued revenues:incomes:education       34.00 HKD
     revenues:incomes:education                     -34.00 HKD
@@ -1228,6 +1232,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support      -37.42 HKD
 
 2025-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships                                               -20 000.00 HKD = 0.00 HKD
     assets:accrued revenues:rewards                                                                -89.60 _PT/E = 0.00 _PT/E
     assets:accrued revenues:rewards:competitions                                                  -3 500.00 HKD = 0.00 HKD
     assets:accrued revenues:incomes:education                                                     -5 236.00 HKD = 0.00 HKD

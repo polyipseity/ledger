@@ -1,6 +1,7 @@
 include ../../../preludes/self.journal
 
 2025-10-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships                                                20 000.00 HKD = 20 000.00 HKD
     assets:accrued revenues:rewards                                                                 89.60 _PT/E = 89.60 _PT/E
     assets:accrued revenues:rewards:competitions                                                   3 500.00 HKD = 3 500.00 HKD
     assets:accrued revenues:incomes:education                                                      5 236.00 HKD = 5 236.00 HKD
@@ -119,6 +120,10 @@ include ../../../preludes/self.journal
 2025-10-02 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     23.00 _PT/E
     revenues:rewards                                                        -23.00 _PT/E
+
+2025-10-03 * (381973, SF381973, SAS B#73724) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, timezone: UTC+08:00
+    assets:accrued revenues:education:scholarships     15 000.00 HKD
+    revenues:education:scholarships                   -15 000.00 HKD  ; reward: 477d7f67-20ca-4c0c-9c50-3a87afd0549a 2025/26
 
 2025-10-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 00:01, timezone: UTC+08:00
     expenses:transport:buses                                                 5.90 HKD
@@ -518,6 +523,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -21.90 _PT/E
     revenues:rewards                                                        -18.00 _PT/E
 
+2025-10-14 (HD125A1453145139, FRN20251014PAYC0302849460348, 0000265019) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 08:01, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     35 000.00 HKD
+    assets:accrued revenues:education:scholarships                   -35 000.00 HKD = 0.00 HKD
+
 2025-10-14 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:20, timezone: UTC+08:00
     expenses:transport:buses                                                10.00 HKD
     assets:accrued revenues:rewards                                       10.00 _PT/E
@@ -705,7 +714,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -21.90 _PT/E
     revenues:rewards                                                        -10.00 _PT/E
 
-2025-10-18 (FRN20251018PAYC0102861331358, HD125A1866945248) e2613673-8956-40d9-8024-53163878b766  ; activity: transfer, time: 20:22, timezone: UTC+08:00
+2025-10-18 (FRN20251018PAYC0102861331358, HD125A1866945248) e2613673-8956-40d9-8024-53163878b766  ; 2餐, activity: transfer, time: 20:22, timezone: UTC+08:00
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      100.00 HKD
     equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f               -100.00 HKD
 
@@ -904,6 +913,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
+2025-10-24 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 13:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
 2025-10-24 (082-2370) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: afternoon tea, time: 16:41:18, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.60 HKD  ; food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti, food_or_drink: mini spagetti bolognese cream soup egg salad mini croissant
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.60 HKD
@@ -953,6 +966,18 @@ include ../../../preludes/self.journal
 2025-10-26 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 09, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4       20.00 HKD
     assets:cash                                                    -20.00 HKD
+
+2025-10-26 (41183840, 19) Cafe 100%  ; activity: eating, duration: PT31M10S, eating: afternoon tea, time: 14:25:50, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-10-26 (CAQ87318584, FRN20251026PAYD0102880359193, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:39, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-10-26 self  ; activity: transfer, time: 19:39, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
 2025-10-30 ! (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
