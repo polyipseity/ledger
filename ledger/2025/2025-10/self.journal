@@ -108,7 +108,7 @@ include ../../../preludes/self.journal
 
 2025-10-02 (14/141569) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:59:42, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: garden gourmet salad hot dog, food_or_drink: hot coffee, food_or_drink: spicy potato wedges
-    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: macaroni in soup
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: twisty macaroni in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-10-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:37, timezone: UTC+08:00
@@ -329,7 +329,7 @@ include ../../../preludes/self.journal
 
 2025-10-09 (8/084907) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:34:29, timezone: UTC+08:00
     expenses:food and drinks:dining                                         26.50 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: luncheon meat cutlet & fried egg sandwich set
-    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: macaroni in soup
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: twisty macaroni in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.50 HKD
 
 2025-10-09 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:12, timezone: UTC+08:00
