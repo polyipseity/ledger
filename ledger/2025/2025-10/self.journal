@@ -1091,6 +1091,26 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
+2025-10-29 (269921, MKB8XHKGSS, 802042136108) Apple  ; activity: service, time: 16:01, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
+
+2025-10-29 Swire  ; activity: eating, eating: snacks, time: 16:29, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2025-10-29 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:35, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:accrued revenues:rewards                                        3.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    revenues:rewards                                                      -3.10 _PT/E
+
+2025-10-29 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:56, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:accrued revenues:rewards                                        5.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+    revenues:rewards                                                      -5.90 _PT/E
+
 2025-10-29 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.90 _PT/E
     assets:accrued revenues:rewards                                         -21.90 _PT/E
@@ -1100,6 +1120,18 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: scrambled egg sandwich, food_or_drink: sugar-free oatmeal in fresh milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
+2025-10-30 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:21, timezone: UTC+08:00
+    expenses:transport:buses                                                12.10 HKD
+    assets:accrued revenues:rewards                                       12.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.10 HKD
+    revenues:rewards                                                     -12.10 _PT/E
+
+2025-10-30 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:45, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:accrued revenues:rewards                                        2.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+    revenues:rewards                                                      -2.90 _PT/E
+
 2025-10-30 (5900120154, 99) c3519e26-caa7-467e-8057-ff4a3eeabd55  ; activity: eating, eating: afternoon tea, time: 14:41:56, timezone: UTC+08:00
     expenses:food and drinks:dining                                         27.00 HKD  ; food_or_drink: French fries, food_or_drink: deep-fried fish fillet, food_or_drink: hot Ovaltine + more milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.00 HKD
@@ -1107,6 +1139,23 @@ include ../../../preludes/self.journal
 2025-10-30 (58C75E/9638, 933, 44) McDonald's  ; activity: eating, eating: dinner, time: 22:21:29, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: sau egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-10-30 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:22, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:accrued revenues:rewards                                        3.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    revenues:rewards                                                      -3.10 _PT/E
+
+2025-10-30 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:42, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.80 HKD
+    assets:accrued revenues:rewards                                        5.80 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.80 HKD
+    revenues:rewards                                                      -5.80 _PT/E
+
+2025-10-30 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.90 _PT/E
+    assets:accrued revenues:rewards                                         -21.90 _PT/E
+    revenues:rewards                                                          0.00 _PT/E
 
 2025-10-30 * (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
@@ -1116,6 +1165,26 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: scrambled egg sandwich, food_or_drink: sugar-free oatmeal in fresh milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
+2025-10-31 (CAV91164970, FRN20251013PAYD0102892703563, OCTOPUS038084565301286497) self  ; activity: transfer, time: 10:29, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-10-31 self  ; activity: transfer, time: 10:29, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-10-31 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 10:29, timezone: UTC+08:00
+    expenses:transport:buses                                                10.00 HKD
+    assets:accrued revenues:rewards                                       10.00 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
+    revenues:rewards                                                     -10.00 _PT/E
+
+2025-10-31 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 11:10, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:accrued revenues:rewards                                        2.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+    revenues:rewards                                                      -2.90 _PT/E
+
 2025-10-31 (14/149443) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:11:13, timezone: UTC+08:00
     expenses:food and drinks:dining                                         26.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: spicy potato wedges, food_or_drink: 豬扒包
     expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: twisty macaroni in soup
@@ -1124,6 +1193,15 @@ include ../../../preludes/self.journal
 2025-10-31 (5700626813) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 18:31:28, timezone: UTC+08:00
     expenses:food and drinks:dining                                         28.00 HKD  ; food_or_drink: steamed egg with pork fioss and dried shrimp + less rice
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+
+2025-10-31 Swire  ; activity: eating, eating: snacks, time: 19:11, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2025-10-31 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     21.90 _PT/E
+    assets:accrued revenues:rewards                                         -21.90 _PT/E
+    revenues:rewards                                                          0.00 _PT/E
 
 2025-10-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
