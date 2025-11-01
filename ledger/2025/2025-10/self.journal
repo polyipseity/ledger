@@ -1096,11 +1096,36 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -21.90 _PT/E
     revenues:rewards                                                          0.00 _PT/E
 
-2025-10-30 ! (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+2025-10-30 (41184846, 16) Cafe 100%  ; activity: eating, duration: PT36M20S, eating: breakfast, time: 09:28:40, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: scrambled egg sandwich, food_or_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-10-30 (5900120154, 99) c3519e26-caa7-467e-8057-ff4a3eeabd55  ; activity: eating, eating: afternoon tea, time: 14:41:56, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         27.00 HKD  ; food_or_drink: French fries, food_or_drink: deep-fried fish fillet, food_or_drink: hot Ovaltine + more milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.00 HKD
+
+2025-10-30 (58C75E/9638, 933, 44) McDonald's  ; activity: eating, eating: dinner, time: 22:21:29, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: sau egg
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-10-30 * (MKB8TTZQQ7) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
 
-2025-10-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
+2025-10-31 (41185128, 14) Cafe 100%  ; activity: eating, duration: PT29M11S, eating: breakfast, time: 09:29:49, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: scrambled egg sandwich, food_or_drink: sugar-free oatmeal in fresh milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2025-10-31 (14/149443) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:11:13, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         26.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: spicy potato wedges, food_or_drink: 豬扒包
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: ham, food_or_drink: twisty macaroni in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.00 HKD
+
+2025-10-31 (5700626813) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: dinner, time: 18:31:28, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         28.00 HKD  ; food_or_drink: steamed egg with pork fioss and dried shrimp + less rice
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
+
+2025-10-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
     assets:accumulated depreciation      -27.75 HKD  ; item: Apple Magic Keyboard Folio iPad10th Eng MQDP3ZA/WHITE
@@ -1108,7 +1133,7 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation      -30.00 HKD  ; item: Apple Watch SE GPS; 40mm Starlight Aluminum Case with Starlight/Pink Nike Sport Loop
     assets:accumulated depreciation       -4.58 HKD  ; item: Verbatim Wireless Mouse - Usb (Black) #66432
 
-2025-10-31 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
+2025-10-31 * adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
     expenses:services:support                       16.63 HKD  ; item: AppleCare+ for Apple Watch SE Aluminum
     assets:deferred expenses:services:support      -37.42 HKD
