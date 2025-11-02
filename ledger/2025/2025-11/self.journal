@@ -88,6 +88,15 @@ include ../../../preludes/self.journal
     equity:conversions:_PT/E-_PT/F:_PT/F                                     -10.00 _PT/F
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    -800.00 _PT/E
 
+2025-11-02 (41185998, 42) Cafe 100%  ; activity: eating, duration: PT26M34S, eating: afternoon tea, time: 16:49:26, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-11-02 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     29.00 _PT/E
+    assets:accrued revenues:rewards                                         -19.00 _PT/E
+    revenues:rewards                                                        -10.00 _PT/E
+
 2025-11-25 ! (94809551025, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
     assets:deferred expenses:services:internet         -148.70 HKD = 0.00 HKD
