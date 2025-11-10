@@ -414,7 +414,7 @@ include ../../../preludes/self.journal
     assets:cash                    250.00 HKD
     revenues:incomes:tutoring     -250.00 HKD  ; time: 12:30, timezone: UTC+08:00
 
-2025-10-11 (41179450, 11) Cafe 100%  ; activity: eating, duration: PT32M56S, eating: breakfast, time: 15:32:04, timezone: UTC+08:00
+2025-10-11 (41179450, 11) Cafe 100%  ; activity: eating, duration: PT32M56S, eating: afternoon tea, time: 15:32:04, timezone: UTC+08:00
     expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + less sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
@@ -705,7 +705,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       68.00 HKD
     revenues:incomes:education                     -68.00 HKD
 
-2025-10-18 (01358283, 17A) Cafe 100%  ; activity: eating, duration: PT33M36S, eating: breakfast, time: 14:50:24, timezone: UTC+08:00
+2025-10-18 (01358283, 17A) Cafe 100%  ; activity: eating, duration: PT33M36S, eating: afternoon tea, time: 14:50:24, timezone: UTC+08:00
     expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
