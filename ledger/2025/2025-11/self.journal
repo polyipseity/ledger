@@ -345,13 +345,33 @@ include ../../../preludes/self.journal
     assets:cash                                                        100.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -100.00 HKD
 
-2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 14:02, timezone: UTC+08:00
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: transfer, time: 14:07, timezone: UTC+08:00
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 102.00 HKD
     assets:cash                                                                 -100.00 HKD
 
-2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 14:02, timezone: UTC+08:00
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 14:09, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 14:25, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 14:43, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 15:00, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 15:18, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-09 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 15:35, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 66.00 HKD
 
 2025-11-09 * (000-191978, 3) Saizeriya  ; activity: eating, duration: PT59M45S, eating: dinner, time: 16:05:28, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: chicken doria
@@ -398,6 +418,28 @@ include ../../../preludes/self.journal
 2025-11-10 Swire  ; activity: eating, eating: snacks, time: 12:50, timezone: UTC+08:00, via: COKE+ vending machine
     expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2025-11-10 (13/132888) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:31:30, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: curry puff, food_or_drink: garden gourmet salad hot dog, food_or_drink: hot coffee + more milk
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: vermicelli in soup with ham
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-11-10 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:27, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:accrued revenues:rewards                                        3.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    revenues:rewards                                                      -3.10 _PT/E
+
+2025-11-10 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:45, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:accrued revenues:rewards                                        5.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+    revenues:rewards                                                      -5.90 _PT/E
+
+2025-11-10 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -PT23H59M59S, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     33.20 _PT/E
+    assets:accrued revenues:rewards                                         -23.20 _PT/E
+    revenues:rewards                                                        -10.00 _PT/E
 
 2025-11-25 ! (94809551025, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
