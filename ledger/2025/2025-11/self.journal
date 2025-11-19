@@ -607,8 +607,8 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -5.80 _PT/E
 
 2025-11-14 洪記麵家 (Hungkee Noodles)  ; activity: eating, eating: dinner, time: 20:58, timezone: UTC+08:00
-    expenses:food and drinks:dining                           38.00 HKD  ; food_or_drink: 招牌魚蛋 + 米線 + 走蒽 + 加底
-    equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa       38.00 HKD  ; food_or_drink: 招牌魚蛋 + 米線 + 走蒽 + 加底
+    expenses:food and drinks:dining                                         38.00 HKD  ; food_or_drink: 招牌魚蛋 + 米線 + 走蒽 + 加底
+    equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                     38.00 HKD  ; food_or_drink: 招牌魚蛋 + 米線 + 走蒽 + 加底
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -76.00 HKD
 
 2025-11-15 (41189679, 15) Cafe 100%  ; activity: eating, duration: PT28M21S, eating: breakfast, time: 10:55:39, timezone: UTC+08:00
@@ -672,9 +672,9 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -3.10 _PT/E
 
 2025-11-17 * (202511172468, 2468, 8520309) Sushiro  ; activity: eating, duration: PT1H7M20S, eating: dinner, time: 20, timezone: UTC+08:00
-    expenses:food and drinks:dining                                     78.00 HKD  ; food_or_drink: (unknown)
-    expenses:food and drinks:fees                                        8.30 HKD  ; food_or_drink: 10% service charge
-    assets:loans:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6           84.70 HKD = 84.70 HKD
+    expenses:food and drinks:dining                                         78.00 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                            8.30 HKD  ; food_or_drink: 10% service charge
+    assets:loans:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6               84.70 HKD = 84.70 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521     -171.00 HKD
 
 2025-11-17 (CBH06844832, FRN20251117PAYD0102940121407, OCTOPUS038084565301286497) self  ; activity: transfer, time: 21:07, timezone: UTC+08:00, via: eDDA
@@ -740,6 +740,11 @@ include ../../../preludes/self.journal
 2025-11-19 (41191046, 42) Cafe 100%  ; activity: eating, duration: PT28M44S, eating: afternoon tea, time: 17:00:16, timezone: UTC+08:00
     expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-11-19 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -P8D, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    106.90 _PT/E
+    assets:accrued revenues:rewards                                         -66.90 _PT/E
+    revenues:rewards                                                        -40.00 _PT/E
 
 2025-11-25 ! (94809551025, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
