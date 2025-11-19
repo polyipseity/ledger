@@ -67,6 +67,7 @@ account assets:loans:friends:76c0d4ff-3ed2-42a2-8ec1-93fa90d48c10               
 account assets:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                                 ; type: A
 account assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                 ; type: A
 account assets:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1                                 ; type: A
+account assets:loans:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6                                 ; type: A
 account assets:loans:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                 ; type: A
 account assets:loans:friends:e2613673-8956-40d9-8024-53163878b766                                 ; type: A
 account assets:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1                                 ; type: A
@@ -414,6 +415,7 @@ payee bfa32943-960d-4df1-9997-e2391f5551a1
 payee c1fa4d34-35f7-4bee-bbb2-42f0d93b8486
 payee c3519e26-caa7-467e-8057-ff4a3eeabd55
 payee c659b0a7-14e0-48a1-b268-b989de587b3c
+payee c8c2a002-b806-4d93-a543-5ff93dcab8b6
 payee d0356653-93de-4abd-9e23-26b71de1ebf2
 payee d43f45a7-5dda-4f56-b441-c82b76b743c6
 payee dd9bec11-84e8-4b80-b6d4-f6ca65723978
