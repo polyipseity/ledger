@@ -403,6 +403,14 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -21.90 _PT/E
     revenues:rewards                                                        -10.00 _PT/E
 
+2025-11-10 * (1339-7287, pi_3SRfW1BMoBY3wEtc1P8iRNMT) *********@****************.com  ; polyipseity (@polyipseity) - Support, activity: donation, time: 04:47:14, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                   10.61 USD  ; rate: 7.61994
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       71.54 HKD
+    expenses:fees:Buy Me a Coffee                                     3.81 HKD
+    expenses:fees:Stripe                                              5.50 HKD
+    equity:conversions:HKD-USD:HKD                                  -80.85 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                  -10.61 USD
+
 2025-11-10 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:11, timezone: UTC+08:00
     expenses:transport:buses                                                12.10 HKD
     assets:accrued revenues:rewards                                       12.10 _PT/E
@@ -578,6 +586,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.20 HKD
     revenues:rewards                                                      -4.20 _PT/E
 
+2025-11-14 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 13:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
 2025-11-14 (5900122500, 37) c3519e26-caa7-467e-8057-ff4a3eeabd55  ; activity: eating, eating: afternoon tea, time: 16:31:42, timezone: UTC+08:00
     expenses:food and drinks:dining                                         27.00 HKD  ; food_or_drink: French fries, food_or_drink: deep-fried fish fillet, food_or_drink: hot Ovaltine + more milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -27.00 HKD
@@ -657,9 +669,13 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         24.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot coffee (8 oz) + more milk, food_or_drink: sauteed fresh mushroom, food_or_drink: scrambled egg, food_or_drink: toast
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 
-2025-11-17 (7/075536) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 14:42:43, timezone: UTC+08:00
+2025-11-17 (7/075536) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 14:42:43, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.00 HKD  ; food_or_drink: 芝士焗肉醬意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
+
+2025-11-17 (HD125B1758354299, FRN20251117PAYC0102939266267, po_1STltvBMoBY3wEtcbMTrSLpw) Stripe  ; STRIPE PAYMENTS EUROPE, LIMITED, activity: transfer, time: 15:10:10, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       71.54 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -71.54 HKD = 0.00 HKD
 
 2025-11-17 Swire  ; activity: eating, eating: snacks, time: 18:53, timezone: UTC+08:00, via: COKE+ vending machine
     expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
@@ -692,6 +708,12 @@ include ../../../preludes/self.journal
 2025-11-17 Mass Transit Railway  ; activity: transport, time: 21:58, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2025-11-17 (FRN20251117PAYC0302937990406, HD125B1756869787, 20251119_092957) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 08, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     2 516.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                  125.80 HKD
+    assets:accrued revenues:incomes:education                        -2 516.00 HKD
+    revenues:incomes:education                                         -125.80 HKD
 
 2025-11-18 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 07:22, timezone: UTC+08:00
     expenses:transport:buses                                                12.10 HKD
@@ -794,6 +816,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
+2025-11-21 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 13:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
 2025-11-21 (7/076852) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: afternoon tea, time: 15:26:35, timezone: UTC+08:00
     expenses:food and drinks:dining                                         29.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: mini pizza, food_or_drink: spicy crisscut fries
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
@@ -843,6 +869,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                        7.10 _PT/E
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.10 HKD
     revenues:rewards                                                      -7.10 _PT/E
+
+2025-11-24 ! (NB2408622302, HD125B2476523713) 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: transfer, time: 07:33:55, timezone: UTC+08:00
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0         2 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -2 000.00 HKD
 
 2025-11-25 ! (94809551025, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                          149.00 HKD
