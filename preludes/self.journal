@@ -225,6 +225,7 @@ account liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                
 account liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                  ; type: L
 account liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124                                  ; type: L
 account liabilities:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486                                  ; type: L
+account liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6                                  ; type: L
 account liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2                                  ; type: L
 account liabilities:friends:d43f45a7-5dda-4f56-b441-c82b76b743c6                                  ; type: L
 account liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e                                  ; type: L
@@ -454,6 +455,7 @@ payee 小王牛肉麵
 payee 岡山一番店拉麵
 payee 手作功夫茶 (Kong Fu Tea)
 payee 松記糖水店 (Chung Kee Restaurant)
+payee 沖繩二段料理 (Antoshimo Cafe & Bakery)
 payee 洪記麵家 (Hungkee Noodles)
 payee 燒肉 DON DON
 payee 紅葉茶屋 (Momiji-Chaya)
