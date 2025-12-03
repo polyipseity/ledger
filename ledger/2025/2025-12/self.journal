@@ -120,6 +120,27 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: hamburg steak with vegetable salsa
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
+2025-12-03 (41195301, 16) Cafe 100%  ; activity: eating, duration: PT23M40S, eating: afternoon tea, time: 17:11:20, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         39.00 HKD  ; food_or_drink: char siu rice (light), food_or_drink: imitation shark fin soup, food_or_drink: red beans iced drink + less ice + no sugar
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
+
+2025-12-03 (CC320704157, FRN20251203PAYD0102982191154, OCTOPUS038084565301286497) self  ; activity: transfer, time: 17:35, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2025-12-03 self  ; activity: transfer, time: 17:35, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-12-03 7-Eleven  ; activity: transfer, time: 18:01, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
+    assets:cash                                                           -100.00 HKD
+
+2025-12-03 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -P10D, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    164.60 _PT/E
+    assets:accrued revenues:rewards                                         -94.60 _PT/E
+    revenues:rewards                                                        -70.00 _PT/E
+
 2025-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                     22 250.00 HKD
     assets:deferred expenses:education:tuition:universities    -22 250.00 HKD  ; = 0.00 HKD
