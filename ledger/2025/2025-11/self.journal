@@ -860,6 +860,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -53.50 _PT/E
     revenues:rewards                                                        -10.00 _PT/E
 
+2025-11-24 ! (NB2408622302, HD125B2476523713) 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: transfer, time: 07:33:55, timezone: UTC+08:00
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0         2 000.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -2 000.00 HKD
+
 2025-11-24 Mass Transit Railway  ; activity: transport, time: 10:01, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
@@ -869,10 +873,6 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                        7.10 _PT/E
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.10 HKD
     revenues:rewards                                                      -7.10 _PT/E
-
-2025-11-24 ! (NB2408622302, HD125B2476523713) 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: transfer, time: 07:33:55, timezone: UTC+08:00
-    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0         2 000.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -2 000.00 HKD
 
 2025-11-24 (279303, K490) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 12:40:25, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: 西西里磨菇雞肉 + more spaghetti
