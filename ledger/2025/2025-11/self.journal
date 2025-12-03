@@ -995,6 +995,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
     revenues:rewards                                                      -5.90 _PT/E
 
+2025-11-26 (715984668252602162) bank  ; CREDIT INTEREST, activity: interests, time: 23:59:59, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        1.41 HKD
+    revenues:interests                                                  -1.41 HKD
+
 2025-11-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:23, timezone: UTC+08:00
     expenses:transport:buses                                                12.10 HKD
     assets:accrued revenues:rewards                                       12.10 _PT/E
@@ -1042,8 +1046,12 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -136.00 HKD
 
 2025-11-28 * (97-762-2) McDonald's  ; activity: eating, eating: lunch, time: 13:07:28, timezone: UTC+08:00
-    expenses:food and drinks:dining                                35.50 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: 麥炸雞2件
-    liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6      -35.50 HKD
+    expenses:food and drinks:dining                                35.00 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: 麥炸雞2件
+    liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6      -35.00 HKD
+
+2025-11-28 (HD125B2890630993, NB2825200633) c8c2a002-b806-4d93-a543-5ff93dcab8b6  ; activity: repayment, time: 13:23, timezone: UTC+08:00
+    liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6            35.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -35.00 HKD
 
 2025-11-28 (5900497456) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 16:41:41, timezone: UTC+08:00
     expenses:food and drinks:dining                                         31.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: instant noodles with deep-fried chicken steak in cheese sauce
@@ -1083,6 +1091,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
+2025-11-29 (85516, MKB9090YFK, 696055689742) Apple  ; activity: service, time: 17:02, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
+
 2025-11-30 (41194179, 13) Cafe 100%  ; activity: eating, duration: PT27M34S, eating: breakfast, time: 09:25:26, timezone: UTC+08:00
     expenses:food and drinks:dining                                         37.00 HKD  ; food_or_drink: garlic butter on toast, food_or_drink: hot coffee + more milk, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
@@ -1094,6 +1106,22 @@ include ../../../preludes/self.journal
 2025-11-30 (100/111, 1110037, 1001112611301110037) Daiso  ; activity: consumption, duration: PT3S, time: 17:34:18, timezone: UTC+08:00
     expenses:equipment                                                      12.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.00 HKD
+
+2025-11-30 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 16:41, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-30 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 17:05, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-30 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 17:48, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+
+2025-11-30 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 18:06, timezone: UTC+08:00
+    expenses:gaming:maimai                                                         6.00 HKD
+    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 42.00 HKD
 
 2025-11-30 * (2025113020065346162, 238, 3) 沖繩二段料理 (Antoshimo Cafe & Bakery)  ; activity: eating, duration: PT47M53S, eating: dinner, time: 19:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                         96.00 HKD  ; food_or_drink: (unknown)
@@ -1108,6 +1136,10 @@ include ../../../preludes/self.journal
 2025-11-30 self  ; activity: transfer, time: 20:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2025-11-30 (HD125B3097881970, FRN20251130PAYC0102972895046) bfa32943-960d-4df1-9997-e2391f5551a1  ; activity: repayment, time: 20:07, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      115.50 HKD
+    assets:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1         -115.50 HKD = 0.00 HKD
 
 2025-11-30 Mass Transit Railway  ; activity: transport, time: 20:48, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
