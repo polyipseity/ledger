@@ -17,6 +17,7 @@ include ../../../preludes/self.journal
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                           42.00 HKD = 42.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      184.60 HKD = 184.60 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                 68.30 HKD = 68.30 HKD
+    assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                2 000.00 HKD = 2 000.00 HKD
     assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
     assets:objects:consumer electronics                                                            8 989.00 HKD = 8 989.00 HKD
     assets:objects:decorations                                                                         3.00 EUR = 3.00 EUR
@@ -50,7 +51,7 @@ include ../../../preludes/self.journal
     equity:friends:f5cfcb84-be23-4456-923b-3ad92ddcbc97                                              -12.00 HKD = -12.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                      3 806.50 CNY = 3 806.50 CNY
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                                    -89 909.61 HKD = -89 909.61 HKD
-    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                     13 303.18 HKD = 13 303.18 HKD
+    equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                     11 303.18 HKD = 11 303.18 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                     -2 412.00 HKD = -2 412.00 HKD
     equity:kins:special                                                                           -5 000.00 CNY = -5 000.00 CNY
     equity:kins:special                                                                             -380.00 HKD = -380.00 HKD
@@ -140,6 +141,31 @@ include ../../../preludes/self.journal
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc    164.60 _PT/E
     assets:accrued revenues:rewards                                         -94.60 _PT/E
     revenues:rewards                                                        -70.00 _PT/E
+
+2025-12-04 (000-949171, 37) Saizeriya  ; activity: eating, duration: PT39M29S, eating: dinner, time: 12:14:09, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: chicken doria
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
+
+2025-12-04 (41195596, 32) Cafe 100%  ; activity: eating, duration: PT25M22S, eating: afternoon tea, time: 17:55:38, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         34.00 HKD  ; food_or_drink: condensed milk & butter on toast, food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: shredded pork & preserved vegetables with rice vermicelli in soup
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
+
+2025-12-04 7-Eleven  ; activity: eating, eating: snacks, time: 23:55, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                          9.50 HKD  ; food_or_drink: OREO Chocolate Sandwich Cookies with Tutti Fruity Flavored Cream
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.50 HKD
+
+2025-12-05 (000-949308, 36) Saizeriya  ; activity: eating, duration: PT30M7S, eating: dinner, time: 14:01:05, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: baked diced potatoes
+    expenses:food and drinks:dining                                         12.00 HKD  ; food_or_drink: garlic baguette
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+
+2025-12-05 (S012025120500300395, 535, B1) 93e360c4-2428-4e2c-969d-6b1a3a7e127f  ; activity: eating, duration: PT35M59S, eating: dinner, time: 18:42:57, timezone: UTC+08:00
+    expenses:food and drinks:dining                                 54.00 HKD  ; food_or_drink: hot chocolate, food_or_drink: 例湯, food_or_drink: 叉燒四寶飯
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4      -54.00 HKD
+
+2025-12-05 (HD125C0516549657) 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: repayment, time: 20:42, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       2 000.00 HKD
+    assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0    -2 000.00 HKD = 0.00 HKD
 
 2025-12-19 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: adjust, time: 23:59:59, timezone: UTC+08:00
     expenses:education:tuition:universities                     22 250.00 HKD

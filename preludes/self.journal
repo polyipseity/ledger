@@ -76,6 +76,7 @@ account assets:loans:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa               
 account assets:loans:kins                                                                         ; type: A
 account assets:loans:kins:families                                                                ; type: A
 account assets:loans:kins:families:3833b42e-dad3-425c-b254-904be68993e4                           ; type: A
+account assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                           ; type: A
 account assets:objects                                                                            ; type: A
 account assets:objects:clothing                                                                   ; type: A
 account assets:objects:consumer electronics                                                       ; type: A
