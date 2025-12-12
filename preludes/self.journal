@@ -227,6 +227,7 @@ account liabilities:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                
 account liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                                  ; type: L
 account liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                  ; type: L
 account liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124                                  ; type: L
+account liabilities:friends:bfa32943-960d-4df1-9997-e2391f5551a1                                  ; type: L
 account liabilities:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486                                  ; type: L
 account liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6                                  ; type: L
 account liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2                                  ; type: L
@@ -465,6 +466,8 @@ payee 紅葉茶屋 (Momiji-Chaya)
 payee 美圖照相
 payee 老掌櫃東北菜館 (Lao Zhang Gui Dongbei Restaurant)
 payee 荷里活Game Zone (Hollywood Game Zone)
+payee 觀塘Game Zone (Kwun Tong Game Zone)
+payee 阿土伯鹽水雞
 payee 隨便坐車仔麵燒烤
 payee 麵屋福
 
