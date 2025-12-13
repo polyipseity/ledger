@@ -474,8 +474,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.50 HKD
 
 2024-11-14 * 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: eating, eating: snacks, time: 20:20, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                 6.00 HKD  ; food_or_drink: Kinder Bueno T2 健達繽紛樂2條裝
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -6.00 HKD = -6.00 HKD
+    expenses:food and drinks:snacks                                       6.00 HKD  ; food_or_drink: Kinder Bueno T2 健達繽紛樂2條裝
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -6.00 HKD = -6.00 HKD
 
 2024-11-14 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:23, timezone: UTC+08:00
     expenses:transport:buses                                                 2.80 HKD
@@ -607,7 +607,7 @@ include ../../../preludes/self.journal
 
 2024-11-19 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 20:36, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                       6.00 HKD = 0.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                 6.00 HKD = 0.00 HKD
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5      -12.00 HKD
 
 2024-11-19 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 20:54, timezone: UTC+08:00

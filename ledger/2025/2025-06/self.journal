@@ -46,7 +46,7 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:levy                                              -17.64 HKD = -17.64 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25     -43 180.00 HKD = -43 180.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     -17 629.71 HKD = -17 629.71 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                               -1 200.00 HKD = -1 200.00 HKD
+    liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                         -1 200.00 HKD = -1 200.00 HKD
     equity:opening/closing balances
 
 2025-06-01 * (1306-4691, pi_3RV1xCBMoBY3wEtc3Es5rEQL) **********************@********.net  ; polyipseity (@polyipseity) - Support, activity: donation, time: 10:48:56, timezone: UTC+08:00
@@ -78,22 +78,22 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
 
 2025-06-02 * (000-159018, 34) Saizeriya  ; activity: eating, duration: PT1H9M21S, eating: dinner, time: 17:11:04, timezone: UTC+08:00
-    expenses:food and drinks:dining                                15.00 HKD  ; food_or_drink: baked mussels with cream sauce (4pcs.)
-    expenses:food and drinks:dining                                10.00 HKD  ; food_or_drink: golden crispy chicken
-    expenses:food and drinks:dining                                10.00 HKD  ; food_or_drink: sauteed garlic broccoli with mushrooms
-    expenses:food and drinks:dining                                15.00 HKD  ; food_or_drink: pizza "MARGHERITA"
-    expenses:food and drinks:dining                                17.50 HKD  ; food_or_drink: spaghetti "NERO DI SEPPIA"
-    expenses:food and drinks:dining                                19.00 HKD  ; food_or_drink: pizza with mushrooms and bacon
-    expenses:food and drinks:dining                                12.00 HKD  ; food_or_drink: Belgian chocolate mille crepe cake
-    liabilities:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c      -98.50 HKD = -98.50 HKD
+    expenses:food and drinks:dining                                      15.00 HKD  ; food_or_drink: baked mussels with cream sauce (4pcs.)
+    expenses:food and drinks:dining                                      10.00 HKD  ; food_or_drink: golden crispy chicken
+    expenses:food and drinks:dining                                      10.00 HKD  ; food_or_drink: sauteed garlic broccoli with mushrooms
+    expenses:food and drinks:dining                                      15.00 HKD  ; food_or_drink: pizza "MARGHERITA"
+    expenses:food and drinks:dining                                      17.50 HKD  ; food_or_drink: spaghetti "NERO DI SEPPIA"
+    expenses:food and drinks:dining                                      19.00 HKD  ; food_or_drink: pizza with mushrooms and bacon
+    expenses:food and drinks:dining                                      12.00 HKD  ; food_or_drink: Belgian chocolate mille crepe cake
+    liabilities:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c      -98.50 HKD = -98.50 HKD
 
 2025-06-02 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:43, timezone: UTC+08:00
     expenses:transport:buses                                                 6.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
 
 2025-06-02 (N60285933548, HD12560266630052) 968eeeeb-a2b6-4c7c-a789-e315c628d24c  ; activity: repayment, time: 21:34:06.558, timezone: UTC+08:00
-    liabilities:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c            98.50 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -98.50 HKD
+    liabilities:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c       98.50 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -98.50 HKD
 
 2025-06-03 (41139626, 72) Cafe 100%  ; activity: eating, duration: PT29M36S, eating: breakfast, time: 11:28:24, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: char siu, food_or_drink: garlic butter on toast, food_or_drink: hot coffee, food_or_drink: instant noodles
@@ -161,10 +161,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
 
 2025-06-11 * unknown  ; activity: consumption, time: 22:53, timezone: UTC+08:00
-    equity:conversions:EUR-HKD:HKD                                 27.00 HKD  ; rate: 0.111111
-    assets:deferred assets:objects:decorations                      3.00 EUR  ; item: 0 euro paper money
-    equity:conversions:EUR-HKD:EUR                                 -3.00 EUR
-    liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -27.00 HKD = -27.00 HKD
+    equity:conversions:EUR-HKD:HKD                                       27.00 HKD  ; rate: 0.111111
+    assets:deferred assets:objects:decorations                            3.00 EUR  ; item: 0 euro paper money
+    equity:conversions:EUR-HKD:EUR                                       -3.00 EUR
+    liabilities:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -27.00 HKD = -27.00 HKD
 
 2025-06-12 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 10:59, timezone: UTC+08:00
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4               40.00 HKD
@@ -179,21 +179,21 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
 2025-06-12 (C6C75674230, N61221505306, HD12561295636759) e81cf14c-79fc-4958-b694-1a2a2c0c9be1  ; activity: repayment, time: 16:54, timezone: UTC+08:00
-    liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1            27.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -27.00 HKD
+    liabilities:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1       27.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -27.00 HKD
 
 2025-06-12 Mass Transit Railway  ; activity: transport, time: 17:05, timezone: UTC+08:00
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2025-06-12 * (1548605, 67) Garden Restaurant  ; activity: eating, duration: PT34M, eating: dinner, time: 19:04, timezone: UTC+08:00
-    expenses:food and drinks:dining                               110.00 HKD  ; food_or_drink: hot milk tea, food_or_drink: 晚餐(F) 蒜香雞扒
-    expenses:food and drinks:fees                                  11.00 HKD  ; food_or_drink: 10% service charge
-    liabilities:friends:856ec2f9-6367-4726-9301-a2a6dde358c0     -121.00 HKD = -121.00 HKD
+    expenses:food and drinks:dining                                     110.00 HKD  ; food_or_drink: hot milk tea, food_or_drink: 晚餐(F) 蒜香雞扒
+    expenses:food and drinks:fees                                        11.00 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:856ec2f9-6367-4726-9301-a2a6dde358c0     -121.00 HKD = -121.00 HKD
 
 2025-06-12 (C6C75833101, N61222115616, HD12561296125837) 856ec2f9-6367-4726-9301-a2a6dde358c0  ; activity: repayment, time: 20:14, timezone: UTC+08:00
-    liabilities:friends:856ec2f9-6367-4726-9301-a2a6dde358c0           121.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -121.00 HKD
+    liabilities:loans:friends:856ec2f9-6367-4726-9301-a2a6dde358c0      121.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -121.00 HKD
 
 2025-06-12 Mass Transit Railway  ; activity: transport, time: 22:17, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
@@ -290,14 +290,14 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-06-22 * (250622-000069, 041238, V2) 紅葉茶屋 (Momiji-Chaya)  ; activity: eating, duration: PT2H4M10S, eating: dinner, time: 18:03:55, timezone: UTC+08:00
-    expenses:food and drinks:dining                                92.00 HKD  ; food_or_drink: 溫泉蛋卡邦尼鳥冬
-    expenses:food and drinks:fees                                   9.20 HKD  ; food_or_drink: 10% service charge
-    expenses:food and drinks:fees                                 -11.00 HKD  ; food_or_drink: 住戶尊享優惠
-    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -90.20 HKD = -90.20 HKD
+    expenses:food and drinks:dining                                      92.00 HKD  ; food_or_drink: 溫泉蛋卡邦尼鳥冬
+    expenses:food and drinks:fees                                         9.20 HKD  ; food_or_drink: 10% service charge
+    expenses:food and drinks:fees                                       -11.00 HKD  ; food_or_drink: 住戶尊享優惠
+    liabilities:loans:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -90.20 HKD = -90.20 HKD
 
 2025-06-22 * (1029437) 松記糖水店 (Chung Kee Restaurant)  ; activity: eating, duration: PT2H, eating: dinner, time: 20, timezone: UTC+08:00
-    expenses:food and drinks:dining                                31.00 HKD  ; food_or_drink: 芒果紫米露
-    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -31.00 HKD = -121.20 HKD
+    expenses:food and drinks:dining                                      31.00 HKD  ; food_or_drink: 芒果紫米露
+    liabilities:loans:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      -31.00 HKD = -121.20 HKD
 
 2025-06-23 (41145368, 16) Cafe 100%  ; activity: eating, duration: PT40M12S, eating: breakfast, time: 09:17:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: hot coffee + more milk, food_or_drink: scrambled egg, food_or_drink: sugar-free oatmeal in fresh milk, food_or_drink: toast
@@ -328,8 +328,8 @@ include ../../../preludes/self.journal
     revenues:rewards                    -100.00 HKD
 
 2025-06-25 (C6P85615557, N62563624017, HD12562530100595) dfde318d-9ad1-4f25-8c57-2763ebfe1e3e  ; activity: repayment, time: 15:49:34, timezone: UTC+08:00
-    liabilities:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e           121.20 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -121.20 HKD
+    liabilities:loans:friends:dfde318d-9ad1-4f25-8c57-2763ebfe1e3e      121.20 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -121.20 HKD
 
 2025-06-25 (41146076, 14) Cafe 100%  ; activity: eating, duration: PT28M54S, eating: afternoon tea, time: 16:54:06, timezone: UTC+08:00
     expenses:food and drinks:dining                                         42.00 HKD  ; food_or_drink: baked sliced pork & tomato with rice (mini), food_or_drink: hot coffee + more milk
@@ -489,5 +489,5 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25      43 180.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7      17 629.71 HKD = 0.00 HKD
     liabilities:accrued expenses:services:internet                                              0.30 HKD = 0.00 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                1 200.00 HKD = 0.00 HKD
+    liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                          1 200.00 HKD = 0.00 HKD
     equity:opening/closing balances

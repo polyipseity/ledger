@@ -368,7 +368,7 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai
 
 2024-09-10 * Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:19, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.10 HKD = -8.10 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.10 HKD = -8.10 HKD
     expenses:transport:buses
 
 2024-09-10 Circle K  ; activity: transfer, time: 21:57, timezone: UTC+08:00
@@ -437,7 +437,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining        6.00 HKD  ; food_or_drink: preserved vegetables, food_or_drink: rice noodles (light), food_or_drink: shredded pork
 
 2024-09-14 (HD12491452439692, N91418153510) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 19:12:50, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.10 HKD = 0.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9        8.10 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-09-16 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:43, timezone: UTC+08:00
@@ -457,13 +457,13 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-09-16 * (1-NC26-004-4-001177) The Commercial Press (CityU)  ; activity: education, time: 13:39:45, timezone: UTC+08:00
-    expenses:education:books                                      458.50 HKD  ; item: 9789813312296 Financial Accounting + CNCT OL
-    liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -60.00 HKD = -60.00 HKD
+    expenses:education:books                                            458.50 HKD  ; item: 9789813312296 Financial Accounting + CNCT OL
+    liabilities:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1      -60.00 HKD = -60.00 HKD
     assets:cash
 
 2024-09-16 (HD12491656618604, N91623451792) e81cf14c-79fc-4958-b694-1a2a2c0c9be1  ; activity: repayment, time: 13:41:45, timezone: UTC+08:00
-    liabilities:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1            60.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -60.00 HKD
+    liabilities:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1       60.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -60.00 HKD
 
 2024-09-16 (081-1205) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:40:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
@@ -602,12 +602,12 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai
 
 2024-09-24 * (T0000801103000214649, 234507) Don Don: Donki  ; activity: eating, eating: snacks, time: 22:21, timezone: UTC+08:00
-    expenses:food and drinks:snacks                                 8.00 HKD  ; food_or_drink: (2042706000005) HOKKAIDO BEEF CROQUE
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.00 HKD = -8.00 HKD
+    expenses:food and drinks:snacks                                       8.00 HKD  ; food_or_drink: (2042706000005) HOKKAIDO BEEF CROQUE
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       -8.00 HKD = -8.00 HKD
 
 2024-09-24 (HD12492475870099, N92446721755) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 23:25, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9             8.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -8.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9        8.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        -8.00 HKD
 
 2024-09-24 Mass Transit Railway  ; activity: transport, time: 23:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
@@ -727,13 +727,13 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-09-27 Sushiro  ; activity: eating, eating: lunch, time: 13:30, timezone: UTC+08:00
-    expenses:food and drinks:dining                                58.00 HKD  ; food_or_drink: (unknown)
-    expenses:food and drinks:fees                                   6.00 HKD  ; food_or_drink: 10% service charge
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -64.00 HKD
+    expenses:food and drinks:dining                                      58.00 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                         6.00 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -64.00 HKD
 
 2024-09-27 (HD12492783313692, N92755261173) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:13, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9            64.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -64.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9       64.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -64.00 HKD
 
 2024-09-27 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 14:30, timezone: UTC+08:00
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5      -12.00 HKD

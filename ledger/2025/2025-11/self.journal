@@ -258,8 +258,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 
 2025-11-06 * (??????/??, ???, ??) McDonald's  ; activity: eating, eating: lunch, time: 13:45, timezone: UTC+08:00
-    expenses:food and drinks:dining                                34.00 HKD  ; food_or_drink: (unknown)
-    liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124      -34.00 HKD = -34.00 HKD
+    expenses:food and drinks:dining                                      34.00 HKD  ; food_or_drink: (unknown)
+    liabilities:loans:friends:af53ecef-566f-4f4e-8337-349e3f551124      -34.00 HKD = -34.00 HKD
 
 2025-11-06 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:29, timezone: UTC+08:00
     expenses:transport:buses                                                 3.10 HKD
@@ -300,8 +300,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2025-11-07 (NB0750865090, HD125B0729912308) af53ecef-566f-4f4e-8337-349e3f551124  ; activity: repayment, time: 17:59:16, timezone: UTC+08:00
-    liabilities:friends:af53ecef-566f-4f4e-8337-349e3f551124            34.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -34.00 HKD
+    liabilities:loans:friends:af53ecef-566f-4f4e-8337-349e3f551124       34.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -34.00 HKD
 
 2025-11-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:49, timezone: UTC+08:00
     expenses:transport:buses                                                 3.10 HKD
@@ -521,9 +521,9 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -3.10 _PT/E
 
 2025-11-12 * (000-192663, 43) Saizeriya  ; activity: eating, duration: PT37M58S, eating: dinner, time: 21:02:45, timezone: UTC+08:00
-    expenses:food and drinks:dining                                25.00 HKD  ; food_or_drink: frittata
-    expenses:food and drinks:dining                                12.00 HKD  ; food_or_drink: garlic baguette
-    liabilities:friends:02f358e9-368a-40e8-875f-12a660a27abe      -37.00 HKD = -37.00 HKD
+    expenses:food and drinks:dining                                      25.00 HKD  ; food_or_drink: frittata
+    expenses:food and drinks:dining                                      12.00 HKD  ; food_or_drink: garlic baguette
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe      -37.00 HKD = -37.00 HKD
 
 2025-11-12 Mass Transit Railway  ; activity: transport, time: 22:34, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
@@ -539,8 +539,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
 2025-11-13 (HD125B1346774316, NB1371798713) 02f358e9-368a-40e8-875f-12a660a27abe  ; activity: repayment, time: 13:10:19, timezone: UTC+08:00
-    liabilities:friends:02f358e9-368a-40e8-875f-12a660a27abe            37.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -37.00 HKD
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe       37.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -37.00 HKD
 
 2025-11-13 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:48, timezone: UTC+08:00
     expenses:transport:buses                                                10.00 HKD
@@ -1050,12 +1050,12 @@ include ../../../preludes/self.journal
     revenues:incomes:education                    -136.00 HKD
 
 2025-11-28 * (97-762-2) McDonald's  ; activity: eating, eating: lunch, time: 13:07:28, timezone: UTC+08:00
-    expenses:food and drinks:dining                                35.00 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: 麥炸雞2件
-    liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6      -35.00 HKD
+    expenses:food and drinks:dining                                      35.00 HKD  ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: 麥炸雞2件
+    liabilities:loans:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6      -35.00 HKD
 
 2025-11-28 (HD125B2890630993, NB2825200633) c8c2a002-b806-4d93-a543-5ff93dcab8b6  ; activity: repayment, time: 13:23, timezone: UTC+08:00
-    liabilities:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6            35.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -35.00 HKD
+    liabilities:loans:friends:c8c2a002-b806-4d93-a543-5ff93dcab8b6       35.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -35.00 HKD
 
 2025-11-28 (5900497456) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: afternoon tea, time: 16:41:41, timezone: UTC+08:00
     expenses:food and drinks:dining                                         31.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: instant noodles with deep-fried chicken steak in cheese sauce

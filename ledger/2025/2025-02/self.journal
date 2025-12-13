@@ -82,15 +82,15 @@ include ../../../preludes/self.journal
 
 2025-02-03 7aca1716-7bc2-4d6d-96ed-78785041c0fa  ; activity: transfer, time: 17:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      100.00 HKD
-    liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa              -100.00 HKD = -100.00 HKD
+    liabilities:loans:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa        -100.00 HKD = -100.00 HKD
 
 2025-02-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 17:57, timezone: UTC+08:00
     expenses:transport:buses                                                 3.10 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
 
 2025-02-03 unknown  ; activity: eating, eating: dinner, time: 18:40, timezone: UTC+08:00
-    expenses:food and drinks:dining                                32.00 HKD  ; food_or_drink: (unknown)
-    liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa      -32.00 HKD = -132.00 HKD
+    expenses:food and drinks:dining                                      32.00 HKD  ; food_or_drink: (unknown)
+    liabilities:loans:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa      -32.00 HKD = -132.00 HKD
 
 2025-02-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 20:42, timezone: UTC+08:00
     expenses:transport:buses                                                 5.80 HKD
@@ -101,8 +101,8 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2025-02-03 (HD12520333997958, N20380492727) 7aca1716-7bc2-4d6d-96ed-78785041c0fa  ; activity: repayment, time: 23:40, timezone: UTC+08:00
-    liabilities:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa           132.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -132.00 HKD
+    liabilities:loans:friends:7aca1716-7bc2-4d6d-96ed-78785041c0fa      132.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -132.00 HKD
 
 2025-02-04 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 09:55, timezone: UTC+08:00
     expenses:transport:buses                                                10.00 HKD
@@ -298,13 +298,13 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
 
 2025-02-11 (HD12521155489889) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: prepayment, time: 18:40, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       41.00 HKD
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9           -41.00 HKD = -41.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        41.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -41.00 HKD = -41.00 HKD
 
 2025-02-11 * (000-135653, 5) Saizeriya  ; activity: eating, duration: PT30M11S, eating: dinner, time: 18:46:56, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: spaghetti with black pepper shredded beef & broccoli
     expenses:food and drinks:dining                                          6.00 HKD  ; food_or_drink: garlic baguette ×0.5
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                41.00 HKD = 0.00 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          41.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -77.00 HKD
 
 2025-02-11 (C2B78157458, FRN20250211PAYD0102255524305, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:29:35, timezone: UTC+08:00, via: eDDA

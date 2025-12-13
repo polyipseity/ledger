@@ -107,8 +107,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                                    ; food_or_drink: 叉燒飯配飲品, food_or_drink: 奶茶
 
 2024-05-03 88e71e74-7f85-4a0a-ab31-ecab094622a5  ; activity: eating, eating: snacks, time: 20:34, timezone: UTC+08:00
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca       -8.00 HKD
-    expenses:food and drinks:snacks                                           ; food_or_drink: 奶醬多
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca       -8.00 HKD
+    expenses:food and drinks:snacks                                                 ; food_or_drink: 奶醬多
 
 2024-05-03 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -117,7 +117,7 @@ include ../../../preludes/self.journal
 2024-05-03 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 23:00 timezone: UTC+08:00
     assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                           -2.00 HKD
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca                       8.00 HKD = 0.00 HKD
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca                 8.00 HKD = 0.00 HKD
 
 2024-05-03 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 23:00, timezone: UTC+08:00
     assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
@@ -228,7 +228,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-05-08 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT15M, time: 08:07, timezone: UTC+08:00
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca       -6.00 HKD = -6.00 HKD
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca       -6.00 HKD = -6.00 HKD
     expenses:gaming:maimai
 
 2024-05-08 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:28, timezone: UTC+08:00
@@ -236,7 +236,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-05-08 (N50842423086, HD12450843694698) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 08:37, timezone: UTC+08:00
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca             6.00 HKD = 0.00 HKD
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca        6.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-05-08 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 09:59, timezone: UTC+08:00
@@ -280,11 +280,11 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-05-09 (000-077291) Saizeriya  ; activity: eating, duration: PT1H25M25S, eating: dinner, time: 19:06:35, timezone: UTC+08:00
-    liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -114.00 HKD = -114.00 HKD
-    expenses:food and drinks:dining                                           ; food_or_drink: 温泉蛋黑松露野菌意粉, food_or_drink: 芝士薯蓉, food_or_drink: 蒜香法包, food_or_drink: 蘑茹忌廉湯, food_or_drink: 飲品吧
+    liabilities:loans:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -114.00 HKD = -114.00 HKD
+    expenses:food and drinks:dining                                                 ; food_or_drink: 温泉蛋黑松露野菌意粉, food_or_drink: 芝士薯蓉, food_or_drink: 蒜香法包, food_or_drink: 蘑茹忌廉湯, food_or_drink: 飲品吧
 
 2024-05-09 (N50947468724, HD12450947715325) 7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45  ; activity: repayment, time: 20:37:14, timezone: UTC+08:00
-    liabilities:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45           114.00 HKD = 0.00 HKD
+    liabilities:loans:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45      114.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-05-09 (4A61) 7fc76083-5175-421d-8c6f-d15897b5ee8e  ; MOBILE WITHDRAWAL (09MAY24), activity: transfer, time: 20:50:54, timezone: UTC+08:00
@@ -456,17 +456,17 @@ include ../../../preludes/self.journal
     expenses:transport:minibuses
 
 2024-05-15 Sushiro  ; activity: eating, eating: lunch, time: 14:30, timezone: UTC+08:00
-    expenses:food and drinks:dining                                97.00 HKD  ; food_or_drink: (unknown)
-    expenses:food and drinks:fees                                   9.70 HKD  ; food_or_drink: 10% service charge
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9     -106.70 HKD
+    expenses:food and drinks:dining                                      97.00 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                         9.70 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9     -106.70 HKD
 
 2024-05-15 public light bus  ; activity: transport, time: 15:18, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.00 HKD
     expenses:transport:minibuses
 
 2024-05-15 (N51562705361, HD12451560079202) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 15:20:03, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9           106.70 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -106.70 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      106.70 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -106.70 HKD
 
 2024-05-15 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -645,8 +645,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                                    ; food_or_drink: 兩送套飯 + less rice, food_or_drink: 奶茶, food_or_drink: 日式蟹柳蒸水蛋 ×2
 
 2024-05-20 * (C3Y4SI) HK Express  ; activity: transport, time: 21:38:19, timezone: UTC+08:00
-    assets:deferred expenses:transport:airplanes                 1 276.00 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 276.00 HKD = -1 276.00 HKD
+    assets:deferred expenses:transport:airplanes                       1 276.00 HKD
+    liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7    -1 276.00 HKD = -1 276.00 HKD
 
 2024-05-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 21:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
@@ -665,8 +665,8 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-05-20 * Airbnb  ; activity: consumption, timezone: UTC+08:00
-    assets:deferred expenses:accommodations                        99.82 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766      -99.82 HKD
+    assets:deferred expenses:accommodations                              99.82 HKD
+    liabilities:loans:friends:e2613673-8956-40d9-8024-53163878b766      -99.82 HKD
 
 2024-05-21 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -11.70 HKD
@@ -1123,7 +1123,7 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:levy                                               23.52 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25      47 498.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7      23 506.28 HKD = 0.00 HKD
-    liabilities:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                                1 276.00 HKD = 0.00 HKD
-    liabilities:friends:e2613673-8956-40d9-8024-53163878b766                                   99.82 HKD = 0.00 HKD
+    liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                          1 276.00 HKD = 0.00 HKD
+    liabilities:loans:friends:e2613673-8956-40d9-8024-53163878b766                             99.82 HKD = 0.00 HKD
     equity:unaccounted                                                                     13 400.03 HKD = 0.00 HKD
     equity:opening/closing balances

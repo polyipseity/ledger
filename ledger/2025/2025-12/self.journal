@@ -287,16 +287,16 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
 2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT16M, time: 16:56, timezone: UTC+08:00
-    expenses:gaming:maimai                                          6.00 HKD
-    liabilities:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
 
 2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT14M, time: 17:27, timezone: UTC+08:00
-    expenses:gaming:maimai                                          6.00 HKD
-    liabilities:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
 
 2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT16M, time: 17:53, timezone: UTC+08:00
-    expenses:gaming:maimai                                          6.00 HKD
-    liabilities:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD = -18.00 HKD
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD = -18.00 HKD
 
 2025-12-10 (66305, 0584) 阿土伯鹽水雞  ; activity: eating, eating: dinner, time: 18:25:02, timezone: UTC+08:00
     expenses:food and drinks:dining                                         55.00 HKD  ; food_or_drink: 凍豆腐, food_or_drink: 台灣麵線餐1/4雞, food_or_drink: 沙茶麵線, food_or_drink: 特濃芝士, food_or_drink: 鹵蛋
@@ -339,8 +339,8 @@ include ../../../preludes/self.journal
     revenues:rewards                                                      -5.90 _PT/E
 
 2025-12-12 (CCC28880583, NC1283619996, HD125C1237861835) bfa32943-960d-4df1-9997-e2391f5551a1  ; activity: repayment, time: 19:04:20, timezone: UTC+08:00
-    liabilities:friends:bfa32943-960d-4df1-9997-e2391f5551a1            18.00 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -18.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       18.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -18.00 HKD
 
 2025-12-12 (CCC28940653, NC1283870295, HD125C1238071725, 33001921125, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, time: 20:18:23, timezone: UTC+08:00
     liabilities:accrued expenses:services:internet                       0.30 HKD = 0.00 HKD

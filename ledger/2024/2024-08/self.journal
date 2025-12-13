@@ -68,12 +68,12 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-08-01 (R36) Masterbeef  ; activity: eating, duration: PT2H, eating: dinner, time: 19:04:34, timezone: UTC+08:00
-    liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2     -282.00 HKD = -282.00 HKD
+    liabilities:loans:friends:d0356653-93de-4abd-9e23-26b71de1ebf2     -282.00 HKD = -282.00 HKD
     expenses:food and drinks:dining
 
 2024-08-01 (N80189310222, HD12480146201957) d0356653-93de-4abd-9e23-26b71de1ebf2  ; activity: repayment, time: 21:11:57, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -282.00 HKD
-    liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2           282.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -282.00 HKD
+    liabilities:loans:friends:d0356653-93de-4abd-9e23-26b71de1ebf2      282.00 HKD = 0.00 HKD
 
 2024-08-01 Mass Transit Railway  ; activity: transport, time: 21:39, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
@@ -494,12 +494,12 @@ include ../../../preludes/self.journal
     expenses:transport:trains
 
 2024-08-25 (000-208885) Saizeriya  ; activity: eating, duration: PT57M36S, eating: dinner, time: 19:26:02, timezone: UTC+08:00
-    liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2      -68.20 HKD = -68.20 HKD
-    expenses:food and drinks:dining                                           ; food_or_drink: (unknown)
+    liabilities:loans:friends:d0356653-93de-4abd-9e23-26b71de1ebf2      -68.20 HKD = -68.20 HKD
+    expenses:food and drinks:dining                                                 ; food_or_drink: (unknown)
 
 2024-08-25 (N82556385772, HD12482501113480) d0356653-93de-4abd-9e23-26b71de1ebf2  ; activity: repayment, time: 20:29:55, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -68.20 HKD
-    liabilities:friends:d0356653-93de-4abd-9e23-26b71de1ebf2            68.20 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -68.20 HKD
+    liabilities:loans:friends:d0356653-93de-4abd-9e23-26b71de1ebf2       68.20 HKD = 0.00 HKD
 
 2024-08-25 Mass Transit Railway  ; activity: transport, time: 21:03, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD

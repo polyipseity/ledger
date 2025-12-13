@@ -482,12 +482,12 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-03-20 安平燒肉 (Anping Grill)  ; activity: eating, eating: lunch, time: 12:06:12, timezone: UTC+08:00
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca      -29.00 HKD
-    expenses:food and drinks:dining                                           ; food_or_drink: 磨菇煙肉焗牛扒意粉
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca      -29.00 HKD
+    expenses:food and drinks:dining                                                 ; food_or_drink: 磨菇煙肉焗牛扒意粉
 
 2024-03-20 (N32001525613, HD12432029360009) 48d0497b-6001-49ec-8928-94936ae9eaca  ; activity: repayment, time: 12:18:32, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -29.00 HKD
-    liabilities:friends:48d0497b-6001-49ec-8928-94936ae9eaca
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -29.00 HKD
+    liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca
 
 2024-03-20 (082-2289) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:49:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
@@ -646,12 +646,12 @@ include ../../../preludes/self.journal
     revenues:rewards:competitions                                 ; reward: JerseyCTF IV - 3rd Place in the Student Division
 
 2024-03-27 Sushiro  ; activity: eating, eating: lunch, time: 14, timezone: UTC+08:00
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -58.30 HKD
-    expenses:food and drinks:dining                                           ; food_or_drink: buffet
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9      -58.30 HKD
+    expenses:food and drinks:dining                                                 ; food_or_drink: buffet
 
 2024-03-27 (N32720104869, HD12432744609410) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 14:16:26, timezone: UTC+08:00
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -58.30 HKD
-    liabilities:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -58.30 HKD
+    liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9
 
 2024-03-27 Mass Transit Railway  ; activity: transport, time: 13:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.30 HKD

@@ -493,11 +493,11 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-02-23 (000-2709) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, duration: PT1H37M45S, eating: dinner, time: 18:08:52, timezone: UTC+08:00
-    liabilities:friends:3344b973-41df-45a9-bc47-0004ed1049db     -111.40 HKD
+    liabilities:loans:friends:3344b973-41df-45a9-bc47-0004ed1049db     -111.40 HKD
     expenses:food and drinks:dining
 
 2024-02-23 3344b973-41df-45a9-bc47-0004ed1049db  ; activity: repayment, time: 19:59:16, timezone: UTC+08:00, via: Octopus P2P
-    liabilities:friends:3344b973-41df-45a9-bc47-0004ed1049db         111.40 HKD = 0.00 HKD
+    liabilities:loans:friends:3344b973-41df-45a9-bc47-0004ed1049db      111.40 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
 2024-02-23 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:24:04, timezone: UTC+08:00
