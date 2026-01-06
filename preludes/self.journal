@@ -133,6 +133,8 @@ account equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4               
 account equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                 ; type: E
 account equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                 ; type: E
 account equity:kins:special                                                                       ; type: E
+account equity:organizations                                                                      ; type: E
+account equity:organizations:7e049a63-ac77-450b-a5f1-4d9a984421dd                                 ; type: E
 account equity:unknown                                                                            ; type: E
 account equity:unknown:suspicious                                                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
@@ -140,7 +142,7 @@ account expenses:accommodations:universities                                    
 account expenses:activities                                                                       ; type: X
 account expenses:clothing                                                                         ; type: X
 account expenses:consumption                                                                      ; type: X
-account expenses:consumption:softwares                                                            ; type: X
+account expenses:consumption:software                                                             ; type: X
 account expenses:education                                                                        ; type: X
 account expenses:education:books                                                                  ; type: X
 account expenses:education:incidental                                                             ; type: X

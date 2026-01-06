@@ -58,6 +58,7 @@ include ../../../preludes/self.journal
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                                     -2 412.00 HKD = -2 412.00 HKD
     equity:kins:special                                                                           -5 000.00 CNY = -5 000.00 CNY
     equity:kins:special                                                                             -380.00 HKD = -380.00 HKD
+    equity:organizations:7e049a63-ac77-450b-a5f1-4d9a984421dd                                       -810.00 HKD = -810.00 HKD
     equity:unknown                                                                                    -6.00 HKD = -6.00 HKD
     liabilities:accrued expenses:insurances:levy                                                     -11.76 HKD = -11.76 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            -38 862.00 HKD = -38 862.00 HKD

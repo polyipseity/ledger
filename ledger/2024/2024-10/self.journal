@@ -39,6 +39,7 @@ include ../../../preludes/self.journal
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                             -58 071.21 HKD = -58 071.21 HKD
     equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                               8 490.48 HKD = 8 490.48 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                              -1 865.00 HKD = -1 865.00 HKD
+    equity:organizations:7e049a63-ac77-450b-a5f1-4d9a984421dd                                -810.00 HKD = -810.00 HKD
     liabilities:accrued expenses:insurances:levy                                              -17.64 HKD = -17.64 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25     -43 180.00 HKD = -43 180.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7     -17 629.71 HKD = -17 629.71 HKD
@@ -838,6 +839,7 @@ include ../../../preludes/self.journal
     equity:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                             -12 194.18 HKD = 0.00 HKD
     equity:kins:families:dd9bec11-84e8-4b80-b6d4-f6ca65723978                               2 014.00 HKD = 0.00 HKD
     equity:unaccounted                                                                     13 400.03 HKD = 0.00 HKD
+    equity:organizations:7e049a63-ac77-450b-a5f1-4d9a984421dd                                 810.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:levy                                               17.64 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25      43 180.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7      17 629.71 HKD = 0.00 HKD
