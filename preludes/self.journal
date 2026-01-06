@@ -165,10 +165,10 @@ account expenses:fees:f34f8958-524c-416d-93b5-b2e35e68f08c                      
 account expenses:food                                                                             ; type: X
 account expenses:food and drinks:dining                                                           ; type: X
 account expenses:food and drinks:drinks                                                           ; type: X
+account expenses:food and drinks:drinks:water                                                     ; type: X
 account expenses:food and drinks:fees                                                             ; type: X
 account expenses:food and drinks:fruits                                                           ; type: X
 account expenses:food and drinks:snacks                                                           ; type: X
-account expenses:food and drinks:water                                                            ; type: X
 account expenses:gaming                                                                           ; type: X
 account expenses:gaming:maimai                                                                    ; type: X
 account expenses:healthcare                                                                       ; type: X

@@ -355,7 +355,7 @@ include ../../../preludes/self.journal
 
 2024-01-19 (00254/002#0092) ParknShop  ; activity: eating, eating: water, time: 10:10:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.50 HKD
-    expenses:food and drinks:water                                                     ; food_or_drink: 113075 清涼清涼水
+    expenses:food and drinks:drinks:water                                              ; food_or_drink: 113075 清涼清涼水
 
 2024-01-19 (FRN20240119PAYD0101449360179) self  ; activity: transfer, time: 14:04:47, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        250.00 HKD
