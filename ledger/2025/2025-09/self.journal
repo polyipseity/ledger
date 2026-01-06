@@ -1150,7 +1150,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Apple                     8.10 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
 
-2025-09-29 ! 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 17, timezone: UTC+08:00
+2025-09-29 * 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, time: 17, timezone: UTC+08:00
     assets:deferred expenses:education:incidental      100.00 HKD  ; item: Hoodie - Zip
     assets:deferred expenses:education:incidental      100.00 HKD  ; item: Denim Jacket
     assets:deferred expenses:education:incidental       50.00 HKD  ; item: Business Card
