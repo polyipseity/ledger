@@ -101,7 +101,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                      14.50 HKD  ; food_or_drink: (unknown)
     liabilities:loans:friends:aef44452-fb4d-4194-9e8f-d3abafc4f821      -14.50 HKD = -56.00 HKD
 
-2026-01-01 Swire  ; activity: eating, eating: snacks, time: 19:17, timezone: UTC+08:00, via: COKE+ vending machine
+2026-01-01 Swire  ; activity: eating, eating: drinks, time: 19:17, timezone: UTC+08:00, via: COKE+ vending machine
     expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 

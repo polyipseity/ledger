@@ -117,8 +117,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         28.00 HKD  ; food_or_drink: red bean fleecy, food_or_drink: smoked chicken sausage hotdog with tartar sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
 
-2025-01-07 Swire  ; activity: eating, eating: snacks, time: 17:47, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+2025-01-07 Swire  ; activity: eating, eating: drinks, time: 17:47, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2025-01-07 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 17:47, timezone: UTC+08:00

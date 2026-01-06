@@ -757,8 +757,8 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education                        -4 631.25 HKD
     revenues:incomes:education                                         -231.56 HKD
 
-2025-02-26 Swire  ; activity: eating, eating: snacks, time: 20:08, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+2025-02-26 Swire  ; activity: eating, eating: drinks, time: 20:08, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2025-02-26 bank  ; CREDIT INTEREST, activity: interests, timezone: UTC+08:00

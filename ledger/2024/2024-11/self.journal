@@ -819,8 +819,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         29.00 HKD  ; food_or_drink: 焗米蘭三絲意粉
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
 
-2024-11-25 Swire  ; activity: eating, eating: snacks, time: 18:45, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+2024-11-25 Swire  ; activity: eating, eating: drinks, time: 18:45, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-25 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 18:50, timezone: UTC+08:00
@@ -855,8 +855,8 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         29.20 HKD  ; food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti, food_or_drink: mini spagetti bolognese cream soup egg salad mini croissant
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
 
-2024-11-26 Swire  ; activity: eating, eating: snacks, time: 19:28, timezone: UTC+08:00, via: COKE+ vending machine
-    expenses:food and drinks:snacks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
+2024-11-26 Swire  ; activity: eating, eating: drinks, time: 19:28, timezone: UTC+08:00, via: COKE+ vending machine
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda (can)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
 2024-11-26 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 19:29, timezone: UTC+08:00
