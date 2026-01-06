@@ -280,7 +280,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:fees:Hong Kong Government     -370.00 HKD = 0.00 HKD
     expenses:fees:Hong Kong Government                                  ; item: 32-page passport (adult)
 
-2024-06-11 A1 Bakery  ; activity: eating, eating: lunch, time: 12:51:55, timezone: UTC+08:00
+2024-06-11 A-1 Bakery  ; activity: eating, eating: lunch, time: 12:51:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -17.00 HKD
     expenses:food and drinks:snacks                                                    ; food_or_drink: chocolate stick bread 5pcs
 

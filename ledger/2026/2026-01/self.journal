@@ -120,7 +120,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
-2026-01-02 A1 Bakery  ; activity: eating, eating: breakfast, time: 10:12, timezone: UTC+08:00
+2026-01-02 A-1 Bakery  ; activity: eating, eating: breakfast, time: 10:12, timezone: UTC+08:00
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: black truffle mushroom cheese komeco bun
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -20.00 HKD
 
@@ -209,10 +209,30 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521        2.30 HKD
     revenues:subsidies:Public Transport Fare Subsidy Scheme                 -2.30 HKD
 
+2026-01-06 Mass Transit Railway  ; activity: transport, time: 19:35, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-06 Natural Bakery 天然工房 By A-1 Bakery Group  ; activity: eating, eating: snacks, time: 19:44, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                         16.00 HKD  ; food_or_drink: mini cheese buns (4pcs)
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -16.00 HKD
+
 2026-01-06 (N10678465566) 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 20:15:03, timezone: UTC+08:00
     assets:cash                                                       3 005.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -3 000.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4            -5.00 HKD
+
+2026-01-06 Mass Transit Railway  ; activity: transport, time: 21:07, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-06 平昌 (Pyeong Chang Korean BBQ Restaurant)  ; activity: eating, duration: PT1H50M, eating: dinner, time: 21:10, timezone: UTC+08:00
+    expenses:food and drinks:dining                          168.00 HKD  ; food_or_drink: (unknown)
+    equity:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45     -168.00 HKD
+
+2026-01-06 Mass Transit Railway  ; activity: transport, time: 23:47, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2026-01-30 ! (MKB932BQJZ) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
