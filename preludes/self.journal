@@ -122,6 +122,7 @@ account equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                     
 account equity:friends:48d0497b-6001-49ec-8928-94936ae9eaca                                       ; type: E
 account equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                                       ; type: E
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
+account equity:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45                                       ; type: E
 account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       ; type: E
 account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc                                       ; type: E
 account equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                                       ; type: E
@@ -146,6 +147,7 @@ account expenses:education:incidental                                           
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
 account expenses:equipment                                                                        ; type: X
+account expenses:equipment:consumer electronics                                                   ; type: X
 account expenses:fees                                                                             ; type: X
 account expenses:fees:7220ea99-20b2-4d5b-a05f-202875ab14c9                                        ; type: X
 account expenses:fees:Buy Me a Coffee                                                             ; type: X
@@ -212,6 +214,8 @@ account liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8           
 account liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                             ; type: L
 account liabilities:deferred revenues:incomes                                                     ; type: L
 account liabilities:deferred revenues:incomes:tutoring                                            ; type: L
+account liabilities:loans:colleagues                                                              ; type: L
+account liabilities:loans:colleagues:a80e4b16-911d-4720-a7f6-d32c843e7c8d                         ; type: L
 account liabilities:loans:friends                                                                 ; type: L
 account liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe                            ; type: L
 account liabilities:loans:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d                            ; type: L
@@ -226,6 +230,7 @@ account liabilities:loans:friends:856ec2f9-6367-4726-9301-a2a6dde358c0          
 account liabilities:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c                            ; type: L
 account liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9                            ; type: L
 account liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7                            ; type: L
+account liabilities:loans:friends:aef44452-fb4d-4194-9e8f-d3abafc4f821                            ; type: L
 account liabilities:loans:friends:af53ecef-566f-4f4e-8337-349e3f551124                            ; type: L
 account liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1                            ; type: L
 account liabilities:loans:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486                            ; type: L
@@ -356,6 +361,7 @@ payee G2000
 payee Garden Restaurant
 payee Genki
 payee Google
+payee Greyhound Cafe
 payee Grill de Woowa
 payee HFT Life
 payee HK Express
@@ -397,6 +403,8 @@ payee Sun Ferry
 payee Sushiro
 payee Swire
 payee TamJai SamGor
+payee Tao Bin
+payee Taste
 payee TenRen's Tea
 payee The Commercial Press (CityU)
 payee Tokkijung Project
@@ -409,7 +417,9 @@ payee Yamazaki
 payee Yan Chai Hosptial
 payee a2c6c8e6-2480-47db-a03b-94840933b018
 payee a62e5375-6a8f-423e-83cf-a0b65a293ee7
+payee a80e4b16-911d-4720-a7f6-d32c843e7c8d
 payee ab0fa934-c94b-40e9-8243-ad1c486fc251
+payee ad982faf-117f-4ddc-bc68-3606fb71ff52
 payee aeae0702-0509-4df7-806e-a2f5f8a2397e
 payee af53ecef-566f-4f4e-8337-349e3f551124
 payee b05861a9-99cb-454d-95d4-e5ce13ef100a
@@ -448,8 +458,10 @@ payee public light bus
 payee taxis
 payee 一粥麵 (Super Super Congee & Noodles)
 payee 丸龜製麵
+payee 亞參雞飯 (Asam Chicken Rice)
 payee 何富記麵家
 payee 同樂素食
+payee 城大食坊 (City Express)
 payee 大快活 (Fairwood)
 payee 大生生活超市 (DS Groceries)
 payee 安平燒肉 (Anping Grill)
@@ -458,6 +470,7 @@ payee 小方糖甜品 (Sugar Desserts)
 payee 小王牛肉麵
 payee 岡山一番店拉麵
 payee 手作功夫茶 (Kong Fu Tea)
+payee 新昌電腦有限公司 (Sun Cheong Computer Co., LTD)
 payee 松記糖水店 (Chung Kee Restaurant)
 payee 沖繩二段料理 (Antoshimo Cafe & Bakery)
 payee 洪記麵家 (Hungkee Noodles)
