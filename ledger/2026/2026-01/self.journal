@@ -141,7 +141,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         32.00 HKD  ; food_or_drink: cold Fanta + no ice, food_or_drink: 雞扒辣汁蘑菇桶飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
 
-2026-01-03 (41204423, 12) Cafe 100%  ; activity: eating, duration: PT1H9M42S, eating: breakfast, time: 14:00:18, timezone: UTC+08:00
+2026-01-03 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 11:30, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD
+
+2026-01-03 (41204423, 12) Cafe 100%  ; activity: eating, duration: PT1H9M42S, eating: afternoon tea, time: 14:00:18, timezone: UTC+08:00
     expenses:food and drinks:dining                                         42.00 HKD  ; food_or_drink: red beans iced drink + less ice + no sugar, food_or_drink: tossed noodles with chicken with spicy sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
 
@@ -156,6 +160,10 @@ include ../../../preludes/self.journal
 2026-01-04 self  ; activity: transfer, time: 10:40, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2026-01-04 dfd2814d-d498-4b66-9a46-9c06aa74f635  ; activity: tutoring, duration: PT1H30M, time: 11:30, timezone: UTC+08:00
+    assets:cash                    250.00 HKD
+    revenues:incomes:tutoring     -250.00 HKD
 
 2026-01-04 (117-083-000583, K3390) KFC  ; activity: eating, eating: afternoon tea, time: 15:07:05, timezone: UTC+08:00
     expenses:food and drinks:dining                                         32.00 HKD  ; food_or_drink: cold coca cola zero + no ice, food_or_drink: 雞扒辣汁蘑菇桶飯
