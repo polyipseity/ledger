@@ -267,6 +267,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: baked diced potatoes (fewer), food_or_drink: gourmet sausages
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
+2026-01-07 Kowloon Motor Bus/Long Win Bus  ; activity: reward, duration: -P29D, time: 23:59:59, timezone: UTC+08:00
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     443.10 _PT/E
+    assets:accrued revenues:rewards                                         -191.10 _PT/E
+    revenues:rewards                                                        -252.00 _PT/E
+
 2026-01-30 ! (MKB932BQJZ) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
