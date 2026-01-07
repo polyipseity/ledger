@@ -5,6 +5,7 @@ account assets:accrued revenues:education:scholarships                          
 account assets:accrued revenues:incomes                                                           ; type: A
 account assets:accrued revenues:incomes:education                                                 ; type: A
 account assets:accrued revenues:incomes:tutoring                                                  ; type: A
+account assets:accrued revenues:incomes:work                                                      ; type: A
 account assets:accrued revenues:insurances                                                        ; type: A
 account assets:accrued revenues:insurances:life                                                   ; type: A
 account assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              ; type: A
@@ -258,6 +259,7 @@ account revenues:incomes                                                        
 account revenues:incomes:bonuses                                                                  ; type: R
 account revenues:incomes:education                                                                ; type: R
 account revenues:incomes:tutoring                                                                 ; type: R
+account revenues:incomes:work                                                                     ; type: R
 account revenues:insurances                                                                       ; type: R
 account revenues:insurances:life                                                                  ; type: R
 account revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                             ; type: R
@@ -307,6 +309,7 @@ payee 20b484a5-3c01-42f3-875c-e95509b3de22
 payee 2147e96b-adf0-45f5-bdb9-1e201b39b858
 payee 2cef1acf-32e6-45bc-b261-d7378f136ded
 payee 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483
+payee 315f2e36-9f0b-4969-bff7-ff56b3301bdf
 payee 3344b973-41df-45a9-bc47-0004ed1049db
 payee 3833b42e-dad3-425c-b254-904be68993e4
 payee 3b2a3fcb-e19e-479b-9546-7932d6f7245f

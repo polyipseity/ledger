@@ -791,6 +791,10 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.10 HKD
     revenues:rewards                                                      -7.10 _PT/E
 
+2025-12-31 (2512311612553RKCO239, FRN20251231PAYC0203054116128, EBGPP51231715323, HD125C3193375442) 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: paycheck, time: 16:12:55, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     2 580.65 HKD
+    assets:accrued revenues:incomes:work                             -2 580.65 HKD = -2 580.65 HKD
+
 2025-12-31 (58C75E/2362, 484, 44) McDonald's  ; activity: eating, eating: afternoon tea, time: 16:31:29, timezone: UTC+08:00
     expenses:food and drinks:dining                           35.50 HKD  ; food_or_drink: BBQ sauce, food_or_drink: hot local milk tea, food_or_drink: large fries, food_or_drink: nuggets 6pcs + large, food_or_drink: seaweed seasoning
     equity:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45      -35.50 HKD
@@ -800,6 +804,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                        3.10 _PT/E
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     revenues:rewards                                                      -3.10 _PT/E
+
+2025-12-31 * 315f2e36-9f0b-4969-bff7-ff56b3301bdf  ; activity: work, duration: -P10D, time: 23:59:59, timezone: UTC+08:00
+    assets:accrued revenues:incomes:work     2 580.65 HKD = 0.00 HKD
+    revenues:incomes:work                   -2 580.65 HKD  ; 10/31 days
 
 2025-12-31 * depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
@@ -826,7 +834,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:clouds:Apple                                                    -8.10 HKD = 0.00 HKD
     assets:deferred expenses:services:clouds:Google                                                 -150.00 HKD = 0.00 HKD
     assets:deferred expenses:services:support                                                       -557.91 HKD = 0.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -62 547.12 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -65 127.77 HKD = 0.00 HKD
     assets:cash                                                                                     -525.00 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -22 250.00 HKD = 0.00 HKD
     assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                          -42.00 HKD = 0.00 HKD
