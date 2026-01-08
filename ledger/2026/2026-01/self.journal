@@ -88,6 +88,11 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
+2026-01-01 * 沙嗲王 (Satay King)  ; activity: eating, duration: PT1H, eating: afternoon tea, time: 15:45, timezone: UTC+08:00
+    expenses:food and drinks:dining                                      68.00 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                         6.80 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe      -74.80 HKD = -74.80 HKD
+
 2026-01-01 Mass Transit Railway  ; activity: transport, time: 17:12, timezone: UTC+08:00
     expenses:transport:trains                                                3.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.20 HKD
@@ -271,6 +276,22 @@ include ../../../preludes/self.journal
     assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc     443.10 _PT/E
     assets:accrued revenues:rewards                                         -191.10 _PT/E
     revenues:rewards                                                        -252.00 _PT/E
+
+2026-01-08 Mass Transit Railway  ; activity: transport, time: 09:33, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-08 (N10884922361, HD12610820279731) 02f358e9-368a-40e8-875f-12a660a27abe  ; activity: repayment, time: 09:52:44, timezone: UTC+08:00
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe       74.80 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -74.80 HKD
+
+2026-01-08 (874764213003720260108, 0055) Taste  ; activity: eating, eating: lunch, time: 13:00:37, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         32.00 HKD  ; food_or_drink: 014192 OWn RUN SIU MEI BBQ 叉燒飯
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
+
+2026-01-08 Mass Transit Railway  ; activity: transport, time: 19:13, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2026-01-30 ! (MKB932BQJZ) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
