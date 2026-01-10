@@ -569,7 +569,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         40.00 HKD  ; food_or_drink: 022594 DAKEN HOT MEAL RICE
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -40.00 HKD
 
-2025-12-22 (359343) Tao Bin  ; activity: transfer, eating: drinks, time: 14:17, timezone: UTC+08:00
+2025-12-22 (359343) Tao Bin Beverage  ; activity: transfer, eating: drinks, time: 14:17, timezone: UTC+08:00
     expenses:food and drinks:drinks                                   17.00 HKD  ; food_or_drink: coffee
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -17.00 HKD
 
@@ -720,7 +720,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: 057109 DAKEN DK-LO SUI ROSE
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
-2025-12-29 (421546) Tao Bin  ; activity: transfer, eating: drinks, time: 13:58, timezone: UTC+08:00
+2025-12-29 (421546) Tao Bin Beverage  ; activity: transfer, eating: drinks, time: 13:58, timezone: UTC+08:00
     expenses:food and drinks:drinks                                   17.00 HKD  ; food_or_drink: coffee
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -17.00 HKD
 
@@ -748,7 +748,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: black pepper mushroom with rice, food_or_drink: deep-fried chicken
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
-2025-12-30 (569704) Tao Bin  ; activity: transfer, eating: drinks, time: 13:52, timezone: UTC+08:00
+2025-12-30 (569704) Tao Bin Beverage  ; activity: transfer, eating: drinks, time: 13:52, timezone: UTC+08:00
     expenses:food and drinks:drinks                                   17.00 HKD  ; food_or_drink: coffee
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -17.00 HKD
 
@@ -768,7 +768,7 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
-2025-12-31 (697157) Tao Bin  ; activity: transfer, eating: drinks, time: 11:43, timezone: UTC+08:00
+2025-12-31 (697157) Tao Bin Beverage  ; activity: transfer, eating: drinks, time: 11:43, timezone: UTC+08:00
     expenses:food and drinks:drinks                                   17.00 HKD  ; food_or_drink: coffee
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -17.00 HKD
 
