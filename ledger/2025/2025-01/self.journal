@@ -72,7 +72,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         44.00 HKD  ; food_or_drink: hot Lipton milk tea, food_or_drink: （茶）野菌白汁忌廉迷你焗一口雞飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -44.00 HKD
 
-2025-01-06 * Wilson  ; dllm, go die la; ANNUAL MEMBERSHIP FEE, activity: fees, timezone: UTC+08:00
+2025-01-06 * DBS Bank  ; dllm, go die la; ANNUAL MEMBERSHIP FEE, activity: fees, timezone: UTC+08:00
     expenses:fees:banking:DBS Bank                                    1 800.00 HKD
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8    -1 800.00 HKD
 

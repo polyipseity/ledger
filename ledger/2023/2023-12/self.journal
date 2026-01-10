@@ -321,7 +321,7 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156        27 _PT/D  ; valid: 2023-12-18/2025-10-31
     revenues:rewards
 
-2023-12-19 Wilson  ; activity: reward, time: 09:21:41, timezone: UTC+08:00
+2023-12-19 DBS Bank  ; activity: reward, time: 09:21:41, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8       50.00 HKD
     revenues:rewards                                                               ; reward: welcome discount
 
@@ -413,7 +413,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       13.18 HKD
     revenues:interests
 
-2023-12-23 Wilson  ; activity: reward, timezone: UTC+08:00
+2023-12-23 DBS Bank  ; activity: reward, timezone: UTC+08:00
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8        7.00 HKD
     revenues:rewards                                                               ; reward: rebate
 

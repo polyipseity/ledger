@@ -7,6 +7,7 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
     assets:accumulated depreciation      -30.00 HKD  ; item: Apple Watch SE GPS; 40mm Starlight Aluminum Case with Starlight/Pink Nike Sport Loop
     assets:accumulated depreciation       -4.58 HKD  ; item: Verbatim Wireless Mouse - Usb (Black) #66432
+    assets:accumulated depreciation      -50.00 HKD  ; item: Apple Pencil (USB-C)
 
 2026-02-28 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10

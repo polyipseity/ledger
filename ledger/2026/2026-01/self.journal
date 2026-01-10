@@ -293,6 +293,34 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
+2026-01-09 Mass Transit Railway  ; activity: transport, time: 09:30, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-09 (118433) Tao Bin  ; activity: eating, eating: drinks, time: 11:19, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                   17.00 HKD  ; food_or_drink: 阿華田抹茶拿鐵 + 碎冰
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2      -17.00 HKD
+
+2026-01-09 (5600196772) 城大食坊 (City Express)  ; activity: eating, eating: lunch, time: 12:44:35, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         38.90 HKD  ; food_or_drink: French fries, food_or_drink: fish cutlet burger
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.90 HKD
+
+2026-01-09 (102793849853, R697628041) Apple  ; activity: repair, time: 19:08, timezone: UTC+08:00
+    assets:objects:consumer electronics        0.00 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow, repair: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
+    assets:cash                                0.00 HKD
+
+2026-01-09 ! (20260109R4851180439, 600911214432) Apple  ; activity: consumption, time: 19:11, timezone: UTC+08:00
+    assets:objects:consumer electronics                                619.00 HKD  ; depreciation: straight-line@P1Y, item: Apple Pencil (USB-C), residual: 19.00 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093     -619.00 HKD = -619.00 HKD
+
+2026-01-09 Mass Transit Railway  ; activity: transport, time: 19:42, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-10 (N11093082971) 3833b42e-dad3-425c-b254-904be68993e4  ; activity: transfer, time: 13:51:20, timezone: UTC+08:00
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4          500.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -500.00 HKD
+
 2026-01-30 ! (MKB932BQJZ) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
@@ -304,6 +332,7 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation       -2.50 HKD  ; item: Verbatim 4 Port 30 W PD & QC 3.0 USB Charger
     assets:accumulated depreciation      -30.00 HKD  ; item: Apple Watch SE GPS; 40mm Starlight Aluminum Case with Starlight/Pink Nike Sport Loop
     assets:accumulated depreciation       -4.58 HKD  ; item: Verbatim Wireless Mouse - Usb (Black) #66432
+    assets:accumulated depreciation      -50.00 HKD  ; item: Apple Pencil (USB-C)
 
 2026-01-31 ! adjustment  ; activity: expenditure, time: 23:59:59, timezone: UTC+08:00
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
