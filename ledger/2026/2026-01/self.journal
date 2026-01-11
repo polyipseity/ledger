@@ -15,7 +15,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 65 127.77 HKD = 65 127.77 HKD
     assets:cash                                                                                      525.00 HKD = 525.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      22 250.00 HKD = 22 250.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                           42.00 HKD = 42.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5                           42.00 HKD = 42.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      108.50 HKD = 108.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                133.70 HKD = 133.70 HKD
     assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                                1 000.00 HKD = 1 000.00 HKD

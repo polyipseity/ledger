@@ -230,19 +230,19 @@ include ../../../preludes/self.journal
 
 2024-04-12 Game Zone  ; activity: fee, time: 15:26:30, timezone: UTC+08:00
     assets:cash                                                                  -30.00 HKD
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1            0.00
-    expenses:fees                                                                            ; item: assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1            0.00
+    expenses:fees                                                                            ; item: assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1
 
 2024-04-12 Game Zone  ; activity: fee, time: 15:26:30, timezone: UTC+08:00
     assets:cash        -20.00 HKD
     expenses:fees                  ; item: assets:digital:Aime:935ce0da-b422-47b3-ab25-9fdc4369f9ce
 
 2024-04-12 Game Zone  ; activity: transfer, time: 15:32, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       50.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       50.00 HKD
     assets:cash
 
 2024-04-12 Game Zone  ; activity: consumption, time: 17, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-12 Mass Transit Railway  ; activity: transport, time: 17:46, timezone: UTC+08:00
@@ -290,11 +290,11 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-04-15 Game Zone  ; activity: consumption, time: 20:54, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-15 Game Zone  ; activity: consumption, time: 21:30, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-15 (FRN20240415PAYD0101610493303) self  ; activity: transfer, time: 21:49:32, timezone: UTC+08:00, via: eDDA
@@ -363,23 +363,23 @@ include ../../../preludes/self.journal
     expenses:transport:buses
 
 2024-04-17 Game Zone  ; activity: consumption, time: 21:00, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Game Zone  ; activity: consumption, time: 21:20, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Game Zone  ; activity: consumption, time: 21:40, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Game Zone  ; activity: consumption, time: 22:00, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Game Zone  ; activity: consumption, time: 22:20, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 2.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 2.00 HKD
     expenses:gaming:maimai
 
 2024-04-17 Don Don: Donki  ; activity: eating, eating: snacks, time: 22:44, timezone: UTC+08:00
@@ -552,15 +552,15 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
 2024-04-24 Game Zone  ; activity: transfer, time: 19:19:30, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 102.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1      100.00 HKD = 102.00 HKD
     assets:cash
 
 2024-04-24 Game Zone  ; activity: consumption, time: 19:30, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 96.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 96.00 HKD
     expenses:gaming:maimai
 
 2024-04-24 Game Zone  ; activity: consumption, time: 19:55, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1       -6.00 HKD = 90.00 HKD
     expenses:gaming:maimai
 
 2024-04-24 (N42400456643, HD12442409399440) 98bff82f-8bfc-428b-ba1d-3c7996f084b9  ; activity: repayment, time: 20:10:15, timezone: UTC+08:00
@@ -700,7 +700,7 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -22 354.55 HKD = 0.00 HKD
     assets:cash                                                                           -35 792.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                        -107.10 HKD = 0.00 HKD
-    assets:digital:Hollywood Game Zone:e0010ca1-4ce0-48ae-ab87-70da4b456bd1                   -90.00 HKD = 0.00 HKD
+    assets:digital:Game Zone:Hollywood:e0010ca1-4ce0-48ae-ab87-70da4b456bd1                   -90.00 HKD = 0.00 HKD
     assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
     assets:objects:consumer electronics                                                    -8 628.00 HKD = 0.00 HKD
     assets:special:rewards:Wilson                                                          -8 676. _PT/C = 0 _PT/C

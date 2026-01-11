@@ -14,7 +14,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support                                                        632.75 HKD = 632.75 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                 66 062.73 HKD = 66 062.73 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f      22 250.00 HKD = 22 250.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                            2.00 HKD = 2.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5                            2.00 HKD = 2.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                      192.70 HKD = 192.70 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                122.20 HKD = 122.20 HKD
     assets:objects:clothing                                                                        1 038.00 HKD = 1 038.00 HKD
@@ -351,32 +351,32 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -100.00 HKD
 
 2025-11-09 Game Zone  ; activity: transfer, time: 14:07, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 102.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5      100.00 HKD = 102.00 HKD
     assets:cash                                                                 -100.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT13M, time: 14:09, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT15M, time: 14:25, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT14M, time: 14:43, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT15M, time: 15:00, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT15M, time: 15:18, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-09 Game Zone  ; activity: consumption, duration: PT14M, time: 15:35, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 66.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 66.00 HKD
 
 2025-11-09 * (000-191978, 3) Saizeriya  ; activity: eating, duration: PT59M45S, eating: dinner, time: 16:05:28, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: chicken doria
@@ -1114,19 +1114,19 @@ include ../../../preludes/self.journal
 
 2025-11-30 Game Zone  ; activity: consumption, duration: PT13M, time: 16:41, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-30 Game Zone  ; activity: consumption, duration: PT14M, time: 17:05, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-30 Game Zone  ; activity: consumption, duration: PT14M, time: 17:48, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-11-30 Game Zone  ; activity: consumption, duration: PT13M, time: 18:06, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 42.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 42.00 HKD
 
 2025-11-30 * (2025113020065346162, 238, 3) 沖繩二段料理 (Antoshimo Cafe & Bakery)  ; activity: eating, duration: PT47M53S, eating: dinner, time: 19:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                         96.00 HKD  ; food_or_drink: (unknown)
@@ -1181,7 +1181,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:support                                                       -595.33 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                -63 930.88 HKD = 0.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     -22 250.00 HKD = 0.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                          -42.00 HKD = 0.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5                          -42.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     -184.60 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                                -68.30 HKD = 0.00 HKD
     assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                               -2 000.00 HKD = 0.00 HKD

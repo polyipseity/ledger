@@ -181,24 +181,24 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
 2025-05-07 Game Zone  ; activity: transfer, time: 20:55, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       50.00 HKD = 50.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       50.00 HKD = 50.00 HKD
     assets:cash                                                                  -50.00 HKD
 
 2025-05-07 Game Zone  ; activity: consumption, duration: PT14M, time: 20:57, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-07 Game Zone  ; activity: consumption, duration: PT14M, time: 21:13, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-07 Game Zone  ; activity: consumption, duration: PT14M, time: 21:29, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-07 Game Zone  ; activity: consumption, duration: PT13M, time: 21:44, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 26.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 26.00 HKD
 
 2025-05-07 Mass Transit Railway  ; activity: transport, time: 22:38, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
@@ -326,11 +326,11 @@ include ../../../preludes/self.journal
 
 2025-05-12 Game Zone  ; activity: consumption, duration: PT15M, time: 23:01, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-12 Game Zone  ; activity: consumption, duration: PT12M, time: 23:19, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 14.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 14.00 HKD
 
 2025-05-13 Mass Transit Railway  ; activity: transport, time: 00:07, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
@@ -428,27 +428,27 @@ include ../../../preludes/self.journal
 
 2025-05-19 Game Zone  ; activity: consumption, duration: PT13M, time: 20:32, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-19 Game Zone  ; activity: consumption, duration: PT14M, time: 20:49, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 2.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 2.00 HKD
 
 2025-05-19 Game Zone  ; activity: transfer, time: 21:06, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       20.00 HKD = 22.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       20.00 HKD = 22.00 HKD
     assets:cash                                                                  -20.00 HKD
 
 2025-05-19 Game Zone  ; activity: consumption, duration: PT14M, time: 21:08, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-19 Game Zone  ; activity: consumption, duration: PT16M, time: 21:26, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-19 Game Zone  ; activity: consumption, duration: PT13M, time: 21:45, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
 
 2025-05-19 Mass Transit Railway  ; activity: transport, time: 22:48, timezone: UTC+08:00
     expenses:transport:trains                                                4.90 HKD
@@ -503,32 +503,32 @@ include ../../../preludes/self.journal
     assets:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          -47.00 HKD = 0.00 HKD
 
 2025-05-21 Game Zone  ; activity: transfer, time: 21:20, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       20.00 HKD = 24.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       20.00 HKD = 24.00 HKD
     assets:cash                                                                  -20.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT14M, time: 21:22, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT15M, time: 21:38, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT13M, time: 21:56, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT15M, time: 22:11, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 0.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 0.00 HKD
 
 2025-05-21 Game Zone  ; activity: transfer, time: 22:27, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       10.00 HKD = 10.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       10.00 HKD = 10.00 HKD
     assets:cash                                                                  -10.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT14M, time: 22:28, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 4.00 HKD
 
 2025-05-21 Game Zone  ; activity: consumption, duration: PT13M, time: 22:45, timezone: UTC+08:00
     expenses:gaming:maimai        6.00 HKD
@@ -685,16 +685,16 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:c1fa4d34-35f7-4bee-bbb2-42f0d93b8486      -40.00 HKD = -40.00 HKD
 
 2025-05-26 Game Zone  ; activity: transfer, time: 20:40, timezone: UTC+08:00
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       10.00 HKD = 14.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       10.00 HKD = 14.00 HKD
     assets:cash                                                                  -10.00 HKD
 
 2025-05-26 Game Zone  ; activity: consumption, duration: PT13M, time: 20:42, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD
 
 2025-05-26 Game Zone  ; activity: consumption, duration: PT13M, time: 20:58, timezone: UTC+08:00
     expenses:gaming:maimai                                                         6.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 2.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 2.00 HKD
 
 2025-05-26 * (T0000801110000019989, 46344) Don Don: Donki  ; activity: eating, eating: snacks, time: 21:17, timezone: UTC+08:00
     expenses:food and drinks:snacks                                       8.50 HKD  ; food_or_drink: (4582271706417) JN Milk & Yogurt Flavour Beverage
@@ -823,7 +823,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:transport:airplanes                                           -1 200.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                         -50 451.19 HKD = 0.00 HKD
     assets:cash                                                                              -200.00 HKD = 0.00 HKD
-    assets:digital:Hollywood Game Zone:cc4e72c7-108e-44ff-bf90-49916ac984f5                    -2.00 HKD = 0.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5                    -2.00 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                              -122.90 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                         -75.90 HKD = 0.00 HKD
     assets:objects:clothing                                                                -1 038.00 HKD = 0.00 HKD
