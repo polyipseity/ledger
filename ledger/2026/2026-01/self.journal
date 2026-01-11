@@ -326,6 +326,34 @@ include ../../../preludes/self.journal
     assets:deferred expenses:services:internet                         148.70 HKD = 148.70 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -149.00 HKD
 
+2026-01-10 (C1A53710142, N11093675003, HD12611027353928) e2613673-8956-40d9-8024-53163878b766  ; activity: transfer, time: 16:42:15, timezone: UTC+08:00
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                 20.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -20.00 HKD
+
+2026-01-10 Mass Transit Railway  ; activity: transport, time: 17:29, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-11 Mass Transit Railway  ; activity: transport, time: 00:10, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-01-11 (????????, ??) Cafe 100%  ; activity: eating, duration: PT32M40S, eating: breakfast, time: 11:29:20, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         37.00 HKD  ; food_or_drink: homemade Parmesan soft bun, food_or_drink: hot coffee + more milk, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+
+2026-01-11 (C1751143464, FRN20260111PAYD0103085011682, OCTOPUS038084565301286497) self  ; activity: transfer, time: 15:45, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+2026-01-11 self  ; activity: transfer, time: 15:45, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+
+2026-01-11 (41206831, 16) Cafe 100%  ; activity: eating, duration: PT45M6S, eating: afternoon tea, time: 15:56:54, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         42.00 HKD  ; food_or_drink: baked sliced pork & tomato with rice (mini), food_or_drink: hot Ovaltine + more milk
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
+
 2026-01-25 ! (60888211225, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, duration: -P1M, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD
     assets:deferred expenses:services:internet     -149.00 HKD = -0.30 HKD
