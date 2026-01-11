@@ -310,8 +310,10 @@ include ../../../preludes/self.journal
     assets:cash                                0.00 HKD
 
 2026-01-09 ! (20260109R4851180439, 600911214432) Apple  ; activity: consumption, time: 19:11, timezone: UTC+08:00
-    assets:objects:consumer electronics                                619.00 HKD  ; depreciation: straight-line@P1Y, item: Apple Pencil (USB-C), residual: 19.00 HKD
-    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093     -619.00 HKD = -619.00 HKD
+    assets:objects:consumer electronics                                           619.00 HKD  ; depreciation: straight-line@P1Y, item: Apple Pencil (USB-C), residual: 19.00 HKD
+    assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093         3 _PT/D  ; valid: 2026-01-10T00:00:00+08:00/2027-10-31T23:59:59+08:00
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                -619.00 HKD = -619.00 HKD
+    revenues:rewards                                                                -3 _PT/D
 
 2026-01-09 Mass Transit Railway  ; activity: transport, time: 19:42, timezone: UTC+08:00
     expenses:transport:trains                                                4.40 HKD
@@ -334,6 +336,43 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
+2026-01-10 Game Zone  ; activity: consumption, duration: PT13M, time: 17:46, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT14M, time: 18:03, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT13M, time: 18:27, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT14M, time: 18:48, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 * (???) 牛大人 (Masterbeef)  ; activity: eating, duration: PT2H, eating: dinner, time: 19:30, timezone: UTC+08:00
+    expenses:food and drinks:dining                                     308.00 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                        30.80 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1     -338.80 HKD = -338.80 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT14M, time: 22:08, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT16M, time: 22:25, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT16M, time: 23:00, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-01-10 Game Zone  ; activity: consumption, duration: PT14M, time: 23:25, timezone: UTC+08:00
+    expenses:gaming:maimai                                     6.00 HKD
+    equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
 2026-01-11 Mass Transit Railway  ; activity: transport, time: 00:10, timezone: UTC+08:00
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
@@ -342,7 +381,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         37.00 HKD  ; food_or_drink: homemade Parmesan soft bun, food_or_drink: hot coffee + more milk, food_or_drink: macaroni in soup (light), food_or_drink: scrambled egg with mushroom, food_or_drink: shredded ham
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
 
-2026-01-11 (C1751143464, FRN20260111PAYD0103085011682, OCTOPUS038084565301286497) self  ; activity: transfer, time: 15:45, timezone: UTC+08:00, via: eDDA
+2026-01-11 (C1B54517980, FRN20260111PAYD0103085011682, OCTOPUS038084565301286497) self  ; activity: transfer, time: 15:45, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -353,6 +392,10 @@ include ../../../preludes/self.journal
 2026-01-11 (41206831, 16) Cafe 100%  ; activity: eating, duration: PT45M6S, eating: afternoon tea, time: 15:56:54, timezone: UTC+08:00
     expenses:food and drinks:dining                                         42.00 HKD  ; food_or_drink: baked sliced pork & tomato with rice (mini), food_or_drink: hot Ovaltine + more milk
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -42.00 HKD
+
+2026-01-11 (C1B54890069, N11198742659, HD12611131255135) bfa32943-960d-4df1-9997-e2391f5551a1  ; activity: repayment, time: 22:59:41, timezone: UTC+08:00
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1      338.80 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -338.80 HKD
 
 2026-01-25 ! (60888211225, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, duration: -P1M, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD

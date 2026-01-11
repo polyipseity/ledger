@@ -126,6 +126,7 @@ account equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                     
 account equity:friends:5e758af5-23c0-4038-b161-06757132e875                                       ; type: E
 account equity:friends:7b5c0b55-7157-4ddd-a6a6-6b9d496f0a45                                       ; type: E
 account equity:friends:aeae0702-0509-4df7-806e-a2f5f8a2397e                                       ; type: E
+account equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1                                       ; type: E
 account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc                                       ; type: E
 account equity:friends:ef3d8ef0-6ddd-4ffe-9f5b-dda86ce0bcfa                                       ; type: E
 account equity:friends:f5cfcb84-be23-4456-923b-3ad92ddcbc97                                       ; type: E
@@ -391,7 +392,6 @@ payee Kyochon 1991
 payee Leaderskey
 payee Lotte
 payee Mass Transit Railway
-payee Masterbeef
 payee Maxim's Cakes
 payee McDonald's
 payee Mukyoku
@@ -491,6 +491,7 @@ payee 沖繩二段料理 (Antoshimo Cafe & Bakery)
 payee 沙嗲王 (Satay King)
 payee 洪記麵家 (Hungkee Noodles)
 payee 燒肉 DON DON
+payee 牛大人 (Masterbeef)
 payee 紅葉茶屋 (Momiji-Chaya)
 payee 美圖照相
 payee 老掌櫃東北菜館 (Lao Zhang Gui Dongbei Restaurant)
