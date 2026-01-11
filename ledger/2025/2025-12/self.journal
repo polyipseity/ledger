@@ -287,15 +287,15 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
 
-2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT16M, time: 16:56, timezone: UTC+08:00
+2025-12-10 * Game Zone  ; activity: consumption, duration: PT16M, time: 16:56, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
 
-2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT14M, time: 17:27, timezone: UTC+08:00
+2025-12-10 * Game Zone  ; activity: consumption, duration: PT14M, time: 17:27, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
 
-2025-12-10 * 觀塘Game Zone (Kwun Tong Game Zone)  ; activity: consumption, duration: PT16M, time: 17:53, timezone: UTC+08:00
+2025-12-10 * Game Zone  ; activity: consumption, duration: PT16M, time: 17:53, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD = -18.00 HKD
 

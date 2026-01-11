@@ -146,7 +146,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
     revenues:rewards                                                      -4.40 _PT/E
 
-2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 20:24, timezone: UTC+08:00
+2025-09-02 * Game Zone  ; activity: consumption, duration: PT14M, time: 20:24, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92       -6.00 HKD
 
@@ -157,19 +157,19 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                      10.00 HKD  ; food_or_drink: golden crispy chicken ×0.5
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92      -75.00 HKD
 
-2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 21:52, timezone: UTC+08:00
+2025-09-02 * Game Zone  ; activity: consumption, duration: PT14M, time: 21:52, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92       -6.00 HKD
 
-2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT12M, time: 22:10, timezone: UTC+08:00
+2025-09-02 * Game Zone  ; activity: consumption, duration: PT12M, time: 22:10, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92       -6.00 HKD
 
-2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT14M, time: 22:24, timezone: UTC+08:00
+2025-09-02 * Game Zone  ; activity: consumption, duration: PT14M, time: 22:24, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92       -6.00 HKD
 
-2025-09-02 * 荷里活Game Zone (Hollywood Game Zone)  ; activity: consumption, duration: PT13M, time: 22:41, timezone: UTC+08:00
+2025-09-02 * Game Zone  ; activity: consumption, duration: PT13M, time: 22:41, timezone: UTC+08:00
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:ef234023-8df0-4705-bb73-cd9b194a5b92       -6.00 HKD
 
