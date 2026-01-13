@@ -222,6 +222,7 @@ account liabilities:deferred revenues:incomes:tutoring                          
 account liabilities:loans:colleagues                                                              ; type: L
 account liabilities:loans:colleagues:3b2a3fcb-e19e-479b-9546-7932d6f7245f                         ; type: L
 account liabilities:loans:colleagues:a80e4b16-911d-4720-a7f6-d32c843e7c8d                         ; type: L
+account liabilities:loans:colleagues:a810a0f2-fccb-44a9-b9bf-5252b23c978b                         ; type: L
 account liabilities:loans:friends                                                                 ; type: L
 account liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe                            ; type: L
 account liabilities:loans:friends:12960c02-bcd6-4169-bc22-7c3fb14b1f5d                            ; type: L
@@ -366,6 +367,7 @@ payee Da Mario
 payee Daiso
 payee Deliveroo
 payee Don Don: Donki
+payee FOTD 日食
 payee Frontline Solvers
 payee Fusion
 payee G2000
@@ -430,6 +432,7 @@ payee Yan Chai Hosptial
 payee a2c6c8e6-2480-47db-a03b-94840933b018
 payee a62e5375-6a8f-423e-83cf-a0b65a293ee7
 payee a80e4b16-911d-4720-a7f6-d32c843e7c8d
+payee a810a0f2-fccb-44a9-b9bf-5252b23c978b
 payee ab0fa934-c94b-40e9-8243-ad1c486fc251
 payee ad982faf-117f-4ddc-bc68-3606fb71ff52
 payee aeae0702-0509-4df7-806e-a2f5f8a2397e
