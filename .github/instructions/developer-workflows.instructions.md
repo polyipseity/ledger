@@ -29,6 +29,12 @@ All utility scripts have three versions for different operating systems:
 - **Encrypt**: `python -m encrypt` - Encrypts private.yaml using GPG
 - **Decrypt**: `python -m decrypt` - Decrypts private.yaml.gpg for editing
 
+### Markdown Formatting & Linting
+- Use markdownlint (VS Code extension) for on-save fixes where supported
+- Format/fix locally with a global install: `markdownlint-cli2 --fix "**/*.md"`
+- Check only (CI style): `markdownlint-cli2 "**/*.md"`
+- Configuration: `.markdownlint.jsonc` and `.editorconfig` at repo root
+
 ### Monthly Journal Discovery Pattern
 
 Scripts use glob pattern `**/*[0-9]{4}-[0-9]{2}/*.journal` to find monthly journals:

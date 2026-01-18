@@ -97,4 +97,10 @@ To ensure AGENTS.md and instruction files are applied in chat:
 - Ensure instruction files are discoverable: keep `.instructions.md` files under `.github/instructions/`
 - For conditional instructions, use YAML frontmatter `applyTo` in `.instructions.md` (for example: `applyTo: "**/*.journal"`)
 
+Formatting setup (Markdown):
+- `.editorconfig` sets UTF-8, final newlines, trailing whitespace trim, and 2-space indents for Markdown (80 char line length)
+- `.markdownlint.jsonc` uses markdownlint defaults
+- Use markdownlint (VS Code extension). For CLI: global install `npm install -g markdownlint-cli2` and run `markdownlint-cli2 --fix "**/*.md"` (or use script `.\scripts\format-md.sh` / `.\scripts\format-md.bat`)
+- Always format Markdown files before committing (include in pre-commit workflow)
+
 Tip: Use “Chat: Configure Instructions” from the Command Palette to view which instruction files are active and verify they’re included in chat context.

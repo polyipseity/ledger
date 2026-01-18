@@ -119,20 +119,23 @@ Prompts for GPG password. Remember to encrypt again after editing.
 Before committing changes:
 
 ```powershell
-# 1. Validate all journals
+# 1. Format Markdown files
+markdownlint-cli2 --fix "**/*.md"
+
+# 2. Validate all journals
 python -m check
 
-# 2. Format all journals
+# 3. Format all journals
 python -m format
 
-# 3. If edited private.yaml
+# 4. If edited private.yaml
 python -m encrypt
 
-# 4. View changes
+# 5. View changes
 git status
 git diff --cached
 
-# 5. Commit
+# 6. Commit
 git commit -S -m "Describe changes"
 ```
 
