@@ -18,7 +18,7 @@ Each monthly journal starts with `include ../../../preludes/self.journal` to inh
 
 ### Directory Example
 
-```
+```txt
 ledger/
   index.journal              # Root: includes self.alternatives.journal, self.journal
   self.journal              # Includes 2024/self.journal, 2025/self.journal, ...

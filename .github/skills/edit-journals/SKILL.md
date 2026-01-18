@@ -251,7 +251,7 @@ Timezone tags are essential for proper time tracking.
 
 ### ❌ Do Not Modify Prelude Definitions Lightly
 
-Changes to [preludes/self.journal](../../preludes/self.journal) affect **all** monthly journals:
+Changes to [preludes/self.journal](../../../preludes/self.journal) affect **all** monthly journals:
 
 ```hledger
 # Changes here impact all journals!
@@ -283,7 +283,7 @@ git add private.yaml.gpg       # Add encrypted
 git commit -m "Update mappings"
 ```
 
-See [Security Practices](../ledger/security.md) for encryption workflow.
+See [Security Practices](../../instructions/security.instructions.md) for encryption workflow.
 
 ### ❌ Do Not Remove Existing Accounts or Payees
 
@@ -372,7 +372,7 @@ git push
 
 ## Related Documentation
 
-- [Transaction Format Conventions](../ledger/transaction-format.md) - Transaction structure and formatting
-- [Account Hierarchy & Meanings](../ledger/account-hierarchy.md) - All available accounts
-- [Security Practices](../ledger/security.md) - Handling confidential data
-- [Common Workflows](../ledger/common-workflows.md) - Other practical procedures
+- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Transaction structure and formatting
+- [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts
+- [Security Practices](../../instructions/security.instructions.md) - Handling confidential data
+- [Common Workflows](../../instructions/common-workflows.instructions.md) - Other practical procedures

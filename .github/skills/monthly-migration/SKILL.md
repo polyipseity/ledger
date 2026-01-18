@@ -183,6 +183,6 @@ git commit -S -m "Migrate journals to new month (Jan 2026)"
 
 ## Related Documentation
 
-- [Architecture & File Organization](../ledger/architecture.md) - Journal hierarchy and structure
-- [Common Workflows](../ledger/common-workflows.md) - Other practical workflows
-- [Editing Guidelines](../ledger/editing-guidelines.md) - Best practices for journal editing
+- [Architecture & File Organization](../../instructions/architecture.instructions.md) - Journal hierarchy and structure
+- [Common Workflows](../../instructions/common-workflows.instructions.md) - Other practical workflows
+- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices for journal editing

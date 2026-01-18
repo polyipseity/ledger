@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 # Personal Ledger Project - Instructions
 
 **IMPORTANT: This documentation must not contain confidential information.** All examples should use non-confidential placeholders (UUIDs, generic names, example amounts) instead of real account numbers, personal names, locations, or actual financial data. Confidential mappings are stored in the encrypted `private.yaml.gpg` file only.

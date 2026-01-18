@@ -56,15 +56,15 @@ The check script runs hledger with `--strict` mode checking:
 
 ### Account Not Defined
 
-```
+```txt
 Error: account "assets:unknown:account" is not defined
 ```
 
-**Fix:** Add account definition to [preludes/self.journal](../../preludes/self.journal)
+**Fix:** Add account definition to [preludes/self.journal](../../../preludes/self.journal)
 
 ### Balance Assertion Mismatch
 
-```
+```txt
 Error: balance assertion failed
   Expected: 5000.00 HKD
   Actual:   4950.00 HKD
@@ -74,7 +74,7 @@ Error: balance assertion failed
 
 ### Transaction Not Balanced
 
-```
+```txt
 Error: transaction does not balance
   Total: 50.00 HKD
 ```
@@ -83,23 +83,23 @@ Error: transaction does not balance
 
 ### Payee Not Defined
 
-```
+```txt
 Error: payee "Unknown Vendor" is not defined
 ```
 
-**Fix:** Add payee to [preludes/self.journal](../../preludes/self.journal)
+**Fix:** Add payee to [preludes/self.journal](../../../preludes/self.journal)
 
 ### Tag Not Defined
 
-```
+```txt
 Error: tag "unknown-tag" is not defined
 ```
 
-**Fix:** Add tag definition to [preludes/self.journal](../../preludes/self.journal)
+**Fix:** Add tag definition to [preludes/self.journal](../../../preludes/self.journal)
 
 ### Date Ordering
 
-```
+```txt
 Error: transaction date out of order
   Previous: 2025-01-19
   Current:  2025-01-15
@@ -263,6 +263,6 @@ python -m check 2>&1 | more
 
 ## Related Documentation
 
-- [Developer Workflows](../ledger/developer-workflows.md) - Script patterns and testing
-- [Editing Guidelines](../ledger/editing-guidelines.md) - Best practices and anti-patterns
-- [Common Workflows](../ledger/common-workflows.md) - Pre-commit checklist
+- [Developer Workflows](../../instructions/developer-workflows.instructions.md) - Script patterns and testing
+- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
+- [Common Workflows](../../instructions/common-workflows.instructions.md) - Pre-commit checklist

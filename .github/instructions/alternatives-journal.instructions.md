@@ -58,7 +58,7 @@ Contains illiquid or experimental holdings:
 
 Each journal type has its own include hierarchy:
 
-```
+```txt
 ledger/
   index.journal
   self.journal                    # Main journal

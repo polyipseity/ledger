@@ -83,7 +83,7 @@ When a pending transaction completes, find the original transaction and change `
 
 Before adding a transaction with a new merchant or counterparty:
 
-**Add payee to [preludes/self.journal](../../preludes/self.journal):**
+**Add payee to [preludes/self.journal](../../../preludes/self.journal):**
 
 ```hledger
 payee Example Restaurant
@@ -163,7 +163,7 @@ git commit -S -m "Add transactions from [source]"
 
 ## Related Documentation
 
-- [Transaction Format Conventions](../ledger/transaction-format.md) - Detailed hledger format specifications
-- [Account Hierarchy & Meanings](../ledger/account-hierarchy.md) - All available accounts and their purposes
-- [Editing Guidelines](../ledger/editing-guidelines.md) - Best practices and anti-patterns
-- [Security Practices](../ledger/security.md) - Handling confidential data with private.yaml
+- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Detailed hledger format specifications
+- [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
+- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
+- [Security Practices](../../instructions/security.instructions.md) - Handling confidential data with private.yaml

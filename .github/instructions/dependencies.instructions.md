@@ -55,7 +55,7 @@ pip install "anyio>=3.6.2"
 
 **How it's used:** Async path operations (`anyio.Path`) for concurrent file I/O without blocking
 
-**Requirement in:** `requirements.txt` (see [../../../requirements.txt](../../../requirements.txt))
+**Requirement in:** `requirements.txt` (see [../../../requirements.txt](../../requirements.txt))
 
 ### GPG (GNU Privacy Guard)
 
@@ -100,13 +100,13 @@ pip install "anyio>=3.6.2"
 
 ## Dependency Versions
 
-| Dependency | Minimum Version | Verified With |
-|------------|-----------------|---------------|
-| hledger | 1.30+ | Latest 1.x |
-| Python | 3.11 | 3.11, 3.12, 3.13 |
-| anyio | 3.6.2 | 4.0+ |
-| GPG | 2.0+ | 2.2, 2.3 |
-| Git | 2.20+ | Latest |
+| Dependency | Minimum Version | Verified With     |
+| ---------- | --------------- | ----------------- |
+| hledger    | 1.30+           | Latest 1.x        |
+| Python     | 3.11            | 3.11, 3.12, 3.13  |
+| anyio      | 3.6.2           | 4.0+              |
+| GPG        | 2.0+            | 2.2, 2.3          |
+| Git        | 2.20+           | Latest            |
 
 ## Verification Checklist
 
