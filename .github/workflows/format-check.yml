@@ -29,8 +29,7 @@ jobs:
 
       - name: Install hledger
         run: |
-          sudo apt-get update
-          sudo apt-get install -y hledger
+          curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger
 
       - name: Check journal formatting
         run: |
