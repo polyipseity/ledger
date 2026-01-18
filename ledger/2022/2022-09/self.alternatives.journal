@@ -1,187 +1,187 @@
 include ../../../preludes/self.alternatives.journal
 
 2022-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      552 579. _PT/A = 552 579 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      552 579. _PT/A = 552 579. _PT/A
     equity:opening/closing balances
-    [assets:digital:SheepIt Render Farm:polyipseity]      -1 234. _FRM = -1 234 _FRM
+    [assets:digital:SheepIt Render Farm:polyipseity]      -1 234. _FRM = -1 234. _FRM
     [equity:opening/closing balances]
 
 2022-09-01 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      43 349. _PT/A = 595 928 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      43 349. _PT/A = 595 928. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   265 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-02 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      118 551. _PT/A = 714 479 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      118 551. _PT/A = 714 479. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    219 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-03 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      43 234. _PT/A = 757 713 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      43 234. _PT/A = 757 713. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   259 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-04 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      39 618. _PT/A = 797 331 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      39 618. _PT/A = 797 331. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   115 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-05 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      35 741. _PT/A = 833 072 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      35 741. _PT/A = 833 072. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   247 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-06 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity         763 _PT/A = 833 835 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity         763 _PT/A = 833 835. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   14 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-07 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 130. _PT/A = 837 965 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 130. _PT/A = 837 965. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  103 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-08 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      5 942. _PT/A = 843 907 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      5 942. _PT/A = 843 907. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  140 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-09 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      7 984. _PT/A = 851 891 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      7 984. _PT/A = 851 891. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  126 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-10 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      6 775. _PT/A = 858 666 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      6 775. _PT/A = 858 666. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   33 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-11 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      7 417. _PT/A = 866 083 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      7 417. _PT/A = 866 083. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   63 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-12 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      9 850. _PT/A = 875 933 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      9 850. _PT/A = 875 933. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   60 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-13 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      2 614. _PT/A = 878 547 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      2 614. _PT/A = 878 547. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   16 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-14 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      8 435. _PT/A = 886 982 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      8 435. _PT/A = 886 982. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                  116 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-15 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      15 097. _PT/A = 902 079 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      15 097. _PT/A = 902 079. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    22 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-16 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 500. _PT/A = 906 579 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 500. _PT/A = 906 579. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   56 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-17 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 330. _PT/A = 910 909 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 330. _PT/A = 910 909. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   20 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-18 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 255. _PT/A = 915 164 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 255. _PT/A = 915 164. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   11 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-19 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity         315 _PT/A = 915 479 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity         315 _PT/A = 915 479. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    2 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-20 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 340. _PT/A = 919 819 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 340. _PT/A = 919 819. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   23 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-21 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      2 624. _PT/A = 922 443 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      2 624. _PT/A = 922 443. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   18 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-22 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity          80 _PT/A = 922 523 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity          80 _PT/A = 922 523. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    1 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-23 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      2 279. _PT/A = 924 802 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      2 279. _PT/A = 924 802. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   19 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-24 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      50 945. _PT/A = 975 747 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      50 945. _PT/A = 975 747. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    53 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-25 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      29 544. _PT/A = 1 005 291 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      29 544. _PT/A = 1 005 291. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    91 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-26 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      37 177. _PT/A = 1 042 468 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      37 177. _PT/A = 1 042 468. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   169 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-27 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      14 538. _PT/A = 1 057 006 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      14 538. _PT/A = 1 057 006. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                    33 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-28 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      8 638. _PT/A = 1 065 644 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      8 638. _PT/A = 1 065 644. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   45 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-29 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      4 102. _PT/A = 1 069 746 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      4 102. _PT/A = 1 069 746. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   30 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2022-09-30 SheepIt Render Farm  ; activity: compute, timezone: UTC+08:00
-    assets:digital:SheepIt Render Farm:polyipseity      6 330. _PT/A = 1 076 076 _PT/A
+    assets:digital:SheepIt Render Farm:polyipseity      6 330. _PT/A = 1 076 076. _PT/A
     revenues:compute:SheepIt Render Farm
     [expenses:compute:SheepIt Render Farm]                   47 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]

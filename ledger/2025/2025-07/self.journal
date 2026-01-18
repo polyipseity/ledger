@@ -21,7 +21,7 @@ include ../../../preludes/self.journal
     assets:deferred assets:objects:decorations                                                  3.00 EUR = 3.00 EUR
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                        736.95 HKD = 736.95 HKD
     equity:conversions:HKD-_PT/B:HKD                                                          -80.00 HKD = -80.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                    200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                                                    200 000. _PT/B = 200 000. _PT/B
     equity:conversions:HKD-_PT/D:HKD                                                         -766.00 HKD = -766.00 HKD
     equity:conversions:HKD-_PT/D:_PT/D                                                         766 _PT/D = 766 _PT/D
     equity:conversions:EUR-HKD:EUR                                                             -3.00 EUR = -3.00 EUR
@@ -30,7 +30,7 @@ include ../../../preludes/self.journal
     equity:conversions:HKD-KRW:KRW                                                       -145 008.33 KRW = -145 008.33 KRW
     equity:conversions:HKD-USD:HKD                                                         -3 698.55 HKD = -3 698.55 HKD
     equity:conversions:HKD-USD:USD                                                            480.94 USD = 480.94 USD
-    equity:external:self.alternatives                                                    -200 000. _PT/B = -200 000 _PT/B
+    equity:external:self.alternatives                                                    -200 000. _PT/B = -200 000. _PT/B
     equity:unaccounted                                                                    -13 400.03 HKD = -13 400.03 HKD
     equity:friends                                                                            -28.50 HKD = -28.50 HKD
     equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                       -37.00 HKD = -37.00 HKD
@@ -450,7 +450,7 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:a62e5375-6a8f-423e-83cf-a0b65a293ee7      80 675.00 KRW = 0.00 KRW
     liabilities:loans:friends:e2613673-8956-40d9-8024-53163878b766      86 925.00 KRW = 0.00 KRW
     equity:conversions:HKD-KRW:HKD                                         836.02 HKD  ; rate: 171.2877682352
-    liabilities:loans:friends:e2613673-8956-40d9-8024-53163878b766      -2 036.02 HKD = -2 575 HKD
+    liabilities:loans:friends:e2613673-8956-40d9-8024-53163878b766      -2 036.02 HKD = -2 575. HKD
     assets:loans:friends:19ddeb24-8a0c-45b3-bf08-1a9222615479          -24 400.00 KRW = 0.00 KRW
     equity:conversions:HKD-KRW:KRW                                    -143 200.00 KRW  ; rate: 0.0058381285
 

@@ -26,14 +26,14 @@ include ../../../preludes/self.journal
     assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                           35 _PT/D = 35 _PT/D
     assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                               194.19 HKD = 194.19 HKD
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000. _PT/B
     equity:conversions:HKD-_PT/D:HKD                                                                -731.00 HKD = -731.00 HKD
     equity:conversions:HKD-_PT/D:_PT/D                                                                731 _PT/D = 731 _PT/D
     equity:conversions:HKD-KRW:HKD                                                                   827.73 HKD = 827.73 HKD
     equity:conversions:HKD-KRW:KRW                                                              -145 008.33 KRW = -145 008.33 KRW
     equity:conversions:HKD-USD:HKD                                                                -3 614.61 HKD = -3 614.61 HKD
     equity:conversions:HKD-USD:USD                                                                   470.02 USD = 470.02 USD
-    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000 _PT/B
+    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000. _PT/B
     equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
     equity:friends                                                                                   -28.50 HKD = -28.50 HKD
     equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22                                              -37.00 HKD = -37.00 HKD

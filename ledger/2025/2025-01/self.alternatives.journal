@@ -1,19 +1,19 @@
 include ../../../preludes/self.alternatives.journal
 
 2025-01-01 opening balances  ; time: 00:00:00
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            7 584. GREEN$ = 7 584 GREEN$
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        74 000. _PT/B = 74 000 _PT/B
-    assets:digital:SheepIt Render Farm:polyipseity                                                   29 311. _FRM = 29 311 _FRM
-    assets:digital:SheepIt Render Farm:polyipseity                                              22 943 547. _PT/A = 22 943 547 _PT/A
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            7 584. GREEN$ = 7 584. GREEN$
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        74 000. _PT/B = 74 000. _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   29 311. _FRM = 29 311. _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              22 943 547. _PT/A = 22 943 547. _PT/A
     equity:conversions:GREEN$-_BEC:GREEN$                                                              -79 GREEN$ = -79 GREEN$
     equity:conversions:GREEN$-_BEC:_BEC                                                                3.526 _BEC = 3.526 _BEC
-    equity:conversions:GREEN$-_FLW:GREEN$                                                          -5 300. GREEN$ = -5 300 GREEN$
+    equity:conversions:GREEN$-_FLW:GREEN$                                                          -5 300. GREEN$ = -5 300. GREEN$
     equity:conversions:GREEN$-_FLW:_FLW                                                              112.290 _FLW = 112.290 _FLW
     equity:conversions:GREEN$-_MET:GREEN$                                                             -123 GREEN$ = -123 GREEN$
     equity:conversions:GREEN$-_MET:_MET                                                                9.499 _MET = 9.499 _MET
     equity:conversions:GREEN$-_OPL:GREEN$                                                             -105 GREEN$ = -105 GREEN$
     equity:conversions:GREEN$-_OPL:_OPL                                                                7.747 _OPL = 7.747 _OPL
-    equity:conversions:GREEN$-_PAP:GREEN$                                                          -1 229. GREEN$ = -1 229 GREEN$
+    equity:conversions:GREEN$-_PAP:GREEN$                                                          -1 229. GREEN$ = -1 229. GREEN$
     equity:conversions:GREEN$-_PAP:_PAP                                                               45.493 _PAP = 45.493 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                                             -744 GREEN$ = -744 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                                                5.961 _PLA = 5.961 _PLA
@@ -21,7 +21,7 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_REB:_REB                                                                0.200 _REB = 0.200 _REB
     equity:conversions:GREEN$-_SEA:GREEN$                                                               -2 GREEN$ = -2 GREEN$
     equity:conversions:GREEN$-_SEA:_SEA                                                                0.200 _SEA = 0.200 _SEA
-    equity:external:self                                                                           200 000. _PT/B = 200 000 _PT/B
+    equity:external:self                                                                           200 000. _PT/B = 200 000. _PT/B
     equity:opening/closing balances
 
 2025-01-08 self  ; activity: collect, duration: -P7D, time: 17, timezone: UTC+08:00
@@ -31,7 +31,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:packaging           -1.700 _PAP
 
 2025-01-08 GREEN@*  ; activity: recycle, duration: PT35S, time: 17:07:26, timezone: UTC+08:00
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       20 GREEN$ = 7 604 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       20 GREEN$ = 7 604. GREEN$
     equity:conversions:GREEN$-_MET:_MET                                       0.200 _MET  ; rate: 10, rate: unit 0.1, recycle: all metals, time: 17:07:26, timezone: UTC+08:00
     equity:conversions:GREEN$-_OPL:_OPL                                       0.100 _OPL  ; rate: 10, rate: unit 0.1, recycle: all other plastics, time: 17:08:01, timezone: UTC+08:00
     equity:conversions:GREEN$-_PAP:_PAP                                       1.700 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 17:08:01, timezone: UTC+08:00
@@ -54,7 +54,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:waste               -1.600 _SEA
 
 2025-01-22 GREEN@*  ; activity: recycle, duration: PT1M20S, time: 17:30:44, timezone: UTC+08:00
-    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       51 GREEN$ = 7 655 GREEN$
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       51 GREEN$ = 7 655. GREEN$
     equity:conversions:GREEN$-_PAP:_PAP                                       1.100 _PAP  ; rate: 10, rate: unit 0.1, recycle: all paper, time: 17:30:44, timezone: UTC+08:00
     equity:conversions:GREEN$-_SEA:_SEA                                       1.600 _SEA  ; rate: 10, rate: unit 0.1, recycle: all small electrical appliances, time: 17:31:19, timezone: UTC+08:00
     equity:conversions:GREEN$-_PLA:_PLA                                       0.200 _PLA  ; rate: 10, rate: unit 0.1, recycle: all plastics, time: 17:31:28, timezone: UTC+08:00

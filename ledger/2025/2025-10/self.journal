@@ -33,12 +33,12 @@ include ../../../preludes/self.journal
     equity:conversions:HKD-USD:HKD                                                                -3 779.68 HKD = -3 779.68 HKD
     equity:conversions:HKD-USD:USD                                                                   491.55 USD = 491.55 USD
     equity:conversions:HKD-_PT/B:HKD                                                                 -80.00 HKD = -80.00 HKD
-    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000 _PT/B
+    equity:conversions:HKD-_PT/B:_PT/B                                                           200 000. _PT/B = 200 000. _PT/B
     equity:conversions:HKD-_PT/D:HKD                                                                -779.00 HKD = -779.00 HKD
     equity:conversions:HKD-_PT/D:_PT/D                                                                779 _PT/D = 779 _PT/D
     equity:conversions:_PT/E-_PT/F:_PT/E                                                           800.00 _PT/E = 800.00 _PT/E
     equity:conversions:_PT/E-_PT/F:_PT/F                                                           -10.00 _PT/F = -10.00 _PT/F
-    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000 _PT/B
+    equity:external:self.alternatives                                                           -200 000. _PT/B = -200 000. _PT/B
     equity:unaccounted                                                                           -13 400.03 HKD = -13 400.03 HKD
     equity:friends                                                                                   -28.50 HKD = -28.50 HKD
     equity:friends:02f358e9-368a-40e8-875f-12a660a27abe                                              -23.00 HKD = -23.00 HKD

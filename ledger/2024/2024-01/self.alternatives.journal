@@ -2,9 +2,9 @@ include ../../../preludes/self.alternatives.journal
 
 2024-01-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               734 GREEN$ = 734 GREEN$
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        15 445. _PT/B = 15 445 _PT/B
-    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314. _FRM = 29 314 _FRM
-    assets:digital:SheepIt Render Farm:polyipseity                                              22 942 438. _PT/A = 22 942 438 _PT/A
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        15 445. _PT/B = 15 445. _PT/B
+    assets:digital:SheepIt Render Farm:polyipseity                                                   29 314. _FRM = 29 314. _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                                              22 942 438. _PT/A = 22 942 438. _PT/A
     equity:conversions:GREEN$-_BEC:GREEN$                                                               -6 GREEN$ = -6 GREEN$
     equity:conversions:GREEN$-_BEC:_BEC                                                                0.603 _BEC = 0.603 _BEC
     equity:conversions:GREEN$-_FLW:GREEN$                                                             -400 GREEN$ = -400 GREEN$
@@ -17,15 +17,15 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_PAP:_PAP                                                                8.642 _PAP = 8.642 _PAP
     equity:conversions:GREEN$-_PLA:GREEN$                                                             -184 GREEN$ = -184 GREEN$
     equity:conversions:GREEN$-_PLA:_PLA                                                                2.865 _PLA = 2.865 _PLA
-    equity:external:self                                                                           200 000. _PT/B = 200 000 _PT/B
+    equity:external:self                                                                           200 000. _PT/B = 200 000. _PT/B
     equity:opening/closing balances
 
 2024-01-01 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 15 445 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0         0 _PT/B = 15 445. _PT/B
     revenues:activities:walking
 
 2024-01-02 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 228. _PT/B = 16 673 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 228. _PT/B = 16 673. _PT/B
     revenues:activities:walking
 
 2024-01-02 GREEN@self-service  ; activity: recycle, time: 22:02:39, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -41,7 +41,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-03 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       811 _PT/B = 17 484 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       811 _PT/B = 17 484. _PT/B
     revenues:activities:walking
 
 2024-01-04 GREEN@self-service  ; activity: recycle, time: 18:07:24, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -57,7 +57,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-04 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       408 _PT/B = 17 892 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       408 _PT/B = 17 892. _PT/B
     revenues:activities:walking
 
 2024-01-05 GREEN@self-service  ; activity: recycle, time: 23:13:37, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -67,7 +67,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-05 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 559. _PT/B = 23 451 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 559. _PT/B = 23 451. _PT/B
     revenues:activities:walking
 
 2024-01-06 GREEN@self-service  ; activity: recycle, time: 13:22:17, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -77,7 +77,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-06 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 561. _PT/B = 25 012 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 561. _PT/B = 25 012. _PT/B
     revenues:activities:walking
 
 2024-01-07 GREEN@self-service  ; activity: recycle, time: 22:17:32, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -87,7 +87,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-07 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 200. _PT/B = 28 212 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    3 200. _PT/B = 28 212. _PT/B
     revenues:activities:walking
 
 2024-01-08 GREEN@self-service  ; activity: recycle, time: 23:21:30, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -97,7 +97,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-08 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 712. _PT/B = 34 924 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    6 712. _PT/B = 34 924. _PT/B
     revenues:activities:walking
 
 2024-01-09 GREEN@self-service  ; activity: recycle, time: 20:21:41, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -107,11 +107,11 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-09 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 565. _PT/B = 37 489 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 565. _PT/B = 37 489. _PT/B
     revenues:activities:walking
 
 2024-01-10 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 889. _PT/B = 43 378 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 889. _PT/B = 43 378. _PT/B
     revenues:activities:walking
 
 2024-01-11 GREEN@self-service  ; activity: recycle, time: 22:21:55, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -121,7 +121,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-11 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 087. _PT/B = 47 465 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 087. _PT/B = 47 465. _PT/B
     revenues:activities:walking
 
 2024-01-12 self  ; activity: collect, duration: -P11DT8H, time: 18, timezone: UTC+08:00
@@ -160,7 +160,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-12 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       670 _PT/B = 48 135 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0       670 _PT/B = 48 135. _PT/B
     revenues:activities:walking
 
 2024-01-13 (COUPON#0009#794) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 08:11:46, timezone: UTC+08:00
@@ -174,7 +174,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-13 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 776. _PT/B = 53 911 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 776. _PT/B = 53 911. _PT/B
     revenues:activities:walking
 
 2024-01-14 GREEN@self-service  ; activity: recycle, time: 22:11:45, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -184,7 +184,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-14 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 643. _PT/B = 59 554 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    5 643. _PT/B = 59 554. _PT/B
     revenues:activities:walking
 
 2024-01-15 GREEN@self-service  ; activity: recycle, time: 22:02:07, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
@@ -194,23 +194,23 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704
 
 2024-01-15 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 853. _PT/B = 62 407 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 853. _PT/B = 62 407. _PT/B
     revenues:activities:walking
 
 2024-01-16 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 590. _PT/B = 64 997 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 590. _PT/B = 64 997. _PT/B
     revenues:activities:walking
 
 2024-01-17 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 668. _PT/B = 66 665 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 668. _PT/B = 66 665. _PT/B
     revenues:activities:walking
 
 2024-01-18 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 460. _PT/B = 71 125 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    4 460. _PT/B = 71 125. _PT/B
     revenues:activities:walking
 
 2024-01-19 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
-    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 875. _PT/B = 74 000 _PT/B
+    assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    2 875. _PT/B = 74 000. _PT/B
     revenues:activities:walking
 
 2024-01-22 GREEN@self-service  ; activity: recycle, time: 21:36:22, timezone: UTC+08:00, via: 3833b42e-dad3-425c-b254-904be68993e4
