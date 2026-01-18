@@ -44,74 +44,9 @@ Scripts use glob pattern `**/*[0-9]{4}-[0-9]{2}/*.journal` to find monthly journ
 
 ## Python Code Patterns
 
-### Async/Await with Concurrency Control
-```python
-from asyncio import BoundedSemaphore, run as _run, gather
-from anyio import Path as _Path
-
-_BSemp = BoundedSemaphore(_cpu_c() or 4)  # Limit to CPU count or 4
-
-async def task():
-    async with _BSemp:
-        # Concurrent work here
-        pass
-
-_run(gather(*[task() for _ in ...], return_exceptions=True))
-```
-
-All scripts use asyncio with `BoundedSemaphore` to limit concurrent subprocess execution to CPU count (or 4 as fallback). This prevents resource exhaustion.
-
-### Frozen Dataclasses
-```python
-from dataclasses import dataclass
-
-@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)
-class Config:
-    """Configuration arguments."""
-    
-    start: str  # YYYY-MM format
-    end: str    # YYYY-MM format
-    value: float
-```
-
-Arguments defined as:
-- **frozen=True**: Immutable after creation
-- **slots=True**: Memory efficient storage
-- **kw_only=True**: Keyword-only arguments
-- **match_args=False**: Disable pattern matching on init params
-
-### Path Handling
-```python
-from anyio import Path as _Path
-
-async def process_file(path: _Path) -> None:
-    if await path.is_file():
-        content = await path.read_text()
-        # Process content
-```
-
-Use `anyio.Path` for async file operations with async context managers. Enables concurrent file I/O without blocking.
-
-### Import Aliases
-Heavy use of underscore prefixes for cleaner code:
-```python
-from asyncio import run as _run, gather as _gather
-from pathlib import Path as _Path
-from os import cpu_count as _cpu_c
-```
-
-Aliases reduce visual clutter while maintaining clarity.
-
-### Error Handling
-```python
-results = await _gather(*tasks, return_exceptions=True)
-errors = [r for r in results if isinstance(r, Exception)]
-
-if errors:
-    raise BaseExceptionGroup("Task failures", errors)
-```
-
-Collect exceptions with `return_exceptions=True`, then raise `BaseExceptionGroup` if any errors occurred. Enables reporting all failures, not just the first.
+- Scripts use `asyncio.BoundedSemaphore` to limit concurrency to CPU count (or 4 as fallback)
+- Frozen dataclasses with `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)` for config
+- Path operations via `anyio.Path` for async file I/O
 
 ## Testing & Validation
 

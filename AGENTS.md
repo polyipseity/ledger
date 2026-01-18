@@ -38,55 +38,19 @@ Agent Skills for specialized workflows:
 - **self.alternatives.journal**: Alternative scenarios and illiquid holdings (crypto, non-transferable investments, etc.)
 
 ### Essential Commands
-- `python -m check` - Validate all journals
-- `python -m format` - Auto-format all journals
-- `hledger close --migrate` - Generate monthly closing/opening balances
-- `python -m encrypt` - Encrypt private data
-- `python -m decrypt` - Decrypt private data for editing
 
-## Quick Reference
+- `python -m check` / `python -m format` - Validate and format journals
+- `hledger close --migrate` - Generate monthly balances
+- `python -m encrypt` / `python -m decrypt` - Manage confidential data
 
-**Adding transactions**: Follow the add-transactions skill for step-by-step guidance on entering transactions from raw data.
+## Quick Start
 
-**Monthly migration**: Use the monthly-migration skill for the journal migration process.
-
-**Editing journals**: Use the edit-journals skill for best practices and validation procedures.
-
-**Validating changes**: Use the validate-journals skill for checking and formatting journals.
-
-**Security**: Always follow security.instructions.md before working with confidential data. Never commit unencrypted `private.yaml` to version control - only `private.yaml.gpg` should be tracked.
-
-## File Organization
-
-```
-ledger/
-  index.journal              # Root includes self.journal and self.alternatives.journal
-  self.journal              # Includes all yearly journals
-  self.alternatives.journal # Includes all yearly alternatives journals
-  2024/
-    self.journal            # Yearly include file
-    2024-01/
-      self.journal          # Monthly transactions
-    2024-02/
-      self.journal
-    ...
-  2025/
-    ...
-
-preludes/
-  self.journal              # Global account, commodity, payee, tag definitions
-  self.alternatives.journal # Alternative scenario commodity definitions
-```
-
-## Pre-Commit Workflow
-
-Before committing changes:
-
-1. `python -m check` - Validate all journals
-2. `python -m format` - Auto-format all journals
-3. `python -m encrypt` - If you edited private.yaml
-4. `git status` and `git diff` - Review changes
-5. `git commit -S -m "Description of changes"` - Commit with signature
+- **Adding transactions**: [add-transactions](./skills/add-transactions/) skill
+- **Monthly migration**: [monthly-migration](./skills/monthly-migration/) skill
+- **Editing journals**: [edit-journals](./skills/edit-journals/) skill
+- **Validating**: [validate-journals](./skills/validate-journals/) skill
+- **Security**: See [security.instructions.md](.github/instructions/security.instructions.md)
+- **Pre-commit**: See [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md)
 
 ## VS Code setup
 

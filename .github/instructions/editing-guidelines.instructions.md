@@ -8,59 +8,22 @@ applyTo: "**/*.journal"
 
 Best practices and anti-patterns for editing and maintaining the personal ledger.
 
-This documentation has been organized into a reusable Agent Skill that Copilot can load automatically when relevant to your editing tasks.
+See the [edit-journals](../skills/edit-journals/) skill for complete guidance.
 
-**See the dedicated skill:** [edit-journals](../skills/edit-journals/) - Complete guidance on journal editing with best practices and anti-patterns
+## Best Practices & Anti-Patterns
 
-## Summary
-
-The edit-journals skill covers:
-
-### Best Practices
-- Always include preludes
+**Do:**
+- Include preludes in monthly journals
 - Maintain balance assertions
-- Tag appropriately
-- Format after editing
-- Validate before commit
-- Maintain opening/closing pattern
-- Sort properties in comments
-- Document complex transactions
+- Tag all transactions appropriately
+- Format and validate before committing
+- Maintain opening/closing patterns
 
-### Anti-Patterns to Avoid
-- Do not edit year-level journals manually
-- Do not commit without validation
-- Do not use inconsistent formatting
-- Do not create transactions without timezone tags
-- Do not modify prelude definitions lightly
-- Do not leave unencrypted confidential files
-- Do not remove existing accounts or payees
-- Do not use spaces in account names
-
-## Quick Reference
-
-Recommended workflow for any journal edits:
-
-```powershell
-# 1. Make edits to journal files
-# [Edit ledger/2025/2025-01/self.journal or other files]
-
-# 2. Format all journals
-python -m format
-
-# 3. Validate all journals
-python -m check
-
-# 4. If edited confidential data
-python -m encrypt
-
-# 5. Review changes
-git status
-git diff
-
-# 6. Commit
-git add .
-git commit -S -m "Description of changes"
-```
+**Avoid:**
+- Manually editing year-level journals
+- Committing without validation
+- Timezone tags other than UTC+08:00
+- Spaces in account names
 
 ## Related Skills and Documentation
 

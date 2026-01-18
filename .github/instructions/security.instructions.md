@@ -23,21 +23,12 @@ This separation allows journals to remain readable and shareable (with UUIDs as 
 
 ### Security Requirements
 
-**CRITICAL: Never commit unencrypted private.yaml**
+**CRITICAL: Only commit encrypted `private.yaml.gpg`**
 
-The unencrypted `private.yaml` file must **never** be committed to the repository:
-- Never push `private.yaml` to any git remote
-- Only the encrypted `private.yaml.gpg` version should be tracked in version control
-- Add `private.yaml` to `.gitignore` to prevent accidental commits
-- Verify `.gitignore` contains: `private.yaml` (but not `private.yaml.gpg`)
-
-#### Confidential String Residency
-
-- Definition: A "confidential string" is any value stored in a key–value pair within `private.yaml`.
-- Residency rule: Confidential strings must never be saved, duplicated, or persisted anywhere except in `private.yaml` itself (which is committed only as its encrypted form `private.yaml.gpg`).
-- Prohibited locations: Do not copy confidential strings into journals (`**/*.journal`), instruction files, scripts, comments, commit messages, READMEs, environment files (e.g., `.env`), or any other plaintext/documentation.
-- Usage guidance: Journals and code should reference UUID placeholders only; resolve to real values exclusively via the `private.yaml` mappings.
-- Workflow: When a new confidential datum is required, add it to `private.yaml`, encrypt immediately, and reference it by its UUID—never inline the real value elsewhere.
+- Unencrypted `private.yaml` must never be committed or pushed
+- Ensure `.gitignore` contains `private.yaml` (but not `private.yaml.gpg`)
+- Never inline confidential values in journals, code, or commits—use UUID placeholders only
+- Always encrypt immediately after editing `private.yaml`
 
 ## Encryption Workflow
 

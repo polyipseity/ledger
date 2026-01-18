@@ -37,82 +37,17 @@ This skill covers:
 - Verifying balance assertions
 - Validation and post-migration checklist
 
-## Common Scripts Usage
-
-Practical examples for running utility scripts:
-
-### Check Journals
-
-Validate all journals before committing:
+## Script Examples
 
 ```powershell
-python -m check
+python -m check                    # Validate journals
+python -m format                   # Format journals
+python -m depreciate --from 2025-01 --to 2025-12 "Item" 50.00 HKD  # Depreciate
+python -m shift --from 2025-01 --to 2025-12 "assets:cash" 100.00 HKD  # Shift
+python -m replace "old" "new"     # Find/replace
+python -m encrypt                  # Encrypt private.yaml
+python -m decrypt                  # Decrypt private.yaml
 ```
-
-Output shows any errors found. Fix errors before proceeding.
-
-### Format Journals
-
-Auto-format all journals:
-
-```powershell
-python -m format
-```
-
-Always run after editing to ensure consistent formatting.
-
-### Add Depreciation
-
-Add depreciation entries for a depreciable asset:
-
-```powershell
-# Add monthly depreciation for an asset
-python -m depreciate --from 2025-01 --to 2025-12 "iPad 10th" 69.00 HKD
-```
-
-Adds depreciation postings to each monthly journal in the range.
-
-### Shift Account Balance
-
-Adjust account balance across multiple months:
-
-```powershell
-# Adjust cash balance across all 2025 months
-python -m shift --from 2025-01 --to 2025-12 "assets:cash" 100.00 HKD
-```
-
-Modifies balance assertions to reflect the adjustment.
-
-### Find and Replace
-
-Search and replace text across all journals:
-
-```powershell
-# Replace old text with new text everywhere
-python -m replace "old text" "new text"
-```
-
-Applies changes across all monthly journals.
-
-### Encrypt Confidential Data
-
-Encrypt private.yaml before committing:
-
-```powershell
-python -m encrypt
-```
-
-Required after editing private.yaml. Always run before `git commit`.
-
-### Decrypt Confidential Data
-
-Decrypt for editing confidential mappings:
-
-```powershell
-python -m decrypt
-```
-
-Prompts for GPG password. Remember to encrypt again after editing.
 
 ## Pre-Commit Checklist
 
