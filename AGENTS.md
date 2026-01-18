@@ -21,6 +21,7 @@ All documentation is organized into `.instructions.md` files in the `.github/ins
 - **[dependencies.instructions.md](.github/instructions/dependencies.instructions.md)** - Required software and their roles
 
 Agent Skills for specialized workflows:
+
 - **[.github/skills/add-transactions/](.github/skills/add-transactions/)** - Transcribe transactions from raw data with proper status markers and tagging
 - **[.github/skills/monthly-migration/](.github/skills/monthly-migration/)** - Perform monthly journal migration using hledger close --migrate
 - **[.github/skills/edit-journals/](.github/skills/edit-journals/)** - Edit journals following best practices and conventions
@@ -29,11 +30,13 @@ Agent Skills for specialized workflows:
 ## Key Concepts
 
 ### Transaction Status Markers
+
 - `!` (exclamation mark) = pending/unclear - awaiting confirmation or requires follow-up action
 - `*` (asterisk) = cleared - transaction complete and verified
 - No marker = normal standard transaction
 
 ### Journal Types
+
 - **self.journal**: Main ledger for liquid assets and financial transactions
 - **self.alternatives.journal**: Alternative scenarios and illiquid holdings (crypto, non-transferable investments, etc.)
 
@@ -62,6 +65,7 @@ To ensure AGENTS.md and instruction files are applied in chat:
 - For conditional instructions, use YAML frontmatter `applyTo` in `.instructions.md` (for example: `applyTo: "**/*.journal"`)
 
 Formatting setup (Markdown):
+
 - `.editorconfig` sets UTF-8, final newlines, trailing whitespace trim, and 2-space indents for Markdown (80 char line length)
 - `.markdownlint.jsonc` uses markdownlint defaults
 - Use markdownlint (VS Code extension). For CLI: global install `npm install -g markdownlint-cli2` and run `markdownlint-cli2 --fix "**/*.md"` (or use script `.\scripts\format-md.sh` / `.\scripts\format-md.bat`)

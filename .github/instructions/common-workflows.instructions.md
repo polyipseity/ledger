@@ -16,6 +16,7 @@ Process for transcribing transactions from source documents into the ledger.
 **See the dedicated skill:** [add-transactions](../skills/add-transactions/) - Complete step-by-step procedure with examples
 
 This skill covers:
+
 - Finding template transactions
 - Understanding transaction status markers (!, *)
 - Applying status markers correctly
@@ -30,6 +31,7 @@ Performed at the start of each month to close the previous month and initialize 
 **See the dedicated skill:** [monthly-migration](../skills/monthly-migration/) - Complete migration workflow with validation
 
 This skill covers:
+
 - Running migration commands for both journals
 - Understanding the output (closing/opening balances)
 - Creating new monthly journals

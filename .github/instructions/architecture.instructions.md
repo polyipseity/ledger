@@ -17,6 +17,7 @@ The ledger is organized in a hierarchical tree structure with shared definitions
 Each monthly journal starts with `include ../../../preludes/self.journal` to inherit global definitions.
 
 ### Directory Example
+
 ```
 ledger/
   index.journal              # Root: includes self.alternatives.journal, self.journal
@@ -65,12 +66,14 @@ Some years have `self.alternatives.journal` files for tracking alternative scena
 ## File Organization Patterns
 
 ### Monthly Journal Pattern
+
 - **Location**: `ledger/YYYY/YYYY-MM/self.journal`
 - **Naming**: Year and month are both 4-digit and 2-digit zero-padded numbers
 - **Content**: Opening balances → transactions → closing balances
 - **Pattern used by scripts**: Glob pattern `**/*[0-9]{4}-[0-9]{2}/*.journal`
 
 ### Include Statement Format
+
 ```hledger
 include ../../../preludes/self.journal
 ```

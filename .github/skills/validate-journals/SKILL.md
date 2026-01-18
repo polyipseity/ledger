@@ -137,6 +137,7 @@ The formatter normalizes journal files:
 - Converts amounts to consistent decimal precision (2 places)
 
 **After formatting, verify:**
+
 - All amounts have exactly 2 decimal places: `50.00 HKD`
 - Large numbers have space separators: `16 966.42 HKD`
 - Comment properties are alphabetically sorted: `activity:, eating:, time:, timezone:`

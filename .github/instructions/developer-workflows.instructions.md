@@ -10,6 +10,7 @@ Development workflows, utility scripts, code patterns, and testing/validation pr
 ## Running Scripts
 
 All utility scripts have three versions for different operating systems:
+
 - `.sh` (Shell script for Linux/macOS)
 - `.bat` (Batch file for Windows)
 - `.py` (Python module for all platforms, executable as `python -m <script>`)
@@ -17,19 +18,23 @@ All utility scripts have three versions for different operating systems:
 ### Available Scripts
 
 **Validation and Formatting:**
+
 - **Check journals**: `python -m check` - Validates all monthly journals using hledger's strict checking
 - **Format journals**: `python -m format` - Auto-formats journals using `hledger print`, sorts comment properties
 
 **Modifications:**
+
 - **Depreciate assets**: `python -m depreciate [--from YYYY-MM] [--to YYYY-MM] ITEM AMOUNT CURRENCY` - Adds depreciation entries to specified date range
 - **Shift balances**: `python -m shift [--from YYYY-MM] [--to YYYY-MM] ACCOUNT AMOUNT CURRENCY` - Adjusts account balances across date range
 - **Replace text**: `python -m replace FIND REPLACE` - Find/replace text across all journal files
 
 **Security:**
+
 - **Encrypt**: `python -m encrypt` - Encrypts private.yaml using GPG
 - **Decrypt**: `python -m decrypt` - Decrypts private.yaml.gpg for editing
 
 ### Markdown Formatting & Linting
+
 - Use markdownlint (VS Code extension) for on-save fixes where supported
 - Format/fix locally with a global install: `markdownlint-cli2 --fix "**/*.md"`
 - Check only (CI style): `markdownlint-cli2 "**/*.md"`
@@ -38,6 +43,7 @@ All utility scripts have three versions for different operating systems:
 ### Monthly Journal Discovery Pattern
 
 Scripts use glob pattern `**/*[0-9]{4}-[0-9]{2}/*.journal` to find monthly journals:
+
 - Pattern matches: `2024-01/self.journal`, `2025-12/self.journal`, etc.
 - Works recursively across any year/month structure
 - Ensures future-proof journal discovery as new months are added
@@ -70,6 +76,7 @@ Run `python -m check` before committing to validate all changes:
 **Best Practice**: Always run `python -m check` before `git commit`.
 
 ### Format Validation
+
 - Run `python -m format` after editing to ensure consistent formatting
 - The formatter:
   - Rewrites journals using `hledger print` for canonical format
@@ -80,6 +87,7 @@ Run `python -m check` before committing to validate all changes:
 ### Script Execution Patterns
 
 **Common pattern across all scripts:**
+
 1. Collect all monthly journals via glob
 2. Create async task per journal
 3. Execute with BoundedSemaphore concurrency control

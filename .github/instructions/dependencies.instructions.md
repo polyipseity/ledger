@@ -14,6 +14,7 @@ Required software and tools that enable this accounting system.
 **What it is:** The core accounting engine—a plain text accounting system supporting double-entry bookkeeping.
 
 **How it's used:**
+
 - Validates journal syntax and correctness (`python -m check` uses `hledger --strict`)
 - Formats journals into canonical format (`python -m format` uses `hledger print`)
 - Generates migration transactions (`hledger close --migrate` for monthly boundaries)
@@ -30,6 +31,7 @@ Required software and tools that enable this accounting system.
 **What it is:** Programming language used for utility scripts.
 
 **Features used:**
+
 - **Modern syntax**: `match_args`, `kw_only`, `slots` in dataclasses
 - **Async/await**: Concurrent subprocess execution
 - **Type hints**: Full type annotations throughout
@@ -45,7 +47,8 @@ Required software and tools that enable this accounting system.
 
 **What it is:** Async compatibility library for I/O operations.
 
-**Installation:** 
+**Installation:**
+
 ```powershell
 pip install "anyio>=3.6.2"
 ```
@@ -59,12 +62,14 @@ pip install "anyio>=3.6.2"
 **What it is:** Encryption/decryption tool using OpenPGP standard.
 
 **How it's used:**
+
 - Encrypts `private.yaml` to `private.yaml.gpg` before committing
 - Decrypts `private.yaml.gpg` for editing confidential mappings
 - Uses public key for encryption, private key for decryption
 - Private key is password-protected for security
 
 **Installation:**
+
 - **Windows**: Download from [gnupg.org](https://www.gnupg.org) or use package manager (Chocolatey: `choco install gnupg`)
 - **macOS**: `brew install gnupg`
 - **Linux**: `apt-get install gnupg` (Debian/Ubuntu) or equivalent

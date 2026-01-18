@@ -135,6 +135,7 @@ Revenues represent money earned.
 ## Account ID Format
 
 Many accounts use UUIDs as identifiers:
+
 - **Purpose**: Maintain privacy by separating account identifiers from confidential details
 - **Mapping**: See `private.yaml` (encrypted as `private.yaml.gpg`) for UUID → confidential string mappings
 - **Example**: `assets:banks:<bank-uuid>` resolves to actual bank name through private mapping

@@ -18,6 +18,7 @@ The [self.alternatives.journal](../../ledger/self.alternatives.journal) file tra
 ### Why Separate Tracking?
 
 Mixing liquid and illiquid assets in a single ledger obscures financial reality:
+
 - **Liquid assets** (bank accounts, cash, credit card points) can be reliably converted to real currency
 - **Illiquid assets** (cryptocurrency, non-transferable investments, experimental holdings) cannot be easily monetized
 - **Separate tracking** provides clearer accounting of what's actually accessible vs. what's speculative
@@ -73,50 +74,60 @@ ledger/
 ### Prelude Definitions
 
 **Main journal preludes** (`preludes/self.journal`):
+
 - Standard account hierarchy (assets, liabilities, equity, expenses, revenues)
 - Currencies: HKD, USD, CNY, EUR, KRW
-- Reward points: _PT/B, _PT/C, _PT/D, _PT/E, _PT/F
+- Reward points: _PT/B,_PT/C, _PT/D,_PT/E, _PT/F
 - Standard payees and tags
 
 **Alternatives journal preludes** (`preludes/self.alternatives.journal`):
+
 - Alternative scenario accounts
 - Commodity definitions for illiquid items
-- Examples: GREEN$ (green currency), _BEC, _FLW, _GLB, _MET, _OPL, _PAP, _PLA, _REB, _SEA
+- Examples: GREEN$ (green currency), _BEC,_FLW, _GLB,_MET, _OPL,_PAP, _PLA,_REB, _SEA
 
 ## Examples of Tracking Scenarios
 
 ### Example 1: Credit Card Points vs Research Cryptocurrency
 
 **Main journal - Track credit card rewards:**
+
 ```hledger
 2025-01-20 Credit Card Reward
     assets:special:rewards:credit cards:<uuid>     100 _PT/D
     revenues:rewards
 ```
+
 These points have redemption mechanisms (convert to statement credit, travel, gift cards).
 
 **Alternatives journal - Track experimental crypto:**
+
 ```hledger
 2025-01-20 Crypto Purchase
     assets:digital:<exchange-uuid>:Bitcoin         0.001 BTC
     assets:banks:<bank-uuid>                    -5000.00 HKD
 ```
+
 Cryptocurrency value is volatile and tracking it separately clarifies it's speculative.
 
 ### Example 2: Regular Savings vs Locked Investment
 
 **Main journal - Bank savings (liquid):**
+
 ```hledger
 2025-01-01 opening balances
     assets:banks:<bank-uuid>:savings           10000.00 HKD = 10000.00 HKD
 ```
+
 Access money anytime.
 
 **Alternatives journal - Locked investment (illiquid):**
+
 ```hledger
 2025-01-01 opening balances
     assets:digital:<investment-uuid>:Stock A        100 shares = 100 shares
 ```
+
 Cannot withdraw until maturity or lock-in period ends.
 
 ## Tracking Both Journals
@@ -149,6 +160,7 @@ This ensures opening/closing balances are properly set for both tracking streams
 ### Reporting
 
 When generating reports, you may want to:
+
 1. Report main journal separately for financial planning
 2. Report alternatives journal separately for curiosity/experimentation tracking
 3. Or combine both for complete net worth (noting which portions are liquid vs illiquid)
@@ -156,6 +168,7 @@ When generating reports, you may want to:
 ## When to Use Alternatives Tracking
 
 **Use alternatives journal when:**
+
 - Tracking non-liquid holdings for reference/curiosity
 - Experimenting with "what-if" scenarios
 - Monitoring cryptocurrency or volatile assets
@@ -163,6 +176,7 @@ When generating reports, you may want to:
 - Testing new account structures or tracking ideas
 
 **Use main journal for:**
+
 - Daily transactions and spending
 - Regular income and expenses
 - Bank accounts and accessible funds

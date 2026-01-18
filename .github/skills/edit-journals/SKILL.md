@@ -32,6 +32,7 @@ include ../../../preludes/self.journal
 This ensures all account definitions, commodity formats, payees, and tags are available.
 
 **For alternatives journals:**
+
 ```hledger
 include ../../../preludes/self.alternatives.journal
 
@@ -50,11 +51,13 @@ Use `= balance CURRENCY` on important accounts to validate data integrity:
 ```
 
 Balance assertions:
+
 - Catch data entry errors early
 - Provide checkpoints for reconciliation
 - Document expected balances at specific points
 
 **When to assert:**
+
 - Bank transactions (against statement balances)
 - Account transfers (verify both sides)
 - End-of-month (document closing balances)
@@ -71,11 +74,13 @@ Include essential metadata tags in transaction comments:
 ```
 
 **Required tags:**
+
 - `timezone`: Always UTC+08:00
 - `activity`: Category of activity
 - `time`: Transaction timestamp
 
 **Recommended tags:**
+
 - `duration`: For activities with time spans (e.g., `PT1H30M`)
 - `food_or_drink`: Detailed item descriptions
 - `item`: Product/item identifiers
@@ -90,12 +95,14 @@ python -m format
 ```
 
 The formatter:
+
 - Rewrites journals using `hledger print` for canonical format
 - Sorts comment properties alphabetically
 - Standardizes spacing and indentation
 - Preserves include statements unchanged
 
 Running format ensures:
+
 - Consistent style across the ledger
 - Canonical hledger representation
 - Compatibility with validation scripts
@@ -109,6 +116,7 @@ python -m check
 ```
 
 The check script validates:
+
 - All referenced accounts are defined
 - All balance assertions balance
 - All commodities are properly declared
@@ -145,6 +153,7 @@ The first and last transactions of each month have special meaning:
 ```
 
 Preserving this pattern:
+
 - Enables monthly reconciliation
 - Makes month boundaries clear
 - Facilitates `hledger close --migrate`
@@ -253,6 +262,7 @@ tag activity
 ```
 
 **Before modifying prelude definitions:**
+
 1. Understand the global impact
 2. Check how many journals reference the definition
 3. Test validation across all journals
@@ -337,6 +347,7 @@ git push
 ## Common Editing Tasks
 
 ### Adding a New Transaction
+
 1. Find recent similar transaction as template
 2. Copy template and adjust values
 3. Add comprehensive tags
@@ -345,12 +356,14 @@ git push
 6. Commit
 
 ### Adding a New Merchant/Payee
+
 1. Add payee to `preludes/self.journal`
 2. If confidential, add to `private.yaml` and encrypt
 3. Run `python -m format` and `python -m check`
 4. Commit
 
 ### Correcting Historical Transaction
+
 1. Find the transaction in appropriate monthly journal
 2. Edit values and/or tags
 3. If correction affects balances, update subsequent balance assertions

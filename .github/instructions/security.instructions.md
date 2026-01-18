@@ -13,6 +13,7 @@ Guidance for handling confidential data in this personal accounting system.
 ### Purpose and Structure
 
 The [private.yaml](../../private.yaml) file contains a mapping of UUIDs to confidential strings:
+
 - **Account numbers**: Real bank account numbers, card numbers
 - **Personal names**: Full names of individuals, family members
 - **Locations**: Home address, workplace, sensitive locations
@@ -41,18 +42,21 @@ python -m encrypt
 ```
 
 Or use the equivalent script:
+
 ```powershell
 .\scripts\encrypt.sh       # Linux/macOS
 .\scripts\encrypt.bat      # Windows
 ```
 
 **What happens:**
+
 1. Script reads the unencrypted `private.yaml`
 2. Uses GPG to encrypt it to `private.yaml.gpg`
 3. Overwrites original with encrypted version
 4. Safe to commit `private.yaml.gpg` to repository
 
 **Requirements:**
+
 - GPG installed and in PATH
 - Non-password-protected GPG public key available
 - Recipient key specified in script configuration
@@ -66,18 +70,21 @@ python -m decrypt
 ```
 
 Or use the equivalent script:
+
 ```powershell
 .\scripts\decrypt.sh       # Linux/macOS
 .\scripts\decrypt.bat      # Windows
 ```
 
 **What happens:**
+
 1. Script reads `private.yaml.gpg`
 2. Prompts for GPG key password
 3. Decrypts and overwrites `private.yaml` locally
 4. **WARNING**: Leaves decrypted file on disk until encrypted again
 
 **Requirements:**
+
 - GPG installed and in PATH
 - Password-protected GPG private key available
 - Correct password for private key
@@ -118,6 +125,7 @@ Throughout journals, sensitive information is replaced with UUIDs:
 ```
 
 The `<bank-uuid>` placeholder is an actual UUID that maps to:
+
 ```yaml
 <bank-uuid>: "Account 123-456789 at Bank XYZ"
 ```
@@ -161,9 +169,11 @@ The `<bank-uuid>` placeholder is an actual UUID that maps to:
 
 1. **Verify .gitignore**: Confirm `private.yaml` is ignored, `private.yaml.gpg` is tracked
 2. **Check git history**: Search for accidental `private.yaml` commits:
+
    ```powershell
    git log --all --full-history -- private.yaml
    ```
+
 3. **Monitor changes**: Before committing, verify only `private.yaml.gpg` appears in `git status`
 4. **Encryption verification**: Confirm `private.yaml.gpg` is binary and reasonably sized for encryption overhead
 
@@ -172,6 +182,7 @@ The `<bank-uuid>` placeholder is an actual UUID that maps to:
 ### Lost Decryption Access
 
 If you lose the GPG private key or password:
+
 1. All confidential mappings in `private.yaml.gpg` become inaccessible
 2. Journals with UUIDs remain valid but unmapped
 3. Recovery requires either:
@@ -184,12 +195,14 @@ If you lose the GPG private key or password:
 ### Encryption Errors
 
 If `python -m encrypt` fails:
+
 1. Verify GPG is installed: `gpg --version`
 2. Check public key exists: `gpg --list-keys`
 3. Verify file permissions: `ls -la private.yaml`
 4. Check disk space
 
 If `python -m decrypt` fails:
+
 1. Verify GPG is installed: `gpg --version`
 2. Check private key exists: `gpg --list-secret-keys`
 3. Ensure `private.yaml.gpg` exists and is readable

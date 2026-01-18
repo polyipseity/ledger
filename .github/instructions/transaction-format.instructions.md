@@ -29,11 +29,13 @@ YYYY-MM-DD [!|*] payee  ; activity: value, tag: value, timezone: UTC+08:00
 ## Key Patterns
 
 ### Opening and Closing Balances
+
 - **First transaction of month**: `opening balances` payee, lists all accounts with opening values and `= balance CURRENCY`
 - **Last transaction of month**: `closing balances` payee, zeroes out all accounts with `= 0.00 CURRENCY`
 - **Purpose**: Marks month boundaries and validates account balances
 
 ### Balance Assertions
+
 ```hledger
 2025-01-19 Purchase
     assets:cash                           -50.00 HKD = 1000.00 HKD
@@ -61,30 +63,36 @@ Use `= balance CURRENCY` on postings to assert the running balance after that po
 ### Formatting Rules
 
 **Amounts and Decimal Precision:**
+
 - Decimal precision: 2 decimal places (e.g., `123.45 HKD`)
 - Large numbers: Use space separators for thousands (e.g., `16 966.42 HKD`)
 - Points/loyalty currencies: May use no decimals (e.g., `100 _PT/B`)
 
 **Account Naming:**
+
 - Account UUIDs: Many accounts include UUID identifiers (e.g., `assets:banks:<bank-uuid>`)
 - Nested accounts: Use colons (`:`) to separate hierarchy levels
 - No spaces in account names
 
 **Timezone Convention:**
+
 - Consistently use `UTC+08:00` (Hong Kong time) in all timezone tags
 - Always include timezone in metadata for transaction timestamps
 
 ## Special Accounts and Patterns
 
 ### Accumulated Depreciation
+
 ```hledger
 2025-01-31 depreciation
     assets:accumulated depreciation      -50.00 HKD
     expenses:depreciation                 50.00 HKD
 ```
+
 Contra-asset account tracking depreciation of owned objects.
 
 ### Currency Conversions
+
 ```hledger
 2025-01-19 Currency Exchange
     assets:banks:<bank-uuid>             7.80 USD
@@ -92,9 +100,11 @@ Contra-asset account tracking depreciation of owned objects.
     equity:conversions:HKD-USD:HKD      -60.84 HKD = -60.84 HKD
     assets:banks:<bank-uuid>:HKD         60.84 HKD
 ```
+
 Track currency conversion transactions to maintain rate information.
 
 ### Balance Tracking Accounts
+
 - **equity:conversions**: Currency/point conversion tracking with rate metadata
 - **equity:unaccounted**: Tracks unaccounted differences during reconciliation
 - **equity:external:self.alternatives**: Links to alternative investment tracking
@@ -108,6 +118,7 @@ Track currency conversion transactions to maintain rate information.
 ```
 
 This transaction:
+
 - Records lunch purchase on Jan 19 at 12:30:15
 - Splits expense between two food items with detailed descriptions
 - Deducts from Octopus card digital account

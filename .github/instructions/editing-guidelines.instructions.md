@@ -13,6 +13,7 @@ See the [edit-journals](../skills/edit-journals/) skill for complete guidance.
 ## Best Practices & Anti-Patterns
 
 **Do:**
+
 - Include preludes in monthly journals
 - Maintain balance assertions
 - Tag all transactions appropriately
@@ -20,6 +21,7 @@ See the [edit-journals](../skills/edit-journals/) skill for complete guidance.
 - Maintain opening/closing patterns
 
 **Avoid:**
+
 - Manually editing year-level journals
 - Committing without validation
 - Timezone tags other than UTC+08:00

@@ -29,6 +29,7 @@ grep -r "food and drinks" ledger/2025/2025-01/ | head -5
 **Why recent?** Transaction conventions evolve over time. Recent entries provide the most current formatting patterns and tag usage.
 
 Look for transactions with:
+
 - Same payee (if repeat merchant)
 - Same category (if same type of spending)
 - Same account (if using same payment method)
@@ -44,18 +45,21 @@ Transactions use status markers to track lifecycle:
 ### 3. Apply Status Markers Correctly
 
 **Use `!` (pending) when:**
+
 - Lending money to a friend, awaiting repayment
 - Borrowing money with repayment pending
 - Transaction requires verification (e.g., amount not yet confirmed)
 - Awaiting reciprocal transaction (e.g., cost-sharing not yet finalized)
 
 **Use `*` (cleared) when:**
+
 - Purchase completed, item received, payment settled
 - Loan repayment received
 - Bank statement confirms transaction
 - Both parties agree on the transaction
 
 **Use no marker for:**
+
 - Regular, straightforward transactions
 - Transactions with no pending actions
 - Already-verified expenses
@@ -80,18 +84,21 @@ When a pending transaction completes, find the original transaction and change `
 Before adding a transaction with a new merchant or counterparty:
 
 **Add payee to [preludes/self.journal](../../preludes/self.journal):**
+
 ```hledger
 payee Example Restaurant
 payee <new-person-uuid>
 ```
 
 **Add account if needed:**
+
 ```hledger
 account assets:banks:<new-bank-uuid>:Currency
 account liabilities:loans:friends:<new-friend-uuid>
 ```
 
 **For confidential details**, add UUID mapping to `private.yaml`:
+
 ```yaml
 <new-person-uuid>: "John Doe"
 <new-bank-uuid>: "Bank XYZ Account 123-456"
@@ -124,6 +131,7 @@ Rich metadata enables powerful future analysis. Add detailed tags:
 ```
 
 **Common tag categories:**
+
 - **activity**: eating, transport, tutoring, fees, shopping, transfer, repayment
 - **eating**: breakfast, lunch, dinner, afternoon tea, snacks
 - **time**: HH:MM or HH:MM:SS format

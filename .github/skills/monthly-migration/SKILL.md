@@ -39,6 +39,7 @@ hledger close -f ledger/2025/2025-12/self.alternatives.journal --migrate
 The `hledger close --migrate` command generates two transactions:
 
 1. **Closing balances**: Zeroes out all accounts at month-end
+
    ```hledger
    2025-12-31 closing balances  ; time: 23:59:59
        assets:banks:<uuid>:HKD     -5000.00 HKD = 0.00 HKD
@@ -48,6 +49,7 @@ The `hledger close --migrate` command generates two transactions:
    ```
 
 2. **Opening balances**: Re-establishes account balances for new month
+
    ```hledger
    2026-01-01 opening balances  ; time: 00:00:00
        assets:banks:<uuid>:HKD      5000.00 HKD = 5000.00 HKD
@@ -71,12 +73,14 @@ Copy the closing balances transaction to the **end** of the old month's journal:
 ### 4. Create New Monthly Journal (if needed)
 
 Create new directory and file:
+
 ```powershell
 mkdir ledger/2026/2026-01
 New-Item ledger/2026/2026-01/self.journal
 ```
 
 Include the prelude:
+
 ```hledger
 include ../../../preludes/self.journal
 ```
@@ -125,6 +129,7 @@ All lines should balance to zero.
 ### 8. Validate and Format
 
 Validate the migration with:
+
 ```powershell
 python -m check              # Check for errors
 python -m format             # Format both journals
@@ -133,6 +138,7 @@ python -m format             # Format both journals
 ### 9. Reference Recent Examples
 
 Examine recent monthly journals for exact formatting and structure:
+
 ```powershell
 cat ledger/2025/2025-12/self.journal | tail -50  # View closing balances
 cat ledger/2026/2026-01/self.journal | head -50  # View opening balances
@@ -141,6 +147,7 @@ cat ledger/2026/2026-01/self.journal | head -50  # View opening balances
 ## Do's and Don'ts
 
 **Do:**
+
 - Run for both `self.journal` and `self.alternatives.journal`
 - Create new directory and file if new month's journal doesn't exist
 - Include prelude in new monthly journal
@@ -148,6 +155,7 @@ cat ledger/2026/2026-01/self.journal | head -50  # View opening balances
 - Run check and format after migration
 
 **Don't:**
+
 - Edit `hledger close` output extensively—trust its calculations
 - Forget to create new month's journal before adding transactions
 - Skip the prelude include in new monthly journals
