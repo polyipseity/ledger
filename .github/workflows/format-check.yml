@@ -1,0 +1,33 @@
+name: Journal Format Check
+
+on:
+  push:
+    paths:
+      - "ledger/**/*.journal"
+  pull_request:
+    paths:
+      - "ledger/**/*.journal"
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Install hledger
+        run: |
+          curl -sSL https://hledger.org/install.sh | bash
+
+      - name: Check journal formatting
+        run: |
+          python -m scripts.format --check

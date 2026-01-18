@@ -34,10 +34,10 @@ _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
     slots=True,
 )
 class Arguments:
-    pass
+    check: bool
 
 
-async def main(_: Arguments):
+async def main(args: Arguments):
     frame = _curframe()
     if frame is None:
         raise ValueError(frame)
@@ -58,6 +58,8 @@ async def main(_: Arguments):
     hledger_prog = _which("hledger")
     if hledger_prog is None:
         raise FileNotFoundError(hledger_prog)
+
+    unformatted_files = list[_Path]()
 
     async def formatJournal(journal: _Path):
         async with _SUBPROCESS_SEMAPHORE:
@@ -127,10 +129,17 @@ async def main(_: Arguments):
                         for group in group(cmt.split(","))
                     )}'''.strip()}"""
 
-                if (text := "\n".join(map(sortProps, text.splitlines()))) != read:
-                    await seek
-                    await file.write(text)
-                    await file.truncate()
+                formatted_text = "\n".join(map(sortProps, text.splitlines()))
+                # Normalize line endings for comparison
+                normalized_read = read.replace("\r\n", "\n")
+
+                if formatted_text != normalized_read:
+                    if args.check:
+                        unformatted_files.append(journal)
+                    else:
+                        await seek
+                        await file.write(formatted_text)
+                        await file.truncate()
             finally:
                 seek.cancel()
 
@@ -141,6 +150,12 @@ async def main(_: Arguments):
     )
     if errors:
         raise BaseExceptionGroup("", errors)
+
+    if args.check and unformatted_files:
+        print("The following files are not properly formatted:")
+        for file in unformatted_files:
+            print(f"  {file}")
+        _exit(1)
 
     _exit(0)
 
@@ -156,9 +171,15 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
         exit_on_error=False,
     )
 
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="check if files are formatted without modifying them",
+    )
+
     @_wraps(main)
-    async def invoke(_: _NS):
-        await main(Arguments())
+    async def invoke(ns: _NS):
+        await main(Arguments(check=ns.check))
 
     parser.set_defaults(invoke=invoke)
     return parser

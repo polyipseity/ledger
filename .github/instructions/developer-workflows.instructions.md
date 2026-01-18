@@ -21,6 +21,7 @@ All utility scripts have three versions for different operating systems:
 
 - **Check journals**: `python -m check` - Validates all monthly journals using hledger's strict checking
 - **Format journals**: `python -m format` - Auto-formats journals using `hledger print`, sorts comment properties
+- **Check formatting**: `python -m format --check` - Validates that journals are formatted without modifying them (exits with code 1 if unformatted files found)
 
 **Modifications:**
 
