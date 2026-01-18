@@ -27,7 +27,8 @@ jobs:
 
       - name: Install hledger
         run: |
-          curl -sSL https://hledger.org/install.sh | bash
+          sudo apt-get update
+          sudo apt-get install -y hledger
 
       - name: Check journal formatting
         run: |
