@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - "ledger/**/*.journal"
+      - ".github/workflows/check.yml"
   pull_request:
     paths:
       - "ledger/**/*.journal"
+      - ".github/workflows/check.yml"
   workflow_dispatch:
 
 jobs:
