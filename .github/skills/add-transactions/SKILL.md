@@ -9,77 +9,45 @@ This skill guides you through transcribing financial transactions from raw data 
 
 ## When to Use This Skill
 
-- Transcribing transactions from receipt images, scans, or PDFs
-- Entering data from bank statements or credit card statements
-- Processing OCR-extracted text from documents
-- Adding transactions from invoices or order confirmations
-- Entering raw transaction data from digital sources
+Transcribing transactions from receipts, bank statements, invoices, or OCR-extracted data
+
+## When Clarification Is Needed
+
+For unclear data: 1) **Search ledger** for similar transactions to infer missing details. 2) **Ask specific questions** with context (not vague prompts). 3) **Save generalizations** to "Common Clarification Patterns" (without confidential data) if pattern cannot be inferred and is not already documented.
+
+Example: Instead of "What is this?", ask: "Was this lunch or general dining?"
+
+---
 
 ## Step-by-Step Procedure
 
 ### 1. Find a Template Transaction
 
-Search the ledger for the most recent similar transaction to use as a formatting template:
+Search recent ledger entries for similar transactions (same payee, category, or account) to use as a formatting template. Recent transactions reflect current conventions.
 
 ```powershell
-# Search recent transactions for similar activity
 grep -r "food and drinks" ledger/2025/2025-01/ | head -5
 ```
 
-**Why recent?** Transaction conventions evolve over time. Recent entries provide the most current formatting patterns and tag usage.
+### 2. Apply Status Markers
 
-Look for transactions with:
+- `!` = pending (awaiting confirmation, repayment, or follow-up)
+- `*` = cleared (verified, all parties settled)
+- no marker = normal transaction
 
-- Same payee (if repeat merchant)
-- Same category (if same type of spending)
-- Same account (if using same payment method)
-
-### 2. Understand Transaction Status Markers
-
-Transactions use status markers to track lifecycle:
-
-- `!` (exclamation mark) = **pending/unclear** - Transaction awaiting confirmation or requires follow-up action
-- `*` (asterisk) = **cleared** - Transaction completed and verified, all parties settled
-- No marker = **normal** - Standard completed transaction
-
-### 3. Apply Status Markers Correctly
-
-**Use `!` (pending) when:**
-
-- Lending money to a friend, awaiting repayment
-- Borrowing money with repayment pending
-- Transaction requires verification (e.g., amount not yet confirmed)
-- Awaiting reciprocal transaction (e.g., cost-sharing not yet finalized)
-
-**Use `*` (cleared) when:**
-
-- Purchase completed, item received, payment settled
-- Loan repayment received
-- Bank statement confirms transaction
-- Both parties agree on the transaction
-
-**Use no marker for:**
-
-- Regular, straightforward transactions
-- Transactions with no pending actions
-- Already-verified expenses
-
-**Updating status:**
-When a pending transaction completes, find the original transaction and change `!` to `*`:
+**Update status:** Change `!` to `*` when a pending transaction completes:
 
 ```hledger
-# Original (pending)
-2025-01-15 ! Friend Lunch
+2025-01-15 ! Friend Lunch                    # Pending
     assets:loans:friends:<uuid>      50.00 HKD
     assets:cash                     -50.00 HKD
 
-# Later (when repaid, update to cleared)
-2025-01-20 * Friend Lunch            # Changed ! to *
+2025-01-20 * Friend Lunch                    # Update to cleared when repaid
     assets:loans:friends:<uuid>      50.00 HKD = 0.00 HKD
     assets:banks:<bank-uuid>        -50.00 HKD
 ```
 
-### 4. Register New Entities
+### 3. Register New Entities
 
 Before adding a transaction with a new merchant or counterparty:
 
@@ -106,41 +74,69 @@ account liabilities:loans:friends:<new-friend-uuid>
 
 Then encrypt: `python -m encrypt`
 
-### 5. Handle Currency Conversions
+### 4. Handle Currency Conversions
 
-For multi-currency transactions, record the exchange rate:
+Record exchange rate in comment:
 
 ```hledger
-2025-01-19 Currency Exchange  ; rate: 1 USD = 7.8 HKD
-    assets:banks:<bank-uuid>:HKD              -78.00 HKD = 5000.00 HKD
-    equity:conversions:HKD-USD:HKD            78.00 HKD = 78.00 HKD
-    equity:conversions:HKD-USD:USD           -10.00 USD = -10.00 USD
-    assets:banks:<bank-uuid>:USD               10.00 USD = 150.00 USD
+2026-01-10 Currency Exchange  ; activity: transfer, time: 14:30:00, timezone: UTC+08:00
+    equity:conversions:HKD-USD:HKD                   -1 000.00 HKD  ; 1000 HKD → 130 USD, rate: 0.1300
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    1 000.00 HKD
+    equity:conversions:HKD-USD:USD                     130.00 USD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:USD           -130.00 USD
 ```
 
-Include rate in comment for reference. Reference recent conversion transactions for exact formatting patterns.
+### 5. Apply Tags
 
-### 6. Apply Comprehensive Tagging
-
-Rich metadata enables powerful future analysis. Add detailed tags:
+Add rich metadata for analysis:
 
 ```hledger
-2025-01-19 Example Restaurant  ; activity: eating, eating: lunch, time: 12:30:15, timezone: UTC+08:00, location: Downtown
+2025-01-19 Example Restaurant  ; activity: eating, eating: lunch, time: 12:30:15, timezone: UTC+08:00
     expenses:food and drinks:dining        50.00 HKD  ; food_or_drink: pasta, food_or_drink: coffee
     assets:digital:Octopus cards:<uuid>   -50.00 HKD
 ```
 
-**Common tag categories:**
+**Tag categories:** activity (eating, transport, shopping, transfer, etc.) | eating (breakfast, lunch, dinner) | time (HH:MM:SS) | timezone (UTC+08:00) | location | item | food_or_drink | reward
 
-- **activity**: eating, transport, tutoring, fees, shopping, transfer, repayment
-- **eating**: breakfast, lunch, dinner, afternoon tea, snacks
-- **time**: HH:MM or HH:MM:SS format
-- **timezone**: Always UTC+08:00
-- **duration**: ISO 8601 format (PT1H30M)
-- **item**: Specific product or item name
-- **food_or_drink**: Detailed descriptions of food/beverage items
-- **location**: Geographic location or venue name
-- **reward**: Reward/prize identification
+### 6. Insert Transaction in Chronological Order
+
+**Transactions must be sorted by date and time.** Insert new transactions in the correct position within the monthly journal file, maintaining chronological order.
+
+## Common Clarification Patterns
+
+These are scenarios that commonly require clarification when processing raw transaction data. Review this section before asking the user—your clarification may already be documented here.
+
+### Pattern: Shared Meal
+
+**Scenario**: How to split or categorize a multi-person meal?
+
+**Ask**: Split equally or covering all? Expected reimbursement?
+
+**Resolution**: Reimbursement expected → use `assets:loans` (pending status `!`). Fully covered → single transaction. Already split → record only your portion.
+
+### Pattern: Multi-Category Receipt
+
+**Scenario**: Single receipt with items in different expense categories.
+
+**Ask**: Purchased together or separately? Line items or combined total?
+
+**Resolution**: Items separate → one transaction with multiple postings. Bundled → primary category with detailed tags. Check recent receipts from same merchant for patterns.
+
+### Pattern: Unclear Purpose
+
+**Scenario**: Amount and date clear, but category ambiguous (maintenance vs. repair vs. cleaning?).
+
+**Ask**: What activity type? Recurring or one-time?
+
+**Resolution**: Search ledger for similar merchants/amounts (past 3 months). If pattern exists → use same category/tags. If not → ask user and save pattern.
+
+### Pattern: Unclear Payment Method
+
+**Scenario**: Category known, but which source account (cash, card, transfer)?
+
+**Ask**: Payment method? Which account used before?
+
+**Resolution**: Cross-reference bank statements for that date. Check recent transactions for same payee. If unclear → ask user and save pattern.
 
 ## Validation and Commit
 
