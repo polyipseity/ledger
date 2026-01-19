@@ -15,6 +15,8 @@ All utility scripts have three versions for different operating systems:
 - `.bat` (Batch file for Windows)
 - `.py` (Python module for all platforms, executable as `python -m <script>`)
 
+Note: the `.sh` and `.bat` wrapper scripts assume they are run with the current working directory set to the `scripts/` folder (they invoke the Python module relative to that directory).
+
 ### Available Scripts
 
 **Validation and Formatting:**
