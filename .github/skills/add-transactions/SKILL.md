@@ -188,6 +188,11 @@ Behavior:
 - If no mapping is found, do NOT translate automatically. Offer options: keep as-is, supply a mapping to add, or search journals for candidates to propose.
 - Only add or modify mappings after explicit user approval.
 
+Automatic suggestions:
+- When processing a receipt, suggest existing food/payee translations and ID mappings found in `food_translations.yml`, `payee_translations.yml`, and `id_mappings.yml`.
+- Present suggested translations and ID extraction in a short summary for user approval; if approved, apply them to the transaction and (optionally) persist the mapping for future auto-application.
+- Do not persist suggestions without explicit approval; always show the proposed changes first.
+
 ### Pattern: ID extraction and ordering
 
 Store payee-specific ID extraction rules in `./.github/skills/add-transactions/id_mappings.yml`. Each payee maps to an ordered list of identifier names (and optional simple regex hints) that define the exact order IDs should appear in the transaction parentheses.
@@ -209,6 +214,10 @@ Behavior:
 - If multiple candidate IDs match the same regex, prefer the longest numeric token (likely the transaction number) and keep others in the documented order.
 - If no mapping exists, fall back to the generic rule: place the longest numeric ID first, then any shorter numeric IDs in the sequence they appear on the receipt.
 - Only write or update `id_mappings.yml` after explicit user approval.
+
+Automatic suggestions for IDs:
+- When a payee has an `id_mappings.yml` entry, propose the extracted identifiers and their ordered placement; allow the user to accept, edit, or reject before inserting into the transaction header.
+- If no mapping exists but a clear pattern of IDs is detected, propose a one-line candidate mapping for user approval to persist.
 
 ## Validation and Commit
 
