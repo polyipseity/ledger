@@ -73,6 +73,8 @@ Follow the ID extraction and ordering rules documented in the "Pattern: ID extra
 
 Before adding a transaction with a new merchant or counterparty:
 
+Keep payee declarations in `preludes/*.journal` alphabetized; insert any new payee in order.
+
 **Add payee to [preludes/self.journal](../../../preludes/self.journal):**
 
 ```hledger
@@ -123,6 +125,8 @@ Add rich metadata for analysis:
 ### 6. Insert Transaction in Chronological Order
 
 **Transactions must be sorted by date and time.** Insert new transactions in the correct position within the monthly journal file, maintaining chronological order.
+
+Within each transaction, order postings with credits first, then debits.
 
 ## Common Clarification Patterns
 

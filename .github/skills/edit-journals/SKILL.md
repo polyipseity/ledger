@@ -86,6 +86,8 @@ Include essential metadata tags in transaction comments:
 - `item`: Product/item identifiers
 - `location`: Geographic location
 
+Posting order: list credit postings before debit postings within each transaction.
+
 ### 4. Format After Editing
 
 Always run the format script after editing:
@@ -357,7 +359,7 @@ git push
 
 ### Adding a New Merchant/Payee
 
-1. Add payee to `preludes/self.journal`
+1. Add payee to `preludes/self.journal` in alphabetical order
 2. If confidential, add to `private.yaml` and encrypt
 3. Run `python -m format` and `python -m check`
 4. Commit

@@ -79,6 +79,10 @@ Use `= balance CURRENCY` on postings to assert the running balance after that po
 - Consistently use `UTC+08:00` (Hong Kong time) in all timezone tags
 - Always include timezone in metadata for transaction timestamps
 
+**Posting Order:**
+
+- List credit postings before debit postings within a transaction.
+
 ## Special Accounts and Patterns
 
 ### Accumulated Depreciation
