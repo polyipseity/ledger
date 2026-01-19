@@ -25,3 +25,13 @@
   regex:
     cardno: "\\d{6,}"
     table_number: "\\d+"
+"城大食坊 (City Express)":
+  order: [transaction_id]
+  regex:
+    transaction_id: "\\d{10,}"
+"ad982faf-117f-4ddc-bc68-3606fb71ff52":
+  order: [transaction_id, register_id, table_number]
+  regex:
+    transaction_id: "\\d{8}"
+    register_id: "\\d{4}"
+    table_number: "\\d+"

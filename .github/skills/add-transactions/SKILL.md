@@ -19,6 +19,14 @@ Quick clarifications to apply when the user specifies rules:
 - Keep zero-value "complimentary" postings but remove the text "(complimentary)" from the food_or_drink tag value.
 - If payment method is unclear, ask the user which account paid (cash / Octopus / bank / credit card / paid-by-friend, etc.). When someone else paid, record the settlement as a liability posting to the appropriate account (e.g., `liabilities:loans:friends:<uuid>` or `liabilities:loans:colleagues:<uuid>`) and mark the transaction as pending with `!`.
 
+Additional automatic rules:
+
+- **Tag validation**: Only use tags declared in the active prelude(s). Do not invent new tag names. If a standard metadata field (e.g., `activity`, `eating`, `reward`) is not in the prelude, omit it from the transaction. This ensures consistency and prevents undefined metadata pollution.
+- **Payee/counterparty resolution**: Decrypt `private.yaml` and look up the counterparty (friend, colleague, merchant). If a UUID mapping exists for the counterparty, use the UUID as the payee name in the transaction header and all related postings. This centralizes confidentiality and ensures consistent referencing across the ledger.
+- **Time precision**: When a receipt or document lacks an explicit time, ask the user to provide one (HH:MM or HH:MM:SS in the transaction timezone). Do not assume or interpolate times. Only record `time:` in the comment metadata after user clarification.
+- **Liability assertions**: When recording a repayment that settles a liability (any `liabilities:*` account), append an assertion `= 0.00 <CURRENCY>` to the liability posting. This makes the debt clearance explicit and helps catch inconsistencies. Related pending transactions (`!`) with the same counterparty should be marked as cleared (`*`) once repayment is confirmed.
+- **Pending transaction state transitions**: When a repayment transaction is added and settles one or more pending (`!`) transactions, update those pending transactions to cleared (`*`) status to reflect the completed settlement.
+
 ---
 
 ## Step-by-Step Procedure
@@ -35,7 +43,7 @@ grep -r "food and drinks" ledger/2025/2025-01/ | head -5
 
 Before inserting a transaction, check for existing mappings and apply them:
 
-1. **Payee mapping**: Check `payee_mappings.yml` for the canonical English name. Apply if found (e.g., "百份百" → "Cafe 100%").
+1. **Payee & UUID mapping**: Check `private.yaml` (decrypted) for the payee name or similar counterparty entries. If a match or near-match exists with medium confidence, ask the user to confirm before applying. Otherwise, check `payee_mappings.yml` for the canonical English name. After identifying a UUID, search the prelude(s) to determine the correct account hierarchy (e.g., `equity:friends:`, `equity:kins:families:`, `liabilities:loans:colleagues:`) before inserting the transaction. Apply confirmed mappings or use the UUID if one exists in `private.yaml`.
 2. **Food translations**: Check `food_translations.yml` for approved translations. Apply if found.
 3. **Receipt IDs**: Extract identifiers from the receipt and place them in parentheses before the payee name in the transaction header. Use the form `(ID1, ID2, ...)` or `(ID, count)` when an item count is specified by the user (e.g., `(800815, 3) Cafe 100%`).
 
@@ -161,22 +169,44 @@ Example (receipt lists per-item prices):
 
 **Scenario**: Category known, but which source account (cash, card, transfer)?
 
-**Ask**: Payment method? Which account used before?
+**Ask**: Which account paid? (cash / Octopus / bank / credit card / family member / etc.)
 
-**Resolution**: Cross-reference bank statements for that date. Check recent transactions for same payee. If unclear → ask user and save pattern.
+**Resolution**: Cross-reference bank statements for that date. Check recent transactions for same payee to identify account pattern. If unclear → **ask the user directly** which account should be recorded, then apply the clarification.
+
+Common payment accounts:
+- `assets:cash` – physical cash payment
+- `assets:digital:Octopus cards:<uuid>` – Octopus card (Hong Kong transit/payment card)
+- `assets:digital:Octopus:<uuid>` – Octopus app/digital wallet balance
+- `assets:banks:<bank-uuid>:<currency>` – bank account transfer
+- `liabilities:credit cards:<uuid>` – credit card
+- `equity:kins:families:<uuid>` – paid by family member (settle later)
+- `equity:friends:<uuid>` – paid by friend (settle later)
+
+Example (user clarified: paid by family member):
+```hledger
+2026-01-16 (55601108, 0110, 43) ad982faf-117f-4ddc-bc68-3606fb71ff52  ; activity: eating, eating: dinner, time: 19:59:05, timezone: UTC+08:00
+    expenses:food and drinks:dining              68.00 HKD  ; food_or_drink: 煎白菜鮮肉餃（12隻）
+    expenses:food and drinks:dining              60.00 HKD  ; food_or_drink: 金湯肥牛鍋
+    expenses:food and drinks:dining              55.00 HKD  ; food_or_drink: 豆腐蔬菜鍋
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4  -183.00 HKD
+```
 
 ### Pattern: Payee / IDs / Item code normalization
 
 When a receipt shows multiple identifiers, shorthand IDs, or truncated payee names, normalize as follows before inserting into the ledger:
 
 - Prefer the merchant name (payee) as it appears on the receipt, simplified to a canonical short form used in existing journal entries (e.g., `Taste` rather than `Taste Festival Walk`).
+- When payee identity is unclear (e.g., ambiguous location name, restaurant code instead of name), **ask the user to clarify** the actual merchant/payee name rather than using a generic descriptor.
+- **UUIDs and confidentiality**: If a payee has a UUID mapping in `private.yaml` for privacy, use the UUID as the payee name in the transaction. UUID usage is orthogonal to payee clarity—it's a privacy/confidentiality mechanism, not a signal of unclear payee. Always clarify the payee name with the user first, then apply UUID mapping if one exists.
 - Preserve long numeric IDs from the receipt that uniquely identify the transaction (for audit/tracing). If multiple IDs appear, keep the main long ID and insert additional long IDs in the order they appear; omit short, non-unique terminal codes when redundant.
+- **When a receipt shows item/table/section counts or qualifiers** (e.g., "table 43", "row 3"), append these as the final element in the ID tuple after all receipt IDs. Example: `(receipt-id, checkout-id, 43)` or `(transaction-id, table-number, 3)`.
 - For food_or_drink item descriptions, prefer the full code + name from the receipt when available (e.g., `014192 OWN RUN SIU MEI BBQ 叉燒飯`) rather than a shortened or OCR-corrupted form.
 
 Quick rules (short):
 
 - When a merchant is on-campus (e.g., AC2), use the location in the canonical name: `AC2 Canteen, CityUHK`.
-- When a receipt shows multiple IDs, include them in parentheses in the transaction header in the order found (or as specified by `id_mappings.yml`), e.g. `(5B182E26011513304506CB, 0200001008, 12882)`.
+- When payee name is unclear, ask the user; then apply UUID if confidential mapping exists.
+- When a receipt shows multiple IDs plus a count or qualifier (e.g., table number), include all in parentheses in the order: `(id1, id2, ..., count)`. Example: `(55601108, 0110, 43)`.
 - When listing multiple items in a single posting, repeat the tag name for each item due to hledger parsing limitations, e.g. `; food_or_drink: item 1, food_or_drink: item 2`.
 
 When the user provides a clarification like "payee should be X, food_or_drink Y, add ID Z between existing IDs", apply the above normalization to the transaction and save the pattern to this skill's "Common Clarification Patterns" so future clarifications follow the same transformation.
@@ -197,9 +227,28 @@ When transcribing food/drink items:
 - **Modifiers** are preparation adjustments applied to a base item (e.g., "more milk", "less ice", "no sugar", "fewer"). Use `+` syntax: `food_or_drink: hot coffee + more milk`
 - **Items** are distinct food components, even if listed as sub-items on the receipt (e.g., "sweet corn", "garlic butter on toast", "French fries"). List separately: `food_or_drink: item1, food_or_drink: item2`
 
-**Rule of thumb**: If it's a noun phrase describing a dish component, treat it as an item. If it describes how to prepare/customize something, treat it as a modifier.
+**Complimentary/zero-cost items**: Free or zero-dollar items (e.g., "set hot coffee $0.0") should be treated as **items with modifiers**, not as separate line items. Include them in the transaction using the `+` syntax to show customization.
 
-Example receipt transcription:
+**Non-items to ignore**: Items that cost $0 and describe the transaction type (e.g., "dine-in", "take-away") should be omitted entirely—they provide no value information and describe the consumption method, not what was consumed.
+
+**Rule of thumb**: 
+- If it's a noun phrase describing a dish component or drink offering (even if $0), treat it as an **item**.
+- If it describes how to prepare/customize an item, treat it as a **modifier**.
+- If it describes the transaction type (e.g., location of consumption) and costs $0, **ignore it**.
+
+Example receipt transcription (includes modifiers and zero-cost items):
+```
+Original: 
+  義大利粉番茄肉醬套餐
+  - 七味蛋
+  Set Hot Coffee (complimentary)
+    - Extra milk
+  Dine-in $0
+
+Result: food_or_drink: Spaghetti Bolognese with Fried Egg in Assorted Chilli Pepper, food_or_drink: set hot coffee + extra milk
+```
+
+Example with distinct items:
 ```
 Original: 鮮奶炒滑蛋・吉列魚柳
 Sub-items: -- 粒粒粟米; 轉 蒜香牛油多士
@@ -301,6 +350,7 @@ git commit -S -m "Add transactions from [source]"
 
 Notes:
 - Prefer the `scripts/*.py` entry points (e.g. `python scripts/format.py`) instead of `-m` module style; the latter may not work in some environments.
+- Scripts expect the working directory to be the repository root (not the `scripts/` folder).
 - Only run the format/check step on-demand or just before committing to avoid noisy CI-style runs during incremental edits.
 
 ## Related Documentation
