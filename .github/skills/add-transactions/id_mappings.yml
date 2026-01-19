@@ -20,3 +20,8 @@
     transaction_id: "[0-9A-Z]{20,}"
     receipt_id: "\\d{9}"
     terminal_id: "\\d+"
+"風味園":
+  order: [cardno, table_number]
+  regex:
+    cardno: "\\d{6,}"
+    table_number: "\\d+"

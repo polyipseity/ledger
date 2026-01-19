@@ -7,4 +7,11 @@ Taste:
   "無糖高纖鮮奶麥皮 配蛋治": "sugar-free oatmeal in fresh milk"
   "鮮奶滑蛋三文治": "scrambled egg sandwich"
   "熱咖啡 (多奶)": "hot coffee + more milk"
-default: {}
+default:
+  "咖啡": "coffee"
+  "鮮奶炒滑蛋": "scrambled egg"
+  "吉列魚柳": "cutlet fish fillet"
+  "粒粒粟米": "sweet corn"
+  "蒜香牛油多士": "garlic butter on toast"
+  "熱咖啡": "hot coffee"
+  "多奶": "more milk"

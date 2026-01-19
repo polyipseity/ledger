@@ -15,7 +15,9 @@ Transcribing transactions from receipts, bank statements, invoices, or OCR-extra
 
 For unclear data: 1) **Search ledger** for similar transactions to infer missing details. 2) **Ask specific questions** with context (not vague prompts). 3) **Save generalizations** to "Common Clarification Patterns" (without confidential data) if pattern cannot be inferred and is not already documented.
 
-Example: Instead of "What is this?", ask: "Was this lunch or general dining?"
+Quick clarifications to apply when the user specifies rules:
+- Keep zero-value "complimentary" postings but remove the text "(complimentary)" from the food_or_drink tag value.
+- If payment method is unclear, ask the user which account paid (cash / Octopus / bank / credit card / paid-by-friend, etc.). When someone else paid, record the settlement as a liability posting to the appropriate account (e.g., `liabilities:loans:friends:<uuid>` or `liabilities:loans:colleagues:<uuid>`) and mark the transaction as pending with `!`.
 
 ---
 
@@ -28,6 +30,18 @@ Search recent ledger entries for similar transactions (same payee, category, or 
 ```powershell
 grep -r "food and drinks" ledger/2025/2025-01/ | head -5
 ```
+
+### 1.5. Apply Payee, Food, and ID Mappings
+
+Before inserting a transaction, check for existing mappings and apply them:
+
+1. **Payee mapping**: Check `payee_mappings.yml` for the canonical English name. Apply if found (e.g., "百份百" → "Cafe 100%").
+2. **Food translations**: Check `food_translations.yml` for approved translations. Apply if found.
+3. **Receipt IDs**: Extract identifiers from the receipt and place them in parentheses before the payee name in the transaction header. Use the form `(ID1, ID2, ...)` or `(ID, count)` when an item count is specified by the user (e.g., `(800815, 3) Cafe 100%`).
+
+Follow the ID extraction and ordering rules documented in the "Pattern: ID extraction and ordering" section below or in `id_mappings.yml` for payee-specific patterns.
+
+**If no mapping exists**, do not translate automatically—use the original text and consider proposing a mapping for user approval.
 
 ### 2. Apply Status Markers
 
@@ -172,6 +186,34 @@ When the user provides a clarification like "payee should be X, food_or_drink Y,
 When a receipt includes both a start time (transaction time) and an explicit end time, compute an ISO-8601 duration (end_time - start_time) and add a `duration: PTxHxMxS` tag to the transaction metadata (example: `duration: PT43M55S`). Only compute durations when both times are unambiguous and in the same timezone (UTC+08:00).
 
 Rule of thumb: if two times on a receipt differ by more than one minute, treat the older time as the start and the newer time as the end.
+
+### Pattern: Food item modifiers and separators
+
+When transcribing food/drink items:
+
+**Item separators**: The middle dot character `・` separates distinct food items and should result in separate `food_or_drink:` entries. Receipt sub-items (marked with `--`, `+`, or similar prefixes) are typically separate items or substitutions, not modifiers.
+
+**Modifiers vs Items**:
+- **Modifiers** are preparation adjustments applied to a base item (e.g., "more milk", "less ice", "no sugar", "fewer"). Use `+` syntax: `food_or_drink: hot coffee + more milk`
+- **Items** are distinct food components, even if listed as sub-items on the receipt (e.g., "sweet corn", "garlic butter on toast", "French fries"). List separately: `food_or_drink: item1, food_or_drink: item2`
+
+**Rule of thumb**: If it's a noun phrase describing a dish component, treat it as an item. If it describes how to prepare/customize something, treat it as a modifier.
+
+Example receipt transcription:
+```
+Original: 鮮奶炒滑蛋・吉列魚柳
+Sub-items: -- 粒粒粟米; 轉 蒜香牛油多士
+
+Result: food_or_drink: scrambled egg, food_or_drink: sweet corn, food_or_drink: cutlet fish fillet, food_or_drink: garlic butter on toast
+```
+
+Example with true modifiers:
+```
+Original: 熱咖啡
+Modification: 多奶
+
+Result: food_or_drink: hot coffee + more milk
+```
 
 ### Pattern: English translation lookup for food_or_drink
 
