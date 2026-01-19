@@ -14,5 +14,9 @@
   regex:
     transaction_id: "[0-9A-Z]{10,}"
     terminal_id: "\\d+"
-default:
-  order: []
+"AC2 Canteen, CityUHK":
+  order: [transaction_id, receipt_id, terminal_id]
+  regex:
+    transaction_id: "[0-9A-Z]{20,}"
+    receipt_id: "\\d{9}"
+    terminal_id: "\\d+"

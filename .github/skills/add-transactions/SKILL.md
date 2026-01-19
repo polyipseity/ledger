@@ -122,6 +122,19 @@ These are scenarios that commonly require clarification when processing raw tran
 
 **Resolution**: Items separate → one transaction with multiple postings. Bundled → primary category with detailed tags. Check recent receipts from same merchant for patterns.
 
+Note: If the receipt shows a price next to each line item (i.e., individual amounts per item), record each item as a separate posting with its own amount and a repeated `food_or_drink` tag. Only group items into a single posting when the receipt lists a single grouped price (e.g., a meal set) rather than per-item prices.
+
+Example (receipt lists per-item prices):
+
+```hledger
+2026-01-15 AC2 Canteen, CityUHK  ; activity: eating, eating: lunch, time: 13:30:45
+    expenses:food and drinks:dining        15.00 HKD  ; food_or_drink: 小碗菜
+    expenses:food and drinks:dining        18.00 HKD  ; food_or_drink: 小碗菜
+    expenses:food and drinks:dining        10.00 HKD  ; food_or_drink: 小碗菜
+    expenses:food and drinks:dining         6.00 HKD  ; food_or_drink: 白飯
+    assets:digital:Octopus cards:<uuid>   -49.00 HKD
+```
+
 ### Pattern: Unclear Purpose
 
 **Scenario**: Amount and date clear, but category ambiguous (maintenance vs. repair vs. cleaning?).
@@ -145,6 +158,12 @@ When a receipt shows multiple identifiers, shorthand IDs, or truncated payee nam
 - Prefer the merchant name (payee) as it appears on the receipt, simplified to a canonical short form used in existing journal entries (e.g., `Taste` rather than `Taste Festival Walk`).
 - Preserve long numeric IDs from the receipt that uniquely identify the transaction (for audit/tracing). If multiple IDs appear, keep the main long ID and insert additional long IDs in the order they appear; omit short, non-unique terminal codes when redundant.
 - For food_or_drink item descriptions, prefer the full code + name from the receipt when available (e.g., `014192 OWN RUN SIU MEI BBQ 叉燒飯`) rather than a shortened or OCR-corrupted form.
+
+Quick rules (short):
+
+- When a merchant is on-campus (e.g., AC2), use the location in the canonical name: `AC2 Canteen, CityUHK`.
+- When a receipt shows multiple IDs, include them in parentheses in the transaction header in the order found (or as specified by `id_mappings.yml`), e.g. `(5B182E26011513304506CB, 0200001008, 12882)`.
+- When listing multiple items in a single posting, repeat the tag name for each item due to hledger parsing limitations, e.g. `; food_or_drink: item 1, food_or_drink: item 2`.
 
 When the user provides a clarification like "payee should be X, food_or_drink Y, add ID Z between existing IDs", apply the above normalization to the transaction and save the pattern to this skill's "Common Clarification Patterns" so future clarifications follow the same transformation.
 
@@ -174,23 +193,26 @@ Behavior:
 
 Only write mappings into `food_translations.yml` after explicit user approval.
 
-### Pattern: English translation lookup for payee names
+### Pattern: Payee mappings (translations and canonical names)
 
-Store confirmed payee translations in `./.github/skills/add-transactions/payee_translations.yml` as simple key-value pairs from the source/alias to the canonical English payee. Example:
+Use a single mappings file `./.github/skills/add-transactions/payee_mappings.yml` for both translations and canonical name normalization. Each entry maps a source/alias to a canonical form and may include metadata (e.g., location normalization).
+
+Example:
 
 ```yaml
 "百份百": "Cafe 100%"
+"AC2 Canteen": "AC2 Canteen, CityUHK"
 default: {}
 ```
 
 Behavior:
-- When a mapping exists and is approved, replace the payee with the English canonical name only (do not keep the original text).
-- If no mapping is found, do NOT translate automatically. Offer options: keep as-is, supply a mapping to add, or search journals for candidates to propose.
-- Only add or modify mappings after explicit user approval.
+- When a mapping exists and is approved, replace the payee with the canonical name only (do not keep the original text).
+- If no mapping is found, do NOT translate or rename automatically. Offer options: keep as-is, supply a mapping to add, or search journals for candidates to propose.
+- Persist mappings only with explicit user approval.
 
 Automatic suggestions:
-- When processing a receipt, suggest existing food/payee translations and ID mappings found in `food_translations.yml`, `payee_translations.yml`, and `id_mappings.yml`.
-- Present suggested translations and ID extraction in a short summary for user approval; if approved, apply them to the transaction and (optionally) persist the mapping for future auto-application.
+- When processing a receipt, suggest existing food/payee translations and ID mappings found in `food_translations.yml`, `payee_mappings.yml`, and `id_mappings.yml`.
+- Present suggested mappings and ID extraction in a short summary for user approval; if approved, apply them to the transaction and (optionally) persist the mapping for future auto-application.
 - Do not persist suggestions without explicit approval; always show the proposed changes first.
 
 ### Pattern: ID extraction and ordering
