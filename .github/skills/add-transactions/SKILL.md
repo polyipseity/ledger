@@ -138,24 +138,61 @@ These are scenarios that commonly require clarification when processing raw tran
 
 **Resolution**: Cross-reference bank statements for that date. Check recent transactions for same payee. If unclear → ask user and save pattern.
 
+### Pattern: Payee / IDs / Item code normalization
+
+When a receipt shows multiple identifiers, shorthand IDs, or truncated payee names, normalize as follows before inserting into the ledger:
+
+- Prefer the merchant name (payee) as it appears on the receipt, simplified to a canonical short form used in existing journal entries (e.g., `Taste` rather than `Taste Festival Walk`).
+- Preserve long numeric IDs from the receipt that uniquely identify the transaction (for audit/tracing). If multiple IDs appear, keep the main long ID and insert additional long IDs in the order they appear; omit short, non-unique terminal codes when redundant.
+- For food_or_drink item descriptions, prefer the full code + name from the receipt when available (e.g., `014192 OWN RUN SIU MEI BBQ 叉燒飯`) rather than a shortened or OCR-corrupted form.
+
+When the user provides a clarification like "payee should be X, food_or_drink Y, add ID Z between existing IDs", apply the above normalization to the transaction and save the pattern to this skill's "Common Clarification Patterns" so future clarifications follow the same transformation.
+
+### Pattern: Duration calculation
+
+When a receipt includes both a start time (transaction time) and an explicit end time, compute an ISO-8601 duration (end_time - start_time) and add a `duration: PTxHxMxS` tag to the transaction metadata (example: `duration: PT43M55S`). Only compute durations when both times are unambiguous and in the same timezone (UTC+08:00).
+
+Rule of thumb: if two times on a receipt differ by more than one minute, treat the older time as the start and the newer time as the end.
+
+### Pattern: English translation lookup for food_or_drink
+
+Store confirmed translation mappings in `./.github/skills/add-transactions/food_translations.yml`, keyed by payee with an optional `default` fallback. Example:
+
+```yaml
+Payee Name:
+    "蒜香法包": "garlic baguette"
+default:
+    "蒜香法包": "garlic baguette"
+```
+
+Behavior:
+- When a mapping exists and the user has approved it, replace the transaction's `food_or_drink` value with the English translation only (do not keep the original non-English text).
+- If no mapping is found, do NOT translate automatically. Prompt the user with options:
+    1) Leave the original non-English text as-is in the transaction.
+    2) Provide a translation mapping manually (which will be stored after approval).
+    3) Search the journals for candidate mappings and present them for approval.
+
+Only write mappings into `food_translations.yml` after explicit user approval.
+
 ## Validation and Commit
 
-After adding transactions:
+Run validation and formatting together only when you explicitly request it or immediately before committing changes. On Windows PowerShell you can run both in one command so the work is faster and atomic:
 
 ```powershell
-# 1. Validate all journals
-python -m check
+# Format then check (single command)
+python scripts/format.py ; python scripts/check.py
 
-# 2. Format all journals
-python -m format
-
-# 3. Review changes
+# Review changes
 git status
 git diff
 
-# 4. Commit
+# Commit when ready
 git commit -S -m "Add transactions from [source]"
 ```
+
+Notes:
+- Prefer the `scripts/*.py` entry points (e.g. `python scripts/format.py`) instead of `-m` module style; the latter may not work in some environments.
+- Only run the format/check step on-demand or just before committing to avoid noisy CI-style runs during incremental edits.
 
 ## Related Documentation
 
