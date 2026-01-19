@@ -1,11 +1,10 @@
-# food_translations.yml
-# Structure: payee -> (Chinese item -> English translation)
-# Use a `default` section for mappings that apply across payees.
-# Add entries only after user confirmation.
-
 Saizeriya:
   "蒜香法包": "garlic baguette"
   "香辣番茄煙肉直通粉": '"ARRABBIATA" bacon penne'
-
 Taste:
   "014192 叉燒飯": "014192 OWN RUN SIU MEI BBQ"
+"Cafe 100%":
+  "無糖高纖鮮奶麥皮 配蛋治": "sugar-free oatmeal in fresh milk"
+  "鮮奶滑蛋三文治": "scrambled egg sandwich"
+  "熱咖啡 (多奶)": "hot coffee + more milk"
+default: {}

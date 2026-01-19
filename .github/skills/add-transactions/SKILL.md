@@ -174,6 +174,42 @@ Behavior:
 
 Only write mappings into `food_translations.yml` after explicit user approval.
 
+### Pattern: English translation lookup for payee names
+
+Store confirmed payee translations in `./.github/skills/add-transactions/payee_translations.yml` as simple key-value pairs from the source/alias to the canonical English payee. Example:
+
+```yaml
+"百份百": "Cafe 100%"
+default: {}
+```
+
+Behavior:
+- When a mapping exists and is approved, replace the payee with the English canonical name only (do not keep the original text).
+- If no mapping is found, do NOT translate automatically. Offer options: keep as-is, supply a mapping to add, or search journals for candidates to propose.
+- Only add or modify mappings after explicit user approval.
+
+### Pattern: ID extraction and ordering
+
+Store payee-specific ID extraction rules in `./.github/skills/add-transactions/id_mappings.yml`. Each payee maps to an ordered list of identifier names (and optional simple regex hints) that define the exact order IDs should appear in the transaction parentheses.
+
+Example `id_mappings.yml` structure:
+
+```yaml
+"Cafe 100%":
+    order: [transaction_id, table_number]
+    regex:
+        transaction_id: "\\d{6,}"
+        table_number: "\\d+"
+default:
+    order: []
+```
+
+Behavior:
+- When a mapping exists and is approved, the parser should extract identifiers from the receipt in the mapped order and insert them in the transaction header parentheses (omitting missing values or using `?` as placeholder when only partially available).
+- If multiple candidate IDs match the same regex, prefer the longest numeric token (likely the transaction number) and keep others in the documented order.
+- If no mapping exists, fall back to the generic rule: place the longest numeric ID first, then any shorter numeric IDs in the sequence they appear on the receipt.
+- Only write or update `id_mappings.yml` after explicit user approval.
+
 ## Validation and Commit
 
 Run validation and formatting together only when you explicitly request it or immediately before committing changes. On Windows PowerShell you can run both in one command so the work is faster and atomic:

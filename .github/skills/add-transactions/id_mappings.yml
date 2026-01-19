@@ -1,0 +1,18 @@
+"Cafe 100%":
+  order: [transaction_id, table_number]
+  regex:
+    transaction_id: "\\d{6,}"
+    table_number: "\\d+"
+"Saizeriya":
+  order: [transaction_id, bill_number, table_number]
+  regex:
+    transaction_id: "[0-9A-Z]{10,}"
+    bill_number: "\\d{3}-\\d{6}"
+    table_number: "\\d+"
+"Taste":
+  order: [transaction_id, terminal_id]
+  regex:
+    transaction_id: "[0-9A-Z]{10,}"
+    terminal_id: "\\d+"
+default:
+  order: []
