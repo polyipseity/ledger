@@ -227,7 +227,55 @@ Updated with duration:
 
 **Format for reload transactions** (八達通轉賬):
 
-When the Octopus transaction history shows a reload (e.g., `八達通轉賬 +200.0 HKD`), record **only the second step** (Wallet → Card) initially, then verify if the first step (Bank → Wallet) exists:
+Each reload involves TWO transactions with the SAME timestamp:
+
+1. **Step 1: Bank → Octopus Wallet** (eDDA authorization)
+2. **Step 2: Octopus Wallet → Octopus Card** (visible in Octopus app)
+
+**Complete reload transaction example**:
+
+```hledger
+; Step 1: Bank to Octopus Wallet (from bank email notification)
+2026-01-14 (C1E56743229, FRN202601144PAYD0103092279035, OCTOPUS038084565301286497) self  ; activity: transfer, time: 09:16, timezone: UTC+08:00, via: eDDA
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
+
+; Step 2: Octopus Wallet to Octopus Card (from Octopus transaction history)
+2026-01-14 self  ; activity: transfer, time: 09:16, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
+```
+
+**Extracting transaction IDs from bank email notifications**:
+
+When the user provides Hang Seng Bank email notifications for Octopus reloads (subject: "你的直接付款授權已被成功執行/Your Direct Debit Authorisation has been processed successfully"), extract ALL three transaction identifiers:
+
+1. **Email reference** (from subject line): Extract the code in square brackets after "Ref:"
+   - Example: Subject contains `Ref:[C1E56743229]` → Extract `C1E56743229`
+
+2. **FRN reference** (from email body): Look for the "備註" / "Ref:" field in the email body
+   - Example: Email body shows `Ref: FRN202601144PAYD0103092279035` → Extract full FRN string
+
+3. **Debtor Reference**: Always `OCTOPUS038084565301286497` (constant eDDA identifier for this Octopus account)
+
+4. **Transaction timestamp**: Extract from "交易日期 / Transfer date:" field
+   - Example: `2026-01-14 09:16`
+
+5. **Amount**: Extract from the green HKD amount at top of email
+   - Example: `HKD 200.00`
+
+**Workflow when bank email is available**:
+
+1. Extract all fields from email (see above)
+2. Add Step 1 (Bank → Wallet) transaction with complete transaction IDs
+3. Add Step 2 (Wallet → Card) transaction with matching timestamp
+4. Both transactions use the SAME time from the email
+
+**Workflow when bank email is NOT available**:
+
+When only Octopus transaction history shows a reload:
+
+1. Add Step 2 (Wallet → Card) transaction immediately:
 
 ```hledger
 ; Step 2: Octopus Wallet to Octopus Card (from Octopus transaction history)
@@ -236,14 +284,8 @@ When the Octopus transaction history shows a reload (e.g., `八達通轉賬 +200
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 ```
 
-**If Step 1 (Bank → Wallet) is missing**, check bank statements or ask the user to provide transaction IDs, then add:
-
-```hledger
-; Step 1: Bank to Octopus Wallet (verify from bank statement)
-2026-01-15 (C1..., FRN..., OCTOPUS...) self  ; activity: transfer, time: 18:14, timezone: UTC+08:00, via: eDDA
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
-```
+2. Ask user to provide bank email notification or mark Step 1 as pending investigation
+3. If bank email is later provided, add Step 1 transaction with complete IDs
 
 **Format for dining/retail transactions**:
 
@@ -355,6 +397,21 @@ Then encrypt: `python -m encrypt`
 **Resolution**: If user provides details, add specific `food_or_drink:` tags. Otherwise, use `food_or_drink: (unknown)` placeholder.
 
 ### Pattern: Reload source ambiguity
+
+**Scenario**: Octopus transaction shows a reload (`八達通轉賬 +200.0 HKD`) but you don't have bank transaction details.
+
+**Ask**: Can you provide the bank email notification for this reload? (Subject: "你的直接付款授權已被成功執行")
+
+**Resolution**: 
+- If email provided → Extract all transaction IDs (see Step 5 reload section) and create BOTH Step 1 (Bank→Wallet) and Step 2 (Wallet→Card) transactions
+- If email not available → Add only Step 2 (Wallet→Card) transaction, mark Step 1 as pending investigation
+
+**Key data in bank email**:
+- Email reference (subject): `C1E56743229`
+- FRN reference (body): `FRN202601144PAYD0103092279035`
+- Debtor reference: `OCTOPUS038084565301286497` (constant)
+- Timestamp: `2026-01-14 09:16`
+- Amount: `HKD 200.00`
 
 **Scenario**: Octopus transaction shows `八達通轉賬 +200.0 HKD`, but the corresponding bank transaction is unclear.
 
