@@ -19,7 +19,18 @@ This skill guides you through transcribing missing transactions from Octopus car
 
 **CRITICAL**: Never expose the actual Octopus card number in any documentation, examples, or conversations. Always use placeholders like `<octopus-card-uuid>` or generic examples like `1608ef20-afcd-4cd0-9631-2c7b15437521` (which is already in the ledger).
 
-## Octopus Transaction Data Format
+## Understanding Octopus Accounts and Data
+
+### Octopus Wallet vs Octopus Card
+
+**Two distinct accounts** - do not confuse:
+
+1. **Octopus Wallet** (`assets:digital:Octopus:<uuid>`): Digital balance in the Octopus mobile app, used for online payments and card reloads
+2. **Octopus Card** (`assets:digital:Octopus cards:<uuid>`): Physical/virtual card balance, used for transit and in-person payments
+
+**Reload flow**: Bank → Octopus Wallet → Octopus Card
+
+### Octopus Transaction Data Format
 
 Typical Octopus app transaction data includes:
 
@@ -32,51 +43,25 @@ Typical Octopus app transaction data includes:
   - 🛍️ Retail/Shopping
   - ➕ Reload/Top-up (八達通轉賬)
 
-## Account Structure
+### Expense Account Mapping
 
-### Octopus Wallet vs Octopus Card
-
-**Two distinct accounts** - do not confuse:
-
-1. **Octopus Wallet** (`assets:digital:Octopus:<uuid>`): Digital balance in the Octopus mobile app, used for online payments and card reloads
-2. **Octopus Card** (`assets:digital:Octopus cards:<uuid>`): Physical/virtual card balance, used for transit and in-person payments
-
-**Reload flow**: Bank → Octopus Wallet → Octopus Card
-
-Example reload transactions:
-```hledger
-; Step 1: Bank to Octopus Wallet (via eDDA/bank transfer)
-2026-01-04 (C1447833543, FRN202601044PAYD0103064398185, OCTOPUS038084565301286497) self  ; activity: transfer, time: 10:40, timezone: UTC+08:00, via: eDDA
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
-    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
-
-; Step 2: Octopus Wallet to Octopus Card (八達通轉賬)
-2026-01-04 self  ; activity: transfer, time: 10:40, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
-```
-
-**Important**: When the Octopus transaction history shows `八達通轉賬` or `Octopus Transfer` with a positive amount (e.g., `+200.0`), this represents **Step 2** only (Wallet → Card). Step 1 (Bank → Wallet) must be verified separately from bank statements, and both transactions should have the same timestamp.
-
-### Transport Expense Accounts
-
+**Transport accounts**:
 - `expenses:transport:trains` - MTR/港鐵 (Mass Transit Railway)
-- `expenses:transport:buses` - Buses (Kowloon Motor Bus/KMB, Long Win Bus, etc.)
+- `expenses:transport:buses` - Buses (KMB, Long Win Bus, etc.)
 - `expenses:transport:minibuses` - Public light buses (紅色小巴/綠色小巴)
 - `expenses:transport:ferries` - Ferries (Star Ferry, etc.)
 - `expenses:transport:taxis` - Taxis (rare, usually cash)
 
-### Other Common Expense Accounts
-
+**Other common accounts**:
 - `expenses:food and drinks:dining` - Restaurant/canteen meals
 - `expenses:food and drinks:snacks` - Snacks, bakery items
 - `expenses:food and drinks:drinks` - Beverages only
-- `expenses:shopping:groceries` - Supermarket purchases (ParknShop/百佳, Wellcome, etc.)
+- `expenses:shopping:groceries` - Supermarket purchases (ParknShop, Wellcome, etc.)
 - `expenses:shopping:general` - Other retail purchases
 
-## Step-by-Step Procedure
+## Step-by-Step Workflow
 
-### 1. Load Recent Journal Context
+### Step 1: Load Journal Context
 
 Before processing Octopus transactions, read the current month's journal to understand:
 - Existing transactions (to avoid duplicates)
@@ -88,9 +73,9 @@ Before processing Octopus transactions, read the current month's journal to unde
 cat ledger/2026/2026-01/self.journal
 ```
 
-### 2. Apply Two-Step Payee Mappings
+### Step 2: Apply Two-Step Payee Mappings
 
-Octopus transaction merchant names are often different from the actual payee names used in the journal. A two-step mapping process is required:
+Octopus transaction merchant names often differ from actual payee names used in the journal. Apply a two-step mapping process:
 
 **Step 2a: Octopus Name → Actual Payee Name**
 
@@ -144,7 +129,7 @@ After applying the Octopus → Actual mapping, check if the actual payee name ne
 
 **UUID mappings**: After both mapping steps, check `private.yaml` (decrypted) for confidential merchant/person UUIDs. If a UUID exists for the final payee name, use the UUID in the transaction.
 
-### 3. Identify Missing vs Existing Transactions
+### Step 3: Identify Missing vs Existing Transactions
 
 **Matching criteria** (in order of priority):
 
@@ -169,7 +154,7 @@ grep -A2 "Mass Transit Railway.*2026-01-19" ledger/2026/2026-01/self.journal | g
 grep "1608ef20-afcd-4cd0-9631-2c7b15437521" ledger/2026/2026-01/self.journal
 ```
 
-### 4. Add Duration Metadata (When Applicable)
+### Step 4: Add Duration Metadata (When Applicable)
 
 **Scenario**: An existing journal transaction matches an Octopus transaction (same date, merchant, amount), but:
 - Journal transaction has a start time (`time:` tag)
@@ -180,11 +165,6 @@ grep "1608ef20-afcd-4cd0-9631-2c7b15437521" ledger/2026/2026-01/self.journal
 
 **Action**: Calculate duration (end_time - start_time) and add `duration:` tag in ISO 8601 format to the existing transaction. **Do NOT create a new transaction**.
 
-Quick checklist to avoid missing duration updates:
-- After adding/reviewing a date, scan for pairs with same merchant and amount where the Octopus time is later than the journal time (e.g., breakfast at 08:52 then Octopus shows -35.0 at 09:20).
-- If the journal entry has no `duration:` yet and the time gap is reasonable (>2 minutes), compute and add the `duration:`.
-- Do not add a second transaction for the same event; duration belongs on the original entry.
-
 **When NOT to add duration**:
 - If journal transaction already has `duration:` tag → Leave it unchanged
 - If Octopus time difference is <2 minutes → Skip (likely rounding/precision difference)
@@ -194,6 +174,11 @@ Quick checklist to avoid missing duration updates:
 - `PT35M55S` = 35 minutes 55 seconds
 - `PT1H9M42S` = 1 hour 9 minutes 42 seconds
 - `PT30M23S` = 30 minutes 23 seconds
+
+**Quick checklist to avoid missing duration updates**:
+- After adding/reviewing a date, scan for pairs with same merchant and amount where the Octopus time is later than the journal time
+- If the journal entry has no `duration:` yet and the time gap is reasonable (>2 minutes), compute and add the `duration:`
+- Do not add a second transaction for the same event; duration belongs on the original entry
 
 **Example**:
 
@@ -215,9 +200,11 @@ Updated with duration:
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
 ```
 
-### 5. Add Missing Transactions
+### Step 5: Add Missing Transactions
 
-**Format for transport transactions** (MTR/港鐵):
+#### Transport Transactions
+
+**Format for MTR/港鐵**:
 
 ```hledger
 2026-01-19 Mass Transit Railway  ; activity: transport, time: 19:33, timezone: UTC+08:00
@@ -225,12 +212,14 @@ Updated with duration:
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 ```
 
-**Format for reload transactions** (八達通轉賬):
+#### Reload Transactions
 
-Each reload involves TWO transactions with the SAME timestamp:
+Each reload involves **TWO transactions** with the **SAME timestamp**:
 
 1. **Step 1: Bank → Octopus Wallet** (eDDA authorization)
 2. **Step 2: Octopus Wallet → Octopus Card** (visible in Octopus app)
+
+**Important**: When the Octopus transaction history shows `八達通轉賬` or `Octopus Transfer` with a positive amount (e.g., `+200.0`), this represents **Step 2** only (Wallet → Card). Step 1 (Bank → Wallet) must be verified separately from bank email notifications, and both transactions should have the same timestamp.
 
 **Complete reload transaction example**:
 
@@ -284,10 +273,12 @@ When only Octopus transaction history shows a reload:
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 ```
 
-2. Ask user to provide bank email notification or mark Step 1 as pending investigation
+2. Ask user to provide bank email notification for complete transaction IDs
 3. If bank email is later provided, add Step 1 transaction with complete IDs
 
-**Format for dining/retail transactions**:
+#### Dining/Retail Transactions
+
+**Format**:
 
 ```hledger
 2026-01-19 Maxim's  ; activity: eating, eating: lunch, time: 13:50, timezone: UTC+08:00
@@ -297,21 +288,24 @@ When only Octopus transaction history shows a reload:
 
 **Note**: When the specific items purchased are not available in the Octopus transaction data, use `food_or_drink: (unknown)` or similar placeholder. Ask the user if they remember the items or have a receipt.
 
-### 6. Transaction Ordering and Insertion
+### Step 6: Transaction Ordering and Insertion
 
 **Insert transactions in strict chronological order** within the monthly journal file, sorted by date and then by time (HH:MM:SS). When multiple transactions occur on the same date, insert them in time order.
 
-Chronology safety check (to avoid common mistakes):
-- After adding entries for a given date, run a quick scan and ensure the time sequence is strictly ascending within that date.
-- Prefer inserting new blocks without copying surrounding lines; copying nearby lines during edits can accidentally duplicate existing transactions.
-- If a later-time entry appears above an earlier-time entry, move the block down until the sequence reads top-to-bottom by time.
-- Never create or keep duplicates: if the same merchant/time pair appears twice, remove the extra block.
+**Chronology safety checks**:
+- After adding entries for a given date, run a quick scan and ensure the time sequence is strictly ascending within that date
+- Prefer inserting new blocks without copying surrounding lines; copying nearby lines during edits can accidentally duplicate existing transactions
+- If a later-time entry appears above an earlier-time entry, move the block down until the sequence reads top-to-bottom by time
+- Never create or keep duplicates: if the same merchant/time pair appears twice, remove the extra block
 
-**Insertion procedure**:
-1. Identify the insertion date
-2. Find all transactions on that date
-3. Compare times to determine exact position
-4. Insert new transaction in correct time slot
+**Post-edit verification helpers**:
+```powershell
+# Verify ordering for a specific date
+grep "2026-01-15" ledger/2026/2026-01/self.journal
+
+# Search for unintended duplicates
+grep -n "Game Zone.*2026-01-15" ledger/2026/2026-01/self.journal
+```
 
 **Within each transaction**, order postings with **debits first (increases), then credits (decreases)**:
 
@@ -320,33 +314,9 @@ Chronology safety check (to avoid common mistakes):
 2026-01-19 Mass Transit Railway  ; activity: transport, time: 19:33, timezone: UTC+08:00
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
-
-  Post-edit verification helpers:
-  - grep the day's lines and visually confirm ordering, e.g. `grep "2026-01-15" ledger/2026/2026-01/self.journal`
-  - search for unintended duplicates, e.g. `grep -n "Game Zone.*2026-01-15" ledger/2026/2026-01/self.journal`
 ```
 
-### 7. Handle Edge Cases
-
-**Multiple transactions at same merchant on same day**:
-- Use time differences to distinguish transactions
-- If times are very close (within 1-2 minutes), they may be the same transaction → verify with amounts and context
-
-**Unclear merchant names**:
-- Search ledger history for similar merchant names
-- Check `payee_mappings.yml` for existing translations
-- Ask user to clarify merchant identity before adding
-
-**Unusual amounts**:
-- MTR with amount other than typical fares (e.g., `-1.4 HKD`) → likely a short journey or discounted fare, record as-is
-- Round amounts in retail (e.g., `-40.0 HKD`, `-35.0 HKD`) → likely grocery or retail purchases
-
-**Transactions paid by Octopus Wallet vs Card**:
-- Octopus transaction history should indicate the payment source
-- If paid via Octopus Wallet (app balance), use `assets:digital:Octopus:<uuid>` instead of `assets:digital:Octopus cards:<uuid>`
-- Example: Some merchants accept Octopus app QR code payments (Wallet) vs physical card tap (Card)
-
-### 8. Register New Payees
+### Step 7: Register New Payees
 
 Before adding transactions with new merchants, register the payee in the prelude:
 
@@ -371,9 +341,9 @@ payee <merchant-uuid>
 
 Then encrypt: `python -m encrypt`
 
-## Common Clarification Patterns
+## Common Scenarios and Patterns
 
-### Pattern: Octopus showing different merchant name than actual payee
+### Octopus showing different merchant name than actual payee
 
 **Scenario**: Octopus transaction shows merchant name (e.g., "Union Cash Register Co. Ltd.", "餐飲 / 會所") but the actual payee in your journal is different (e.g., "Cafe 100%", "A-1 Bakery").
 
@@ -388,53 +358,7 @@ Then encrypt: `python -m encrypt`
 - Octopus: "Union Cash Register Co. Ltd." → Maps to "Cafe 100%"
 - Octopus: "美心 / 星巴克" → Maps to "城大食坊 (City Express)"
 
-### Pattern: Unknown food items
-
-**Scenario**: Octopus transaction shows a dining transaction with an amount, but no item details.
-
-**Ask**: Do you remember what you ordered? Do you have a receipt?
-
-**Resolution**: If user provides details, add specific `food_or_drink:` tags. Otherwise, use `food_or_drink: (unknown)` placeholder.
-
-### Pattern: Reload source ambiguity
-
-**Scenario**: Octopus transaction shows a reload (`八達通轉賬 +200.0 HKD`) but you don't have bank transaction details.
-
-**Ask**: Can you provide the bank email notification for this reload? (Subject: "你的直接付款授權已被成功執行")
-
-**Resolution**: 
-- If email provided → Extract all transaction IDs (see Step 5 reload section) and create BOTH Step 1 (Bank→Wallet) and Step 2 (Wallet→Card) transactions
-- If email not available → Add only Step 2 (Wallet→Card) transaction, mark Step 1 as pending investigation
-
-**Key data in bank email**:
-- Email reference (subject): `C1E56743229`
-- FRN reference (body): `FRN202601144PAYD0103092279035`
-- Debtor reference: `OCTOPUS038084565301286497` (constant)
-- Timestamp: `2026-01-14 09:16`
-- Amount: `HKD 200.00`
-
-**Scenario**: Octopus transaction shows `八達通轉賬 +200.0 HKD`, but the corresponding bank transaction is unclear.
-
-**Ask**: Which bank account funded this reload? Do you have the bank transaction ID?
-
-**Resolution**: Search bank statements for matching amount and date. If found, add both transactions (Bank → Wallet, Wallet → Card) with the same timestamp. If not found, mark the Wallet → Card transaction as pending (`!`) until the bank transaction is confirmed.
-
-Example (pending reload when bank transaction is unclear):
-```hledger
-2026-01-15 ! self  ; activity: transfer, time: 18:14, timezone: UTC+08:00
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
-    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
-```
-
-### Pattern: Transport transaction timing
-
-**Scenario**: Octopus shows MTR transaction at `2026-01-19 19:33` but journal has an MTR transaction at `19:28` with a different amount.
-
-**Analysis**: These are likely **two separate transactions** (entry and exit at different stations, or different journeys). The Octopus timestamp represents when the card was tapped.
-
-**Resolution**: Add both transactions separately. Do not combine or update duration unless there is a clear match (same amount, same context).
-
-### Pattern: Merchant name variations
+### Merchant name variations
 
 **Scenario**: Octopus shows `美心食品有限公司` but you need to determine the actual payee name for the journal.
 
@@ -461,6 +385,61 @@ Example (pending reload when bank transaction is unclear):
 
 **Important**: Never skip the first mapping step. Never infer mappings. If the Octopus transaction name is not in `add-octopus-transactions/payee_mappings.yml`, always ask the user and add it.
 
+### Unknown food items
+
+**Scenario**: Octopus transaction shows a dining transaction with an amount, but no item details.
+
+**Ask**: Do you remember what you ordered? Do you have a receipt?
+
+**Resolution**: If user provides details, add specific `food_or_drink:` tags. Otherwise, use `food_or_drink: (unknown)` placeholder.
+
+### Reload source ambiguity
+
+**Scenario**: Octopus transaction shows a reload (`八達通轉賬 +200.0 HKD`) but you don't have bank transaction details.
+
+**Ask**: Can you provide the bank email notification for this reload? (Subject: "你的直接付款授權已被成功執行")
+
+**Resolution**: 
+- If email provided → Extract all transaction IDs (see Step 5 reload section) and create BOTH Step 1 (Bank→Wallet) and Step 2 (Wallet→Card) transactions
+- If email not available → Add only Step 2 (Wallet→Card) transaction, ask user for bank email to complete Step 1 later
+
+**Key data in bank email**:
+- Email reference (subject): `C1E56743229`
+- FRN reference (body): `FRN202601144PAYD0103092279035`
+- Debtor reference: `OCTOPUS038084565301286497` (constant)
+- Timestamp: `2026-01-14 09:16`
+- Amount: `HKD 200.00`
+
+### Transport transaction timing
+
+**Scenario**: Octopus shows MTR transaction at `2026-01-19 19:33` but journal has an MTR transaction at `19:28` with a different amount.
+
+**Analysis**: These are likely **two separate transactions** (entry and exit at different stations, or different journeys). The Octopus timestamp represents when the card was tapped.
+
+**Resolution**: Add both transactions separately. Do not combine or update duration unless there is a clear match (same amount, same context).
+
+### Multiple transactions at same merchant on same day
+
+**Scenario**: Multiple transactions at the same merchant within a short time period.
+
+**Resolution**:
+- Use time differences to distinguish transactions
+- If times are very close (within 1-2 minutes), they may be the same transaction → verify with amounts and context
+
+### Unusual amounts
+
+**Examples**:
+- MTR with amount other than typical fares (e.g., `-1.4 HKD`) → likely a short journey or discounted fare, record as-is
+- Round amounts in retail (e.g., `-40.0 HKD`, `-35.0 HKD`) → likely grocery or retail purchases
+
+### Transactions paid by Octopus Wallet vs Card
+
+**Scenario**: Some merchants accept Octopus app QR code payments (Wallet) vs physical card tap (Card).
+
+**Resolution**:
+- Octopus transaction history should indicate the payment source
+- If paid via Octopus Wallet (app balance), use `assets:digital:Octopus:<uuid>` instead of `assets:digital:Octopus cards:<uuid>`
+
 ## Validation and Commit
 
 Before committing, validate and format the journal:
@@ -477,14 +456,7 @@ git diff
 git commit -S -m "Add missing Octopus transactions from 2026-01-19"
 ```
 
-## Related Documentation
-
-- [Add Transactions Skill](../add-transactions/SKILL.md) - General transaction transcription guidance
-- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Detailed hledger format specifications
-- [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
-- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
-
-## Skill Usage Example
+## Complete Example
 
 **User provides**: Screenshots of Octopus card transaction history showing:
 - `2026-01-19 19:33` | 港鐵 | `-4.4 HKD`
@@ -516,3 +488,10 @@ git commit -S -m "Add missing Octopus transactions from 2026-01-19"
    ```
 
 **Result**: One new transaction added, existing transactions verified, no duplicates created.
+
+## Related Documentation
+
+- [Add Transactions Skill](../add-transactions/SKILL.md) - General transaction transcription guidance
+- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Detailed hledger format specifications
+- [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
+- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
