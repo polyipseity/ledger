@@ -1,0 +1,40 @@
+# Octopus Transaction Name → Actual Payee Name Mapping
+#
+# This file maps the merchant names shown in Octopus transaction history
+# to the actual payee names used in the journal.
+#
+# IMPORTANT: This is the FIRST step mapping (Octopus → Actual payee).
+# After applying this mapping, the add-transactions/payee_mappings.yml
+# may be applied for translation/canonicalization (e.g., Chinese → English).
+#
+# ONE-TO-MANY MAPPING STRUCTURE:
+# Multiple different merchants may show the same name in Octopus transactions.
+# Use context (transaction amount, location, category, date/time) to disambiguate.
+#
+# Example (one Octopus name → multiple possible payees):
+# "Union Cash Register Co. Ltd.":
+#   - "ParknShop"           # Grocery store transaction
+#   - "Wellcome"            # Another grocery store
+#   - "7-Eleven"            # Convenience store
+#
+# Behavior: If no mapping exists, ALWAYS ask the user to provide one.
+# DO NOT infer or guess the mapping - always ask the user explicitly.
+# Do not leave Octopus transaction names unmapped.
+
+# Transport
+"港鐵":
+  - "Mass Transit Railway"
+
+# Dining & Beverages
+"美心 / 星巴克":
+  - "城大食坊 (City Express)"
+"美心食品有限公司":
+  - "AC2 Canteen, CityUHK"
+"餐飲 / 會所":
+  - "A-1 Bakery"
+
+# Retail
+"百佳":
+  - "Taste"
+"Union Cash Register Co. Ltd.":
+  - "Cafe 100%"

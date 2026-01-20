@@ -25,6 +25,7 @@ All documentation is organized into `.instructions.md` files in the `.github/ins
 Agent Skills for specialized workflows:
 
 - **[.github/skills/add-transactions/](.github/skills/add-transactions/)** - Transcribe transactions from raw data with proper status markers and tagging
+- **[.github/skills/add-octopus-transactions/](.github/skills/add-octopus-transactions/)** - Add missing Octopus card transactions from app history, identify missing transport transactions, add duration metadata, and record card reloads
 - **[.github/skills/monthly-migration/](.github/skills/monthly-migration/)** - Perform monthly journal migration using hledger close --migrate
 - **[.github/skills/edit-journals/](.github/skills/edit-journals/)** - Edit journals following best practices and conventions
 - **[.github/skills/validate-journals/](.github/skills/validate-journals/)** - Validate and format journals before committing
@@ -51,6 +52,7 @@ Agent Skills for specialized workflows:
 ## Quick Start
 
 - **Adding transactions**: [add-transactions](./skills/add-transactions/) skill
+- **Adding Octopus transactions**: [add-octopus-transactions](./skills/add-octopus-transactions/) skill
 - **Monthly migration**: [monthly-migration](./skills/monthly-migration/) skill
 - **Editing journals**: [edit-journals](./skills/edit-journals/) skill
 - **Validating**: [validate-journals](./skills/validate-journals/) skill
