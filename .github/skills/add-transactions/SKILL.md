@@ -363,3 +363,4 @@ Notes:
 - [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
 - [Security Practices](../../instructions/security.instructions.md) - Handling confidential data with private.yaml
+ - [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).

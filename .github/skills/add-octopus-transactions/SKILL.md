@@ -495,3 +495,4 @@ git commit -S -m "Add missing Octopus transactions from 2026-01-19"
 - [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Detailed hledger format specifications
 - [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
+ - [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).

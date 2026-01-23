@@ -26,6 +26,7 @@ Agent Skills for specialized workflows:
 
 - **[.github/skills/add-transactions/](.github/skills/add-transactions/)** - Transcribe transactions from raw data with proper status markers and tagging
 - **[.github/skills/add-octopus-transactions/](.github/skills/add-octopus-transactions/)** - Add missing Octopus card transactions from app history, identify missing transport transactions, add duration metadata, and record card reloads
+- **[.github/skills/match-octopus-statement-transactions/](.github/skills/match-octopus-statement-transactions/)** - Match Octopus Wallet statement rows to journal transactions and update transaction datetimes (seconds-only updates are silent by default; non-typical changes reported).
 - **[.github/skills/monthly-migration/](.github/skills/monthly-migration/)** - Perform monthly journal migration using hledger close --migrate
 - **[.github/skills/edit-journals/](.github/skills/edit-journals/)** - Edit journals following best practices and conventions
 - **[.github/skills/validate-journals/](.github/skills/validate-journals/)** - Validate and format journals before committing
