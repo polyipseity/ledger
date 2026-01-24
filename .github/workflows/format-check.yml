@@ -43,4 +43,4 @@ jobs:
 
       - name: Check journal formatting
         run: |
-          pnpm run format:check
+          pnpm run hledger:format:check

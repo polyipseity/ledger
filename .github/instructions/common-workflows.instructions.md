@@ -53,29 +53,55 @@ python -m decrypt                  # Decrypt private.yaml
 
 ## Pre-Commit Checklist
 
-Before committing changes:
+Before committing changes, run the steps below to ensure markdown and journals are clean and commit hooks are prepared.
+
+1. Format Markdown files
+
+	- Install dependencies and run markdown lint (and optionally auto-fix):
 
 ```powershell
-# 1. Format Markdown files
-# Prefer using pnpm and the repository script
 pnpm install --frozen-lockfile=false
-pnpm run lint:md
+pnpm run markdownlint
+pnpm run markdownlint:fix   # optional: auto-fix issues
+```
 
-# 2. Validate all journals
+2. Validate all journals
+
+```powershell
 python -m check
+```
 
-# 3. Format all journals
+3. Format all journals
+
+```powershell
 python -m format
+```
 
-# 4. If edited private.yaml
+4. If you edited `private.yaml`
+
+```powershell
 python -m encrypt
+```
 
-# 5. View changes
+5. View changes
+
+```powershell
 git status
 git diff --cached
+```
 
-# 6. Commit
-# Follow `.github/instructions/git-commits.instructions.md`. For transaction commits use the ledger header and no body.
+6. Prepare pre-commit helpers and commit
+
+	- Install pnpm deps and prepare Husky hooks so `lint-staged` and `commitlint` run locally:
+
+```powershell
+pnpm install
+pnpm run prepare
+```
+
+	- Commit as usual. Commit messages are linted locally by `commitlint` (Husky `commit-msg` hook) and in CI. For ledger transaction commits use the ledger header and no body per `.github/instructions/git-commits.instructions.md`.
+
+```powershell
 git commit -S -m "chore: describe changes"
 ```
 

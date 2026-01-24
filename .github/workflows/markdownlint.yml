@@ -34,4 +34,4 @@ jobs:
 
       - name: Lint Markdown
         run: |
-          pnpm run lint:md
+          pnpm run markdownlint

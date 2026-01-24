@@ -43,4 +43,4 @@ jobs:
 
       - name: Check journals
         run: |
-          pnpm run check
+          pnpm run hledger:check

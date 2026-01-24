@@ -38,10 +38,20 @@ Note: the `.sh` and `.bat` wrapper scripts assume they are run with the current 
 
 ### Markdown Formatting & Linting
 
-- Use markdownlint (VS Code extension) for on-save fixes where supported
-- Prefer using pnpm and the repo scripts: `pnpm install` then `pnpm run lint:md` to lint; to auto-fix use the `scripts/format-md.sh` or `scripts/format-md.bat` helpers which invoke the local tool
-- CI runs use `.github/workflows/markdownlint.yml` which installs deps via pnpm and runs `pnpm run lint:md`
+- Use markdownlint (VS Code extension) for on-save fixes where supported.
+- Use pnpm for repo tooling. Key commands:
+
+ - pnpm install
+ - pnpm run markdownlint        # lint markdown
+ - pnpm run markdownlint:fix    # optional: auto-fix markdown issues
+ - pnpm run hledger:format      # format journals (writes changes)
+ - pnpm run hledger:format:check   # check formatting (no write)
+ - pnpm run hledger:check       # run hledger validation checks
+
+ - CI runs use `.github/workflows/markdownlint.yml` which installs deps via pnpm and runs `pnpm run markdownlint`.
 - Configuration: `.markdownlint.jsonc` and `.editorconfig` at repo root
+
+ - `pnpm run commitlint` — run commit message linting locally (Husky runs commitlint on commit-msg)
 
 ### Monthly Journal Discovery Pattern
 

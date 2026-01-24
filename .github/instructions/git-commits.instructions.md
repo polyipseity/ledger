@@ -30,5 +30,19 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 
 ## Enforcement guidance (recommended)
 
-- Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies.
-- Run `python -m check` in a pre-commit hook for any changes touching `*.journal` files.
+- Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
+- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run format:check` and `pnpm run check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
+
+ - Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
+
+ - Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run hledger:format:check` and `pnpm run hledger:check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
+
+	- pnpm install
+	- pnpm run markdownlint         # markdown linting
+	- pnpm run markdownlint:fix     # optional: auto-fix markdown issues
+	- pnpm run hledger:format:check # check formatting (no write)
+	- pnpm run hledger:check        # run hledger checks
+
+- CI enforcement: GitHub Actions runs `pnpm install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
+
+Note for agents: when committing ledger transaction changes, follow the single-line `ledger(...)` header rule exactly and do NOT include a commit body — the commit must be parsable by automated tools.

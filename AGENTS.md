@@ -48,6 +48,14 @@ Agent Skills for specialized workflows:
 ### Essential Commands
 
 - `python -m check` / `python -m format` - Validate and format journals
+- Use repo-managed tooling via pnpm instead of global installs where possible:
+  - `pnpm install` — install JS dev deps and run Python postinstall
+  - `pnpm run hledger:check` — runs `scripts.check` (hledger validation)
+  - `pnpm run hledger:format` — runs `scripts.format` (formats journals)
+  - `pnpm run hledger:format:check` — check-only formatting
+  - `pnpm run markdownlint` — markdown linting
+  - `pnpm run markdownlint:fix` — auto-fix markdown lint issues (optional)
+  - `pnpm run commitlint` — run commit message linting locally (Husky runs commitlint on commit-msg)
 - `hledger close --migrate` - Generate monthly balances
 - `python -m encrypt` / `python -m decrypt` - Manage confidential data
 
@@ -59,7 +67,7 @@ Agent Skills for specialized workflows:
 - **Editing journals**: [edit-journals](./skills/edit-journals/) skill
 - **Validating**: [validate-journals](./skills/validate-journals/) skill
 - **Security**: See [security.instructions.md](.github/instructions/security.instructions.md)
-- **Pre-commit**: See [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md)
+- **Pre-commit**: See [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md). Agents should run `pnpm install` and `pnpm run prepare` to enable Husky hooks locally.
 
 ## VS Code setup
 
@@ -74,7 +82,16 @@ Formatting setup (Markdown):
 
 - `.editorconfig` sets UTF-8, final newlines, trailing whitespace trim, and 2-space indents for Markdown (80 char line length)
 - `.markdownlint.jsonc` uses markdownlint defaults
-- Use markdownlint (VS Code extension). For CLI: prefer using pnpm and the repository script: run `pnpm install` then `pnpm run lint:md` (or use `./scripts/format-md.sh` / `./scripts/format-md.bat`).
+- Use markdownlint (VS Code extension). For CLI: prefer using pnpm and the repository script. Run:
+
+```powershell
+pnpm install
+pnpm run markdownlint
+pnpm run markdownlint:fix   # optional: auto-fix issues
+```
+
+Or use `./scripts/format-md.sh` / `./scripts/format-md.bat`.
+
 - Always format Markdown files before committing (include in pre-commit workflow)
 
 Tip: Use “Chat: Configure Instructions” from the Command Palette to view which instruction files are active and verify they’re included in chat context.
