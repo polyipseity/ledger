@@ -1,18 +1,14 @@
 ---
 name: Editing Guidelines
-description: Best practices and anti-patterns for editing and maintaining the personal ledger journals, including formatting, validation, and commit procedures.
+description: Best practices for editing and maintaining personal ledger journals.
 applyTo: "**/*.journal"
 ---
 
 # Editing Guidelines
 
-Best practices and anti-patterns for editing and maintaining the personal ledger.
+See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 
-See the [edit-journals](../skills/edit-journals/) skill for complete guidance.
-
-## Best Practices & Anti-Patterns
-
-**Do:**
+## Best Practices
 
 - Include preludes in monthly journals
 - Maintain balance assertions
@@ -20,17 +16,18 @@ See the [edit-journals](../skills/edit-journals/) skill for complete guidance.
 - Format and validate before committing
 - Maintain opening/closing patterns
 
-**Avoid:**
+## Anti-Patterns to Avoid
 
-- Manually editing year-level journals
-- Committing without validation
-- Timezone tags other than UTC+08:00
-- Spaces in account names
+- Manually editing year-level journals (use monthly journals only)
+- Committing without validation (`python -m check`)
+- Missing timezone tags (always use UTC+08:00)
+- Spaces in account names (use colons)
+- Unencrypted confidential files (encrypt before commit)
 
-## Related Skills and Documentation
+## Related Documentation
 
-- [edit-journals](../skills/edit-journals/) skill - Complete journal editing guidance
-- [add-transactions](../skills/add-transactions/) skill - Adding transactions from raw data
-- [validate-journals](../skills/validate-journals/) skill - Validation and formatting
-- [Transaction Format Conventions](./transaction-format.instructions.md) - Transaction structure details
-- [Account Hierarchy & Meanings](./account-hierarchy.instructions.md) - All available accounts
+- [edit-journals](../skills/edit-journals/) - Complete journal editing guidance
+- [add-transactions](../skills/add-transactions/) - Adding transactions from raw data
+- [validate-journals](../skills/validate-journals/) - Validation and formatting
+- [Transaction Format Conventions](./transaction-format.instructions.md) - Transaction structure
+- [Account Hierarchy](./account-hierarchy.instructions.md) - All available accounts
