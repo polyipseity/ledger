@@ -81,6 +81,7 @@ Copy opening balances to **start** of new month (after prelude).
 ### 6. Adjust Times if Needed
 
 Verify dates/times are correct:
+
 - Closing: last day of month at 23:59:59
 - Opening: first day of month at 00:00:00
 
@@ -100,6 +101,7 @@ git commit -S -m "chore(migration): migrate journals to 2026-01"
 ## Do's and Don'ts
 
 **Do:**
+
 - Run for both `self.journal` and `self.alternatives.journal`
 - Create new directory/file if needed
 - Include prelude in new journal
@@ -107,6 +109,7 @@ git commit -S -m "chore(migration): migrate journals to 2026-01"
 - Run check and format after
 
 **Don't:**
+
 - Edit hledger close output extensively
 - Forget prelude include
 - Skip validation before commit

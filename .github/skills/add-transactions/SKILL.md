@@ -16,6 +16,7 @@ Transcribing transactions from receipts, bank statements, invoices, or OCR-extra
 For unclear data: 1) **Search ledger** for similar transactions to infer missing details. 2) **Ask specific questions** with context (not vague prompts). 3) **Save generalizations** to "Common Clarification Patterns" (without confidential data) if pattern cannot be inferred and is not already documented.
 
 Quick clarifications to apply when the user specifies rules:
+
 - Keep zero-value "complimentary" postings but remove the text "(complimentary)" from the food_or_drink tag value.
 - If payment method is unclear, ask the user which account paid (cash / Octopus / bank / credit card / paid-by-friend, etc.). When someone else paid, record the settlement as a liability posting to the appropriate account (e.g., `liabilities:loans:friends:<uuid>` or `liabilities:loans:colleagues:<uuid>`) and mark the transaction as pending with `!`.
 
@@ -178,6 +179,7 @@ Example (receipt lists per-item prices):
 **Resolution**: Cross-reference bank statements for that date. Check recent transactions for same payee to identify account pattern. If unclear → **ask the user directly** which account should be recorded, then apply the clarification.
 
 Common payment accounts:
+
 - `assets:cash` – physical cash payment
 - `assets:digital:Octopus cards:<uuid>` – Octopus card (Hong Kong transit/payment card)
 - `assets:digital:Octopus:<uuid>` – Octopus app/digital wallet balance
@@ -187,6 +189,7 @@ Common payment accounts:
 - `equity:friends:<uuid>` – paid by friend (settle later)
 
 Example (user clarified: paid by family member):
+
 ```hledger
 2026-01-16 (55601108, 0110, 43) ad982faf-117f-4ddc-bc68-3606fb71ff52  ; activity: eating, eating: dinner, time: 19:59:05, timezone: UTC+08:00
     expenses:food and drinks:dining              68.00 HKD  ; food_or_drink: 煎白菜鮮肉餃（12隻）
@@ -228,6 +231,7 @@ When transcribing food/drink items:
 **Item separators**: The middle dot character `・` separates distinct food items and should result in separate `food_or_drink:` entries. Receipt sub-items (marked with `--`, `+`, or similar prefixes) are typically separate items or substitutions, not modifiers.
 
 **Modifiers vs Items**:
+
 - **Modifiers** are preparation adjustments applied to a base item (e.g., "more milk", "less ice", "no sugar", "fewer"). Use `+` syntax: `food_or_drink: hot coffee + more milk`
 - **Items** are distinct food components, even if listed as sub-items on the receipt (e.g., "sweet corn", "garlic butter on toast", "French fries"). List separately: `food_or_drink: item1, food_or_drink: item2`
 
@@ -235,13 +239,15 @@ When transcribing food/drink items:
 
 **Non-items to ignore**: Items that cost $0 and describe the transaction type (e.g., "dine-in", "take-away") should be omitted entirely—they provide no value information and describe the consumption method, not what was consumed.
 
-**Rule of thumb**: 
+**Rule of thumb**:
+
 - If it's a noun phrase describing a dish component or drink offering (even if $0), treat it as an **item**.
 - If it describes how to prepare/customize an item, treat it as a **modifier**.
 - If it describes the transaction type (e.g., location of consumption) and costs $0, **ignore it**.
 
 Example receipt transcription (includes modifiers and zero-cost items):
-```
+
+```text
 Original: 
   義大利粉番茄肉醬套餐
   - 七味蛋
@@ -253,7 +259,8 @@ Result: food_or_drink: Spaghetti Bolognese with Fried Egg in Assorted Chilli Pep
 ```
 
 Example with distinct items:
-```
+
+```text
 Original: 鮮奶炒滑蛋・吉列魚柳
 Sub-items: -- 粒粒粟米; 轉 蒜香牛油多士
 
@@ -261,7 +268,8 @@ Result: food_or_drink: scrambled egg, food_or_drink: sweet corn, food_or_drink: 
 ```
 
 Example with true modifiers:
-```
+
+```text
 Original: 熱咖啡
 Modification: 多奶
 
@@ -280,6 +288,7 @@ default:
 ```
 
 Behavior:
+
 - When a mapping exists and the user has approved it, replace the transaction's `food_or_drink` value with the English translation only (do not keep the original non-English text).
 - If no mapping is found, do NOT translate automatically. Prompt the user with options:
     1) Leave the original non-English text as-is in the transaction.
@@ -301,11 +310,13 @@ default: {}
 ```
 
 Behavior:
+
 - When a mapping exists and is approved, replace the payee with the canonical name only (do not keep the original text).
 - If no mapping is found, do NOT translate or rename automatically. Offer options: keep as-is, supply a mapping to add, or search journals for candidates to propose.
 - Persist mappings only with explicit user approval.
 
 Automatic suggestions:
+
 - When processing a receipt, suggest existing food/payee translations and ID mappings found in `food_translations.yml`, `payee_mappings.yml`, and `id_mappings.yml`.
 - Present suggested mappings and ID extraction in a short summary for user approval; if approved, apply them to the transaction and (optionally) persist the mapping for future auto-application.
 - Do not persist suggestions without explicit approval; always show the proposed changes first.
@@ -327,12 +338,14 @@ default:
 ```
 
 Behavior:
+
 - When a mapping exists and is approved, the parser should extract identifiers from the receipt in the mapped order and insert them in the transaction header parentheses (omitting missing values or using `?` as placeholder when only partially available).
 - If multiple candidate IDs match the same regex, prefer the longest numeric token (likely the transaction number) and keep others in the documented order.
 - If no mapping exists, fall back to the generic rule: place the longest numeric ID first, then any shorter numeric IDs in the sequence they appear on the receipt.
 - Only write or update `id_mappings.yml` after explicit user approval.
 
 Automatic suggestions for IDs:
+
 - When a payee has an `id_mappings.yml` entry, propose the extracted identifiers and their ordered placement; allow the user to accept, edit, or reject before inserting into the transaction header.
 - If no mapping exists but a clear pattern of IDs is detected, propose a one-line candidate mapping for user approval to persist.
 
@@ -354,6 +367,7 @@ git commit -S -m "ledger(self.journal): add N transaction(s)"
 ```
 
 Notes:
+
 - Prefer the `scripts/*.py` entry points (e.g. `python scripts/format.py`) instead of `-m` module style; the latter may not work in some environments.
 - Scripts expect the working directory to be the repository root (not the `scripts/` folder).
 - Only run the format/check step on-demand or just before committing to avoid noisy CI-style runs during incremental edits.
@@ -364,4 +378,4 @@ Notes:
 - [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
 - [Security Practices](../../instructions/security.instructions.md) - Handling confidential data with private.yaml
- - [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).
+- [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).

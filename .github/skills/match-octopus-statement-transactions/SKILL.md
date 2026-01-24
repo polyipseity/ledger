@@ -24,6 +24,7 @@ Use this ImageMagick template to convert a PDF to a high-res PNG. Do NOT include
 magick -density 300 "input-statement.pdf" -background white -alpha remove -quality 100 "output-statement.png"
 
 Notes:
+
 - Use an output pattern like `output-statement-%03d.png` for multi-page PDFs.
 - Optional flags: `-trim`, `-shave`, `-resize`.
 
@@ -50,6 +51,7 @@ Notes:
 ## Summary & output
 
 After processing produce a concise summary containing only:
+
 - Non-typical updates: show original and updated transaction text and file path for manual review.
 - Missing transactions: statement rows with no unique match.
 

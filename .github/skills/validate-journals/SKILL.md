@@ -40,14 +40,14 @@ The `python -m check` script runs hledger `--strict` mode checking:
 
 ## Common Errors & Fixes
 
-| Error | Fix |
-|-------|-----|
-| Account not defined | Add to `preludes/self.journal` |
-| Balance mismatch | Fix transaction or prior balances |
-| Transaction not balanced | Add missing postings |
-| Payee not defined | Add to `preludes/self.journal` |
-| Tag not defined | Add to `preludes/self.journal` |
-| Date out of order | Correct date or reorder |
+| Error                    | Fix                               |
+| ------------------------ | --------------------------------- |
+| Account not defined      | Add to `preludes/self.journal`    |
+| Balance mismatch         | Fix transaction or prior balances |
+| Transaction not balanced | Add missing postings              |
+| Payee not defined        | Add to `preludes/self.journal`    |
+| Tag not defined          | Add to `preludes/self.journal`    |
+| Date out of order        | Correct date or reorder           |
 
 ## Format Validation
 

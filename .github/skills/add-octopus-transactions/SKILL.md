@@ -46,6 +46,7 @@ Typical Octopus app transaction data includes:
 ### Expense Account Mapping
 
 **Transport accounts**:
+
 - `expenses:transport:trains` - MTR/港鐵 (Mass Transit Railway)
 - `expenses:transport:buses` - Buses (KMB, Long Win Bus, etc.)
 - `expenses:transport:minibuses` - Public light buses (紅色小巴/綠色小巴)
@@ -53,6 +54,7 @@ Typical Octopus app transaction data includes:
 - `expenses:transport:taxis` - Taxis (rare, usually cash)
 
 **Other common accounts**:
+
 - `expenses:food and drinks:dining` - Restaurant/canteen meals
 - `expenses:food and drinks:snacks` - Snacks, bakery items
 - `expenses:food and drinks:drinks` - Beverages only
@@ -64,6 +66,7 @@ Typical Octopus app transaction data includes:
 ### Step 1: Load Journal Context
 
 Before processing Octopus transactions, read the current month's journal to understand:
+
 - Existing transactions (to avoid duplicates)
 - Recent Octopus card balance
 - Transaction patterns and formatting conventions
@@ -102,6 +105,7 @@ Example structure:
 ```
 
 **One-to-Many Mapping**: When an Octopus transaction name maps to multiple possible payees (list has >1 item), use context to determine which one:
+
 - Transaction amount (grocery vs snack amounts)
 - Transaction category (food vs retail)
 - Time of day (breakfast vs dinner)
@@ -122,6 +126,7 @@ After applying the Octopus → Actual mapping, check if the actual payee name ne
 ```
 
 **Example flow**:
+
 1. Octopus transaction shows: `美心 / 星巴克`
 2. Apply Step 2a: `美心 / 星巴克` → `美心` (using add-octopus-transactions/payee_mappings.yml)
 3. Apply Step 2b: `美心` → `Maxim's` (using add-transactions/payee_mappings.yml)
@@ -138,11 +143,13 @@ After applying the Octopus → Actual mapping, check if the actual payee name ne
 3. **Missing transaction**: No match found → Add new transaction (proceed to Step 5)
 
 **Transport transaction patterns**:
+
 - MTR: Usually `-4.4 HKD`, `-4.9 HKD`, `-3.2 HKD` (varies by distance)
 - Buses: Usually `-5.9 HKD`, `-6.4 HKD` (varies by route)
 - Minibuses: Usually `-8.0 HKD` to `-10.0 HKD`
 
 **Search strategy**:
+
 ```powershell
 # Search for transactions on a specific date
 grep "2026-01-19" ledger/2026/2026-01/self.journal
@@ -157,6 +164,7 @@ grep "1608ef20-afcd-4cd0-9631-2c7b15437521" ledger/2026/2026-01/self.journal
 ### Step 4: Add Duration Metadata (When Applicable)
 
 **Scenario**: An existing journal transaction matches an Octopus transaction (same date, merchant, amount), but:
+
 - Journal transaction has a start time (`time:` tag)
 - Octopus transaction timestamp is later (several minutes later)
 - Journal transaction does **NOT** already have a `duration:` tag
@@ -166,16 +174,19 @@ grep "1608ef20-afcd-4cd0-9631-2c7b15437521" ledger/2026/2026-01/self.journal
 **Action**: Calculate duration (end_time - start_time) and add `duration:` tag in ISO 8601 format to the existing transaction. **Do NOT create a new transaction**.
 
 **When NOT to add duration**:
+
 - If journal transaction already has `duration:` tag → Leave it unchanged
 - If Octopus time difference is <2 minutes → Skip (likely rounding/precision difference)
 - If amounts or merchants differ → Treat as separate transactions
 
 **Duration format**: `PT<hours>H<minutes>M<seconds>S` (omit zero components)
+
 - `PT35M55S` = 35 minutes 55 seconds
 - `PT1H9M42S` = 1 hour 9 minutes 42 seconds
 - `PT30M23S` = 30 minutes 23 seconds
 
 **Quick checklist to avoid missing duration updates**:
+
 - After adding/reviewing a date, scan for pairs with same merchant and amount where the Octopus time is later than the journal time
 - If the journal entry has no `duration:` yet and the time gap is reasonable (>2 minutes), compute and add the `duration:`
 - Do not add a second transaction for the same event; duration belongs on the original entry
@@ -183,6 +194,7 @@ grep "1608ef20-afcd-4cd0-9631-2c7b15437521" ledger/2026/2026-01/self.journal
 **Example**:
 
 Existing journal (no duration):
+
 ```hledger
 2026-01-17 (41208456, 18) Cafe 100%  ; activity: eating, eating: breakfast, time: 10:56:05, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD
@@ -194,6 +206,7 @@ Octopus shows: `Cafe 100%`, `-43.0 HKD`, `2026-01-17 11:32`
 Duration calculation: 10:56:05 → 11:32:00 = 35 minutes 55 seconds
 
 Updated with duration:
+
 ```hledger
 2026-01-17 (41208456, 18) Cafe 100%  ; activity: eating, duration: PT35M55S, eating: breakfast, time: 10:56:05, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD
@@ -273,8 +286,8 @@ When only Octopus transaction history shows a reload:
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 ```
 
-2. Ask user to provide bank email notification for complete transaction IDs
-3. If bank email is later provided, add Step 1 transaction with complete IDs
+1. Ask user to provide bank email notification for complete transaction IDs
+2. If bank email is later provided, add Step 1 transaction with complete IDs
 
 #### Dining/Retail Transactions
 
@@ -293,12 +306,14 @@ When only Octopus transaction history shows a reload:
 **Insert transactions in strict chronological order** within the monthly journal file, sorted by date and then by time (HH:MM:SS). When multiple transactions occur on the same date, insert them in time order.
 
 **Chronology safety checks**:
+
 - After adding entries for a given date, run a quick scan and ensure the time sequence is strictly ascending within that date
 - Prefer inserting new blocks without copying surrounding lines; copying nearby lines during edits can accidentally duplicate existing transactions
 - If a later-time entry appears above an earlier-time entry, move the block down until the sequence reads top-to-bottom by time
 - Never create or keep duplicates: if the same merchant/time pair appears twice, remove the extra block
 
 **Post-edit verification helpers**:
+
 ```powershell
 # Verify ordering for a specific date
 grep "2026-01-15" ledger/2026/2026-01/self.journal
@@ -349,12 +364,14 @@ Then encrypt: `python -m encrypt`
 
 **Common cause**: Octopus app displays generic or payment processor names rather than actual merchant names. Check the mapping in `add-octopus-transactions/payee_mappings.yml` to resolve to the correct payee.
 
-**Action**: 
+**Action**:
+
 1. Check if mapping exists → Use mapped name
 2. If no mapping → Ask user for actual payee and add to `payee_mappings.yml`
 3. Do not infer or guess the mapping
 
-**Example**: 
+**Example**:
+
 - Octopus: "Union Cash Register Co. Ltd." → Maps to "Cafe 100%"
 - Octopus: "美心 / 星巴克" → Maps to "城大食坊 (City Express)"
 
@@ -362,13 +379,13 @@ Then encrypt: `python -m encrypt`
 
 **Scenario**: Octopus shows `美心食品有限公司` but you need to determine the actual payee name for the journal.
 
-**Resolution (Two-step mapping process)**: 
+**Resolution (Two-step mapping process)**:
 
 1. **First mapping**: Check `add-octopus-transactions/payee_mappings.yml` for Octopus name → Actual payee
-   - **If no mapping exists**: ALWAYS ask the user "What is the actual payee name for Octopus transaction '美心食品有限公司'?" 
+   - **If no mapping exists**: ALWAYS ask the user "What is the actual payee name for Octopus transaction '美心食品有限公司'?"
    - **DO NOT infer or guess** - even if you think you know the answer, ask explicitly
    - Add the user's response to `add-octopus-transactions/payee_mappings.yml`
-   
+
    - **If multiple mappings exist** (one-to-many): Use context to disambiguate
      - Check recent journal entries for similar transactions at this merchant
      - Consider transaction amount, category, time, and location
@@ -399,11 +416,13 @@ Then encrypt: `python -m encrypt`
 
 **Ask**: Can you provide the bank email notification for this reload? (Subject: "你的直接付款授權已被成功執行")
 
-**Resolution**: 
+**Resolution**:
+
 - If email provided → Extract all transaction IDs (see Step 5 reload section) and create BOTH Step 1 (Bank→Wallet) and Step 2 (Wallet→Card) transactions
 - If email not available → Add only Step 2 (Wallet→Card) transaction, ask user for bank email to complete Step 1 later
 
 **Key data in bank email**:
+
 - Email reference (subject): `C1E56743229`
 - FRN reference (body): `FRN202601144PAYD0103092279035`
 - Debtor reference: `OCTOPUS038084565301286497` (constant)
@@ -423,12 +442,14 @@ Then encrypt: `python -m encrypt`
 **Scenario**: Multiple transactions at the same merchant within a short time period.
 
 **Resolution**:
+
 - Use time differences to distinguish transactions
 - If times are very close (within 1-2 minutes), they may be the same transaction → verify with amounts and context
 
 ### Unusual amounts
 
 **Examples**:
+
 - MTR with amount other than typical fares (e.g., `-1.4 HKD`) → likely a short journey or discounted fare, record as-is
 - Round amounts in retail (e.g., `-40.0 HKD`, `-35.0 HKD`) → likely grocery or retail purchases
 
@@ -437,6 +458,7 @@ Then encrypt: `python -m encrypt`
 **Scenario**: Some merchants accept Octopus app QR code payments (Wallet) vs physical card tap (Card).
 
 **Resolution**:
+
 - Octopus transaction history should indicate the payment source
 - If paid via Octopus Wallet (app balance), use `assets:digital:Octopus:<uuid>` instead of `assets:digital:Octopus cards:<uuid>`
 
@@ -460,6 +482,7 @@ git commit -S -m "ledger(self.journal): add N transaction(s)"
 ## Complete Example
 
 **User provides**: Screenshots of Octopus card transaction history showing:
+
 - `2026-01-19 19:33` | 港鐵 | `-4.4 HKD`
 - `2026-01-19 13:50` | 美心 / 星巴克 | `-38.9 HKD`
 - `2026-01-15 18:14` | 八達通轉賬 | `+200.0 HKD`
@@ -477,12 +500,15 @@ git commit -S -m "ledger(self.journal): add N transaction(s)"
    - **Step 1**: `美心 / 星巴克` → `美心` (from `add-octopus-transactions/payee_mappings.yml`)
    - **Step 2**: `美心` → `Maxim's` (from `add-transactions/payee_mappings.yml`)
 4. Add missing transaction:
+
    ```hledger
    2026-01-19 Mass Transit Railway  ; activity: transport, time: 19:33, timezone: UTC+08:00
        expenses:transport:trains                                                4.40 HKD
        assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
    ```
+
 5. Validate and commit:
+
    ```powershell
    python scripts/format.py ; python scripts/check.py
    # For transaction commits follow `.github/instructions/git-commits.instructions.md` and use the ledger header (no body).
@@ -497,4 +523,4 @@ git commit -S -m "ledger(self.journal): add N transaction(s)"
 - [Transaction Format Conventions](../../instructions/transaction-format.instructions.md) - Detailed hledger format specifications
 - [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts and their purposes
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices and anti-patterns
- - [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).
+- [Match Octopus Statement Transactions](../match-octopus-statement-transactions/SKILL.md) - Match Octopus Wallet statement rows to journal transactions and update datetimes (seconds-only edits silent by default).
