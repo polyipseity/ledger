@@ -1,4 +1,4 @@
-import config from './.markdownlint.jsonc' assert { type: 'json' };
+import config from './.markdownlint.json' with { type: 'json' };
 
 export default {
   ...config,
