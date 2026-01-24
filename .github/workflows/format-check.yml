@@ -6,18 +6,18 @@ on:
       - "ledger/**/*.journal" # journal files to validate formatting
       - ".github/workflows/format-check.yml" # re-run when this workflow file changes
       - "scripts/**" # changes to formatting scripts affect the check
-      - "requirements.txt" # Python deps used by scripts
-      - "package.json" # pnpm scripts / install commands can change setup
-      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "**/requirements.txt" # Python deps used by scripts (recursive)
+      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
+      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
       - "preludes/**" # preludes are included by journals and affect formatting
   pull_request:
     paths:
       - "ledger/**/*.journal" # journal files to validate formatting
       - ".github/workflows/format-check.yml" # re-run when this workflow file changes
       - "scripts/**" # changes to formatting scripts affect the check
-      - "requirements.txt" # Python deps used by scripts
-      - "package.json" # pnpm scripts / install commands can change setup
-      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "**/requirements.txt" # Python deps used by scripts (recursive)
+      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
+      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
       - "preludes/**" # preludes are included by journals and affect formatting
   workflow_dispatch:
 

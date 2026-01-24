@@ -9,8 +9,12 @@ on:
       - ".markdownlint.json" # alternative json config file name
       - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
       - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
-      - "package.json" # scripts or config in package.json can change the lint command
-      - "pnpm-lock.yaml" # dependency changes may alter linting behavior or versions
+      - "**/.markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules (recursive)
+      - "**/.markdownlint.json" # alternative json config file name (recursive)
+      - "**/.markdownlint-cli2.mjs" # programmatic config (enables gitignore) (recursive)
+      - "**/.markdownlint-cli2.jsonc" # alternate cli2 config filename (recursive)
+      - "**/package.json" # scripts or config in package.json can change the lint command (recursive)
+      - "**/pnpm-lock.yaml" # dependency changes may alter linting behavior or versions (recursive)
   pull_request:
     paths:
       - "**/*.md" # all markdown files in the repo
@@ -19,8 +23,12 @@ on:
       - ".markdownlint.json" # alternative json config file name
       - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
       - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
-      - "package.json" # scripts or config in package.json can change the lint command
-      - "pnpm-lock.yaml" # dependency changes may alter linting behavior or versions
+      - "**/.markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules (recursive)
+      - "**/.markdownlint.json" # alternative json config file name (recursive)
+      - "**/.markdownlint-cli2.mjs" # programmatic config (enables gitignore) (recursive)
+      - "**/.markdownlint-cli2.jsonc" # alternate cli2 config filename (recursive)
+      - "**/package.json" # scripts or config in package.json can change the lint command (recursive)
+      - "**/pnpm-lock.yaml" # dependency changes may alter linting behavior or versions (recursive)
   workflow_dispatch:
 
 jobs:

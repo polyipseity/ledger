@@ -6,18 +6,18 @@ on:
       - "ledger/**/*.journal" # journal files to validate correctness
       - ".github/workflows/check.yml" # re-run when this workflow file changes
       - "scripts/**" # changes to check scripts affect validation behavior
-      - "requirements.txt" # Python deps used by scripts
-      - "package.json" # pnpm scripts / install commands can change setup
-      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "**/requirements.txt" # Python deps used by scripts (recursive)
+      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
+      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
       - "preludes/**" # preludes are included by journals and affect checks
   pull_request:
     paths:
       - "ledger/**/*.journal" # journal files to validate correctness
       - ".github/workflows/check.yml" # re-run when this workflow file changes
       - "scripts/**" # changes to check scripts affect validation behavior
-      - "requirements.txt" # Python deps used by scripts
-      - "package.json" # pnpm scripts / install commands can change setup
-      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "**/requirements.txt" # Python deps used by scripts (recursive)
+      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
+      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
       - "preludes/**" # preludes are included by journals and affect checks
   workflow_dispatch:
 
