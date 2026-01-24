@@ -176,7 +176,8 @@ git status
 git diff
 
 # 4. Commit
-git commit -S -m "Migrate journals to new month (Jan 2026)"
+# Use `.github/instructions/git-commits.instructions.md`. If migration added or edited transactions use the ledger header and no body.
+git commit -S -m "chore(migration): migrate journals to 2026-01"
 
 # 5. Verify you can now add transactions to new month
 ```

@@ -21,6 +21,7 @@ All documentation is organized into `.instructions.md` files in the `.github/ins
 - **[security.instructions.md](.github/instructions/security.instructions.md)** - private.yaml encryption/decryption, confidentiality requirements
 - **[alternatives-journal.instructions.md](.github/instructions/alternatives-journal.instructions.md)** - Tracking illiquid assets vs liquid rewards
 - **[dependencies.instructions.md](.github/instructions/dependencies.instructions.md)** - Required software and their roles
+- **[git-commits.instructions.md](.github/instructions/git-commits.instructions.md)** - Repository commit/message conventions for agents and humans
 
 Agent Skills for specialized workflows:
 

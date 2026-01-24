@@ -453,7 +453,8 @@ git status
 git diff
 
 # Commit when ready
-git commit -S -m "Add missing Octopus transactions from 2026-01-19"
+# For transaction commits follow `.github/instructions/git-commits.instructions.md` and use the ledger header (no body).
+git commit -S -m "ledger(self.journal): add N transaction(s)"
 ```
 
 ## Complete Example
@@ -484,7 +485,8 @@ git commit -S -m "Add missing Octopus transactions from 2026-01-19"
 5. Validate and commit:
    ```powershell
    python scripts/format.py ; python scripts/check.py
-   git commit -S -m "Add missing MTR transaction from 2026-01-19 19:33"
+   # For transaction commits follow `.github/instructions/git-commits.instructions.md` and use the ledger header (no body).
+   git commit -S -m "ledger(self.journal): add 1 transaction(s)"
    ```
 
 **Result**: One new transaction added, existing transactions verified, no duplicates created.

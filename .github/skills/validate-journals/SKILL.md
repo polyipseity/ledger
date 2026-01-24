@@ -123,7 +123,8 @@ git status
 git diff --cached
 
 # 4. Commit
-git commit -S -m "Description of changes"
+# Use `.github/instructions/git-commits.instructions.md`. When adding/editing transactions use the ledger header and no body.
+git commit -S -m "chore: apply validation fixes"
 ```
 
 ## Format Validation

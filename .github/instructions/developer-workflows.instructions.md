@@ -104,3 +104,11 @@ Run `python -m check` before committing to validate all changes:
 - **Batch processing**: Glob pattern enables processing all journals in one operation
 - **Error resilient**: Collects all errors before reporting, doesn't stop on first failure
 - **Extensible**: New scripts follow same async/dataclass/error handling patterns
+
+### Commit message format
+
+Agents and humans should follow repository commit conventions. See `.github/instructions/git-commits.instructions.md` for the canonical rules. In short:
+
+- Use Conventional Commits for all commits.
+- For ledger transaction commits use the exact `ledger(<journal-list>): add N / edit M transaction(s)` header format. When such ledger commits are made by agents, they MUST contain only the single-line header (no body).
+- Run `python -m check` before committing changes to journal files.

@@ -73,7 +73,8 @@ git status
 git diff --cached
 
 # 6. Commit
-git commit -S -m "Describe changes"
+# Follow `.github/instructions/git-commits.instructions.md`. For transaction commits use the ledger header and no body.
+git commit -S -m "chore: describe changes"
 ```
 
 (Use `-S` flag for signed commits if configured.)

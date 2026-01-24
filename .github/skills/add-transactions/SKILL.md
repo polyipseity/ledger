@@ -349,7 +349,8 @@ git status
 git diff
 
 # Commit when ready
-git commit -S -m "Add transactions from [source]"
+# For transaction commits follow `.github/instructions/git-commits.instructions.md` and use the ledger header (no body).
+git commit -S -m "ledger(self.journal): add N transaction(s)"
 ```
 
 Notes:

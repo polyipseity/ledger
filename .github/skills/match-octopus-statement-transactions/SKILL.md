@@ -67,6 +67,7 @@ Typical seconds-only edits are omitted from the normal summary. To include those
 
 - Be conservative: require a unique match before auto-editing. When unsure, surface candidate matches for human confirmation.
 - The user is responsible for committing any repository changes.
+  - If an agent commits changes on your behalf, the agent must follow `.github/instructions/git-commits.instructions.md`. For ledger transaction commits use the exact `ledger(<journal-list>): add N / edit M transaction(s)` header and no body.
 
 ## Example invocation
 

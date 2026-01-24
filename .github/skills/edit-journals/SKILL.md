@@ -339,8 +339,9 @@ git status
 git diff
 
 # 6. Commit
+# Use `.github/instructions/git-commits.instructions.md`. For ledger transaction commits use the ledger header and no body.
 git add .
-git commit -S -m "Description of changes"
+git commit -S -m "chore(edit): apply journal edits"
 
 # 7. Push
 git push
