@@ -3,12 +3,24 @@ name: Markdown lint
 on:
   push:
     paths:
-      - "**/*.md"
-      - ".github/workflows/markdownlint.yml"
+      - "**/*.md" # all markdown files in the repo
+      - ".github/workflows/markdownlint.yml" # re-run when this workflow file changes
+      - ".markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules
+      - ".markdownlint.json" # alternative json config file name
+      - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
+      - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
+      - "package.json" # scripts or config in package.json can change the lint command
+      - "pnpm-lock.yaml" # dependency changes may alter linting behavior or versions
   pull_request:
     paths:
-      - "**/*.md"
-      - ".github/workflows/markdownlint.yml"
+      - "**/*.md" # all markdown files in the repo
+      - ".github/workflows/markdownlint.yml" # re-run when this workflow file changes
+      - ".markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules
+      - ".markdownlint.json" # alternative json config file name
+      - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
+      - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
+      - "package.json" # scripts or config in package.json can change the lint command
+      - "pnpm-lock.yaml" # dependency changes may alter linting behavior or versions
   workflow_dispatch:
 
 jobs:

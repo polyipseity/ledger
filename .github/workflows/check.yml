@@ -3,12 +3,22 @@ name: Journal Check
 on:
   push:
     paths:
-      - "ledger/**/*.journal"
-      - ".github/workflows/check.yml"
+      - "ledger/**/*.journal" # journal files to validate correctness
+      - ".github/workflows/check.yml" # re-run when this workflow file changes
+      - "scripts/**" # changes to check scripts affect validation behavior
+      - "requirements.txt" # Python deps used by scripts
+      - "package.json" # pnpm scripts / install commands can change setup
+      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "preludes/**" # preludes are included by journals and affect checks
   pull_request:
     paths:
-      - "ledger/**/*.journal"
-      - ".github/workflows/check.yml"
+      - "ledger/**/*.journal" # journal files to validate correctness
+      - ".github/workflows/check.yml" # re-run when this workflow file changes
+      - "scripts/**" # changes to check scripts affect validation behavior
+      - "requirements.txt" # Python deps used by scripts
+      - "package.json" # pnpm scripts / install commands can change setup
+      - "pnpm-lock.yaml" # dependency lockfile affecting installation
+      - "preludes/**" # preludes are included by journals and affect checks
   workflow_dispatch:
 
 jobs:
