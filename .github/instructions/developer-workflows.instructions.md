@@ -39,8 +39,8 @@ Note: the `.sh` and `.bat` wrapper scripts assume they are run with the current 
 ### Markdown Formatting & Linting
 
 - Use markdownlint (VS Code extension) for on-save fixes where supported
-- Format/fix locally with a global install: `markdownlint-cli2 --fix "**/*.md"`
-- Check only (CI style): `markdownlint-cli2 "**/*.md"`
+- Prefer using pnpm and the repo scripts: `pnpm install` then `pnpm run lint:md` to lint; to auto-fix use the `scripts/format-md.sh` or `scripts/format-md.bat` helpers which invoke the local tool
+- CI runs use `.github/workflows/markdownlint.yml` which installs deps via pnpm and runs `pnpm run lint:md`
 - Configuration: `.markdownlint.jsonc` and `.editorconfig` at repo root
 
 ### Monthly Journal Discovery Pattern

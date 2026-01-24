@@ -35,6 +35,7 @@ _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
 )
 class Arguments:
     check: bool
+    files: list[str] | None = None
 
 
 async def main(args: Arguments):
@@ -43,16 +44,21 @@ async def main(args: Arguments):
         raise ValueError(frame)
     folder = _Path(_frameinfo(frame).filename).parent
 
-    journals = await _gather(
-        *(
-            _Path(folder.parent, path).resolve(strict=True)
-            for path in _iglob(
-                "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
-                root_dir=folder.parent,
-                recursive=True,
+    if args.files:
+        journals = await _gather(
+            *(_Path(path).resolve(strict=True) for path in args.files)
+        )
+    else:
+        journals = await _gather(
+            *(
+                _Path(folder.parent, path).resolve(strict=True)
+                for path in _iglob(
+                    "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
+                    root_dir=folder.parent,
+                    recursive=True,
+                )
             )
         )
-    )
     _info(f'journals: {", ".join(map(str, journals))}')
 
     hledger_prog = _which("hledger")
@@ -177,9 +183,15 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
         help="check if files are formatted without modifying them",
     )
 
+    parser.add_argument(
+        "files",
+        nargs="*",
+        help="Optional list of journal files to format/check",
+    )
+
     @_wraps(main)
     async def invoke(ns: _NS):
-        await main(Arguments(check=ns.check))
+        await main(Arguments(check=ns.check, files=getattr(ns, "files", None)))
 
     parser.set_defaults(invoke=invoke)
     return parser

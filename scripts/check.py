@@ -33,25 +33,30 @@ _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
     slots=True,
 )
 class Arguments:
-    pass
+    files: list[str] | None = None
 
 
-async def main(_: Arguments):
+async def main(args: Arguments):
     frame = _curframe()
     if frame is None:
         raise ValueError(frame)
     folder = _Path(_frameinfo(frame).filename).parent
 
-    journals = await _gather(
-        *(
-            _Path(folder.parent, path).resolve(strict=True)
-            for path in _iglob(
-                "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
-                root_dir=folder.parent,
-                recursive=True,
+    if args.files:
+        journals = await _gather(
+            *(_Path(path).resolve(strict=True) for path in args.files)
+        )
+    else:
+        journals = await _gather(
+            *(
+                _Path(folder.parent, path).resolve(strict=True)
+                for path in _iglob(
+                    "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
+                    root_dir=folder.parent,
+                    recursive=True,
+                )
             )
         )
-    )
     _info(f'journals: {", ".join(map(str, journals))}')
 
     hledger_prog = _which("hledger")
@@ -108,8 +113,14 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
     )
 
     @_wraps(main)
-    async def invoke(_: _NS):
-        await main(Arguments())
+    async def invoke(ns: _NS):
+        await main(Arguments(files=getattr(ns, "files", None)))
+
+    parser.add_argument(
+        "files",
+        nargs="*",
+        help="Optional list of journal files to check",
+    )
 
     parser.set_defaults(invoke=invoke)
     return parser
@@ -118,4 +129,5 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
 if __name__ == "__main__":
     _basicConfig(level=_INFO)
     entry = parser().parse_args(_argv[1:])
+    # maintain compatibility with existing invocation pattern
     _run(entry.invoke(entry))

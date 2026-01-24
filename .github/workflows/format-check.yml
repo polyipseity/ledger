@@ -23,14 +23,24 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Python dependencies
+      - name: Set up Node.js & pnpm
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Enable corepack & prepare pnpm
         run: |
-          pip install -r requirements.txt
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: Install dependencies (pnpm)
+        run: |
+          pnpm install --frozen-lockfile=false
 
       - name: Install hledger
         run: |
-          curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger
+          pnpm run hledger:install
 
       - name: Check journal formatting
         run: |
-          python -m scripts.format --check
+          pnpm run format:check

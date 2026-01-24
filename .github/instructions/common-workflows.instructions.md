@@ -57,7 +57,9 @@ Before committing changes:
 
 ```powershell
 # 1. Format Markdown files
-markdownlint-cli2 --fix "**/*.md"
+# Prefer using pnpm and the repository script
+pnpm install --frozen-lockfile=false
+pnpm run lint:md
 
 # 2. Validate all journals
 python -m check

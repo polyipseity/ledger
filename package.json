@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "markdownlint-cli2": "^0.20.0"
+  },
+  "lint-staged": {
+    "**/*.journal": [
+      "pnpm exec -- python -m format --check",
+      "pnpm exec -- python -m check"
+    ]
+  },
+  "name": "ledger",
+  "private": true,
+  "scripts": {
+    "check": "python -m scripts.check",
+    "commitlint": "commitlint --from=origin/main --to=HEAD",
+    "format": "python -m scripts.format",
+    "format:check": "python -m scripts.format --check",
+    "hledger:install": "curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "postinstall": "python -m pip install -r requirements.txt || true",
+    "prepare": "husky install"
+  },
+  "type": "module"
+}
