@@ -22,7 +22,7 @@
     "hledger:install": "curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger",
     "lint:md": "markdownlint-cli2 \"**/*.md\"",
     "postinstall": "python -m pip install -r requirements.txt || true",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "type": "module"
 }
