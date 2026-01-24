@@ -20,8 +20,8 @@
     "hledger:format": "python -m scripts.format",
     "hledger:format:check": "python -m scripts.format --check",
     "hledger:install": "curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger",
-    "markdownlint": "markdownlint-cli2 \"**/*.md\" --ignore \"node_modules/**\"",
-    "markdownlint:fix": "markdownlint-cli2 --fix \"**/*.md\" --ignore \"node_modules/**\"",
+    "markdownlint": "markdownlint-cli2",
+    "markdownlint:fix": "markdownlint-cli2 --fix",
     "postinstall": "python -m pip install -r requirements.txt || true",
     "prepare": "husky"
   },
