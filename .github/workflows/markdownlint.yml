@@ -31,6 +31,9 @@ on:
       - "**/pnpm-lock.yaml" # dependency changes may alter linting behavior or versions (recursive)
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   markdownlint:
     runs-on: ubuntu-slim

@@ -21,6 +21,9 @@ on:
       - "preludes/**" # preludes are included by journals and affect checks
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   check:
     runs-on: ubuntu-slim
