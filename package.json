@@ -8,7 +8,7 @@
   },
   "lint-staged": {
     "**/*.journal": [
-      "pnpm run hledger:format:check",
+      "pnpm run hledger:format",
       "pnpm run hledger:check"
     ],
     "**/*.{md,markdown}": [

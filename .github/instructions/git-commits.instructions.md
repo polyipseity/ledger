@@ -33,7 +33,7 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 ## Enforcement guidance (recommended)
 
 - Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
-- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run format:check` and `pnpm run check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
+- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run hledger:format` and `pnpm run hledger:check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
 
 - Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
 
@@ -42,7 +42,7 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
   - pnpm install
   - pnpm run markdownlint         # markdown linting
   - pnpm run markdownlint:fix     # optional: auto-fix markdown issues
-  - pnpm run hledger:format:check # check formatting (no write)
+  - pnpm run hledger:format       # format journals (may modify files)
   - pnpm run hledger:check        # run hledger checks
 
 - CI enforcement: GitHub Actions runs `pnpm install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
@@ -51,4 +51,6 @@ Note for agents: when committing ledger transaction changes, follow the single-l
 
 ## Agent / automated commits
 
-Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps (for example: `pnpm run markdownlint`, `pnpm run hledger:format:check`, `pnpm run hledger:check`). When an agent makes a commit that modifies journals, it must use the exact single-line `ledger(...)` header format and must not include a commit body.
+Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps (for example: `pnpm run markdownlint`, `pnpm run hledger:format`, `pnpm run hledger:check`).
+
+When an agent makes a normal (non-ledger) commit and a motivation or rationale is available, the agent SHOULD include that rationale in the commit body. Keep commit bodies concise and wrapped to a reasonable line length. For ledger transaction commits, the existing rule still applies: use the exact single-line `ledger(...)` header and do NOT include a commit body.
