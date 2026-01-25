@@ -56,3 +56,5 @@ Security: [security.instructions.md](.github/instructions/security.instructions.
 **Chat configuration**: Enable `chat.useAgentsMdFile` in settings. Leave `chat.useNestedAgentsMdFiles` disabled (single root AGENTS.md). Use "Chat: Configure Instructions" to verify active files.
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Format via VS Code extension or CLI (`pnpm run markdownlint:fix`). Always format before commit.
+
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. Before making commits, agents must run the repository formatting and validation steps and use Conventional Commits for commit headers.

@@ -48,3 +48,7 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 - CI enforcement: GitHub Actions runs `pnpm install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
 
 Note for agents: when committing ledger transaction changes, follow the single-line `ledger(...)` header rule exactly and do NOT include a commit body — the commit must be parsable by automated tools.
+
+## Agent / automated commits
+
+Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps (for example: `pnpm run markdownlint`, `pnpm run hledger:format:check`, `pnpm run hledger:check`). When an agent makes a commit that modifies journals, it must use the exact single-line `ledger(...)` header format and must not include a commit body.
