@@ -16,7 +16,7 @@
     ]
   },
   "name": "ledger",
-  "packageManager": "pnpm@10.0.0+",
+  "packageManager": "pnpm@10.28.1",
   "private": true,
   "scripts": {
     "commitlint": "commitlint --from=origin/main --to=HEAD",
