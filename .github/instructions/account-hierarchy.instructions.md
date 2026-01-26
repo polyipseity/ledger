@@ -5,6 +5,22 @@ description: Complete documentation of all account types (50+) across assets, eq
 
 # Account Hierarchy & Meanings
 
+This file provides annotations and explanations for accounts declared in the canonical prelude files (see `preludes/`).
+
+**Instructions for agents:**
+
+- Do not add or remove accounts here. The canonical list is in the prelude files.
+- Use this file only for documentation, explanations, and usage notes.
+- When a new account is requested, extrapolate its correct parent and type by following the hierarchy and naming conventions below. Place new UUID-based accounts under the most specific parent (e.g., `liabilities:loans:colleagues:<uuid>` for a new colleague loan).
+- If unsure, infer the most likely parent and type by analogy to similar accounts in this file and the canonical prelude.
+
+## Example annotation
+
+- `liabilities:loans:colleagues` — Loans from colleagues. Each subaccount is a UUID for privacy. See `preludes/self.journal` for the full list.
+- `liabilities:loans:colleagues:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` — Loan from colleague (UUID anonymized). Use for tracking loans from this specific colleague. All postings and repayments should reference this account. See canonical declaration in `preludes/self.journal`.
+
+---
+
 Complete documentation of all account types and their purposes, organized by the five major accounting categories.
 
 ## Asset Accounts

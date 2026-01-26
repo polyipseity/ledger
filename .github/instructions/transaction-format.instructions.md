@@ -26,6 +26,11 @@ YYYY-MM-DD [!|*] payee  ; activity: value, tag: value, timezone: UTC+08:00
 - **Posting lines**: Account and amount pairs, indented with spaces
 - **Balance assertion**: Optional `= balance CURRENCY` to verify account state after transaction
 
+
+## Chronological Order Requirement
+
+**All transactions in every journal file must be strictly ordered by date, and by time within each date. Out-of-order entries are not permitted. Always insert new transactions in the correct chronological position.**
+
 ## Key Patterns
 
 ### Opening and Closing Balances
