@@ -1,3 +1,15 @@
+# Food Translations File
+# Purpose: Maps food/drink item names (by payee or default) to English translations for use in transaction entry.
+# Structure: Keyed by payee, with a default fallback. Only add mappings after user approval.
+# See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
+default:
+  "咖啡": "coffee"
+  "鮮奶炒滑蛋": "scrambled egg"
+  "吉列魚柳": "cutlet fish fillet"
+  "粒粒粟米": "sweet corn"
+  "蒜香牛油多士": "garlic butter on toast"
+  "熱咖啡": "hot coffee"
+  "多奶": "more milk"
 Saizeriya:
   "蒜香法包": "garlic baguette"
   "香辣番茄煙肉直通粉": '"ARRABBIATA" bacon penne'
@@ -7,11 +19,3 @@ Taste:
   "無糖高纖鮮奶麥皮 配蛋治": "sugar-free oatmeal in fresh milk"
   "鮮奶滑蛋三文治": "scrambled egg sandwich"
   "熱咖啡 (多奶)": "hot coffee + more milk"
-default:
-  "咖啡": "coffee"
-  "鮮奶炒滑蛋": "scrambled egg"
-  "吉列魚柳": "cutlet fish fillet"
-  "粒粒粟米": "sweet corn"
-  "蒜香牛油多士": "garlic butter on toast"
-  "熱咖啡": "hot coffee"
-  "多奶": "more milk"
