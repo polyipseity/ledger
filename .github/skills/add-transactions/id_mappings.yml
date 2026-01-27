@@ -32,8 +32,13 @@
   orders:
     - [transaction_id, terminal_id]
   regex:
-    transaction_id: "[0-9A-Z]{10,}"
-    terminal_id: "\\d+"
+    transaction_id: "[0-9A-Z]{21}"
+    terminal_id: "\\d{22}"
+"TenRen's Tea":
+  orders:
+    - [transaction_id]
+  regex:
+    transaction_id: "[A-Z0-9\\-]{16,32}"
 "AC2 Canteen, CityUHK":
   orders:
     - [transaction_id, receipt_id, terminal_id]

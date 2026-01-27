@@ -47,7 +47,7 @@ Agent Skills (`.github/skills/`):
 
 ## Quick Start
 
-Skills: [add-transactions](.github/skills/add-transactions/), [add-octopus-transactions](.github/skills/add-octopus-transactions/), [monthly-migration](.github/skills/monthly-migration/), [edit-journals](.github/skills/edit-journals/), [validate-journals](.github/skills/validate-journals/)
+Skills: [add-payee](.github/skills/add-payee/), [add-transactions](.github/skills/add-transactions/), [add-octopus-transactions](.github/skills/add-octopus-transactions/), [monthly-migration](.github/skills/monthly-migration/), [edit-journals](.github/skills/edit-journals/), [validate-journals](.github/skills/validate-journals/)
 
 Security: [security.instructions.md](.github/instructions/security.instructions.md) | Pre-commit: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md)
 

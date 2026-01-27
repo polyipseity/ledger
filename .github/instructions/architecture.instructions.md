@@ -7,7 +7,7 @@ description: Understand the hierarchical journal structure, file organization, a
 
 ## Hierarchical Journal Structure
 
-The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes:
+The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes. **All payee registrations must be made in the appropriate `preludes/*.journal` file using `payee` lines, always maintaining strict lexicographical (ASCII/Unicode) order. When adding a payee, check the entire payee section to ensure correct placement and move any out-of-order entries if found. Never declare payees in monthly or yearly journals.**
 
 - **Entry point**: [ledger/index.journal](../../ledger/index.journal) includes `self.journal` and `self.alternatives.journal`
 - **Year-level**: [ledger/YYYY/self.journal](../../ledger/2024/self.journal) includes monthly journals (e.g., `2024-01/self.journal`)

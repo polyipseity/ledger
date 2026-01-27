@@ -37,6 +37,23 @@ Refer to these files for detailed rules, clarifications, and examples. Do not du
 
 Each file contains its own documentation and must be referenced for correct transaction entry. Update only with explicit user approval.
 
+## Lessons Learned & Continuous Improvement
+
+### 2026-01-28 (AI skill update)
+
+- **Taste ID mapping:** For Taste, always use the 17-digit numeric ID and the 24-character transaction ID, in that order, if both are present. See [payee_id_mapping_rules.md](./payee_id_mapping_rules.md) for details and regex.
+- **Never leak Octopus numbers or personal IDs** in any transaction, mapping, or documentation. These must be treated as confidential and must not appear in journal entries, ID mappings, or skill documentation. Only use anonymized or mapped UUIDs where required.
+- **Never leak attachment filenames or add an `attachment` tag** in any transaction. Do not reference image or file names in the journal.
+- **Only one `include` line** for the prelude should appear at the top of each journal file. Remove any duplicates.
+- **Always insert new transactions in strict chronological order**. Double-check placement to avoid out-of-order entries.
+- When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
+
+---
+
+- **Always insert new transactions in strict chronological order**. Double-check placement to avoid out-of-order entries.
+- When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
+- **Never trust the tool to insert at the correct location blindly.** Always check the file after any tool call that inserts or edits transactions to verify the actual insertion location. If the transaction is not in the intended place, move it manually to the correct chronological position.
+
 ## Required Reference Files (Must Always Be Read and Remembered)
 
 Always read and remember:

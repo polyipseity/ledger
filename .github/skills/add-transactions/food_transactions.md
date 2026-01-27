@@ -31,6 +31,13 @@ This file contains rules, clarifications, and examples specific to food and rest
 
 - Modifiers are preparation adjustments applied to a base item (e.g., "more milk", "less ice"). Use `+` syntax: `food_or_drink: hot coffee + more milk`.
 - Items are distinct food components, even if listed as sub-items on the receipt (e.g., "sweet corn", "garlic butter on toast"). List separately: `food_or_drink: item1, food_or_drink: item2`.
+- If a sequence of `food_or_drink:` tags is present and the first is a base item (e.g., a drink) and the following are modifiers (e.g., ice level, sweetness, size), combine them into a single tag using the `+` syntax. For example, `food_or_drink: 冰蜜檸檬綠茶, food_or_drink: 去冰, food_or_drink: 7分甜` should become `food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜`.
+
+#### Example: Drink with Modifiers
+
+Original: 冰蜜檸檬綠茶, 去冰, 7分甜
+
+Result: food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜
 
 ### Translation
 

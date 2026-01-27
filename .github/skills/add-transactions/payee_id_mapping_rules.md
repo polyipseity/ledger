@@ -21,6 +21,8 @@ This file contains all rules and best practices for payee normalization, payee m
 - When proposing a new id mapping, include a one-line example and a brief regex hint; persist only after user confirmation.
 - Only write or update `id_mappings.yml` after explicit user approval.
 
+> **Note:** All payee-specific ID mapping rules must be defined only in `id_mappings.yml`. Do not document specific ID mapping examples or regex in this markdown file. Refer to `id_mappings.yml` for authoritative rules.
+
 ## Related Files
 
 - [payee_mappings.yml](./payee_mappings.yml)
