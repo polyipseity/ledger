@@ -47,9 +47,19 @@ Agent Skills (`.github/skills/`):
 
 ## Quick Start
 
-Skills: [add-payee](.github/skills/add-payee/), [add-transactions](.github/skills/add-transactions/), [add-octopus-transactions](.github/skills/add-octopus-transactions/), [monthly-migration](.github/skills/monthly-migration/), [edit-journals](.github/skills/edit-journals/), [validate-journals](.github/skills/validate-journals/)
+Skills:
 
-Security: [security.instructions.md](.github/instructions/security.instructions.md) | Pre-commit: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md)
+- [add-payee](.github/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
+- [add-transactions](.github/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR) into hledger journal format with correct status, tags, and accounts.
+- [add-octopus-transactions](.github/skills/add-octopus-transactions/): Add missing Octopus card transactions from app history, including transport and reloads, and update durations.
+- [monthly-migration](.github/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
+- [edit-journals](.github/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
+- [validate-journals](.github/skills/validate-journals/): Validate and format hledger journals before commit using check/format scripts.
+
+Instructions:
+
+- Security: [security.instructions.md](.github/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
+- Pre-commit: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step pre-commit checklist and common ledger workflows.
 
 ## VS Code Setup
 

@@ -10,7 +10,9 @@ applyTo: "**/*.journal"
 
 All payees (merchants, people, organizations, UUIDs) must be registered in the appropriate `preludes/*.journal` file using a line of the form:
 
-    payee <payee-name-or-UUID>
+```hledger
+payee <payee-name-or-UUID>
+```
 
 Never declare or repeat payee lines in monthly or yearly journals. Always insert new payees in strict lexicographical (ASCII/Unicode) order within the payee section of the relevant preludes file. When adding a payee, check the entire payee section to ensure correct placement and move any out-of-order entries if found. This ensures a single source of truth for payee names and UUIDs and keeps payee lists organized.
 
