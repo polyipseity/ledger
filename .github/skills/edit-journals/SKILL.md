@@ -3,7 +3,19 @@ name: edit-journals
 description: Edit hledger journal files following best practices and conventions. Includes prelude includes, balance assertions, tagging, formatting, and validation procedures with anti-patterns to avoid.
 ---
 
+
+
 # Edit Journals Skill
+
+## Journal File Path Format
+
+**Reminder:** All monthly journal files must be named and referenced as `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). Do not omit the `ledger/` prefix when referring to journal files.
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When editing journals, especially for multi-step or complex changes, use the todo list tool to plan, track, and complete each step.**
+
+Break down editing tasks into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
 
 This skill provides comprehensive guidance for editing hledger journal files while maintaining consistency, validity, and adherence to project conventions.
 
@@ -96,6 +108,14 @@ Always run the format script after editing:
 python -m format
 ```
 
+**Script commands: Always run from the `scripts/` directory**
+
+- For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
+- **Never run scripts from the root directory or any other location.** Running from the wrong directory will cause include and file discovery errors.
+- Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
+
+**Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
+
 The formatter:
 
 - Rewrites journals using `hledger print` for canonical format
@@ -116,6 +136,8 @@ Always validate before committing:
 ```powershell
 python -m check
 ```
+
+**Important:** Always run all `python -m ...` scripts from inside the `scripts/` directory, or use the provided wrappers (e.g. `./check`, `./format`). Running from the wrong directory will cause include and file discovery errors.
 
 The check script validates:
 

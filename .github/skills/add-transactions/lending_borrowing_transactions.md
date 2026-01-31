@@ -15,6 +15,16 @@ This file contains rules, clarifications, and examples specific to lending, borr
 - Always use canonical payee names or UUIDs as per SKILL.md
 - Insert transactions in strict chronological order
 
+### Shared Expense and Repayment Pattern
+
+For group meals or shared expenses paid by a friend, follow the shared expense and repayment pattern:
+
+- In the original transaction, itemize all expenses, add `equity:friends:<uuid>` lines for each friend's share, negative expense lines for others' shares, and a `liabilities:loans:friends:<uuid>` line for the total paid by the friend (with balance assertion).
+- When repaying, add a transaction debiting your asset and crediting the liability, asserting the balance to zero.
+- Use placeholders for new friends without UUIDs and update later.
+
+See editing-guidelines and add-transactions SKILL.md for full details and rationale.
+
 ### Status Markers
 
 - `!` = pending (awaiting confirmation, repayment, or follow-up)

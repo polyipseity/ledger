@@ -3,7 +3,14 @@ name: Git Commit Conventions
 description: Conventional commit rules for repository contributions and explicit rules for ledger transaction commits made by agents.
 ---
 
+
 # Git commit conventions
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When preparing commits, especially for multi-step or complex changes, agents and automation should use the todo list tool to plan, track, and complete each step.**
+
+Break down the commit workflow into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
 
 All commits MUST follow the Conventional Commits style for the repository. Commit bodies are optional unless stated below.
 

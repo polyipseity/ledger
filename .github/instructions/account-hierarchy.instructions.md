@@ -7,6 +7,12 @@ description: Complete documentation of all account types (50+) across assets, eq
 
 This file provides annotations and explanations for accounts declared in the canonical prelude files (see `preludes/`).
 
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When documenting or handling new account requests, use the todo list tool to plan and track each step.**
+
+Break down multi-step documentation or account addition tasks into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
+
 **Instructions for agents:**
 
 - Do not add or remove accounts here. The canonical list is in the prelude files.

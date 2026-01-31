@@ -4,7 +4,14 @@ description: Guidance for handling confidential data in this personal accounting
 applyTo: "private.yaml*"
 ---
 
+
 # Security Practices
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When handling confidential data, encryption, or decryption workflows, use the todo list tool to break down the process into actionable steps.**
+
+Mark each step as in-progress and completed, and update the todo list after each change to ensure all security steps are followed and nothing is missed.
 
 Guidance for handling confidential data in this personal accounting system.
 

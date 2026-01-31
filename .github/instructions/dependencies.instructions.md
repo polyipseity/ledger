@@ -3,7 +3,14 @@ name: Critical Dependencies
 description: Required software and tools that enable this accounting system, including hledger, Python, anyio, and GPG with installation and troubleshooting guidance.
 ---
 
+
 # Critical Dependencies
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When installing, verifying, or troubleshooting dependencies, use the todo list tool to break down the process into actionable steps.**
+
+Mark each step as in-progress and completed, and update the todo list after each change to ensure all dependencies are handled correctly and nothing is missed.
 
 Required software and tools that enable this accounting system.
 

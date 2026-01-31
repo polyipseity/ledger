@@ -4,9 +4,25 @@ description: Learn hledger transaction format, structure, tags, patterns, and fo
 applyTo: "**/*.journal"
 ---
 
+
 # Transaction Format Conventions
 
-## Payee Registration
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When transcribing, editing, or validating transactions, agents and automation should use the todo list tool to break down multi-step or complex tasks.**
+
+Before starting, plan actionable steps, mark each as in-progress and completed, and update the todo list after each change to avoid missing any required actions.
+
+## Payee and ID Mapping
+
+When transcribing a transaction:
+
+1. **Always check `private.yaml` for payee mappings.**
+2. **If the merchant name or a similar entry is found in `private.yaml`, use the corresponding UUID as the payee.**
+3. **If not found, use the merchant name as the payee.**
+4. **For receipt/transaction identifiers:**
+    - Prepend all available identifiers (order number, receipt number, etc.) in parentheses at the start of the payee line.
+    - If an `id_mappings.yml` exists, follow its mapping for identifier formatting and order. If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
 
 All payees (merchants, people, organizations, UUIDs) must be registered in the appropriate `preludes/*.journal` file using a line of the form:
 
@@ -36,9 +52,13 @@ YYYY-MM-DD [!|*] payee  ; activity: value, tag: value, timezone: UTC+08:00
 - **Posting lines**: Account and amount pairs, indented with spaces
 - **Balance assertion**: Optional `= balance CURRENCY` to verify account state after transaction
 
+## Journal File Path Format
+
+**Reminder:** All monthly journal files must be named and referenced as `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). Do not omit the `ledger/` prefix when referring to journal files.
+
 ## Chronological Order Requirement
 
-**All transactions in every journal file must be strictly ordered by date, and by time within each date. Out-of-order entries are not permitted. Always insert new transactions in the correct chronological position.**
+**All transactions in every journal file must be strictly ordered by date, and by time within each date. Out-of-order entries are not permitted. Always insert new transactions in the correct chronological position. When adding or editing transactions, always check for and enforce correct time order within each date. If multiple transactions share the same date, they must be sorted by their time (using the `time:` tag or, if missing, by logical/expected sequence). Never leave or introduce out-of-order transactions.**
 
 ## Key Patterns
 
@@ -135,9 +155,28 @@ Track currency conversion transactions to maintain rate information.
     assets:digital:Octopus cards:<uuid>  -50.00 HKD
 ```
 
-This transaction:
+## Food/Drink Tagging and Posting Conventions
 
-- Records lunch purchase on Jan 19 at 12:30:15
-- Splits expense between two food items with detailed descriptions
-- Deducts from Octopus card digital account
-- All times in UTC+08:00 (Hong Kong time)
+- **Always split each food or drink item into a separate `food_or_drink:` tag.**
+- **Do not combine multiple items into a single tag.**
+- **Do not add translations unless required by convention.**
+- **Maintain the order of items as they appear on the receipt.**
+
+## Account and Tag Selection
+
+- **Use the most specific and correct account** (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
+- **Use the correct `eating:` tag** (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
+- **Align columns and tags for readability.**
+- **Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.**
+
+## Identifiers and Traceability
+
+- **Always include all available receipt, order, or transaction identifiers in the payee line for traceability, following the mapping rules above.**
+
+## Generalized Learnings for Future Tasks
+
+- Always cross-reference `private.yaml` and `id_mappings.yml` before assigning payees or formatting identifiers.
+- Never assume a payee UUID—always verify or create the mapping as needed.
+- Split all food/drink items into individual tags and maintain their order.
+- Use the most contextually accurate account and tags.
+- Maintain strict formatting and tag order for consistency and readability.

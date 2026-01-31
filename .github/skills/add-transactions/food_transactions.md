@@ -16,8 +16,10 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Split items and modifiers as per the rules below
 - Do not invent new tags; only use those declared in the prelude
 
-### Itemization, Modifiers, and Tagging
+### Itemization, Modifiers, Item Numbers, and Tagging
 
+- **Always fully itemize all food and drink items.** Never use placeholders like "(see receipt)". Every item and its amount must be listed explicitly, with a separate `food_or_drink:` tag for each.
+- **For Taste and similar supermarkets or bakeries, always include the item number or code from the receipt as part of the `food_or_drink:` tag, if available.** For example, `food_or_drink: 091421 LA BOULANGERIE BREAD`.
 - Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`).
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
@@ -47,6 +49,21 @@ Result: food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜
 - Only write mappings into `food_translations.yml` after explicit user approval.
 
 ### Examples
+
+#### Example: Taste Item Number
+
+Original: 091421 LA BOULANGERIE BREAD
+
+Result: food_or_drink: 091421 LA BOULANGERIE BREAD
+
+#### Example: Full Itemization (No "see receipt")
+
+Original: (see receipt)
+
+Result:
+    expenses:food and drinks:dining  48.00 HKD  ; food_or_drink: 白切雞飯
+    expenses:food and drinks:dining  48.00 HKD  ; food_or_drink: 豉油雞飯
+    ... (repeat for each item)
 
 #### Example: Modifiers and Zero-Cost Items
 

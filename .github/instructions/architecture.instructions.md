@@ -3,7 +3,14 @@ name: Architecture & File Organization
 description: Understand the hierarchical journal structure, file organization, and include patterns in the ledger system.
 ---
 
+
 # Architecture & File Organization
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**Agents and automation should use the todo list tool to plan, track, and complete multi-step or complex operations.**
+
+Before making changes to the journal structure, file organization, or includes, break down the work into actionable steps using the todo list tool. Mark each step as in-progress and completed as you proceed. Update the todo list after each change to ensure nothing is forgotten.
 
 ## Hierarchical Journal Structure
 

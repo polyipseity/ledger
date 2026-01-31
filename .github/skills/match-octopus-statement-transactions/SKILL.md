@@ -5,6 +5,12 @@ description: "Match Octopus Wallet statement rows to journal transactions and up
 
 # Match Octopus Statement Transactions
 
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When matching Octopus statement transactions, use the todo list tool to break down the process into actionable steps.**
+
+Mark each step as in-progress and completed, and update the todo list after each change to ensure all matching and update steps are completed and nothing is missed.
+
 ## Purpose
 
 Locate each entry in a monthly Octopus Wallet statement and, where a unique match exists in the repository journals, update only the transaction's datetime metadata. Record unmatched rows in the summary.
@@ -59,7 +65,16 @@ Typical seconds-only edits are omitted from the normal summary. To include those
 
 ## Validation
 
-- Optionally run `python -m format` and `python -m check` after edits; the skill can produce a patch/diff for review but does not commit changes.
+- Optionally run formatting and validation scripts after edits:
+
+  ```powershell
+  python -m format   # set cwd to scripts/
+  python -m check    # set cwd to scripts/
+  ```
+
+  **Important:** Always set the working directory to `scripts/` using the tool's `cwd` parameter when running any script or wrapper (including `./check`, `check.bat`, etc.). Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default. Running from the wrong directory will cause include and file discovery errors.
+
+- The skill can produce a patch/diff for review but does not commit changes.
 
 ## Security & privacy
 

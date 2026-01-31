@@ -1,0 +1,63 @@
+# Octopus payee mappings for upsert-octopus-transactions skill
+# (See SKILL.md for strict mapping rules)
+#
+# Octopus Transaction Name → Actual Payee Name Mapping
+#
+# This file maps the merchant names shown in Octopus transaction history
+# directly to the actual payee names used in the journal.
+#
+# IMPORTANT: This is the ONLY mapping file used for Octopus transactions.
+# No additional payee mapping or translation step is performed.
+#
+# ONE-TO-MANY MAPPING STRUCTURE:
+# Multiple different merchants may show the same name in Octopus transactions.
+# Use context (transaction amount, location, category, date/time) to disambiguate.
+#
+# Example (one Octopus name → multiple possible payees):
+# "Union Cash Register Co. Ltd.":
+#   - "ParknShop"           # Grocery store transaction
+#   - "Wellcome"            # Another grocery store
+#   - "7-Eleven"            # Convenience store
+#
+# Behavior: If no mapping exists, ALWAYS ask the user to provide one.
+# DO NOT infer or guess the mapping - always ask the user explicitly.
+# Do not leave Octopus transaction names unmapped.
+
+# Transport
+"港鐵":
+  - "Mass Transit Railway"
+
+# Transfers
+# Both the correct Octopus reload/transfer text and the common typo are mapped to 'self'.
+# '八達通轉賬' is the correct text for Octopus reload/transfer between own accounts.
+"八達通轉賬":
+  - "self"  # Octopus reload/transfer between own accounts
+# '八達通專賬' is a common typo/misreading by agents and sometimes appears in OCR or agent output; map to 'self' for safety.
+"八達通專賬":
+  - "self"  # Common typo for Octopus reload/transfer; always self (never a payee)
+
+# Dining & Beverages
+# Italian restaurant chain
+"薩莉亞":
+  - "Saizeriya"
+# Tea chain
+"天仁茗茶":
+  - "天仁茗茶 (TenRen's Tea)"
+"美心 / 星巴克":
+  - "城大食坊 (City Express)"
+"美心食品有限公司":
+  - "AC2 Canteen, CityUHK"
+"餐飲 / 會所":
+  - "A-1 Bakery"
+
+# Retail
+"百佳":
+  - "Taste"
+"Union Cash Register Co. Ltd.":
+  - "Cafe 100%"  # could be other payees
+"自動販賣機":
+  - "Swire"  # via: COKE+ vending machine
+"Pin Me Limited":
+  - "Comebuytea"  # could be other payees
+九巴/龍運:
+  - Kowloon Motor Bus/Long Win Bus

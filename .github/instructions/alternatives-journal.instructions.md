@@ -4,7 +4,14 @@ description: Understanding the distinction between main and alternatives journal
 applyTo: "ledger/**/self.alternatives.journal"
 ---
 
+
 # Alternatives Journal Tracking
+
+## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+
+**When working with alternatives journal tracking, use the todo list tool to plan, track, and complete each step of the process.**
+
+Break down multi-step or complex alternatives journal tasks into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
 
 Understanding the distinction between main and alternatives journals for separate tracking of assets.
 
