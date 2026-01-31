@@ -1,24 +1,24 @@
-name: Journal Check
+name: Journal Check & Format
 
 on:
   push:
     paths:
-      - "ledger/**/*.journal" # journal files to validate correctness
+      - "ledger/**/*.journal" # journal files to validate correctness/formatting
       - ".github/workflows/check.yml" # re-run when this workflow file changes
-      - "scripts/**" # changes to check scripts affect validation behavior
+      - "scripts/**" # changes to check/format scripts affect validation
       - "**/requirements.txt" # Python deps used by scripts (recursive)
       - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
       - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
-      - "preludes/**" # preludes are included by journals and affect checks
+      - "preludes/**" # preludes are included by journals and affect checks/formatting
   pull_request:
     paths:
-      - "ledger/**/*.journal" # journal files to validate correctness
+      - "ledger/**/*.journal" # journal files to validate correctness/formatting
       - ".github/workflows/check.yml" # re-run when this workflow file changes
-      - "scripts/**" # changes to check scripts affect validation behavior
+      - "scripts/**" # changes to check/format scripts affect validation
       - "**/requirements.txt" # Python deps used by scripts (recursive)
       - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
       - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
-      - "preludes/**" # preludes are included by journals and affect checks
+      - "preludes/**" # preludes are included by journals and affect checks/formatting
   workflow_dispatch:
 
 permissions:
@@ -28,32 +28,89 @@ jobs:
   check:
     runs-on: ubuntu-slim
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "*"
+
+      # Specific to this project: set up Python for any scripts that may be needed
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version-file: .python-version
+          cache: "pip"
 
-      - name: Set up Node.js & pnpm
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      - name: Enable corepack & prepare pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
-
-      - name: Install dependencies (pnpm)
-        run: |
-          pnpm install --frozen-lockfile=true
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Install hledger
-        run: |
-          pnpm run hledger:install
+        run: pnpm run hledger:install
 
       - name: Check journals
+        run: pnpm run hledger:check
+
+  format-check:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "*"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
         run: |
-          pnpm run hledger:check
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      # Specific to this project: set up Python for any scripts that may be needed
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install hledger
+        run: pnpm run hledger:install
+
+      - name: Check journal formatting
+        run: pnpm run hledger:format:check
