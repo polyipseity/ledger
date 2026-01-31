@@ -31,6 +31,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "*"
+          cache: "pnpm"
+
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
@@ -48,11 +54,6 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "*"
 
       # Specific to this project: set up Python for any scripts that may be needed
       - name: Set up Python
@@ -80,6 +81,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "*"
+          cache: "pnpm"
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
