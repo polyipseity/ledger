@@ -3,7 +3,6 @@ name: Git Commit Conventions
 description: Conventional commit rules for repository contributions and explicit rules for ledger transaction commits made by agents.
 ---
 
-
 # Git commit conventions
 
 ## 🚩 Agent Workflow Reminder: Use the Todo List Tool
@@ -13,6 +12,8 @@ description: Conventional commit rules for repository contributions and explicit
 Break down the commit workflow into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
 
 All commits MUST follow the Conventional Commits style for the repository. Commit bodies are optional unless stated below.
+
+**Commit body lines MUST be wrapped to 100 characters or fewer. This is strictly enforced by commitlint and will block commits that exceed this limit.**
 
 Allowed commit types include (but are not limited to): `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`, `ci`, `build`, and `ledger`.
 
@@ -35,17 +36,14 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 
 - Header must be: `<type>(<scope>): <short summary>` where `<scope>` is optional for non-ledger commits.
 - Body is optional for normal commits; include when explanation, provenance, or references are needed.
+- **Each line in the commit body must not exceed 100 characters. This is enforced by commitlint.**
 - Footer may include references (tickets, co-authors) as needed.
 
-## Enforcement guidance (recommended)
+## Enforcement guidance (required)
 
-- Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
-- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run hledger:format` and `pnpm run hledger:check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
-
-- Use `commitlint` + `husky` to enforce commit header patterns and to block ledger transaction commits from having bodies. This repo uses `pnpm` for JavaScript tooling; run `pnpm install` and `pnpm run prepare` to activate Husky hooks locally.
+- This repository uses `commitlint` + `husky` to enforce commit header patterns and body line length (100 chars max), and to block ledger transaction commits from having bodies. This is a hard requirement: commits that do not comply will be rejected.
 
 - Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run hledger:format:check` and `pnpm run hledger:check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
-
   - pnpm install
   - pnpm run markdownlint         # markdown linting
   - pnpm run markdownlint:fix     # optional: auto-fix markdown issues
