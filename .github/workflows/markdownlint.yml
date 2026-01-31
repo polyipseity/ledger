@@ -49,7 +49,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -58,7 +58,7 @@ jobs:
 
       # Specific to this project: set up Python for any scripts that may be needed
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
           cache: "pip"
