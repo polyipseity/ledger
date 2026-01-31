@@ -9,11 +9,28 @@ This file contains rules, clarifications, and examples specific to lending, borr
 
 ## Key Rules
 
-- Use `!` for pending lending/borrowing, `*` for cleared
-- Repayments must update status of related pending transactions
-- Use liability assertion (`= 0.00 <CURRENCY>`) when settling a liability
-- Always use canonical payee names or UUIDs as per SKILL.md
-- Insert transactions in strict chronological order
+**Status markers (`!` for pending, `*` for cleared) must be used ONLY for lending, borrowing, and repayment transactions.**
+
+- For shared/group expenses, use `!` only for the initial transaction where a loan or reimbursement is expected, and `*` only when the loan is repaid or settled.
+- All other transaction types should NOT use status markers unless directly related to a loan or debt that is pending or cleared.
+- Pending transactions (`!`) must be updated to cleared (`*`) when the related repayment or settlement occurs.
+- Status markers should be extremely rare and only appear for the first transaction of borrowing/lending away anything of financial value.
+
+**Examples:**
+
+```hledger
+2026-01-15 ! Friend Lunch                    # Pending loan to friend
+  assets:loans:friends:<uuid>      50.00 HKD
+  assets:cash                     -50.00 HKD
+
+2026-01-20 * Friend Lunch                    # Cleared when repaid
+  assets:loans:friends:<uuid>      50.00 HKD = 0.00 HKD
+  assets:banks:<bank-uuid>        -50.00 HKD
+```
+
+If you see a status marker in any transaction that is not a loan/repayment, it is an error and must be corrected.
+
+Repayments must update status of related pending transactions. Use liability assertion (`= 0.00 <CURRENCY>`) when settling a liability. Always use canonical payee names or UUIDs as per SKILL.md. Insert transactions in strict chronological order.
 
 ### Shared Expense and Repayment Pattern
 
@@ -31,14 +48,14 @@ See editing-guidelines and add-transactions SKILL.md for full details and ration
 - `*` = cleared (verified, all parties settled)
 - no marker = normal transaction
 
-**Update status:** Change `!` to `*` when a pending transaction completes:
+**Update status:** Change `!` to `*` when a pending transaction completes. The repayment transaction (the second in a borrowing/lending pair) must NOT have any status marker. Only the original pending transaction should have a status marker, which is updated to `*` when cleared. The repayment transaction itself should have no status marker.
 
 ```hledger
 2025-01-15 ! Friend Lunch                    # Pending
  assets:loans:friends:<uuid>      50.00 HKD
  assets:cash                     -50.00 HKD
 
-2025-01-20 * Friend Lunch                    # Update to cleared when repaid
+2025-01-20 Friend Lunch                      # Repayment, no status marker
  assets:loans:friends:<uuid>      50.00 HKD = 0.00 HKD
  assets:banks:<bank-uuid>        -50.00 HKD
 ```

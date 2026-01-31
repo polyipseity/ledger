@@ -3,7 +3,7 @@ name: add-transactions
 description: Transcribe transactions from source documents into the hledger ledger. Handles raw data (receipts, invoices, bank statements, OCR text) with proper status markers, tagging, and account registration.
 ---
 
-# Add Transactions Skill (2026-01-26 Consolidated Edition)
+# Add Transactions Skill (2026-02-01 Generalized Edition)
 
 ## Journal File Path Format
 
@@ -25,25 +25,26 @@ Mark each step as in-progress and completed, and update the todo list after each
 
 ## Table of Contents & Theme Files
 
-This skill is organized into theme/aspect-specific files. Always consult all relevant files, as a single transaction may involve multiple aspects:
+This skill is organized into theme/aspect-specific files. It also provides a general framework for automating the import, deduplication, and updating of highly-structured or machine-readable transactions from external sources (such as emails, app notifications, or data exports) into the hledger journal. Always consult all relevant files, as a single transaction may involve multiple aspects:
 
 ### Theme/Aspect Rule Files
 
-- [Food Transactions](./food_transactions.md)
-- [Lending & Borrowing Transactions](./lending_borrowing_transactions.md)
-- [Currency Conversion Transactions](./currency_conversion_transactions.md)
-- [Payee and ID Mapping Rules](./payee_id_mapping_rules.md)
-- [Posting and Tag Validation Rules](./posting_tag_rules.md)
-- [Entity Registration Rules](./entity_registration_rules.md)
-- [Image and Attachment Handling Rules](./image_attachment_rules.md)
+- [Food Transactions](./food_transactions.md) — For all food, drink, and dining-related entries
+- [Lending & Borrowing Transactions](./lending_borrowing_transactions.md) — For loans, repayments, and shared expenses
+- [Currency Conversion Transactions](./currency_conversion_transactions.md) — For any transaction involving currency exchange
+- [Payee and ID Mapping Rules](./payee_id_mapping_rules.md) — For mapping payees and transaction identifiers
+- [Posting and Tag Validation Rules](./posting_tag_rules.md) — For correct account, tag, and posting usage
+- [Entity Registration Rules](./entity_registration_rules.md) — For registering new payees, friends, or entities
+- [Image and Attachment Handling Rules](./image_attachment_rules.md) — For handling receipt images or attachments
+- [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — For automating import of structured transactions (e.g., Octopus eDDA)
 
 Refer to these files for detailed rules, clarifications, and examples. Do not duplicate their content here.
 
 ## Mapping and Translation Files
 
-- [payee_mappings.yml](./payee_mappings.yml)
-- [id_mappings.yml](./id_mappings.yml)
-- [food_translations.yml](./food_translations.yml)
+- [payee_mappings.yml](./payee_mappings.yml) — For mapping merchant/payee names to UUIDs
+- [id_mappings.yml](./id_mappings.yml) — For formatting and mapping transaction/receipt IDs
+- [food_translations.yml](./food_translations.yml) — For translating food/drink item names
 
 Each file contains its own documentation and must be referenced for correct transaction entry. Update only with explicit user approval.
 
@@ -85,6 +86,30 @@ python -m check    # set cwd to scripts/
   - Split all food/drink items into individual tags and maintain their order.
   - Use the most contextually accurate account and tags.
   - Maintain strict formatting and tag order for consistency and readability.
+
+### Status Marker Usage (Critical Correction 2026-02-01)
+
+**Status markers (`!` for pending, `*` for cleared) must be used ONLY for lending, borrowing, and repayment transactions, and only on the initial (pending) transaction.**
+
+- The status marker (`!` or `*`) must NOT be present for the repayment transaction (the second in a borrowing/lending pair). Only the original pending transaction should have a status marker, which is updated to `*` when cleared. The repayment transaction itself should have no status marker.
+- For shared/group expenses, use `!` only for the initial transaction where a loan or reimbursement is expected, and `*` only when the loan is repaid or settled.
+- All other transaction types should NOT use status markers unless directly related to a loan or debt that is pending or cleared.
+- Pending transactions (`!`) must be updated to cleared (`*`) when the related repayment or settlement occurs.
+- Status markers should be extremely rare and only appear for the first transaction of borrowing/lending away anything of financial value.
+
+**Examples:**
+
+```hledger
+2026-01-15 ! Friend Lunch                    # Pending loan to friend
+  assets:loans:friends:<uuid>      50.00 HKD
+  assets:cash                     -50.00 HKD
+
+2026-01-20 * Friend Lunch                    # Cleared when repaid
+  assets:loans:friends:<uuid>      50.00 HKD = 0.00 HKD
+  assets:banks:<bank-uuid>        -50.00 HKD
+```
+
+If you see a status marker in any transaction that is not a loan/repayment, it is an error and must be corrected.
 
 Other previous learnings remain in effect:
 

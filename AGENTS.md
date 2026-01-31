@@ -26,25 +26,25 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 
 Core instructions (`.github/instructions/`):
 
-- **architecture** - File hierarchy, include patterns
-- **transaction-format** - hledger syntax, tags, patterns
-- **account-hierarchy** - All account types (50+ accounts)
-- **developer-workflows** - Scripts, Python patterns, testing
-- **common-workflows** - Practical task guides
-- **editing-guidelines** - Best practices for journal editing
-- **security** - Encryption, UUID privacy
-- **alternatives-journal** - Illiquid vs liquid asset tracking
-- **dependencies** - Required software (hledger, Python, GPG)
-- **git-commits** - Commit conventions
+- [architecture.instructions.md](.github/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
+- [transaction-format.instructions.md](.github/instructions/transaction-format.instructions.md) – Comprehensive guide to hledger transaction syntax, required and optional tags, formatting conventions, and pattern usage for accurate and readable journal entries.
+- [account-hierarchy.instructions.md](.github/instructions/account-hierarchy.instructions.md) – Complete documentation of all account types (over 50), including their purposes, relationships, and meanings within the asset, liability, equity, expense, and revenue categories.
+- [developer-workflows.instructions.md](.github/instructions/developer-workflows.instructions.md) – Covers developer scripts, Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
+- [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) – Step-by-step guides for frequently performed ledger operations, including transaction entry, monthly migration, and script usage, to streamline routine tasks.
+- [editing-guidelines.instructions.md](.github/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with anti-patterns to avoid and tips for structure, assertions, and includes.
+- [security.instructions.md](.github/instructions/security.instructions.md) – Instructions for encryption, UUID privacy, and secure handling of confidential data, ensuring privacy and compliance throughout the ledger.
+- [alternatives-journal.instructions.md](.github/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
+- [dependencies.instructions.md](.github/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
+- [git-commits.instructions.md](.github/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
 
 Agent Skills (`.github/skills/`):
 
-- **add-transactions** - Transcribe transactions from raw data
-- **upsert-octopus-transactions** - Upsert (add or update) Octopus card transactions
-- **match-octopus-statement-transactions** - Match statement rows to journal transactions
-- **monthly-migration** - Monthly close using hledger --migrate
-- **edit-journals** - Edit journals with best practices
-- **validate-journals** - Validate and format before commit
+- [add-transactions](.github/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication.
+- [upsert-octopus-transactions](.github/skills/upsert-octopus-transactions/SKILL.md) – Add or update Octopus card transactions from app history, including transport and reloads, with proper mapping.
+- [match-octopus-statement-transactions](.github/skills/match-octopus-statement-transactions/SKILL.md) – Match Octopus Wallet statement rows to journal transactions and update transaction datetimes for accuracy.
+- [monthly-migration](.github/skills/monthly-migration/SKILL.md) – Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
+- [edit-journals](.github/skills/edit-journals/SKILL.md) – Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
+- [validate-journals](.github/skills/validate-journals/SKILL.md) – Validate and format hledger journals before commit using check/format scripts for consistency.
 
 ## Key Concepts
 
@@ -75,7 +75,7 @@ Agent Skills (`.github/skills/`):
 Skills:
 
 - [add-payee](.github/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
-- [add-transactions](.github/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR) into hledger journal format with correct status, tags, and accounts.
+- [add-transactions](.github/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. Includes a general framework for specialized transaction import and automation.
 - [upsert-octopus-transactions](.github/skills/upsert-octopus-transactions/): Upsert (add or update) Octopus card transactions from app history, including transport and reloads, and update durations.
 - [monthly-migration](.github/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
 - [edit-journals](.github/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.

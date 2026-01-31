@@ -13,6 +13,7 @@ This file contains rules, clarifications, and examples specific to currency conv
 - Use appropriate equity:conversions accounts for each currency
 - Always use canonical payee names or UUIDs as per SKILL.md
 - Insert transactions in strict chronological order
+- Only use status markers for the original pending lending/borrowing transaction (see SKILL.md and lending_borrowing_transactions.md). Repayment transactions must NOT have a status marker. If you see a status marker in any currency conversion or repayment transaction, it is an error and must be corrected.
 
 ### Currency Conversion Procedure
 
