@@ -92,7 +92,7 @@ Instructions:
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Format via VS Code extension or CLI (`pnpm run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. Commit body lines must be wrapped to 100 characters or fewer—this is strictly enforced by commitlint and will block commits that exceed this limit. Before making commits, agents must run the repository formatting and validation steps and use Conventional Commits for commit headers.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines must be wrapped to 100 characters or fewer—this is strictly enforced by commitlint and will block commits that exceed this limit. If a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps and use Conventional Commits for commit headers.
 
 **Todo List Tool Reminder:**
 
