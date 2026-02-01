@@ -32,13 +32,14 @@ This skill is organized into theme/aspect-specific files. It also provides a gen
 - [Food Transactions](./food_transactions.md) — For all food, drink, and dining-related entries
 - [Lending & Borrowing Transactions](./lending_borrowing_transactions.md) — For loans, repayments, and shared expenses
 - [Currency Conversion Transactions](./currency_conversion_transactions.md) — For any transaction involving currency exchange
+- [Platform Transaction & Payout Rules](./platform_payout_transactions.md) — For digital payment platforms (Stripe, PayPal, Square, Alipay, etc.), including both incoming transactions and payouts to bank accounts
 - [Payee and ID Mapping Rules](./payee_id_mapping_rules.md) — For mapping payees and transaction identifiers
 - [Posting and Tag Validation Rules](./posting_tag_rules.md) — For correct account, tag, and posting usage
 - [Entity Registration Rules](./entity_registration_rules.md) — For registering new payees, friends, or entities
 - [Image and Attachment Handling Rules](./image_attachment_rules.md) — For handling receipt images or attachments
 - [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — For automating import of structured transactions (e.g., Octopus eDDA)
 
-Refer to these files for detailed rules, clarifications, and examples. Do not duplicate their content here.
+Refer to these files for detailed rules, clarifications, and examples. Do not duplicate their content here. The platform transaction & payout rules file generalizes patterns for Stripe and similar platforms, and should be consulted for any digital payment platform transaction or payout.
 
 ## Mapping and Translation Files
 
