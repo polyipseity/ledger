@@ -85,6 +85,7 @@ account assets:objects                                                          
 account assets:objects:clothing                                                                   ; type: A
 account assets:objects:consumer electronics                                                       ; type: A
 account assets:objects:decorations                                                                ; type: A
+account assets:objects:food and drinks                                                            ; type: A
 account assets:objects:tools                                                                      ; type: A
 account assets:special                                                                            ; type: A
 account assets:special:rewards                                                                    ; type: A
@@ -177,6 +178,9 @@ account expenses:food and drinks:fruits                                         
 account expenses:food and drinks:snacks                                                           ; type: X
 account expenses:gaming                                                                           ; type: X
 account expenses:gaming:maimai                                                                    ; type: X
+account expenses:gifts                                                                            ; type: X  
+account expenses:gifts:friends                                                                    ; type: X
+account expenses:gifts:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                               ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
 account expenses:incidental                                                                       ; type: X
@@ -435,6 +439,7 @@ payee Vitasoy
 payee Wellcome
 payee Wellent
 payee Wilson
+payee Wonderland Superstore
 payee Yakiniku Like!!
 payee Yamazaki
 payee Yan Chai Hosptial
@@ -519,6 +524,7 @@ payee 麵屋福
 
 tag billing
 tag bounty
+tag discount
 tag eating
 tag food_or_drink
 tag repair

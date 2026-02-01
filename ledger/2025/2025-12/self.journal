@@ -760,7 +760,7 @@ include ../../../preludes/self.journal
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
 
-2025-12-31 ! 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: lending, time: 00:21, timezone: UTC+08:00
+2025-12-31 * 51b339c5-b778-463d-8070-9c18ff6d88c0  ; activity: lending, time: 00:21, timezone: UTC+08:00
     assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0     1 000.00 HKD = 1 000.00 HKD
     assets:cash                                                        -1 000.00 HKD
 
