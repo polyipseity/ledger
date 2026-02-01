@@ -7,7 +7,7 @@
     "markdownlint-cli2": "^0.20.0"
   },
   "lint-staged": {
-    "**/*.journal": [
+    "ledger/**/*.journal": [
       "pnpm run hledger:format",
       "pnpm run hledger:check"
     ],
