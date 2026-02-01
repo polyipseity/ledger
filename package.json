@@ -6,15 +6,6 @@
     "lint-staged": "^16.2.7",
     "markdownlint-cli2": "^0.20.0"
   },
-  "lint-staged": {
-    "ledger/[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]-[0-9][0-9]/**/*.journal": [
-      "pnpm run hledger:format",
-      "pnpm run hledger:check"
-    ],
-    "**/*.{md,markdown}": [
-      "pnpm run markdownlint:fix"
-    ]
-  },
   "name": "ledger",
   "packageManager": "pnpm@10.28.1",
   "private": true,
