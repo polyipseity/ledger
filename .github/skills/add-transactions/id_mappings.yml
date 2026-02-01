@@ -3,6 +3,11 @@
 # Structure: Each payee maps to a prioritized list of identifier orders and optional regex hints.
 # See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
 # KFC: Only use (receipt_id, store_id) for KFC
+"大生生活超市 (DS Groceries)":
+  orders:
+    - [receipt_no]
+  regex:
+    receipt_no: "\\d{7}"
 "KFC":
   orders:
     - [receipt_id, store_id]
@@ -83,3 +88,8 @@
   regex:
     order_no: "OrdNo\\.\\s*(\\d+)"
     table_no: "^(\\d{2})$"
+"Wonderland Superstore":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "\\d{7}"

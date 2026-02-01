@@ -76,6 +76,7 @@ python -m check    # set cwd to scripts/
   - When updating or adding a payee or ID mapping, always update the mapping file after the documentation comment, not before.
 - **Food/Drink Tagging:**
   - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. **Never translate the food_or_drink value unless required by a specific mapping or convention.** Maintain the order of items as they appear on the receipt.
+  - **Never place any itemization, discount, or similar tags (such as `food_or_drink:`, `discount:`, or item codes) in the transaction header.** These must always be placed in posting comments only, never in the header line. This applies to all item, discount, and similar tags, regardless of transaction type or payee. See `posting_tag_rules.md` for details.
   - For food/drink items, omit parenthetical descriptors or prefixes (e.g., omit (早) or 轉 if not part of the item name). For sub-items or substitutions, treat as separate items unless clearly a modifier.
   - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`).
   - If a modifier is missing, check the receipt and add it to the tag as needed.
