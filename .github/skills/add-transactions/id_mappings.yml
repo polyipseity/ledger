@@ -2,6 +2,13 @@
 # Purpose: Defines payee-specific ID extraction and ordering rules for transaction entry.
 # Structure: Each payee maps to a prioritized list of identifier orders and optional regex hints.
 # See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
+# KFC: Only use (receipt_id, store_id) for KFC
+"KFC":
+  orders:
+    - [receipt_id, store_id]
+  regex:
+    receipt_id: "\\d{3}-\\d{3}-\\d{6}"
+    store_id: "K\\d{4}"
 "快樂小羊火鍋餐廳":
   orders:
     - [receipt_no, table_no]
@@ -70,3 +77,9 @@
     transaction_id: "\\d{8}"
     register_id: "\\d{4}"
     table_number: "\\d+"
+"Natong Thai Restaurant":
+  orders:
+    - [order_no, table_no]
+  regex:
+    order_no: "OrdNo\\.\\s*(\\d+)"
+    table_no: "^(\\d{2})$"

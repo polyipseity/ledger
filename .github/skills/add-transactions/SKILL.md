@@ -68,23 +68,27 @@ python -m check    # set cwd to scripts/
 
 ## Lessons Learned & Continuous Improvement
 
-### 2026-01-28 (AI skill update, revised)
+### 2026-02-01 (AI skill update, generalized)
 
 - **Payee and ID Mapping:**
-  - Always check `private.yaml` for payee mappings. If the merchant name or a similar entry is found, use the corresponding UUID as the payee. If not found, use the merchant name.
-  - For receipt/transaction identifiers: Prepend all available identifiers (order number, receipt number, etc.) in parentheses at the start of the payee line. If an `id_mappings.yml` exists, follow its mapping for identifier formatting and order. If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
+  - Always check `private.yaml` and `payee_mappings.yml` for payee mappings. If the merchant name or a similar entry is found, use the mapped canonical name or UUID as the payee. If not found, use the merchant name. **Never use the untranslated merchant name if a mapping exists.**
+  - For receipt/transaction identifiers: Prepend only the identifiers specified by the payee's rule in `id_mappings.yml` (e.g., for KFC, only use (receipt_id, store_id)). If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
+  - When updating or adding a payee or ID mapping, always update the mapping file after the documentation comment, not before.
 - **Food/Drink Tagging:**
-  - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. Do not add translations unless required by convention. Maintain the order of items as they appear on the receipt.
+  - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. **Never translate the food_or_drink value unless required by a specific mapping or convention.** Maintain the order of items as they appear on the receipt.
+  - For food/drink items, omit parenthetical descriptors or prefixes (e.g., omit (早) or 轉 if not part of the item name). For sub-items or substitutions, treat as separate items unless clearly a modifier.
+  - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`).
+  - If a modifier is missing, check the receipt and add it to the tag as needed.
 - **Account and Tag Selection:**
   - Use the most specific and correct account (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
   - Align columns and tags for readability. Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.
 - **Identifiers and Traceability:**
-  - Always include all available receipt, order, or transaction identifiers in the payee line for traceability, following the mapping rules above.
+  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability.
 - **Generalized Learnings:**
-  - Always cross-reference `private.yaml` and `id_mappings.yml` before assigning payees or formatting identifiers.
+  - Always cross-reference `private.yaml`, `payee_mappings.yml`, and `id_mappings.yml` before assigning payees or formatting identifiers.
   - Never assume a payee UUID—always verify or create the mapping as needed.
-  - Split all food/drink items into individual tags and maintain their order.
+  - Split all food/drink items into individual tags and maintain their order, omitting non-item descriptors and using modifiers as appropriate.
   - Use the most contextually accurate account and tags.
   - Maintain strict formatting and tag order for consistency and readability.
 
