@@ -1,5 +1,41 @@
 include ../../../preludes/self.journal
 
+2026-02-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education                                                      -102.00 HKD = -102.00 HKD
+    assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  1 399.60 HKD = 1 399.60 HKD
+    assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                 24 799.02 HKD = 24 799.02 HKD
+    assets:accumulated depreciation                                                                  -3.00 EUR = -3.00 EUR
+    assets:accumulated depreciation                                                              -3 962.72 HKD = -3 962.72 HKD
+    assets:accumulated depreciation                                                              -4 000.00 KRW = -4 000.00 KRW
+    assets:deferred expenses:education:tuition:universities                                     -22 250.00 HKD = -22 250.00 HKD
+    assets:deferred expenses:services:clouds:Apple                                                    8.10 HKD = 8.10 HKD
+    assets:deferred expenses:services:clouds:Google                                                 150.00 HKD = 150.00 HKD
+    assets:deferred expenses:services:internet                                                       -0.30 HKD = -0.30 HKD
+    assets:deferred expenses:services:support                                                       520.49 HKD = 520.49 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                                67 682.35 HKD = 67 682.35 HKD
+    assets:cash                                                                                     130.00 HKD = 130.00 HKD
+    assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f     22 250.00 HKD = 22 250.00 HKD
+    assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5                          42.00 HKD = 42.00 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2                                     130.40 HKD = 130.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521                               128.40 HKD = 128.40 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc                                       36.06 HKD = 36.06 HKD
+    assets:loans:kins:families:51b339c5-b778-463d-8070-9c18ff6d88c0                               3 000.00 HKD = 3 000.00 HKD
+    assets:objects:clothing                                                                       1 038.00 HKD = 1 038.00 HKD
+    assets:objects:consumer electronics                                                           9 608.00 HKD = 9 608.00 HKD
+    assets:objects:decorations                                                                        3.00 EUR = 3.00 EUR
+    assets:objects:tools                                                                          4 000.00 KRW = 4 000.00 KRW
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                          499.00 _PT/E = 499.00 _PT/E
+    assets:special:rewards:club1933:7e6d8351-c575-4d02-bbbb-17bdbf3bedcc                           55.20 _PT/F = 55.20 _PT/F
+    assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                           3 _PT/D = 3 _PT/D
+    assets:deferred assets:deposits:exchange                                                      2 000.00 HKD = 2 000.00 HKD
+    assets:trusts:8f65af3c-57dd-4032-996d-b4ce1c844cc3                                            1 291.15 HKD = 1 291.15 HKD
+    liabilities:accrued expenses:insurances:levy                                                    -11.76 HKD = -11.76 HKD
+    liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25           -38 862.00 HKD = -38 862.00 HKD
+    liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -11 753.14 HKD = -11 753.14 HKD
+    liabilities:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                                -2 000.00 HKD = -2 000.00 HKD
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                                  -619.00 HKD = -619.00 HKD
+    equity:opening/closing balances
+
 2026-02-01 * (pi_3SvjSmBMoBY3wEtc0mRzXhxs) ******@*****.com  ; activity: support, rate: 7.65674, time: 03:04:09, timezone: UTC+08:00
     equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.65674
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       35.92 HKD
