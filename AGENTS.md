@@ -72,6 +72,8 @@ Agent Skills (`.github/skills/`):
 
 > **Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.
 
+**Note:** `pnpm install` runs a `postinstall` hook which will run `python -m pip install -e "[dev]"` to install development extras declared in `pyproject.toml`. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment.
+
 ## Quick Start
 
 Skills:
@@ -86,7 +88,7 @@ Skills:
 Instructions:
 
 - Security: [security.instructions.md](.github/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- Pre-commit: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step pre-commit checklist and common ledger workflows.
+- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `pnpm run prepare` to register hooks). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
 
 ## VS Code Setup
 

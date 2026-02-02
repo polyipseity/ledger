@@ -3,22 +3,22 @@ name: Journal Check & Format
 on:
   push:
     paths:
-      - "ledger/**/*.journal" # journal files to validate correctness/formatting
-      - ".github/workflows/check.yml" # re-run when this workflow file changes
-      - "scripts/**" # changes to check/format scripts affect validation
-      - "**/requirements.txt" # Python deps used by scripts (recursive)
-      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
-      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
-      - "preludes/**" # preludes are included by journals and affect checks/formatting
+      - 'ledger/**/*.journal' # journal files to validate correctness/formatting
+      - '.github/workflows/check.yml' # re-run when this workflow file changes
+      - 'scripts/**' # changes to check/format scripts affect validation
+      - '**/pyproject.toml' # Python deps used by scripts (recursive)
+      - '**/package.json' # pnpm scripts / install commands can change setup (recursive)
+      - '**/pnpm-lock.yaml' # dependency lockfile affecting installation (recursive)
+      - 'preludes/**' # preludes are included by journals and affect checks/formatting
   pull_request:
     paths:
-      - "ledger/**/*.journal" # journal files to validate correctness/formatting
-      - ".github/workflows/check.yml" # re-run when this workflow file changes
-      - "scripts/**" # changes to check/format scripts affect validation
-      - "**/requirements.txt" # Python deps used by scripts (recursive)
-      - "**/package.json" # pnpm scripts / install commands can change setup (recursive)
-      - "**/pnpm-lock.yaml" # dependency lockfile affecting installation (recursive)
-      - "preludes/**" # preludes are included by journals and affect checks/formatting
+      - 'ledger/**/*.journal' # journal files to validate correctness/formatting
+      - '.github/workflows/check.yml' # re-run when this workflow file changes
+      - 'scripts/**' # changes to check/format scripts affect validation
+      - '**/pyproject.toml' # Python deps used by scripts (recursive)
+      - '**/package.json' # pnpm scripts / install commands can change setup (recursive)
+      - '**/pnpm-lock.yaml' # dependency lockfile affecting installation (recursive)
+      - 'preludes/**' # preludes are included by journals and affect checks/formatting
   workflow_dispatch:
 
 permissions:
@@ -41,7 +41,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
-          cache: "pip"
+          cache: 'pip'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -68,7 +68,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
-          cache: "pip"
+          cache: 'pip'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -76,5 +76,5 @@ jobs:
       - name: Install hledger
         run: pnpm run hledger:install
 
-      - name: Check journal formatting
-        run: pnpm run hledger:format:check
+      - name: Check formatting (repo-wide)
+        run: pnpm run format:check

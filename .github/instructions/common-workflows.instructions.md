@@ -52,15 +52,14 @@ python -m decrypt                  # Decrypt private.yaml
 - Never run scripts from the root directory or any other location. Running from the wrong directory will cause include and file discovery errors.
 - Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
 
-## Pre-Commit Checklist
+## Pre-Commit Checklist (Husky + lint-staged)
 
 1. Format Markdown: `pnpm run markdownlint:fix` (optional: auto-fix)
 2. Validate journals: `python -m check`
 3. Format journals: `python -m format`
 4. If edited `private.yaml`: `python -m encrypt`
 5. Review: `git status && git diff`
-6. Prepare hooks: `pnpm install && pnpm run prepare`
-7. Commit: `git commit -S -m "chore: describe changes"`
+6. Prepare hooks: `pnpm install && pnpm run prepare` (registers Husky hooks; lint-staged is configured in `.lintstagedrc.mjs`). Note: `pnpm install` runs `python -m pip install -e "[dev]"` to install development extras declared in `pyproject.toml`. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.7. Commit: `git commit -S -m "chore: describe changes"`
 
 ## Related Documentation
 
