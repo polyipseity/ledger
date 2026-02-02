@@ -1,10 +1,8 @@
-import { FILE_GLOBS as PRETTIER_FILE_GLOBS } from "./.prettierrc.mjs";
-
 /**
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  [PRETTIER_FILE_GLOBS[0]]: [
+  "**/*.{json,yml,yaml,css,scss,html,js,ts,tsx,jsx}": [
     "prettier --write",
   ],
   "**/*.{md,markdown}": [
