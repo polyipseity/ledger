@@ -9,6 +9,8 @@ from logging import INFO as _INFO, basicConfig as _basicConfig, info as _info
 from sys import argv as _argv, exit as _exit
 from typing import Callable as _Call, final as _fin
 
+__all__ = ("Arguments", "main", "parser")
+
 
 @_fin
 @_dc(

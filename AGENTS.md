@@ -66,6 +66,8 @@ Agent Skills (`.github/skills/`):
 
 **Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
 
+**Module exports:** All Python modules in `scripts/` MUST define a module-level `__all__` tuple to explicitly control the module's public exports. If a module has no public exports, use an empty tuple `()`. This helps agents and imports be explicit about available symbols.
+
 **Final Reminder:**
 
 > **Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.

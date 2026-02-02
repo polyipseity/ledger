@@ -13,6 +13,8 @@ from re import MULTILINE, NOFLAG, compile, escape
 from sys import argv as _argv, exit as _exit
 from typing import Callable as _Call, final as _fin
 
+__all__ = ("Arguments", "main", "parser")
+
 _OPENING_BALANCES_REGEX = compile(r"opening balances", NOFLAG)
 _CLOSING_BALANCES_REGEX = compile(r"closing balances", NOFLAG)
 _NUMBER_OF_DIGITS = 2

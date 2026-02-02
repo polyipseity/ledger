@@ -18,6 +18,8 @@ from shutil import which as _which
 from sys import argv as _argv, exit as _exit
 from typing import Callable as _Call, Iterable as _Iter, cast as _cast, final as _fin
 
+__all__ = ("Arguments", "main", "parser")
+
 _SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
 
 

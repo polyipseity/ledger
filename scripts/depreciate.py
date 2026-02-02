@@ -13,6 +13,8 @@ from re import NOFLAG, compile
 from sys import argv as _argv, exit as _exit
 from typing import Callable as _Call, final as _fin
 
+__all__ = ("Arguments", "main", "parser")
+
 _DEPRECIATION_REGEX = compile(r"^\d{4}-\d{2}-\d{2} +(?:[!*] +)?depreciation", NOFLAG)
 _DEPRECIATION_ACCOUNT = "expenses:depreciation"
 _ACCUMULATED_DEPRECIATION_ACCOUNT = "assets:accumulated depreciation"

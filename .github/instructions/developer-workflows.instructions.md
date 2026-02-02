@@ -52,6 +52,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 - Frozen dataclasses: `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)`
 - Concurrency: `asyncio.BoundedSemaphore` limited to CPU count (or 4)
 - I/O: `anyio.Path` for async file operations
+- Module exports: All Python modules in `scripts/` MUST define a module-level `__all__` tuple listing public symbols; use `()` if there are no exports.
 
 ## Pre-Commit Validation
 
