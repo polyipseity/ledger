@@ -8,11 +8,7 @@
 
 **1. When the user explicitly asks to use a skill, before thinking or taking any action, the agent must read the corresponding skill file in full.**
 
-**2. Use the Todo List Tool for all multi-step or complex tasks.**
-    - Plan actionable steps before starting
-    - Mark each step as in-progress and completed as you go
-    - Review and update the todo list after each action
-    - Ensure no steps are missed or left ambiguous
+**2. Use the Todo List Tool for all multi-step or complex tasks.** - Plan actionable steps before starting - Mark each step as in-progress and completed as you go - Review and update the todo list after each action - Ensure no steps are missed or left ambiguous
 
 These steps are critical for agent reliability and maintaining a clear record of progress.
 
@@ -72,7 +68,7 @@ Agent Skills (`.github/skills/`):
 
 > **Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.
 
-**Note:** `pnpm install` runs a `postinstall` hook which will run `python -m pip install -e "[dev]"` to install development extras declared in `pyproject.toml`. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment.
+**Note:** `pnpm install` runs a `postinstall` hook which will run `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment.
 
 ## Quick Start
 

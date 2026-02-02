@@ -3,8 +3,6 @@ name: validate-journals
 description: Validate hledger journal files using check/format scripts. Includes validation procedures and local hook (Husky + lint-staged) verification.
 ---
 
-
-
 # Validate Journals Skill
 
 ## Journal File Path Format
@@ -87,7 +85,7 @@ The formatter normalizes:
 4. git commit             # Commit when clean
 ```
 
-**Setup note:** `pnpm install` will run `python -m pip install -e "[dev]"` to install development extras declared in `pyproject.toml`. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
+**Setup note:** `pnpm install` will run `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new dependency group syntax. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
 
 **Important:** Always set the working directory to `scripts/` using the tool's `cwd` parameter when running any script or wrapper (including `./check`, `check.bat`, etc.). Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default. Running from the wrong directory will cause include and file discovery errors.
 

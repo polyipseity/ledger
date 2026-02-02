@@ -24,7 +24,7 @@
     "hledger:install": "curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger",
     "markdownlint": "markdownlint-cli2",
     "markdownlint:fix": "markdownlint-cli2 --fix",
-    "postinstall": "python -m pip install -e \".[dev]\"",
+    "postinstall": "python -m pip install -e . --group dev",
     "prepare": "husky"
   },
   "type": "module"

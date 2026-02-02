@@ -3,7 +3,6 @@ name: Developer Workflows
 description: Development workflows, utility scripts, code patterns, and testing/validation practices.
 ---
 
-
 # Developer Workflows
 
 ## 🚩 Agent Workflow Reminder: Use the Todo List Tool
@@ -44,6 +43,7 @@ All scripts have three versions: `.sh`, `.bat`, `.py`. Run as `python -m <script
 - `pnpm run format` - Run all formatters (Prettier, Black, isort, Ruff, shfmt, and `scripts/format`) ✅
 
   Note: Prettier's file patterns are centralized in `.prettierrc.mjs`; the CLI is invoked via `prettier --write .` from `package.json` scripts.
+
 - `pnpm run format:check` - Check formatting without modifying (uses Husky + lint-staged in local hooks)
 - `pnpm run commitlint` - Lint commit messages
 
@@ -68,7 +68,7 @@ python -m check        # Validate all journals (set cwd to scripts/)
 git commit -m "message"
 ```
 
-**Setup:** after `pnpm install` the `postinstall` script will run `python -m pip install -e "[dev]"` to install development extras declared in `pyproject.toml`. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `pip install -e "[dev]"` to reproduce the behavior locally). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
+**Setup:** after `pnpm install` the `postinstall` script will run `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new dependency group syntax. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `pip install -e . --group dev` to reproduce the behavior locally). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
 **Script commands: Always run from the `scripts/` directory**
 
 - For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
