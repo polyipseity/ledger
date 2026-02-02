@@ -9,7 +9,7 @@ export default {
     "pnpm run markdownlint:fix",
   ],
   "**/*.py": [
-    "python -m ruff --fix .",
+    "python -m ruff check --fix .",
     "python -m isort .",
     "python -m black ."
   ],

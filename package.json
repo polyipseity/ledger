@@ -16,7 +16,7 @@
     "format:check": "pnpm -s prettier --check \"**/*.{json,yml,yaml,css,scss,html,js,ts,tsx,jsx}\" && python -m ruff check . && pnpm -s hledger:format:check",
     "format:journal": "pnpm run hledger:format",
     "format:js": "prettier --write \"**/*.{json,yml,yaml,css,scss,html,js,ts,tsx,jsx}\"",
-    "format:py": "python -m ruff --fix . || node -e \"\" && python -m isort . || node -e \"\" && python -m black . || node -e \"\"",
+    "format:py": "python -m ruff check --fix . || node -e \"\" && python -m isort . || node -e \"\" && python -m black . || node -e \"\"",
     "hledger:check": "python -m scripts.check",
     "hledger:format": "python -m scripts.format",
     "hledger:format:check": "python -m scripts.format --check",
