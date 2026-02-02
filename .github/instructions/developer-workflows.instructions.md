@@ -40,7 +40,7 @@ All scripts have three versions: `.sh`, `.bat`, `.py`. Run as `python -m <script
 - `pnpm run hledger:check` - Validate journals
 - `pnpm run hledger:format` - Format journals
 - `pnpm run hledger:format:check` - Check formatting
-- `pnpm run format` - Run all formatters (Prettier, Black, isort, Ruff, shfmt, and `scripts/format`) ✅
+- `pnpm run format` - Run all formatters (Prettier, Black, isort, Ruff, and `scripts/format`) ✅
 
   Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`.
 

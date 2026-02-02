@@ -8,9 +8,6 @@ export default {
   "**/*.{md,markdown}": [
     "pnpm run markdownlint:fix",
   ],
-  "**/*.sh": [
-    "shfmt -w"
-  ],
   "**/*.py": [
     "python -m ruff --fix .",
     "python -m isort .",
