@@ -17,8 +17,8 @@ export default {
         'style',
         'test',
         'ledger',
-      ]
-    ]
+      ],
+    ],
   },
   ignores: [(message) => message.includes('Signed-off-by: dependabot[bot]')],
 };

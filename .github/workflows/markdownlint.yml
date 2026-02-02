@@ -13,32 +13,32 @@ name: Markdown lint
 on:
   push:
     paths:
-      - "**/*.md" # all markdown files in the repo
-      - ".github/workflows/markdownlint.yml" # re-run when this workflow file changes
-      - ".markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules
-      - ".markdownlint.json" # alternative json config file name
-      - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
-      - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
-      - "**/.markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules (recursive)
-      - "**/.markdownlint.json" # alternative json config file name (recursive)
-      - "**/.markdownlint-cli2.mjs" # programmatic config (enables gitignore) (recursive)
-      - "**/.markdownlint-cli2.jsonc" # alternate cli2 config filename (recursive)
-      - "**/package.json" # scripts or config in package.json can change the lint command (recursive)
-      - "**/pnpm-lock.yaml" # dependency changes may alter linting behavior or versions (recursive)
+      - '**/*.md' # all markdown files in the repo
+      - '.github/workflows/markdownlint.yml' # re-run when this workflow file changes
+      - '.markdownlint.jsonc' # markdownlint config (jsonc) influences linting rules
+      - '.markdownlint.json' # alternative json config file name
+      - '.markdownlint-cli2.mjs' # programmatic config (enables gitignore)
+      - '.markdownlint-cli2.jsonc' # alternate cli2 config filename
+      - '**/.markdownlint.jsonc' # markdownlint config (jsonc) influences linting rules (recursive)
+      - '**/.markdownlint.json' # alternative json config file name (recursive)
+      - '**/.markdownlint-cli2.mjs' # programmatic config (enables gitignore) (recursive)
+      - '**/.markdownlint-cli2.jsonc' # alternate cli2 config filename (recursive)
+      - '**/package.json' # scripts or config in package.json can change the lint command (recursive)
+      - '**/pnpm-lock.yaml' # dependency changes may alter linting behavior or versions (recursive)
   pull_request:
     paths:
-      - "**/*.md" # all markdown files in the repo
-      - ".github/workflows/markdownlint.yml" # re-run when this workflow file changes
-      - ".markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules
-      - ".markdownlint.json" # alternative json config file name
-      - ".markdownlint-cli2.mjs" # programmatic config (enables gitignore)
-      - ".markdownlint-cli2.jsonc" # alternate cli2 config filename
-      - "**/.markdownlint.jsonc" # markdownlint config (jsonc) influences linting rules (recursive)
-      - "**/.markdownlint.json" # alternative json config file name (recursive)
-      - "**/.markdownlint-cli2.mjs" # programmatic config (enables gitignore) (recursive)
-      - "**/.markdownlint-cli2.jsonc" # alternate cli2 config filename (recursive)
-      - "**/package.json" # scripts or config in package.json can change the lint command (recursive)
-      - "**/pnpm-lock.yaml" # dependency changes may alter linting behavior or versions (recursive)
+      - '**/*.md' # all markdown files in the repo
+      - '.github/workflows/markdownlint.yml' # re-run when this workflow file changes
+      - '.markdownlint.jsonc' # markdownlint config (jsonc) influences linting rules
+      - '.markdownlint.json' # alternative json config file name
+      - '.markdownlint-cli2.mjs' # programmatic config (enables gitignore)
+      - '.markdownlint-cli2.jsonc' # alternate cli2 config filename
+      - '**/.markdownlint.jsonc' # markdownlint config (jsonc) influences linting rules (recursive)
+      - '**/.markdownlint.json' # alternative json config file name (recursive)
+      - '**/.markdownlint-cli2.mjs' # programmatic config (enables gitignore) (recursive)
+      - '**/.markdownlint-cli2.jsonc' # alternate cli2 config filename (recursive)
+      - '**/package.json' # scripts or config in package.json can change the lint command (recursive)
+      - '**/pnpm-lock.yaml' # dependency changes may alter linting behavior or versions (recursive)
   workflow_dispatch:
 
 permissions:
@@ -61,7 +61,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
-          cache: "pip"
+          cache: 'pip'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
