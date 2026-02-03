@@ -97,6 +97,44 @@ include ../../../preludes/self.journal
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093     2 861.80 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings    -2 861.80 HKD
 
+2026-02-02 (41213129, 13) Cafe 100%  ; activity: eating, duration: PT26M39S, eating: breakfast, time: 08:49:21, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: 巴馬臣芝士軟包, food_or_drink: 炒滑蛋, food_or_drink: 熱咖啡 + 多奶, food_or_drink: 蕃茄鮑魚火腿絲通粉
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
+
+2026-02-02 Mass Transit Railway  ; activity: transport, time: 09:47, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-02-02 (5B10612602021353394C18, 8747640135330320260202) Taste  ; activity: eating, eating: lunch, time: 13:53:40, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         32.00 HKD  ; item: OWN RUN SIU MEI BBQ
+    expenses:food and drinks:snacks                                         25.00 HKD  ; item: LA BOULANGERIE BREAD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -57.00 HKD
+
+2026-02-02 Mass Transit Railway  ; activity: transport, time: 19:05, timezone: UTC+08:00
+    expenses:transport:trains                                                4.40 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
+
+2026-02-02 Mass Transit Railway  ; activity: transport, time: 20:16, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2026-02-02 * Sushiro  ; activity: eating, duration: PT1H15M, eating: dinner, time: 20:30, timezone: UTC+08:00
+    expenses:food and drinks:dining                                      83.80 HKD  ; food_or_drink: (unknown)
+    expenses:food and drinks:fees                                         8.40 HKD  ; food_or_drink: 10% service charge
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe      -92.20 HKD = -92.20 HKD
+
+2026-02-02 * McDonald's  ; activity: eating, eating: snacks, time: 22, timezone: UTC+08:00
+    expenses:food and drinks:snacks                                       8.00 HKD  ; food_or_drink: (unknown)
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe       -8.00 HKD = -100.20 HKD
+
+2026-02-02 Mass Transit Railway  ; activity: transport, time: 22:18, timezone: UTC+08:00
+    expenses:transport:trains                                                4.90 HKD
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.90 HKD
+
+2026-02-03 (N20386501540, HD12620302934259) 02f358e9-368a-40e8-875f-12a660a27abe  ; activity: repayment, time: 09:04:09, timezone: UTC+08:00
+    liabilities:loans:friends:02f358e9-368a-40e8-875f-12a660a27abe      100.20 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -100.20 HKD
+
 2026-02-28 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
     assets:accumulated depreciation      -77.29 HKD  ; item: Apple iPad 10th 10.9″ WiFi 256GB(MPQA3ZP/A)Yellow
