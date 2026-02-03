@@ -1,6 +1,7 @@
 from argparse import ArgumentParser, Namespace
 from asyncio import create_task, gather, run
 from calendar import monthrange
+from collections.abc import Callable
 from contextlib import suppress
 from dataclasses import dataclass
 from datetime import datetime
@@ -10,7 +11,7 @@ from inspect import currentframe, getframeinfo
 from logging import INFO, basicConfig, info
 from re import MULTILINE, NOFLAG, compile, escape
 from sys import argv, exit
-from typing import Callable, final
+from typing import final
 
 from anyio import Path
 

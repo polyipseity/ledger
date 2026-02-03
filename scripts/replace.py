@@ -1,12 +1,13 @@
 from argparse import ArgumentParser, Namespace
 from asyncio import create_task, gather, run
+from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
 from glob import iglob
 from inspect import currentframe, getframeinfo
 from logging import INFO, basicConfig, info
 from sys import argv, exit
-from typing import Callable, final
+from typing import final
 
 from anyio import Path
 

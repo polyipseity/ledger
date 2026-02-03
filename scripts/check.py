@@ -1,6 +1,7 @@
 from argparse import ArgumentParser, Namespace
 from asyncio import BoundedSemaphore, create_subprocess_exec, gather, run
 from asyncio.subprocess import DEVNULL, PIPE
+from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
 from glob import iglob
@@ -9,7 +10,7 @@ from logging import INFO, basicConfig, info
 from os import cpu_count
 from shutil import which
 from sys import argv, exit
-from typing import Callable, final
+from typing import final
 
 from anyio import Path
 
