@@ -93,3 +93,14 @@ Always use relative paths with consistent depth (`../` repeated 3 times for mont
 2. **Shared preludes**: Single source of truth for account/commodity definitions reduces duplication and ensures consistency
 3. **Separate alternatives**: Distinct journal stream allows parallel tracking without mixing concepts
 4. **Glob pattern discovery**: Scripts automatically find all monthly journals regardless of year, enabling future-proof operations
+
+## Script Usage Policy
+
+**Always use pnpm script wrappers if available.**
+
+- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
+- For `hledger close --migrate`, run from the repository root as well.
+
+**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.

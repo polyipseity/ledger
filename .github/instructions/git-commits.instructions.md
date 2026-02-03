@@ -56,6 +56,6 @@ Note for agents: when committing ledger transaction changes, follow the single-l
 
 ## Agent / automated commits
 
-Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps (for example: `pnpm run markdownlint`, `pnpm run hledger:format`, `pnpm run hledger:check`).
+Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`). Only use direct Python invocations or script wrappers in `scripts/` if no pnpm script is available, and set cwd to `scripts/`.
 
 When an agent makes a normal (non-ledger) commit and a motivation or rationale is available, the agent SHOULD include that rationale in the commit body. Keep commit bodies concise and wrapped to a reasonable line length. For ledger transaction commits, the existing rule still applies: use the exact single-line `ledger(...)` header and do NOT include a commit body.

@@ -33,32 +33,24 @@ Close previous month and initialize new month with proper balance assertions.
 
 ## Script Usage
 
-**Script commands: Always run from the `scripts/` directory**
+**Script commands: Always use pnpm script wrappers if available**
 
-```powershell
-# Always set cwd to scripts/ for all script commands and wrappers:
-python -m check                    # Validate journals
-python -m format                   # Format journals
-python -m depreciate --from 2025-01 --to 2025-12 "Item" 50.00 HKD  # Depreciate
-python -m shift --from 2025-01 --to 2025-12 "assets:cash" 100.00 HKD  # Shift
-python -m replace "old" "new"     # Find/replace
-python -m encrypt                  # Encrypt private.yaml
-python -m decrypt                  # Decrypt private.yaml
-```
+- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
+- For `hledger close --migrate`, run from the repository root as well.
 
-**Always set the working directory to `scripts/` using the tool's `cwd` parameter when running any script or wrapper (including `./check`, `check.bat`, etc.).**
-
-- Never run scripts from the root directory or any other location. Running from the wrong directory will cause include and file discovery errors.
-- Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
+**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
 ## Pre-Commit Checklist (Husky + lint-staged)
 
 1. Format Markdown: `pnpm run markdownlint:fix` (optional: auto-fix)
-2. Validate journals: `python -m check`
-3. Format journals: `python -m format`
-4. If edited `private.yaml`: `python -m encrypt`
+2. Validate journals: `pnpm run check`
+3. Format journals: `pnpm run format`
+4. If edited `private.yaml`: use `pnpm run encrypt` if available, otherwise `python -m scripts.encrypt` (set cwd)
 5. Review: `git status && git diff`
-6. Prepare hooks: `pnpm install && pnpm run prepare` (registers Husky hooks; lint-staged is configured in `.lintstagedrc.mjs`). Note: `pnpm install` runs `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new dependency group syntax. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.7. Commit: `git commit -S -m "chore: describe changes"`
+6. Prepare hooks: `pnpm install && pnpm run prepare` (registers Husky hooks; lint-staged is configured in `.lintstagedrc.mjs`). Note: `pnpm install` runs `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new dependency group syntax. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
+7. Commit: `git commit -S -m "chore: describe changes"`
 
 ## Related Documentation
 

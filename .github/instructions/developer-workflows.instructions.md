@@ -11,41 +11,51 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 Plan actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure all steps are completed and nothing is forgotten.
 
-## Available Scripts
+## Script Usage Policy
 
-All scripts have three versions: `.sh`, `.bat`, `.py`. Run as `python -m <script>` on all platforms.
+**Always use pnpm script wrappers if available.**
 
-### Validation and Formatting
+- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
+- For `hledger close --migrate`, run from the repository root as well.
 
-- `python -m check` - Validate journals (hledger strict checking)
-- `python -m format` - Auto-format journals (hledger print, sort properties)
-- `python -m format --check` - Validate formatting without modifying
+**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
-### Modifications
+### Validation and Formatting (fallback if no pnpm script)
 
-- `python -m depreciate [--from YYYY-MM] [--to YYYY-MM] ITEM AMOUNT CURRENCY` - Depreciate asset
-- `python -m shift [--from YYYY-MM] [--to YYYY-MM] ACCOUNT AMOUNT CURRENCY` - Shift balances
-- `python -m replace FIND REPLACE` - Find/replace across journals
+- `python -m scripts.check` - Validate journals (hledger strict checking)
+- `python -m scripts.format` - Auto-format journals (hledger print, sort properties)
+- `python -m scripts.format --check` - Validate formatting without modifying
 
-### Security
+### Modifications (fallback if no pnpm script)
 
-- `python -m encrypt` - Encrypt private.yaml
-- `python -m decrypt` - Decrypt private.yaml.gpg
+- `python -m scripts.depreciate [--from YYYY-MM] [--to YYYY-MM] ITEM AMOUNT CURRENCY` - Depreciate asset
+- `python -m scripts.shift [--from YYYY-MM] [--to YYYY-MM] ACCOUNT AMOUNT CURRENCY` - Shift balances
+- `python -m scripts.replace FIND REPLACE` - Find/replace across journals
+
+### Security (fallback if no pnpm script)
+
+- `python -m scripts.encrypt` - Encrypt private.yaml
+- `python -m scripts.decrypt` - Decrypt private.yaml.gpg
 
 ## pnpm Tasks
 
 - `pnpm install` - Install dependencies
-- `pnpm run markdownlint` - Lint markdown
-- `pnpm run markdownlint:fix` - Auto-fix markdown
+- `pnpm run check` - Validate journals and run all checks
+- `pnpm run format` - Run all formatters (journals, markdown, prettier, python)
 - `pnpm run hledger:check` - Validate journals
 - `pnpm run hledger:format` - Format journals
-- `pnpm run hledger:format:check` - Check formatting
-- `pnpm run format` - Run all formatters (Prettier, Black, isort, Ruff, and `scripts/format`) ✅
+- `pnpm run hledger:format:check` - Check journal formatting
+- `pnpm run check:md` - Markdown lint
+- `pnpm run check:prettier` - Prettier check
+- `pnpm run check:py` - Python checks (ruff, isort, black)
+- `pnpm run format:md` - Markdown auto-fix
+- `pnpm run format:prettier` - Prettier auto-fix
+- `pnpm run format:py` - Python auto-fix
+- `pnpm run commitlint` - Lint commit messages
 
   Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`.
-
-- `pnpm run format:check` - Check formatting without modifying (uses Husky + lint-staged in local hooks)
-- `pnpm run commitlint` - Lint commit messages
 
 ## Monthly Journal Discovery
 
@@ -62,8 +72,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 
 ```powershell
 pnpm run format        # Run all formatters (formats files repo-wide)
-pnpm run format:check  # Check formatting without modifying
-python -m check        # Validate all journals (set cwd to scripts/)
+pnpm run check         # Validate all journals and run all checks
 # Fix any errors before commit
 git commit -m "message"
 ```

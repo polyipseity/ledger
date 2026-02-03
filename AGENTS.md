@@ -50,17 +50,14 @@ Agent Skills (`.github/skills/`):
 
 **Journal file naming reminder:** Always use the full path `ledger/[year]/[year]-[month]/[name].journal` when referring to monthly journals, not just `[year]/[year]-[month]/[name].journal`.
 
-**Script commands: Always run from the `scripts/` directory**
+**Script commands: Always use pnpm script wrappers if available**
 
-- For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, `./format`, `format.bat`).
-- **Never run scripts from the root directory or any other location.** Running from the wrong directory will cause include and file discovery errors.
-- Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
-- For `pnpm run hledger:check` and `pnpm run hledger:format`, run from the repository root as these are pnpm scripts.
+- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
-**Shortcut:** You may use the script wrappers from the `scripts/` directory directly (e.g., `./check`, `./format`, `check.bat`, `format.bat`), but you **must** still set the working directory to `scripts/` when using these wrappers.
-
-**Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
+**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
 **Module exports:** All Python modules in `scripts/` MUST define a module-level `__all__` tuple to explicitly control the module's public exports. If a module has no public exports, use an empty tuple `()`. This helps agents and imports be explicit about available symbols.
 
@@ -92,7 +89,7 @@ Instructions:
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Format via VS Code extension or CLI (`pnpm run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines must be wrapped to 100 characters or fewer—this is strictly enforced by commitlint and will block commits that exceed this limit. If a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps and use Conventional Commits for commit headers.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines must be wrapped to 100 characters or fewer—this is strictly enforced by commitlint and will block commits that exceed this limit. If a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`) and use Conventional Commits for commit headers.
 
 **Todo List Tool Reminder:**
 

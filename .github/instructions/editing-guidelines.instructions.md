@@ -31,7 +31,12 @@ account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc ; type: E
 
 See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 
-## Best Practices
+## Script Usage for Validation/Formatting
+
+**Always use pnpm script wrappers if available for validation and formatting before commit.**
+
+- Use `pnpm run check` and `pnpm run format` from the repository root for validation and formatting.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` if no pnpm script is available, and set cwd to `scripts/`.
 
 - Include preludes in monthly journals
 - Maintain balance assertions
