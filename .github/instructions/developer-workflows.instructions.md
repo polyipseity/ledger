@@ -17,6 +17,16 @@ Plan actionable steps, mark each as in-progress and completed, and update the to
 
 - For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
 - Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Exception for lint-staged:** when a command is invoked by `lint-staged` and must receive the list of staged file paths (for example, formatting only staged files), invoke the underlying command directly (for example `python -m scripts.format`) rather than `pnpm run <script>` so the staged file paths are forwarded as argv. `pnpm run` does not reliably forward arbitrary file arguments in this context. Recommended lint-staged invocations in this repository:
+  - **Markdown:** `markdownlint-cli2 --fix`
+  - **Prettier:** `prettier --write`
+  - **Python formatters:** run each as a separate command so each receives the file list:
+    - `python -m ruff check --fix`
+    - `python -m isort`
+    - `python -m black`
+  - **Journals:** `python -m scripts.format` (accepts file args)
+
+  Note: When listing multiple commands for the same glob in `lint-staged`, provide them as an array so each command is executed with the staged file list appended.
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 

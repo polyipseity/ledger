@@ -6,14 +6,30 @@ import { FILE_GLOBS } from './.markdownlint-cli2.mjs';
 const MD_GLOB_KEY = `**/*.{${FILE_GLOBS.map((g) => g.replace('**/*.', '')).join(',')}}`;
 
 /**
+ * Lint-staged configuration.
+ *
+ * Note: lint-staged appends the list of staged file paths to the command it runs.
+ * For commands that must receive that file list (formatters or linters that
+ * operate on provided files), prefer invoking the underlying CLI directly so
+ * lint-staged's file arguments are forwarded. Examples: `prettier --write`,
+ * `markdownlint-cli2 --fix`, `python -m scripts.format`, `python -m ruff check --fix`.
+ * Avoid `pnpm run <script>` for commands that must operate on the staged file
+ * list because `pnpm run` may not reliably forward arbitrary file arguments.
+ *
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  [MD_GLOB_KEY]: ['pnpm run format:md'],
+  [MD_GLOB_KEY]: ['markdownlint-cli2 --fix'],
   '**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}':
-    ['pnpm run format:prettier'],
-  '**/*.{py,pyi,pyw,pyx}': ['pnpm run format:py'],
+    ['prettier --write'],
+  '**/*.{py,pyi,pyw,pyx}': [
+    // Run each Python formatter as its own command so lint-staged appends
+    // the staged file list to each invocation (ruff, isort, black).
+    'python -m ruff check --fix',
+    'python -m isort',
+    'python -m black',
+  ],
   'ledger/[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]-[0-9][0-9]/**/*.journal': [
-    'pnpm run format:journal',
+    'python -m scripts.format',
   ],
 };
