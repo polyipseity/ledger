@@ -55,7 +55,7 @@ Plan actionable steps, mark each as in-progress and completed, and update the to
 - `pnpm run format:py` - Python auto-fix
 - `pnpm run commitlint` - Lint commit messages
 
-  Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`.
+  Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`. The Prettier file globs have been expanded to include additional file types (for example: astro, graphql, json5, mdx, svelte, vue, xml) to ensure broader formatting coverage.
 
 ## Monthly Journal Discovery
 
