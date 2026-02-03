@@ -43,9 +43,16 @@ Refer to these files for detailed rules, clarifications, and examples. Do not du
 
 ## Mapping and Translation Files
 
-- [payee_mappings.yml](./payee_mappings.yml) — For mapping merchant/payee names to UUIDs
-- [id_mappings.yml](./id_mappings.yml) — For formatting and mapping transaction/receipt IDs
-- [food_translations.yml](./food_translations.yml) — For translating food/drink item names
+- [payee_mappings.yml](./payee_mappings.yml) — For mapping payee aliases, translations, and alternate names to canonical payee names. This is **not** for UUID mapping or ID mapping. Always use this file to normalize payee names in transactions.
+- [id_mappings.yml](./id_mappings.yml) — For formatting and mapping transaction/receipt IDs (e.g., which identifiers to include in the payee line, and their order/format). This is **not** for payee name normalization or UUID mapping.
+- [food_translations.yml](./food_translations.yml) — For translating food/drink item names only.
+- [private.yaml] — For mapping payee names or people to UUIDs for privacy and entity registration. This is **not** for payee name normalization or ID mapping.
+
+**Clarification:**
+
+- Use `payee_mappings.yml` to map any payee alias, translation, or alternate name to the canonical payee name for all transaction entries. Never use untranslated or unnormalized payee names if a mapping exists.
+- Use `private.yaml` only for UUID/entity mapping (e.g., friends, people, or confidential payees), not for payee name normalization or ID mapping.
+- Use `id_mappings.yml` only for specifying which transaction/receipt IDs to include in the payee line, and their order/format, not for payee name normalization or UUID mapping.
 
 Each file contains its own documentation and must be referenced for correct transaction entry. Update only with explicit user approval.
 
@@ -70,10 +77,12 @@ python -m check    # set cwd to scripts/
 
 ### 2026-02-01 (AI skill update, generalized)
 
-- **Payee and ID Mapping:**
-  - Always check `private.yaml` and `payee_mappings.yml` for payee mappings. If the merchant name or a similar entry is found, use the mapped canonical name or UUID as the payee. If not found, use the merchant name. **Never use the untranslated merchant name if a mapping exists.**
+- **Payee Mapping, UUID Mapping, and ID Mapping (Critical Distinction):**
+  - **Payee mapping**: Always check `payee_mappings.yml` for payee aliases, translations, or alternate names. If the merchant name or a similar entry is found, use the mapped canonical payee name in the transaction. If not found, use the merchant name as-is. **Never use the untranslated or unnormalized payee name if a mapping exists.**
+  - **UUID mapping**: Use `private.yaml` only for mapping payees or people to UUIDs for privacy or entity registration. This is for internal entity tracking, not for payee name normalization or ID mapping.
+  - **ID mapping**: Use `id_mappings.yml` only to determine which transaction/receipt IDs to include in the payee line, and their order/format. This is not for payee name normalization or UUID mapping.
   - For receipt/transaction identifiers: Prepend only the identifiers specified by the payee's rule in `id_mappings.yml` (e.g., for KFC, only use (receipt_id, store_id)). If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
-  - When updating or adding a payee or ID mapping, always update the mapping file after the documentation comment, not before.
+  - When updating or adding a payee, UUID, or ID mapping, always update the relevant mapping file after the documentation comment, not before.
 - **Food/Drink Tagging:**
   - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. **Never translate the food_or_drink value unless required by a specific mapping or convention.** Maintain the order of items as they appear on the receipt.
   - **Never place any itemization, discount, or similar tags (such as `food_or_drink:`, `discount:`, or item codes) in the transaction header.** These must always be placed in posting comments only, never in the header line. This applies to all item, discount, and similar tags, regardless of transaction type or payee. See `posting_tag_rules.md` for details.

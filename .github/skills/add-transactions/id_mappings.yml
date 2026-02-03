@@ -46,11 +46,12 @@
     transaction_id: '[0-9A-Z]{10,}'
     bill_number: "\\d{3}-\\d{6}"
     table_number: "\\d+"
+# Taste: Use (transaction_id, terminal_id) in this order. transaction_id is the 22-character alphanumeric code (e.g., 5B10612602021353394C18), terminal_id is the 22-digit numeric code (e.g., 8747640135330320260202). Only these two should be included in the payee line, in this order.
 'Taste':
   orders:
     - [transaction_id, terminal_id]
   regex:
-    transaction_id: '[0-9A-Z]{21}'
+    transaction_id: '[0-9A-Z]{22}'
     terminal_id: "\\d{22}"
 "天仁茗茶 (TenRen's Tea)":
   orders:
