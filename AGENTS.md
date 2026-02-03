@@ -59,7 +59,7 @@ Agent Skills (`.github/skills/`):
 
 **Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
-**Module exports:** All Python modules in `scripts/` MUST define a module-level `__all__` tuple to explicitly control the module's public exports. If a module has no public exports, use an empty tuple `()`. This helps agents and imports be explicit about available symbols.
+**Module exports:** All Python modules in `scripts/` MUST define a module-level `__all__` tuple to explicitly control the module's public exports. If a module has no public exports, use an empty tuple `()`. This helps agents and imports be explicit about available symbols. Do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`). Instead import names normally and use `__all__` to control what the module exports.
 
 **Final Reminder:**
 

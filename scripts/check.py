@@ -1,35 +1,25 @@
-from argparse import ArgumentParser as _ArgParser
-from argparse import Namespace as _NS
-from asyncio import BoundedSemaphore as _BSemp
-from asyncio import create_subprocess_exec as _new_sproc
-from asyncio import gather as _gather
-from asyncio import run as _run
-from asyncio.subprocess import DEVNULL as _DEVNULL
-from asyncio.subprocess import PIPE as _PIPE
-from dataclasses import dataclass as _dc
-from functools import wraps as _wraps
-from glob import iglob as _iglob
-from inspect import currentframe as _curframe
-from inspect import getframeinfo as _frameinfo
-from logging import INFO as _INFO
-from logging import basicConfig as _basicConfig
-from logging import info as _info
-from os import cpu_count as _cpu_c
-from shutil import which as _which
-from sys import argv as _argv
-from sys import exit as _exit
-from typing import Callable as _Call
-from typing import final as _fin
+from argparse import ArgumentParser, Namespace
+from asyncio import BoundedSemaphore, create_subprocess_exec, gather, run
+from asyncio.subprocess import DEVNULL, PIPE
+from dataclasses import dataclass
+from functools import wraps
+from glob import iglob
+from inspect import currentframe, getframeinfo
+from logging import INFO, basicConfig, info
+from os import cpu_count
+from shutil import which
+from sys import argv, exit
+from typing import Callable, final
 
-from anyio import Path as _Path
+from anyio import Path
 
 __all__ = ("Arguments", "main", "parser")
 
-_SUBPROCESS_SEMAPHORE = _BSemp(_cpu_c() or 4)
+_SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
 
 
-@_fin
-@_dc(
+@final
+@dataclass(
     init=True,
     repr=True,
     eq=True,
@@ -45,35 +35,35 @@ class Arguments:
 
 
 async def main(args: Arguments):
-    frame = _curframe()
+    frame = currentframe()
     if frame is None:
         raise ValueError(frame)
-    folder = _Path(_frameinfo(frame).filename).parent
+    folder = Path(getframeinfo(frame).filename).parent
 
     if args.files:
-        journals = await _gather(
-            *(_Path(path).resolve(strict=True) for path in args.files)
+        journals = await gather(
+            *(Path(path).resolve(strict=True) for path in args.files)
         )
     else:
-        journals = await _gather(
+        journals = await gather(
             *(
-                _Path(folder.parent, path).resolve(strict=True)
-                for path in _iglob(
+                Path(folder.parent, path).resolve(strict=True)
+                for path in iglob(
                     "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
                     root_dir=folder.parent,
                     recursive=True,
                 )
             )
         )
-    _info(f'journals: {", ".join(map(str, journals))}')
+    info(f'journals: {", ".join(map(str, journals))}')
 
-    hledger_prog = _which("hledger")
+    hledger_prog = which("hledger")
     if hledger_prog is None:
         raise FileNotFoundError(hledger_prog)
 
-    async def checkJournal(journal: _Path):
+    async def checkJournal(journal: Path):
         async with _SUBPROCESS_SEMAPHORE:
-            proc = await _new_sproc(
+            proc = await create_subprocess_exec(
                 hledger_prog,
                 "--file",
                 journal,
@@ -88,9 +78,9 @@ async def main(args: Arguments):
                 "parseable",
                 "payees",
                 "tags",
-                stdin=_DEVNULL,
-                stdout=_PIPE,
-                stderr=_PIPE,
+                stdin=DEVNULL,
+                stdout=PIPE,
+                stderr=PIPE,
             )
             _stdout, stderr = (
                 std.decode().replace("\r\n", "\n") for std in await proc.communicate()
@@ -100,19 +90,19 @@ async def main(args: Arguments):
 
     errors = tuple(
         err
-        for err in await _gather(*map(checkJournal, journals), return_exceptions=True)
+        for err in await gather(*map(checkJournal, journals), return_exceptions=True)
         if err
     )
     if errors:
         raise BaseExceptionGroup("", errors)
 
-    _exit(0)
+    exit(0)
 
 
-def parser(parent: _Call[..., _ArgParser] | None = None):
-    prog = _argv[0]
+def parser(parent: Callable[..., ArgumentParser] | None = None):
+    prog = argv[0]
 
-    parser = (_ArgParser if parent is None else parent)(
+    parser = (ArgumentParser if parent is None else parent)(
         prog=prog,
         description="check journals",
         add_help=True,
@@ -120,8 +110,8 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
         exit_on_error=False,
     )
 
-    @_wraps(main)
-    async def invoke(ns: _NS):
+    @wraps(main)
+    async def invoke(ns: Namespace):
         await main(Arguments(files=getattr(ns, "files", None)))
 
     parser.add_argument(
@@ -135,7 +125,7 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
 
 
 if __name__ == "__main__":
-    _basicConfig(level=_INFO)
-    entry = parser().parse_args(_argv[1:])
+    basicConfig(level=INFO)
+    entry = parser().parse_args(argv[1:])
     # maintain compatibility with existing invocation pattern
-    _run(entry.invoke(entry))
+    run(entry.invoke(entry))

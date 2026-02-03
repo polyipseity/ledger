@@ -1,28 +1,20 @@
-from argparse import ArgumentParser as _ArgParser
-from argparse import Namespace as _NS
-from asyncio import create_task
-from asyncio import gather as _gather
-from asyncio import run as _run
-from dataclasses import dataclass as _dc
-from functools import wraps as _wraps
-from glob import iglob as _iglob
-from inspect import currentframe as _curframe
-from inspect import getframeinfo as _frameinfo
-from logging import INFO as _INFO
-from logging import basicConfig as _basicConfig
-from logging import info as _info
-from sys import argv as _argv
-from sys import exit as _exit
-from typing import Callable as _Call
-from typing import final as _fin
+from argparse import ArgumentParser, Namespace
+from asyncio import create_task, gather, run
+from dataclasses import dataclass
+from functools import wraps
+from glob import iglob
+from inspect import currentframe, getframeinfo
+from logging import INFO, basicConfig, info
+from sys import argv, exit
+from typing import Callable, final
 
-from anyio import Path as _Path
+from anyio import Path
 
 __all__ = ("Arguments", "main", "parser")
 
 
-@_fin
-@_dc(
+@final
+@dataclass(
     init=True,
     repr=True,
     eq=True,
@@ -39,24 +31,24 @@ class Arguments:
 
 
 async def main(args: Arguments):
-    frame = _curframe()
+    frame = currentframe()
     if frame is None:
         raise ValueError(frame)
-    folder = _Path(_frameinfo(frame).filename).parent
+    folder = Path(getframeinfo(frame).filename).parent
 
-    journals = await _gather(
+    journals = await gather(
         *(
-            _Path(folder.parent, path).resolve(strict=True)
-            for path in _iglob(
+            Path(folder.parent, path).resolve(strict=True)
+            for path in iglob(
                 "**/*.journal",
                 root_dir=folder.parent,
                 recursive=True,
             )
         )
     )
-    _info(f'journals: {", ".join(map(str, journals))}')
+    info(f'journals: {", ".join(map(str, journals))}')
 
-    async def replaceInJournal(journal: _Path):
+    async def replaceInJournal(journal: Path):
         async with await journal.open(
             mode="r+t", encoding="UTF-8", errors="strict", newline=None
         ) as file:
@@ -72,7 +64,7 @@ async def main(args: Arguments):
 
     formatErrs = tuple(
         err
-        for err in await _gather(
+        for err in await gather(
             *map(replaceInJournal, journals), return_exceptions=True
         )
         if err
@@ -80,13 +72,13 @@ async def main(args: Arguments):
     if formatErrs:
         raise BaseExceptionGroup("", formatErrs)
 
-    _exit(0)
+    exit(0)
 
 
-def parser(parent: _Call[..., _ArgParser] | None = None):
-    prog = _argv[0]
+def parser(parent: Callable[..., ArgumentParser] | None = None):
+    prog = argv[0]
 
-    parser = (_ArgParser if parent is None else parent)(
+    parser = (ArgumentParser if parent is None else parent)(
         prog=prog,
         description="replace in journals",
         add_help=True,
@@ -104,8 +96,8 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
         help="replacement text",
     )
 
-    @_wraps(main)
-    async def invoke(ns: _NS):
+    @wraps(main)
+    async def invoke(ns: Namespace):
         await main(Arguments(find=ns.find, replace=ns.replace))
 
     parser.set_defaults(invoke=invoke)
@@ -113,6 +105,6 @@ def parser(parent: _Call[..., _ArgParser] | None = None):
 
 
 if __name__ == "__main__":
-    _basicConfig(level=_INFO)
-    entry = parser().parse_args(_argv[1:])
-    _run(entry.invoke(entry))
+    basicConfig(level=INFO)
+    entry = parser().parse_args(argv[1:])
+    run(entry.invoke(entry))
