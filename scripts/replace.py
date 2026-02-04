@@ -1,15 +1,20 @@
 from argparse import ArgumentParser, Namespace
-from asyncio import create_task, gather, run
+from asyncio import run
 from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
-from glob import iglob
-from inspect import currentframe, getframeinfo
 from logging import INFO, basicConfig, info
 from sys import argv, exit
 from typing import final
 
 from anyio import Path
+
+from .util import (
+    file_update_if_changed,
+    find_all_journals,
+    gather_and_raise,
+    get_script_folder,
+)
 
 __all__ = ("Arguments", "main", "parser")
 
@@ -32,46 +37,18 @@ class Arguments:
 
 
 async def main(args: Arguments):
-    frame = currentframe()
-    if frame is None:
-        raise ValueError(frame)
-    folder = Path(getframeinfo(frame).filename).parent
+    folder = get_script_folder()
 
-    journals = await gather(
-        *(
-            Path(folder.parent, path).resolve(strict=True)
-            for path in iglob(
-                "**/*.journal",
-                root_dir=folder.parent,
-                recursive=True,
-            )
-        )
-    )
+    journals = await find_all_journals(folder)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def replaceInJournal(journal: Path):
-        async with await journal.open(
-            mode="r+t", encoding="UTF-8", errors="strict", newline=None
-        ) as file:
-            read = await file.read()
-            seek = create_task(file.seek(0))
-            try:
-                if (text := read.replace(args.find, args.replace)) != read:
-                    await seek
-                    await file.write(text)
-                    await file.truncate()
-            finally:
-                seek.cancel()
+    async def replace_in_journal(journal: Path):
+        def updater(read: str) -> str:
+            return read.replace(args.find, args.replace)
 
-    formatErrs = tuple(
-        err
-        for err in await gather(
-            *map(replaceInJournal, journals), return_exceptions=True
-        )
-        if err
-    )
-    if formatErrs:
-        raise BaseExceptionGroup("", formatErrs)
+        await file_update_if_changed(journal, updater)
+
+    await gather_and_raise(*map(replace_in_journal, journals))
 
     exit(0)
 

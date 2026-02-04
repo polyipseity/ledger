@@ -1,22 +1,74 @@
 from argparse import ArgumentParser, Namespace
-from asyncio import BoundedSemaphore, create_subprocess_exec, create_task, gather, run
-from asyncio.subprocess import DEVNULL, PIPE
+from asyncio import run
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from functools import wraps
-from glob import iglob
-from inspect import currentframe, getframeinfo
 from logging import INFO, basicConfig, info
-from os import cpu_count
-from shutil import which
 from sys import argv, exit
-from typing import cast, final
+from typing import final
 
 from anyio import Path
 
+from .util import (
+    file_update_if_changed,
+    find_monthly_journals,
+    gather_and_raise,
+    get_script_folder,
+    run_hledger,
+)
+
 __all__ = ("Arguments", "main", "parser")
 
-_SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
+
+def _sort_props(line: str) -> str:
+    """Format a single line comments by grouping and sorting key:value properties.
+
+    The function accepts lines of the form ``<code>  ; <comment>`` and will
+    group consecutive ``key:value`` segments, sort properties within each
+    group by key, and reassemble the comment in a consistent, human-friendly
+    order. Lines without the ``  ;`` separator are returned unchanged.
+    """
+    components = line.split("  ;", 1)
+    if len(components) != 2:
+        return line
+    code, cmt = components
+
+    formatted_parts: list[str] = []
+    for part in _group_props(cmt.split(",")):
+        if isinstance(part, str):
+            formatted_parts.append(part.strip())
+            continue
+        # part is a list[tuple[str,str]] - sort by key then join
+        formatted_parts.append(
+            ", ".join(
+                ": ".join(prop)
+                for prop in sorted(tuple(cmp.strip() for cmp in grp) for grp in part)
+            )
+        )
+
+    return f"{code}  ; {', '.join(formatted_parts)}"
+
+
+def _group_props(sections: Iterable[str]):
+    """Yield grouped property parts used by the formatter.
+
+    The helper mirrors the previous inner helper in `sortProps`, grouping
+    consecutive `key:value` pairs and yielding either the key (str) or a
+    list of `(key, value)` tuples when appropriate. Extracted to make unit
+    testing straightforward.
+    """
+    ret: list[tuple[str, str]] = []
+    for section in sections:
+        sec = tuple(section.split(":", 1))
+        if len(sec) == 2:
+            ret.append(sec)
+            continue
+        if ret:
+            yield ret
+            ret = []
+        yield sec[0]
+    if ret:
+        yield ret
 
 
 @final
@@ -33,127 +85,43 @@ _SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
 )
 class Arguments:
     check: bool
-    files: list[str] | None = None
+    files: Iterable[str] | None = None
 
 
-async def main(args: Arguments):
-    frame = currentframe()
-    if frame is None:
-        raise ValueError(frame)
-    folder = Path(getframeinfo(frame).filename).parent
+async def _format_journal(journal: Path, unformatted_files: list[Path], check: bool):
+    stdout, stderr, returncode = await run_hledger(journal, "print")
+    # `run_hledger` raises a CalledProcessError on non-zero exit by default,
+    # so no explicit returncode check is necessary here.
 
-    if args.files:
-        journals = await gather(
-            *(Path(path).resolve(strict=True) for path in args.files)
+    def updater(read: str) -> str:
+        header = "\n".join(
+            line for line in read.splitlines() if line.startswith("include ")
         )
-    else:
-        journals = await gather(
-            *(
-                Path(folder.parent, path).resolve(strict=True)
-                for path in iglob(
-                    "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
-                    root_dir=folder.parent,
-                    recursive=True,
-                )
-            )
-        )
-    info(f'journals: {", ".join(map(str, journals))}')
-
-    hledger_prog = which("hledger")
-    if hledger_prog is None:
-        raise FileNotFoundError(hledger_prog)
-
-    unformatted_files = list[Path]()
-
-    async def formatJournal(journal: Path):
-        async with _SUBPROCESS_SEMAPHORE:
-            proc = await create_subprocess_exec(
-                hledger_prog,
-                "--file",
-                journal,
-                "--strict",
-                "print",
-                stdin=DEVNULL,
-                stdout=PIPE,
-                stderr=PIPE,
-            )
-            stdout, stderr = (
-                std.decode().replace("\r\n", "\n") for std in await proc.communicate()
-            )
-            if await proc.wait():
-                raise ChildProcessError(proc.returncode, stderr)
-
-        async with await journal.open(
-            mode="r+t", encoding="UTF-8", errors="strict", newline=None
-        ) as file:
-            read = await file.read()
-            seek = create_task(file.seek(0))
-            try:
-                header = "\n".join(
-                    line for line in read.splitlines() if line.startswith("include ")
-                )
-                text = f"""{header}
+        text = f"""{header}
 
 {stdout.strip()}
 
 """
 
-                def sortProps(line: str):
-                    components = line.split("  ;", 1)
-                    if len(components) != 2:
-                        return line
-                    code, cmt = components
+        formatted_text = "\n".join(map(_sort_props, text.splitlines()))
+        return formatted_text
 
-                    def group(sections: Iterable[str]):
-                        ret = list[tuple[str, str]]()
-                        for section in sections:
-                            section = cast(
-                                tuple[str] | tuple[str, str],
-                                tuple(section.split(":", 1)),
-                            )
-                            if len(section) == 2:
-                                ret.append(section)
-                                continue
-                            if ret:
-                                yield ret
-                                ret = []
-                            yield section[0]
-                        if ret:
-                            yield ret
+    changed = await file_update_if_changed(journal, updater)
+    if changed and check:
+        unformatted_files.append(journal)
 
-                    return f"""{code}  {f'''; {", ".join(
-                        group.strip()
-                        if isinstance(group, str)
-                        else ", ".join(
-                            ": ".join(prop)
-                            for prop in sorted(
-                                tuple(cmp.strip() for cmp in group) for group in group
-                            )
-                        )
-                        for group in group(cmt.split(","))
-                    )}'''.strip()}"""
 
-                formatted_text = "\n".join(map(sortProps, text.splitlines()))
-                # Normalize line endings for comparison
-                normalized_read = read.replace("\r\n", "\n")
+async def main(args: Arguments):
+    folder = get_script_folder()
 
-                if formatted_text != normalized_read:
-                    if args.check:
-                        unformatted_files.append(journal)
-                    else:
-                        await seek
-                        await file.write(formatted_text)
-                        await file.truncate()
-            finally:
-                seek.cancel()
+    journals = await find_monthly_journals(folder, args.files)
+    info(f'journals: {", ".join(map(str, journals))}')
 
-    errors = tuple(
-        err
-        for err in await gather(*map(formatJournal, journals), return_exceptions=True)
-        if err
+    unformatted_files = list[Path]()
+
+    await gather_and_raise(
+        *(_format_journal(j, unformatted_files, args.check) for j in journals)
     )
-    if errors:
-        raise BaseExceptionGroup("", errors)
 
     if args.check and unformatted_files:
         print("The following files are not properly formatted:")

@@ -1,22 +1,22 @@
 from argparse import ArgumentParser, Namespace
-from asyncio import BoundedSemaphore, create_subprocess_exec, gather, run
-from asyncio.subprocess import DEVNULL, PIPE
-from collections.abc import Callable
+from asyncio import run
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from functools import wraps
-from glob import iglob
-from inspect import currentframe, getframeinfo
 from logging import INFO, basicConfig, info
-from os import cpu_count
-from shutil import which
 from sys import argv, exit
 from typing import final
 
 from anyio import Path
 
-__all__ = ("Arguments", "main", "parser")
+from .util import (
+    find_monthly_journals,
+    gather_and_raise,
+    get_script_folder,
+    run_hledger,
+)
 
-_SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
+__all__ = ("Arguments", "main", "parser")
 
 
 @final
@@ -32,70 +32,31 @@ _SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
     slots=True,
 )
 class Arguments:
-    files: list[str] | None = None
+    files: Iterable[str] | None = None
 
 
 async def main(args: Arguments):
-    frame = currentframe()
-    if frame is None:
-        raise ValueError(frame)
-    folder = Path(getframeinfo(frame).filename).parent
+    folder = get_script_folder()
 
-    if args.files:
-        journals = await gather(
-            *(Path(path).resolve(strict=True) for path in args.files)
-        )
-    else:
-        journals = await gather(
-            *(
-                Path(folder.parent, path).resolve(strict=True)
-                for path in iglob(
-                    "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal",
-                    root_dir=folder.parent,
-                    recursive=True,
-                )
-            )
-        )
+    journals = await find_monthly_journals(folder, args.files)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    hledger_prog = which("hledger")
-    if hledger_prog is None:
-        raise FileNotFoundError(hledger_prog)
+    async def check_journal(journal: Path):
+        await run_hledger(
+            journal,
+            "check",
+            "accounts",
+            "assertions",
+            "autobalanced",
+            "balanced",
+            "commodities",
+            "ordereddates",
+            "parseable",
+            "payees",
+            "tags",
+        )
 
-    async def checkJournal(journal: Path):
-        async with _SUBPROCESS_SEMAPHORE:
-            proc = await create_subprocess_exec(
-                hledger_prog,
-                "--file",
-                journal,
-                "--strict",
-                "check",
-                "accounts",
-                "assertions",
-                "autobalanced",
-                "balanced",
-                "commodities",
-                "ordereddates",
-                "parseable",
-                "payees",
-                "tags",
-                stdin=DEVNULL,
-                stdout=PIPE,
-                stderr=PIPE,
-            )
-            _stdout, stderr = (
-                std.decode().replace("\r\n", "\n") for std in await proc.communicate()
-            )
-            if await proc.wait():
-                raise ChildProcessError(proc.returncode, stderr)
-
-    errors = tuple(
-        err
-        for err in await gather(*map(checkJournal, journals), return_exceptions=True)
-        if err
-    )
-    if errors:
-        raise BaseExceptionGroup("", errors)
+    await gather_and_raise(*map(check_journal, journals))
 
     exit(0)
 
