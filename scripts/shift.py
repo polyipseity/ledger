@@ -1,3 +1,12 @@
+"""Shift account balances within monthly journal files.
+
+This script adjusts account balances found in monthly journal files by a
+fixed amount. The CLI supports limiting the affected journals by inclusive
+start/end datetimes. Typical invocation is:
+
+    python -m scripts.shift <account> <amount> <currency>
+"""
+
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from collections.abc import Callable
@@ -43,6 +52,16 @@ _CLOSING_BALANCES_REGEX = compile(r"closing balances", NOFLAG)
     slots=True,
 )
 class Arguments:
+    """Command-line arguments container for `scripts.shift`.
+
+    Attributes:
+        from_datetime: Inclusive start datetime to select journals.
+        to_datetime: Inclusive end datetime to select journals.
+        account: Account name whose balance lines will be shifted.
+        amount: Amount to add/subtract on each applicable balance line.
+        currency: Currency code used in the journal lines.
+    """
+
     from_datetime: datetime | None
     to_datetime: datetime | None
     account: str
@@ -51,6 +70,13 @@ class Arguments:
 
 
 async def main(args: Arguments):
+    """Shift balances in monthly journals.
+
+    Iterates applicable monthly journals and adjusts matching account balance
+    lines by the provided amount and currency. Changes are written only when
+    the journal content differs from the modified text.
+    """
+
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, None)
@@ -99,6 +125,12 @@ async def main(args: Arguments):
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None):
+    """Construct and return the CLI ArgumentParser for the shift script.
+
+    The parser sets an `invoke` coroutine as the default which calls
+    :func:`main` when executed.
+    """
+
     prog = argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(

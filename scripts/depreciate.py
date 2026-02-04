@@ -1,3 +1,10 @@
+"""Add depreciation entries to monthly journals.
+
+This script inserts per-item depreciation lines into the end of monthly
+journals within the selected date range. It ensures accumulated depreciation
+entries are present and appends a new depreciation transaction if necessary.
+"""
+
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from calendar import monthrange
@@ -44,6 +51,16 @@ _TIMEZONE = "UTC+08:00"
     slots=True,
 )
 class Arguments:
+    """CLI arguments container for `scripts.depreciate`.
+
+    Attributes:
+        from_datetime: Inclusive start datetime to select journals.
+        to_datetime: Inclusive end datetime to select journals.
+        item: The item identifier to attribute depreciation to (used in comment).
+        amount: Depreciation amount to record per journal.
+        currency: Currency code used in the journal entries.
+    """
+
     from_datetime: datetime | None
     to_datetime: datetime | None
     item: str
@@ -52,6 +69,14 @@ class Arguments:
 
 
 async def main(args: Arguments):
+    """Insert depreciation entries into monthly journals.
+
+    Processes monthly journals in the supplied inclusive date range and
+    ensures an accumulated depreciation posting exists for each period. If a
+    target journal does not contain a depreciation transaction, a new one is
+    appended.
+    """
+
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, None)
@@ -110,6 +135,13 @@ async def main(args: Arguments):
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None):
+    """Build and return the CLI ArgumentParser for the depreciation script.
+
+    The parser accepts start/end period options and positional arguments
+    for item, amount and currency. It sets an `invoke` coroutine default
+    that runs :func:`main`.
+    """
+
     prog = argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(

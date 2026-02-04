@@ -1,3 +1,11 @@
+"""Format journal files using `hledger print` output.
+
+This module uses `hledger print` to obtain a canonical representation of a
+journal, post-processes comment properties for consistent ordering, and
+writes the formatted output back to the journal (or reports files that
+would change when run with `--check`).
+"""
+
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from collections.abc import Callable, Iterable
@@ -84,11 +92,27 @@ def _group_props(sections: Iterable[str]):
     slots=True,
 )
 class Arguments:
+    """CLI arguments for `scripts.format`.
+
+    Attributes:
+        check: When True, detect unformatted files without modifying them.
+        files: Optional list of journal file paths to format; when omitted all
+               monthly journals are processed.
+    """
+
     check: bool
     files: Iterable[str] | None = None
 
 
 async def _format_journal(journal: Path, unformatted_files: list[Path], check: bool):
+    """Format a single journal using the output of `hledger print`.
+
+    The function constructs a normalized header, replaces the journal body
+    with the `hledger print` result (post-processed with property sorting)
+    and writes back the file. When `check` is True, files that would be
+    modified are appended to `unformatted_files` instead of failing.
+    """
+
     stdout, stderr, returncode = await run_hledger(journal, "print")
     # `run_hledger` raises a CalledProcessError on non-zero exit by default,
     # so no explicit returncode check is necessary here.
@@ -112,6 +136,12 @@ async def _format_journal(journal: Path, unformatted_files: list[Path], check: b
 
 
 async def main(args: Arguments):
+    """Format monthly journal files according to repository conventions.
+
+    Iterates selected monthly journals, runs formatting and optionally
+    reports files that are not formatted when `args.check` is True.
+    """
+
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, args.files)
@@ -133,6 +163,13 @@ async def main(args: Arguments):
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None):
+    """Create and return the CLI ArgumentParser for the format script.
+
+    The parser supports a `--check` flag and an optional list of files to
+    operate on. The returned parser sets an `invoke` coroutine default which
+    calls :func:`main`.
+    """
+
     prog = argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(

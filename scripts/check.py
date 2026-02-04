@@ -1,3 +1,10 @@
+"""Run `hledger check` against monthly journal files.
+
+This script runs a comprehensive set of `hledger check` subcommands
+against each selected monthly journal and reports failures by raising
+exceptions from the subprocess call.
+"""
+
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from collections.abc import Callable, Iterable
@@ -44,10 +51,23 @@ _HLEDGER_CHECKS = (
     slots=True,
 )
 class Arguments:
+    """CLI arguments for `scripts.check`.
+
+    Attributes:
+        files: Optional list of journal files to check; when omitted all monthly
+               journals are checked.
+    """
+
     files: Iterable[str] | None = None
 
 
 async def main(args: Arguments):
+    """Run `hledger check` on the set of selected monthly journals.
+
+    For each selected journal this runs `hledger check` with a set of
+    helpful checks (accounts, assertions, balanced, parseable, etc.).
+    """
+
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, args.files)
@@ -62,6 +82,12 @@ async def main(args: Arguments):
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None):
+    """Create and return the CLI ArgumentParser for the check script.
+
+    The parser accepts an optional list of files to check and sets an
+    `invoke` coroutine default to run :func:`main`.
+    """
+
     prog = argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(

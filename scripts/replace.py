@@ -1,3 +1,10 @@
+"""Replace text across all journal files in the repository.
+
+This script scans every `*.journal` file and replaces occurrences of the
+provided search text with the replacement text. Changes are written only
+when the file contents change.
+"""
+
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from collections.abc import Callable
@@ -32,11 +39,24 @@ __all__ = ("Arguments", "main", "parser")
     slots=True,
 )
 class Arguments:
+    """CLI arguments for `scripts.replace`.
+
+    Attributes:
+        find: The literal text to search for.
+        replace: The replacement text to write where matches are found.
+    """
+
     find: str
     replace: str
 
 
 async def main(args: Arguments):
+    """Run a global find-and-replace across all journal files.
+
+    Loads each journal, applies a simple string replacement and writes the
+    file back only when the content changed.
+    """
+
     folder = get_script_folder()
 
     journals = await find_all_journals(folder)
@@ -54,6 +74,12 @@ async def main(args: Arguments):
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None):
+    """Create and return the CLI ArgumentParser for the replace script.
+
+    The returned parser sets an `invoke` coroutine default that executes
+    :func:`main` when run.
+    """
+
     prog = argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(
