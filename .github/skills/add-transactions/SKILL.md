@@ -35,10 +35,10 @@ This skill is organized into theme/aspect-specific files. It also provides a gen
 - [Platform Transaction & Payout Rules](./platform_payout_transactions.md) — For digital payment platforms (Stripe, PayPal, Square, Alipay, etc.), including both incoming transactions and payouts to bank accounts
 - [Payee and ID Mapping Rules](./payee_id_mapping_rules.md) — For mapping payees and transaction identifiers
 - [Posting and Tag Validation Rules](./posting_tag_rules.md) — For correct account, tag, and posting usage
+- [Transport Reward Transactions](./transport_rewards.md) — For transit reward accrual patterns (Kowloon Motor Bus / Long Win Bus)
 - [Entity Registration Rules](./entity_registration_rules.md) — For registering new payees, friends, or entities
 - [Image and Attachment Handling Rules](./image_attachment_rules.md) — For handling receipt images or attachments
 - [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — For automating import of structured transactions (e.g., Octopus eDDA)
-
 Refer to these files for detailed rules, clarifications, and examples. Do not duplicate their content here. The platform transaction & payout rules file generalizes patterns for Stripe and similar platforms, and should be consulted for any digital payment platform transaction or payout.
 
 ## Mapping and Translation Files
@@ -87,8 +87,11 @@ python -m check    # set cwd to scripts/
   - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. **Never translate the food_or_drink value unless required by a specific mapping or convention.** Maintain the order of items as they appear on the receipt.
   - **Never place any itemization, discount, or similar tags (such as `food_or_drink:`, `discount:`, or item codes) in the transaction header.** These must always be placed in posting comments only, never in the header line. This applies to all item, discount, and similar tags, regardless of transaction type or payee. See `posting_tag_rules.md` for details.
   - For food/drink items, omit parenthetical descriptors or prefixes (e.g., omit (早) or 轉 if not part of the item name). For sub-items or substitutions, treat as separate items unless clearly a modifier.
-  - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`).
+  - When a receipt shows per-item prices, record each item as its own posting line with the item's amount and a `food_or_drink:` comment tag. Ensure the item postings sum exactly to the transaction total and include the payment posting (e.g., `assets:digital:Octopus cards:...`) as the final, negative total posting. Maintain the order of postings to match the receipt.
+  - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`). **If a modifier appears on its own line after a beverage (for example: `food_or_drink: 奶茶` followed by `food_or_drink: 多奶`), combine them into `food_or_drink: 奶茶 + 多奶` and remove the standalone modifier tag.**
   - If a modifier is missing, check the receipt and add it to the tag as needed.
+  - Timezone and duration: When a receipt contains both an order/print time and a separate settlement/transaction time, compute the ISO-8601 duration as the difference and add `duration:` to the transaction header (e.g., `duration: PT34M19S`). **Always include an explicit `timezone:` when specifying `time:` so duration computations are unambiguous.**
+  - Payee mapping: Before using an untranslated payee name, check `private.yaml` for a UUID mapping and use the UUID as the payee if present; otherwise consult `payee_mappings.yml` for canonical names.
 - **Account and Tag Selection:**
   - Use the most specific and correct account (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.

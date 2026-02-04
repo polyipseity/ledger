@@ -92,12 +92,20 @@ Modification: 多奶
 
 Result: food_or_drink: hot coffee + more milk
 
+### Unknown or Unreadable Items
+
+- If an item on the receipt is missing, illegible, or OCR failed to reliably capture it, record a placeholder tag `food_or_drink: (unknown)`. Use this only when the transaction clearly represents a food/drink purchase but the specific item(s) cannot be determined from the source.
+- When multiple items are clearly present but one or more are unreadable, add one `(unknown)` tag per unreadable item when quantity is obvious; otherwise add a single `(unknown)` tag for the posting and note to confirm later if necessary.
+- Prefer to confirm with the user or the receipt source before guessing item names. Do not invent item names for unclear text.
+
 ### Clarification Patterns (Food/Drink)
 
 - Shared meal: Ask if split equally, covering all, or expecting reimbursement. Use `assets:loans` and pending status if reimbursement expected.
-- Multi-category receipt: Ask if items are purchased together or separately. Record each item as a separate posting if receipt lists per-item prices.
-- Payee/IDs/item code normalization: Prefer canonical payee names, clarify ambiguous names, and use UUIDs for confidentiality if mapped.
-- Duration calculation: If both start and end times are present, compute ISO-8601 duration and add as `duration:` tag.
+- Multi-category receipt: Ask if items are purchased together or separately. When the receipt shows per-item prices, record each item as its own posting line with the item's amount and a `food_or_drink:` comment tag. Ensure the item postings sum exactly to the transaction total and place the payment posting (e.g., the `assets:digital:Octopus cards:...` line) as the final posting for the full negative total. Maintain the order of postings to match the receipt.
+- Payee/IDs/item code normalization: Prefer canonical payee names, clarify ambiguous names, and use UUIDs for confidentiality if mapped. **Always check `private.yaml` for a UUID mapping and use the UUID as the payee if present.**
+- Timezone: All transactions that include a time must also include an explicit `timezone:` (e.g., `timezone: UTC+08:00`). This helps compute durations reliably and keeps entries consistent across journals.
+- Duration calculation: If both start and end times are present (for example, an order/printed time and a settlement/transaction time displayed on the receipt), compute an ISO-8601 duration and add it as a `duration:` tag on the transaction header (e.g., `duration: PT34M19S`). Use the receipt's timestamps and the explicit `timezone:` when computing durations.
+- Modifier detection: If a sequence of `food_or_drink:` tags contains a base item followed by modifiers (for example: `奶茶`, then `多奶`), combine them using `+` into a single tag: `food_or_drink: 奶茶 + 多奶`. Do not leave modifiers as standalone tags.
 
 See SKILL.md for general procedures and cross-theme rules.
 

@@ -161,6 +161,7 @@ Track currency conversion transactions to maintain rate information.
 - **Do not combine multiple items into a single tag.**
 - **Do not add translations unless required by convention.**
 - **Maintain the order of items as they appear on the receipt.**
+- **If an item description is missing or unreadable, use `food_or_drink: (unknown)` as a placeholder and prefer to confirm with the user before guessing.**
 
 ## Account and Tag Selection
 
