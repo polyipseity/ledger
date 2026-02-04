@@ -9,11 +9,9 @@ description: Transcribe transactions from source documents into the hledger ledg
 
 **Reminder:** All monthly journal files must be named and referenced as `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). Do not omit the `ledger/` prefix when referring to journal files.
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When transcribing, mapping, or editing transactions, use the todo list tool to break down the process into actionable steps.**
-
-Mark each step as in-progress and completed, and update the todo list after each change to ensure all transaction entry and mapping steps are completed and nothing is missed.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 > **⚠️ This skill is extremely difficult to master.**
 >
@@ -58,13 +56,7 @@ Each file contains its own documentation and must be referenced for correct tran
 
 ## Validation Reminder
 
-**Script commands: Always run from the `scripts/` directory**
-
-- For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
-- **Never run scripts from the root directory or any other location.** Running from the wrong directory will cause include and file discovery errors.
-- Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
-
-**Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
+**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
 
 Example:
 
@@ -105,29 +97,9 @@ python -m check    # set cwd to scripts/
   - Use the most contextually accurate account and tags.
   - Maintain strict formatting and tag order for consistency and readability.
 
-### Status Marker Usage (Critical Correction 2026-02-01)
+### Status markers
 
-**Status markers (`!` for pending, `*` for cleared) must be used ONLY for lending, borrowing, and repayment transactions, and only on the initial (pending) transaction.**
-
-- The status marker (`!` or `*`) must NOT be present for the repayment transaction (the second in a borrowing/lending pair). Only the original pending transaction should have a status marker, which is updated to `*` when cleared. The repayment transaction itself should have no status marker.
-- For shared/group expenses, use `!` only for the initial transaction where a loan or reimbursement is expected, and `*` only when the loan is repaid or settled.
-- All other transaction types should NOT use status markers unless directly related to a loan or debt that is pending or cleared.
-- Pending transactions (`!`) must be updated to cleared (`*`) when the related repayment or settlement occurs.
-- Status markers should be extremely rare and only appear for the first transaction of borrowing/lending away anything of financial value.
-
-**Examples:**
-
-```hledger
-2026-01-15 ! Friend Lunch                    # Pending loan to friend
-  assets:loans:friends:<uuid>      50.00 HKD
-  assets:cash                     -50.00 HKD
-
-2026-01-20 * Friend Lunch                    # Cleared when repaid
-  assets:loans:friends:<uuid>      50.00 HKD = 0.00 HKD
-  assets:banks:<bank-uuid>        -50.00 HKD
-```
-
-If you see a status marker in any transaction that is not a loan/repayment, it is an error and must be corrected.
+Use status markers only for lending/borrowing transactions. See `lending_borrowing_transactions.md` and `.github/instructions/transaction-format.instructions.md` for canonical rules and examples.
 
 Other previous learnings remain in effect:
 
@@ -144,9 +116,9 @@ Other previous learnings remain in effect:
 - **Never leak Octopus numbers or personal IDs** in any transaction, mapping, or documentation. These must be treated as confidential and must not appear in journal entries, ID mappings, or skill documentation. Only use anonymized or mapped UUIDs where required.
 - **Never leak attachment filenames or add an `attachment` tag** in any transaction. Do not reference image or file names in the journal.
 - **Only one `include` line** for the prelude should appear at the top of each journal file. Remove any duplicates.
-- **Always insert new transactions in strict chronological order**. Double-check placement to avoid out-of-order entries.
+- **Chronological:** Insert new transactions in strict chronological order (date, then time). See `.github/instructions/transaction-format.instructions.md` for canonical rules.
 - When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
-- **Never trust the tool to insert at the correct location blindly.** Always check the file after any tool call that inserts or edits transactions to verify the actual insertion location. If the transaction is not in the intended place, move it manually to the correct chronological position.
+- **Verify insertion location:** Do not rely blindly on tools to insert at the correct place—always check and correct placement manually if needed.
 
 #### Shared Expense and Repayment Pattern (Critical)
 

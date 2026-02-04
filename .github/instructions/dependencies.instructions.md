@@ -6,11 +6,9 @@ description: Required software and tools that enable this accounting system, inc
 
 # Critical Dependencies
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When installing, verifying, or troubleshooting dependencies, use the todo list tool to break down the process into actionable steps.**
-
-Mark each step as in-progress and completed, and update the todo list after each change to ensure all dependencies are handled correctly and nothing is missed.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 Required software and tools that enable this accounting system.
 

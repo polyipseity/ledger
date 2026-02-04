@@ -6,11 +6,11 @@
 
 ## 🚩 Agent Workflow Reminders
 
-**1. When the user explicitly asks to use a skill, before thinking or taking any action, the agent must read the corresponding skill file in full.**
+**Read relevant skill files before use.** When a user asks you to perform a skill, read its SKILL.md in full before doing any work.
 
-**2. Use the Todo List Tool for all multi-step or complex tasks.** - Plan actionable steps before starting - Mark each step as in-progress and completed as you go - Review and update the todo list after each action - Ensure no steps are missed or left ambiguous
+**Use the Todo List Tool for multi-step tasks.** Plan steps, mark one step `in-progress`, complete it, then continue. Keep the todo list updated and concise.
 
-These steps are critical for agent reliability and maintaining a clear record of progress.
+**Ask instead of guessing.** If anything is ambiguous, pause and request clarification rather than making assumptions.
 
 ## Project Overview
 

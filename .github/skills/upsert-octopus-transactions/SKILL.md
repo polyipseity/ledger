@@ -25,7 +25,7 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 
 1. **You must always read the confidential payee mapping file**: `private.yaml`, and ensure you understand which payees are confidential and require UUIDs. This must always be remembered for correct payee handling.
 2. **You must always read the payee mapping file**: `.github/skills/upsert-octopus-transactions/payee_mappings.yml`. This must always be referenced for correct payee mapping.
-3. **When processing Octopus transactions, you must always read, process, and present them in strict chronological order (earliest to latest), regardless of input order. This applies to all processing, matching, and any output or presentation. Never process or present transactions out of order.**
+3. **Process Octopus transactions strictly in chronological order (earliest to latest).** See `.github/instructions/transaction-format.instructions.md` for the canonical chronological rules.
    - Do not transcribe or prepare any journal transactions from the Octopus transactions until Pass 2.
 4. **If any mapping is missing, ambiguous, or unclear,** you must ask the user for the correct mapping and update the file before continuing. **Never guess.**
 5. **For confidential payees,** after mapping, must check `private.yaml` for a UUID. If a UUID exists, use it as the payee in the journal. **Never expose confidential names.**
@@ -178,10 +178,10 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 1. For each Octopus transaction that was not matched in Pass 1:
    - **Must check the payee mapping file for the merchant name.** If missing, ambiguous, or one-to-many and context is insufficient, ask the user for the correct mapping and update the file before proceeding.
    - For confidential payees, after mapping, check `private.yaml` for a UUID and use it in the journal. Never expose confidential names.
-   - Add a new journal transaction using the mapping, in strict chronological order.
+   - Add a new journal transaction using the mapping. Insert transactions in strict chronological order (see `.github/instructions/transaction-format.instructions.md`).
       - For vending machine transactions (e.g., Swire), use `expenses:food and drinks:drinks` as the expense account.
-   - For each new payee, register it in `preludes/self.journal` (alphabetized). For confidential payees, register the UUID.
-   - If any ambiguity exists in transaction details, ordering, or payee registration, ask the user for clarification.
+   - For each new payee, register it in `preludes/self.journal` (alphabetized); for confidential payees register the UUID. See `add-payee` skill for process.
+   - If any ambiguity exists, ask the user for clarification.
 
 **Never add a transaction in Pass 1. Never update an existing transaction in Pass 2.**
 
@@ -231,11 +231,8 @@ _(No matching entry exists)_
    python -m check    # set cwd to scripts/
    ```
 
-   **Script commands: Always run from the `scripts/` directory**
-  - For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
-  - **Never run scripts from the root directory or any other location.** Running from the wrong directory will cause include and file discovery errors.
-  - Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
-  - **Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
+**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
+
 - Review changes and commit using the correct ledger commit header.
 - **If any error or ambiguity arises during validation, ask the user for clarification.**
 

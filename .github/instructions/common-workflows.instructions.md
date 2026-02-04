@@ -5,11 +5,9 @@ description: Practical task guides for frequently performed operations including
 
 # Common Workflows
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**For all multi-step workflows (adding transactions, migration, validation, etc.), use the todo list tool to plan, track, and complete each step.**
-
-Before starting, break down the workflow into actionable steps, mark each as in-progress and completed, and update the todo list after each change to avoid missing any required actions.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 Frequently performed operations organized into Agent Skills:
 
@@ -33,14 +31,7 @@ Close previous month and initialize new month with proper balance assertions.
 
 ## Script Usage
 
-**Script commands: Always use pnpm script wrappers if available**
-
-- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
-- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
-- For `hledger close --migrate`, run from the repository root as well.
-
-**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
+See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. Short: prefer `pnpm run <script>` from the repository root; if none exists, run Python scripts with `cwd=scripts/`.
 
 ## Pre-Commit Checklist (Husky + lint-staged)
 

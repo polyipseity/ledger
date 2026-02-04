@@ -6,15 +6,13 @@ description: Understand the hierarchical journal structure, file organization, a
 
 # Architecture & File Organization
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**Agents and automation should use the todo list tool to plan, track, and complete multi-step or complex operations.**
-
-Before making changes to the journal structure, file organization, or includes, break down the work into actionable steps using the todo list tool. Mark each step as in-progress and completed as you proceed. Update the todo list after each change to ensure nothing is forgotten.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 ## Hierarchical Journal Structure
 
-The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes. **All payee registrations must be made in the appropriate `preludes/*.journal` file using `payee` lines, always maintaining strict lexicographical (ASCII/Unicode) order. When adding a payee, check the entire payee section to ensure correct placement and move any out-of-order entries if found. Never declare payees in monthly or yearly journals.**
+The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes. Payees must be registered in `preludes/*.journal` and kept alphabetized; see `.github/instructions/transaction-format.instructions.md` and the `add-payee` skill for canonical rules.
 
 - **Entry point**: [ledger/index.journal](../../ledger/index.journal) includes `self.journal` and `self.alternatives.journal`
 - **Year-level**: [ledger/YYYY/self.journal](../../ledger/2024/self.journal) includes monthly journals (e.g., `2024-01/self.journal`)
@@ -94,13 +92,6 @@ Always use relative paths with consistent depth (`../` repeated 3 times for mont
 3. **Separate alternatives**: Distinct journal stream allows parallel tracking without mixing concepts
 4. **Glob pattern discovery**: Scripts automatically find all monthly journals regardless of year, enabling future-proof operations
 
-## Script Usage Policy
+## Script Usage
 
-**Always use pnpm script wrappers if available.**
-
-- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
-- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
-- For `hledger close --migrate`, run from the repository root as well.
-
-**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
+See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `pnpm run <script>` from the repository root; if no pnpm wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.

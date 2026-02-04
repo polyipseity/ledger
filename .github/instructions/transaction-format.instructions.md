@@ -7,11 +7,9 @@ applyTo: "**/*.journal"
 
 # Transaction Format Conventions
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When transcribing, editing, or validating transactions, agents and automation should use the todo list tool to break down multi-step or complex tasks.**
-
-Before starting, plan actionable steps, mark each as in-progress and completed, and update the todo list after each change to avoid missing any required actions.
+Use the Todo List Tool for multi-step or complex tasks — see `AGENTS.md` for the concise agent workflow rules.
 
 ## Payee and ID Mapping
 

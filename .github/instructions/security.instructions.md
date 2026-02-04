@@ -7,11 +7,9 @@ applyTo: "private.yaml*"
 
 # Security Practices
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When handling confidential data, encryption, or decryption workflows, use the todo list tool to break down the process into actionable steps.**
-
-Mark each step as in-progress and completed, and update the todo list after each change to ensure all security steps are followed and nothing is missed.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 Guidance for handling confidential data in this personal accounting system.
 

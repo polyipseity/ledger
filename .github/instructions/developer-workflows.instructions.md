@@ -5,11 +5,9 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 # Developer Workflows
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When performing development, scripting, or validation tasks, use the todo list tool to break down multi-step operations.**
-
-Plan actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure all steps are completed and nothing is forgotten.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 ## Script Usage Policy
 

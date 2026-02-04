@@ -7,11 +7,9 @@ applyTo: "**/*.journal"
 
 # Editing Guidelines
 
-## 🚩 Agent Workflow Reminder: Use the Todo List Tool
+## 🚩 Agent Workflow Reminder
 
-**When editing journals, especially for multi-step or complex changes, use the todo list tool to plan, track, and complete each step.**
-
-Break down editing tasks into actionable steps, mark each as in-progress and completed, and update the todo list after each change to ensure nothing is missed.
+Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
 
 ## Account and Payee Directive Ordering
 
@@ -33,18 +31,15 @@ See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 
 ## Script Usage for Validation/Formatting
 
-**Always use pnpm script wrappers if available for validation and formatting before commit.**
-
-- Use `pnpm run check` and `pnpm run format` from the repository root for validation and formatting.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` if no pnpm script is available, and set cwd to `scripts/`.
+**Scripts & validation**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `pnpm run check`/`pnpm run format`; if running Python directly, set `cwd=scripts/`.
 
 - Include preludes in monthly journals
 - Maintain balance assertions
 - Tag all transactions appropriately
 - Format and validate before committing
 - Maintain opening/closing patterns
-- **Strictly maintain chronological order:** All transactions in every journal file must be strictly ordered by date, and by time within each date. Out-of-order entries are not permitted. Always insert new transactions in the correct chronological position. When adding or editing transactions, always check for and enforce correct time order within each date. If multiple transactions share the same date, they must be sorted by their time (using the `time:` tag or, if missing, by logical/expected sequence). Never leave or introduce out-of-order transactions. This rule must be checked and enforced every time transactions are added or edited.
-- Register all payees in the appropriate `preludes/*.journal` file using `payee` lines. Never declare payees in monthly or yearly journals. Always insert new payees in strict lexicographical (ASCII/Unicode) order within the payee section. When adding a payee, check the entire payee section to ensure correct placement and move any out-of-order entries if found.
+- **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.github/instructions/transaction-format.instructions.md` for the canonical rules.
+- **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.github/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
 - When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
 
 ### Shared Expense and Repayment Pattern
