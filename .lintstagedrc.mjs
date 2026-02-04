@@ -1,9 +1,9 @@
-import { FILE_GLOBS as MD_FILE_GLOBS } from './.markdownlint-cli2.mjs';
+import { FILE_GLOBS as MD_FILE_GLOBS } from "./.markdownlint-cli2.mjs";
 
 /**
  * Convert `FILE_GLOBS` into a brace-style combined pattern.
  */
-const MD_GLOB_KEY = `**/*.{${MD_FILE_GLOBS.map((g) => g.replace('**/*.', '')).join(',')}}`;
+const MD_GLOB_KEY = `**/*.{${MD_FILE_GLOBS.map((g) => g.replace("**/*.", "")).join(",")}}`;
 
 /**
  * Lint-staged configuration.
@@ -19,17 +19,17 @@ const MD_GLOB_KEY = `**/*.{${MD_FILE_GLOBS.map((g) => g.replace('**/*.', '')).jo
  * @type {import('lint-staged').Configuration}
  */
 export default {
-  [MD_GLOB_KEY]: ['markdownlint-cli2 --fix'],
-  '**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}':
-    ['prettier --write'],
-  '**/*.{py,pyi,pyw,pyx}': [
+  [MD_GLOB_KEY]: ["markdownlint-cli2 --fix"],
+  "**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}":
+    ["prettier --write"],
+  "**/*.{py,pyi,pyw,pyx}": [
     // Run each Python formatter as its own command so lint-staged appends
     // the staged file list to each invocation (ruff, isort, black).
-    'python -m ruff check --fix',
-    'python -m isort',
-    'python -m black',
+    "python -m ruff check --fix",
+    "python -m isort",
+    "python -m black",
   ],
-  'ledger/[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]-[0-9][0-9]/**/*.journal': [
-    'python -m scripts.format',
+  "ledger/[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]-[0-9][0-9]/**/*.journal": [
+    "python -m scripts.format",
   ],
 };

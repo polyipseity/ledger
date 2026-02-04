@@ -1,16 +1,16 @@
-import config from './.markdownlint.json' with { type: 'json' };
+import config from "./.markdownlint.json" with { type: "json" };
 
 // Shared markdown file globs. Exported so other configs (for example,
 // lint-staged) can reuse the same list and avoid duplication.
 export const FILE_GLOBS = [
-  '**/*.md',
-  '**/*.mdoc',
-  '**/*.mdown',
-  '**/*.mdx',
-  '**/*.mkd',
-  '**/*.mkdn',
-  '**/*.markdown',
-  '**/*.rmd',
+  "**/*.md",
+  "**/*.mdoc",
+  "**/*.mdown",
+  "**/*.mdx",
+  "**/*.mkd",
+  "**/*.mkdn",
+  "**/*.markdown",
+  "**/*.rmd",
 ];
 
 // Re-export the default object with the same shape as before but referencing

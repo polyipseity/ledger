@@ -3,21 +3,21 @@
 # Structure: Keyed by payee, with a default fallback. Only add mappings after user approval.
 # See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
 default:
-  '咖啡': 'coffee'
-  '鮮奶炒滑蛋': 'scrambled egg'
-  '吉列魚柳': 'cutlet fish fillet'
-  '粒粒粟米': 'sweet corn'
-  '蒜香牛油多士': 'garlic butter on toast'
-  '熱咖啡': 'hot coffee'
-  '多奶': 'more milk'
-  '服務費': '10% service charge'
-  '抹零': 'rounding'
+  "咖啡": "coffee"
+  "鮮奶炒滑蛋": "scrambled egg"
+  "吉列魚柳": "cutlet fish fillet"
+  "粒粒粟米": "sweet corn"
+  "蒜香牛油多士": "garlic butter on toast"
+  "熱咖啡": "hot coffee"
+  "多奶": "more milk"
+  "服務費": "10% service charge"
+  "抹零": "rounding"
 Saizeriya:
-  '蒜香法包': 'garlic baguette'
-  '香辣番茄煙肉直通粉': '"ARRABBIATA" bacon penne'
+  "蒜香法包": "garlic baguette"
+  "香辣番茄煙肉直通粉": '"ARRABBIATA" bacon penne'
 Taste:
-  '014192 叉燒飯': '014192 OWN RUN SIU MEI BBQ'
-'Cafe 100%':
-  '無糖高纖鮮奶麥皮 配蛋治': 'sugar-free oatmeal in fresh milk'
-  '鮮奶滑蛋三文治': 'scrambled egg sandwich'
-  '熱咖啡 (多奶)': 'hot coffee + more milk'
+  "014192 叉燒飯": "014192 OWN RUN SIU MEI BBQ"
+"Cafe 100%":
+  "無糖高纖鮮奶麥皮 配蛋治": "sugar-free oatmeal in fresh milk"
+  "鮮奶滑蛋三文治": "scrambled egg sandwich"
+  "熱咖啡 (多奶)": "hot coffee + more milk"

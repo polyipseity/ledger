@@ -17,7 +17,7 @@
 #   - Use least-privilege permissions (contents: read) and pin action versions where appropriate.
 #   - Use local caches for pnpm/pip to speed builds and reduce external load.
 
-name: 'CI: Build & Test'
+name: "CI: Build & Test"
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version-file: .python-version
-          cache: 'pip'
+          cache: "pip"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
