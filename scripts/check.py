@@ -18,6 +18,18 @@ from .util import (
 
 __all__ = ("Arguments", "main", "parser")
 
+_HLEDGER_CHECKS = (
+    "accounts",
+    "assertions",
+    "autobalanced",
+    "balanced",
+    "commodities",
+    "ordereddates",
+    "parseable",
+    "payees",
+    "tags",
+)
+
 
 @final
 @dataclass(
@@ -42,19 +54,7 @@ async def main(args: Arguments):
     info(f'journals: {", ".join(map(str, journals))}')
 
     async def check_journal(journal: Path):
-        await run_hledger(
-            journal,
-            "check",
-            "accounts",
-            "assertions",
-            "autobalanced",
-            "balanced",
-            "commodities",
-            "ordereddates",
-            "parseable",
-            "payees",
-            "tags",
-        )
+        await run_hledger(journal, "check", *_HLEDGER_CHECKS)
 
     await gather_and_raise(*map(check_journal, journals))
 
