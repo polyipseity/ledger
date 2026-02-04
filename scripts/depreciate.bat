@@ -1,2 +1,4 @@
 @echo off
-python -m "depreciate" %*
+pushd %~dp0\..
+python -m "scripts.depreciate" %*
+popd

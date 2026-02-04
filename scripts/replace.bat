@@ -1,2 +1,4 @@
 @echo off
-python -m "replace" %*
+pushd %~dp0\..
+python -m "scripts.replace" %*
+popd

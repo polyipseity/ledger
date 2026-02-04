@@ -1,2 +1,4 @@
 @echo off
-python -m "format" %*
+pushd %~dp0\..
+python -m "scripts.format" %*
+popd

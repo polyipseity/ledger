@@ -1,2 +1,4 @@
 @echo off
-python -m "check" %*
+pushd %~dp0\..
+python -m "scripts.check" %*
+popd

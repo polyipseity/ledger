@@ -1,2 +1,4 @@
 @echo off
-python -m "shift" %*
+pushd %~dp0\..
+python -m "scripts.shift" %*
+popd

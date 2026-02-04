@@ -1,2 +1,3 @@
 #!/usr/bin/env sh
-python -m 'replace' "$@"
+cd "$(dirname "$0")/.." || exit 1
+python -m 'scripts.replace' "$@"
