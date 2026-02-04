@@ -75,13 +75,26 @@ def get_script_folder() -> Path:
 
 
 async def run_hledger(
-    journal: Path, *args: str, raise_on_error: bool = True
+    journal: Path, *args: str, raise_on_error: bool = True, strict: bool = True
 ) -> tuple[str, str, int]:
-    """Run `hledger --file <journal> --strict <*args>` and return (stdout, stderr, returncode).
+    """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode).
 
     If ``raise_on_error`` is True (the default), a non-zero exit status will
     raise :class:`subprocess.CalledProcessError` which includes the returncode
     and `stderr` text.
+
+    Parameters
+    ----------
+    journal: Path
+        The journal file passed to ``--file``.
+    *args: str
+        Additional arguments passed through to `hledger` (for example: ``"check"``).
+    raise_on_error: bool
+        Whether to raise :class:`subprocess.CalledProcessError` on non-zero exit
+        (default: True).
+    strict: bool
+        Whether to include the ``--strict`` flag when invoking `hledger`.
+        Defaults to ``True`` for existing behaviour.
 
     Raises
     ------
@@ -95,7 +108,13 @@ async def run_hledger(
         raise FileNotFoundError("hledger executable not found in PATH")
 
     async with _SUBPROCESS_SEMAPHORE:
-        cli = (hledger_prog, "--file", str(journal), "--strict", *args)
+        cli = (
+            hledger_prog,
+            "--file",
+            str(journal),
+            *(("--strict",) if strict else ()),
+            *args,
+        )
         proc = await create_subprocess_exec(
             *cli,
             stdin=DEVNULL,
