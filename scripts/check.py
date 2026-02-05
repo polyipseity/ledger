@@ -17,6 +17,7 @@ from typing import final
 from anyio import Path
 
 from .util import (
+    JournalRunContext,
     find_monthly_journals,
     gather_and_raise,
     get_script_folder,
@@ -73,10 +74,16 @@ async def main(args: Arguments):
     journals = await find_monthly_journals(folder, args.files)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def check_journal(journal: Path):
-        await run_hledger(journal, "check", *_HLEDGER_CHECKS)
+    async with JournalRunContext(Path(__file__), journals) as run:
+        if run.skipped:
+            info(f"skipped: {', '.join(map(str, run.skipped))}")
 
-    await gather_and_raise(*map(check_journal, journals))
+        async def check_journal(journal: Path):
+            await run_hledger(journal, "check", *_HLEDGER_CHECKS)
+            # If the check returned successfully record it for this session
+            run.report_success(journal)
+
+        await gather_and_raise(*map(check_journal, run.to_process))
 
     exit(0)
 

@@ -42,6 +42,29 @@ Agent Skills (`.github/skills/`):
 - [edit-journals](.github/skills/edit-journals/SKILL.md) – Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
 - [validate-journals](.github/skills/validate-journals/SKILL.md) – Validate and format hledger journals before commit using check/format scripts for consistency.
 
+## Agent Code Conventions
+
+Please follow these coding conventions in agent edits and new scripts. They are enforced to keep the codebase consistent and easy to review:
+
+- Use `anyio.Path` for file/script identifiers:
+  - APIs that accept a script identifier (for example, `JournalRunContext`) **must** accept an :class:`anyio.Path` (alias `Path`) only, not strings. Call sites should pass `Path(__file__)`.
+  - The script identifier must be a readable file. The helper that derives a script cache key will fail-fast and raise :class:`FileNotFoundError` if the script path cannot be opened for reading.
+
+- Use timezone-aware UTC datetimes:
+  - Avoid `datetime.utcnow()`; instead use `datetime.now(timezone.utc)` and store or format ISO timestamps from timezone-aware objects.
+
+- Prefer `from ... import ...` over `import ...`:
+  - Import specific names rather than whole modules (for example `from hashlib import sha256`, `from json import loads, dumps`). This makes uses explicit and easier to statically analyse.
+  - Inline imports may be used sparingly for optional runtime-only imports (e.g. in exception handlers), but prefer `from ... import ...` at module level where practical.
+
+- No legacy cache compatibility in new code paths:
+  - Where cache formats or APIs were upgraded, new code should not re-introduce legacy compatibility branches. Keep cache formats structured and document upgrades.
+
+- Be explicit with public exports:
+  - Keep `__all__` tuples up-to-date for modules under `scripts/`.
+
+These conventions are lightweight but help keep agent-generated edits consistent and easy to review.
+
 ## Key Concepts
 
 **Status markers**: `!` = pending (awaiting confirmation), `*` = cleared (verified), no marker = normal

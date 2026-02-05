@@ -22,16 +22,18 @@ Constants:
   when formatting amounts in scripts.
 """
 
-import asyncio
-from asyncio import BoundedSemaphore, create_subprocess_exec
+from asyncio import BoundedSemaphore, Lock, create_subprocess_exec, gather
 from asyncio.subprocess import DEVNULL, PIPE
 from calendar import monthrange
 from collections.abc import Awaitable, Callable, Iterable, Sequence
 from contextlib import suppress
-from datetime import datetime
+from datetime import datetime, timezone
 from glob import iglob
+from hashlib import sha256
 from inspect import currentframe, getframeinfo
-from os import cpu_count
+from json import JSONDecodeError, dumps, loads
+from os import cpu_count, makedirs
+from os.path import basename, dirname, join, splitext
 from shutil import which
 from subprocess import CalledProcessError
 
@@ -49,6 +51,9 @@ __all__ = (
     "parse_period_end",
     "parse_amount",
     "gather_and_raise",
+    "should_skip_journal",
+    "mark_journal_processed",
+    "JournalRunContext",
 )
 
 DEFAULT_AMOUNT_DECIMAL_PLACES = 2
@@ -58,6 +63,267 @@ Scripts that format monetary values should use this constant when constructing
 format strings (for example: `f"{value:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}"`).
 """
 _SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
+
+# A simple per-script cache used to skip processing unchanged journal files.
+# The cache is stored as JSON alongside compiled bytecode in ``scripts/__pycache__``.
+# It maps script keys (a filename plus a script content hash) to per-journal
+# metadata (file hash + last_seen timestamp).
+
+_MODULE_STEM = splitext(basename(__file__))[0]
+_SCRIPT_CACHE_NAME = f".{_MODULE_STEM}.cache.json"
+_CACHE_LOCK: Lock = Lock()
+
+
+def _cache_file_path() -> Path:
+    """Return the Path of the cache file in the module's __pycache__ directory.
+
+    The cache is stored in ``scripts/__pycache__/<name>.cache.json`` so
+    it lives alongside compiled bytecode and does not clutter the repository
+    root.
+    """
+    cache_dir = join(dirname(__file__), "__pycache__")
+
+    makedirs(cache_dir, exist_ok=True)
+    return Path(join(cache_dir, _SCRIPT_CACHE_NAME))
+
+
+async def _read_script_cache() -> dict:
+    """Read and return the script cache dict.
+
+    The cache file is located in the module's __pycache__ directory and is
+    managed internally; callers no longer need to supply a repository root.
+    """
+    cache_path = _cache_file_path()
+    try:
+        async with await cache_path.open(mode="r+t", encoding="utf-8") as fh:
+            text = await fh.read()
+            if not text.strip():
+                return {}
+            try:
+                data = loads(text)
+            except JSONDecodeError as exc:
+                from logging import warning
+
+                warning(
+                    "Cache file %s is invalid (parse error: %s); invalidating all caches",
+                    cache_path,
+                    exc,
+                )
+                return {}
+            if not isinstance(data, dict):
+                from logging import warning
+
+                warning(
+                    "Cache file %s has unexpected format; invalidating all caches",
+                    cache_path,
+                )
+                return {}
+            return data
+    except FileNotFoundError:
+        return {}
+
+
+async def _write_script_cache(content: dict) -> None:
+    """Write ``content`` to the script cache file.
+
+    The cache file lives under ``scripts/__pycache__`` so callers do not need
+    to provide the repository path.
+    """
+    cache_path = _cache_file_path()
+    async with await cache_path.open(mode="w+t", encoding="utf-8") as fh:
+        await fh.write(dumps(content, indent=2, sort_keys=True))
+
+
+async def _file_hash(path: Path) -> str:
+    """Return the SHA256 hex digest of ``path``'s current bytes."""
+    async with await path.open(mode="rb") as fh:
+        data = await fh.read()
+    return sha256(data).hexdigest()
+
+
+async def _script_key_from(script_id: Path) -> str:
+    """Return a script key in the form ``<filename>@<sha256(contents)>``.
+
+    ``script_id`` must be an :class:`anyio.Path` pointing at the invoking
+    script. The file is read asynchronously; if the file cannot be read the
+    function fails fast and raises :class:`FileNotFoundError`.
+
+    Raises
+    ------
+    FileNotFoundError
+        If ``script_id`` does not exist or cannot be opened for reading.
+    """
+    try:
+        async with await script_id.open(mode="rb") as fh:
+            data = await fh.read()
+    except Exception as exc:
+        raise FileNotFoundError(f"script file {script_id} not readable: {exc}") from exc
+    return f"{script_id.name}@{sha256(data).hexdigest()}"
+
+
+async def should_skip_journal(script_id: Path, journal: Path) -> bool:
+    """Return True if ``journal`` can be safely skipped for ``script_id``.
+
+    ``script_id`` must be an :class:`anyio.Path` pointing at the invoking script.
+    The function compares the cached file hash against the current file hash.
+    """
+    async with _CACHE_LOCK:
+        cache = await _read_script_cache()
+        key = await _script_key_from(script_id)
+        entry = cache.get(key)
+        if entry is None:
+            return False
+
+        try:
+            cur_hash = await _file_hash(journal)
+        except FileNotFoundError:
+            return False
+
+        files = entry.get("files", {})
+        file_entry = files.get(str(journal))
+        if not file_entry:
+            return False
+        return file_entry.get("hash") == cur_hash
+
+
+async def mark_journal_processed(script_id: Path, journal: Path) -> None:
+    """Record the journal's current content hash as processed for ``script_id``.
+
+    This function immediately persists the change and updates the script's
+    ``last_access`` timestamp.
+    """
+    async with _CACHE_LOCK:
+        cache = await _read_script_cache()
+        key = await _script_key_from(script_id)
+        now = datetime.now(timezone.utc).isoformat()
+        entry = cache.setdefault(key, {})
+        entry.setdefault("files", {})
+        entry["last_access"] = now
+        try:
+            cur_hash = await _file_hash(journal)
+        except FileNotFoundError:
+            # Nothing to mark if the file disappeared.
+            return
+        entry["files"][str(journal)] = {"hash": cur_hash, "last_seen": now}
+
+    # Evict stale script keys on write
+    _evict_old_scripts(cache)
+    await _write_script_cache(cache)
+
+
+def _evict_old_scripts(cache: dict, days: int = 30) -> None:
+    """Evict script keys from cache whose last_access is older than ``days``.
+
+    Modifies ``cache`` in-place.
+    """
+
+    threshold = datetime.now(timezone.utc).timestamp() - days * 24 * 3600
+    for k in list(cache.keys()):
+        entry = cache.get(k)
+        if not isinstance(entry, dict):
+            # Remove any non-structured entries; no legacy compatibility.
+            del cache[k]
+            continue
+        last_access = entry.get("last_access")
+        if last_access is None:
+            # No last_access -> conservative: keep
+            continue
+        try:
+            t = datetime.fromisoformat(last_access).timestamp()
+        except Exception:
+            # If parsing fails, evict the entry
+            del cache[k]
+            continue
+        if t < threshold:
+            del cache[k]
+
+
+class JournalRunContext:
+    """Async context manager to coordinate per-script journal processing.
+
+    Usage:
+        async with JournalRunContext(Path(__file__), journals) as run:
+            # run.to_process contains journals that need processing
+            for journal in run.to_process:
+                ...process journal...
+                run.report_success(journal)
+
+    Behavior:
+    - On entry the context manager checks the cache to split journals into
+      ``to_process`` (need processing) and ``skipped`` (unchanged since last
+      successful run).
+    - Call :meth:`report_success` for each successfully processed journal.
+    - On successful exit (no exception from the body) the manager will write
+      the updated last_access and any reported journal file hashes.
+    - If the body raises an exception no cache entries are updated.
+    """
+
+    def __init__(self, script_id: Path, journals: Iterable[Path]):
+        # repo_root is no longer required; cache file is resolved internally
+        self.script_id = script_id
+        self._journals = list(journals)
+        self.to_process: list[Path] = []
+        self.skipped: list[Path] = []
+        self._reported: set[str] = set()
+        self._script_key: str | None = None
+
+    async def __aenter__(self):
+        async with _CACHE_LOCK:
+            cache = await _read_script_cache()
+            key = await _script_key_from(self.script_id)
+            self._script_key = key
+            # Mark last access in-memory (persist on successful exit)
+            now = datetime.now(timezone.utc).isoformat()
+            entry = cache.setdefault(key, {})
+            entry.setdefault("files", {})
+            entry["last_access"] = now
+
+            for j in self._journals:
+                files = entry.get("files", {})
+                file_entry = files.get(str(j))
+                try:
+                    cur_hash = await _file_hash(j)
+                except FileNotFoundError:
+                    # If the file is missing, treat as needing processing so any
+                    # missing/changed file is re-evaluated by the script.
+                    self.to_process.append(j)
+                    continue
+                if file_entry and file_entry.get("hash") == cur_hash:
+                    self.skipped.append(j)
+                else:
+                    self.to_process.append(j)
+
+        return self
+
+    def report_success(self, journal: Path) -> None:
+        """Record that ``journal`` was successfully processed in this session."""
+        if str(journal) not in (str(j) for j in self._journals):
+            raise ValueError("journal not managed by this JournalRunContext instance")
+        self._reported.add(str(journal))
+
+    async def __aexit__(self, exc_type, exc, tb):
+        # Only update the cache when the context body succeeded.
+        if exc_type is None:
+            async with _CACHE_LOCK:
+                cache = await _read_script_cache()
+                key = self._script_key or await _script_key_from(self.script_id)
+                now = datetime.now(timezone.utc).isoformat()
+                entry = cache.setdefault(key, {})
+                entry.setdefault("files", {})
+                entry["last_access"] = now
+
+                for j in sorted(self._reported):
+                    try:
+                        h = await _file_hash(Path(j))
+                    except FileNotFoundError:
+                        continue
+                    entry["files"][j] = {"hash": h, "last_seen": now}
+
+                # Evict stale entries and persist
+                _evict_old_scripts(cache)
+                await _write_script_cache(cache)
+        # Do not suppress exceptions.
+        return False
 
 
 def get_script_folder() -> Path:
@@ -152,7 +418,7 @@ async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
         If any of the awaitables raised; the group's members will be the
         individual exceptions raised by those awaitables.
     """
-    results = await asyncio.gather(*awaitables, return_exceptions=True)
+    results = await gather(*awaitables, return_exceptions=True)
     errs = tuple(err for err in results if isinstance(err, BaseException))
     if errs:
         raise BaseExceptionGroup("One or more tasks failed", errs)
@@ -181,12 +447,10 @@ async def find_monthly_journals(
         A sequence of resolved :class:`anyio.Path` objects.
     """
     if files:
-        return await asyncio.gather(
-            *(Path(path).resolve(strict=True) for path in files)
-        )
+        return await gather(*(Path(path).resolve(strict=True) for path in files))
 
     pattern = "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal"
-    return await asyncio.gather(
+    return await gather(
         *(
             Path(folder.parent, path).resolve(strict=True)
             for path in iglob(pattern, root_dir=folder.parent, recursive=True)
@@ -210,7 +474,7 @@ async def find_all_journals(folder: Path) -> Sequence[Path]:
     Sequence[Path]
         A sequence of resolved :class:`anyio.Path` objects.
     """
-    return await asyncio.gather(
+    return await gather(
         *(
             Path(folder.parent, path).resolve(strict=True)
             for path in iglob("**/*.journal", root_dir=folder.parent, recursive=True)

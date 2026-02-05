@@ -21,6 +21,7 @@ from anyio import Path
 
 from .util import (
     DEFAULT_AMOUNT_DECIMAL_PLACES,
+    JournalRunContext,
     file_update_if_changed,
     filter_journals_between,
     find_monthly_journals,
@@ -29,8 +30,6 @@ from .util import (
     parse_period_end,
     parse_period_start,
 )
-
-__all__ = ("Arguments", "main", "parser")
 
 _DEPRECIATION_REGEX = compile(r"^\d{4}-\d{2}-\d{2} +(?:[!*] +)?depreciation", NOFLAG)
 _DEPRECIATION_ACCOUNT = "expenses:depreciation"
@@ -83,54 +82,59 @@ async def main(args: Arguments):
     journals = filter_journals_between(journals, args.from_datetime, args.to_datetime)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def process_journal(journal: Path):
-        journal_date = datetime.fromisoformat(f"{journal.parent.name}-01")
-        journal_last_datetime = journal_date.replace(
-            day=monthrange(journal_date.year, journal_date.month)[1],
-            hour=23,
-            minute=59,
-            second=59,
-            microsecond=999999,
-            fold=1,
-        )
-        journal_last_date_str = journal_last_datetime.date().isoformat()
+    async with JournalRunContext(Path(__file__), journals) as run:
+        if run.skipped:
+            info(f"skipped: {', '.join(map(str, run.skipped))}")
 
-        def updater(read: str) -> str:
-            def process_lines(read: str):
-                found, done = False, False
-                for line in read.splitlines(keepends=True):
-                    if not found:
-                        found = bool(
-                            _DEPRECIATION_REGEX.match(line)
-                        ) and line.startswith(journal_last_date_str)
+        async def process_journal(journal: Path):
+            journal_date = datetime.fromisoformat(f"{journal.parent.name}-01")
+            journal_last_datetime = journal_date.replace(
+                day=monthrange(journal_date.year, journal_date.month)[1],
+                hour=23,
+                minute=59,
+                second=59,
+                microsecond=999999,
+                fold=1,
+            )
+            journal_last_date_str = journal_last_datetime.date().isoformat()
+
+            def updater(read: str) -> str:
+                def process_lines(read: str):
+                    found, done = False, False
+                    for line in read.splitlines(keepends=True):
+                        if not found:
+                            found = bool(
+                                _DEPRECIATION_REGEX.match(line)
+                            ) and line.startswith(journal_last_date_str)
+                            yield line
+                            continue
+
+                        if not done and not line.strip():
+                            done = True
+                            yield f"    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}\n"
+                            yield line
+                            continue
+
                         yield line
-                        continue
+                    else:
+                        if found and not done:
+                            done = True
+                            yield f"    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}\n"
 
-                    if not done and not line.strip():
-                        done = True
-                        yield f"    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}\n"
-                        yield line
-                        continue
-
-                    yield line
-                else:
-                    if found and not done:
-                        done = True
-                        yield f"    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}\n"
-
-                if not done:
-                    yield f"""{journal_last_date_str} ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: {_TIMEZONE}
+                    if not done:
+                        yield f"""{journal_last_date_str} ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: {_TIMEZONE}
     {_DEPRECIATION_ACCOUNT}
     {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}
 
 """
 
-            return "".join(process_lines(read))
+                return "".join(process_lines(read))
 
-        await file_update_if_changed(journal, updater)
+            await file_update_if_changed(journal, updater)
+            # Record the successful processing for this session
+            run.report_success(journal)
 
-    await gather_and_raise(*map(process_journal, journals))
-
+        await gather_and_raise(*map(process_journal, run.to_process))
     exit(0)
 
 

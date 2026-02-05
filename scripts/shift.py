@@ -22,6 +22,7 @@ from anyio import Path
 
 from .util import (
     DEFAULT_AMOUNT_DECIMAL_PLACES,
+    JournalRunContext,
     file_update_if_changed,
     filter_journals_between,
     find_monthly_journals,
@@ -83,44 +84,49 @@ async def main(args: Arguments):
     journals = filter_journals_between(journals, args.from_datetime, args.to_datetime)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def process_journal(journal: Path):
-        def updater(read: str) -> str:
-            regex = compile(
-                rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",
-                MULTILINE,
-            )
+    async with JournalRunContext(Path(__file__), journals) as run:
+        if run.skipped:
+            info(f"skipped: {', '.join(map(str, run.skipped))}")
 
-            from_filter, to_filter = make_datetime_range_filters(
-                args.from_datetime, args.to_datetime
-            )
+        async def process_journal(journal: Path):
+            def updater(read: str) -> str:
+                regex = compile(
+                    rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",
+                    MULTILINE,
+                )
 
-            def process_lines(read: str):
-                datetime_, opening, closing = None, False, False
-                for line in read.splitlines(keepends=True):
-                    try:
-                        datetime_ = datetime.fromisoformat(line[:10])
-                    except ValueError:
-                        pass
-                    else:
-                        opening, closing = bool(
-                            _OPENING_BALANCES_REGEX.search(line)
-                        ), bool(_CLOSING_BALANCES_REGEX.search(line))
-                    if (
-                        datetime_ is None
-                        or not from_filter(datetime_)
-                        or not to_filter(datetime_)
-                        or not (match := regex.match(line))
-                    ):
-                        yield line
-                        continue
-                    yield f"{match[1]}{args.account}{match[2]}{f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(round(parse_amount(match[3]) + args.amount * (opening - closing), DEFAULT_AMOUNT_DECIMAL_PLACES))}{match[4]}{args.currency}{match[5]}={match[6]}{f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(round(parse_amount(match[7]) + args.amount * (not closing), DEFAULT_AMOUNT_DECIMAL_PLACES))}{match[8]}{args.currency}{match[9]}\n"
+                from_filter, to_filter = make_datetime_range_filters(
+                    args.from_datetime, args.to_datetime
+                )
 
-            return "".join(process_lines(read))
+                def process_lines(read: str):
+                    datetime_, opening, closing = None, False, False
+                    for line in read.splitlines(keepends=True):
+                        try:
+                            datetime_ = datetime.fromisoformat(line[:10])
+                        except ValueError:
+                            pass
+                        else:
+                            opening, closing = bool(
+                                _OPENING_BALANCES_REGEX.search(line)
+                            ), bool(_CLOSING_BALANCES_REGEX.search(line))
+                        if (
+                            datetime_ is None
+                            or not from_filter(datetime_)
+                            or not to_filter(datetime_)
+                            or not (match := regex.match(line))
+                        ):
+                            yield line
+                            continue
+                        yield f"{match[1]}{args.account}{match[2]}{f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(round(parse_amount(match[3]) + args.amount * (opening - closing), DEFAULT_AMOUNT_DECIMAL_PLACES))}{match[4]}{args.currency}{match[5]}={match[6]}{f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(round(parse_amount(match[7]) + args.amount * (not closing), DEFAULT_AMOUNT_DECIMAL_PLACES))}{match[8]}{args.currency}{match[9]}\n"
 
-        await file_update_if_changed(journal, updater)
+                return "".join(process_lines(read))
 
-    await gather_and_raise(*map(process_journal, journals))
+            await file_update_if_changed(journal, updater)
+            # Record the successful processing for this session
+            run.report_success(journal)
 
+        await gather_and_raise(*map(process_journal, run.to_process))
     exit(0)
 
 

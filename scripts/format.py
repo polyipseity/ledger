@@ -18,6 +18,7 @@ from typing import final
 from anyio import Path
 
 from .util import (
+    JournalRunContext,
     file_update_if_changed,
     find_monthly_journals,
     gather_and_raise,
@@ -104,7 +105,12 @@ class Arguments:
     files: Iterable[str] | None = None
 
 
-async def _format_journal(journal: Path, unformatted_files: list[Path], check: bool):
+async def _format_journal(
+    journal: Path,
+    unformatted_files: list[Path],
+    check: bool,
+    session: JournalRunContext,
+):
     """Format a single journal using the output of `hledger print`.
 
     The function constructs a normalized header, replaces the journal body
@@ -134,6 +140,12 @@ async def _format_journal(journal: Path, unformatted_files: list[Path], check: b
     if changed and check:
         unformatted_files.append(journal)
 
+    # Report success to the session when appropriate. For check-mode we only
+    # report when no file changes were required (i.e. the file is already
+    # formatted).
+    if not check or (check and not changed):
+        session.report_success(journal)
+
 
 async def main(args: Arguments):
     """Format monthly journal files according to repository conventions.
@@ -149,9 +161,15 @@ async def main(args: Arguments):
 
     unformatted_files = list[Path]()
 
-    await gather_and_raise(
-        *(_format_journal(j, unformatted_files, args.check) for j in journals)
-    )
+    async with JournalRunContext(Path(__file__), journals) as run:
+        if run.skipped:
+            info(f"skipped: {', '.join(map(str, run.skipped))}")
+        await gather_and_raise(
+            *(
+                _format_journal(j, unformatted_files, args.check, run)
+                for j in run.to_process
+            )
+        )
 
     if args.check and unformatted_files:
         print("The following files are not properly formatted:")
