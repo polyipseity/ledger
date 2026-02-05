@@ -1,7 +1,7 @@
 """Script-level cache helpers.
 
 This module implements the simple per-script cache used by scripts. The
-cache file is placed in ``scripts/__pycache__`` and its name is derived
+cache file is placed in ``./__pycache__`` and its name is derived
 from the module's filename: ``{stem}.cache.json`` (for example: ``cache.cache.json``).
 """
 
@@ -23,6 +23,8 @@ __all__ = (
     "write_script_cache",
     "file_hash",
     "script_key_from",
+    "cache_file_path",
+    "evict_old_scripts",
 )
 
 # Cache filename derived from this module's filename (e.g. "cache.cache.json").
@@ -31,7 +33,7 @@ _SCRIPT_CACHE_NAME = f"{_MODULE_STEM}.cache.json"
 _CACHE_LOCK: Lock = Lock()
 
 
-def _cache_file_path() -> Path:
+def cache_file_path() -> Path:
     """Return the Path of the cache file in ``./__pycache__``."""
     cache_dir = join(dirname(__file__), "__pycache__")
     makedirs(cache_dir, exist_ok=True)
@@ -51,7 +53,7 @@ async def read_script_cache() -> dict:
     dict
         The cache content mapped by script keys.
     """
-    cache_path = _cache_file_path()
+    cache_path = cache_file_path()
     try:
         async with await cache_path.open(mode="r+t", encoding="utf-8") as fh:
             text = await fh.read()
@@ -88,7 +90,7 @@ async def write_script_cache(content: dict) -> None:
     content: dict
         The cache content to persist to disk.
     """
-    cache_path = _cache_file_path()
+    cache_path = cache_file_path()
     async with await cache_path.open(mode="w+t", encoding="utf-8") as fh:
         await fh.write(dumps(content, indent=2, sort_keys=True))
 
@@ -162,14 +164,20 @@ async def mark_journal_processed(script_id: Path, journal: Path) -> None:
             cur_hash = await file_hash(journal)
         except FileNotFoundError:
             return
-        entry["files"][str(journal)] = {"hash": cur_hash, "last_seen": now}
+        entry["files"][str(journal)] = {"hash": cur_hash, "last_success": now}
 
-    _evict_old_scripts(cache)
-    await write_script_cache(cache)
+        evict_old_scripts(cache)
+        await write_script_cache(cache)
 
 
-def _evict_old_scripts(cache: dict, days: int = 30) -> None:
-    """Evict script keys from cache whose last_access is older than ``days``.
+def evict_old_scripts(cache: dict, days: int = 30) -> None:
+    """Evict script keys and old file entries from the cache.
+
+    Behavior:
+    - If a script's ``last_access`` is older than ``days`` the entire script entry
+      (including all files) is removed.
+    - Otherwise, any file whose ``last_success`` is older than ``days`` is removed
+      from the script's ``files`` map.
 
     Modifies ``cache`` in-place.
     """
@@ -179,16 +187,42 @@ def _evict_old_scripts(cache: dict, days: int = 30) -> None:
         if not isinstance(entry, dict):
             del cache[k]
             continue
+
+        # If last_access exists and is too old, evict entire script
         last_access = entry.get("last_access")
-        if last_access is None:
+        if last_access is not None:
+            try:
+                t = datetime.fromisoformat(last_access).timestamp()
+            except Exception:
+                # Malformed timestamp; evict the script entry
+                del cache[k]
+                continue
+            if t < threshold:
+                del cache[k]
+                continue
+
+        # Evict old or malformed file entries based on last_success
+        files = entry.get("files")
+        if not isinstance(files, dict):
             continue
-        try:
-            t = datetime.fromisoformat(last_access).timestamp()
-        except Exception:
-            del cache[k]
-            continue
-        if t < threshold:
-            del cache[k]
+        for f in list(files.keys()):
+            f_entry = files.get(f)
+            if not isinstance(f_entry, dict):
+                del files[f]
+                continue
+            last_success = f_entry.get("last_success")
+            if last_success is None:
+                # No success timestamp -> treat as stale and remove
+                del files[f]
+                continue
+            try:
+                t = datetime.fromisoformat(last_success).timestamp()
+            except Exception:
+                # Malformed timestamp -> remove file entry
+                del files[f]
+                continue
+            if t < threshold:
+                del files[f]
 
 
 class JournalRunContext:
@@ -267,15 +301,31 @@ class JournalRunContext:
                 now = datetime.now(timezone.utc).isoformat()
                 entry = cache.setdefault(key, {})
                 entry.setdefault("files", {})
+                # Script has completed successfully: update access and success timestamps
                 entry["last_access"] = now
+                entry["last_success"] = now
 
+                # Record hashes and per-file last_success for files we processed
                 for j in sorted(self._reported):
                     try:
                         h = await file_hash(Path(j))
                     except FileNotFoundError:
                         continue
-                    entry["files"][j] = {"hash": h, "last_seen": now}
+                    entry["files"][j] = {"hash": h, "last_success": now}
 
-                _evict_old_scripts(cache)
+                # Skipped files are treated as successful as well; update their last_success
+                for j in sorted(self.skipped):
+                    files = entry.setdefault("files", {})
+                    f_entry = files.get(j)
+                    if isinstance(f_entry, dict):
+                        f_entry["last_success"] = now
+                    else:
+                        try:
+                            h = await file_hash(Path(j))
+                        except FileNotFoundError:
+                            continue
+                        files[j] = {"hash": h, "last_success": now}
+
+                evict_old_scripts(cache)
                 await write_script_cache(cache)
         return False
