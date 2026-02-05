@@ -32,13 +32,8 @@ _CACHE_LOCK: Lock = Lock()
 
 
 def _cache_file_path() -> Path:
-    """Return the Path of the cache file in ``scripts/__pycache__``.
-
-    The cache is intentionally stored in the parent package's ``__pycache__``
-    directory (not in ``scripts/util/__pycache__``) to preserve the existing
-    on-disk location.
-    """
-    cache_dir = join(dirname(__file__), "..", "__pycache__")
+    """Return the Path of the cache file in ``./__pycache__``."""
+    cache_dir = join(dirname(__file__), "__pycache__")
     makedirs(cache_dir, exist_ok=True)
     return Path(join(cache_dir, _SCRIPT_CACHE_NAME))
 
