@@ -49,17 +49,14 @@ Please follow these coding conventions in agent edits and new scripts. They are 
 - Use `anyio.Path` for file/script identifiers:
   - APIs that accept a script identifier (for example, `JournalRunContext`) **must** accept an :class:`anyio.Path` (alias `Path`) only, not strings. Call sites should pass `Path(__file__)`.
   - The script identifier must be a readable file. The helper that derives a script cache key will fail-fast and raise :class:`FileNotFoundError` if the script path cannot be opened for reading.
-
 - Use timezone-aware UTC datetimes:
   - Avoid `datetime.utcnow()`; instead use `datetime.now(timezone.utc)` and store or format ISO timestamps from timezone-aware objects.
-
 - Prefer `from ... import ...` over `import ...`:
   - Import specific names rather than whole modules (for example `from hashlib import sha256`, `from json import loads, dumps`). This makes uses explicit and easier to statically analyse.
   - Inline imports may be used sparingly for optional runtime-only imports (e.g. in exception handlers), but prefer `from ... import ...` at module level where practical.
-
+- Type hints & PEP 585: Prefer modern built-in generic types (PEP 585) and `collections.abc` abstract types in all new code and agent guidance. Use `dict`, `list`, `set`, `tuple`, `frozenset` etc. instead of `typing.Dict`, `typing.List`, etc., and prefer `collections.abc` names for ABCs (for example, `collections.abc.Awaitable` instead of `typing.Awaitable`). When appropriate, use the PEP 604 union operator (`X | Y`) for optionals/union types instead of `typing.Optional`.
 - No legacy cache compatibility in new code paths:
   - Where cache formats or APIs were upgraded, new code should not re-introduce legacy compatibility branches. Keep cache formats structured and document upgrades.
-
 - Be explicit with public exports:
   - Keep `__all__` tuples up-to-date for modules under `scripts/`.
 
