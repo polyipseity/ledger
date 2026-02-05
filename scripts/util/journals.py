@@ -34,17 +34,18 @@ DEFAULT_AMOUNT_DECIMAL_PLACES = 2
 async def find_monthly_journals(
     folder: Path, files: Iterable[str] | None = None
 ) -> Sequence[Path]:
-    """Return resolved Paths for monthly journal files under the repository.
+    """Return resolved Paths for monthly journal files under the provided folder.
 
     The function looks for files matching the pattern ``YYYY-MM/*.journal`` under
-    ``folder.parent``. If ``files`` is supplied, those are resolved (strict)
-    and returned instead. The function returns the resolved paths in the same
-    order the filesystem yields them.
+    the provided ``folder``. If ``files`` is supplied, those are resolved
+    (strict) and returned instead. The function returns the resolved paths in
+    the same order the filesystem yields them.
 
     Parameters
     ----------
     folder: Path
-        Path somewhere inside the repository (typically the script folder).
+        Path to the repository root or folder to search (typically the ledger
+        folder).
     files: Iterable[str] | None
         Optional explicit file paths to resolve and return.
 
@@ -59,22 +60,23 @@ async def find_monthly_journals(
     pattern = "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal"
     return await gather(
         *(
-            Path(folder.parent, path).resolve(strict=True)
-            for path in iglob(pattern, root_dir=folder.parent, recursive=True)
+            Path(folder, path).resolve(strict=True)
+            for path in iglob(pattern, root_dir=folder, recursive=True)
         )
     )
 
 
 async def find_all_journals(folder: Path) -> Sequence[Path]:
-    """Return resolved Paths for all journal files under the repository.
+    """Return resolved Paths for all journal files under the provided folder.
 
-    The function finds all ``*.journal`` files under ``folder.parent`` and
-    returns the resolved :class:`anyio.Path` objects.
+    The function finds all ``*.journal`` files under the supplied ``folder``
+    and returns the resolved :class:`anyio.Path` objects.
 
     Parameters
     ----------
     folder: Path
-        Path somewhere inside the repository (typically the script folder).
+        Path to the repository root or folder to search (typically the script
+        folder).
 
     Returns
     -------
@@ -83,8 +85,8 @@ async def find_all_journals(folder: Path) -> Sequence[Path]:
     """
     return await gather(
         *(
-            Path(folder.parent, path).resolve(strict=True)
-            for path in iglob("**/*.journal", root_dir=folder.parent, recursive=True)
+            Path(folder, path).resolve(strict=True)
+            for path in iglob("**/*.journal", root_dir=folder, recursive=True)
         )
     )
 
