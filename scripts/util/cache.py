@@ -12,6 +12,7 @@ from hashlib import sha256
 from json import JSONDecodeError, dumps, loads
 from os import makedirs
 from os.path import basename, dirname, join, splitext
+from typing import Sequence
 
 from anyio import Path
 
@@ -158,8 +159,8 @@ async def mark_journal_processed(script_id: Path, journal: Path) -> None:
         key = await script_key_from(script_id)
         now = datetime.now(timezone.utc).isoformat()
         entry = cache.setdefault(key, {})
-        entry.setdefault("files", {})
         entry["last_access"] = now
+        entry.setdefault("files", {})
         try:
             cur_hash = await file_hash(journal)
         except FileNotFoundError:
@@ -240,9 +241,12 @@ class JournalRunContext:
       ``to_process`` (need processing) and ``skipped`` (unchanged since last
       successful run).
     - Call :meth:`report_success` for each successfully processed journal.
-    - On successful exit (no exception from the body) the manager will write
-      the updated last_access and any reported journal file hashes.
-    - If the body raises an exception no cache entries are updated.
+    - On exit the manager will always update the script's ``last_access``
+      timestamp.
+    - If the body completed successfully (no exception) it will also record any
+      reported journal file hashes and update ``last_success`` for skipped files.
+    - If the body raised an exception only ``last_access`` is persisted; no
+      file hashes or per-file ``last_success`` timestamps are recorded.
     """
 
     def __init__(self, script_id: Path, journals: Iterable[Path]):
@@ -250,7 +254,7 @@ class JournalRunContext:
         self._journals = list(journals)
         self.to_process: list[Path] = []
         self.skipped: list[Path] = []
-        self._reported: set[str] = set()
+        self._reported: set[Path] = set()
         self._script_key: str | None = None
 
     async def __aenter__(self):
@@ -258,10 +262,8 @@ class JournalRunContext:
             cache = await read_script_cache()
             key = await script_key_from(self.script_id)
             self._script_key = key
-            now = datetime.now(timezone.utc).isoformat()
             entry = cache.setdefault(key, {})
             entry.setdefault("files", {})
-            entry["last_access"] = now
 
             for j in self._journals:
                 files = entry.get("files", {})
@@ -280,52 +282,53 @@ class JournalRunContext:
 
     def report_success(self, journal: Path) -> None:
         """Record that ``journal`` was successfully processed in this session."""
-        if str(journal) not in (str(j) for j in self._journals):
+        if journal not in self._journals:
             raise ValueError("journal not managed by this JournalRunContext instance")
-        self._reported.add(str(journal))
+        self._reported.add(journal)
 
     @property
-    def reported(self) -> list[Path]:
+    def reported(self) -> Sequence[Path]:
         """Return a sorted list of :class:`Path` objects that were processed successfully.
 
         This property provides a convenient, read-only view over the internal
         ``_reported`` set preserving a stable ordering for display purposes.
         """
-        return [Path(p) for p in sorted(self._reported)]
+        return sorted(self._reported)
 
     async def __aexit__(self, exc_type, exc, tb):
-        if exc_type is None:
-            async with _CACHE_LOCK:
-                cache = await read_script_cache()
-                key = self._script_key or await script_key_from(self.script_id)
-                now = datetime.now(timezone.utc).isoformat()
-                entry = cache.setdefault(key, {})
-                entry.setdefault("files", {})
-                # Script has completed successfully: update access and success timestamps
-                entry["last_access"] = now
-                entry["last_success"] = now
+        # Always update last_access so we record when the script was last run.
+        async with _CACHE_LOCK:
+            cache = await read_script_cache()
+            key = self._script_key or await script_key_from(self.script_id)
+            now = datetime.now(timezone.utc).isoformat()
+            entry = cache.setdefault(key, {})
+            entry["last_access"] = now
+            entry.setdefault("files", {})
 
+            # If the body completed successfully, record processed file hashes
+            # and update per-file last_success for reported and skipped files.
+            if exc_type is None:
                 # Record hashes and per-file last_success for files we processed
                 for j in sorted(self._reported):
                     try:
-                        h = await file_hash(Path(j))
+                        h = await file_hash(j)
                     except FileNotFoundError:
                         continue
-                    entry["files"][j] = {"hash": h, "last_success": now}
+                    entry["files"][str(j)] = {"hash": h, "last_success": now}
 
                 # Skipped files are treated as successful as well; update their last_success
                 for j in sorted(self.skipped):
                     files = entry.setdefault("files", {})
-                    f_entry = files.get(j)
+                    f_entry = files.get(str(j))
                     if isinstance(f_entry, dict):
                         f_entry["last_success"] = now
                     else:
                         try:
-                            h = await file_hash(Path(j))
+                            h = await file_hash(j)
                         except FileNotFoundError:
                             continue
-                        files[j] = {"hash": h, "last_success": now}
+                        files[str(j)] = {"hash": h, "last_success": now}
 
-                evict_old_scripts(cache)
-                await write_script_cache(cache)
+            evict_old_scripts(cache)
+            await write_script_cache(cache)
         return False
