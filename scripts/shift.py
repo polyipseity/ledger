@@ -29,11 +29,11 @@ from .util import (
     format_journal_list,
     gather_and_raise,
     get_script_folder,
-    make_datetime_range_filters,
     parse_amount,
     parse_period_end,
     parse_period_start,
 )
+from .util.journals import make_datetime_range_filters
 
 __all__ = ("Arguments", "main", "parser")
 
