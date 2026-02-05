@@ -15,6 +15,16 @@ from os.path import basename, dirname, join, splitext
 
 from anyio import Path
 
+__all__ = (
+    "JournalRunContext",
+    "mark_journal_processed",
+    "should_skip_journal",
+    "read_script_cache",
+    "write_script_cache",
+    "file_hash",
+    "script_key_from",
+)
+
 # Cache filename derived from this module's filename (e.g. "cache.cache.json").
 _MODULE_STEM = splitext(basename(__file__))[0]
 _SCRIPT_CACHE_NAME = f"{_MODULE_STEM}.cache.json"
@@ -274,14 +284,3 @@ class JournalRunContext:
                 _evict_old_scripts(cache)
                 await write_script_cache(cache)
         return False
-
-
-__all__ = (
-    "JournalRunContext",
-    "mark_journal_processed",
-    "should_skip_journal",
-    "read_script_cache",
-    "write_script_cache",
-    "file_hash",
-    "script_key_from",
-)

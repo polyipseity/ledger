@@ -3,6 +3,8 @@
 from asyncio import gather
 from typing import Awaitable
 
+__all__ = ("gather_and_raise",)
+
 
 async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
     """Run many awaitables concurrently and raise grouped exceptions.
@@ -25,6 +27,3 @@ async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
     errs = tuple(err for err in results if isinstance(err, BaseException))
     if errs:
         raise BaseExceptionGroup("One or more tasks failed", errs)
-
-
-__all__ = ("gather_and_raise",)

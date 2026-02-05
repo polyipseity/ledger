@@ -31,6 +31,8 @@ from .util.journals import (
     parse_period_start,
 )
 
+__all__ = ("Arguments", "main", "parser")
+
 _DEPRECIATION_REGEX = compile(r"^\d{4}-\d{2}-\d{2} +(?:[!*] +)?depreciation", NOFLAG)
 _DEPRECIATION_ACCOUNT = "expenses:depreciation"
 _ACCUMULATED_DEPRECIATION_ACCOUNT = "assets:accumulated depreciation"

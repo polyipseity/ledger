@@ -13,9 +13,22 @@ from typing import Callable
 
 from anyio import Path
 
-DEFAULT_AMOUNT_DECIMAL_PLACES = 2
+__all__ = (
+    "DEFAULT_AMOUNT_DECIMAL_PLACES",
+    "find_monthly_journals",
+    "find_all_journals",
+    "make_datetime_range_filters",
+    "filter_journals_between",
+    "parse_period_start",
+    "parse_period_end",
+    "parse_amount",
+    "format_journal_list",
+    "run_hledger",
+)
 
 _SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
+
+DEFAULT_AMOUNT_DECIMAL_PLACES = 2
 
 
 async def find_monthly_journals(
@@ -320,17 +333,3 @@ async def run_hledger(
                 stderr=stderr,
             )
         return stdout, stderr, returncode
-
-
-__all__ = (
-    "DEFAULT_AMOUNT_DECIMAL_PLACES",
-    "find_monthly_journals",
-    "find_all_journals",
-    "make_datetime_range_filters",
-    "filter_journals_between",
-    "parse_period_start",
-    "parse_period_end",
-    "parse_amount",
-    "format_journal_list",
-    "run_hledger",
-)

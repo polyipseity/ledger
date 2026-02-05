@@ -4,6 +4,8 @@ from inspect import currentframe, getframeinfo
 
 from anyio import Path
 
+__all__ = ("get_script_folder", "file_update_if_changed")
+
 
 def get_script_folder() -> Path:
     """Return the Path of the folder containing the caller script.
@@ -52,6 +54,3 @@ async def file_update_if_changed(journal: Path, updater):
             await file.truncate()
             return True
         return False
-
-
-__all__ = ("get_script_folder", "file_update_if_changed")

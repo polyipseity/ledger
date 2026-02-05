@@ -74,7 +74,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 - Frozen dataclasses: `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)`
 - Concurrency: `asyncio.BoundedSemaphore` limited to CPU count (or 4)
 - I/O: `anyio.Path` for async file operations
-- Module exports: All Python modules in `scripts/` MUST define a module-level `__all__` tuple listing public symbols; use `()` if there are no exports. Do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`); import names normally and rely on `__all__` to make explicit which symbols are public.
+- Module exports: All Python modules in `scripts/` MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) listing public symbols; use `()` if there are no exports. Do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`); import names normally and rely on `__all__` at the top of the module to make explicit which symbols are public.
 
 ## Pre-Commit Validation (Husky + lint-staged)
 
