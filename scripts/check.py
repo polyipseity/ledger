@@ -19,6 +19,7 @@ from anyio import Path
 from .util import (
     JournalRunContext,
     find_monthly_journals,
+    format_journal_list,
     gather_and_raise,
     get_script_folder,
     run_hledger,
@@ -72,11 +73,11 @@ async def main(args: Arguments):
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, args.files)
-    info(f'journals: {", ".join(map(str, journals))}')
+    info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     async with JournalRunContext(Path(__file__), journals) as run:
         if run.skipped:
-            info(f"skipped: {', '.join(map(str, run.skipped))}")
+            info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
         async def check_journal(journal: Path):
             await run_hledger(journal, "check", *_HLEDGER_CHECKS)
@@ -84,6 +85,10 @@ async def main(args: Arguments):
             run.report_success(journal)
 
         await gather_and_raise(*map(check_journal, run.to_process))
+
+        # Summarise processed journals for quick inspection
+        if run.reported:
+            info("processed:\n%s", format_journal_list(run.reported, max_items=8))
 
     exit(0)
 

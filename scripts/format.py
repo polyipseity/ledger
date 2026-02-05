@@ -21,6 +21,7 @@ from .util import (
     JournalRunContext,
     file_update_if_changed,
     find_monthly_journals,
+    format_journal_list,
     gather_and_raise,
     get_script_folder,
     run_hledger,
@@ -157,19 +158,22 @@ async def main(args: Arguments):
     folder = get_script_folder()
 
     journals = await find_monthly_journals(folder, args.files)
-    info(f'journals: {", ".join(map(str, journals))}')
+    info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     unformatted_files = list[Path]()
 
     async with JournalRunContext(Path(__file__), journals) as run:
         if run.skipped:
-            info(f"skipped: {', '.join(map(str, run.skipped))}")
+            info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
         await gather_and_raise(
             *(
                 _format_journal(j, unformatted_files, args.check, run)
                 for j in run.to_process
             )
         )
+
+    if run.reported:
+        info("processed:\n%s", format_journal_list(run.reported, max_items=8))
 
     if args.check and unformatted_files:
         print("The following files are not properly formatted:")

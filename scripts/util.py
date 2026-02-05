@@ -54,6 +54,7 @@ __all__ = (
     "should_skip_journal",
     "mark_journal_processed",
     "JournalRunContext",
+    "format_journal_list",
 )
 
 DEFAULT_AMOUNT_DECIMAL_PLACES = 2
@@ -300,6 +301,15 @@ class JournalRunContext:
         if str(journal) not in (str(j) for j in self._journals):
             raise ValueError("journal not managed by this JournalRunContext instance")
         self._reported.add(str(journal))
+
+    @property
+    def reported(self) -> list[Path]:
+        """Return a sorted list of :class:`Path` objects that were processed successfully.
+
+        This property provides a convenient, read-only view over the internal
+        ``_reported`` set preserving a stable ordering for display purposes.
+        """
+        return [Path(p) for p in sorted(self._reported)]
 
     async def __aexit__(self, exc_type, exc, tb):
         # Only update the cache when the context body succeeded.
@@ -677,3 +687,35 @@ def parse_amount(float_str: str) -> float:
         # comma used as decimal separator
         s = s.replace(",", ".")
     return float(s)
+
+
+def format_journal_list(journals: Iterable[Path], *, max_items: int = 8) -> str:
+    """Return a compact, human-friendly multi-line representation of ``journals``.
+
+    The representation includes a total count and the first ``max_items``
+    entries formatted as ``<YYYY-MM>/<name>.journal``. When there are more
+    entries than ``max_items`` the output ends with an ellipsis indicating
+    how many items were omitted.
+
+    Examples:
+        12 journals
+          - 2024-01/self.journal
+          - 2024-02/self.alternatives.journal
+          - ... (9 more)
+    """
+    lst = list(journals)
+    count = len(lst)
+    if count == 0:
+        return "none"
+
+    visible = lst[:max_items]
+    lines = [f"{count} journal{'s' if count != 1 else ''}"]
+    for p in visible:
+        try:
+            label = f"{p.parent.name}/{p.name}"
+        except Exception:
+            label = str(p)
+        lines.append(f"  - {label}")
+    if count > max_items:
+        lines.append(f"  ... ({count - max_items} more)")
+    return "\n".join(lines)

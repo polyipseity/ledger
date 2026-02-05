@@ -25,6 +25,7 @@ from .util import (
     file_update_if_changed,
     filter_journals_between,
     find_monthly_journals,
+    format_journal_list,
     gather_and_raise,
     get_script_folder,
     parse_period_end,
@@ -80,11 +81,11 @@ async def main(args: Arguments):
 
     journals = await find_monthly_journals(folder, None)
     journals = filter_journals_between(journals, args.from_datetime, args.to_datetime)
-    info(f'journals: {", ".join(map(str, journals))}')
+    info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     async with JournalRunContext(Path(__file__), journals) as run:
         if run.skipped:
-            info(f"skipped: {', '.join(map(str, run.skipped))}")
+            info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
         async def process_journal(journal: Path):
             journal_date = datetime.fromisoformat(f"{journal.parent.name}-01")
