@@ -1,7 +1,7 @@
 """Small concurrency helpers."""
 
 from asyncio import gather
-from typing import Awaitable
+from collections.abc import Awaitable
 
 __all__ = ("gather_and_raise",)
 

@@ -3,13 +3,12 @@
 from asyncio import BoundedSemaphore, create_subprocess_exec, gather
 from asyncio.subprocess import DEVNULL, PIPE
 from calendar import monthrange
-from collections.abc import Iterable, Sequence
+from collections.abc import Callable, Iterable, Sequence
 from datetime import datetime
 from glob import iglob
 from os import cpu_count
 from shutil import which
 from subprocess import CalledProcessError
-from typing import Callable
 
 from anyio import Path
 
