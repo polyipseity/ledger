@@ -17,7 +17,7 @@ from typing import final
 from anyio import Path
 
 from .util.concurrency import gather_and_raise
-from .util.files import file_update_if_changed, get_script_folder
+from .util.files import file_update_if_changed, get_ledger_folder
 from .util.journals import find_all_journals
 
 __all__ = ("Arguments", "main", "parser")
@@ -54,7 +54,7 @@ async def main(args: Arguments):
     file back only when the content changed.
     """
 
-    folder = get_script_folder()
+    folder = get_ledger_folder()
 
     journals = await find_all_journals(folder)
     info(f'journals: {", ".join(map(str, journals))}')

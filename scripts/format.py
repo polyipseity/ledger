@@ -19,7 +19,7 @@ from anyio import Path
 
 from .util.cache import JournalRunContext
 from .util.concurrency import gather_and_raise
-from .util.files import file_update_if_changed, get_script_folder
+from .util.files import file_update_if_changed, get_ledger_folder
 from .util.journals import (
     find_monthly_journals,
     format_journal_list,
@@ -154,7 +154,7 @@ async def main(args: Arguments):
     reports files that are not formatted when `args.check` is True.
     """
 
-    folder = get_script_folder()
+    folder = get_ledger_folder()
 
     journals = await find_monthly_journals(folder, args.files)
     info("journals:\n%s", format_journal_list(journals, max_items=8))

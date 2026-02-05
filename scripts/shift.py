@@ -22,7 +22,7 @@ from anyio import Path
 
 from .util.cache import JournalRunContext
 from .util.concurrency import gather_and_raise
-from .util.files import file_update_if_changed, get_script_folder
+from .util.files import file_update_if_changed, get_ledger_folder
 from .util.journals import (
     DEFAULT_AMOUNT_DECIMAL_PLACES,
     filter_journals_between,
@@ -78,7 +78,7 @@ async def main(args: Arguments):
     the journal content differs from the modified text.
     """
 
-    folder = get_script_folder()
+    folder = get_ledger_folder()
 
     journals = await find_monthly_journals(folder, None)
     journals = filter_journals_between(journals, args.from_datetime, args.to_datetime)

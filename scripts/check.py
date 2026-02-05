@@ -18,7 +18,7 @@ from anyio import Path
 
 from .util.cache import JournalRunContext
 from .util.concurrency import gather_and_raise
-from .util.files import get_script_folder
+from .util.files import get_ledger_folder
 from .util.journals import find_monthly_journals, format_journal_list, run_hledger
 
 __all__ = ("Arguments", "main", "parser")
@@ -66,7 +66,7 @@ async def main(args: Arguments):
     helpful checks (accounts, assertions, balanced, parseable, etc.).
     """
 
-    folder = get_script_folder()
+    folder = get_ledger_folder()
 
     journals = await find_monthly_journals(folder, args.files)
     info("journals:\n%s", format_journal_list(journals, max_items=8))
