@@ -52,3 +52,6 @@ async def file_update_if_changed(journal: Path, updater):
             await file.truncate()
             return True
         return False
+
+
+__all__ = ("get_script_folder", "file_update_if_changed")

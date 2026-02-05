@@ -25,3 +25,6 @@ async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
     errs = tuple(err for err in results if isinstance(err, BaseException))
     if errs:
         raise BaseExceptionGroup("One or more tasks failed", errs)
+
+
+__all__ = ("gather_and_raise",)

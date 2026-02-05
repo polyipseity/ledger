@@ -16,12 +16,9 @@ from typing import final
 
 from anyio import Path
 
-from .util import (
-    file_update_if_changed,
-    find_all_journals,
-    gather_and_raise,
-    get_script_folder,
-)
+from .util.concurrency import gather_and_raise
+from .util.files import file_update_if_changed, get_script_folder
+from .util.journals import find_all_journals
 
 __all__ = ("Arguments", "main", "parser")
 
