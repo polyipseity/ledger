@@ -60,6 +60,7 @@ Please follow these coding conventions in agent edits and new scripts. They are 
   - Where cache formats or APIs were upgraded, new code should not re-introduce legacy compatibility branches. Keep cache formats structured and document upgrades.
 - Be explicit with public exports:
   - Keep `__all__` tuples up-to-date for modules under `scripts/`.
+- Async testing: When writing tests for asynchronous code, prefer `async def` test functions decorated with `@pytest.mark.asyncio` and use `await` to run coroutines directly. Do **not** use event-loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle when used inside pytest and may conflict with pytest-asyncio's event loop fixtures.
 
 These conventions are lightweight but help keep agent-generated edits consistent and easy to review.
 

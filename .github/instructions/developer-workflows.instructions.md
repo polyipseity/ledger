@@ -83,6 +83,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 - Test file layout: Create one test file per source file. Tests should mirror the source directory structure under `tests/` (for example, `tests/path/to/test_module.py` for `src/path/to/module.py`). Only split a source's tests into multiple files in very rare cases when a single test file would otherwise be excessively long.
 - Run the full test suite locally via `pnpm run test` (this invokes `python -m pytest`). Use `pnpm run test:py` to run pytest directly if needed.
 - Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `python -m pytest --cov` to generate coverage output.
+- Async tests: When testing asynchronous code, always write tests as `async def` and decorate them with `@pytest.mark.asyncio`; use `await` to run coroutines directly in the test body. Do **not** use event loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle under pytest and can conflict with pytest-asyncio’s event loop fixtures.
 - When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
 - CI runs the test suite and Husky registers a `pre-push` hook that will run `pnpm run test` before pushing — run tests locally to avoid blocked pushes.
 
