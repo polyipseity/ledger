@@ -378,12 +378,8 @@ class JournalRunContext:
                     f_entry = files.get(fspath(j))
                     if isinstance(f_entry, FileEntryModel):
                         f_entry.last_success = now
-                    else:
-                        try:
-                            h = await file_hash(j)
-                        except FileNotFoundError:
-                            continue
-                        files[fspath(j)] = FileEntryModel(hash=h, last_success=now)
+                        # This should not normally happen: a skipped file without an
+                        # existing cache entry. Do not create a new entry; simply skip.
             evict_old_scripts(cache)
             await write_script_cache(cache)
         return False
