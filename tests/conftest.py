@@ -30,25 +30,44 @@ __all__ = (
 
 
 class AsyncFileBase(ABC):
-    @abstractmethod
-    async def read(self) -> str: ...
+    """Abstract async file interface used by test helpers.
+
+    Provides the minimal async file methods used in tests that mimic the
+    behaviour of `anyio`'s file objects (``read``, ``write``, ``seek``,
+    ``truncate`` and async context management methods).
+    """
 
     @abstractmethod
-    async def write(self, data: str) -> int: ...
+    async def read(self) -> str:
+        """Read and return the file's text content asynchronously."""
+        ...
 
     @abstractmethod
-    async def seek(self, offset: int, whence: int = 0) -> int: ...
+    async def write(self, data: str) -> int:
+        """Write ``data`` to the file and return the number of bytes written."""
+        ...
 
     @abstractmethod
-    async def truncate(self) -> None: ...
+    async def seek(self, offset: int, whence: int = 0) -> int:
+        """Seek the file (test stub) and return the new position (or 0)."""
+        ...
 
     @abstractmethod
-    async def __aenter__(self) -> Self: ...
+    async def truncate(self) -> None:
+        """Truncate the file to the current position (test stub)."""
+        ...
+
+    @abstractmethod
+    async def __aenter__(self) -> Self:
+        """Enter the async context and return the file object."""
+        ...
 
     @abstractmethod
     async def __aexit__(
         self, exc_type: type | None, exc: BaseException | None, tb: object | None
-    ) -> bool: ...
+    ) -> bool:
+        """Exit the async context; return False to indicate no special handling."""
+        ...
 
 
 class AsyncPathBase(ABC):
@@ -63,7 +82,12 @@ class AsyncPathBase(ABC):
         encoding: str = "UTF-8",
         errors: str = "strict",
         newline: str | None = None,
-    ) -> AsyncFileBase: ...
+    ) -> AsyncFileBase:
+        """Open and return an :class:`AsyncFileBase` instance for the path.
+
+        The returned object implements the minimal async file protocol used in tests.
+        """
+        ...
 
 
 class DiskAsyncFilePathBase(AsyncPathBase, ABC):
@@ -75,6 +99,13 @@ class InMemoryAsyncFilePathBase(AsyncPathBase, ABC):
 
 
 class AsyncFileFactory(Protocol):
+    """Callable factory returning async Path-like objects for tests.
+
+    Supports two overloads:
+    - ``("disk", PathLike)``: returns a disk-backed :class:`AsyncPathBase`.
+    - ``("memory", str)``: returns an in-memory :class:`AsyncPathBase`.
+    """
+
     @overload
     def __call__(self, kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase: ...
 
