@@ -59,7 +59,10 @@ async def main(args: Arguments) -> None:
     info(f'journals: {", ".join(map(str, journals))}')
 
     async def replace_in_journal(journal: PathLike[str]) -> None:
+        """Perform find-and-replace for a single journal file using ``updater``."""
+
         def updater(read: str) -> str:
+            """Apply the configured literal find/replace to the provided text."""
             return read.replace(args.find, args.replace)
 
         await file_update_if_changed(journal, updater)
@@ -98,6 +101,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
     @wraps(main)
     async def invoke(ns: Namespace) -> None:
+        """Invoke the replace coroutine using parsed CLI Namespace values."""
         await main(Arguments(find=ns.find, replace=ns.replace))
 
     parser.set_defaults(invoke=invoke)

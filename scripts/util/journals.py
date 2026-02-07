@@ -118,21 +118,25 @@ def make_datetime_range_filters(
     if from_datetime is None:
 
         def from_filter(dt: datetime) -> bool:
+            """Return True for any datetime when no lower bound is specified."""
             return True
 
     else:
 
         def from_filter(dt: datetime) -> bool:
+            """Return True when ``dt`` is on/after the provided ``from_datetime``."""
             return from_datetime <= dt
 
     if to_datetime is None:
 
         def to_filter(dt: datetime) -> bool:
+            """Return True for any datetime when no upper bound is specified."""
             return True
 
     else:
 
         def to_filter(dt: datetime) -> bool:
+            """Return True when ``dt`` is on/before the provided ``to_datetime``."""
             return dt <= to_datetime
 
     return from_filter, to_filter
@@ -156,6 +160,7 @@ def filter_journals_between(
     from_filter, to_filter = make_datetime_range_filters(from_datetime, to_datetime)
 
     def month_end(dt: datetime) -> datetime:
+        """Return a :class:`datetime` representing the last moment of the month for ``dt``."""
         return dt.replace(
             day=monthrange(dt.year, dt.month)[1],
             hour=23,

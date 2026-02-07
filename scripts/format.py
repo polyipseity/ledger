@@ -125,6 +125,12 @@ async def _format_journal(
     # so no explicit returncode check is necessary here.
 
     def updater(read: str) -> str:
+        """Build the formatted text for the journal using current header and ``hledger`` output.
+
+        The function preserves any include header lines from the original file
+        and injects the canonical ``hledger print`` body, post-processed by
+        property sorting to ensure reproducible formatting.
+        """
         header = "\n".join(
             line for line in read.splitlines() if line.startswith("include ")
         )
@@ -216,6 +222,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
     @wraps(main)
     async def invoke(ns: Namespace) -> None:
+        """Invoke the formatting coroutine using parsed CLI Namespace values."""
         await main(Arguments(check=ns.check, files=getattr(ns, "files", None)))
 
     parser.set_defaults(invoke=invoke)

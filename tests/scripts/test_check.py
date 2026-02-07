@@ -47,6 +47,7 @@ async def test_check_main_runs_hledger_for_each_journal(
     async def fake_find(
         folder: PathLike[str], files: Iterable[str] | None = None
     ) -> list[PathLike[str]]:
+        """Fake discovery implementation that returns the local test journals list."""
         return journals
 
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
@@ -56,6 +57,7 @@ async def test_check_main_runs_hledger_for_each_journal(
     async def fake_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner used by tests to capture invocation without subprocesses."""
         calls.append(journal)
         return ("", "", 0)
 
@@ -63,12 +65,16 @@ async def test_check_main_runs_hledger_for_each_journal(
 
     # Stub JournalRunContext so everything is treated as 'to_process'
     class DummyRun:
+        """A minimal JournalRunContext stub used by tests to emulate session behaviour."""
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize with a list of journals to process and empty reported/skipped lists."""
             self.to_process = list(j)
             self.skipped: list[PathLike[str]] = []
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> "DummyRun":
+            """Async context manager entry: return self for use in tests."""
             return self
 
         async def __aexit__(
@@ -77,13 +83,16 @@ async def test_check_main_runs_hledger_for_each_journal(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context manager exit: no cleanup required in tests."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful journal processing for assertions in tests."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for test assertions."""
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun)

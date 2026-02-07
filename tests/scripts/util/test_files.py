@@ -17,23 +17,27 @@ from scripts.util import files
 
 
 def test_get_script_folder_returns_pathlike() -> None:
+    """get_script_folder returns a path-like object that contains a module name."""
     p = files.get_script_folder()
     assert isinstance(Path(p).name, str) and Path(p).name
 
 
 def test_get_script_folder_depth() -> None:
+    """get_script_folder(depth=1) returns the parent of the caller's folder."""
     p0 = files.get_script_folder()
     p1 = files.get_script_folder(depth=1)
     assert Path(p1) == Path(p0).parent
 
 
 def test_get_script_folder_negative_raises() -> None:
+    """Negative depth values raise a ValueError."""
     with pytest.raises(ValueError):
         files.get_script_folder(depth=-1)
 
 
 @pytest.mark.asyncio
 async def test_get_ledger_folder_points_to_ledger():
+    """get_ledger_folder() returns an existing path named 'ledger'."""
     ledger = files.get_ledger_folder()
     assert await Path(ledger).exists()
     assert Path(ledger).name == "ledger"
@@ -41,6 +45,7 @@ async def test_get_ledger_folder_points_to_ledger():
 
 @pytest.mark.asyncio
 async def test_file_update_if_changed_roundtrip(tmp_path: PathLike[str]) -> None:
+    """file_update_if_changed should write new content and leave unchanged files alone."""
     fp = Path(tmp_path) / "test.journal"
     await fp.write_text("original\n")
 
@@ -99,6 +104,7 @@ async def test_file_update_if_changed_with_random_text(s: str) -> None:
         if changed:
             # Normalize newlines to avoid platform-specific CR/LF issues
             def normalize(t: str) -> str:
+                """Normalize newlines to a single LF for cross-platform comparisons."""
                 return t.replace("\r\n", "\n").replace("\r", "\n")
 
             assert normalize(await p.read_text()) == normalize(s[::-1])
@@ -107,6 +113,7 @@ async def test_file_update_if_changed_with_random_text(s: str) -> None:
 # Property test: updater semantics
 @st.composite
 def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
+    """Hypothesis strategy producing (text, updater) pairs for property tests."""
     s = draw(st.text(max_size=200))
     updater_choice = draw(
         st.sampled_from(["identity", "reverse", "prefix", "suffix", "shorten"])
@@ -114,12 +121,14 @@ def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
     if updater_choice == "identity":
 
         def _u_identity(x: str) -> str:
+            """Identity updater - returns input unchanged."""
             return x
 
         updater = _u_identity
     elif updater_choice == "reverse":
 
         def _u_reverse(x: str) -> str:
+            """Reverse updater - returns the reversed input string."""
             return x[::-1]
 
         updater = _u_reverse
@@ -127,6 +136,7 @@ def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
         prefix = draw(st.text(min_size=0, max_size=5))
 
         def _u_prefix(x: str, p: str = prefix) -> str:
+            """Prefix updater - prepends the supplied prefix to the input."""
             return p + x
 
         updater = _u_prefix
@@ -134,6 +144,7 @@ def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
         suffix = draw(st.text(min_size=0, max_size=5))
 
         def _u_suffix(x: str, sfx: str = suffix) -> str:
+            """Suffix updater - appends the supplied suffix to the input."""
             return x + sfx
 
         updater = _u_suffix
@@ -142,6 +153,7 @@ def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
         b = draw(st.integers(min_value=a, max_value=a + 5))
 
         def shorten(x: str, a: int = a, b: int = b) -> str:
+            """Shorten updater - removes the slice [a:b] from the input string."""
             if not x:
                 return x
             a_clamped = min(a, len(x))
@@ -175,6 +187,7 @@ async def test_file_update_if_changed_semantics(
 
         # Normalize newlines to avoid platform-specific CR/LF issues
         def normalize(t: str) -> str:
+            """Normalize newlines to a single LF for cross-platform comparisons."""
             return t.replace("\r\n", "\n").replace("\r", "\n")
 
         if expected == orig:

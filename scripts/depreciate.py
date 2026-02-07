@@ -90,6 +90,12 @@ async def main(args: Arguments) -> None:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
         async def process_journal(journal: PathLike[str]) -> None:
+            """Process a single monthly journal and append depreciation if needed.
+
+            The coroutine inspects the journal for an existing depreciation
+            transaction on the journal's month-end and inserts an accumulated
+            depreciation posting when appropriate.
+            """
             p = Path(journal)
             journal_date = datetime.fromisoformat(f"{p.parent.name}-01")
             journal_last_datetime = journal_date.replace(
@@ -103,7 +109,14 @@ async def main(args: Arguments) -> None:
             journal_last_date_str = journal_last_datetime.date().isoformat()
 
             def updater(read: str) -> str:
+                """Update the journal text by appending or inserting depreciation lines.
+
+                The updater returns the new file contents constructed by
+                :func:`process_lines`.
+                """
+
                 def process_lines(read: str) -> Iterator[str]:
+                    """Yield lines for the updated journal, inserting postings when needed."""
                     found, done = False, False
                     for line in read.splitlines(keepends=True):
                         if not found:
@@ -194,6 +207,11 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
     @wraps(main)
     async def invoke(args: Namespace) -> None:
+        """Invoke the depreciation script using parsed CLI arguments.
+
+        The function adapts the parsed :class:`argparse.Namespace` into the
+        :class:`Arguments` dataclass expected by :func:`main`.
+        """
         await main(
             Arguments(
                 from_datetime=getattr(args, "from"),

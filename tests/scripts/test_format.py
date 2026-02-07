@@ -41,6 +41,7 @@ def test_group_props_edge_cases() -> None:
 # Property-based tests
 @st.composite
 def comment_parts(draw: st.DrawFn) -> list[str]:
+    """Hypothesis strategy producing a mixture of key:value pairs and plain tokens."""
     # produce a sequence mixing key:value pairs and plain tokens
     parts: list[str] = []
     n: int = draw(st.integers(min_value=1, max_value=8))
@@ -74,6 +75,7 @@ def test_group_props_and_sort_props_roundtrip(parts: list[str]) -> None:
 
 @st.composite
 def grouped_comment(draw: st.DrawFn) -> list[list[str] | str]:
+    """Hypothesis strategy producing groups of key:value pairs or plain tokens."""
     # generate a sequence of 1-5 groups; each group is either a list of key:value pairs or a plain token
     parts: list[list[str] | str] = []
     count: int = draw(st.integers(min_value=1, max_value=5))
@@ -177,6 +179,7 @@ async def test__format_journal_check_true_unformatted(
     async def fake_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner returning a synthetic formatted body for the test."""
         return ("FORMATTED BODY\nline2", "", 0)
 
     monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
@@ -184,11 +187,20 @@ async def test__format_journal_check_true_unformatted(
     unformatted: list[PathLike[str]] = []
 
     class Session(JournalRunContext):
+        """Minimal session stub used in tests to capture and expose reported journals.
+
+        This stub avoids the normal JournalRunContext caching behaviour by
+        initializing with an empty journal list and records successes by adding
+        journals to the base class _reported set so tests can assert on `reported`.
+        """
+
         def __init__(self) -> None:
+            """Initialize without any journals to avoid cache behaviour."""
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
             # Record to the base class _reported set so `reported` property reflects it
             self._reported.add(journal)
 
@@ -214,16 +226,26 @@ async def test__format_journal_check_false_reports_success(
     async def fake_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner returning a synthetic new body for the test."""
         return ("NEW BODY\n", "", 0)
 
     monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
 
     class Session(JournalRunContext):
+        """Minimal session stub used in tests to capture and expose reported journals.
+
+        This stub avoids the normal JournalRunContext caching behaviour by
+        initializing with an empty journal list and records successes by adding
+        journals to the base class _reported set so tests can assert on `reported`.
+        """
+
         def __init__(self) -> None:
+            """Initialize without any journals to avoid cache behaviour."""
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
             # Record to the base class _reported set so `reported` property reflects it
             self._reported.add(journal)
 

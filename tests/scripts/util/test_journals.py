@@ -19,6 +19,7 @@ from scripts.util import journals
 
 @st.composite
 def amount_strings(draw: st.DrawFn) -> tuple[str, float]:
+    """Hypothesis strategy producing amount strings with their expected float value."""
     int_part = draw(st.integers(min_value=0, max_value=1_000_000))
     frac = draw(st.integers(min_value=0, max_value=99))
     pattern = draw(st.sampled_from(["comma_dot", "space_comma", "plain"]))
@@ -45,6 +46,7 @@ def amount_strings(draw: st.DrawFn) -> tuple[str, float]:
 
 @given(amount_strings())
 def test_parse_amount_roundtrip(pair: tuple[str, float]) -> None:
+    """Parsing strings produced by :func:`amount_strings` should round-trip to expected values."""
     s, expected = pair
     parsed = journals.parse_amount(s)
     assert abs(parsed - expected) < 1e-9
@@ -52,6 +54,7 @@ def test_parse_amount_roundtrip(pair: tuple[str, float]) -> None:
 
 @given(st.integers(min_value=1900, max_value=2100))
 def test_parse_period_start_year_only(year: int) -> None:
+    """Year-only strings parse to a period start at January 1st of that year."""
     s = str(year)
     dt = journals.parse_period_start(s)
     assert isinstance(dt, datetime)
@@ -61,6 +64,7 @@ def test_parse_period_start_year_only(year: int) -> None:
 
 @given(st.tuples(st.integers(2000, 2100), st.integers(1, 12)))
 def test_parse_period_start_month(year_month: tuple[int, int]) -> None:
+    """Year-month strings parse to the first day of the given month."""
     y, m = year_month
     s = f"{y}-{m:02d}"
     dt = journals.parse_period_start(s)
@@ -69,6 +73,7 @@ def test_parse_period_start_month(year_month: tuple[int, int]) -> None:
 
 @given(st.tuples(st.integers(2000, 2100), st.integers(1, 12)))
 def test_parse_period_end_month(year_month: tuple[int, int]) -> None:
+    """Year-month strings parse to a datetime representing that month's end."""
     y, m = year_month
     s = f"{y}-{m:02d}"
     dt = journals.parse_period_end(s)
@@ -155,11 +160,15 @@ def test_format_journal_list_various() -> None:
     assert journals.format_journal_list([]) == "none"
 
     class P(PathLike[str]):
+        """Small PathLike helper used in tests to emulate discovered journal entries."""
+
         def __init__(self, parent: str, name: str) -> None:
+            """Initialize with a synthetic parent object and filename."""
             self.parent = SimpleNamespace(name=parent)
             self.name = name
 
         def __fspath__(self) -> str:
+            """Return a string path representation like 'YYYY-MM/name' for testing."""
             return f"{self.parent.name}/{self.name}"
 
     lst = [P("2024-01", "self.journal")]

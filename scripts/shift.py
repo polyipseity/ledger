@@ -90,7 +90,10 @@ async def main(args: Arguments) -> None:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
         async def process_journal(journal: PathLike[str]) -> None:
+            """Adjust balance lines in a single monthly journal according to args."""
+
             def updater(read: str) -> str:
+                """Update the text of a journal, shifting matching balance lines."""
                 regex = compile(
                     rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",
                     MULTILINE,
@@ -101,6 +104,7 @@ async def main(args: Arguments) -> None:
                 )
 
                 def process_lines(read: str) -> Iterator[str]:
+                    """Yield updated lines for the journal by applying the regex and date filters."""
                     datetime_, opening, closing = None, False, False
                     for line in read.splitlines(keepends=True):
                         try:
@@ -182,6 +186,11 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
     @wraps(main)
     async def invoke(args: Namespace) -> None:
+        """Invoke the shift script using parsed CLI arguments.
+
+        Converts the parsed :class:`argparse.Namespace` into the :class:`Arguments`
+        dataclass and calls :func:`main`.
+        """
         await main(
             Arguments(
                 from_datetime=getattr(args, "from"),

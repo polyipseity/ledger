@@ -77,6 +77,12 @@ async def main(args: Arguments) -> None:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
         async def check_journal(journal: PathLike[str]) -> None:
+            """Run the set of hledger checks for a single journal and record success.
+
+            This coroutine runs :func:`run_hledger` with the configured set of
+            check arguments for the supplied ``journal`` and records the journal
+            as processed on success.
+            """
             await run_hledger(journal, "check", *_HLEDGER_CHECKS)
             # If the check returned successfully record it for this session
             run.report_success(journal)
@@ -109,6 +115,11 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
     @wraps(main)
     async def invoke(ns: Namespace) -> None:
+        """Invoke the main coroutine using parsed Namespace values.
+
+        The function adapts the parsed :class:`argparse.Namespace` into the
+        :class:`Arguments` dataclass expected by :func:`main`.
+        """
         await main(Arguments(files=getattr(ns, "files", None)))
 
     parser.add_argument(
