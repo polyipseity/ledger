@@ -56,6 +56,7 @@ Please follow these coding conventions in agent edits and new scripts. They are 
   - Import specific names rather than whole modules (for example `from hashlib import sha256`, `from json import loads, dumps`). This makes uses explicit and easier to statically analyse.
   - Inline imports may be used sparingly for optional runtime-only imports (e.g. in exception handlers), but prefer `from ... import ...` at module level where practical.
 - Type hints & PEP 585: Prefer modern built-in generic types (PEP 585) and `collections.abc` abstract types in all new code and agent guidance. Use `dict`, `list`, `set`, `tuple`, `frozenset` etc. instead of `typing.Dict`, `typing.List`, etc., and prefer `collections.abc` names for ABCs (for example, `collections.abc.Awaitable` instead of `typing.Awaitable`). When appropriate, use the PEP 604 union operator (`X | Y`) for optionals/union types instead of `typing.Optional`.
+- Docstrings & complete type annotations: All Python modules, classes, functions, and tests MUST include clear module-level docstrings and complete type annotations for public APIs and test functions (including arguments and return types). Prefer PEP 585 / PEP 604 styles and use `collections.abc` where appropriate.
 - No legacy cache compatibility in new code paths:
   - Where cache formats or APIs were upgraded, new code should not re-introduce legacy compatibility branches. Keep cache formats structured and document upgrades.
 - Be explicit with public exports:

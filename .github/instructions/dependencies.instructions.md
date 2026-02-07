@@ -40,6 +40,7 @@ Required software and tools that enable this accounting system.
 - **Modern syntax**: `match_args`, `kw_only`, `slots` in dataclasses
 - **Async/await**: Concurrent subprocess execution
 - **Type hints**: Full type annotations throughout
+- **Docstrings**: All Python code (modules, classes, functions and tests) must include clear docstrings describing purpose and behaviour.
 
 **Installation:** Download from [python.org](https://python.org)
 
