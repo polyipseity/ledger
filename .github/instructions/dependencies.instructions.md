@@ -94,6 +94,10 @@ pip install "anyio>=3.6.2"
 
 **Verification:** `git --version`
 
+### Type checking
+
+**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting. Run locally with `pnpm run check:py` (this now runs Pyright alongside Ruff/isort/Black); CI runs the Python linters (`pnpm run check:py`).
+
 ### PowerShell (for Windows users)
 
 **Why:** Recommended shell for running scripts on Windows

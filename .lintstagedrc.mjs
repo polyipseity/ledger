@@ -23,8 +23,9 @@ export default {
   "**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}":
     ["prettier --write"],
   "**/*.{py,pyi,pyw,pyx}": [
-    // Run each Python formatter as its own command so lint-staged appends
-    // the staged file list to each invocation (ruff, isort, black).
+    // Run pyright and each Python formatter as its own command so lint-staged appends
+    // the staged file list to each invocation (pyright, ruff, isort, black).
+    "pyright",
     "python -m ruff check --fix",
     "python -m isort",
     "python -m black",
