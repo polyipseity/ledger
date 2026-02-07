@@ -47,6 +47,7 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
   - pnpm run markdownlint:fix     # optional: auto-fix markdown issues
   - pnpm run hledger:format       # format journals (may modify files)
   - pnpm run hledger:check        # run hledger checks
+  - pnpm run test                 # run unit tests (Husky also registers a `pre-push` that will run this)
 
 - CI enforcement: GitHub Actions runs `pnpm install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
 

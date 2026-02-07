@@ -77,6 +77,14 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 - Type hints: Use modern typing styles (PEP 585 / PEP 604). Prefer built-in generics (`dict`, `list`, `set`, `tuple`, `frozenset`) instead of `typing.Dict`, `typing.List`, etc. Use `collections.abc` abstract types for ABCs (for example, `collections.abc.Awaitable`, `collections.abc.Iterable`, `collections.abc.Callable`) where appropriate. Prefer `X | Y` for unions/optionals instead of `typing.Optional` when targeting supported Python versions.
 - Module exports: All Python modules in `scripts/` MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) listing public symbols; use `()` if there are no exports. Do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`); import names normally and rely on `__all__` at the top of the module to make explicit which symbols are public.
 
+### Testing ✅
+
+- Tests are written using `pytest` and live in the `tests/` directory (files named `test_*.py`).
+- Run the full test suite locally via `pnpm run test` (this invokes `python -m pytest`). Use `pnpm run test:py` to run pytest directly if needed.
+- Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `python -m pytest --cov` to generate coverage output.
+- When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
+- CI runs the test suite and Husky registers a `pre-push` hook that will run `pnpm run test` before pushing — run tests locally to avoid blocked pushes.
+
 ## Pre-Commit Validation (Husky + lint-staged)
 
 ```powershell

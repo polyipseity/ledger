@@ -60,3 +60,36 @@ jobs:
 
       - name: Run checks
         run: pnpm run check
+
+  test:
+    runs-on: ubuntu-slim # using `ubuntu-slim` to minimize image size and attack surface; see header for rationale
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "*"
+          cache: "pnpm"
+
+      # Specific to this project: set up Python for any scripts that may be needed
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: .python-version
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install hledger
+        run: pnpm run hledger:install
+
+      - name: Run tests
+        run: pnpm run test

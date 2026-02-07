@@ -130,6 +130,14 @@ python --version
 python -c "import anyio; print(anyio.__version__)"
 # Output: 4.0+ or 3.x+
 
+# Check pytest and friends
+python -m pytest --version
+# Output: pytest X.Y.Z
+
+# Run tests
+pnpm run test
+# Equivalent to: python -m pytest
+
 # Check GPG
 gpg --version
 # Output: gpg (GnuPG) 2.x.x
@@ -140,6 +148,17 @@ git --version
 ```
 
 All should show **no errors**.
+
+### Dev/test dependencies
+
+Testing and async support are provided via these dev extras (installed by `pip install -e . --group dev`):
+
+- `pytest` (test runner)
+- `pytest-asyncio` (async test support)
+- `pytest-cov` (coverage)
+- `ruff`, `black`, `isort` (formatting & linting tools)
+
+When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `postinstall` will install them locally.
 
 ## Troubleshooting Dependencies
 

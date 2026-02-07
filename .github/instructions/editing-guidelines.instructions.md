@@ -42,6 +42,12 @@ See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 - **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.github/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
 - When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
 
+### Testing ⚙️
+
+- When you modify scripts, instruction files, or any behavior, add or update unit tests under `tests/` and ensure they pass locally via `pnpm run test`.
+- Tests should be written using `pytest` and follow existing patterns (use `pytest.mark.asyncio` for async tests when needed). Include edge cases and validation paths for instruction changes so any regressions are caught in CI.
+- CI and Husky `pre-push` will run the full test suite; ensure tests are reliable and fast where possible to avoid blocked pushes.
+
 ### Shared Expense and Repayment Pattern
 
 When a friend pays for a group meal or shared expense, the original transaction must:

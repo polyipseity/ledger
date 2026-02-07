@@ -24,7 +24,9 @@
     "format:py": "python -m ruff check --fix . && python -m isort . && python -m black .",
     "hledger:install": "curl -sL https://github.com/simonmichael/hledger/releases/latest/download/hledger-linux-x64.tar.gz | sudo tar -xzv -f- -C /usr/local/bin hledger",
     "postinstall": "python -m pip install -e . --group dev",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "pnpm run test:py",
+    "test:py": "python -m pytest"
   },
   "type": "module"
 }
