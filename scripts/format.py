@@ -182,9 +182,10 @@ async def main(args: Arguments) -> None:
         info("processed:\n%s", format_journal_list(run.reported, max_items=8))
 
     if args.check and unformatted_files:
-        print("The following files are not properly formatted:")
-        for file in unformatted_files:
-            print(f"  {file}")
+        info(
+            "The following files are not properly formatted:\n%s",
+            "\n".join(f"  {file}" for file in unformatted_files),
+        )
         exit(1)
 
     exit(0)
