@@ -3,6 +3,11 @@
   "python-envs.pythonProjects": [],
   "markdown.validate.enabled": true,
   "chat.tools.terminal.autoApprove": {
-    "pyright": true
+    "pyright": true,
+    "hledger": true,
+    "/^python -m pytest/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
   }
 }
