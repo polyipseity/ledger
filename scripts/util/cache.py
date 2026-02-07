@@ -369,6 +369,7 @@ class JournalRunContext:
                     try:
                         h = await file_hash(j)
                     except FileNotFoundError:
+                        # Missing files should simply be skipped
                         continue
                     entry.files[fspath(j)] = FileEntryModel(hash=h, last_success=now)
 

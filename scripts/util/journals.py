@@ -310,7 +310,10 @@ def format_journal_list(
 
 
 async def run_hledger(
-    journal: PathLike[str], *args: str, raise_on_error: bool = True, strict: bool = True
+    journal: PathLike[str] | str,
+    *args: str,
+    raise_on_error: bool = True,
+    strict: bool = True,
 ) -> tuple[str, str, int]:
     """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode)."""
     hledger_prog = which("hledger")
