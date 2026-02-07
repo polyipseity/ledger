@@ -1,4 +1,4 @@
-"""Tests for :mod:`scripts.util.files`.
+"""Tests for :mod:`scripts.utils.files`.
 
 These exercises test the stack-inspection-based helpers and the
 `file_update_if_changed` async updater using both concrete and property-based
@@ -13,7 +13,7 @@ from anyio import Path, TemporaryDirectory
 from hypothesis import given
 from hypothesis import strategies as st
 
-from scripts.util import files
+from scripts.utils import files
 
 __all__ = ()
 

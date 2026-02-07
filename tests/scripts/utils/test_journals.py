@@ -1,4 +1,4 @@
-"""Tests for :mod:`scripts.util.journals`.
+"""Tests for :mod:`scripts.utils.journals`.
 
 Property-based tests cover amount parsing and date parsing utilities. The
 module also verifies journal file discovery, inclusive filtering by period,
@@ -15,7 +15,7 @@ from anyio import Path
 from hypothesis import given
 from hypothesis import strategies as st
 
-from scripts.util import journals
+from scripts.utils import journals
 
 __all__ = ()
 

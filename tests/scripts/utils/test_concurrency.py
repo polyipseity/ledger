@@ -1,6 +1,6 @@
-"""Tests for :mod:`scripts.util.concurrency`.
+"""Tests for :mod:`scripts.utils.concurrency`.
 
-Verify that :func:`scripts.util.concurrency.gather_and_raise` aggregates
+Verify that :func:`scripts.utils.concurrency.gather_and_raise` aggregates
 exceptions raised by concurrent tasks into a :class:`BaseExceptionGroup` and
 returns normally when all tasks succeed.
 """
@@ -9,7 +9,7 @@ import asyncio
 
 import pytest
 
-from scripts.util import concurrency
+from scripts.utils import concurrency
 
 __all__ = ()
 

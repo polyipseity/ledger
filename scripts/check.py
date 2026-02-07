@@ -17,10 +17,10 @@ from typing import final
 
 from anyio import Path
 
-from .util.cache import JournalRunContext
-from .util.concurrency import gather_and_raise
-from .util.files import get_ledger_folder
-from .util.journals import find_monthly_journals, format_journal_list, run_hledger
+from .utils.cache import JournalRunContext
+from .utils.concurrency import gather_and_raise
+from .utils.files import get_ledger_folder
+from .utils.journals import find_monthly_journals, format_journal_list, run_hledger
 
 __all__ = ("Arguments", "main", "parser")
 

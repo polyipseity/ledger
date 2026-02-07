@@ -1,9 +1,9 @@
-"""Tests for :mod:`scripts.util.cache`.
+"""Tests for :mod:`scripts.utils.cache`.
 
 Exercise the cache helpers used by repository scripts. Tests cover reading and
 writing the cache file, computing file hashes, deriving script cache keys,
 marking journals as processed, evicting stale or malformed entries, and the
-behaviour of :class:`~scripts.util.cache.JournalRunContext`.
+behaviour of :class:`~scripts.utils.cache.JournalRunContext`.
 """
 
 from datetime import datetime, timedelta, timezone
@@ -16,7 +16,7 @@ from typing import Any, cast
 import pytest
 from anyio import Path
 
-from scripts.util import cache as cmod
+from scripts.utils import cache as cmod
 
 __all__ = ()
 

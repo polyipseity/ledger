@@ -15,9 +15,9 @@ from os import PathLike
 from sys import argv, exit
 from typing import final
 
-from .util.concurrency import gather_and_raise
-from .util.files import file_update_if_changed, get_ledger_folder
-from .util.journals import find_all_journals
+from .utils.concurrency import gather_and_raise
+from .utils.files import file_update_if_changed, get_ledger_folder
+from .utils.journals import find_all_journals
 
 __all__ = ("Arguments", "main", "parser")
 

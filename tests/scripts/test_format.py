@@ -14,7 +14,7 @@ from hypothesis import given
 from hypothesis import strategies as st
 
 from scripts import format as fmt
-from scripts.util.cache import JournalRunContext
+from scripts.utils.cache import JournalRunContext
 from tests.conftest import RunModuleHelper
 
 __all__ = ()
