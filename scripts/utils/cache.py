@@ -10,6 +10,7 @@ from collections.abc import Iterable, Sequence
 from datetime import datetime, timezone
 from hashlib import sha256
 from json import JSONDecodeError
+from logging import warning
 from os import PathLike, fspath, makedirs
 from os.path import basename, dirname, join, splitext
 from typing import Self
@@ -97,8 +98,6 @@ async def read_script_cache() -> CacheModel:
             try:
                 model = CacheModel.model_validate_json(text)
             except (JSONDecodeError, ValidationError):
-                from logging import warning
-
                 warning(
                     "Cache file %s is invalid (parse/validation error); invalidating all caches",
                     cache_path,
@@ -130,12 +129,61 @@ async def file_hash(path: PathLike[str]) -> str:
     return sha256(data).hexdigest()
 
 
+# Path to the project's `preludes/` directory (resolved relative to the
+# repository root). Exposed as a module-level variable so tests can override
+# it when needed. Use an anyio `Path` so callers/tests can work with a
+# path-like object directly.
+_PRELUDES_DIR: Path = Path(__file__).parent.parent.parent / "preludes"
+
+
+async def _preludes_hash() -> str:
+    """Return a deterministic SHA256 hex digest of all files under
+    ``preludes/``.
+
+    The digest is computed over each file's relative path (to the preludes
+    directory) followed by its bytes, iterating files in sorted order to
+    guarantee reproducibility.
+
+    If the preludes directory does not exist or contains no files an empty
+    string is returned.
+    """
+    # Walk synchronously to collect paths, read file bytes asynchronously
+    from os import walk
+    from os.path import isdir, relpath
+
+    if not isdir(fspath(_PRELUDES_DIR)):
+        return ""
+
+    files: list[str] = []
+    for root, _dirs, names in walk(fspath(_PRELUDES_DIR)):
+        for name in names:
+            files.append(join(root, name))
+    if not files:
+        return ""
+
+    files.sort()
+    h = sha256()
+    for full in files:
+        # incorporate the file's relative path so renames change the hash
+        rel = relpath(full, fspath(_PRELUDES_DIR))
+        h.update(rel.encode("utf-8"))
+        h.update(b"\0")
+        async with await Path(full).open(mode="rb") as fh:
+            data = await fh.read()
+        h.update(data)
+    return h.hexdigest()
+
+
 async def script_key_from(script_id: PathLike[str]) -> str:
-    """Return a script key in the form ``<filename>@<sha256(contents)>``.
+    """Return a script key in the form ``<filename>@<sha256(contents)>+preludes@<sha256>``.
 
     ``script_id`` must be an :class:`os.PathLike` pointing at the invoking
     script. The file is read asynchronously; if the file cannot be read the
     function fails fast and raises :class:`FileNotFoundError`.
+
+    The project's ``preludes/`` files are also included in the key so that any
+    change to preludes forces a cache miss and triggers reprocessing of
+    journals.
 
     Raises
     ------
@@ -147,7 +195,13 @@ async def script_key_from(script_id: PathLike[str]) -> str:
             data = await fh.read()
     except Exception as exc:
         raise FileNotFoundError(f"script file {script_id} not readable: {exc}") from exc
-    return f"{Path(script_id).name}@{sha256(data).hexdigest()}"
+
+    script_hash = sha256(data).hexdigest()
+    preludes_hash = await _preludes_hash()
+    # Always include the preludes hash in the key (may be empty). This guarantees
+    # that changes under `preludes/` always affect the script cache key and
+    # therefore force reprocessing of journals when preludes change.
+    return f"{Path(script_id).name}@{script_hash}+preludes@{preludes_hash}"
 
 
 async def should_skip_journal(script_id: PathLike[str], journal: PathLike[str]) -> bool:
@@ -199,18 +253,32 @@ async def mark_journal_processed(
         await write_script_cache(cache)
 
 
-def evict_old_scripts(cache: CacheModel, days: int = 30) -> None:
+def evict_old_scripts(
+    cache: CacheModel,
+    *,
+    script_age_seconds: float = 24 * 3600.0,
+    file_age_seconds: float = 30 * 24 * 3600.0,
+) -> None:
     """Evict script keys and old file entries from the cache.
 
-    Behavior:
-    - If a script's ``last_access`` is older than ``days`` the entire script entry
-      (including all files) is removed.
-    - Otherwise, any file whose ``last_success`` is older than ``days`` is removed
-      from the script's ``files`` map.
+    Parameters
+    ----------
+    cache:
+        The :class:`CacheModel` to mutate in-place.
+    script_age_seconds:
+        The age threshold in *seconds* after which a script's ``last_access``
+        will cause the entire script entry to be removed. Defaults to 1 day.
+    file_age_seconds:
+        The age threshold in *seconds* after which per-file ``last_success``
+        timestamps are considered stale and removed. Defaults to 30 days.
 
     Modifies ``cache`` in-place.
     """
-    threshold = datetime.now(timezone.utc).timestamp() - days * 24 * 3600
+    now_ts = datetime.now(timezone.utc).timestamp()
+
+    script_threshold = now_ts - script_age_seconds
+    file_threshold = now_ts - file_age_seconds
+
     for k in list(cache.root.keys()):
         entry = cache.root.get(k)
         if not isinstance(entry, ScriptEntryModel):
@@ -226,7 +294,7 @@ def evict_old_scripts(cache: CacheModel, days: int = 30) -> None:
                 # Malformed timestamp; evict the script entry
                 del cache.root[k]
                 continue
-            if t < threshold:
+            if t < script_threshold:
                 del cache.root[k]
                 continue
 
@@ -248,7 +316,7 @@ def evict_old_scripts(cache: CacheModel, days: int = 30) -> None:
                 # Malformed timestamp -> remove file entry
                 del files[f]
                 continue
-            if t < threshold:
+            if t < file_threshold:
                 del files[f]
 
 

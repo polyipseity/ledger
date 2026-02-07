@@ -130,6 +130,69 @@ async def test_file_hash_and_script_key(tmp_path: PathLike[str]) -> None:
 
 
 @pytest.mark.asyncio
+async def test_script_key_always_includes_preludes_component(
+    tmp_path: PathLike[str],
+) -> None:
+    """The script key should always contain a `+preludes@` component (may be empty)."""
+    script_path = Path(tmp_path) / "myscript2.py"
+    await script_path.write_text("print(2)\n")
+    key = await cmod.script_key_from(script_path)
+    assert "+preludes@" in key
+
+
+@pytest.mark.asyncio
+async def test_script_key_changes_when_prelude_files_change(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Changes in files under `preludes/` should change the script key."""
+    preludes = Path(tmp_path) / "preludes"
+    await preludes.mkdir(parents=True)
+    f = preludes / "a.txt"
+    await f.write_text("v1")
+    # Point the module at our temporary preludes directory
+    monkeypatch.setattr(cmod, "_PRELUDES_DIR", Path(preludes))
+
+    script_path = Path(tmp_path) / "script.py"
+    await script_path.write_text("print(1)\n")
+
+    key1 = await cmod.script_key_from(script_path)
+    # Modify a prelude file -> key should change
+    await f.write_text("v2")
+    key2 = await cmod.script_key_from(script_path)
+
+    assert key1 != key2
+
+
+@pytest.mark.asyncio
+async def test_should_skip_journal_respects_preludes_changes(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Journals marked processed should become non-skippable if preludes change."""
+    await _patch_cache_to(tmp_path, monkeypatch)
+
+    preludes = Path(tmp_path) / "preludes"
+    await preludes.mkdir(parents=True)
+    pfile = preludes / "cfg"
+    await pfile.write_text("v1")
+    monkeypatch.setattr(cmod, "_PRELUDES_DIR", Path(preludes))
+
+    script_path = Path(tmp_path) / "script.py"
+    await script_path.write_text("x")
+
+    journal_path = Path(tmp_path) / "2024-01" / "self.journal"
+    await journal_path.parent.mkdir(parents=True)
+    await journal_path.write_text("txn")
+
+    # Mark processed with initial preludes
+    await cmod.mark_journal_processed(script_path, journal_path)
+    assert (await cmod.should_skip_journal(script_path, journal_path)) is True
+
+    # Mutate preludes -> should no longer be skippable
+    await pfile.write_text("v2")
+    assert (await cmod.should_skip_journal(script_path, journal_path)) is False
+
+
+@pytest.mark.asyncio
 async def test_should_skip_and_mark_journal_processed(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -175,11 +238,56 @@ def test_evict_old_scripts_and_malformed_entries() -> None:
     s2.files["b"] = cast(cmod.FileEntryModel, "notamodel")
     cache.root["s2@x"] = s2
 
-    cmod.evict_old_scripts(cache, days=30)
+    cmod.evict_old_scripts(cache)
     assert "oldscript@x" not in cache.root
     # file 'a' should be removed; 'b' should be removed as malformed
     assert "a" not in cache.root["s2@x"].files
     assert "b" not in cache.root["s2@x"].files
+
+
+def test_evict_respects_separate_durations() -> None:
+    """Eviction should respect separate script- and file-age thresholds."""
+    now = datetime.now(timezone.utc)
+    old = now - timedelta(days=90)
+    cache = cmod.CacheModel(root={})
+
+    # Script old but files recent
+    s_script_old = cmod.ScriptEntryModel()
+    s_script_old.last_access = old
+    s_script_old.files["a"] = cmod.FileEntryModel(hash="x", last_success=now)
+    cache.root["oldscript@x"] = s_script_old
+
+    # Script recent but file old
+    s_file_old = cmod.ScriptEntryModel()
+    s_file_old.last_access = now
+    s_file_old.files["b"] = cmod.FileEntryModel(hash="x", last_success=old)
+    cache.root["sfile@x"] = s_file_old
+
+    # Evict scripts older than 1 second, keep files (large file_age_seconds)
+    cmod.evict_old_scripts(
+        cache, script_age_seconds=1, file_age_seconds=1000 * 24 * 3600
+    )
+    assert "oldscript@x" not in cache.root
+    assert "sfile@x" in cache.root
+    assert "b" in cache.root["sfile@x"].files
+
+    # Reset and do opposite: keep scripts, remove files older than 1 second
+    cache = cmod.CacheModel(root={})
+    s_script_old = cmod.ScriptEntryModel()
+    s_script_old.last_access = old
+    s_script_old.files["a"] = cmod.FileEntryModel(hash="x", last_success=now)
+    cache.root["oldscript@x"] = s_script_old
+
+    s_file_old = cmod.ScriptEntryModel()
+    s_file_old.last_access = now
+    s_file_old.files["b"] = cmod.FileEntryModel(hash="x", last_success=old)
+    cache.root["sfile@x"] = s_file_old
+
+    cmod.evict_old_scripts(
+        cache, script_age_seconds=1000 * 24 * 3600, file_age_seconds=1
+    )
+    assert "oldscript@x" in cache.root
+    assert "b" not in cache.root["sfile@x"].files
 
 
 @pytest.mark.asyncio
@@ -343,7 +451,7 @@ def test_evict_removes_non_script_entry() -> None:
     cache = cmod.CacheModel(root={})
     # intentionally insert a non-ScriptEntryModel value to simulate a malformed cache entry that might exist in older cache versions; eviction should remove it
     cache.root["bad"] = cast(cmod.ScriptEntryModel, "not-a-script")
-    cmod.evict_old_scripts(cache, days=30)
+    cmod.evict_old_scripts(cache)
     assert "bad" not in cache.root
 
 
@@ -374,7 +482,7 @@ def test_evict_handles_malformed_timestamps_and_file_entries() -> None:
     )
     cache.root["s2@x"] = s2
 
-    cmod.evict_old_scripts(cache, days=30)
+    cmod.evict_old_scripts(cache)
     assert "badscript@x" not in cache.root
     # file 'a' should be removed due to malformed last_success
     assert "a" not in cache.root["s2@x"].files
@@ -598,7 +706,7 @@ def test_evict_removes_files_with_no_last_success() -> None:
     s.files["a"] = cmod.FileEntryModel(hash="x", last_success=None)
     cache.root["script@x"] = s
 
-    cmod.evict_old_scripts(cache, days=30)
+    cmod.evict_old_scripts(cache)
     assert "a" not in cache.root["script@x"].files
 
 
