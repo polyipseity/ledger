@@ -182,6 +182,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
    - For confidential payees, after mapping, check `private.yaml` for a UUID and use it in the journal. Never expose confidential names.
    - Add a new journal transaction using the mapping. Insert transactions in strict chronological order (see `.github/instructions/transaction-format.instructions.md`).
       - For vending machine transactions (e.g., Swire), use `expenses:food and drinks:drinks` as the expense account.
+      - For bus transport transactions (Kowloon Motor Bus/Long Win Bus), also record the reward accrual and revenue postings. Add an `assets:accrued revenues:rewards` posting with the fare amount in `_PT/E` (positive) and a corresponding `revenues:rewards` posting with the negative same amount in `_PT/E`. This ensures accumulated reward points are tracked consistently for bus fares.
    - For each new payee, register it in `preludes/self.journal` (alphabetized); for confidential payees register the UUID. See `add-payee` skill for process.
    - If any ambiguity exists, ask the user for clarification.
 

@@ -27,6 +27,9 @@
 "港鐵":
   - "Mass Transit Railway"
 
+"專線小巴":
+  - "public light bus"
+
 # Transfers
 # Both the correct Octopus reload/transfer text and the common typo are mapped to 'self'.
 # '八達通轉賬' is the correct text for Octopus reload/transfer between own accounts.

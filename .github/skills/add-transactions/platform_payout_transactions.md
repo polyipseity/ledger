@@ -89,13 +89,14 @@ Any deviation from these rules will result in unbalanced or non-compliant journa
   - Debit the platform asset account (UUID) with the same amount.
   - Assert the platform account balance to zero after payout (`= 0.00 <currency>`).
 - **Accounts:** Use UUIDs for both platform and bank accounts.
-- **Tags:** Always include only the required tags: `activity: transfer`, `time` (with second precision), and `timezone`. **Do not include extraneous tags such as email, description, or other metadata unless explicitly required by the project conventions.**
+- **Tags:** Always include only the required tags: `activity: payout`, `time` (with second precision), and `timezone`. **Do not include extraneous tags such as email, description, or other metadata unless explicitly required by the project conventions.**
+  - Use `activity: payout` for platform payouts (preferred over `transfer`) to make the transaction intent explicit.
 - **Status:** Only journal completed/paid payouts.
 
 ### 2.3 Example: Platform Payout (Randomized, Masked)
 
 ```hledger
-2026-01-20 (HD01234567891011, FRN20260120PAYC0123456789012, po_1Z9Y8X7W6V5U4T3S2R1Q) Stripe  ; activity: transfer, time: 15:10:10, timezone: UTC+08:00
+2026-01-20 (HD01234567891011, FRN20260120PAYC0123456789012, po_1Z9Y8X7W6V5U4T3S2R1Q) Stripe  ; activity: payout, time: 15:10:10, timezone: UTC+08:00
   assets:banks:99999999-8888-7777-6666-555555555555:HKD savings       156.00 HKD
   assets:digital:Stripe:11111111-2222-3333-4444-555555555555        -156.00 HKD = 0.00 HKD
 ```
