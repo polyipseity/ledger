@@ -6,12 +6,10 @@ marking journals as processed, evicting stale or malformed entries, and the
 behaviour of :class:`~scripts.utils.cache.JournalRunContext`.
 """
 
-import asyncio
-import os
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 from json import JSONDecodeError
-from os import PathLike, fspath
+from os import PathLike, fspath, path
 from types import SimpleNamespace
 from typing import Any, cast
 
@@ -495,7 +493,7 @@ def test_cache_file_path_creates_dir(tmp_path: PathLike[str]) -> None:
     p = cmod.cache_file_path()
     # Ensure the directory exists
 
-    assert os.path.basename(os.path.dirname(p)) == "__pycache__"
+    assert path.basename(path.dirname(p)) == "__pycache__"
 
 
 @pytest.mark.asyncio
@@ -558,7 +556,8 @@ async def test_read_script_cache_handles_json_decode_error(
     assert any("invalidating all caches" in rec.getMessage() for rec in caplog.records)
 
 
-def test_read_script_cache_handles_model_validate_raising(
+@pytest.mark.asyncio
+async def test_read_script_cache_handles_model_validate_raising(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     """If `CacheModel.model_validate_json` raises `ValidationError`, it is handled and an empty cache is returned."""
@@ -574,12 +573,8 @@ def test_read_script_cache_handles_model_validate_raising(
     monkeypatch.setattr(cmod.CacheModel, "model_validate_json", staticmethod(raiser))
 
     # Ensure read_script_cache returns an empty model when validation fails
-
-    async def run():
-        cache = await cmod.read_script_cache()
-        assert cache.root == {}
-
-    asyncio.run(run())
+    cache = await cmod.read_script_cache()
+    assert cache.root == {}
 
 
 @pytest.mark.asyncio
