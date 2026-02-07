@@ -8,7 +8,7 @@ behaviour of :class:`~scripts.util.cache.JournalRunContext`.
 
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
-from os import PathLike
+from os import PathLike, fspath
 from typing import cast
 
 import pytest
@@ -149,7 +149,7 @@ async def test_journal_run_context_basic(
     key = await cmod.script_key_from(script_path)
     entry = cmod.ScriptEntryModel()
     entry.last_access = datetime.now(timezone.utc)
-    entry.files[str(j1)] = cmod.FileEntryModel(
+    entry.files[fspath(j1)] = cmod.FileEntryModel(
         hash=await cmod.file_hash(j1),
         last_success=datetime.now(timezone.utc),
     )
@@ -170,5 +170,5 @@ async def test_journal_run_context_basic(
     # After exit, the cache file should contain updated last_success for j2
     cache_after = await cmod.read_script_cache()
     entry2 = cache_after.root[key]
-    assert str(j2) in entry2.files
-    assert entry2.files[str(j2)].last_success is not None
+    assert fspath(j2) in entry2.files
+    assert entry2.files[fspath(j2)].last_success is not None

@@ -295,7 +295,7 @@ def format_journal_list(journals: Iterable[PathLike], *, max_items: int = 8) -> 
             p = Path(orig)
             label = f"{p.parent.name}/{p.name}"
         except Exception:
-            label = str(orig)
+            label = orig
         lines.append(f"  - {label}")
     if count > max_items:
         lines.append(f"  ... ({count - max_items} more)")
@@ -314,7 +314,7 @@ async def run_hledger(
         cli = (
             hledger_prog,
             "--file",
-            str(journal),
+            journal,
             *(("--strict",) if strict else ()),
             *args,
         )

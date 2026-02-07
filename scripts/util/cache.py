@@ -168,7 +168,7 @@ async def should_skip_journal(script_id: PathLike, journal: PathLike) -> bool:
             return False
 
         files = entry.files
-        file_entry = files.get(str(journal))
+        file_entry = files.get(fspath(journal))
         if not file_entry:
             return False
         return file_entry.hash == cur_hash
@@ -190,7 +190,7 @@ async def mark_journal_processed(script_id: PathLike, journal: PathLike) -> None
             cur_hash = await file_hash(journal)
         except FileNotFoundError:
             return
-        entry.files[str(journal)] = FileEntryModel(hash=cur_hash, last_success=now)
+        entry.files[fspath(journal)] = FileEntryModel(hash=cur_hash, last_success=now)
 
         evict_old_scripts(cache)
         await write_script_cache(cache)
@@ -308,7 +308,7 @@ class JournalRunContext:
 
             for j in self._journals:
                 files = entry.files
-                file_entry = files.get(str(j))
+                file_entry = files.get(fspath(j))
                 try:
                     cur_hash = await file_hash(j)
                 except FileNotFoundError:
@@ -366,12 +366,12 @@ class JournalRunContext:
                         h = await file_hash(j)
                     except FileNotFoundError:
                         continue
-                    entry.files[str(j)] = FileEntryModel(hash=h, last_success=now)
+                    entry.files[fspath(j)] = FileEntryModel(hash=h, last_success=now)
 
                 # Skipped files are treated as successful as well; update their last_success
                 for j in sorted(self.skipped, key=fspath):
                     files = entry.files
-                    f_entry = files.get(str(j))
+                    f_entry = files.get(fspath(j))
                     if isinstance(f_entry, FileEntryModel):
                         f_entry.last_success = now
                     else:
@@ -379,7 +379,7 @@ class JournalRunContext:
                             h = await file_hash(j)
                         except FileNotFoundError:
                             continue
-                        files[str(j)] = FileEntryModel(hash=h, last_success=now)
+                        files[fspath(j)] = FileEntryModel(hash=h, last_success=now)
             evict_old_scripts(cache)
             await write_script_cache(cache)
         return False
