@@ -11,6 +11,7 @@ from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
+from os import PathLike
 from sys import argv, exit
 from typing import final
 
@@ -75,7 +76,7 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def check_journal(journal: Path):
+        async def check_journal(journal: PathLike):
             await run_hledger(journal, "check", *_HLEDGER_CHECKS)
             # If the check returned successfully record it for this session
             run.report_success(journal)

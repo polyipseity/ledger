@@ -6,7 +6,7 @@ from calendar import monthrange
 from collections.abc import Callable, Iterable, Sequence
 from datetime import datetime
 from glob import iglob
-from os import cpu_count
+from os import PathLike, cpu_count
 from shutil import which
 from subprocess import CalledProcessError
 
@@ -31,8 +31,8 @@ DEFAULT_AMOUNT_DECIMAL_PLACES = 2
 
 
 async def find_monthly_journals(
-    folder: Path, files: Iterable[str] | None = None
-) -> Sequence[Path]:
+    folder: PathLike, files: Iterable[str] | None = None
+) -> Sequence[PathLike]:
     """Return resolved Paths for monthly journal files under the provided folder.
 
     The function looks for files matching the pattern ``YYYY-MM/*.journal`` under
@@ -42,16 +42,16 @@ async def find_monthly_journals(
 
     Parameters
     ----------
-    folder: Path
-        Path to the repository root or folder to search (typically the ledger
+    folder: PathLike
+        PathLike pointing to the repository root or folder to search (typically the ledger
         folder).
     files: Iterable[str] | None
         Optional explicit file paths to resolve and return.
 
     Returns
     -------
-    Sequence[Path]
-        A sequence of resolved :class:`anyio.Path` objects.
+    Sequence[PathLike]
+        A sequence of resolved :class:`os.PathLike` objects.
     """
     if files:
         return await gather(*(Path(path).resolve(strict=True) for path in files))
@@ -65,22 +65,22 @@ async def find_monthly_journals(
     )
 
 
-async def find_all_journals(folder: Path) -> Sequence[Path]:
+async def find_all_journals(folder: PathLike) -> Sequence[PathLike]:
     """Return resolved Paths for all journal files under the provided folder.
 
     The function finds all ``*.journal`` files under the supplied ``folder``
-    and returns the resolved :class:`anyio.Path` objects.
+    and returns the resolved :class:`os.PathLike` objects.
 
     Parameters
     ----------
-    folder: Path
-        Path to the repository root or folder to search (typically the script
+    folder: PathLike
+        PathLike pointing to the repository root or folder to search (typically the script
         folder).
 
     Returns
     -------
-    Sequence[Path]
-        A sequence of resolved :class:`anyio.Path` objects.
+    Sequence[PathLike]
+        A sequence of resolved :class:`os.PathLike` objects.
     """
     return await gather(
         *(
@@ -139,10 +139,10 @@ def make_datetime_range_filters(
 
 
 def filter_journals_between(
-    journals: Iterable[Path],
+    journals: Iterable[PathLike],
     from_datetime: datetime | None,
     to_datetime: datetime | None,
-) -> Sequence[Path]:
+) -> Sequence[PathLike]:
     """Filter monthly journals by inclusive month-range matching behaviour used by scripts.
 
     Each journal's month is determined by `journal.parent.name` as YYYY-MM and the
@@ -165,10 +165,11 @@ def filter_journals_between(
             fold=1,
         )
 
-    ret: list[Path] = []
+    ret: list[PathLike] = []
     for journal in journals:
         try:
-            to_date = datetime.fromisoformat(f"{journal.parent.name}-01")
+            p = Path(journal)
+            to_date = datetime.fromisoformat(f"{p.parent.name}-01")
         except Exception:
             continue
         if to_filter(month_end(to_date)) and from_filter(to_date):
@@ -268,7 +269,7 @@ def parse_amount(float_str: str) -> float:
     return float(s)
 
 
-def format_journal_list(journals: Iterable[Path], *, max_items: int = 8) -> str:
+def format_journal_list(journals: Iterable[PathLike], *, max_items: int = 8) -> str:
     """Return a compact, human-friendly multi-line representation of ``journals``.
 
     The representation includes a total count and the first ``max_items``
@@ -289,11 +290,12 @@ def format_journal_list(journals: Iterable[Path], *, max_items: int = 8) -> str:
 
     visible = lst[:max_items]
     lines = [f"{count} journal{'s' if count != 1 else ''}"]
-    for p in visible:
+    for orig in visible:
         try:
+            p = Path(orig)
             label = f"{p.parent.name}/{p.name}"
         except Exception:
-            label = str(p)
+            label = str(orig)
         lines.append(f"  - {label}")
     if count > max_items:
         lines.append(f"  ... ({count - max_items} more)")
@@ -301,7 +303,7 @@ def format_journal_list(journals: Iterable[Path], *, max_items: int = 8) -> str:
 
 
 async def run_hledger(
-    journal: Path, *args: str, raise_on_error: bool = True, strict: bool = True
+    journal: PathLike, *args: str, raise_on_error: bool = True, strict: bool = True
 ) -> tuple[str, str, int]:
     """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode)."""
     hledger_prog = which("hledger")

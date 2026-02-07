@@ -11,10 +11,9 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
+from os import PathLike
 from sys import argv, exit
 from typing import final
-
-from anyio import Path
 
 from .util.concurrency import gather_and_raise
 from .util.files import file_update_if_changed, get_ledger_folder
@@ -59,7 +58,7 @@ async def main(args: Arguments):
     journals = await find_all_journals(folder)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def replace_in_journal(journal: Path):
+    async def replace_in_journal(journal: PathLike):
         def updater(read: str) -> str:
             return read.replace(args.find, args.replace)
 

@@ -13,6 +13,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from functools import wraps
 from logging import INFO, basicConfig, info
+from os import PathLike
 from re import NOFLAG, compile
 from sys import argv, exit
 from typing import final
@@ -88,8 +89,9 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: Path):
-            journal_date = datetime.fromisoformat(f"{journal.parent.name}-01")
+        async def process_journal(journal: PathLike):
+            p = Path(journal)
+            journal_date = datetime.fromisoformat(f"{p.parent.name}-01")
             journal_last_datetime = journal_date.replace(
                 day=monthrange(journal_date.year, journal_date.month)[1],
                 hour=23,

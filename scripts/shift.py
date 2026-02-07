@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from functools import wraps
 from logging import INFO, basicConfig, info
+from os import PathLike
 from re import MULTILINE, NOFLAG, compile, escape
 from sys import argv, exit
 from typing import final
@@ -88,7 +89,7 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: Path):
+        async def process_journal(journal: PathLike):
             def updater(read: str) -> str:
                 regex = compile(
                     rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",

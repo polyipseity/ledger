@@ -58,7 +58,7 @@ Required software and tools that enable this accounting system.
 pip install "anyio>=3.6.2"
 ```
 
-**How it's used:** Async path operations (`anyio.Path`) for concurrent file I/O without blocking
+**How it's used:** Provides async path objects (`anyio.Path`) for concurrent file I/O. For public APIs prefer `os.PathLike` and coerce `PathLike` to `anyio.Path` inside functions that perform async file operations.
 
 **Requirement in:** `requirements.txt` (see [../../../requirements.txt](../../requirements.txt))
 

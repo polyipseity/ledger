@@ -12,6 +12,7 @@ from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
+from os import PathLike
 from sys import argv, exit
 from typing import final
 
@@ -106,8 +107,8 @@ class Arguments:
 
 
 async def _format_journal(
-    journal: Path,
-    unformatted_files: list[Path],
+    journal: PathLike,
+    unformatted_files: list[PathLike],
     check: bool,
     session: JournalRunContext,
 ):
@@ -159,7 +160,7 @@ async def main(args: Arguments):
     journals = await find_monthly_journals(folder, args.files)
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
-    unformatted_files = list[Path]()
+    unformatted_files = list[PathLike]()
 
     async with JournalRunContext(Path(__file__), journals) as run:
         if run.skipped:

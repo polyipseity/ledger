@@ -1,8 +1,9 @@
 """File helpers (reading/writing/updating files, script folder detection)."""
 
 from inspect import currentframe, getframeinfo
-
-from anyio import Path
+from os import PathLike
+from pathlib import Path
+from typing import Any
 
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
@@ -42,12 +43,12 @@ def get_ledger_folder() -> Path:
     """Return the repository `ledger/` folder discovered relative to the scripts folder.
 
     The helper uses :func:`get_script_folder` with ``depth=1`` to locate the
-    repository root and returns ``<repo_root>/ledger`` as an :class:`anyio.Path`.
+    repository root and returns ``<repo_root>/ledger`` as a :class:`pathlib.Path`.
     """
     return get_script_folder(depth=1).parent / "ledger"
 
 
-async def file_update_if_changed(journal: Path, updater):
+async def file_update_if_changed(journal: PathLike | Any, updater) -> bool:
     """Open `journal`, run `updater` on its current content and write only if changed.
 
     The function opens ``journal`` for read/write, reads the full content and
@@ -57,7 +58,7 @@ async def file_update_if_changed(journal: Path, updater):
 
     Parameters
     ----------
-    journal: Path
+    journal: PathLike
         The journal file to update.
     updater: Callable[[str], str]
         A function that receives the current file text and returns the new
@@ -68,7 +69,10 @@ async def file_update_if_changed(journal: Path, updater):
     bool
         ``True`` if the file was changed, otherwise ``False``.
     """
-    async with await journal.open(
+    from anyio import Path as AnyioPath
+
+    path = AnyioPath(journal)
+    async with await path.open(
         mode="r+t", encoding="UTF-8", errors="strict", newline=None
     ) as file:
         read = await file.read()

@@ -10,7 +10,7 @@ from collections.abc import Iterable, Sequence
 from datetime import datetime, timezone
 from hashlib import sha256
 from json import JSONDecodeError
-from os import makedirs
+from os import PathLike, makedirs
 from os.path import basename, dirname, join, splitext
 
 from anyio import Path
@@ -73,7 +73,7 @@ class CacheModel(RootModel[dict[str, ScriptEntryModel]]):
     root: dict[str, ScriptEntryModel]
 
 
-def cache_file_path() -> Path:
+def cache_file_path() -> PathLike:
     """Return the Path of the cache file in ``./__pycache__``."""
     cache_dir = join(dirname(__file__), "__pycache__")
     makedirs(cache_dir, exist_ok=True)
@@ -122,17 +122,17 @@ async def write_script_cache(content: CacheModel) -> None:
         await fh.write(json_text)
 
 
-async def file_hash(path: Path) -> str:
+async def file_hash(path: PathLike) -> str:
     """Return the SHA256 hex digest of ``path``'s current bytes."""
     async with await path.open(mode="rb") as fh:
         data = await fh.read()
     return sha256(data).hexdigest()
 
 
-async def script_key_from(script_id: Path) -> str:
+async def script_key_from(script_id: PathLike) -> str:
     """Return a script key in the form ``<filename>@<sha256(contents)>``.
 
-    ``script_id`` must be an :class:`anyio.Path` pointing at the invoking
+    ``script_id`` must be an :class:`os.PathLike` pointing at the invoking
     script. The file is read asynchronously; if the file cannot be read the
     function fails fast and raises :class:`FileNotFoundError`.
 
@@ -149,10 +149,10 @@ async def script_key_from(script_id: Path) -> str:
     return f"{script_id.name}@{sha256(data).hexdigest()}"
 
 
-async def should_skip_journal(script_id: Path, journal: Path) -> bool:
+async def should_skip_journal(script_id: PathLike, journal: PathLike) -> bool:
     """Return True if ``journal`` can be safely skipped for ``script_id``.
 
-    ``script_id`` must be an :class:`anyio.Path` pointing at the invoking script.
+    ``script_id`` must be an :class:`os.PathLike` pointing at the invoking script.
     The function compares the cached file hash against the current file hash.
     """
     async with _CACHE_LOCK:
@@ -174,7 +174,7 @@ async def should_skip_journal(script_id: Path, journal: Path) -> bool:
         return file_entry.hash == cur_hash
 
 
-async def mark_journal_processed(script_id: Path, journal: Path) -> None:
+async def mark_journal_processed(script_id: PathLike, journal: PathLike) -> None:
     """Record the journal's current content hash as processed for ``script_id``.
 
     This function immediately persists the change and updates the script's
@@ -274,7 +274,7 @@ class JournalRunContext:
       file hashes or per-file ``last_success`` timestamps are recorded.
     """
 
-    def __init__(self, script_id: Path, journals: Iterable[Path]):
+    def __init__(self, script_id: PathLike, journals: Iterable[PathLike]):
         """Create a JournalRunContext.
 
         Parameters:
@@ -287,9 +287,9 @@ class JournalRunContext:
         """
         self.script_id = script_id
         self._journals = list(journals)
-        self.to_process: list[Path] = []
-        self.skipped: list[Path] = []
-        self._reported: set[Path] = set()
+        self.to_process: list[PathLike] = []
+        self.skipped: list[PathLike] = []
+        self._reported: set[PathLike] = set()
         self._script_key: str | None = None
 
     async def __aenter__(self):
@@ -321,15 +321,15 @@ class JournalRunContext:
 
         return self
 
-    def report_success(self, journal: Path) -> None:
+    def report_success(self, journal: PathLike) -> None:
         """Record that ``journal`` was successfully processed in this session."""
         if journal not in self._journals:
             raise ValueError("journal not managed by this JournalRunContext instance")
         self._reported.add(journal)
 
     @property
-    def reported(self) -> Sequence[Path]:
-        """Return a sorted list of :class:`Path` objects that were processed successfully.
+    def reported(self) -> Sequence[PathLike]:
+        """Return a sorted list of :class:`os.PathLike` objects that were processed successfully.
 
         This property provides a convenient, read-only view over the internal
         ``_reported`` set preserving a stable ordering for display purposes.
