@@ -39,7 +39,8 @@ Required software and tools that enable this accounting system.
 
 - **Modern syntax**: `match_args`, `kw_only`, `slots` in dataclasses
 - **Async/await**: Concurrent subprocess execution
-- **Type hints**: Full type annotations throughout
+- **Type hints**: Full type annotations throughout. All code should be written and annotated so that Pylance configured with `typeCheckingMode: "strict"` produces no errors in CI or locally.
+- **No `Any`/`Unknown`**: Do **not** use `Any` or `Unknown` in type annotations. Use explicit types, small Protocols, or TypedDicts instead and document any temporary casts with a TODO to replace them with proper types.
 - **Docstrings**: All Python code (modules, classes, functions and tests) must include clear docstrings describing purpose and behaviour.
 
 **Installation:** Download from [python.org](https://python.org)
