@@ -2,13 +2,13 @@
 
 from inspect import currentframe, getframeinfo
 from os import PathLike
-from pathlib import Path
-from typing import Any
+
+from anyio import Path
 
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
 
-def get_script_folder(depth: int = 0) -> Path:
+def get_script_folder(depth: int = 0) -> PathLike:
     """Return the Path of the folder containing the caller script.
 
     Inspects the current Python stack and returns the directory containing
@@ -39,16 +39,16 @@ def get_script_folder(depth: int = 0) -> Path:
     return p
 
 
-def get_ledger_folder() -> Path:
+def get_ledger_folder() -> PathLike:
     """Return the repository `ledger/` folder discovered relative to the scripts folder.
 
     The helper uses :func:`get_script_folder` with ``depth=1`` to locate the
-    repository root and returns ``<repo_root>/ledger`` as a :class:`pathlib.Path`.
+    repository root and returns ``<repo_root>/ledger`` as a :class:`os.PathLike`.
     """
-    return get_script_folder(depth=1).parent / "ledger"
+    return Path(get_script_folder(depth=1)).parent / "ledger"
 
 
-async def file_update_if_changed(journal: PathLike | Any, updater) -> bool:
+async def file_update_if_changed(journal: PathLike, updater) -> bool:
     """Open `journal`, run `updater` on its current content and write only if changed.
 
     The function opens ``journal`` for read/write, reads the full content and
