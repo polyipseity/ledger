@@ -15,6 +15,8 @@ from hypothesis import strategies as st
 
 from scripts.util import files
 
+__all__ = ()
+
 
 def test_get_script_folder_returns_pathlike() -> None:
     """get_script_folder returns a path-like object that contains a module name."""
@@ -36,11 +38,31 @@ def test_get_script_folder_negative_raises() -> None:
 
 
 @pytest.mark.asyncio
-async def test_get_ledger_folder_points_to_ledger():
+async def test_get_ledger_folder_points_to_ledger() -> None:
     """get_ledger_folder() returns an existing path named 'ledger'."""
     ledger = files.get_ledger_folder()
     assert await Path(ledger).exists()
     assert Path(ledger).name == "ledger"
+
+
+def test_get_script_folder_frame_none_raises(monkeypatch: pytest.MonkeyPatch) -> None:
+    """When inspect.currentframe() returns None, get_script_folder must raise ValueError."""
+    monkeypatch.setattr(files, "currentframe", lambda: None)
+    with pytest.raises(ValueError):
+        files.get_script_folder()
+
+
+def test_get_script_folder_no_caller_frame_raises(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """When the caller frame is missing (f_back is None) get_script_folder raises ValueError."""
+
+    class FakeFrame:
+        f_back = None
+
+    monkeypatch.setattr(files, "currentframe", lambda: FakeFrame())
+    with pytest.raises(ValueError):
+        files.get_script_folder()
 
 
 @pytest.mark.asyncio

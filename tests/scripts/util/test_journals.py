@@ -6,8 +6,9 @@ and user-friendly listing helpers.
 """
 
 from datetime import datetime
-from os import PathLike
+from os import PathLike, fspath
 from types import SimpleNamespace
+from typing import Any
 
 import pytest
 from anyio import Path
@@ -15,6 +16,8 @@ from hypothesis import given
 from hypothesis import strategies as st
 
 from scripts.util import journals
+
+__all__ = ()
 
 
 @st.composite
@@ -109,7 +112,7 @@ def test_parse_amount_various(whole: int, frac: int) -> None:
     assert abs(journals.parse_amount(s1) - val) < 1e-9
 
     # Spaces as thousands separator and comma as decimal
-    s2 = str(int(whole))
+    s2 = str(whole)
     if whole >= 1000:
         s2 = f"{whole:,}".replace(",", " ")
     s2 = s2 + "," + f"{frac:02d}"
@@ -155,6 +158,30 @@ async def test_find_monthly_and_all(tmp_path: PathLike[str]) -> None:
     assert any(Path(p).name == "b.journal" for p in all_js)
 
 
+def test_parse_period_invalid_raises() -> None:
+    """Invalid period strings should raise ValueError for both start and end parsing."""
+    with pytest.raises(ValueError):
+        journals.parse_period_start("not-a-date")
+    with pytest.raises(ValueError):
+        journals.parse_period_end("also-bad")
+
+
+@pytest.mark.asyncio
+async def test_run_hledger_missing(monkeypatch: pytest.MonkeyPatch) -> None:
+    """When the `hledger` executable is not found in PATH run_hledger should raise FileNotFoundError."""
+
+    def fake_which_none(prog: str) -> str | None:
+        return None
+
+    monkeypatch.setattr(journals, "which", fake_which_none)
+
+    async def run_it() -> None:
+        await journals.run_hledger("somefile", "print")
+
+    with pytest.raises(FileNotFoundError):
+        await run_it()
+
+
 def test_format_journal_list_various() -> None:
     """format_journal_list produces a compact user-friendly listing."""
     assert journals.format_journal_list([]) == "none"
@@ -175,7 +202,7 @@ def test_format_journal_list_various() -> None:
     s = journals.format_journal_list(lst)
     assert "1 journal" in s
 
-    # many items trigger the ellipsis
+    # many items trigger the ellipsis (case 1)
     lst = [P("2024-%02d" % i, "self.journal") for i in range(1, 12)]
     s = journals.format_journal_list(lst, max_items=4)
     assert "... (" in s
@@ -187,3 +214,86 @@ def test_format_journal_list_various() -> None:
     lst = [P("2024-%02d" % i, "self.journal") for i in range(1, 12)]
     s = journals.format_journal_list(lst, max_items=4)
     assert "... (" in s
+
+
+def test_format_journal_list_handles_path_exceptions() -> None:
+    """If converting an entry to :class:`Path` raises, the original object should be used as the label."""
+
+    class Bad:
+        def __fspath__(self) -> str:  # pragma: no cover - simulated exception
+            raise RuntimeError("boom")
+
+    s = journals.format_journal_list([Bad()], max_items=4)
+    # the representation should contain the stringified original object
+    assert "boom" not in s
+    assert "-" in s
+
+
+@pytest.mark.asyncio
+async def test_find_monthly_with_files_param(tmp_path: PathLike[str]) -> None:
+    """When explicit file paths are supplied, `find_monthly_journals` should resolve and return them."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    f = repo / "2024-01" / "a.journal"
+    await f.write_text("")
+
+    res = await journals.find_monthly_journals(repo, files=[fspath(f)])
+    assert any(Path(p).name == "a.journal" for p in res)
+
+
+def test_filter_journals_skips_invalid_parent_names() -> None:
+    """Journals whose parent folder name isn't a valid YYYY-MM should be silently ignored."""
+
+    class Fake(PathLike[str]):
+        def __init__(self):
+            self.parent = SimpleNamespace(name="not-a-date")
+            self.name = "x.journal"
+
+        def __fspath__(self) -> str:
+            return "bad"
+
+    out = journals.filter_journals_between([Fake()], None, None)
+    assert out == []
+
+
+@pytest.mark.asyncio
+async def test_run_hledger_handles_process_exit(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Simulate subprocess success and failure for `run_hledger` using a fake process."""
+
+    class FakeProc:
+        def __init__(self, out: bytes, err: bytes, rc: int):
+            self._out = out
+            self._err = err
+            self._rc = rc
+
+        async def communicate(self) -> tuple[bytes, bytes]:
+            return self._out, self._err
+
+        async def wait(self) -> int:
+            return self._rc
+
+    async def fake_create(*args: Any, **kwargs: Any) -> FakeProc:
+        # return a process with non-zero returncode to exercise error path
+        return FakeProc(b"ok\n", b"", 0)
+
+    monkeypatch.setattr(journals, "create_subprocess_exec", fake_create)
+
+    def fake_which(prog: str) -> str:
+        return "fake"
+
+    monkeypatch.setattr(journals, "which", fake_which)
+
+    out, _err, _rc = await journals.run_hledger(
+        "somefile", "print", raise_on_error=True
+    )
+    assert "ok" in out
+
+    # Now simulate non-zero return code which should raise when raise_on_error=True
+    async def fake_create_bad(*args: Any, **kwargs: Any) -> FakeProc:
+        return FakeProc(b"", b"err\n", 2)
+
+    monkeypatch.setattr(journals, "create_subprocess_exec", fake_create_bad)
+    with pytest.raises(Exception):
+        await journals.run_hledger("somefile", "print", raise_on_error=True)

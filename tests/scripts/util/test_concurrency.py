@@ -11,6 +11,8 @@ import pytest
 
 from scripts.util import concurrency
 
+__all__ = ()
+
 
 async def _ok_x(x: int) -> int:
     """A trivial coroutine that returns the given integer."""

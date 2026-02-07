@@ -5,6 +5,8 @@ formatting utilities (property tests use Hypothesis).
 """
 
 from os import PathLike
+from types import TracebackType
+from typing import Self
 
 import pytest
 from anyio import Path
@@ -13,6 +15,9 @@ from hypothesis import strategies as st
 
 from scripts import format as fmt
 from scripts.util.cache import JournalRunContext
+from tests.conftest import RunModuleHelper
+
+__all__ = ()
 
 
 def test_group_props_and_sort_props() -> None:
@@ -28,6 +33,15 @@ def test_group_props_and_sort_props() -> None:
 
     # lines without `  ;` should return unchanged
     assert fmt._sort_props("no comment here") == "no comment here"
+
+
+def test_sort_props_handles_empty_segments() -> None:
+    """Comments containing empty segments or extra commas should not crash and should preserve key:value pairs."""
+    line = "    account  ; a:1,, b:2, , c:3"
+    out = fmt._sort_props(line)
+    assert "a: 1" in out
+    assert "b: 2" in out
+    assert "c: 3" in out
 
 
 def test_group_props_edge_cases() -> None:
@@ -161,6 +175,23 @@ def test_format_parser_check_flag() -> None:
 
 
 @pytest.mark.asyncio
+async def test_format_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The `format` parser's invoke wrapper should call :func:`format.main` with parsed args."""
+    called: dict[str, fmt.Arguments] = {}
+
+    async def fake_main(args: fmt.Arguments) -> None:
+        called["args"] = args
+
+    monkeypatch.setattr(fmt, "main", fake_main)
+    p = fmt.parser()
+    ns = p.parse_args(["--check", "file.journal"])
+
+    await ns.invoke(ns)
+    assert isinstance(called.get("args"), fmt.Arguments)
+    assert called["args"].check is True
+
+
+@pytest.mark.asyncio
 async def test__format_journal_check_true_unformatted(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -253,3 +284,253 @@ async def test__format_journal_check_false_reports_success(
     await fmt._format_journal(jpath, [], False, s)
     # session.report_success should have been called for non-check invocation
     assert jpath in s.reported
+
+
+@pytest.mark.asyncio
+async def test_main_check_exits_with_1(
+    tmp_path: PathLike[str],
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.LogCaptureFixture,
+) -> None:
+    """When running the `format` script with --check and unformatted files present, exit with code 1."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    # Make discovery return our test journal and ensure the run reports processing
+    monkeypatch.setattr(fmt, "get_ledger_folder", lambda: repo)
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> list[PathLike[str]]:
+        return [jpath]
+
+    monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
+
+    async def fake_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        # Return a body that differs from disk causing a 'changed' and thus an unformatted entry
+        return ("DIFFERENT BODY\n", "", 0)
+
+    monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
+
+    class DummyRun:
+        """Stub JournalRunContext that marks our journal as to_process."""
+
+        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            self.to_process = [jpath]
+            self.skipped: list[PathLike[str]] = []
+            self._reported: list[PathLike[str]] = []
+
+        async def __aenter__(self) -> Self:
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            return self._reported
+
+    monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
+
+    with pytest.raises(SystemExit) as exc:
+        await fmt.main(fmt.Arguments(check=True, files=None))
+    assert exc.value.code == 1
+
+
+@pytest.mark.asyncio
+async def test_main_reports_processed_when_reported(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """When the session reports processed files, the top-level main should exercise the 'processed' logging branch."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> list[PathLike[str]]:
+        return [jpath]
+
+    monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
+
+    class DummyRun:
+        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            self.to_process = []
+            self.skipped: list[PathLike[str]] = []
+            self._reported: list[PathLike[str]] = [jpath]
+
+        async def __aenter__(self) -> Self:
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            return self._reported
+
+    monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
+
+
+@pytest.mark.asyncio
+async def test_format_main_logs_skipped_when_skipped(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """When JournalRunContext has skipped journals the top-level main should exercise the 'skipped' logging branch."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> list[PathLike[str]]:
+        return [jpath]
+
+    monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
+
+    class DummyRun2:
+        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            self.to_process = []
+            self.skipped: list[PathLike[str]] = [jpath]
+            self._reported: list[PathLike[str]] = []
+
+        async def __aenter__(self) -> Self:
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            return self._reported
+
+    monkeypatch.setattr(fmt, "JournalRunContext", DummyRun2)
+
+    # Should exit 0
+    with pytest.raises(SystemExit) as exc:
+        await fmt.main(fmt.Arguments(check=False, files=None))
+    assert exc.value.code == 0
+
+
+@pytest.mark.asyncio
+async def test_main_check_with_no_unformatted(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """When --check is used and files are already formatted, the main should exit 0 without listing files."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nFORMATTED BODY\n')
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> list[PathLike[str]]:
+        return [jpath]
+
+    async def fake_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        return ("FORMATTED BODY\n", "", 0)
+
+    monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
+    monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
+
+    class Session:
+        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            # create a minimal session where to_process contains our journal
+            self.to_process = list(j)
+            self.skipped = []
+            self._reported: list[PathLike[str]] = []
+
+        async def __aenter__(self) -> Self:
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            return self._reported
+
+    monkeypatch.setattr(fmt, "JournalRunContext", Session)
+
+    # Should exit with 0 since no unformatted files
+    with pytest.raises(SystemExit) as exc:
+        await fmt.main(fmt.Arguments(check=True, files=None))
+    assert exc.value.code == 0
+
+
+@pytest.mark.asyncio
+async def test__format_journal_propagates_hledger_error(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """If `hledger` returns a non-zero exit, `_format_journal` should propagate the CalledProcessError."""
+    from subprocess import CalledProcessError
+
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    async def error_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        raise CalledProcessError(3, ["hledger", "print"], output="", stderr="err")
+
+    monkeypatch.setattr(fmt, "run_hledger", error_run_hledger)
+
+    class Session(JournalRunContext):
+        def __init__(self) -> None:
+            super().__init__(Path(__file__), [])
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            self._reported.add(journal)
+
+    with pytest.raises(CalledProcessError):
+        await fmt._format_journal(jpath, [], False, Session())
+
+
+def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
+    """Running the module as a script should call :func:`asyncio.run` with the parser-invoked coroutine."""
+    called = run_module_helper(
+        "scripts.format", ["scripts.format"]
+    )  # avoid pytest args
+    assert called["ran"] is True

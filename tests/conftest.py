@@ -10,18 +10,84 @@ Type hints:
   string for in-memory files.
 """
 
-from collections.abc import Callable
+import asyncio
+import runpy
+import sys
+from abc import ABC, abstractmethod
+from collections.abc import Coroutine
 from os import PathLike
-from typing import Literal, Self
+from typing import Any, Literal, Protocol, Self, overload
 
 import pytest
 from anyio import Path
 
+__all__ = (
+    "AsyncFileFactory",
+    "RunModuleHelper",
+    "async_file_factory",
+    "run_module_helper",
+)
+
+
+class AsyncFileBase(ABC):
+    @abstractmethod
+    async def read(self) -> str: ...
+
+    @abstractmethod
+    async def write(self, data: str) -> int: ...
+
+    @abstractmethod
+    async def seek(self, offset: int, whence: int = 0) -> int: ...
+
+    @abstractmethod
+    async def truncate(self) -> None: ...
+
+    @abstractmethod
+    async def __aenter__(self) -> Self: ...
+
+    @abstractmethod
+    async def __aexit__(
+        self, exc_type: type | None, exc: BaseException | None, tb: object | None
+    ) -> bool: ...
+
+
+class AsyncPathBase(ABC):
+    """Abstract base class for Async path-like objects returned by the factory."""
+
+    last_written: str | None
+
+    @abstractmethod
+    async def open(
+        self,
+        mode: str = "r+t",
+        encoding: str = "UTF-8",
+        errors: str = "strict",
+        newline: str | None = None,
+    ) -> AsyncFileBase: ...
+
+
+class DiskAsyncFilePathBase(AsyncPathBase, ABC):
+    """ABC for disk-backed async path-like objects used by tests."""
+
+
+class InMemoryAsyncFilePathBase(AsyncPathBase, ABC):
+    """ABC for in-memory async path-like objects used by tests."""
+
+
+class AsyncFileFactory(Protocol):
+    @overload
+    def __call__(self, kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase: ...
+
+    @overload
+    def __call__(self, kind: Literal["memory"], arg: str) -> AsyncPathBase: ...
+
+    def __call__(
+        self, kind: Literal["disk", "memory"], arg: PathLike[str] | str
+    ) -> AsyncPathBase: ...
+
 
 @pytest.fixture
-def async_file_factory() -> (
-    Callable[[Literal["disk", "memory"], PathLike[str] | str], object]
-):
+def async_file_factory() -> AsyncFileFactory:
     """Return a small factory for producing AsyncFilePath-like objects.
 
     Args:
@@ -36,10 +102,10 @@ def async_file_factory() -> (
         that mimics :class:`anyio.Path`'s ``open`` behaviour for tests.
     """
 
-    class DiskAsyncFilePath:
+    class DiskAsyncFilePath(AsyncPathBase):
         """An anyio.Path-like wrapper backed by a real filesystem path for tests."""
 
-        class AsyncFile:
+        class AsyncFile(AsyncFileBase):
             """A minimal async file object that wraps a real file on disk."""
 
             def __init__(self, path: "DiskAsyncFilePath") -> None:
@@ -88,14 +154,14 @@ def async_file_factory() -> (
             encoding: str = "UTF-8",
             errors: str = "strict",
             newline: str | None = None,
-        ) -> AsyncFile:
-            """Return an :class:`AsyncFile` instance for the path."""
+        ) -> AsyncFileBase:
+            """Return an :class:`AsyncFileABC` instance for the path."""
             return self.AsyncFile(self)
 
-    class InMemoryAsyncFilePath:
+    class InMemoryAsyncFilePath(AsyncPathBase):
         """An in-memory anyio.Path-like wrapper for tests that keeps text in RAM."""
 
-        class AsyncFile:
+        class AsyncFile(AsyncFileBase):
             """A minimal async file object that operates on in-memory text."""
 
             def __init__(self, path: "InMemoryAsyncFilePath") -> None:
@@ -144,11 +210,19 @@ def async_file_factory() -> (
             encoding: str = "UTF-8",
             errors: str = "strict",
             newline: str | None = None,
-        ) -> AsyncFile:
-            """Return an :class:`AsyncFile` instance that manipulates in-memory text."""
+        ) -> AsyncFileBase:
+            """Return an :class:`AsyncFileABC` instance that manipulates in-memory text."""
             return self.AsyncFile(self)
 
-    def factory(kind: Literal["disk", "memory"], arg: PathLike[str] | str) -> object:
+    @overload
+    def factory(kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase: ...
+
+    @overload
+    def factory(kind: Literal["memory"], arg: str) -> AsyncPathBase: ...
+
+    def factory(
+        kind: Literal["disk", "memory"], arg: PathLike[str] | str
+    ) -> AsyncPathBase:
         """Factory for creating test-friendly anyio.Path-like objects.
 
         The factory supports two kinds:
@@ -175,3 +249,54 @@ def async_file_factory() -> (
         raise ValueError(kind)
 
     return factory
+
+
+class RunModuleHelper(ABC):
+    """ABC representing a helper that runs a module and reports whether it ran.
+
+    Implementations must be callable and return a dict containing a "ran"
+    boolean to indicate the helper invoked the target module.
+    """
+
+    @abstractmethod
+    def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]: ...
+
+
+@pytest.fixture
+def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
+    """Return a helper that runs a module as a script with a safe fake asyncio.run.
+
+    The returned callable takes ``module_name`` and ``argv`` and returns a dict
+    containing a ``ran`` boolean (mirroring previous tests' pattern). The
+    helper sets ``sys.argv`` for the module, patches ``asyncio.run`` with a
+    fake that closes the coroutine to avoid 'coroutine was never awaited'
+    warnings, and clears the module from ``sys.modules`` so ``runpy`` imports
+    it afresh for each invocation.
+    """
+
+    class _RunModule(RunModuleHelper):
+        def __init__(self, monkeypatch: pytest.MonkeyPatch) -> None:
+            self._monkeypatch = monkeypatch
+
+        def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]:
+            called: dict[str, bool] = {"ran": False}
+
+            def fake_run(coro: Coroutine[Any, Any, Any]) -> None:
+                called["ran"] = True
+                try:
+                    coro.close()
+                except Exception:
+                    # If coro isn't a coroutine or close fails, ignore the error.
+                    pass
+
+            self._monkeypatch.setattr(asyncio, "run", fake_run)
+            self._monkeypatch.setattr(sys, "argv", argv)
+
+            # Ensure a fresh import context to avoid runpy-related runtime warnings
+            for m in (module_name, "scripts"):
+                sys.modules.pop(m, None)
+
+            runpy.run_module(module_name, run_name="__main__")
+            return called
+
+    return _RunModule(monkeypatch)
