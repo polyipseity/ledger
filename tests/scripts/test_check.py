@@ -3,8 +3,10 @@
 Ensure the CLI parser exposes the expected invocation hooks.
 """
 
+from builtins import BaseExceptionGroup
 from collections.abc import Iterable
 from os import PathLike
+from subprocess import CalledProcessError
 from types import TracebackType
 from typing import Self, Sequence
 
@@ -182,7 +184,6 @@ async def test_check_propagates_hledger_errors(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """If `run_hledger` raises CalledProcessError the exception should propagate from `main`."""
-    from subprocess import CalledProcessError
 
     repo = Path(tmp_path) / "ledger"
     await (repo / "2024-01").mkdir(parents=True)
@@ -229,8 +230,6 @@ async def test_check_propagates_hledger_errors(
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun)
-
-    from builtins import BaseExceptionGroup
 
     with pytest.raises(BaseExceptionGroup) as eg:
         await check.main(check.Arguments(files=None))

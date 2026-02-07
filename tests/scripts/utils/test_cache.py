@@ -6,6 +6,8 @@ marking journals as processed, evicting stale or malformed entries, and the
 behaviour of :class:`~scripts.utils.cache.JournalRunContext`.
 """
 
+import asyncio
+import os
 from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 from json import JSONDecodeError
@@ -492,7 +494,6 @@ def test_cache_file_path_creates_dir(tmp_path: PathLike[str]) -> None:
     """Calling `cache_file_path` should create the `__pycache__` directory if missing."""
     p = cmod.cache_file_path()
     # Ensure the directory exists
-    import os
 
     assert os.path.basename(os.path.dirname(p)) == "__pycache__"
 
@@ -573,7 +574,6 @@ def test_read_script_cache_handles_model_validate_raising(
     monkeypatch.setattr(cmod.CacheModel, "model_validate_json", staticmethod(raiser))
 
     # Ensure read_script_cache returns an empty model when validation fails
-    import asyncio
 
     async def run():
         cache = await cmod.read_script_cache()

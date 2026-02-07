@@ -5,6 +5,7 @@ from inspect import currentframe, getframeinfo
 from os import PathLike
 
 from anyio import Path
+from anyio import Path as AnyioPath
 
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
@@ -72,8 +73,6 @@ async def file_update_if_changed(
     bool
         ``True`` if the file was changed, otherwise ``False``.
     """
-    from anyio import Path as AnyioPath
-
     path = AnyioPath(journal)
     async with await path.open(
         mode="r+t", encoding="UTF-8", errors="strict", newline=None

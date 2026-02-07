@@ -5,6 +5,7 @@ formatting utilities (property tests use Hypothesis).
 """
 
 from os import PathLike
+from subprocess import CalledProcessError
 from types import TracebackType
 from typing import Self
 
@@ -503,7 +504,6 @@ async def test__format_journal_propagates_hledger_error(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """If `hledger` returns a non-zero exit, `_format_journal` should propagate the CalledProcessError."""
-    from subprocess import CalledProcessError
 
     repo = Path(tmp_path) / "ledger"
     await (repo / "2024-01").mkdir(parents=True)

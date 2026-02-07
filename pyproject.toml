@@ -38,5 +38,10 @@ python_files = "test_*.py"
 [tool.ruff]
 line-length = 88
 
+[tool.ruff.lint]
+# Enable Pylint-derived rule that disallows imports outside module top-level
+# (import-outside-top-level / PLC0415). Ruff 0.12.0+ provides this rule.
+extend-select = ["PLC0415"]
+
 [tool.setuptools]
 packages = []

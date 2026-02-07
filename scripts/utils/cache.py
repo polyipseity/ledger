@@ -11,8 +11,8 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from json import JSONDecodeError
 from logging import warning
-from os import PathLike, fspath, makedirs
-from os.path import basename, dirname, join, splitext
+from os import PathLike, fspath, makedirs, walk
+from os.path import basename, dirname, isdir, join, relpath, splitext
 from typing import Self
 
 from anyio import Path
@@ -148,8 +148,6 @@ async def _preludes_hash() -> str:
     string is returned.
     """
     # Walk synchronously to collect paths, read file bytes asynchronously
-    from os import walk
-    from os.path import isdir, relpath
 
     if not isdir(fspath(_PRELUDES_DIR)):
         return ""

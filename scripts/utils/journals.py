@@ -5,6 +5,7 @@ from asyncio import BoundedSemaphore, create_subprocess_exec, gather
 from asyncio.subprocess import DEVNULL, PIPE
 from calendar import monthrange
 from collections.abc import Callable, Iterable, Sequence
+from contextlib import suppress
 from datetime import datetime
 from glob import iglob
 from os import PathLike, cpu_count
@@ -210,8 +211,6 @@ def parse_period_start(date_string: str) -> datetime:
     try:
         return datetime.fromisoformat(date_string)
     except ValueError:
-        from contextlib import suppress
-
         with suppress(ValueError):
             return datetime.fromisoformat(f"{date_string}-01")
         with suppress(ValueError):
@@ -244,8 +243,6 @@ def parse_period_end(date_string: str) -> datetime:
     try:
         return datetime.fromisoformat(date_string)
     except ValueError:
-        from contextlib import suppress
-
         for day in range(31, 27, -1):
             with suppress(ValueError):
                 return datetime.fromisoformat(f"{date_string}-{day}")
