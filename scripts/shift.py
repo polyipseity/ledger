@@ -9,7 +9,7 @@ start/end datetimes. Typical invocation is:
 
 from argparse import ArgumentParser, Namespace
 from asyncio import run
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from dataclasses import dataclass
 from datetime import datetime
 from functools import wraps
@@ -71,7 +71,7 @@ class Arguments:
     currency: str
 
 
-async def main(args: Arguments):
+async def main(args: Arguments) -> None:
     """Shift balances in monthly journals.
 
     Iterates applicable monthly journals and adjusts matching account balance
@@ -89,7 +89,7 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: PathLike):
+        async def process_journal(journal: PathLike) -> None:
             def updater(read: str) -> str:
                 regex = compile(
                     rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",
@@ -100,7 +100,7 @@ async def main(args: Arguments):
                     args.from_datetime, args.to_datetime
                 )
 
-                def process_lines(read: str):
+                def process_lines(read: str) -> Iterator[str]:
                     datetime_, opening, closing = None, False, False
                     for line in read.splitlines(keepends=True):
                         try:
@@ -131,7 +131,7 @@ async def main(args: Arguments):
     exit(0)
 
 
-def parser(parent: Callable[..., ArgumentParser] | None = None):
+def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Construct and return the CLI ArgumentParser for the shift script.
 
     The parser sets an `invoke` coroutine as the default which calls
@@ -181,7 +181,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None):
     )
 
     @wraps(main)
-    async def invoke(args: Namespace):
+    async def invoke(args: Namespace) -> None:
         await main(
             Arguments(
                 from_datetime=getattr(args, "from"),

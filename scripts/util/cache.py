@@ -10,7 +10,7 @@ from collections.abc import Iterable, Sequence
 from datetime import datetime, timezone
 from hashlib import sha256
 from json import JSONDecodeError
-from os import PathLike, makedirs
+from os import PathLike, fspath, makedirs
 from os.path import basename, dirname, join, splitext
 
 from anyio import Path
@@ -87,7 +87,7 @@ async def read_script_cache() -> CacheModel:
     instance (``CacheModel(root={})``), matching prior behaviour where an
     empty mapping was returned on read errors.
     """
-    cache_path = cache_file_path()
+    cache_path = Path(cache_file_path())
     try:
         async with await cache_path.open(mode="r+t", encoding="utf-8") as fh:
             text = await fh.read()
@@ -114,7 +114,7 @@ async def write_script_cache(content: CacheModel) -> None:
     Pydantic's `model_dump_json` will serialize nested datetimes as ISO strings
     by default, producing the same on-disk format used previously.
     """
-    cache_path = cache_file_path()
+    cache_path = Path(cache_file_path())
     # Use Pydantic's JSON serialization to produce stable ISO-formatted datetimes
     # and to ensure any future fields are serialized consistently.
     json_text = content.model_dump_json(indent=2, exclude_none=True)
@@ -124,7 +124,7 @@ async def write_script_cache(content: CacheModel) -> None:
 
 async def file_hash(path: PathLike) -> str:
     """Return the SHA256 hex digest of ``path``'s current bytes."""
-    async with await path.open(mode="rb") as fh:
+    async with await Path(path).open(mode="rb") as fh:
         data = await fh.read()
     return sha256(data).hexdigest()
 
@@ -142,11 +142,11 @@ async def script_key_from(script_id: PathLike) -> str:
         If ``script_id`` does not exist or cannot be opened for reading.
     """
     try:
-        async with await script_id.open(mode="rb") as fh:
+        async with await Path(script_id).open(mode="rb") as fh:
             data = await fh.read()
     except Exception as exc:
         raise FileNotFoundError(f"script file {script_id} not readable: {exc}") from exc
-    return f"{script_id.name}@{sha256(data).hexdigest()}"
+    return f"{Path(script_id).name}@{sha256(data).hexdigest()}"
 
 
 async def should_skip_journal(script_id: PathLike, journal: PathLike) -> bool:
@@ -274,7 +274,7 @@ class JournalRunContext:
       file hashes or per-file ``last_success`` timestamps are recorded.
     """
 
-    def __init__(self, script_id: PathLike, journals: Iterable[PathLike]):
+    def __init__(self, script_id: PathLike, journals: Iterable[PathLike]) -> None:
         """Create a JournalRunContext.
 
         Parameters:
@@ -292,7 +292,7 @@ class JournalRunContext:
         self._reported: set[PathLike] = set()
         self._script_key: str | None = None
 
-    async def __aenter__(self):
+    async def __aenter__(self) -> "JournalRunContext":
         """Enter the async context.
 
         On entry this acquires the cache lock, loads the cache, and partitions
@@ -334,9 +334,11 @@ class JournalRunContext:
         This property provides a convenient, read-only view over the internal
         ``_reported`` set preserving a stable ordering for display purposes.
         """
-        return sorted(self._reported)
+        return sorted(self._reported, key=fspath)
 
-    async def __aexit__(self, exc_type, exc, tb):
+    async def __aexit__(
+        self, exc_type: type | None, exc: BaseException | None, tb: object | None
+    ) -> bool:
         """Exit the context and persist results.
 
         On successful exit (no exception) this updates the cache with hashes and
@@ -359,7 +361,7 @@ class JournalRunContext:
             # and update per-file last_success for reported and skipped files.
             if exc_type is None:
                 # Record hashes and per-file last_success for files we processed
-                for j in sorted(self._reported):
+                for j in sorted(self._reported, key=fspath):
                     try:
                         h = await file_hash(j)
                     except FileNotFoundError:
@@ -367,7 +369,7 @@ class JournalRunContext:
                     entry.files[str(j)] = FileEntryModel(hash=h, last_success=now)
 
                 # Skipped files are treated as successful as well; update their last_success
-                for j in sorted(self.skipped):
+                for j in sorted(self.skipped, key=fspath):
                     files = entry.files
                     f_entry = files.get(str(j))
                     if isinstance(f_entry, FileEntryModel):

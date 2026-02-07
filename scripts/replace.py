@@ -46,7 +46,7 @@ class Arguments:
     replace: str
 
 
-async def main(args: Arguments):
+async def main(args: Arguments) -> None:
     """Run a global find-and-replace across all journal files.
 
     Loads each journal, applies a simple string replacement and writes the
@@ -58,7 +58,7 @@ async def main(args: Arguments):
     journals = await find_all_journals(folder)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def replace_in_journal(journal: PathLike):
+    async def replace_in_journal(journal: PathLike) -> None:
         def updater(read: str) -> str:
             return read.replace(args.find, args.replace)
 
@@ -69,7 +69,7 @@ async def main(args: Arguments):
     exit(0)
 
 
-def parser(parent: Callable[..., ArgumentParser] | None = None):
+def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Create and return the CLI ArgumentParser for the replace script.
 
     The returned parser sets an `invoke` coroutine default that executes
@@ -97,7 +97,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None):
     )
 
     @wraps(main)
-    async def invoke(ns: Namespace):
+    async def invoke(ns: Namespace) -> None:
         await main(Arguments(find=ns.find, replace=ns.replace))
 
     parser.set_defaults(invoke=invoke)

@@ -1,5 +1,6 @@
 """File helpers (reading/writing/updating files, script folder detection)."""
 
+from collections.abc import Callable
 from inspect import currentframe, getframeinfo
 from os import PathLike
 
@@ -48,7 +49,9 @@ def get_ledger_folder() -> PathLike:
     return Path(get_script_folder(depth=1)).parent / "ledger"
 
 
-async def file_update_if_changed(journal: PathLike, updater) -> bool:
+async def file_update_if_changed(
+    journal: PathLike, updater: Callable[[str], str]
+) -> bool:
     """Open `journal`, run `updater` on its current content and write only if changed.
 
     The function opens ``journal`` for read/write, reads the full content and

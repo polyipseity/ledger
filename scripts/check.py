@@ -60,7 +60,7 @@ class Arguments:
     files: Iterable[str] | None = None
 
 
-async def main(args: Arguments):
+async def main(args: Arguments) -> None:
     """Run `hledger check` on the set of selected monthly journals.
 
     For each selected journal this runs `hledger check` with a set of
@@ -76,7 +76,7 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def check_journal(journal: PathLike):
+        async def check_journal(journal: PathLike) -> None:
             await run_hledger(journal, "check", *_HLEDGER_CHECKS)
             # If the check returned successfully record it for this session
             run.report_success(journal)
@@ -90,7 +90,7 @@ async def main(args: Arguments):
     exit(0)
 
 
-def parser(parent: Callable[..., ArgumentParser] | None = None):
+def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Create and return the CLI ArgumentParser for the check script.
 
     The parser accepts an optional list of files to check and sets an
@@ -108,7 +108,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None):
     )
 
     @wraps(main)
-    async def invoke(ns: Namespace):
+    async def invoke(ns: Namespace) -> None:
         await main(Arguments(files=getattr(ns, "files", None)))
 
     parser.add_argument(

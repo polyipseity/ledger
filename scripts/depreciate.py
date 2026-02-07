@@ -8,7 +8,7 @@ entries are present and appends a new depreciation transaction if necessary.
 from argparse import ArgumentParser, Namespace
 from asyncio import run
 from calendar import monthrange
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from dataclasses import dataclass
 from datetime import datetime
 from functools import wraps
@@ -70,7 +70,7 @@ class Arguments:
     currency: str
 
 
-async def main(args: Arguments):
+async def main(args: Arguments) -> None:
     """Insert depreciation entries into monthly journals.
 
     Processes monthly journals in the supplied inclusive date range and
@@ -89,7 +89,7 @@ async def main(args: Arguments):
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: PathLike):
+        async def process_journal(journal: PathLike) -> None:
             p = Path(journal)
             journal_date = datetime.fromisoformat(f"{p.parent.name}-01")
             journal_last_datetime = journal_date.replace(
@@ -103,7 +103,7 @@ async def main(args: Arguments):
             journal_last_date_str = journal_last_datetime.date().isoformat()
 
             def updater(read: str) -> str:
-                def process_lines(read: str):
+                def process_lines(read: str) -> Iterator[str]:
                     found, done = False, False
                     for line in read.splitlines(keepends=True):
                         if not found:
@@ -142,7 +142,7 @@ async def main(args: Arguments):
     exit(0)
 
 
-def parser(parent: Callable[..., ArgumentParser] | None = None):
+def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Build and return the CLI ArgumentParser for the depreciation script.
 
     The parser accepts start/end period options and positional arguments
@@ -193,7 +193,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None):
     )
 
     @wraps(main)
-    async def invoke(args: Namespace):
+    async def invoke(args: Namespace) -> None:
         await main(
             Arguments(
                 from_datetime=getattr(args, "from"),

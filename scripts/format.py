@@ -8,7 +8,7 @@ would change when run with `--check`).
 
 from argparse import ArgumentParser, Namespace
 from asyncio import run
-from collections.abc import Callable, Iterable
+from collections.abc import Callable, Iterable, Sequence
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
@@ -59,12 +59,12 @@ def _sort_props(line: str) -> str:
     return f"{code}  ; {', '.join(formatted_parts)}"
 
 
-def _group_props(sections: Iterable[str]):
+def _group_props(sections: Iterable[str]) -> Iterable[str | Sequence[tuple[str, str]]]:
     """Yield grouped property parts used by the formatter.
 
     The helper mirrors the previous inner helper in `sortProps`, grouping
     consecutive `key:value` pairs and yielding either the key (str) or a
-    list of `(key, value)` tuples when appropriate. Extracted to make unit
+    Sequence of `(key, value)` tuples when appropriate. Extracted to make unit
     testing straightforward.
     """
     ret: list[tuple[str, str]] = []
@@ -111,7 +111,7 @@ async def _format_journal(
     unformatted_files: list[PathLike],
     check: bool,
     session: JournalRunContext,
-):
+) -> None:
     """Format a single journal using the output of `hledger print`.
 
     The function constructs a normalized header, replaces the journal body
@@ -148,7 +148,7 @@ async def _format_journal(
         session.report_success(journal)
 
 
-async def main(args: Arguments):
+async def main(args: Arguments) -> None:
     """Format monthly journal files according to repository conventions.
 
     Iterates selected monthly journals, runs formatting and optionally
@@ -184,7 +184,7 @@ async def main(args: Arguments):
     exit(0)
 
 
-def parser(parent: Callable[..., ArgumentParser] | None = None):
+def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Create and return the CLI ArgumentParser for the format script.
 
     The parser supports a `--check` flag and an optional list of files to
@@ -215,7 +215,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None):
     )
 
     @wraps(main)
-    async def invoke(ns: Namespace):
+    async def invoke(ns: Namespace) -> None:
         await main(Arguments(check=ns.check, files=getattr(ns, "files", None)))
 
     parser.set_defaults(invoke=invoke)
