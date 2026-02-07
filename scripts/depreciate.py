@@ -175,6 +175,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
     parser.add_argument(
         "-f",
         "--from",
+        dest="from_",
         action="store",
         default=None,
         type=parse_period_start,
@@ -214,7 +215,8 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
         """
         await main(
             Arguments(
-                from_datetime=getattr(args, "from"),
+                # argparse dest is now "from_" to avoid using the reserved keyword
+                from_datetime=args.from_,
                 to_datetime=args.to,
                 item=args.item,
                 amount=args.amount,
