@@ -1,22 +1,22 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=81.0.0", "wheel>=0.46.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a"
 version = "0.0.0"
-requires-python = ">=3.12"
+requires-python = ">=3.12.0"
 description = "Personal ledger tooling"
 dependencies = [
-  "anyio>=3.6.2",
+  "anyio>=4.12.0",
   "pydantic>=2.12.0",
 ]
 
 [dependency-groups]
 dev = [
-  "black>=24.1.0",
-  "isort>=5.12.0",
-  "ruff>=0.14.14",
+  "black>=26.1.0",
+  "isort>=7.0.0",
+  "ruff>=0.15.0",
 ]
 
 [tool.setuptools]
@@ -24,7 +24,6 @@ packages = []
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
 
 [tool.isort]
 profile = "black"
