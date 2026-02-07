@@ -231,8 +231,6 @@ def evict_old_scripts(cache: CacheModel, days: int = 30) -> None:
 
         # Evict old or malformed file entries based on last_success
         files = entry.files
-        if not isinstance(files, dict):  # type: ignore[reportUnnecessaryIsInstance]
-            continue
         for f in list(files.keys()):
             f_entry = files.get(f)
             if not isinstance(f_entry, FileEntryModel):
