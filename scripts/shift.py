@@ -89,7 +89,7 @@ async def main(args: Arguments) -> None:
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: PathLike) -> None:
+        async def process_journal(journal: PathLike[str]) -> None:
             def updater(read: str) -> str:
                 regex = compile(
                     rf"^( +){escape(args.account)}( +)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)=( *)(-?[\d ,]+(?:\.[\d ,]*)?)( +){escape(args.currency)}( *)$",

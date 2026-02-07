@@ -16,7 +16,9 @@ from scripts import shift
 
 
 @pytest.mark.asyncio
-async def test_shift_adjusts_balance(tmp_path: PathLike, monkeypatch) -> None:
+async def test_shift_adjusts_balance(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
     """Shift should modify opening balances in the monthly journal by amount."""
     ledger = Path(tmp_path) / "ledger"
     await (ledger / "2024-01").mkdir(parents=True)

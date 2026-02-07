@@ -107,8 +107,8 @@ class Arguments:
 
 
 async def _format_journal(
-    journal: PathLike,
-    unformatted_files: list[PathLike],
+    journal: PathLike[str],
+    unformatted_files: list[PathLike[str]],
     check: bool,
     session: JournalRunContext,
 ) -> None:
@@ -120,7 +120,7 @@ async def _format_journal(
     modified are appended to `unformatted_files` instead of failing.
     """
 
-    stdout, stderr, returncode = await run_hledger(journal, "print")
+    stdout, _stderr, _returncode = await run_hledger(journal, "print")
     # `run_hledger` raises a CalledProcessError on non-zero exit by default,
     # so no explicit returncode check is necessary here.
 
@@ -160,7 +160,7 @@ async def main(args: Arguments) -> None:
     journals = await find_monthly_journals(folder, args.files)
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
-    unformatted_files = list[PathLike]()
+    unformatted_files = list[PathLike[str]]()
 
     async with JournalRunContext(Path(__file__), journals) as run:
         if run.skipped:

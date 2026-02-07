@@ -89,7 +89,7 @@ async def main(args: Arguments) -> None:
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def process_journal(journal: PathLike) -> None:
+        async def process_journal(journal: PathLike[str]) -> None:
             p = Path(journal)
             journal_date = datetime.fromisoformat(f"{p.parent.name}-01")
             journal_last_datetime = journal_date.replace(

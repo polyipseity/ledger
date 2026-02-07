@@ -5,7 +5,6 @@ formatting utilities (property tests use Hypothesis).
 """
 
 from os import PathLike
-from typing import Literal
 
 import pytest
 from anyio import Path
@@ -44,15 +43,21 @@ def test_group_props_edge_cases() -> None:
 def comment_parts(draw: st.DrawFn) -> list[str]:
     # produce a sequence mixing key:value pairs and plain tokens
     parts: list[str] = []
-    for _ in range(draw(st.integers(min_value=1, max_value=8))):
+    n: int = draw(st.integers(min_value=1, max_value=8))
+    for _ in range(n):
         if draw(st.booleans()):
-            k = draw(st.text(min_size=1, max_size=5).filter(lambda t: ":" not in t))
-            v = draw(st.text(min_size=0, max_size=5).filter(lambda t: "," not in t))
+            k: str = draw(
+                st.text(min_size=1, max_size=5).filter(lambda t: ":" not in t)
+            )
+            v: str = draw(
+                st.text(min_size=0, max_size=5).filter(lambda t: "," not in t)
+            )
             parts.append(f"{k}:{v}")
         else:
-            parts.append(
-                draw(st.text(min_size=1, max_size=8).filter(lambda t: "," not in t))
+            token: str = draw(
+                st.text(min_size=1, max_size=8).filter(lambda t: "," not in t)
             )
+            parts.append(token)
     return parts
 
 
@@ -68,54 +73,53 @@ def test_group_props_and_sort_props_roundtrip(parts: list[str]) -> None:
 
 
 @st.composite
-def grouped_comment(
-    draw: st.DrawFn,
-) -> list[tuple[Literal[True], list[str]] | tuple[Literal[False], str]]:
+def grouped_comment(draw: st.DrawFn) -> list[list[str] | str]:
     # generate a sequence of 1-5 groups; each group is either a list of key:value pairs or a plain token
-    parts: list[tuple[Literal[True], list[str]] | tuple[Literal[False], str]] = []
-    for _ in range(draw(st.integers(min_value=1, max_value=5))):
+    parts: list[list[str] | str] = []
+    count: int = draw(st.integers(min_value=1, max_value=5))
+    for _ in range(count):
         if draw(st.booleans()):
             # group of 1-4 key:value pairs
-            n = draw(st.integers(min_value=1, max_value=4))
+            n: int = draw(st.integers(min_value=1, max_value=4))
             kvs: list[str] = []
             for _ in range(n):
-                k = draw(
+                k: str = draw(
                     st.text(min_size=1, max_size=6).filter(
                         lambda t: ":" not in t and "," not in t
                     )
                 )
-                v = draw(
+                v: str = draw(
                     st.text(min_size=0, max_size=6).filter(
                         lambda t: "," not in t and ":" not in t
                     )
                 )
                 kvs.append(f"{k}:{v}")
-            partT: tuple[Literal[True], list[str]] = (True, kvs)
-            parts.append(partT)
+            parts.append(kvs)
         else:
             # plain token
-            tok = draw(
+            tok: str = draw(
                 st.text(min_size=1, max_size=8).filter(
                     lambda t: "," not in t and ":" not in t
                 )
             )
-            partF: tuple[Literal[False], str] = (False, tok)
-            parts.append(partF)
+            parts.append(tok)
     return parts
 
 
 @given(grouped_comment())
 def test_sort_props_sorts_keys_within_groups(
-    parts: list[tuple[Literal[True], list[str]] | tuple[Literal[False], str]],
+    parts: list[list[str] | str],
 ) -> None:
     """Groups of key:value properties are kept together and keys sorted."""
     # construct the comment string
-    sections = []
-    for is_group, val in parts:
-        if is_group:
-            sections.append(", ".join(val))
+    sections: list[str] = []
+
+    for part in parts:
+        if isinstance(part, list):
+            joined = ", ".join(part)
         else:
-            sections.append(val)
+            joined = part
+        sections.append(joined)
     cmt = ", ".join(sections)
     line = f"    account  ; {cmt}"
 
@@ -124,13 +128,13 @@ def test_sort_props_sorts_keys_within_groups(
 
     # extract the comment text after '  ; '
     out_c = out.split("  ; ", 1)[1]
-    out_parts = [p.strip() for p in out_c.split(", ")]
+    out_parts: list[str] = [p.strip() for p in out_c.split(", ")]
 
     # Now check that for each original group of key:value pairs, the corresponding
     # group in out_parts has keys sorted alphabetically.
     # extract groups from out_parts: they are those parts that contain ':'
-    found_groups = []
-    current = []
+    found_groups: list[list[str]] = []
+    current: list[str] = []
     for part in out_parts:
         if ":" in part:
             current.append(part)
@@ -156,7 +160,7 @@ def test_format_parser_check_flag() -> None:
 
 @pytest.mark.asyncio
 async def test__format_journal_check_true_unformatted(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """When run in check mode, unformatted journals are returned in the list.
 
@@ -171,20 +175,20 @@ async def test__format_journal_check_true_unformatted(
     await jpath.write_text('include "preludes/self.journal"\n\nold\n')
 
     async def fake_run_hledger(
-        journal: PathLike, *args: object
+        journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
         return ("FORMATTED BODY\nline2", "", 0)
 
     monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
 
-    unformatted = []
+    unformatted: list[PathLike[str]] = []
 
     class Session(JournalRunContext):
         def __init__(self) -> None:
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
-        def report_success(self, journal: PathLike) -> None:
+        def report_success(self, journal: PathLike[str]) -> None:
             # Record to the base class _reported set so `reported` property reflects it
             self._reported.add(journal)
 
@@ -198,7 +202,7 @@ async def test__format_journal_check_true_unformatted(
 
 @pytest.mark.asyncio
 async def test__format_journal_check_false_reports_success(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """When run in non-check mode the session is reported as successful even if the file changes."""
 
@@ -208,7 +212,7 @@ async def test__format_journal_check_false_reports_success(
     await jpath.write_text('include "preludes/self.journal"\n\nold\n')
 
     async def fake_run_hledger(
-        journal: PathLike, *args: object
+        journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
         return ("NEW BODY\n", "", 0)
 
@@ -219,7 +223,7 @@ async def test__format_journal_check_false_reports_success(
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
-        def report_success(self, journal: PathLike) -> None:
+        def report_success(self, journal: PathLike[str]) -> None:
             # Record to the base class _reported set so `reported` property reflects it
             self._reported.add(journal)
 

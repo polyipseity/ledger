@@ -14,7 +14,7 @@ from scripts import depreciate
 
 @pytest.mark.asyncio
 async def test_depreciate_appends_transaction(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """Depreciate appends a transaction to the journal and writes amounts."""
     ledger = Path(tmp_path) / "ledger"

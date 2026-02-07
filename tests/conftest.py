@@ -20,7 +20,7 @@ from anyio import Path
 
 @pytest.fixture
 def async_file_factory() -> (
-    Callable[[Literal["disk", "memory"], PathLike | str], object]
+    Callable[[Literal["disk", "memory"], PathLike[str] | str], object]
 ):
     """Return a small factory for producing AsyncFilePath-like objects.
 
@@ -66,7 +66,7 @@ def async_file_factory() -> (
             ) -> bool:
                 return False
 
-        def __init__(self, path: PathLike) -> None:
+        def __init__(self, path: PathLike[str]) -> None:
             self._path = Path(path)
             self.last_written: str | None = None
 
@@ -75,7 +75,7 @@ def async_file_factory() -> (
             mode: str = "r+t",
             encoding: str = "UTF-8",
             errors: str = "strict",
-            newline=None,
+            newline: str | None = None,
         ) -> AsyncFile:
             return self.AsyncFile(self)
 
@@ -118,11 +118,11 @@ def async_file_factory() -> (
             mode: str = "r+t",
             encoding: str = "UTF-8",
             errors: str = "strict",
-            newline=None,
+            newline: str | None = None,
         ) -> AsyncFile:
             return self.AsyncFile(self)
 
-    def factory(kind: Literal["disk", "memory"], arg: PathLike | str) -> object:
+    def factory(kind: Literal["disk", "memory"], arg: PathLike[str] | str) -> object:
         if kind == "disk":
             if not isinstance(arg, PathLike):
                 raise TypeError("disk factory requires a os.PathLike")

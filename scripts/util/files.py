@@ -9,7 +9,7 @@ from anyio import Path
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
 
-def get_script_folder(depth: int = 0) -> PathLike:
+def get_script_folder(depth: int = 0) -> PathLike[str]:
     """Return the Path of the folder containing the caller script.
 
     Inspects the current Python stack and returns the directory containing
@@ -40,7 +40,7 @@ def get_script_folder(depth: int = 0) -> PathLike:
     return p
 
 
-def get_ledger_folder() -> PathLike:
+def get_ledger_folder() -> PathLike[str]:
     """Return the repository `ledger/` folder discovered relative to the scripts folder.
 
     The helper uses :func:`get_script_folder` with ``depth=1`` to locate the
@@ -50,7 +50,7 @@ def get_ledger_folder() -> PathLike:
 
 
 async def file_update_if_changed(
-    journal: PathLike, updater: Callable[[str], str]
+    journal: PathLike[str], updater: Callable[[str], str]
 ) -> bool:
     """Open `journal`, run `updater` on its current content and write only if changed.
 

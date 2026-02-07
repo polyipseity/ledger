@@ -40,7 +40,7 @@ async def test_get_ledger_folder_points_to_ledger():
 
 
 @pytest.mark.asyncio
-async def test_file_update_if_changed_roundtrip(tmp_path: PathLike) -> None:
+async def test_file_update_if_changed_roundtrip(tmp_path: PathLike[str]) -> None:
     fp = Path(tmp_path) / "test.journal"
     await fp.write_text("original\n")
 
@@ -71,7 +71,7 @@ def test_get_ledger_folder_contains_ledger_name() -> None:
 
 
 @pytest.mark.asyncio
-async def test_file_update_if_changed_true_and_false(tmp_path: PathLike) -> None:
+async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) -> None:
     """file_update_if_changed writes only when the updater changes the text."""
     p = Path(tmp_path) / "journal.journal"
     await p.write_text("original\n")

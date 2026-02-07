@@ -73,7 +73,7 @@ class CacheModel(RootModel[dict[str, ScriptEntryModel]]):
     root: dict[str, ScriptEntryModel]
 
 
-def cache_file_path() -> PathLike:
+def cache_file_path() -> PathLike[str]:
     """Return the Path of the cache file in ``./__pycache__``."""
     cache_dir = join(dirname(__file__), "__pycache__")
     makedirs(cache_dir, exist_ok=True)
@@ -122,14 +122,14 @@ async def write_script_cache(content: CacheModel) -> None:
         await fh.write(json_text)
 
 
-async def file_hash(path: PathLike) -> str:
+async def file_hash(path: PathLike[str]) -> str:
     """Return the SHA256 hex digest of ``path``'s current bytes."""
     async with await Path(path).open(mode="rb") as fh:
         data = await fh.read()
     return sha256(data).hexdigest()
 
 
-async def script_key_from(script_id: PathLike) -> str:
+async def script_key_from(script_id: PathLike[str]) -> str:
     """Return a script key in the form ``<filename>@<sha256(contents)>``.
 
     ``script_id`` must be an :class:`os.PathLike` pointing at the invoking
@@ -149,7 +149,7 @@ async def script_key_from(script_id: PathLike) -> str:
     return f"{Path(script_id).name}@{sha256(data).hexdigest()}"
 
 
-async def should_skip_journal(script_id: PathLike, journal: PathLike) -> bool:
+async def should_skip_journal(script_id: PathLike[str], journal: PathLike[str]) -> bool:
     """Return True if ``journal`` can be safely skipped for ``script_id``.
 
     ``script_id`` must be an :class:`os.PathLike` pointing at the invoking script.
@@ -174,7 +174,9 @@ async def should_skip_journal(script_id: PathLike, journal: PathLike) -> bool:
         return file_entry.hash == cur_hash
 
 
-async def mark_journal_processed(script_id: PathLike, journal: PathLike) -> None:
+async def mark_journal_processed(
+    script_id: PathLike[str], journal: PathLike[str]
+) -> None:
     """Record the journal's current content hash as processed for ``script_id``.
 
     This function immediately persists the change and updates the script's
@@ -229,7 +231,7 @@ def evict_old_scripts(cache: CacheModel, days: int = 30) -> None:
 
         # Evict old or malformed file entries based on last_success
         files = entry.files
-        if not isinstance(files, dict):
+        if not isinstance(files, dict):  # type: ignore[reportUnnecessaryIsInstance]
             continue
         for f in list(files.keys()):
             f_entry = files.get(f)
@@ -274,7 +276,9 @@ class JournalRunContext:
       file hashes or per-file ``last_success`` timestamps are recorded.
     """
 
-    def __init__(self, script_id: PathLike, journals: Iterable[PathLike]) -> None:
+    def __init__(
+        self, script_id: PathLike[str], journals: Iterable[PathLike[str]]
+    ) -> None:
         """Create a JournalRunContext.
 
         Parameters:
@@ -287,9 +291,9 @@ class JournalRunContext:
         """
         self.script_id = script_id
         self._journals = list(journals)
-        self.to_process: list[PathLike] = []
-        self.skipped: list[PathLike] = []
-        self._reported: set[PathLike] = set()
+        self.to_process: list[PathLike[str]] = []
+        self.skipped: list[PathLike[str]] = []
+        self._reported: set[PathLike[str]] = set()
         self._script_key: str | None = None
 
     async def __aenter__(self) -> "JournalRunContext":
@@ -321,14 +325,14 @@ class JournalRunContext:
 
         return self
 
-    def report_success(self, journal: PathLike) -> None:
+    def report_success(self, journal: PathLike[str]) -> None:
         """Record that ``journal`` was successfully processed in this session."""
         if journal not in self._journals:
             raise ValueError("journal not managed by this JournalRunContext instance")
         self._reported.add(journal)
 
     @property
-    def reported(self) -> Sequence[PathLike]:
+    def reported(self) -> Sequence[PathLike[str]]:
         """Return a sorted list of :class:`os.PathLike` objects that were processed successfully.
 
         This property provides a convenient, read-only view over the internal

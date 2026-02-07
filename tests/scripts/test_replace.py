@@ -13,7 +13,7 @@ from scripts import replace
 
 @pytest.mark.asyncio
 async def test_replace_rewrites_files(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """Running the replace script should rewrite matching files under the ledger."""
     ledger = Path(tmp_path) / "ledger"
@@ -35,14 +35,14 @@ async def test_replace_rewrites_files(
 
 @pytest.mark.asyncio
 async def test_replace_property_many_files(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """Replacement should apply to all files and not leave the old text behind."""
     # Simple property-style test using fixed variants
     ledger = Path(tmp_path) / "ledger"
     await ledger.mkdir()
     contents = ["alpha OLD beta", "nope", "OLDOLD", "x OLD y"]
-    files = []
+    files: list[tuple[Path, str]] = []
     for i, c in enumerate(contents):
         p = ledger / f"2024-0{i+1}" / f"f{i}.journal"
         await p.parent.mkdir(parents=True, exist_ok=True)

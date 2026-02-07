@@ -47,7 +47,7 @@ def amount_strings(draw: st.DrawFn) -> tuple[str, float]:
 def test_parse_amount_roundtrip(pair: tuple[str, float]) -> None:
     s, expected = pair
     parsed = journals.parse_amount(s)
-    assert parsed == pytest.approx(expected, rel=1e-9)
+    assert abs(parsed - expected) < 1e-9
 
 
 @given(st.integers(min_value=1900, max_value=2100))
@@ -113,7 +113,7 @@ def test_parse_amount_various(whole: int, frac: int) -> None:
 
 @pytest.mark.asyncio
 async def test_make_datetime_range_filters_and_filter_journals_between(
-    tmp_path: PathLike,
+    tmp_path: PathLike[str],
 ) -> None:
     """Filtering journals by month inclusively should work as documented."""
     repo = Path(tmp_path) / "ledger"
@@ -134,7 +134,7 @@ async def test_make_datetime_range_filters_and_filter_journals_between(
 
 
 @pytest.mark.asyncio
-async def test_find_monthly_and_all(tmp_path: PathLike) -> None:
+async def test_find_monthly_and_all(tmp_path: PathLike[str]) -> None:
     """`find_monthly_journals` and `find_all_journals` should discover files under a ledger folder."""
     repo = Path(tmp_path) / "ledger"
     await (repo / "2024-01").mkdir(parents=True)
@@ -154,7 +154,7 @@ def test_format_journal_list_various() -> None:
     """format_journal_list produces a compact user-friendly listing."""
     assert journals.format_journal_list([]) == "none"
 
-    class P(PathLike):
+    class P(PathLike[str]):
         def __init__(self, parent: str, name: str) -> None:
             self.parent = SimpleNamespace(name=parent)
             self.name = name

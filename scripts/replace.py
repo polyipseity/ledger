@@ -58,7 +58,7 @@ async def main(args: Arguments) -> None:
     journals = await find_all_journals(folder)
     info(f'journals: {", ".join(map(str, journals))}')
 
-    async def replace_in_journal(journal: PathLike) -> None:
+    async def replace_in_journal(journal: PathLike[str]) -> None:
         def updater(read: str) -> str:
             return read.replace(args.find, args.replace)
 

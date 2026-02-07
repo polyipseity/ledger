@@ -76,7 +76,7 @@ async def main(args: Arguments) -> None:
         if run.skipped:
             info("skipped:\n%s", format_journal_list(run.skipped, max_items=8))
 
-        async def check_journal(journal: PathLike) -> None:
+        async def check_journal(journal: PathLike[str]) -> None:
             await run_hledger(journal, "check", *_HLEDGER_CHECKS)
             # If the check returned successfully record it for this session
             run.report_success(journal)

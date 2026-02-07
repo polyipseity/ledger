@@ -17,7 +17,9 @@ from anyio import Path
 from scripts.util import cache as cmod
 
 
-async def _patch_cache_to(tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch) -> Path:
+async def _patch_cache_to(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> Path:
     """Monkeypatch cmod.cache_file_path to point to a temp file under tmp_path.
 
     Also ensure the parent directory exists so writes do not fail.
@@ -31,7 +33,9 @@ async def _patch_cache_to(tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch) -
 
 
 @pytest.mark.asyncio
-async def test_read_write_roundtrip(tmp_path: PathLike, monkeypatch) -> None:
+async def test_read_write_roundtrip(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
     """A written CacheModel should be readable and preserved.
 
     Uses the temporary filesystem (``tmp_path``) and monkeypatch to direct the
@@ -52,7 +56,7 @@ async def test_read_write_roundtrip(tmp_path: PathLike, monkeypatch) -> None:
 
 
 @pytest.mark.asyncio
-async def test_file_hash_and_script_key(tmp_path: PathLike) -> None:
+async def test_file_hash_and_script_key(tmp_path: PathLike[str]) -> None:
     """`file_hash` computes sha256 and `script_key_from` embeds file name and sha.
 
     This test uses synchronous filesystem writes for the test inputs and
@@ -77,7 +81,7 @@ async def test_file_hash_and_script_key(tmp_path: PathLike) -> None:
 
 @pytest.mark.asyncio
 async def test_should_skip_and_mark_journal_processed(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """mark_journal_processed records the file hash and should_skip_journal uses it."""
     await _patch_cache_to(tmp_path, monkeypatch)
@@ -130,7 +134,7 @@ def test_evict_old_scripts_and_malformed_entries() -> None:
 
 @pytest.mark.asyncio
 async def test_journal_run_context_basic(
-    tmp_path: PathLike, monkeypatch: pytest.MonkeyPatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """JournalRunContext should partition journals and persist reported hashes."""
     await _patch_cache_to(tmp_path, monkeypatch)

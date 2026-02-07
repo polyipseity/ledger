@@ -3,7 +3,9 @@
 Ensure the CLI parser exposes the expected invocation hooks.
 """
 
+from collections.abc import Iterable
 from os import PathLike
+from types import TracebackType
 
 import pytest
 from anyio import Path
@@ -20,7 +22,7 @@ def test_check_parser_invoke_callable() -> None:
 
 @pytest.mark.asyncio
 async def test_check_main_runs_hledger_for_each_journal(
-    tmp_path: PathLike, monkeypatch
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ):
     """Main should invoke `run_hledger` for each journal that requires processing.
 
@@ -34,7 +36,7 @@ async def test_check_main_runs_hledger_for_each_journal(
     await (repo / "2024-02").mkdir(parents=True)
     await (repo / "2024-02" / "b.journal").write_text("y")
 
-    journals: list[PathLike] = [
+    journals: list[PathLike[str]] = [
         repo / "2024-01" / "a.journal",
         repo / "2024-02" / "b.journal",
     ]
@@ -42,14 +44,18 @@ async def test_check_main_runs_hledger_for_each_journal(
     # Point ledger discovery at our temporary repo
     monkeypatch.setattr(check, "get_ledger_folder", lambda: repo)
 
-    async def fake_find(folder: PathLike, files=None) -> list[PathLike]:
+    async def fake_find(
+        folder: PathLike[str], files: Iterable[str] | None = None
+    ) -> list[PathLike[str]]:
         return journals
 
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
 
-    calls = []
+    calls: list[PathLike[str]] = []
 
-    async def fake_run_hledger(journal: PathLike, *args) -> tuple[str, str, int]:
+    async def fake_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
         calls.append(journal)
         return ("", "", 0)
 
@@ -57,22 +63,27 @@ async def test_check_main_runs_hledger_for_each_journal(
 
     # Stub JournalRunContext so everything is treated as 'to_process'
     class DummyRun:
-        def __init__(self, script_id: PathLike, j: list[PathLike]) -> None:
+        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
             self.to_process = list(j)
-            self.skipped: list[PathLike] = []
-            self._reported: list[PathLike] = []
+            self.skipped: list[PathLike[str]] = []
+            self._reported: list[PathLike[str]] = []
 
-        async def __aenter__(self):
+        async def __aenter__(self) -> "DummyRun":
             return self
 
-        async def __aexit__(self, exc_type, exc, tb):
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
             return False
 
-        def report_success(self, journal: PathLike) -> None:
+        def report_success(self, journal: PathLike[str]) -> None:
             self._reported.append(journal)
 
         @property
-        def reported(self) -> list[PathLike]:
+        def reported(self) -> list[PathLike[str]]:
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun)
