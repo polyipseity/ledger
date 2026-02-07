@@ -1,5 +1,6 @@
 """Journal discovery, date parsing and hledger subprocess helpers."""
 
+import logging
 from asyncio import BoundedSemaphore, create_subprocess_exec, gather
 from asyncio.subprocess import DEVNULL, PIPE
 from calendar import monthrange
@@ -11,6 +12,8 @@ from shutil import which
 from subprocess import CalledProcessError
 
 from anyio import Path
+
+logger = logging.getLogger(__name__)
 
 __all__ = (
     "DEFAULT_AMOUNT_DECIMAL_PLACES",
@@ -314,8 +317,14 @@ async def run_hledger(
     *args: str,
     raise_on_error: bool = True,
     strict: bool = True,
+    log_on_error: bool = True,
 ) -> tuple[str, str, int]:
-    """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode)."""
+    """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode).
+
+    When the hledger process exits with a non-zero return code and
+    ``log_on_error`` is ``True`` both ``stdout`` and ``stderr`` are emitted
+    to the module logger at ERROR level to aid diagnostics.
+    """
     hledger_prog = which("hledger")
     if hledger_prog is None:
         raise FileNotFoundError("hledger executable not found in PATH")
@@ -338,6 +347,14 @@ async def run_hledger(
         stdout = out_bytes.decode().replace("\r\n", "\n")
         stderr = err_bytes.decode().replace("\r\n", "\n")
         returncode = await proc.wait()
+        if returncode and log_on_error:
+            logger.error(
+                "hledger %r exited with returncode=%d\nstdout:\n%s\nstderr:\n%s",
+                cli,
+                returncode,
+                stdout,
+                stderr,
+            )
         if raise_on_error and returncode:
             raise CalledProcessError(
                 returncode,

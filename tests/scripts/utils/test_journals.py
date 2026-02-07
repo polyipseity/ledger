@@ -5,6 +5,7 @@ module also verifies journal file discovery, inclusive filtering by period,
 and user-friendly listing helpers.
 """
 
+import logging
 from datetime import datetime
 from os import PathLike, fspath
 from types import SimpleNamespace
@@ -259,6 +260,7 @@ def test_filter_journals_skips_invalid_parent_names() -> None:
 @pytest.mark.asyncio
 async def test_run_hledger_handles_process_exit(
     monkeypatch: pytest.MonkeyPatch,
+    caplog: pytest.LogCaptureFixture,
 ) -> None:
     """Simulate subprocess success and failure for `run_hledger` using a fake process."""
 
@@ -292,8 +294,33 @@ async def test_run_hledger_handles_process_exit(
 
     # Now simulate non-zero return code which should raise when raise_on_error=True
     async def fake_create_bad(*args: Any, **kwargs: Any) -> FakeProc:
-        return FakeProc(b"", b"err\n", 2)
+        return FakeProc(
+            b"586061c8-6f1a-4e6c-96fa-fc3521e833b0\n",
+            b"fa27ffae-770c-48b3-a232-ad63b23a9415\n",
+            2,
+        )
 
     monkeypatch.setattr(journals, "create_subprocess_exec", fake_create_bad)
-    with pytest.raises(Exception):
-        await journals.run_hledger("somefile", "print", raise_on_error=True)
+
+    with caplog.at_level(logging.ERROR):
+        with pytest.raises(Exception):
+            await journals.run_hledger("somefile", "print", raise_on_error=True)
+        # stderr should be logged
+        assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in caplog.text
+        # stdout should also be included in the log
+        assert "586061c8-6f1a-4e6c-96fa-fc3521e833b0" in caplog.text
+
+    caplog.clear()
+    out, err, rc = await journals.run_hledger("somefile", "print", raise_on_error=False)
+    assert rc == 2
+    assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in err
+    # when not raising, the error should still have been logged
+    assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in caplog.text
+
+    caplog.clear()
+    out, err, rc = await journals.run_hledger(
+        "somefile", "print", raise_on_error=False, log_on_error=False
+    )
+    assert rc == 2
+    # logging disabled: no records
+    assert caplog.text == ""
