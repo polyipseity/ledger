@@ -59,7 +59,7 @@ Required software and tools that enable this accounting system.
 pip install "anyio>=3.6.2"
 ```
 
-**How it's used:** Provides async path objects (`anyio.Path`) for concurrent file I/O. For public APIs prefer `os.PathLike` and coerce `PathLike` to `anyio.Path` inside functions that perform async file operations.
+**How it's used:** Provides async path objects (`anyio.Path`) for concurrent file I/O. For public APIs prefer `os.PathLike` and coerce `PathLike` to `anyio.Path` inside functions that perform async file operations. When a `PathLike` needs to be converted to a string, **always** use `os.fspath(path_like)` (or `from os import fspath`) rather than calling `str(path_like)` directly; `os.fspath` is the canonical conversion that respects objects implementing the filesystem path protocol.
 
 **Requirement in:** `requirements.txt` (see [../../../requirements.txt](../../requirements.txt))
 

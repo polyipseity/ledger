@@ -49,6 +49,7 @@ Please follow these coding conventions in agent edits and new scripts. They are 
 - Use `os.PathLike` for file/script identifiers:
   - APIs that accept a script identifier (for example, `JournalRunContext`) **must** accept an :class:`os.PathLike` (for example, a `pathlib.Path`) only, not plain strings. Call sites should pass `Path(__file__)` or another `os.PathLike` instance.
   - When a function needs to perform asynchronous file operations it may coerce the provided `PathLike` to an `anyio.Path` internally (e.g., `from anyio import Path as AnyioPath; path = AnyioPath(path_like)`) so runtime async helpers work consistently.
+  - When converting a `PathLike` to a string for APIs that require `str`, **always** use `os.fspath(path_like)` (or `from os import fspath`) rather than `str(path_like)`. Using `os.fspath` is the canonical way to obtain the filesystem path string and correctly supports objects implementing the filesystem path protocol.
   - The script identifier must be a readable file. The helper that derives a script cache key will fail-fast and raise :class:`FileNotFoundError` if the script path cannot be opened for reading.
 - Use timezone-aware UTC datetimes:
   - Avoid `datetime.utcnow()`; instead use `datetime.now(timezone.utc)` and store or format ISO timestamps from timezone-aware objects.
