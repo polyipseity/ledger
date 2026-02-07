@@ -80,6 +80,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 ### Testing ✅
 
 - Tests are written using `pytest` and live in the `tests/` directory (files named `test_*.py`).
+- Test file layout: Create one test file per source file. Tests should mirror the source directory structure under `tests/` (for example, `tests/path/to/test_module.py` for `src/path/to/module.py`). Only split a source's tests into multiple files in very rare cases when a single test file would otherwise be excessively long.
 - Run the full test suite locally via `pnpm run test` (this invokes `python -m pytest`). Use `pnpm run test:py` to run pytest directly if needed.
 - Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `python -m pytest --cov` to generate coverage output.
 - When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
