@@ -9,7 +9,7 @@ This file contains rules, clarifications, and examples specific to food and rest
 
 ## Key Rules
 
-- Always use canonical payee names (see payee_mappings.yml)
+- Always use canonical payee names (see payee_mappings.yml). All mapping values in `payee_mappings.yml` are YAML sequences (lists). If a list contains multiple canonical candidates, disambiguate using contextual cues (store/branch id, receipt tokens, item categories, locality); prompt for clarification if context is insufficient.
 - Normalize food/drink items and modifiers (see below for rules)
 - Use `food_or_drink:` tag in posting comments for each item
 - Use English translations from food_translations.yml only after user approval

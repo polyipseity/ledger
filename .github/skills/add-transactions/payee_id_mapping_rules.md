@@ -11,6 +11,7 @@ This file contains all rules and best practices for payee normalization, payee m
 - Do NOT include identity mappings (e.g. "McDonald's": "McDonald's").
 - Strip incidental location or terminal codes in parentheses when deciding the canonical payee key.
 - Keep `payee_mappings.yml` minimal, sorted, and deduplicated.
+- All mapping values MUST be YAML sequences (lists). Use a one-element list for a one-to-one mapping; use multi-element lists only when unambiguous keys are not available. If a list contains multiple candidates, do not pick arbitrarily: attempt to disambiguate using contextual cues (store/branch id, receipt tokens, item categories, locality). If context cannot disambiguate, prompt for clarification and add a more-specific mapping key instead of relying on a general ambiguous alias.
 
 ## ID Mapping Rules
 

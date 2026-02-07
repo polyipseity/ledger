@@ -41,7 +41,7 @@ Refer to these files for detailed rules, clarifications, and examples. Do not du
 
 ## Mapping and Translation Files
 
-- [payee_mappings.yml](./payee_mappings.yml) — For mapping payee aliases, translations, and alternate names to canonical payee names. This is **not** for UUID mapping or ID mapping. Always use this file to normalize payee names in transactions.
+- [payee_mappings.yml](./payee_mappings.yml) — For mapping payee aliases, translations, and alternate names to canonical payee names. All mapping values MUST be YAML sequences (lists). Use one-element lists for unambiguous one-to-one mappings; use multi-element lists only when a single alias may legitimately refer to multiple canonical payees. When a list contains multiple candidates, disambiguate using context (store/branch ID, receipt tokens, item categories, locality); if context is insufficient, prompt for clarification and update the mapping with a more-specific key. This is **not** for UUID mapping or ID mapping. Always use this file to normalize payee names in transactions.
 - [id_mappings.yml](./id_mappings.yml) — For formatting and mapping transaction/receipt IDs (e.g., which identifiers to include in the payee line, and their order/format). This is **not** for payee name normalization or UUID mapping.
 - [food_translations.yml](./food_translations.yml) — For translating food/drink item names only.
 - [private.yaml] — For mapping payee names or people to UUIDs for privacy and entity registration. This is **not** for payee name normalization or ID mapping.
@@ -70,7 +70,7 @@ python -m check    # set cwd to scripts/
 ### 2026-02-01 (AI skill update, generalized)
 
 - **Payee Mapping, UUID Mapping, and ID Mapping (Critical Distinction):**
-  - **Payee mapping**: Always check `payee_mappings.yml` for payee aliases, translations, or alternate names. If the merchant name or a similar entry is found, use the mapped canonical payee name in the transaction. If not found, use the merchant name as-is. **Never use the untranslated or unnormalized payee name if a mapping exists.**
+  - **Payee mapping**: Always check `payee_mappings.yml` for payee aliases, translations, or alternate names. Mapping entries are always YAML sequences (lists). If a mapping list contains a single canonical name, use that name. If the list contains multiple candidates, attempt to disambiguate using contextual cues (store/branch ID, receipt tokens, item categories, locality, etc.). If context is insufficient to choose among the candidates, prompt for clarification and then update `payee_mappings.yml` with a more-specific key (for example, include branch/terminal codes). **Never use the untranslated or unnormalized payee name if a mapping exists.**
   - **UUID mapping**: Use `private.yaml` only for mapping payees or people to UUIDs for privacy or entity registration. This is for internal entity tracking, not for payee name normalization or ID mapping.
   - **ID mapping**: Use `id_mappings.yml` only to determine which transaction/receipt IDs to include in the payee line, and their order/format. This is not for payee name normalization or UUID mapping.
   - For receipt/transaction identifiers: Prepend only the identifiers specified by the payee's rule in `id_mappings.yml` (e.g., for KFC, only use (receipt_id, store_id)). If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
@@ -83,7 +83,7 @@ python -m check    # set cwd to scripts/
   - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`). **If a modifier appears on its own line after a beverage (for example: `food_or_drink: 奶茶` followed by `food_or_drink: 多奶`), combine them into `food_or_drink: 奶茶 + 多奶` and remove the standalone modifier tag.**
   - If a modifier is missing, check the receipt and add it to the tag as needed.
   - Timezone and duration: When a receipt contains both an order/print time and a separate settlement/transaction time, compute the ISO-8601 duration as the difference and add `duration:` to the transaction header (e.g., `duration: PT34M19S`). **Always include an explicit `timezone:` when specifying `time:` so duration computations are unambiguous.**
-  - Payee mapping: Before using an untranslated payee name, check `private.yaml` for a UUID mapping and use the UUID as the payee if present; otherwise consult `payee_mappings.yml` for canonical names.
+  - Payee mapping: Before using an untranslated payee name, check `private.yaml` for a UUID mapping and use the UUID as the payee if present; otherwise consult `payee_mappings.yml` for canonical names. Because mapping values are always lists, if the list contains multiple canonical candidates, disambiguate using contextual information; once the canonical payee is chosen, check `private.yaml` and use its UUID if present (the mapping file remains clear-text).
 - **Account and Tag Selection:**
   - Use the most specific and correct account (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.

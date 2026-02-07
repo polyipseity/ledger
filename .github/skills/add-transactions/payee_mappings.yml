@@ -1,10 +1,30 @@
 # Payee Mappings File
 # Purpose: Maps payee aliases and translations to canonical payee names for use in transaction entry.
-# Structure: Each entry maps a source/alias to a canonical form. Do not include identity mappings or ambiguous tokens.
-# See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
-"沙嗲王": "沙嗲王 (Satay King)"
-"McDonald's Hong Kong": "McDonald's"
-"百份百": "Cafe 100%"
-"錦麗": "錦麗 (Phole)"
-"天仁茗茶": "天仁茗茶 (TenRen's Tea)"
-"大生生活超市": "大生生活超市 (DS Groceries)"
+# Structure: Each entry maps a source/alias to a YAML sequence (list) of one or more canonical
+# payee names. Use a one-element list for an unambiguous one-to-one mapping. Use a multi-element
+# list only when a single alias may legitimately refer to multiple canonical payees and the
+# correct target can be determined from contextual signals (store/branch ID, receipt tokens,
+# item categories, locality, or other metadata).
+# Semantics:
+# - All mapping values MUST be YAML sequences (lists).
+# - If the sequence contains a single element, use that canonical name.
+# - If the sequence contains multiple candidates, attempt to disambiguate using contextual cues
+#   (store/branch ID, receipt tokens, item categories, locality, time, etc.). If context is
+#   insufficient, prompt for clarification and add a more-specific mapping key instead of
+#   relying on a general ambiguous alias.
+# Keep the file minimal, sorted, and deduplicated. Do not include identity mappings or clearly
+# ambiguous tokens.
+# Examples:
+# "Maxim's": ["Maxim's Canteen II, HKUST", "Maxim's Cakes"]
+# "7-Eleven": ["7-Eleven (Convenience)", "7-Eleven (Branch)"]
+"沙嗲王": ["沙嗲王 (Satay King)"]
+"McDonald's Hong Kong": ["McDonald's"]
+"百份百": ["Cafe 100%"]
+"HKUST": ["Maxim's Canteen II, HKUST"] # Receipts that include “(自助機)” or “(堂食)” for HKUST self-service/dine-in usually map to Maxim's Canteen II, HKUST.
+"錦麗": ["錦麗 (Phole)"]
+"天仁茗茶": ["天仁茗茶 (TenRen's Tea)"]
+"大生生活超市": ["大生生活超市 (DS Groceries)"]
+
+# Example one-to-many mappings (use sparingly; prefer creating more-specific keys where possible):
+"Maxim's": ["Maxim's Canteen II, HKUST", "Maxim's Cakes"]
+"7-Eleven": ["7-Eleven (Convenience)", "7-Eleven (Branch)"]
