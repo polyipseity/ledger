@@ -12,6 +12,7 @@ from hashlib import sha256
 from json import JSONDecodeError
 from os import PathLike, fspath, makedirs
 from os.path import basename, dirname, join, splitext
+from typing import Self
 
 from anyio import Path
 from pydantic import BaseModel, Field, RootModel, ValidationError
@@ -294,7 +295,7 @@ class JournalRunContext:
         self._reported: set[PathLike[str]] = set()
         self._script_key: str | None = None
 
-    async def __aenter__(self) -> "JournalRunContext":
+    async def __aenter__(self) -> Self:
         """Enter the async context.
 
         On entry this acquires the cache lock, loads the cache, and partitions
