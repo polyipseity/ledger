@@ -54,12 +54,13 @@ Required software and tools that enable this accounting system.
 **Installation:**
 
 ```powershell
-pip install "anyio>=3.6.2"
+# Add to `pyproject.toml` (project or dev deps), then install:
+uv sync
 ```
 
 **How it's used:** Provides async path objects (`anyio.Path`) for concurrent file I/O. For public APIs prefer `os.PathLike` and coerce `PathLike` to `anyio.Path` inside functions that perform async file operations. When a `PathLike` needs to be converted to a string, **always** use `os.fspath(path_like)` rather than calling `str(path_like)` directly; `os.fspath` is the canonical conversion that respects objects implementing the filesystem path protocol. Imports must be at module top-level; both `import ...` and `from ... import ...` forms are allowed at module top-level — prefer `from module import name` where practical (for example, `from os import fspath`) and never use inline/runtime imports.
 
-**Requirement in:** `requirements.txt` (see [../../../requirements.txt](../../requirements.txt))
+**Requirement in:** `pyproject.toml` (see `pyproject.toml` in the repository root)
 
 ### GPG (GNU Privacy Guard)
 
@@ -134,12 +135,12 @@ python -c "import anyio; print(anyio.__version__)"
 # Output: 4.0+ or 3.x+
 
 # Check pytest and friends
-python -m pytest --version
+uv run --locked pytest --version
 # Output: pytest X.Y.Z
 
 # Run tests
 pnpm run test
-# Equivalent to: python -m pytest
+# Equivalent to: uv run --locked pytest
 
 # Check GPG
 gpg --version
@@ -154,14 +155,14 @@ All should show **no errors**.
 
 ### Dev/test dependencies
 
-Testing and async support are provided via these dev extras (installed by `pip install -e . --group dev`):
+Testing and async support are provided via these dev extras (installed by `uv sync`):
 
 - `pytest` (test runner)
 - `pytest-asyncio` (async test support)
 - `pytest-cov` (coverage)
 - `ruff` (formatting & linting tool)
 
-When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `postinstall` will install them locally.
+When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `prepare` (runs `uv sync`) will install them locally.  Note: you do not need to invoke `prepare` explicitly; package managers run it for you on installs that do not use `--ignore-scripts`.
 
 ## Troubleshooting Dependencies
 
@@ -199,11 +200,9 @@ Set-Alias -Name python -Value python3 -Scope CurrentUser
 ```powershell
 # Error: "No module named anyio"
 
-# Install via pip
-pip install "anyio>=3.6.2"
-
-# Or reinstall from requirements.txt
-pip install -r requirements.txt
+# Add the requirement to `pyproject.toml` (dev or project deps), then run:
+uv sync
+# Prefer using `uv sync` with `pyproject.toml` + `uv.lock` for reproducible installs
 ```
 
 ### GPG not found

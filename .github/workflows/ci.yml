@@ -15,7 +15,7 @@
 #
 # Security & reproducibility notes:
 #   - Use least-privilege permissions (contents: read) and pin action versions where appropriate.
-#   - Use local caches for pnpm/pip to speed builds and reduce external load.
+#   - Use local caches for pnpm/uv to speed builds and reduce external load.
 
 name: "CI: Build & Test"
 
@@ -45,14 +45,15 @@ jobs:
           node-version: "*"
           cache: "pnpm"
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
         with:
-          python-version-file: pyproject.toml
-          cache: "pip"
+          enable-cache: true
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install project
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          uv sync --locked --all-extras --dev
 
       - name: Install hledger
         run: pnpm run hledger:install
@@ -77,14 +78,15 @@ jobs:
           node-version: "*"
           cache: "pnpm"
 
-      - name: Set up Python
-        uses: actions/setup-python@v6
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
         with:
-          python-version-file: pyproject.toml
-          cache: "pip"
+          enable-cache: true
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install project
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          uv sync --locked --all-extras --dev
 
       - name: Install hledger
         run: pnpm run hledger:install

@@ -28,10 +28,10 @@ export default {
     // Run pyright and each Python formatter as its own command so lint-staged appends
     // the staged file list to each invocation (pyright, ruff).
     "pyright",
-    "python -m ruff check --fix",
-    "python -m ruff format",
+    "uv run --locked ruff check --fix",
+    "uv run --locked ruff format",
   ],
   "ledger/[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]-[0-9][0-9]/**/*.journal": [
-    "python -m scripts.format",
+    "uv run --locked python -m scripts.format",
   ],
 };

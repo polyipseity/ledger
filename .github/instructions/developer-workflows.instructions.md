@@ -17,8 +17,8 @@ description: Development workflows, utility scripts, code patterns, and testing/
   - **Markdown:** `markdownlint-cli2 --fix`
   - **Prettier:** `prettier --write`
   - **Python formatters:** run each as a separate command so each receives the file list:
-    - `python -m ruff check --fix`
-    - `python -m ruff format`
+    - `uv run --locked ruff check --fix`
+    - `uv run --locked ruff format`
   - **Journals:** `python -m scripts.format` (accepts file args)
 
   Note: When listing multiple commands for the same glob in `lint-staged`, provide them as an array so each command is executed with the staged file list appended.
@@ -83,8 +83,8 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 
 - Tests are written using `pytest` and live in the `tests/` directory (files named `test_*.py`).
 - Test file layout: Create one test file per source file. Tests should mirror the source directory structure under `tests/` (for example, `tests/path/to/test_module.py` for `src/path/to/module.py`). Only split a source's tests into multiple files in very rare cases when a single test file would otherwise be excessively long.
-- Run the full test suite locally via `pnpm run test` (this invokes `python -m pytest`). Use `pnpm run test:py` to run pytest directly if needed.
-- Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `python -m pytest --cov` to generate coverage output.
+- Run the full test suite locally via `pnpm run test` (this invokes `uv run --locked pytest`). Use `pnpm run test:py` to run pytest directly if needed.
+- Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `uv run --locked pytest --cov` to generate coverage output.
 - Async tests: When testing asynchronous code, always write tests as `async def` and decorate them with `@pytest.mark.asyncio`; use `await` to run coroutines directly in the test body. Do **not** use event loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle under pytest and can conflict with pytest-asyncio’s event loop fixtures.
 - When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
 - CI runs the test suite and Husky registers a `pre-push` hook that will run `pnpm run test` before pushing — run tests locally to avoid blocked pushes.
@@ -98,7 +98,7 @@ pnpm run check         # Validate all journals and run all checks
 git commit -m "message"
 ```
 
-**Setup:** after `pnpm install` the `postinstall` script will run `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new dependency group syntax. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `pip install -e . --group dev` to reproduce the behavior locally). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
+**Setup:** `prepare` now runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. In CI we run `pnpm install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` as a single step to install Node and Python dependencies deterministically. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `uv sync` locally to reproduce the behavior). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
 **Script commands: Always run from the `scripts/` directory**
 
 - For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).

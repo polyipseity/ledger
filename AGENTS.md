@@ -80,7 +80,7 @@ These conventions are lightweight but help keep agent-generated edits consistent
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
-**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `python -m ruff format` and `python -m ruff check --fix`.
+**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `uv run --locked ruff format` and `uv run --locked ruff check --fix` (or the equivalent pnpm script wrappers).
 
 **Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
@@ -88,9 +88,11 @@ These conventions are lightweight but help keep agent-generated edits consistent
 
 **Final Reminder:**
 
-> **Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.
+**Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.
 
-**Note:** `pnpm install` runs a `postinstall` hook which will run `python -m pip install -e . --group dev` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment.
+**Use `uv` for Python dependency management and installs.** Prefer `uv sync` for project-based installs and commit `uv.lock` for reproducible installs.
+
+**Note:** `pnpm install` triggers the `prepare` script which runs `uv sync` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax and the project lockfile `uv.lock`. In CI we run `pnpm install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` in a single step to install Node and Python dependencies deterministically. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment (the install is project-scoped and respects `uv.lock`).
 
 ## Quick Start
 
@@ -106,7 +108,7 @@ Skills:
 Instructions:
 
 - Security: [security.instructions.md](.github/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `pnpm run prepare` to register hooks). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
+- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `pnpm install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
 
 ## VS Code Setup
 
