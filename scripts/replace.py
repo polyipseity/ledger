@@ -56,7 +56,7 @@ async def main(args: Arguments) -> None:
     folder = get_ledger_folder()
 
     journals = await find_all_journals(folder)
-    info(f'journals: {", ".join(map(str, journals))}')
+    info(f"journals: {', '.join(map(str, journals))}")
 
     async def replace_in_journal(journal: PathLike[str]) -> None:
         """Perform find-and-replace for a single journal file using ``updater``."""

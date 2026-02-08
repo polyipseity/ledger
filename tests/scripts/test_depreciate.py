@@ -62,9 +62,9 @@ def test_depreciate_parser_with_from_to_flags() -> None:
     p = depreciate.parser()
     ns = p.parse_args(["-f", "2024-01", "-t", "2024-03", "widget", "1", "HKD"])
     # parser now sets 'from_' dest to avoid using the reserved keyword; ensure both exist
-    assert (
-        getattr(ns, "from_") is not None
-    ), "expected parser to set 'from_' start period"
+    assert getattr(ns, "from_") is not None, (
+        "expected parser to set 'from_' start period"
+    )
     assert getattr(ns, "to") is not None, "expected parser to set 'to' end period"
 
 

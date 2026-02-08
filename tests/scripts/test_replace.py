@@ -33,9 +33,9 @@ async def test_replace_rewrites_files(
         await replace.main(args)
     assert exc.value.code == 0, "replace.main should exit 0 on success"
 
-    assert (
-        "NEW" in await j1.read_text()
-    ), "replacement should change file contents to include NEW"
+    assert "NEW" in await j1.read_text(), (
+        "replacement should change file contents to include NEW"
+    )
 
 
 @pytest.mark.asyncio
@@ -49,7 +49,7 @@ async def test_replace_property_many_files(
     contents = ["alpha OLD beta", "nope", "OLDOLD", "x OLD y"]
     files: list[tuple[Path, str]] = []
     for i, c in enumerate(contents):
-        p = ledger / f"2024-0{i+1}" / f"f{i}.journal"
+        p = ledger / f"2024-0{i + 1}" / f"f{i}.journal"
         await p.parent.mkdir(parents=True, exist_ok=True)
         await p.write_text(c)
         files.append((p, c))

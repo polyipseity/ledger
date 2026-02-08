@@ -141,7 +141,7 @@ async def main(args: Arguments) -> None:
                     if not done:
                         yield f"""{journal_last_date_str} ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: {_TIMEZONE}
     {_DEPRECIATION_ACCOUNT}
-    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f'{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}'.format(args.amount)} {args.currency}  ; item: {args.item}
+    {_ACCUMULATED_DEPRECIATION_ACCOUNT}  {f"{{0:.{DEFAULT_AMOUNT_DECIMAL_PLACES}f}}".format(args.amount)} {args.currency}  ; item: {args.item}
 
 """
 

@@ -51,9 +51,9 @@ async def test_shift_adjusts_balance(
 
     contents: str = await j.read_text()
     # after shifting opening balances by +100, the left side becomes 1100.00
-    assert (
-        "1,100.00 HKD" in contents or "1100.00 HKD" in contents
-    ), "expected opening balance to be increased by shift amount"
+    assert "1,100.00 HKD" in contents or "1100.00 HKD" in contents, (
+        "expected opening balance to be increased by shift amount"
+    )
 
 
 @pytest.mark.asyncio
