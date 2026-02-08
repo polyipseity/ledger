@@ -6,9 +6,7 @@ description: Required software and tools that enable this accounting system, inc
 
 # Critical Dependencies
 
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 Required software and tools that enable this accounting system.
 
@@ -98,7 +96,7 @@ pip install "anyio>=3.6.2"
 
 ### Type checking
 
-**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting. Run locally with `pnpm run check:py` (this now runs Pyright alongside Ruff/isort/Black); CI runs the Python linters (`pnpm run check:py`).
+**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting. Run locally with `pnpm run check:py` (this now runs Pyright alongside Ruff); CI runs the Python linters (`pnpm run check:py`).
 
 ### PowerShell (for Windows users)
 
@@ -161,7 +159,7 @@ Testing and async support are provided via these dev extras (installed by `pip i
 - `pytest` (test runner)
 - `pytest-asyncio` (async test support)
 - `pytest-cov` (coverage)
-- `ruff`, `black`, `isort` (formatting & linting tools)
+- `ruff` (formatting & linting tool)
 
 When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `postinstall` will install them locally.
 

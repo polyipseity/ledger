@@ -2,6 +2,8 @@
 
 This file contains all rules and best practices for registering new payees and accounts in the ledger system. Use this file whenever you need to add a new merchant, counterparty, or account.
 
+**Examples:** See `./examples.md` for examples of entity and UUID registration.
+
 ## Payee Registration
 
 - Keep payee declarations in `preludes/*.journal` alphabetized; insert any new payee in order.

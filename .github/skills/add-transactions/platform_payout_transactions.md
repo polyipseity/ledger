@@ -7,7 +7,7 @@ This file extends the add-transactions skill with generalized rules for transcri
 **All rules below are subject to these mandatory best practices:**
 
 - **Net Amount Posting:** Always post the net amount (after all fees) to the digital payment asset account (e.g., Stripe, PayPal, etc.). Never use the gross payment amount for this posting. The net amount is the actual value credited to your platform balance and is essential for balanced transactions and accurate asset tracking.
-- **Second Precision Time Tags:** Always use second precision for all `time:` tags if available. If the source document (PDF, CSV, API, etc.) provides a timestamp with seconds, record the full HH:MM:SS value in the `time:` tag. Do not round or truncate to minutes. This ensures strict chronological order and traceability, especially for high-frequency or automated transactions.
+- **Second Precision Time Tags:** Record full HH:MM:SS timestamps when available; see `.github/instructions/transaction-format.instructions.md` for ordering and timezone rules.
 
 Any deviation from these rules will result in unbalanced or non-compliant journal entries.
 
@@ -56,17 +56,7 @@ Any deviation from these rules will result in unbalanced or non-compliant journa
     - Use `*` for confirmed transactions that have been paid out (funds transferred to bank).
   - For payout transactions, do not use status markers.
 
-### 1.3 Example: Platform Transaction (Randomized, Masked)
-
-```hledger
-2026-01-15 * (pi_1A2B3C4D5E6F7G8H9I0J) **********@*******.com  ; activity: donation, time: 12:34:56, timezone: UTC+08:00
-  equity:conversions:HKD-USD:USD                                   20.00 USD  ; rate: 7.80000
-  assets:digital:Stripe:11111111-2222-3333-4444-555555555555       156.00 HKD
-  expenses:fees:Platform                                           6.00 HKD
-  expenses:fees:Stripe                                             8.00 HKD
-  equity:conversions:HKD-USD:HKD                                 -170.00 HKD
-  revenues:donations:Platform:projectX                           -20.00 USD
-```
+**Examples:** See `./examples.md` for canonical platform transaction and payout worked examples (masked donors, net posting rules, and payout assertions).
 
 ## 2. Platform Payout Pattern
 

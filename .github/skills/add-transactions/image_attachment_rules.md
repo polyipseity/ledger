@@ -2,6 +2,8 @@
 
 This file contains all rules and best practices for handling images and attachments during transaction entry. Use this file whenever you are transcribing from receipts, photos, or other attachments.
 
+**Examples:** See `./examples.md` for examples of attachment-related workflows and placeholder transactions.
+
 ## Image/Attachment Checklist
 
 - Each attachment must be related to at least one transaction (some images may represent multiple transactions, and some transactions may have multiple images).

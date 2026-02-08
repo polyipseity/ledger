@@ -7,9 +7,7 @@ applyTo: "**/*.journal"
 
 # Transaction Format Conventions
 
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step or complex tasks — see `AGENTS.md` for the concise agent workflow rules.
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 ## Payee and ID Mapping
 

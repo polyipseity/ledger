@@ -7,15 +7,9 @@ description: Edit hledger journal files following best practices and conventions
 
 # Edit Journals Skill
 
-## Journal File Path Format
+**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` for workflow rules.
 
-**Reminder:** All monthly journal files must be named and referenced as `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). Do not omit the `ledger/` prefix when referring to journal files.
-
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
-
-**Code & Tests:** Any Python code written to implement or extend this skill (including scripts, helpers, and tests) **MUST** include clear module-level docstrings and docstrings for all public classes and functions, and **MUST** use complete type annotations for function signatures and return types. Prefer modern typing styles (PEP 585 / PEP 604), built-in generics (`dict`, `list`, etc.), and annotate test function arguments/returns and local variables where helpful. Prefer `typing.Self` for methods that return the instance type (for example: `def clone(self) -> typing.Self:`); if supporting Python versions older than 3.11, use `typing_extensions.Self`. Code must be sufficiently typed so that **Pylance with `typeCheckingMode: "strict"` reports no type errors**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When used, include an inline comment explaining the justification and a `# TODO` to refine the type later. If a cast is necessary, add a comment explaining why and a TODO to remove it once proper typing is available. See `.github/instructions/developer-workflows.instructions.md` and `AGENTS.md` for the canonical coding conventions.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 This skill provides comprehensive guidance for editing hledger journal files while maintaining consistency, validity, and adherence to project conventions.
 
@@ -28,167 +22,16 @@ This skill provides comprehensive guidance for editing hledger journal files whi
 - Correcting historical entries
 - Updating confidential mappings
 
-## Best Practices
+## Best Practices — At a Glance
 
-### 1. Always Include Preludes
+- Include the appropriate prelude at the top of every monthly journal (`include ../../../preludes/self.journal` or `self.alternatives.journal`).
+- Use balance assertions (`= balance CURRENCY`) for bank reconciliations, transfers, and loans where applicable.
+- Always include required tags (`timezone: UTC+08:00`, `activity`, `time`); use `duration`, `food_or_drink`, `item`, `location` when relevant.
+- Format and validate using canonical scripts: `pnpm run format` then `pnpm run check` (see `.github/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
+- Preserve monthly opening/closing patterns for reconciliation and migration.
+- The formatter sorts comment properties; keep transaction comment keys ordered and concise.
 
-Monthly journals must start with the prelude include:
-
-```hledger
-include ../../../preludes/self.journal
-
-2025-01-01 opening balances
-    ...
-```
-
-This ensures all account definitions, commodity formats, payees, and tags are available.
-
-**For alternatives journals:**
-
-```hledger
-include ../../../preludes/self.alternatives.journal
-
-2025-01-01 opening balances
-    ...
-```
-
-### 2. Maintain Balance Assertions
-
-Use `= balance CURRENCY` on important accounts to validate data integrity:
-
-```hledger
-2025-01-19 Payment
-    assets:banks:<bank-uuid>:HKD      -100.00 HKD = 4900.00 HKD
-    expenses:food:dining               100.00 HKD
-```
-
-Balance assertions:
-
-- Catch data entry errors early
-- Provide checkpoints for reconciliation
-- Document expected balances at specific points
-
-**When to assert:**
-
-- Bank transactions (against statement balances)
-- Account transfers (verify both sides)
-- End-of-month (document closing balances)
-- Loan repayments (verify zero balance when paid)
-
-### 3. Tag Appropriately
-
-Include essential metadata tags in transaction comments:
-
-```hledger
-2025-01-19 Example Cafe  ; activity: eating, eating: lunch, time: 12:30, timezone: UTC+08:00
-    expenses:food and drinks:dining     50.00 HKD
-    assets:digital:Octopus:<uuid>      -50.00 HKD
-```
-
-**Required tags:**
-
-- `timezone`: Always UTC+08:00
-- `activity`: Category of activity
-- `time`: Transaction timestamp
-
-**Recommended tags:**
-
-- `duration`: For activities with time spans (e.g., `PT1H30M`)
-- `food_or_drink`: Detailed item descriptions
-- `item`: Product/item identifiers
-- `location`: Geographic location
-
-Posting order: list credit postings before debit postings within each transaction.
-
-### 4. Format After Editing
-
-Always run the format script after editing:
-
-```powershell
-python -m format
-```
-
-**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
-
-The formatter:
-
-- Rewrites journals using `hledger print` for canonical format
-- Sorts comment properties alphabetically
-- Standardizes spacing and indentation
-- Preserves include statements unchanged
-
-Running format ensures:
-
-- Consistent style across the ledger
-- Canonical hledger representation
-- Compatibility with validation scripts
-
-### 5. Validate Before Commit
-
-Always validate before committing:
-
-```powershell
-python -m check
-```
-
-**Important:** Always run all `python -m ...` scripts from inside the `scripts/` directory, or use the provided wrappers (e.g. `./check`, `./format`). Running from the wrong directory will cause include and file discovery errors.
-
-The check script validates:
-
-- All referenced accounts are defined
-- All balance assertions balance
-- All commodities are properly declared
-- All postings balance within transactions
-- Date ordering is correct
-- All payees are registered
-- All tags are defined
-
-**Fix all errors before committing.**
-
-### 6. Maintain Opening/Closing Pattern
-
-The first and last transactions of each month have special meaning:
-
-- **First transaction**: `opening balances` - Lists starting balance for each account
-- **Last transaction**: `closing balances` - Zeroes out accounts at month end
-
-```hledger
-# First transaction of month
-2025-01-01 opening balances
-    assets:cash                       1000.00 HKD = 1000.00 HKD
-    assets:banks:<uuid>:HKD           5000.00 HKD = 5000.00 HKD
-    ...
-    equity:opening/closing balances
-
-# ... regular transactions throughout month ...
-
-# Last transaction of month
-2025-01-31 closing balances
-    assets:cash                      -1050.00 HKD = 0.00 HKD
-    assets:banks:<uuid>:HKD          -4900.00 HKD = 0.00 HKD
-    ...
-    equity:opening/closing balances
-```
-
-Preserving this pattern:
-
-- Enables monthly reconciliation
-- Makes month boundaries clear
-- Facilitates `hledger close --migrate`
-
-### 7. Sort Properties in Comments
-
-The format script automatically sorts comment properties alphabetically:
-
-```hledger
-# Before formatting
-2025-01-19 Cafe  ; time: 12:30, activity: eating, timezone: UTC+08:00
-
-# After formatting (properties sorted)
-2025-01-19 Cafe  ; activity: eating, time: 12:30, timezone: UTC+08:00
-```
-
-This ensures consistent ordering and readability.
+For detailed examples and edge cases, see `.github/instructions/transaction-format.instructions.md` and `.github/instructions/editing-guidelines.instructions.md`.
 
 ### 8. Document Complex Transactions
 
@@ -288,20 +131,7 @@ tag activity
 
 ### ❌ Do Not Leave Unencrypted Confidential Files
 
-Never commit unencrypted `private.yaml`:
-
-```powershell
-# ❌ Bad: Unencrypted file committed
-git add private.yaml
-git commit -m "Update confidential data"
-
-# ✅ Good: Only encrypted version committed
-python -m encrypt              # Encrypt first
-git add private.yaml.gpg       # Add encrypted
-git commit -m "Update mappings"
-```
-
-See [Security Practices](../../instructions/security.instructions.md) for encryption workflow.
+**Note:** Never commit unencrypted `private.yaml`. See `.github/instructions/security.instructions.md` for the canonical encryption/decryption workflow and requirements.
 
 ### ❌ Do Not Remove Existing Accounts or Payees
 

@@ -5,11 +5,9 @@ description: "Match Octopus Wallet statement rows to journal transactions and up
 
 # Match Octopus Statement Transactions
 
-## 🚩 Agent Workflow Reminder
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
-
-**Code & Tests:** Any Python code written to implement or extend this skill (including scripts, helpers, and tests) **MUST** include clear module-level docstrings and docstrings for all public classes and functions, and **MUST** use complete type annotations for function signatures and return types. Prefer modern typing styles (PEP 585 / PEP 604), built-in generics (`dict`, `list`, etc.), and annotate test function arguments/returns and local variables where helpful. Prefer `typing.Self` for methods that return the instance type (for example: `def clone(self) -> typing.Self:`); if supporting Python versions older than 3.11, use `typing_extensions.Self`. Code must be sufficiently typed so that **Pylance with `typeCheckingMode: "strict"` reports no type errors**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When used, include an inline comment explaining the justification and a `# TODO` to refine the type later. If a cast is necessary, add a comment explaining why and a TODO to remove it once proper typing is available. See `.github/instructions/developer-workflows.instructions.md` and `AGENTS.md` for the canonical coding conventions.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 ## Purpose
 
@@ -72,7 +70,7 @@ Typical seconds-only edits are omitted from the normal summary. To include those
   python -m check    # set cwd to scripts/
   ```
 
-**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical rules. Short: prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
 
 - The skill can produce a patch/diff for review but does not commit changes.
 

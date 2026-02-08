@@ -26,55 +26,23 @@ This document describes the general workflow and best practices for automating t
         - Insert a new transaction at the correct chronological position, using the standard format and all extracted metadata.
 
 4. **Formatting and Validation**
-    - Ensure the transaction is inserted in strict chronological order (by date and time).
+    - **Note:** Insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md` for canonical rules.
     - Use the correct account names and UUIDs as per project conventions.
     - Format all tags and columns according to the repository’s transaction-format and editing-guidelines.
     - Always validate and format the journal file after changes.
 
 5. **Anti-Patterns**
     - Do not add duplicate transactions for the same unique identifier.
-    - Do not insert transactions out of chronological order.
+    - **Note:** Do not insert transactions out of chronological order; see `.github/instructions/transaction-format.instructions.md` for details.
     - Do not omit required metadata or tags.
     - Do not use incorrect or generic account names.
     - Do not modify unrelated transactions.
 
 ## Example: Octopus eDDA Top-Up Transactions
 
-### Purpose
+**Examples:** See `./examples.md` for the Octopus eDDA import worked examples (Pass 1: update existing; Pass 2: add new transaction).
 
-Automate the import and updating of Octopus eDDA (Electronic Direct Debit Authorisation) top-up transactions from email notifications into the hledger journal.
-
-### Input
-
-- A list of email attachments or screenshots, each containing exactly one Octopus eDDA transaction notification.
-
-### Example Workflow
-
-1. **Extract Transaction Data**
-    - Parse each email attachment to extract:
-        - Reference ID (e.g., C1K62243986)
-        - Date and time of transaction
-        - Amount and currency
-        - Octopus wallet/card identifiers (if present)
-        - Bank account information (if present)
-        - Any additional transaction IDs (e.g., FRN..., OCTOPUS...)
-    - Normalize all extracted data to match hledger conventions.
-2. **Check for Existing Transaction**
-    - Search the relevant monthly journal for a transaction matching the extracted reference ID, date, and amount.
-    - If a matching transaction exists, update its metadata to conform to the standard format:
-        - Payee line: (Reference ID, FRN..., OCTOPUS...) self  ; activity: transfer, time: HH:MM, timezone: UTC+08:00, via: eDDA
-        - Ensure all relevant IDs and tags are present and correct.
-    - If no matching transaction exists, insert a new transaction at the correct chronological position, using the standard format and all extracted metadata.
-3. **Formatting and Validation**
-    - Ensure the transaction is inserted in strict chronological order (by date and time).
-    - Use the correct account names and UUIDs for Octopus and bank accounts.
-    - Format all tags and columns according to the repository’s transaction-format and editing-guidelines.
-    - Always validate and format the journal file after changes.
-
-### Output
-
-- The monthly journal is updated with the new or corrected Octopus eDDA transaction(s), fully formatted and validated.
-- **Status markers (`!` for pending, `*` for cleared) must NOT be used for repayment transactions:** Only use status markers for the original pending lending/borrowing transaction (see SKILL.md and lending_borrowing_transactions.md). Repayment transactions must NOT have a status marker. If you see a status marker in any automated import, specialized, or repayment transaction, it is an error and must be corrected.
+**Summary workflow:** extract transaction data, search/deduplicate (update if matching), or insert a new transaction at the correct chronological position, then run `pnpm run format` and `pnpm run check` to validate. Prefer updates over duplicates; follow privacy and mapping rules in `payee_mappings.yml`, `id_mappings.yml`, and `private.yaml`.
 
 ### Related Skills & References
 

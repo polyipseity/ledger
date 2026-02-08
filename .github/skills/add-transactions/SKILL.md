@@ -3,50 +3,50 @@ name: add-transactions
 description: Transcribe transactions from source documents into the hledger ledger. Handles raw data (receipts, invoices, bank statements, OCR text) with proper status markers, tagging, and account registration.
 ---
 
-# Add Transactions Skill (2026-02-01 Generalized Edition)
+# Add Transactions Skill — Summary
 
-## Journal File Path Format
+Purpose: Import and normalize transactions from receipts, statements, and structured sources into monthly journals.
 
-**Reminder:** All monthly journal files must be named and referenced as `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). Do not omit the `ledger/` prefix when referring to journal files.
+Core guidance:
 
-## 🚩 Agent Workflow Reminder
+- Use full ledger paths (e.g., `ledger/2024/2024-01/self.journal`) and insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
+- Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules.
+- Use canonical scripts for formatting/validation (`pnpm run format` then `pnpm run check`); see `.github/instructions/developer-workflows.instructions.md`.
+- Update the theme/aspect files below when introducing new patterns—these are authoritative for type-specific rules.
 
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
+Theme/aspect files (authoritative):
 
-**Code & Tests:** Any Python code written to implement or extend this skill (including scripts, helpers, and tests) **MUST** include clear module-level docstrings and docstrings for all public classes and functions, and **MUST** use complete type annotations for function signatures and return types. Prefer modern typing styles (PEP 585 / PEP 604), built-in generics (`dict`, `list`, etc.), and annotate test function arguments/returns and local variables where helpful. Prefer `typing.Self` for methods that return the instance type (for example: `def clone(self) -> typing.Self:`); if supporting Python versions older than 3.11, use `typing_extensions.Self`. Code must be sufficiently typed so that **Pylance with `typeCheckingMode: "strict"` reports no type errors**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When used, include an inline comment explaining the justification and a `# TODO` to refine the type later. If a cast is necessary, add a comment explaining why and a TODO to remove it once proper typing is available. See `.github/instructions/developer-workflows.instructions.md` and `AGENTS.md` for the canonical coding conventions.
+- [Food Transactions](./food_transactions.md) — When to use: receipts with food/drink items, modifiers, or itemized bills.
+- [Lending & Borrowing Transactions](./lending_borrowing_transactions.md) — When to use: loans, IOUs, shared payments, or transactions needing status markers.
+- [Currency Conversion Transactions](./currency_conversion_transactions.md) — When to use: exchanges or transactions involving multiple currencies.
+- [Platform Transaction & Payout Rules](./platform_payout_transactions.md) — When to use: platform payments, fees, or payout reconciliations (Stripe, PayPal, etc.).
+- [Payee & ID Mapping Rules](./payee_id_mapping_rules.md) — When to use: resolving canonical payees, UUIDs, and transaction ID ordering.
+- [Posting & Tag Validation Rules](./posting_tag_rules.md) — When to use: verifying posting/comment/tag structure and tag validity.
+- [Transport Reward Transactions](./transport_rewards.md) — When to use: transit payments that accrue reward points or similar accrual patterns.
+- [Entity Registration Rules](./entity_registration_rules.md) — When to use: registering new payees, accounts, or UUID mappings.
+- [Image & Attachment Handling](./image_attachment_rules.md) — When to use: transcribing from receipt images or when attachments require validation.
+- [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — When to use: structured imports (CSV, email, API) and automation flows (Octopus eDDA, etc.).
 
-> **⚠️ This skill is extremely difficult to master.**
->
-> Adding transactions in this system involves many complex, context-dependent procedures and rules that vary by transaction type, payee, and data source. Mastery requires deep familiarity with all conventions, mappings, and edge cases. **Always follow the documented procedures and update the theme/aspect files as you learn.**
->
-> **Whenever the user provides feedback or corrections, update the relevant theme/aspect file first, then the main file if needed.**
->
-> **Continuous improvement is required:** treat every feedback as an opportunity to refine both your process and the skill documentation.
+Refer to each theme file for detailed rules; for canonical worked examples and edge cases see `./examples.md`. For quick definitions and key terms, see `.github/instructions/agent-glossary.instructions.md`.
 
-## Table of Contents & Theme Files
+Canonical rule locations (quick map):
 
-This skill is organized into theme/aspect-specific files. It also provides a general framework for automating the import, deduplication, and updating of highly-structured or machine-readable transactions from external sources (such as emails, app notifications, or data exports) into the hledger journal. Always consult all relevant files, as a single transaction may involve multiple aspects:
+- Payee mapping & ID rules: `payee_id_mapping_rules.md` and `id_mappings.yml`
+- Food/drinks tagging and translations: `food_transactions.md` and `food_translations.yml`
+- Posting & tag validation: `posting_tag_rules.md`
+- Lending/borrowing and status markers: `lending_borrowing_transactions.md`
+- Specialized imports and Octopus heuristics: `specialized_transaction_import.md` and `examples.md`
 
-### Theme/Aspect Rule Files
+If a lesson in `lessons.md` needs integration, add it to the relevant file above and replace the lesson entry with a one-line pointer.
 
-- [Food Transactions](./food_transactions.md) — For all food, drink, and dining-related entries
-- [Lending & Borrowing Transactions](./lending_borrowing_transactions.md) — For loans, repayments, and shared expenses
-- [Currency Conversion Transactions](./currency_conversion_transactions.md) — For any transaction involving currency exchange
-- [Platform Transaction & Payout Rules](./platform_payout_transactions.md) — For digital payment platforms (Stripe, PayPal, Square, Alipay, etc.), including both incoming transactions and payouts to bank accounts
-- [Payee and ID Mapping Rules](./payee_id_mapping_rules.md) — For mapping payees and transaction identifiers
-- [Posting and Tag Validation Rules](./posting_tag_rules.md) — For correct account, tag, and posting usage
-- [Transport Reward Transactions](./transport_rewards.md) — For transit reward accrual patterns (Kowloon Motor Bus / Long Win Bus)
-- [Entity Registration Rules](./entity_registration_rules.md) — For registering new payees, friends, or entities
-- [Image and Attachment Handling Rules](./image_attachment_rules.md) — For handling receipt images or attachments
-- [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — For automating import of structured transactions (e.g., Octopus eDDA)
-Refer to these files for detailed rules, clarifications, and examples. Do not duplicate their content here. The platform transaction & payout rules file generalizes patterns for Stripe and similar platforms, and should be consulted for any digital payment platform transaction or payout.
+Refer to each theme file for detailed rules, examples, and test expectations. For quick definitions and key terms, see `.github/instructions/agent-glossary.instructions.md`.
 
 ## Mapping and Translation Files
 
 - [payee_mappings.yml](./payee_mappings.yml) — For mapping payee aliases, translations, and alternate names to canonical payee names. All mapping values MUST be YAML sequences (lists). Use one-element lists for unambiguous one-to-one mappings; use multi-element lists only when a single alias may legitimately refer to multiple canonical payees. When a list contains multiple candidates, disambiguate using context (store/branch ID, receipt tokens, item categories, locality); if context is insufficient, prompt for clarification and update the mapping with a more-specific key. This is **not** for UUID mapping or ID mapping. Always use this file to normalize payee names in transactions.
 - [id_mappings.yml](./id_mappings.yml) — For formatting and mapping transaction/receipt IDs (e.g., which identifiers to include in the payee line, and their order/format). This is **not** for payee name normalization or UUID mapping.
 - [food_translations.yml](./food_translations.yml) — For translating food/drink item names only.
-- [private.yaml] — For mapping payee names or people to UUIDs for privacy and entity registration. This is **not** for payee name normalization or ID mapping.
+- [private.yaml](../../../private.yaml) — For mapping payee names or people to UUIDs for privacy and entity registration. This is **not** for payee name normalization or ID mapping.
 
 **Clarification:**
 
@@ -58,7 +58,7 @@ Each file contains its own documentation and must be referenced for correct tran
 
 ## Validation Reminder
 
-**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
 
 Example:
 
@@ -67,25 +67,10 @@ python -m format   # set cwd to scripts/
 python -m check    # set cwd to scripts/
 ```
 
-## Lessons Learned & Continuous Improvement
+## Lessons & Continuous Improvements
 
-### 2026-02-01 (AI skill update, generalized)
+See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for canonical worked examples and edge cases. If a `lessons.md` entry needs integration into this SKILL, `examples.md`, or a theme file, follow the integration-first process described in `./lessons.md` and run `pnpm run format` and `pnpm run test` afterwards.
 
-- **Payee Mapping, UUID Mapping, and ID Mapping (Critical Distinction):**
-  - **Payee mapping**: Always check `payee_mappings.yml` for payee aliases, translations, or alternate names. Mapping entries are always YAML sequences (lists). If a mapping list contains a single canonical name, use that name. If the list contains multiple candidates, attempt to disambiguate using contextual cues (store/branch ID, receipt tokens, item categories, locality, etc.). If context is insufficient to choose among the candidates, prompt for clarification and then update `payee_mappings.yml` with a more-specific key (for example, include branch/terminal codes). **Never use the untranslated or unnormalized payee name if a mapping exists.**
-  - **UUID mapping**: Use `private.yaml` only for mapping payees or people to UUIDs for privacy or entity registration. This is for internal entity tracking, not for payee name normalization or ID mapping.
-  - **ID mapping**: Use `id_mappings.yml` only to determine which transaction/receipt IDs to include in the payee line, and their order/format. This is not for payee name normalization or UUID mapping.
-  - For receipt/transaction identifiers: Prepend only the identifiers specified by the payee's rule in `id_mappings.yml` (e.g., for KFC, only use (receipt_id, store_id)). If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
-  - When updating or adding a payee, UUID, or ID mapping, always update the relevant mapping file after the documentation comment, not before.
-- **Food/Drink Tagging:**
-  - Always split each food or drink item into a separate `food_or_drink:` tag. Do not combine multiple items into a single tag. **Never translate the food_or_drink value unless required by a specific mapping or convention.** Maintain the order of items as they appear on the receipt.
-  - **Never place any itemization, discount, or similar tags (such as `food_or_drink:`, `discount:`, or item codes) in the transaction header.** These must always be placed in posting comments only, never in the header line. This applies to all item, discount, and similar tags, regardless of transaction type or payee. See `posting_tag_rules.md` for details.
-  - For food/drink items, omit parenthetical descriptors or prefixes (e.g., omit (早) or 轉 if not part of the item name). For sub-items or substitutions, treat as separate items unless clearly a modifier.
-  - When a receipt shows per-item prices, record each item as its own posting line with the item's amount and a `food_or_drink:` comment tag. Ensure the item postings sum exactly to the transaction total and include the payment posting (e.g., `assets:digital:Octopus cards:...`) as the final, negative total posting. Maintain the order of postings to match the receipt.
-  - For drinks or items with modifiers (e.g., less ice, more milk), use the `+` syntax to combine the base item and modifiers (e.g., `food_or_drink: hot coffee + more milk`). **If a modifier appears on its own line after a beverage (for example: `food_or_drink: 奶茶` followed by `food_or_drink: 多奶`), combine them into `food_or_drink: 奶茶 + 多奶` and remove the standalone modifier tag.**
-  - If a modifier is missing, check the receipt and add it to the tag as needed.
-  - Timezone and duration: When a receipt contains both an order/print time and a separate settlement/transaction time, compute the ISO-8601 duration as the difference and add `duration:` to the transaction header (e.g., `duration: PT34M19S`). **Always include an explicit `timezone:` when specifying `time:` so duration computations are unambiguous.**
-  - Payee mapping: Before using an untranslated payee name, check `private.yaml` for a UUID mapping and use the UUID as the payee if present; otherwise consult `payee_mappings.yml` for canonical names. Because mapping values are always lists, if the list contains multiple canonical candidates, disambiguate using contextual information; once the canonical payee is chosen, check `private.yaml` and use its UUID if present (the mapping file remains clear-text).
 - **Account and Tag Selection:**
   - Use the most specific and correct account (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
@@ -118,7 +103,7 @@ Other previous learnings remain in effect:
 - **Never leak Octopus numbers or personal IDs** in any transaction, mapping, or documentation. These must be treated as confidential and must not appear in journal entries, ID mappings, or skill documentation. Only use anonymized or mapped UUIDs where required.
 - **Never leak attachment filenames or add an `attachment` tag** in any transaction. Do not reference image or file names in the journal.
 - **Only one `include` line** for the prelude should appear at the top of each journal file. Remove any duplicates.
-- **Chronological:** Insert new transactions in strict chronological order (date, then time). See `.github/instructions/transaction-format.instructions.md` for canonical rules.
+**Note:** For chronological ordering rules, see `.github/instructions/transaction-format.instructions.md`.
 - When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
 - **Verify insertion location:** Do not rely blindly on tools to insert at the correct place—always check and correct placement manually if needed.
 

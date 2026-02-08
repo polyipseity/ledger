@@ -2,6 +2,8 @@
 
 This file contains all rules and best practices for posting structure, tag validation, and tag usage in transaction entry. Use this file whenever you need to validate tags, structure postings, or handle tag-related edge cases.
 
+**Examples:** See `./examples.md` for canonical posting/tag examples and reward accrual patterns.
+
 ## Tag Validation and Usage
 
 - Only use tags declared in the active prelude(s). Never invent or use undefined tags.

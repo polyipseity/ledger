@@ -7,9 +7,7 @@ applyTo: "ledger/**/self.alternatives.journal"
 
 # Alternatives Journal Tracking
 
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 Understanding the distinction between main and alternatives journals for separate tracking of assets.
 

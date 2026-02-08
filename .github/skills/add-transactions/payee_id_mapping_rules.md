@@ -2,6 +2,8 @@
 
 This file contains all rules and best practices for payee normalization, payee mapping, and ID extraction/order for transaction entry. Use this file whenever you need to resolve payee names, apply UUIDs, or extract/normalize transaction IDs.
 
+**Examples:** See `./examples.md` for canonical examples of payee/ID mappings and usage.
+
 ## Payee Mapping Rules
 
 - Always check `private.yaml` for payee/counterparty mapping. If a UUID is present, use the UUID as the payee.

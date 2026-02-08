@@ -5,9 +5,7 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 # Developer Workflows
 
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 ## Script Usage Policy
 
@@ -20,8 +18,7 @@ Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, co
   - **Prettier:** `prettier --write`
   - **Python formatters:** run each as a separate command so each receives the file list:
     - `python -m ruff check --fix`
-    - `python -m isort`
-    - `python -m black`
+    - `python -m ruff format`
   - **Journals:** `python -m scripts.format` (accepts file args)
 
   Note: When listing multiple commands for the same glob in `lint-staged`, provide them as an array so each command is executed with the staged file list appended.
@@ -57,7 +54,7 @@ Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, co
 - `pnpm run hledger:format:check` - Check journal formatting
 - `pnpm run check:md` - Markdown lint
 - `pnpm run check:prettier` - Prettier check
-- `pnpm run check:py` - Python checks (ruff, isort, black)
+- `pnpm run check:py` - Python checks (ruff)
 - `pnpm run format:md` - Markdown auto-fix
 - `pnpm run format:prettier` - Prettier auto-fix
 - `pnpm run format:py` - Python auto-fix

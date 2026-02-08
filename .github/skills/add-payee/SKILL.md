@@ -6,11 +6,9 @@ summary: Add a new payee (merchant, person, organization, or UUID) to the correc
 
 # Skill: Add Payee
 
-## 🚩 Agent Workflow Reminder
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
-
-**Code & Tests:** Any Python code written to implement or extend this skill (including scripts, helpers, and tests) **MUST** include clear module-level docstrings and docstrings for all public classes and functions, and **MUST** use complete type annotations for function signatures and return types. Prefer modern typing styles (PEP 585 / PEP 604), built-in generics (`dict`, `list`, etc.), and annotate test function arguments/returns and local variables where helpful. Code must be sufficiently typed so that **Pylance with `typeCheckingMode: "strict"` reports no type errors**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When used, include an inline comment explaining the justification and a `# TODO` to refine the type later. If a cast is necessary, add a comment explaining why and a TODO to remove it once proper typing is available. See `.github/instructions/developer-workflows.instructions.md` and `AGENTS.md` for the canonical coding conventions.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 **Payee directives must always be added to a `preludes/` journal file, never to monthly or yearly journals. If you encounter a strict payee error (e.g., 'payee ... has not been declared'), resolve it by adding the payee to the appropriate `preludes/` file as described below.**
 
@@ -19,6 +17,8 @@ This skill describes how to add a new payee to the ledger system.
 ## When to Use
 
 - When a new merchant, person, organization, or UUID payee is encountered in a transaction or needs to be registered for future use.
+
+**Example & guidance:** See `./examples.md` for a short example of adding a payee to `preludes/self.journal`. Validate with `pnpm run format` and `pnpm run check` after adding.
 
 ## Steps
 
@@ -37,16 +37,7 @@ This skill describes how to add a new payee to the ledger system.
 
 4. **Validation**
 
-      - Run the formatting and validation scripts to ensure the file remains valid and well-ordered.
-
-      **Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
-
-         Example:
-
-            ```powershell
-            python -m format   # set cwd to scripts/
-            python -m check    # set cwd to scripts/
-            ```
+      **Note:** Use the canonical formatting and validation workflow: see `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for steps and examples (prefer `pnpm run format` and `pnpm run check`).
 
 ## Anti-Patterns
 

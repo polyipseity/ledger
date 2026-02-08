@@ -48,49 +48,7 @@ Result: food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜
 - If no mapping is found, do NOT translate automatically. Prompt the user with options: leave as-is, provide a mapping, or search journals for candidates.
 - Only write mappings into `food_translations.yml` after explicit user approval.
 
-### Examples
-
-#### Example: Taste Item Number
-
-Original: 091421 LA BOULANGERIE BREAD
-
-Result: food_or_drink: 091421 LA BOULANGERIE BREAD
-
-#### Example: Full Itemization (No "see receipt")
-
-Original: (see receipt)
-
-Result:
-    expenses:food and drinks:dining  48.00 HKD  ; food_or_drink: 白切雞飯
-    expenses:food and drinks:dining  48.00 HKD  ; food_or_drink: 豉油雞飯
-    ... (repeat for each item)
-
-#### Example: Modifiers and Zero-Cost Items
-
-```text
-Original:
- 義大利粉番茄肉醬套餐
- - 七味蛋
- Set Hot Coffee (complimentary)
-  - Extra milk
- Dine-in $0
-```
-
-Result: food_or_drink: Spaghetti Bolognese with Fried Egg in Assorted Chilli Pepper, food_or_drink: set hot coffee + extra milk
-
-#### Example: Distinct Items
-
-Original: 鮮奶炒滑蛋・吉列魚柳
-Sub-items: -- 粒粒粟米; 轉 蒜香牛油多士
-
-Result: food_or_drink: scrambled egg, food_or_drink: sweet corn, food_or_drink: cutlet fish fillet, food_or_drink: garlic butter on toast
-
-#### Example: True Modifiers
-
-Original: 熱咖啡
-Modification: 多奶
-
-Result: food_or_drink: hot coffee + more milk
+**Examples:** See `./examples.md` for canonical worked examples (drink modifiers, taste item numbers, itemization, modifiers, and unknown item handling).
 
 ### Unknown or Unreadable Items
 

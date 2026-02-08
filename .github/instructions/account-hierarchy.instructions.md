@@ -7,9 +7,7 @@ description: Complete documentation of all account types (50+) across assets, eq
 
 This file provides annotations and explanations for accounts declared in the canonical prelude files (see `preludes/`).
 
-## 🚩 Agent Workflow Reminder
-
-Use the Todo List Tool for multi-step tasks (plan, mark a step `in-progress`, complete it, and update). See `AGENTS.md` for the concise agent workflow rules.
+**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 **Instructions for agents:**
 

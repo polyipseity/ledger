@@ -14,16 +14,10 @@ Posting pattern
 - Add a balancing posting to `revenues:rewards` as a negative value in the point currency (e.g., `-5.90 _PT/E`).
 - Place the accrual posting between the expense posting and the payment posting to make the pattern clear and consistent.
 
-Example
-
-2026-01-01 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 23:59, timezone: UTC+08:00
-    expenses:transport:buses                                                 5.90 HKD
-    assets:accrued revenues:rewards                                        5.90 _PT/E
-    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
-    revenues:rewards                                                      -5.90_PT/E
+**Examples:** See `./examples.md` for transport reward accrual worked example.
 
 Notes and validation
 
 - Confirm the correct point currency and account when the reward program differs from `_PT/E` and update the posting accordingly.
 - When automating imports, prefer to detect this pattern by payee name (`Kowloon Motor Bus`, `Long Win Bus`) or by explicit program metadata in the source data. If uncertain, prompt the user before adding accrual lines.
-- Remember to include `timezone:` on transport transactions that include a time and to follow the standard chronological ordering rules when inserting these transactions.
+- Remember to include `timezone:` on transport transactions that include a time. **Note:** Follow canonical chronological ordering rules: see `.github/instructions/transaction-format.instructions.md`.

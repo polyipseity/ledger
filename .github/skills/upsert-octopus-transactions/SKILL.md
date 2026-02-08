@@ -5,7 +5,7 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 
 # Upsert Octopus Transactions Skill
 
-**Code & Tests:** Any Python code written to implement or extend this skill (including scripts, helpers, and tests) **MUST** include clear module-level docstrings and docstrings for all public classes and functions, and **MUST** use complete type annotations for function signatures and return types. Prefer modern typing styles (PEP 585 / PEP 604), built-in generics (`dict`, `list`, etc.), and annotate test function arguments/returns and local variables where helpful. Prefer `typing.Self` for methods that return the instance type (for example: `def clone(self) -> typing.Self:`); if supporting Python versions older than 3.11, use `typing_extensions.Self`. Code must be sufficiently typed so that **Pylance with `typeCheckingMode: "strict"` reports no type errors**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When used, include an inline comment explaining the justification and a `# TODO` to refine the type later. If a cast is necessary, add a comment explaining why and a TODO to remove it once proper typing is available. See `.github/instructions/developer-workflows.instructions.md` and `AGENTS.md` for the canonical coding conventions.
+**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 ## 🚩 Absolute Rules for Agents
 
@@ -27,15 +27,17 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 
 1. **You must always read the confidential payee mapping file**: `private.yaml`, and ensure you understand which payees are confidential and require UUIDs. This must always be remembered for correct payee handling.
 2. **You must always read the payee mapping file**: `.github/skills/upsert-octopus-transactions/payee_mappings.yml`. This must always be referenced for correct payee mapping.
-3. **Process Octopus transactions strictly in chronological order (earliest to latest).** See `.github/instructions/transaction-format.instructions.md` for the canonical chronological rules.
+**Note:** Process Octopus transactions in chronological order; see `.github/instructions/transaction-format.instructions.md` for canonical ordering rules.
    - Do not transcribe or prepare any journal transactions from the Octopus transactions until Pass 2.
-4. **If any mapping is missing, ambiguous, or unclear,** you must ask the user for the correct mapping and update the file before continuing. **Never guess.**
-5. **For confidential payees,** after mapping, must check `private.yaml` for a UUID. If a UUID exists, use it as the payee in the journal. **Never expose confidential names.**
-6. At this point, **if the user has NOT explicitly provided a journal file snippet, you must read the entire current month's journal file** (`ledger/[year]/[year]-[month]/self.journal`). You must NOT read only a subset, or you may miss existing journal transactions. Do NOT forget the prefix `ledger/`.
+3. **If any mapping is missing, ambiguous, or unclear,** you must ask the user for the correct mapping and update the file before continuing. **Never guess.**
+4. **For confidential payees,** after mapping, must check `private.yaml` for a UUID. If a UUID exists, use it as the payee in the journal. **Never expose confidential names.**
+5. At this point, **if the user has NOT explicitly provided a journal file snippet, you must read the entire current month's journal file** (`ledger/[year]/[year]-[month]/self.journal`). You must NOT read only a subset, or you may miss existing journal transactions. Do NOT forget the prefix `ledger/`.
 
 ## 2. Two-Pass Upsert Workflow (MANDATORY)
 
 To ensure correct upserting, you **must** process Octopus transactions in two strict passes. You must make no changes in Pass 1 other than updates to existing journal transactions. You must make no changes in Pass 2 other than adding new journal transactions. These two passes must be strictly separated.
+
+**Examples & worked cases:** See `./examples.md` for Pass 1/Pass 2 worked examples and matching heuristics. If a new example is needed, add it to `./examples.md` and append a one-line rationale to `./lessons.md` explaining why.
 
 ### Pass 1: Match and Update Only
 
@@ -56,122 +58,9 @@ After each match, apply the update for a match individually using a tiny precise
       - If the journal entry already has a `duration:`, do not update it.
       - **IMPORTANT: When adding a `duration:` tag, you must insert it directly into the transaction header comment, immediately after the `time:` field and before the `timezone:` field. Do not add a new line or posting. Only the header comment is updated.**
 
-### Worked Examples: Pass 1 (Update Only)
+### Examples & worked cases
 
-#### Example 1: Union Cash Register Co. Ltd. (Octopus) → Cafe 100% (Journal)
-
-**Octopus transaction:**
-
-| Date         | Time   | Merchant                     | Amount |
-|--------------|--------|------------------------------|--------|
-| 2026-01-24   | 12:11  | Union Cash Register Co. Ltd. | -35.0  |
-
-**Payee mapping:**
-Union Cash Register Co. Ltd. → Cafe 100%
-
-**Journal entry before:**
-
-```hledger
-2026-01-24 (41210539, 12) Cafe 100%  ; activity: eating, eating: breakfast, time: 11:27:42, timezone: UTC+08:00
-   expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
-```
-
-**Matching logic:**
-
-- Date matches (2026-01-24)
-- Amount matches (35.00)
-- Time within ±1.5 hours (11:27:42 vs 12:11)
-- Payee mapping: Octopus merchant → journal payee
-
-**Update rule:**
-
-- If the Octopus time is later and the journal entry has a `time:` tag but no `duration:`, and the difference is ≥2 minutes, add a `duration:` tag (duration = Octopus time - journal time).
-- If the journal entry already has a `duration:`, do not update.
-- Do not change payee, merchant, or other fields.
-
-**Journal entry after (if duration needed):**
-
-```hledger
-2026-01-24 (41210539, 12) Cafe 100%  ; activity: eating, eating: breakfast, time: 11:27:42, duration: PT43M, timezone: UTC+08:00
-   expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
-```
-
-#### Example 2: Union Cash Register Co. Ltd. (Octopus) → Cafe 100% (Journal, different amount)
-
-**Octopus transaction:**
-
-| Date         | Time   | Merchant                     | Amount |
-|--------------|--------|------------------------------|--------|
-| 2026-01-24   | 18:11  | Union Cash Register Co. Ltd. | -39.0  |
-
-**Payee mapping:**
-Union Cash Register Co. Ltd. → Cafe 100%
-
-**Journal entry before:**
-
-```hledger
-2026-01-24 (?, 52) Cafe 100%  ; activity: eating, eating: dinner, time: 17:34:45, timezone: UTC+08:00
-   expenses:food and drinks:dining                                         39.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
-```
-
-**Matching logic:**
-
-- Date matches (2026-01-24)
-- Amount matches (39.00)
-- Time within ±1.5 hours (17:34:45 vs 18:11)
-
-**Update rule:**
-
-- If the Octopus time is later and the journal entry has a `time:` tag but no `duration:`, and the difference is ≥2 minutes, add a `duration:` tag (duration = Octopus time - journal time). Include seconds in the duration.
-
-**Journal entry after (if duration needed):**
-
-```hledger
-2026-01-24 (?, 52) Cafe 100%  ; activity: eating, eating: dinner, time: 17:34:45, duration: PT36M15S, timezone: UTC+08:00
-   expenses:food and drinks:dining                                         39.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
-```
-
-#### Example 3: Pin Me Limited (Octopus) → Comebuytea (Journal)
-
-**Octopus transaction:**
-
-| Date         | Time   | Merchant        | Amount |
-|--------------|--------|-----------------|--------|
-| 2026-01-24   | 22:55  | Pin Me Limited  | -39.0  |
-
-**Payee mapping:**
-Pin Me Limited → Comebuytea
-
-**Journal entry before:**
-
-```hledger
-2026-01-24 (2026012422550754619, 1082) Comebuytea  ; activity: eating, eating: drinks, time: 22:54:45, timezone: UTC+08:00
-   expenses:food and drinks:drinks                                         39.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
-```
-
-**Matching logic:**
-
-- Date matches (2026-01-24)
-- Amount matches (39.00)
-- Time within ±1.5 hours (22:54:45 vs 22:55)
-- Payee mapping: Pin Me Limited → Comebuytea
-
-**Update rule:**
-
-- If the Octopus time is later and the journal entry has a `time:` tag but no `duration:`, and the difference is ≥2 minutes, add a `duration:` tag (duration = Octopus time - journal time). In this case, the duration is 15 seconds, so do not update.
-
-**Journal entry after (if duration needed):**
-
-```hledger
-2026-01-24 (2026012422550754619, 1082) Comebuytea  ; activity: eating, eating: drinks, time: 22:54:45, timezone: UTC+08:00
-   expenses:food and drinks:drinks                                         39.00 HKD  ; food_or_drink: ...
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
-```
+See `./examples.md` for Pass 1/Pass 2 worked examples and matching heuristics. If you need an additional example, add it to `./examples.md` and append a one-line rationale to `./lessons.md` explaining why it was needed.
 
 ### Pass 2: Add Unmatched Transactions
 
@@ -180,7 +69,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 1. For each Octopus transaction that was not matched in Pass 1:
    - **Must check the payee mapping file for the merchant name.** If missing, ambiguous, or one-to-many and context is insufficient, ask the user for the correct mapping and update the file before proceeding.
    - For confidential payees, after mapping, check `private.yaml` for a UUID and use it in the journal. Never expose confidential names.
-   - Add a new journal transaction using the mapping. Insert transactions in strict chronological order (see `.github/instructions/transaction-format.instructions.md`).
+   - Add a new journal transaction using the mapping. **Note:** Insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
       - For vending machine transactions (e.g., Swire), use `expenses:food and drinks:drinks` as the expense account.
       - For bus transport transactions (Kowloon Motor Bus/Long Win Bus), also record the reward accrual and revenue postings. Add an `assets:accrued revenues:rewards` posting with the fare amount in `_PT/E` (positive) and a corresponding `revenues:rewards` posting with the negative same amount in `_PT/E`. This ensures accumulated reward points are tracked consistently for bus fares.
    - For each new payee, register it in `preludes/self.journal` (alphabetized); for confidential payees register the UUID. See `add-payee` skill for process.
@@ -188,56 +77,14 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 
 **Never add a transaction in Pass 1. Never update an existing transaction in Pass 2.**
 
-### Worked Example: Pass 2 (Add Only)
-
-#### Example: (confidential payee) (Octopus) → (confidential payee) (Journal, UUID)
-
-**Octopus transaction:**
-
-| Date       | Time  | Merchant             | Amount |
-| ---------- | ----- | -------------------- | ------ |
-| 2026-01-25 | 12:38 | (confidential payee) | -78.0  |
-
-**Payee mapping:**
-(confidential payee) → (confidential payee) (UUID: a2ccd533-7a2e-4fa1-ad63-e4f1d3bdc159)
-
-**Journal entry before:**
-_(No matching entry exists)_
-
-**Action in Pass 2:**
-
-- Add a new journal transaction in strict chronological order.
-- Use the mapped payee (UUID for confidential payees).
-- Register the new payee in `preludes/self.journal` if not already present.
-
-**Journal entry after:**
-
-```hledger
-2026-01-25 a2ccd533-7a2e-4fa1-ad63-e4f1d3bdc159  ; activity: medical, time: 12:38, timezone: UTC+08:00
-   expenses:healthcare:medication                                       78.00 HKD
-   assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521   -78.00 HKD
-```
-
-## 3. Transaction Formatting and Insertion
-
-- Insert new transactions in strict chronological order within the journal file.
+- Insert new transactions in their correct chronological position (see `.github/instructions/transaction-format.instructions.md`).
 - Within each transaction, order postings with debits first (increases), then credits (decreases).
 - For each new payee, register it in `preludes/self.journal` (alphabetized). For confidential payees, register the UUID.
 - **If any ambiguity exists in transaction details, ordering, or payee registration, ask the user for clarification.**
 
 ## 4. Validation and Commit
 
-- After all changes, run formatting and validation scripts:
-
-   ```powershell
-   python -m format   # set cwd to scripts/
-   python -m check    # set cwd to scripts/
-   ```
-
-**Scripts & working directory**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance — prefer `pnpm run <script>`; if running Python directly, set `cwd=scripts/`.
-
-- Review changes and commit using the correct ledger commit header.
-- **If any error or ambiguity arises during validation, ask the user for clarification.**
+**Note:** Use the canonical formatting and validation workflow: run `pnpm run format` then `pnpm run check` (or use `python -m ...` with `cwd=scripts/`). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for details. Review changes and commit using the correct ledger commit header. **If any error or ambiguity arises during validation, ask the user for clarification.**
 
 ## 5. Examples of When to Ask for Clarification
 
