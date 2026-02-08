@@ -162,7 +162,7 @@ Testing and async support are provided via these dev extras (installed by `uv sy
 - `pytest-cov` (coverage)
 - `ruff` (formatting & linting tool)
 
-When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `prepare` (runs `uv sync`) will install them locally.  Note: you do not need to invoke `prepare` explicitly; package managers run it for you on installs that do not use `--ignore-scripts`.
+When adding tests that require additional packages, add them to the `dev` dependency group in `pyproject.toml` and ensure `prepare` (runs `uv sync --all-extras --dev`) will install them locally.  Note: you do not need to invoke `prepare` explicitly; package managers run it for you on installs that do not use `--ignore-scripts`.
 
 ## Troubleshooting Dependencies
 
