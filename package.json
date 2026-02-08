@@ -15,7 +15,7 @@
     "build": "pnpm run check && pnpm run build:force",
     "build:force": "node -e \"console.log('No build step')\"",
     "check": "pnpm run check:journal && pnpm run check:md && pnpm run check:prettier && pnpm run check:py",
-    "check:journal": "python -m scripts.format --check && python -m scripts.check",
+    "check:journal": "uv run --locked python -m scripts.format --check && uv run --locked python -m scripts.check",
     "check:md": "markdownlint-cli2",
     "check:prettier": "prettier --cache --check \"**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}\"",
     "check:py": "pyright && uv run --locked ruff check",
