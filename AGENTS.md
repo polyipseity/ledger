@@ -80,6 +80,8 @@ These conventions are lightweight but help keep agent-generated edits consistent
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
+**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `python -m ruff format` and `python -m ruff check --fix`.
+
 **Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
 
 **Module exports:** All Python modules in `scripts/` and all test modules/files MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) to explicitly control the module's public exports. For test files (for example, files under `tests/` and files named `test_*.py`), default to an empty tuple `()` — tests should not export public symbols. If a module has no public exports, use an empty tuple `()`. Keep `__all__` tuples up-to-date and place them at the top-level of the file; do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`). Instead import names normally and use `__all__` to control what the module exports.

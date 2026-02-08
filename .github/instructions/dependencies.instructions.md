@@ -96,7 +96,7 @@ pip install "anyio>=3.6.2"
 
 ### Type checking
 
-**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting. Run locally with `pnpm run check:py` (this now runs Pyright alongside Ruff); CI runs the Python linters (`pnpm run check:py`).
+**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting (Ruff is the single tool used for Python linting, formatting, and import-sorting; neither Black nor isort are used here). Run locally with `pnpm run check:py` (this runs Pyright alongside Ruff); CI runs the Python linters (`pnpm run check:py`).
 
 ### PowerShell (for Windows users)
 
