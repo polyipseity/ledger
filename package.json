@@ -12,6 +12,8 @@
   "packageManager": "pnpm@10.28.1",
   "private": true,
   "scripts": {
+    "build": "pnpm run check && pnpm run build:force",
+    "build:force": "node -e \"console.log('No build step')\"",
     "check": "pnpm run check:journal && pnpm run check:md && pnpm run check:prettier && pnpm run check:py",
     "check:journal": "python -m scripts.format --check && python -m scripts.check",
     "check:md": "markdownlint-cli2",

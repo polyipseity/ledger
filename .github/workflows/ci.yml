@@ -20,8 +20,8 @@
 name: "CI: Build & Test"
 
 on:
-  push:
   pull_request:
+  push:
   workflow_dispatch:
 
 permissions:
@@ -58,38 +58,8 @@ jobs:
       - name: Install hledger
         run: pnpm run hledger:install
 
-      - name: Run checks
-        run: pnpm run check
-
-  test:
-    runs-on: ubuntu-slim # using `ubuntu-slim` to minimize image size and attack surface; see header for rationale
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: "*"
-          cache: "pnpm"
-
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-        with:
-          enable-cache: true
-
-      - name: Install project
-        run: |
-          pnpm install --frozen-lockfile --ignore-scripts
-          uv sync --locked --all-extras --dev
-
-      - name: Install hledger
-        run: pnpm run hledger:install
-
       - name: Run tests
         run: pnpm run test
+
+      - name: Build project
+        run: pnpm run build
