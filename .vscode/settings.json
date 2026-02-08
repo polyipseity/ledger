@@ -1,8 +1,12 @@
 {
   "chat.tools.terminal.autoApprove": {
-    "hledger": true,
-    "pyright": true,
-    "pytest": true
+    "/^uv run pyright(?:\\s+(?:--?[\\w-]+(?:=[^\\s]+)?|[^\\s]+))*\\s*$/": {
+      "approve": true
+    },
+    "/^uv run pytest(?:\\s+(?:--?[\\w-]+(?:=[^\\s]+)?|[^\\s]+))*\\s*$/": {
+      "approve": true
+    },
+    "hledger": true
   },
   "markdown.validate.enabled": true,
   "python-envs.defaultEnvManager": "ms-python.python:venv",
