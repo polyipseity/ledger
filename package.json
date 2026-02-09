@@ -18,7 +18,7 @@
     "check:journal": "uv run --locked -m scripts.format --check && uv run --locked -m scripts.check",
     "check:md": "markdownlint-cli2",
     "check:prettier": "prettier --cache --check \"**/*.{astro,cjs,css,csv,gql,graphql,hbs,html,js,jsx,json,json5,jsonc,jsonl,less,mjs,pcss,sass,scss,svelte,styl,ts,tsx,vue,xml,yaml,yml}\"",
-    "check:py": "pyright && uv run --locked ruff check",
+    "check:py": "pyright && uv run --locked ruff check && uv run --locked ruff format --check",
     "commitlint": "commitlint --from=origin/main --to=HEAD",
     "format": "pnpm run format:journal && pnpm run format:md && pnpm run format:prettier && pnpm run format:py",
     "format:journal": "uv run --locked -m scripts.format",
