@@ -6,7 +6,7 @@ summary: Add a new payee (merchant, person, organization, or UUID) to the correc
 
 # Skill: Add Payee
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
 
 **Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 

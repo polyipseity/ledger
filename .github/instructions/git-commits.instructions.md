@@ -5,11 +5,11 @@ description: Conventional commit rules for repository contributions and explicit
 
 # Git commit conventions
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 All commits MUST follow the Conventional Commits style for the repository. Commit bodies are optional unless stated below.
 
-**Commit body lines MUST be wrapped to 100 characters or fewer. This is strictly enforced by commitlint and will block commits that exceed this limit.**
+**Commit body lines MUST be ≤100 characters to pass commitlint (this is a hard limit and commits exceeding it will be blocked). Agents SHOULD prefer wrapping commit body lines to **72 characters** or fewer for readability and as a buffer when quoting in other tools.**
 
 Allowed commit types include (but are not limited to): `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`, `ci`, `build`, and `ledger`.
 
@@ -32,7 +32,7 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 
 - Header must be: `<type>(<scope>): <short summary>` where `<scope>` is optional for non-ledger commits.
 - Body is optional for normal commits; include when explanation, provenance, or references are needed.
-- **Each line in the commit body must not exceed 100 characters. This is enforced by commitlint.**
+- **Each line in the commit body must not exceed 100 characters (commitlint will block non-conforming commits). Prefer wrapping to **72 characters** or fewer for readability and to provide a buffer when lines are wrapped or quoted in other tools.**
 - Footer may include references (tickets, co-authors) as needed.
 
 ## Enforcement guidance (required)

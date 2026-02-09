@@ -7,7 +7,7 @@ applyTo: "private.yaml*"
 
 # Security Practices
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 Guidance for handling confidential data in this personal accounting system.
 
@@ -43,6 +43,8 @@ After editing `private.yaml` locally:
 ```powershell
 python -m encrypt
 ```
+
+**Tip:** For a short checklist of encryption/decryption commands and quick troubleshooting, see `.github/instructions/agent-quickstart.instructions.md`.
 
 Or use the equivalent script:
 

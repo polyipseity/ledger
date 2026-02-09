@@ -5,7 +5,7 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 # Developer Workflows
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 ## Script Usage Policy
 

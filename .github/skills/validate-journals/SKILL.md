@@ -20,7 +20,7 @@ Validate journals to catch errors and ensure consistency before committing.
 
 ## Quick Start
 
-**Note:** Use canonical scripts: `pnpm run format` then `pnpm run check` (or `python -m ...` with `cwd=scripts/` when required). See `.github/instructions/developer-workflows.instructions.md` for details.
+**Note:** Use canonical scripts: `pnpm run format` then `pnpm run check` (or `python -m ...` with `cwd=scripts/` when required). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/agent-quickstart.instructions.md` for details and quick commands.
 
 **Examples:** See `./examples.md` for quick validation command examples and common fixes.
 

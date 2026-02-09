@@ -10,7 +10,7 @@ Purpose: Import and normalize transactions from receipts, statements, and struct
 Core guidance:
 
 - Use full ledger paths (e.g., `ledger/2024/2024-01/self.journal`) and insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
-- Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules.
+- Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules; see `.github/instructions/agent-quickstart.instructions.md` for a concise command checklist.
 - Use canonical scripts for formatting/validation (`pnpm run format` then `pnpm run check`); see `.github/instructions/developer-workflows.instructions.md`.
 - Update the theme/aspect files below when introducing new patterns—these are authoritative for type-specific rules.
 

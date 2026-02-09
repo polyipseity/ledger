@@ -7,7 +7,7 @@ applyTo: "ledger/**/self.alternatives.journal"
 
 # Alternatives Journal Tracking
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 Understanding the distinction between main and alternatives journals for separate tracking of assets.
 

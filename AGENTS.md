@@ -18,6 +18,38 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 
 **Journal file path format:** All journal files are located under the `ledger/` directory, with the format `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`).
 
+## Big-picture architecture 🔧
+
+- **Components**
+  - **Preludes** (`preludes/*.journal`): single source of truth for accounts, commodities, payees, and tag definitions.
+  - **Ledger journals** (`ledger/...`): hierarchical year/month journals. Monthly files contain transactions and include the prelude files.
+  - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `pnpm` wrappers; if none exist run Python scripts with `cwd=scripts/`.
+  - **Agent Skills** (`.github/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
+  - **CI & hooks** (`.github/workflows/*`, Husky + lint-staged): run formatters, checks, and tests on push and pre-push.
+
+- **Data flow**
+  - Transaction entry → monthly journal → local validation/formatting (`pnpm run format` / `pnpm run check`) → PR and CI checks → commit/push
+  - Monthly close and migration uses `hledger close --migrate` (run from repo root) and helper scripts in `scripts/` when needed.
+
+- **Key constraints & common pitfalls**
+  - **Always** use `pnpm run <script>` when a wrapper exists. If not, run Python scripts with the working directory set to `scripts/` (tools that accept `cwd` should use that parameter).
+  - **Do not** decrypt or expose `private.yaml` contents unless explicitly authorized. Encrypted secrets live in `private.yaml.gpg`.
+  - Code conventions matter: use `os.PathLike`, timezone-aware UTC datetimes, complete type annotations, `__all__` exports, and Ruff for formatting (see Agent Code Conventions below).
+  - Running scripts from the wrong directory is the most common agent error — double-check `cwd` every time.
+
+## Agent Quick Start ✅
+
+1. **Read the skill**: Open the relevant `.github/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
+2. **Install deps**: Run `pnpm install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
+3. **Format & validate locally**: `pnpm run format && pnpm run check` (fix issues before committing).
+4. **Run scripts properly**: Prefer `pnpm run <script>`; if not available, run `python -m scripts.<cmd>` with `cwd=scripts/`.
+5. **Make small, tested changes**: Add or update tests under `tests/` that mirror the source layout for any code changes.
+   - **If you edit instruction files or SKILLs**, add or update tests that cover the new behaviour, and update `AGENTS.md`/the relevant `SKILL.md` or examples as needed.
+6. **Commit rules**: Follow `.github/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
+7. **Use the Todo List Tool** for multi-step work and ask clarification questions rather than guessing when ambiguous
+
+If anything is unclear about these steps, ask a short clarifying question before proceeding.
+
 ## Documentation Structure
 
 Core instructions (`.github/instructions/`):
@@ -32,6 +64,7 @@ Core instructions (`.github/instructions/`):
 - [alternatives-journal.instructions.md](.github/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
 - [dependencies.instructions.md](.github/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
 - [git-commits.instructions.md](.github/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
+- [agent-quickstart.instructions.md](.github/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
 
 Agent Skills (`.github/skills/`):
 
@@ -116,7 +149,7 @@ Instructions:
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`pnpm run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines must be wrapped to 100 characters or fewer—this is strictly enforced by commitlint and will block commits that exceed this limit. If a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `pnpm run test` before pushing — a Husky `pre-push` hook runs `pnpm run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `pnpm run test` before pushing — a Husky `pre-push` hook runs `pnpm run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
 
 **Todo List Tool Reminder:**
 

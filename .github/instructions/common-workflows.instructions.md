@@ -34,13 +34,15 @@ See `.github/instructions/developer-workflows.instructions.md` for the canonical
 ## Pre-Commit Checklist (Husky + lint-staged)
 
 1. Format Markdown: `pnpm run markdownlint:fix` (optional: auto-fix)
-2. Validate journals: `pnpm run check`
-3. Format journals: `pnpm run format`
+2. Format journals: `pnpm run format`
+3. Validate journals: `pnpm run check`
 4. Run tests: `pnpm run test` (Husky registers a `pre-push` hook that will run the test suite before pushing; run tests locally to avoid blocked pushes)
 5. If edited `private.yaml`: use `pnpm run encrypt` if available, otherwise `python -m scripts.encrypt` (set cwd)
 6. Review: `git status && git diff`
 7. Prepare hooks: `pnpm install` (registers Husky hooks via the `prepare` script; lint-staged is configured in `.lintstagedrc.mjs`). Note: `pnpm install` runs `prepare`, which runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
 8. Commit: `git commit -S -m "chore: describe changes"`
+
+**Note:** When a `lint-staged` command needs the list of staged file paths (for example, formatting only staged files), prefer invoking the underlying command directly so the file list is forwarded (for example: `python -m scripts.format`). See `.github/instructions/developer-workflows.instructions.md` for the canonical guidance.
 
 ## Related Documentation
 
