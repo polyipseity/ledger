@@ -107,14 +107,20 @@ class AsyncFileFactory(Protocol):
     """
 
     @overload
-    def __call__(self, kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase: ...
+    def __call__(self, kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase:
+        """Overload stub: disk-backed factory callable."""
+        ...
 
     @overload
-    def __call__(self, kind: Literal["memory"], arg: str) -> AsyncPathBase: ...
+    def __call__(self, kind: Literal["memory"], arg: str) -> AsyncPathBase:
+        """Overload stub: in-memory factory callable."""
+        ...
 
     def __call__(
         self, kind: Literal["disk", "memory"], arg: PathLike[str] | str
-    ) -> AsyncPathBase: ...
+    ) -> AsyncPathBase:
+        """Factory callable interface returning an AsyncPath-like object."""
+        ...
 
 
 @pytest.fixture
@@ -246,14 +252,22 @@ def async_file_factory() -> AsyncFileFactory:
             return self.AsyncFile(self)
 
     @overload
-    def factory(kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase: ...
+    def factory(kind: Literal["disk"], arg: PathLike[str]) -> AsyncPathBase:
+        """Overload: disk-backed factory callable (stub)."""
+        ...
 
     @overload
-    def factory(kind: Literal["memory"], arg: str) -> AsyncPathBase: ...
+    def factory(kind: Literal["memory"], arg: str) -> AsyncPathBase:
+        """Overload: in-memory factory callable (stub)."""
+        ...
 
     def factory(
         kind: Literal["disk", "memory"], arg: PathLike[str] | str
     ) -> AsyncPathBase:
+        """Factory for creating test-friendly anyio.Path-like objects.
+
+        The factory supports two kinds: 'disk' (PathLike) and 'memory' (str).
+        """
         """Factory for creating test-friendly anyio.Path-like objects.
 
         The factory supports two kinds:
@@ -290,7 +304,9 @@ class RunModuleHelper(ABC):
     """
 
     @abstractmethod
-    def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]: ...
+    def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]:
+        """Invoke the named module with argv and return a dict with a 'ran' flag."""
+        ...
 
 
 @pytest.fixture
@@ -306,13 +322,19 @@ def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
     """
 
     class _RunModule(RunModuleHelper):
+        """Helper that runs a module under test using a patched asyncio.run and argv."""
+
         def __init__(self, monkeypatch: pytest.MonkeyPatch) -> None:
+            """Store the provided pytest.MonkeyPatch for later use."""
             self._monkeypatch = monkeypatch
 
         def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]:
+            """Run the specified module with a fake asyncio.run that records execution."""
             called: dict[str, bool] = {"ran": False}
 
             def fake_run(coro: Coroutine[Any, Any, Any]) -> None:
+                """Fake asyncio.run replacement that marks the module as run and
+                closes the coroutine to avoid "coroutine was never awaited" warnings."""
                 called["ran"] = True
                 try:
                     coro.close()

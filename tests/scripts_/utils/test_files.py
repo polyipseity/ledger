@@ -58,6 +58,8 @@ def test_get_script_folder_no_caller_frame_raises(
     """When the caller frame is missing (f_back is None) get_script_folder raises ValueError."""
 
     class FakeFrame:
+        """Fake frame object with no caller to simulate inspect.currentframe() returning a frame without f_back."""
+
         f_back = None
 
     monkeypatch.setattr(files, "currentframe", lambda: FakeFrame())

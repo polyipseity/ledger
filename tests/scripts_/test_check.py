@@ -32,6 +32,7 @@ async def test_check_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -
     called: dict[str, object] = {}
 
     async def fake_main(args: check.Arguments) -> None:
+        """Fake `check.main` used to capture arguments passed by the parser."""
         called["args"] = args
 
     monkeypatch.setattr(check, "main", fake_main)
@@ -142,19 +143,24 @@ async def test_check_logs_skipped_when_skipped(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> Sequence[PathLike[str]]:
+        """Fake discovery used by this test to return the single journal path."""
         return [repo / "2024-01" / "a.journal"]
 
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
 
     class DummyRun3:
+        """JournalRunContext stub used in tests to simulate skipped journals."""
+
         def __init__(
             self, script_id: PathLike[str], j: Sequence[PathLike[str]]
         ) -> None:
+            """Initialize with no journals to process and one skipped journal."""
             self.to_process = []
             self.skipped = [repo / "2024-01" / "a.journal"]
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return self for use in tests."""
             return self
 
         async def __aexit__(
@@ -163,13 +169,16 @@ async def test_check_logs_skipped_when_skipped(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no cleanup required in tests."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful journal processing for assertions in tests."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for test assertions."""
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun3)
@@ -194,24 +203,30 @@ async def test_check_propagates_hledger_errors(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> Sequence[PathLike[str]]:
+        """Fake discovery returning the local journals list used in this test."""
         return journals
 
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
 
     async def error_run_hledger(journal: PathLike[str], *args: object):
+        """Fake run_hledger that raises CalledProcessError to exercise error path."""
         raise CalledProcessError(2, ["hledger", "check"], output="", stderr="fail")
 
     monkeypatch.setattr(check, "run_hledger", error_run_hledger)
 
     class DummyRun:
+        """A minimal JournalRunContext stub used by tests to emulate session behaviour."""
+
         def __init__(
             self, script_id: PathLike[str], j: Sequence[PathLike[str]]
         ) -> None:
+            """Initialize with a list of journals to process and empty reported/skipped lists."""
             self.to_process = list(j)
             self.skipped: list[PathLike[str]] = []
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context manager entry: return self for use in tests."""
             return self
 
         async def __aexit__(
@@ -220,13 +235,16 @@ async def test_check_propagates_hledger_errors(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context manager exit: no cleanup required in tests."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful journal processing for assertions in tests."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for test assertions."""
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun)
@@ -249,19 +267,24 @@ async def test_check_logs_processed_when_reported(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> Sequence[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
         return [repo / "2024-01" / "a.journal"]
 
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
 
     class DummyRun2:
+        """JournalRunContext stub used to simulate reported journals in tests."""
+
         def __init__(
             self, script_id: PathLike[str], j: Sequence[PathLike[str]]
         ) -> None:
+            """Initialize with pre-populated reported list for assertions."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = []
             self._reported: list[PathLike[str]] = [repo / "2024-01" / "a.journal"]
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return the stub instance."""
             return self
 
         async def __aexit__(
@@ -270,13 +293,16 @@ async def test_check_logs_processed_when_reported(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no special cleanup required for the stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record successful processing in the stub's reported list."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the stub's reported list for assertions."""
             return self._reported
 
     monkeypatch.setattr(check, "JournalRunContext", DummyRun2)

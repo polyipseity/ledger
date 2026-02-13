@@ -181,6 +181,7 @@ async def test_format_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) 
     called: dict[str, fmt.Arguments] = {}
 
     async def fake_main(args: fmt.Arguments) -> None:
+        """Fake `format.main` used to capture the arguments passed by the parser."""
         called["args"] = args
 
     monkeypatch.setattr(fmt, "main", fake_main)
@@ -305,6 +306,7 @@ async def test_main_check_exits_with_1(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> list[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
         return [jpath]
 
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
@@ -312,6 +314,7 @@ async def test_main_check_exits_with_1(
     async def fake_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner returning a differing body to simulate unformatted file."""
         # Return a body that differs from disk causing a 'changed' and thus an unformatted entry
         return ("DIFFERENT BODY\n", "", 0)
 
@@ -321,11 +324,13 @@ async def test_main_check_exits_with_1(
         """Stub JournalRunContext that marks our journal as to_process."""
 
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize the stub with the journal list and empty reported/skipped lists."""
             self.to_process = [jpath]
             self.skipped: list[PathLike[str]] = []
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return the stub instance."""
             return self
 
         async def __aexit__(
@@ -334,13 +339,16 @@ async def test_main_check_exits_with_1(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no cleanup required for the stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful processing for assertions."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for assertions."""
             return self._reported
 
     monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
@@ -363,17 +371,22 @@ async def test_main_reports_processed_when_reported(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> list[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
         return [jpath]
 
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
 
     class DummyRun:
+        """Session stub used in format tests to simulate reported files."""
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize with provided journals and a pre-populated reported list."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = []
             self._reported: list[PathLike[str]] = [jpath]
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return the stub for use in tests."""
             return self
 
         async def __aexit__(
@@ -382,13 +395,16 @@ async def test_main_reports_processed_when_reported(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no cleanup required for the stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for assertions."""
             return self._reported
 
     monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
@@ -407,17 +423,22 @@ async def test_format_main_logs_skipped_when_skipped(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> list[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
         return [jpath]
 
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
 
     class DummyRun2:
+        """Stub JournalRunContext used in format tests to simulate skipped journals."""
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize the stub with provided journals and skipped list."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = [jpath]
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return the stub instance."""
             return self
 
         async def __aexit__(
@@ -426,13 +447,16 @@ async def test_format_main_logs_skipped_when_skipped(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no special cleanup required for the stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful processing for assertions."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for assertions."""
             return self._reported
 
     monkeypatch.setattr(fmt, "JournalRunContext", DummyRun2)
@@ -456,24 +480,33 @@ async def test_main_check_with_no_unformatted(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> list[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
         return [jpath]
 
     async def fake_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner returning a formatted body for the test."""
         return ("FORMATTED BODY\n", "", 0)
 
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
     monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
 
     class Session:
+        """Minimal session stub used when files are already formatted.
+
+        Provides the minimal JournalRunContext behaviour needed by the tests.
+        """
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize the session stub with provided journal list."""
             # create a minimal session where to_process contains our journal
             self.to_process = list(j)
             self.skipped = []
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context entry: return the session stub."""
             return self
 
         async def __aexit__(
@@ -482,13 +515,16 @@ async def test_main_check_with_no_unformatted(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no cleanup required for the test stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for assertions."""
             return self._reported
 
     monkeypatch.setattr(fmt, "JournalRunContext", Session)
@@ -513,15 +549,20 @@ async def test__format_journal_propagates_hledger_error(
     async def error_run_hledger(
         journal: PathLike[str], *args: object
     ) -> tuple[str, str, int]:
+        """Fake hledger runner that simulates a non-zero exit by raising CalledProcessError."""
         raise CalledProcessError(3, ["hledger", "print"], output="", stderr="err")
 
     monkeypatch.setattr(fmt, "run_hledger", error_run_hledger)
 
     class Session(JournalRunContext):
+        """Minimal session stub used in tests to capture reported journals."""
+
         def __init__(self) -> None:
+            """Initialize without any journals to avoid cache behaviour."""
             super().__init__(Path(__file__), [])
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
             self._reported.add(journal)
 
     with pytest.raises(CalledProcessError):

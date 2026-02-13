@@ -172,11 +172,13 @@ async def test_run_hledger_missing(monkeypatch: pytest.MonkeyPatch) -> None:
     """When the `hledger` executable is not found in PATH run_hledger should raise FileNotFoundError."""
 
     def fake_which_none(prog: str) -> str | None:
+        """Return None to simulate `which` not finding the executable in PATH."""
         return None
 
     monkeypatch.setattr(journals, "which", fake_which_none)
 
     async def run_it() -> None:
+        """Invoke run_hledger to exercise the missing-executable failure path."""
         await journals.run_hledger("somefile", "print")
 
     with pytest.raises(FileNotFoundError):
@@ -221,7 +223,10 @@ def test_format_journal_list_handles_path_exceptions() -> None:
     """If converting an entry to :class:`Path` raises, the original object should be used as the label."""
 
     class Bad:
+        """Object whose __fspath__ raises to simulate a broken path-like object."""
+
         def __fspath__(self) -> str:  # pragma: no cover - simulated exception
+            """Raise to simulate a broken path-like object's __fspath__."""
             raise RuntimeError("boom")
 
     s = journals.format_journal_list([Bad()], max_items=4)
@@ -246,11 +251,15 @@ def test_filter_journals_skips_invalid_parent_names() -> None:
     """Journals whose parent folder name isn't a valid YYYY-MM should be silently ignored."""
 
     class Fake(PathLike[str]):
+        """PathLike stub with an invalid parent folder name used to test filtering."""
+
         def __init__(self):
+            """Initialize the PathLike stub with invalid parent name."""
             self.parent = SimpleNamespace(name="not-a-date")
             self.name = "x.journal"
 
         def __fspath__(self) -> str:
+            """Return a string representation used to simulate a bad path."""
             return "bad"
 
     out = journals.filter_journals_between([Fake()], None, None)
@@ -265,24 +274,31 @@ async def test_run_hledger_handles_process_exit(
     """Simulate subprocess success and failure for `run_hledger` using a fake process."""
 
     class FakeProc:
+        """Minimal fake process object that exposes `communicate` and `wait` for tests."""
+
         def __init__(self, out: bytes, err: bytes, rc: int):
+            """Initialize the fake process with predefined stdout, stderr, and return code."""
             self._out = out
             self._err = err
             self._rc = rc
 
         async def communicate(self) -> tuple[bytes, bytes]:
+            """Return predefined stdout/stderr bytes for the fake process."""
             return self._out, self._err
 
         async def wait(self) -> int:
+            """Return the predefined return code for the fake process."""
             return self._rc
 
     async def fake_create(*args: Any, **kwargs: Any) -> FakeProc:
+        """Return a FakeProc instance to simulate subprocess creation."""
         # return a process with non-zero returncode to exercise error path
         return FakeProc(b"ok\n", b"", 0)
 
     monkeypatch.setattr(journals, "create_subprocess_exec", fake_create)
 
     def fake_which(prog: str) -> str:
+        """Return a non-empty string to simulate an executable being found in PATH."""
         return "fake"
 
     monkeypatch.setattr(journals, "which", fake_which)
@@ -294,6 +310,7 @@ async def test_run_hledger_handles_process_exit(
 
     # Now simulate non-zero return code which should raise when raise_on_error=True
     async def fake_create_bad(*args: Any, **kwargs: Any) -> FakeProc:
+        """Return a FakeProc with non-zero returncode and stderr to exercise error logging."""
         return FakeProc(
             b"586061c8-6f1a-4e6c-96fa-fc3521e833b0\n",
             b"fa27ffae-770c-48b3-a232-ad63b23a9415\n",

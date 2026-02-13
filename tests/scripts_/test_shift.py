@@ -231,12 +231,16 @@ async def test_shift_logs_skipped_when_skipped(
     monkeypatch.setattr(shift, "get_ledger_folder", lambda: ledger)
 
     class DummyRun:
+        """JournalRunContext stub for shift tests that exposes to_process/skipped lists."""
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize with given journals; used to simulate session behaviour."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = j
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context enter: return the stub instance."""
             return self
 
         async def __aexit__(
@@ -245,13 +249,16 @@ async def test_shift_logs_skipped_when_skipped(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no special handling in the test stub."""
             return False
 
         def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful processing for assertions."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals captured by the stub."""
             return self._reported
 
     monkeypatch.setattr(shift, "JournalRunContext", DummyRun)

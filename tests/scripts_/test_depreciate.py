@@ -80,17 +80,22 @@ async def test_depreciate_main_logs_skipped_when_skipped(
     async def fake_find(
         folder: PathLike[str], files: object = None
     ) -> list[PathLike[str]]:
+        """Fake discovery implementation returning a single test journal."""
         return [repo / "2024-01" / "a.journal"]
 
     monkeypatch.setattr(depreciate, "find_monthly_journals", fake_find)
 
     class DummyRun:
+        """Stub JournalRunContext for depreciation tests that simulates skipped journals."""
+
         def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+            """Initialize with an empty to_process list and a single skipped journal."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = [repo / "2024-01" / "a.journal"]
             self._reported: list[PathLike[str]] = []
 
         async def __aenter__(self) -> Self:
+            """Async context enter: return self for use in tests."""
             return self
 
         async def __aexit__(
@@ -99,15 +104,18 @@ async def test_depreciate_main_logs_skipped_when_skipped(
             exc: BaseException | None,
             tb: TracebackType | None,
         ) -> bool:
+            """Async context exit: no cleanup required for the stub."""
             return False
 
         def report_success(
             self, journal: PathLike[str]
         ) -> None:  # pragma: no cover - trivial
+            """Record a successful processing for assertions."""
             self._reported.append(journal)
 
         @property
         def reported(self) -> list[PathLike[str]]:  # pragma: no cover - trivial
+            """Return the list of reported journals."""
             return self._reported
 
     monkeypatch.setattr(depreciate, "JournalRunContext", DummyRun)
@@ -134,6 +142,7 @@ async def test_depreciate_parser_invoke_calls_main(
     called: dict[str, object] = {}
 
     async def fake_main(args: depreciate.Arguments) -> None:
+        """Fake `depreciate.main` used to capture parser-provided arguments in tests."""
         called["args"] = args
 
     monkeypatch.setattr(depreciate, "main", fake_main)

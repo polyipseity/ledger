@@ -76,6 +76,7 @@ async def _patch_cache_to(
     await pycache.mkdir(parents=True, exist_ok=True)
 
     def fake_cache_file_path() -> Path:
+        """Return the temporary cache path used in tests."""
         return target
 
     monkeypatch.setattr(cmod, "cache_file_path", fake_cache_file_path)
@@ -403,10 +404,14 @@ async def test_script_key_from_wrapped_exception(
     """If underlying Path.open raises a non-FileNotFoundError, script_key_from rewraps as FileNotFoundError."""
 
     class BadPath:
+        """Path-like object whose open raises to simulate an IO error."""
+
         def __init__(self, _p: PathLike[str]) -> None:
+            """Construct the BadPath (no-op)."""
             pass
 
         async def open(self, *args: Any, **kwargs: Any) -> None:
+            """Raise a runtime error when open is called to simulate failure."""
             raise RuntimeError("boom")
 
     monkeypatch.setattr(cmod, "Path", BadPath)
@@ -475,6 +480,7 @@ def test_evict_handles_malformed_timestamps_and_file_entries() -> None:
         """Datetime subclass whose timestamp method raises to simulate malformed timestamp."""
 
         def timestamp(self) -> float:
+            """Raise an exception when asked for a timestamp to simulate broken tz handling."""
             raise Exception("boom")
 
     s2.files["a"] = cmod.FileEntryModel(
@@ -539,12 +545,14 @@ async def test_read_script_cache_handles_json_decode_error(
 
     # monkeypatch the cache_file_path to point to our file
     def fake_cache_file_path2() -> Path:
+        """Return the target cache path used to simulate invalid JSON reads."""
         return target
 
     monkeypatch.setattr(cmod, "cache_file_path", fake_cache_file_path2)
 
     # Force model_validate_json to raise JSONDecodeError explicitly
     def raiser(text: str):
+        """Raise JSONDecodeError to exercise the error handling branch."""
         raise JSONDecodeError("msg", text, 0)
 
     monkeypatch.setattr(cmod.CacheModel, "model_validate_json", staticmethod(raiser))
@@ -567,6 +575,7 @@ async def test_read_script_cache_handles_model_validate_raising(
         """Simple stand-in exception to exercise the validation error handling branch."""
 
     def raiser(text: str):
+        """Raise a DummyValidationError to exercise validation error handling."""
         raise DummyValidationError("boom")
 
     monkeypatch.setattr(cmod, "ValidationError", DummyValidationError)

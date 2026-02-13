@@ -71,6 +71,7 @@ async def test_replace_with_no_journals(monkeypatch: pytest.MonkeyPatch) -> None
     """When no journals are discovered, replace should complete without error."""
 
     async def fake_find(folder: PathLike[str]) -> list[PathLike[str]]:
+        """Fake discovery returning no journals for this test."""
         return []
 
     monkeypatch.setattr(replace, "find_all_journals", fake_find)
@@ -88,6 +89,7 @@ async def test_replace_parser_invoke_calls_main(
     called: dict[str, replace.Arguments] = {}
 
     async def fake_main(args: replace.Arguments) -> None:
+        """Fake `replace.main` to capture parser-provided arguments in tests."""
         called["args"] = args
 
     monkeypatch.setattr(replace, "main", fake_main)
