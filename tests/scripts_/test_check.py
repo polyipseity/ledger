@@ -4,11 +4,11 @@ Ensure the CLI parser exposes the expected invocation hooks.
 """
 
 from builtins import BaseExceptionGroup
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 from os import PathLike
 from subprocess import CalledProcessError
 from types import TracebackType
-from typing import Self, Sequence
+from typing import Self
 
 import pytest
 from anyio import Path
