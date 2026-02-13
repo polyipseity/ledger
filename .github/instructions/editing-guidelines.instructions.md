@@ -43,7 +43,7 @@ See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 ### Testing ⚙️
 
 - When you modify scripts, instruction files, or any behavior, add or update unit tests under `tests/` and ensure they pass locally via `pnpm run test`.
-- Tests should be written using `pytest` and follow existing patterns (use `pytest.mark.asyncio` for async tests when needed). Include edge cases and validation paths for instruction changes so any regressions are caught in CI.
+- Tests should be written using `pytest` and follow existing patterns (use `pytest.mark.asyncio` for async tests when needed). Prefer annotating filesystem fixtures as `tmp_path: PathLike[str]` in test signatures; convert `tmp_path` to `pathlib.Path` only when `Path` methods are required (for example `p = Path(tmp_path)`). When converting any path-like object to a `str` in tests or code, **always** use `os.fspath(path_like)` rather than `str(path_like)` so the filesystem path protocol is correctly honoured. Include edge cases and validation paths for instruction changes so any regressions are caught in CI.
 - CI and Husky `pre-push` will run the full test suite; ensure tests are reliable and fast where possible to avoid blocked pushes.
 
 ### Shared Expense and Repayment Pattern

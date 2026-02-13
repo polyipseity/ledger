@@ -27,7 +27,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 - ALWAYS prefer `pnpm run <script>` when a wrapper exists. If no wrapper, run the Python script from `scripts/`.
 - Never leak or hard-code secrets from `private.yaml` (encrypted file: `private.yaml.gpg`). If you need decrypt rights, ask.
 - Follow code conventions strictly: `os.PathLike` for path parameters, timezone-aware UTC datetimes, complete type annotations, `__all__` module exports, and use Ruff for formatting.
-- Tests: one test file per production file; mirror `tests/` structure to the source layout.
+- Tests: one test file per production file; mirror `tests/` structure to the source layout. Prefer annotating pytest filesystem fixtures as `tmp_path: PathLike[str]` in test signatures and, when converting a path-like object to `str`, **always** use `os.fspath(path_like)` rather than `str(path_like)` so the filesystem path protocol is preserved and static checkers remain happy.
 
 ## When editing journals
 

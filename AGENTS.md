@@ -79,11 +79,12 @@ Agent Skills (`.github/skills/`):
 
 Please follow these coding conventions in agent edits and new scripts. They are enforced to keep the codebase consistent and easy to review:
 
-- Use `os.PathLike` for file/script identifiers:
-  - APIs that accept a script identifier (for example, `JournalRunContext`) **must** accept an :class:`os.PathLike` (for example, a `pathlib.Path`) only, not plain strings. Call sites should pass `Path(__file__)` or another `os.PathLike` instance.
+- Use `os.PathLike` for file/script identifiers and `PathLike[str]` in tests:
+  - Public APIs that accept filesystem paths (for example, `JournalRunContext`) **must** accept an `os.PathLike` (for example, a `pathlib.Path`) — do not accept plain `str` paths. Call sites should pass `Path(__file__)` or another `os.PathLike` instance and annotate parameters as `PathLike[str]` where appropriate.
+  - Tests: always prefer `tmp_path: PathLike[str]` in `pytest` test signatures (not `Any` or untyped). When a `pathlib.Path` instance is required in a test body do `p = Path(tmp_path)` (or `Path(os.fspath(tmp_path))`)—this keeps fixtures type-stable and explicit for static analysis.
   - When a function needs to perform asynchronous file operations it may coerce the provided `PathLike` to an `anyio.Path` internally (e.g., `import anyio; path = anyio.Path(path_like)`) so runtime async helpers work consistently.
-  - When converting a `PathLike` to a string for APIs that require `str`, **always** use `os.fspath(path_like)` rather than `str(path_like)`. Using `os.fspath` is the canonical way to obtain the filesystem path string and correctly supports objects implementing the filesystem path protocol. Remember: imports must be at module top-level; prefer `from os import fspath` at module top or `import os` and call `os.fspath(...)`.
-  - The script identifier must be a readable file. The helper that derives a script cache key will fail-fast and raise :class:`FileNotFoundError` if the script path cannot be opened for reading.
+  - When converting any path-like or path-object to a `str` for downstream APIs or subprocess commands, **always** use `os.fspath(path_like)` (or `from os import fspath; fspath(path_like)`) rather than `str(path_like)`. `os.fspath` is the canonical, protocol-aware conversion and ensures compatibility with `pathlib.Path` and other `__fspath__` implementers.
+  - Document accepted path types in the function docstring and use `PathLike[str]` in type hints for public parameters. The script identifier must be a readable file — helpers that derive cache keys will fail-fast with `FileNotFoundError` if the path cannot be opened for reading.
 - Use timezone-aware UTC datetimes:
   - Avoid `datetime.utcnow()`; instead use `datetime.now(timezone.utc)` and store or format ISO timestamps from timezone-aware objects.
 - Imports must be at module top-level (no inline/runtime imports):
