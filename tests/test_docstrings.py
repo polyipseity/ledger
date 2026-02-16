@@ -3,7 +3,7 @@
 This test parses modules' AST to avoid executing top-level code. It enforces
 that:
 
-- Every Python module under `src/` and `tests/` contains a non-empty
+- Every Python module under `scripts/` and `tests/` contains a non-empty
   module-level docstring.
 - Every exported function or class (listed in `__all__`) has a non-empty
   docstring. Assignments/constants are not required to have individual
@@ -23,14 +23,14 @@ ROOT = Path(".")
 
 
 async def _find_py_files() -> list[Path]:
-    """Return a sorted list of Python file paths under `src/` and `tests`.
+    """Return a sorted list of Python file paths under `scripts/` and `tests`.
 
     Mirrors the traversal used by other repository checks.
     """
 
     files: list[Path] = []
 
-    async for path in (ROOT / "src").rglob("*.py"):
+    async for path in (ROOT / "scripts").rglob("*.py"):
         files.append(path)
     async for path in (ROOT / "tests").rglob("*.py"):
         files.append(path)
@@ -144,7 +144,7 @@ async def test_all_top_level_definitions_have_docstrings() -> None:
     """Assert every top-level function/class has a docstring.
 
     This enforces that all top-level `def`/`class` objects in modules
-    under `src/` and `tests/` include non-empty docstrings — private
+    under `scripts/` and `tests/` include non-empty docstrings — private
     and public symbols alike.
     """
 
@@ -194,7 +194,7 @@ async def test_all_defs_at_any_depth_have_docstrings() -> None:
     """Assert every function/class (at any nesting level) has a docstring.
 
     This enforces docstrings for class methods, nested (inner) functions,
-    and nested classes across `src/` and `tests/`. It applies to private and
+    and nested classes across `scripts/` and `tests/`. It applies to private and
     dunder names as well (per current request).
     """
 
