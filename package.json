@@ -30,5 +30,8 @@
     "test": "pnpm run test:py",
     "test:py": "uv run --locked pytest"
   },
-  "type": "module"
+  "type": "module",
+  "workspaces": [
+    "."
+  ]
 }
