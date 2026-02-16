@@ -7,10 +7,17 @@ name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a"
 version = "0.0.0"
 requires-python = ">=3.12.0"
 description = "Personal ledger tooling"
+license = {file = "LICENSE.txt"}
+readme = "README.md"
 dependencies = [
   "anyio>=4.12.0",
   "pydantic>=2.12.0",
 ]
+
+[project.scripts]
+
+[project.urls]
+repository = "https://github.com/polyipseity/ledger.git"
 
 [dependency-groups]
 dev = [
@@ -23,7 +30,12 @@ dev = [
 ]
 
 [tool.pyright]
-exclude = ["**/node_modules", "**/__pycache__", "**/.*", ".venv"]
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+  "**/.*",
+  ".venv",
+]
 typeCheckingMode = "strict"
 venv = ".venv"
 venvPath = "."
@@ -62,3 +74,4 @@ required-version = ">=0.10.0,<0.11.0"
 [tool.uv.build-backend]
 # Do not include any packages in the build, as this project is only a collection of tools and scripts.
 module-name = []
+source-include = ["py.typed"]
