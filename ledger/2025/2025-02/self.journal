@@ -149,7 +149,7 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai                                                         6.00 HKD
     assets:digital:Game Zone:Hollywood:cc4e72c7-108e-44ff-bf90-49916ac984f5       -6.00 HKD = 52.00 HKD
 
-2025-02-04 (C2472713299, FRN20250204PAYD0102239278982, OCTOPUS038084565301286497) self  ; activity: transfer, time: 21:07:46, timezone: UTC+08:00, via: eDDA
+2025-02-04 (C2472713299, FRN20250204PAYD0102239278982) self  ; activity: transfer, time: 21:07:46, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -229,7 +229,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education      130.00 HKD
     revenues:incomes:education                    -130.00 HKD
 
-2025-02-07 (C2774843996, FRN20250207PAYD0102246188386, OCTOPUS038084565301286497) self  ; activity: transfer, time: 14:46:22, timezone: UTC+08:00, via: eDDA
+2025-02-07 (C2774843996, FRN20250207PAYD0102246188386) self  ; activity: transfer, time: 14:46:22, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -308,7 +308,7 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:98bff82f-8bfc-428b-ba1d-3c7996f084b9          41.00 HKD = 0.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -77.00 HKD
 
-2025-02-11 (C2B78157458, FRN20250211PAYD0102255524305, OCTOPUS038084565301286497) self  ; activity: transfer, time: 19:29:35, timezone: UTC+08:00, via: eDDA
+2025-02-11 (C2B78157458, FRN20250211PAYD0102255524305) self  ; activity: transfer, time: 19:29:35, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -448,7 +448,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                10.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
-2025-02-14 (C2E80035423, FRN20250214PAYD0102261577546 , OCTOPUS038084565301286497) self  ; activity: transfer, time: 10:22:04, timezone: UTC+08:00, via: eDDA
+2025-02-14 (C2E80035423, FRN20250214PAYD0102261577546 ) self  ; activity: transfer, time: 10:22:04, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -524,7 +524,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 9.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -9.30 HKD
 
-2025-02-18 (C2I83071834, FRN20250218PAYD0102270489041, OCTOPUS038084565301286497) self  ; activity: transfer, time: 13:29:34, timezone: UTC+08:00, via: eDDA
+2025-02-18 (C2I83071834, FRN20250218PAYD0102270489041) self  ; activity: transfer, time: 13:29:34, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -670,7 +670,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-02-24 (C2O87441034, FRN20250224PAYD0102283480856, OCTOPUS038084565301286497) self  ; activity: transfer, time: 12:49:14, timezone: UTC+08:00, via: eDDA
+2025-02-24 (C2O87441034, FRN20250224PAYD0102283480856) self  ; activity: transfer, time: 12:49:14, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2         60.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      -60.00 HKD
 

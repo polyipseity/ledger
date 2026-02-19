@@ -72,7 +72,7 @@ include ../../../preludes/self.journal
     assets:objects:decorations                                      -181.80 HKD  ; item: KT 16cm 斜背公仔
     assets:objects:food and drinks                                   -24.00 HKD  ; item: 日本明治片裝黑朱古力 120g
 
-2026-02-01 (C2172829593, FRN20260201PAYD0103141005869, OCTOPUS038084565301286497) self  ; activity: transfer, time: 14:51, timezone: UTC+08:00, via: eDDA
+2026-02-01 (C2172829593, FRN20260201PAYD0103141005869) self  ; activity: transfer, time: 14:51, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -141,7 +141,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
 
-2026-02-03 (C2374906843, FRN20260203PAYD0103147838119, OCTOPUS038084565301286497) self  ; activity: transfer, time: 13:25, timezone: UTC+08:00, via: eDDA
+2026-02-03 (C2374906843, FRN20260203PAYD0103147838119) self  ; activity: transfer, time: 13:25, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -214,7 +214,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: 凍蘋果綠茶
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
 
-2026-02-05 (C2577447909, FRN20260205PAYD0103155503246, OCTOPUS038084565301286497) self  ; activity: transfer, time: 20:30, timezone: UTC+08:00, via: eDDA
+2026-02-05 (C2577447909, FRN20260205PAYD0103155503246) self  ; activity: transfer, time: 20:30, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 

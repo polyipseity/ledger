@@ -584,7 +584,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.80 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.80 HKD
 
-2024-11-19 (CBJ10508153, FRN20241119PAYD0102061292858, OCTOPUS038084565301286497) self  ; activity: transfer, time: 20:22:58, timezone: UTC+08:00, via: eDDA
+2024-11-19 (CBJ10508153, FRN20241119PAYD0102061292858) self  ; activity: transfer, time: 20:22:58, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -675,7 +675,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         33.00 HKD  ; food_or_drink: 6″ egg salad sub (daily subs), food_or_drink: barbecue sauce
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
 
-2024-11-21 (CBL11616959, FRN20241121PAYD0102064660566, OCTOPUS038084565301286497) self  ; activity: transfer, time: 12:58:36, timezone: UTC+08:00, via: eDDA
+2024-11-21 (CBL11616959, FRN20241121PAYD0102064660566) self  ; activity: transfer, time: 12:58:36, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -757,7 +757,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       32.50 HKD
     revenues:incomes:education                     -32.50 HKD
 
-2024-11-23 (CBN13230326, FRN20241123PAYD0102069123350, OCTOPUS038084565301286497) self  ; activity: transfer, time: 18:21:45, timezone: UTC+08:00, via: eDDA
+2024-11-23 (CBN13230326, FRN20241123PAYD0102069123350) self  ; activity: transfer, time: 18:21:45, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -875,7 +875,7 @@ include ../../../preludes/self.journal
     assets:accrued revenues:incomes:education       48.75 HKD
     revenues:incomes:education                     -48.75 HKD
 
-2024-11-27 (CBR15943315, FRN20241127PAYD0102076836948, OCTOPUS038084565301286497) self  ; activity: transfer, time: 13:35:10, timezone: UTC+08:00, via: eDDA
+2024-11-27 (CBR15943315, FRN20241127PAYD0102076836948) self  ; activity: transfer, time: 13:35:10, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 

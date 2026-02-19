@@ -57,7 +57,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-03-01 (C3192185330, FRN20250301PAYD0102297598941, OCTOPUS038084565301286497) self  ; activity: transfer, time: 18:31:52, timezone: UTC+08:00, via: eDDA
+2025-03-01 (C3192185330, FRN20250301PAYD0102297598941) self  ; activity: transfer, time: 18:31:52, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -140,7 +140,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 5.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
 
-2025-03-06 (C3696181692, FRN20250306PAYD0102310362958, OCTOPUS038084565301286497) self  ; activity: transfer, time: 09:42:10, timezone: UTC+08:00, via: eDDA
+2025-03-06 (C3696181692, FRN20250306PAYD0102310362958) self  ; activity: transfer, time: 09:42:10, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -635,7 +635,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         30.10 HKD  ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
-2025-03-27 (C3R12677861, FRN20250327PAYD0102359402366, OCTOPUS038084565301286497) self  ; activity: transfer, time: 18:31:54, timezone: UTC+08:00, via: eDDA
+2025-03-27 (C3R12677861, FRN20250327PAYD0102359402366) self  ; activity: transfer, time: 18:31:54, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
