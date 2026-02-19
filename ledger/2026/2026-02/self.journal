@@ -575,10 +575,18 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings      100.00 HKD
     equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f               -100.00 HKD  ; item: red packet
 
+2026-02-17 unknown  ; activity: gift, time: 13, timezone: UTC+08:00
+    assets:cash                    20.00 HKD
+    equity:unknown:strangers      -20.00 HKD  ; item: red packet
+
 2026-02-17 (000-958672, 27) Saizeriya  ; activity: eating, duration: PT1H2M0S, eating: dinner, time: 19:04:17, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: 歐陸風烤焗香腸
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
+
+2026-02-18 unknown  ; activity: gift, time: 17, timezone: UTC+08:00
+    assets:cash                    40.00 HKD
+    equity:unknown:strangers      -40.00 HKD  ; item: red packet ×2
 
 2026-02-18 7-Eleven  ; activity: eating, eating: snacks, time: 21:00, timezone: UTC+08:00
     expenses:food and drinks:snacks                                         21.00 HKD  ; food_or_drink: (unknown) ×2

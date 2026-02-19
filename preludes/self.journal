@@ -143,6 +143,7 @@ account equity:kins:special                                                     
 account equity:organizations                                                                      ; type: E
 account equity:organizations:7e049a63-ac77-450b-a5f1-4d9a984421dd                                 ; type: E
 account equity:unknown                                                                            ; type: E
+account equity:unknown:strangers                                                                  ; type: E
 account equity:unknown:suspicious                                                                 ; type: E
 account expenses:accommodations                                                                   ; type: X
 account expenses:accommodations:universities                                                      ; type: X
