@@ -181,6 +181,7 @@ account expenses:gaming:maimai                                                  
 account expenses:gifts                                                                            ; type: X  
 account expenses:gifts:friends                                                                    ; type: X
 account expenses:gifts:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                               ; type: X
+account expenses:gifts:friends:bfa32943-960d-4df1-9997-e2391f5551a1                               ; type: X
 account expenses:healthcare                                                                       ; type: X
 account expenses:healthcare:medication                                                            ; type: X
 account expenses:incidental                                                                       ; type: X
@@ -370,6 +371,7 @@ payee Apple
 payee Bafang Dumpling
 payee Blue Cross Insurance
 payee Cafe 100%
+payee Dondonya
 payee Café de Coral
 payee Café de Nusi
 payee Café&Meal MUJI
@@ -382,6 +384,7 @@ payee Da Mario
 payee Daiso
 payee Deliveroo
 payee Don Don: Donki
+payee Ebeneezer's Kebabs & Pizzeria
 payee FOTD 日食
 payee Frontline Solvers
 payee Fusion
@@ -417,6 +420,7 @@ payee Natural Bakery 天然工房 By A-1 Bakery Group
 payee New Jersey Institute of Technology
 payee Nice to CU
 payee No Brand Burger
+payee Oliver's Super Sandwiches
 payee ParknShop
 payee Pepper Lunch
 payee Peulleiting Incheongon
@@ -437,6 +441,7 @@ payee Tao Bin Beverage
 payee Taste
 payee The Commercial Press (CityU)
 payee Tokkijung Project
+payee UNY
 payee Vitasoy
 payee Wellcome
 payee Wellent
