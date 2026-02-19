@@ -72,7 +72,7 @@ Any deviation from these rules will result in unbalanced or non-compliant journa
 ### 2.2 Journal Mapping
 
 - **Date/Time:** Use the payout date/time as the transaction date, and always add `time` and `timezone` tags with second precision if available.
-- **IDs:** Include all available payout, bank, and platform IDs in parentheses at the start of the payee line. **Do not include payout trace IDs (such as Stripe trace codes) in the payee line. Only use payout IDs and other relevant identifiers.**
+- **IDs:** Include payout IDs (`po_...`) and other platform-provided identifiers in parentheses at the start of the payee line. **Never include bank account identifiers (`ba_...`) in the payee line.** Do not include payout trace IDs (such as Stripe trace codes) in the payee line.
 - **Payee:** The payee should always be the platform name (e.g., 'Stripe', 'PayPal'), not a transaction type (e.g., 'Stripe payout', 'PayPal withdrawal'). Never include the transaction type in the payee field.
 - **Amounts:**
   - Credit the bank asset account (UUID) with the payout amount.

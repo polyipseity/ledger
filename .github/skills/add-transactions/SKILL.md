@@ -76,7 +76,7 @@ See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for 
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
   - Align columns and tags for readability. Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.
 - **Identifiers and Traceability:**
-  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability.
+  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability; for platform payouts, include payout IDs (`po_...`) when required but never include bank account identifiers (`ba_...`). If a mapping lists multiple identifiers, missing fields in the payee comment may be skipped — `id_mappings.yml` can provide fallback orders to handle those cases.
 - **Generalized Learnings:**
   - Always cross-reference `private.yaml`, `payee_mappings.yml`, and `id_mappings.yml` before assigning payees or formatting identifiers.
   - Never assume a payee UUID—always verify or create the mapping as needed.

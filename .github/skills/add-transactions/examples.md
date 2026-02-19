@@ -94,4 +94,87 @@ Notes: See `payee_mappings.yml`, `id_mappings.yml`, and `private.yaml` for mappi
 
 ---
 
+## 8. Gifts / Red packets (lai-see)
+
+Receiving and giving red packets (利是 / lai‑see) follows the same principles as other gifts: receipts are recorded against `equity:` (family or friends) and giving is recorded as an `expenses:gifts` posting. Use the asset account that actually moved (`assets:cash`, `assets:banks:<bank-uuid>`, or `assets:digital:*`) and include `; activity: gift` + payee UUID when available.
+
+A. Receive — family red packet (cash)
+
+```hledger
+2026-02-15 3833b42e-dad3-425c-b254-904be68993e4  ; activity: gift, time: 10:00, timezone: UTC+08:00
+    assets:cash                                               200.00 HKD
+    equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4  -200.00 HKD
+```
+
+B. Receive — friend red packet (bank/FPS)
+
+```hledger
+2026-02-15 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f  ; activity: gift, via: FPS, time: 09:12, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings 150.00 HKD
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f            -150.00 HKD
+```
+
+C. Give — send red packet (expense)
+
+```hledger
+2026-02-15 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f  ; activity: gift
+    expenses:gifts:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f   100.00 HKD
+    assets:cash                                                 -100.00 HKD
+```
+
+D. Give a physical gift (expense + object asset)
+
+```hledger
+2026-02-15 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f  ; activity: gift
+    expenses:gifts:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f   300.00 HKD
+    assets:objects:decorations                                    250.00 HKD  ; item: plush toy
+    assets:cash                                                  -50.00 HKD
+```
+
+Notes: - Receiving → use `equity:kins` or `equity:friends`; Giving → `expenses:gifts`. - Always record the asset account that changed and include `; activity: gift` and payee UUID when known.
+
+E. Receive — WeChat / Alipay (digital receive)
+
+```hledger
+2026-02-20 (wx_ABC123) 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f  ; activity: gift, via: WeChat Pay
+    assets:digital:WeChat:wx-abc123                              50.00 HKD
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f          -50.00 HKD
+```
+
+```hledger
+2026-02-20 (alipay_payout_01) ACME-Corp  ; activity: gift, via: Alipay → bank
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings 120.00 HKD
+    equity:organizations:ACME-Corp                                -120.00 HKD
+```
+
+F. Group‑split red packet (pool collected & distributed)
+
+```hledger
+2026-02-20 Group red-packet pool  ; activity: gift
+    assets:cash                                                 300.00 HKD
+    equity:friends:pool-collector                               -300.00 HKD
+```
+
+(distribute the pool later; settle `equity:friends` entries to reflect distribution)
+
+G. Corporate / organization gift
+
+```hledger
+2026-02-20 ACME Corp  ; activity: gift
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings 1 000.00 HKD
+    equity:organizations:ACME-Corp                              -1 000.00 HKD  ; gift from employer
+```
+
+Note: if the gift is taxable income, record under `revenues:` instead of `equity:` per tax guidance.
+
+H. Reimbursement / refund treated as gift (settlement, not revenue)
+
+```hledger
+2026-02-20 Friend repayment (repay expense)  ; activity: transfer
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings   80.00 HKD
+    equity:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f            -80.00 HKD  ; repayment of earlier expense
+```
+
+Notes: - Use `equity:friends` for reimbursements/settlements; treat true gifts as `equity:friends`/`equity:kins` (never `revenues:`). - When you collect and redistribute a pool, track temporary balances under `equity:friends` until settled.
+
 For additional edge cases and tests, update `./examples.md` and notify maintainers; keep all examples non-confidential and use placeholder UUIDs and randomized IDs. If a new worked example is added, also add a short note to `./lessons.md` explaining why the example was introduced.

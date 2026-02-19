@@ -42,6 +42,8 @@ This document describes the general workflow and best practices for automating t
 
 **Examples:** See `./examples.md` for the Octopus eDDA import worked examples (Pass 1: update existing; Pass 2: add new transaction).
 
+**Matching heuristic:** Do **not** use Octopus eDDA debtor-reference tokens found in provider emails for deduplication or transcription — these tokens are constant and unreliable. Match and deduplicate eDDA reloads using FRN/transfer IDs, timestamps, and amounts instead; do not add debtor-reference tokens to `id_mappings.yml`.
+
 **Summary workflow:** extract transaction data, search/deduplicate (update if matching), or insert a new transaction at the correct chronological position, then run `pnpm run format` and `pnpm run check` to validate. Prefer updates over duplicates; follow privacy and mapping rules in `payee_mappings.yml`, `id_mappings.yml`, and `private.yaml`.
 
 ### Related Skills & References

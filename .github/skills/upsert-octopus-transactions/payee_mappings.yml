@@ -58,10 +58,14 @@
 # Retail
 "百佳":
   - "Taste"
+"7-Eleven":
+  - "7-Eleven"
 "Union Cash Register Co. Ltd.":
   - "Cafe 100%" # could be other payees
 "自動販賣機":
   - "Swire" # via: COKE+ vending machine
+"太古可口可樂":
+  - "Swire"
 "Pin Me Limited":
   - "Comebuytea" # could be other payees
 九巴/龍運:

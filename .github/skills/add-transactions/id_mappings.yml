@@ -2,7 +2,22 @@
 # Purpose: Defines payee-specific ID extraction and ordering rules for transaction entry.
 # Structure: Each payee maps to a prioritized list of identifier orders and optional regex hints.
 # See: [add-transactions SKILL.md](./SKILL.md) for usage details and rules.
+# IMPORTANT: Octopus eDDA debtor-reference tokens appearing in provider emails are constant and MUST NOT be used for deduplication or recorded in journal entries or this file. Prefer FRN/transfer IDs, timestamps, and amounts when matching eDDA reloads.
 # KFC: Only use (receipt_id, store_id) for KFC
+
+"Stripe":
+  # Preferred identifier order: (HD, FRN, po_). If some identifiers are missing in the payee comment,
+  # allow the following fallback orders in priority order. Do NOT include bank account identifiers (`ba_...`).
+  orders:
+    - [hd, frn, payout_id]
+    - [hd, payout_id]
+    - [frn, payout_id]
+    - [payout_id]
+  regex:
+    hd: "HD[0-9A-Z]+"
+    frn: "FRN[0-9A-Z]+"
+    payout_id: "po_[A-Za-z0-9]+"
+
 "大生生活超市 (DS Groceries)":
   orders:
     - [receipt_no]
@@ -46,6 +61,14 @@
     transaction_id: "[0-9A-Z]{10,}"
     bill_number: "\\d{3}-\\d{6}"
     table_number: "\\d+"
+
+"Ebeneezer's Kebabs & Pizzeria":
+  orders:
+    - [transaction_id, table_number]
+  regex:
+    transaction_id: "[0-9A-Z]{10,}"
+    table_number: "\\d{1,4}"
+
 # Taste: Use (transaction_id, terminal_id) in this order. transaction_id is the 22-character alphanumeric code (e.g., 5B10612602021353394C18), terminal_id is the 22-digit numeric code (e.g., 8747640135330320260202). Only these two should be included in the payee line, in this order.
 "Taste":
   orders:
@@ -94,3 +117,43 @@
     - [receipt_id]
   regex:
     receipt_id: "\\d{7}"
+
+"9da2b39f-64b4-4721-a033-b50e84a4a76d":
+  orders:
+    - [receipt_no, octopus_no]
+  regex:
+    receipt_no: "\\d{2}\\/\\d{6}"
+    octopus_no: "\\d{7,9}"
+
+"Dondonya":
+  orders:
+    - [receipt_no, table_number]
+  regex:
+    receipt_no: "\\d{3}-\\d{5}"
+    table_number: "[A-Z]\\d{1,2}"
+
+"岡山一番店拉麵":
+  orders:
+    - [transaction_id, table_number]
+  regex:
+    transaction_id: "\\d{6}"
+    table_number: "\\d{1,3}"
+
+"UNY":
+  orders:
+    - [barcode, transaction_id]
+  regex:
+    barcode: "\\d{19}"
+    transaction_id: "\\d{6}"
+
+"Oliver's Super Sandwiches":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "\\d{3}-\\d{4}"
+
+"c3519e26-caa7-467e-8057-ff4a3eeabd55":
+  orders:
+    - [transaction_id]
+  regex:
+    transaction_id: "\\d{10}"

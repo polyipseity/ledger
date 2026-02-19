@@ -91,6 +91,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 - The Octopus merchant name is not in the mapping file.
 - The mapping file gives multiple possible payees and context is insufficient to choose.
 - The Octopus transaction time is close to multiple journal entries and it is unclear which to match.
+- The Octopus row shows an aggregate/group total that does not match any single journal posting or split (e.g. group bill total vs per-person shares). In this case **do not** attempt to split or match automatically — ask the user for instructions.
 - The payee is confidential but no UUID is found in `private.yaml`.
 - The transaction amount or type is unusual or does not fit known patterns.
 - The reload source is unclear (e.g., bank email not provided).

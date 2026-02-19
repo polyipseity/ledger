@@ -20,10 +20,14 @@
 "沙嗲王": ["沙嗲王 (Satay King)"]
 "McDonald's Hong Kong": ["McDonald's"]
 "百份百": ["Cafe 100%"]
+"Ebeneezer's": ["Ebeneezer's Kebabs & Pizzeria"]
 "HKUST": ["Maxim's Canteen II, HKUST"] # Receipts that include “(自助機)” or “(堂食)” for HKUST self-service/dine-in usually map to Maxim's Canteen II, HKUST.
+"Super Sandwiches": ["Oliver's Super Sandwiches"]
 "錦麗": ["錦麗 (Phole)"]
 "天仁茗茶": ["天仁茗茶 (TenRen's Tea)"]
 "大生生活超市": ["大生生活超市 (DS Groceries)"]
+"UNY": ["UNY"]
+"DONDONYA": ["Dondonya"]
 
 # Example one-to-many mappings (use sparingly; prefer creating more-specific keys where possible):
 "Maxim's": ["Maxim's Canteen II, HKUST", "Maxim's Cakes"]
