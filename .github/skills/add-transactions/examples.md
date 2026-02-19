@@ -147,6 +147,20 @@ E. Receive — WeChat / Alipay (digital receive)
     equity:organizations:ACME-Corp                                -120.00 HKD
 ```
 
+I. Receive — stranger / promotional (use `equity:unknown:strangers`)
+
+```hledger
+2026-02-17 unknown  ; activity: gift, time: 13:00, timezone: UTC+08:00
+    assets:cash                         20.00 HKD
+    equity:unknown:strangers           -20.00 HKD  ; item: red packet
+```
+
+```hledger
+2026-02-18 unknown  ; activity: gift, via: WeChat Pay, time: 17:00, timezone: UTC+08:00
+    assets:digital:WeChat:wx-abc123     40.00 HKD
+    equity:unknown:strangers           -40.00 HKD  ; item: red packet ×2
+```
+
 F. Group‑split red packet (pool collected & distributed)
 
 ```hledger

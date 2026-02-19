@@ -76,12 +76,17 @@ See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for 
   - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
   - Align columns and tags for readability. Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.
 - **Identifiers and Traceability:**
-  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability; for platform payouts, include payout IDs (`po_...`) when required but never include bank account identifiers (`ba_...`). If a mapping lists multiple identifiers, missing fields in the payee comment may be skipped — `id_mappings.yml` can provide fallback orders to handle those cases.
+  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability; see `platform_payout_transactions.md` and `id_mappings.yml` for platform-payout identifier rules (include `po_...` where appropriate; never include `ba_...`).
 - **Generalized Learnings:**
   - Always cross-reference `private.yaml`, `payee_mappings.yml`, and `id_mappings.yml` before assigning payees or formatting identifiers.
-  - Never assume a payee UUID—always verify or create the mapping as needed.
-  - Split all food/drink items into individual tags and maintain their order, omitting non-item descriptors and using modifiers as appropriate.
-  - Use the most contextually accurate account and tags.
+  - Record item modifiers inline with the `food_or_drink:` line (do **not** use a separate `modifiers:` tag).
+  - Record discounted item prices directly; do **not** add routine discounts as explicit negative postings.
+  - Split aggregated/combined receipt item lines into separate `food_or_drink:` entries when the receipt lists distinct items.
+  - If a receipt shows order vs payment timestamps, add `duration:` equal to the difference where appropriate (do **not** create duplicate transactions for end‑time rows).
+  - Record meaningful zero‑priced items as `0.00` postings with modifiers inline when they reflect consumption or choices (e.g., `熱咖啡 + 多奶`).
+  - Treat ordering‑method descriptors (e.g., `使用二維碼自助點餐`, `外賣/自取`) as metadata — do **not** transcribe them as postings.
+  - Use the most contextually accurate account and `eating:` tag (e.g., McDonald's combo in the afternoon → `eating: afternoon tea`).
+  - Do **not** use Octopus eDDA debtor‑reference tokens for matching or id‑mappings; prefer FRN/transfer IDs, timestamps, and amounts (see `specialized_transaction_import.md`).
   - Maintain strict formatting and tag order for consistency and readability.
 
 ### Status markers
