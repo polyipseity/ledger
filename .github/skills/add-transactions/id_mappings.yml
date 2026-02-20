@@ -120,10 +120,9 @@
 
 "9da2b39f-64b4-4721-a033-b50e84a4a76d":
   orders:
-    - [receipt_no, octopus_no]
+    - [receipt_no]
   regex:
     receipt_no: "\\d{2}\\/\\d{6}"
-    octopus_no: "\\d{7,9}"
 
 "Dondonya":
   orders:
