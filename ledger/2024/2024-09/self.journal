@@ -78,7 +78,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-09-02 (081-1339) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:41:17, timezone: UTC+08:00
+2024-09-02 (081-1339) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 16:41:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: hot local milk tea, food_or_drink: 忌廉湯, food_or_drink: 迷你肉醬意粉
 
@@ -102,7 +102,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-03 (????49) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: breakfast, time: 11:10, timezone: UTC+08:00
+2024-09-03 (????49) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, eating: breakfast, time: 11:10, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: roast chicken with rice + mild
 
@@ -184,11 +184,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-04 (T1#122) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 12:03:01, timezone: UTC+08:00
+2024-09-04 (T1#122) American Diner  ; activity: eating, eating: lunch, time: 12:03:01, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: all day American breakfast, food_or_drink: hash brown, food_or_drink: scrambled egg
 
-2024-09-04 (082-2443) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 14:35:19, timezone: UTC+08:00
+2024-09-04 (082-2443) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 14:35:19, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -224,7 +224,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
-2024-09-05 (082-2744) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 15:28:58, timezone: UTC+08:00
+2024-09-05 (082-2744) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 15:28:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -254,7 +254,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:activities     -100.00 HKD = 0.00 HKD
     revenues:rewards                         -50.00 HKD
 
-2024-09-07 (T1#142) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 13:30:15, timezone: UTC+08:00
+2024-09-07 (T1#142) American Diner  ; activity: eating, eating: lunch, time: 13:30:15, timezone: UTC+08:00
     assets:special:vouchers                                                -50.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.00 HKD
     expenses:food and drinks:dining                                         46.00 HKD  ; food_or_drink: scrambled egg, food_or_drink: smoked salmon breakfast, food_or_drink: thick toast
@@ -304,11 +304,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
-2024-09-09 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:45:52, timezone: UTC+08:00
+2024-09-09 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:45:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot local milk tea, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
-2024-09-09 (081-1552) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 14:29:12, timezone: UTC+08:00
+2024-09-09 (081-1552) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 14:29:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -344,7 +344,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: hot local milk tea, food_or_drink: medium fries, food_or_drink: sau egg
 
-2024-09-10 (082-2374) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:45:03, timezone: UTC+08:00
+2024-09-10 (082-2374) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 16:45:03, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -449,7 +449,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-16 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:50:38, timezone: UTC+08:00
+2024-09-16 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:50:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot local milk tea, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -466,7 +466,7 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:e81cf14c-79fc-4958-b694-1a2a2c0c9be1       60.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -60.00 HKD
 
-2024-09-16 (081-1205) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:40:42, timezone: UTC+08:00
+2024-09-16 (081-1205) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 16:40:42, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -510,7 +510,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-09-17 (081-1205) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 14:14:03, timezone: UTC+08:00
+2024-09-17 (081-1205) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 14:14:03, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 
@@ -538,7 +538,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-09-20 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 15:15, timezone: UTC+08:00
+2024-09-20 American Diner  ; activity: eating, eating: lunch, time: 15:15, timezone: UTC+08:00
     expenses:food and drinks:dining                           37.00 HKD  ; food_or_drink: unknown
     equity:friends:155a8fd9-d69c-4832-a013-d300ce8d5c22
 
@@ -566,11 +566,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.90 HKD
     expenses:transport:buses
 
-2024-09-24 (663901) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: lunch, time: 11:16, timezone: UTC+08:00
+2024-09-24 (663901) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, eating: lunch, time: 11:16, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: roast chicken with rice + spicy
 
-2024-09-24 (082-2720) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 14:27:45, timezone: UTC+08:00
+2024-09-24 (082-2720) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 14:27:45, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream soup, food_or_drink: hot local milk tea, food_or_drink: mini bolognese spaghetti
 

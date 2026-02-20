@@ -304,7 +304,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.80 HKD
     expenses:transport:minibuses
 
-2023-10-24 (081-1432) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: aftertoon tea, time: 16:19:07, timezone: UTC+08:00
+2023-10-24 (081-1432) Oliver's Super Sandwiches  ; activity: eating, eating: aftertoon tea, time: 16:19:07, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.80 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 三色芝士焗肉醬長通粉
 
@@ -426,7 +426,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -31.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: chocolate milkshake, food_or_drink: medium-sized fries, food_or_drink: sausage McMuffin with egg
 
-2023-10-30 (2023103022001432591405123658) 937f7345-cbe9-48d1-9746-d79fd001d2a6  ; activity: eating, eating: dinner, time: 18:01:33, timezone: UTC+08:00
+2023-10-30 (2023103022001432591405123658) Hungry Korean  ; activity: eating, eating: dinner, time: 18:01:33, timezone: UTC+08:00
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)      -52.00 HKD
     expenses:food and drinks:dining                                                 ; food_or_drink: rabokki
 

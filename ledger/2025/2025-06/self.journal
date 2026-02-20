@@ -70,7 +70,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-06-02 (155843, K123) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 09:40:53, timezone: UTC+08:00
+2025-06-02 (155843, K123) American Diner  ; activity: eating, eating: breakfast, time: 09:40:53, timezone: UTC+08:00
     expenses:food and drinks:dining                                         24.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot coffee (8 oz), food_or_drink: sauteed fresh mushroom, food_or_drink: scrambled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 

@@ -82,7 +82,7 @@ include ../../../preludes/self.alternatives.journal
     [assets:digital:SheepIt Render Farm:polyipseity]
 
 2023-11-06 (COUPON#0001#98) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 11:55:10, timezone: UTC+08:00
-    equity:external:self                                                                         50 000. _PT/B  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+    equity:external:self                                                                         50 000. _PT/B  ; voucher: American Diner ($20 Cash Coupon)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 8 360. _PT/B
 
 2023-11-06 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00
@@ -184,7 +184,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:activities:walking
 
 2023-11-29 (COUPON#0001#94) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:42:45, timezone: UTC+08:00
-    equity:external:self                                                                         50 000. _PT/B  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
+    equity:external:self                                                                         50 000. _PT/B  ; voucher: American Diner ($20 Cash Coupon)
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    -50 000. _PT/B = 10 229. _PT/B
 
 2023-11-29 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: activity, duration: -P1D, time: 23:59:59, timezone: UTC+08:00

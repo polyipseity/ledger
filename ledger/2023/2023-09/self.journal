@@ -26,11 +26,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                      52.00 HKD  ; food_or_drink: barbecue pork, food_or_drink: hot Ovaltine, food_or_drink: scrambled egg, food_or_drink: shrimp with quinoa
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
-2023-09-02 * (139807108023814523107029720230904199400) 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: billing, time: 15:50:04, timezone: UTC+08:00
+2023-09-02 * (139807108023814523107029720230904199400) Hong Kong Examinations and Assessment Authority  ; activity: billing, time: 15:50:04, timezone: UTC+08:00
     expenses:education                        1 994.00 HKD
     liabilities:accrued expenses:education
 
-2023-09-02 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: adjust, time: 21:08:52, timezone: UTC+08:00
+2023-09-02 Hong Kong Examinations and Assessment Authority  ; activity: adjust, time: 21:08:52, timezone: UTC+08:00
     liabilities:accrued expenses:education                       1 994.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
@@ -39,7 +39,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                      33.00 HKD  ; food_or_drink: hot Ovaltine, food_or_drink: 火腿絲濃湯通粉, food_or_drink: 蒜香牛油多士
     assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)
 
-2023-09-03 55fd2c61-ea16-45d0-94e6-7fbb1ac534e6  ; activity: transfer, time: 13, timezone: UTC+08:00
+2023-09-03 Hong Kong Examinations and Assessment Authority  ; activity: transfer, time: 13, timezone: UTC+08:00
     assets:cash                                                     82.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 

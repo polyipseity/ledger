@@ -21,7 +21,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -500.00 HKD
     assets:cash
 
-2023-07-03 82050afc-aac6-41aa-8066-d436a2c5434d  ; activity: eating, eating: lunch, time: 13:04, timezone: UTC+08:00
+2023-07-03 Yeh Lam Kwok Restaurant  ; activity: eating, eating: lunch, time: 13:04, timezone: UTC+08:00
     expenses:food and drinks:dining                                         42.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -85,7 +85,7 @@ include ../../../preludes/self.journal
     revenues:incomes:tutoring     -300.00 HKD
     assets:cash
 
-2023-07-19 82050afc-aac6-41aa-8066-d436a2c5434d  ; activity: eating, eating: lunch, time: 11:02, timezone: UTC+08:00
+2023-07-19 Yeh Lam Kwok Restaurant  ; activity: eating, eating: lunch, time: 11:02, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 

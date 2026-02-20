@@ -33,7 +33,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -26.70 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: fried egg, food_or_drink: ham, food_or_drink: hash brown, food_or_drink: hot Ovaltine, food_or_drink: pickled cabbage and shredded pork with vermicelli in soup
 
-2023-12-01 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 14:20, timezone: UTC+08:00
+2023-12-01 American Diner  ; activity: eating, eating: lunch, time: 14:20, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: spaghetti with pepperoni (tomato sauce)
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -215,7 +215,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: fried egg, food_or_drink: ham, food_or_drink: hot Ovaltine, food_or_drink: preserved vegetable and shredded pork with vermicelli in soup
 
-2023-12-12 (T1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 14:56:30, timezone: UTC+08:00
+2023-12-12 (T1#) American Diner  ; activity: eating, eating: lunch, time: 14:56:30, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: cream chesse hot dog (sautéed onion & cream cheese)
 
@@ -224,12 +224,12 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                                    ; food_or_drink: fried egg, food_or_drink: ham, food_or_drink: hot Ovaltine, food_or_drink: preserved vegetable and shredded pork with vermicelli in soup
 
 2023-12-13 (COUPON#0001#88) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 15:10:10, timezone: UTC+08:00
-    equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e         20.00 HKD  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000. _PT/B
-    equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B         50 000. _PT/B
+    assets:special:vouchers:American Diner         20.00 HKD  ; voucher: American Diner ($20 Cash Coupon)
+    equity:external:self.alternatives         -50 000. _PT/B
+    equity:conversions:HKD-_PT/B:HKD              -20.00 HKD
 
-2023-12-13 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 15:15:49, timezone: UTC+08:00
+2023-12-13 (T2#) American Diner  ; activity: eating, eating: lunch, time: 15:15:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: pepperoni hot dog (cheddar cheese & hot dog sauce)
 
@@ -263,9 +263,9 @@ include ../../../preludes/self.journal
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings                               21 050.00 HKD
     assets:digital:7e049a63-ac77-450b-a5f1-4d9a984421dd:68f02300-1650-4e1f-9321-1b96ad9b1e5f
 
-2023-12-15 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:32, timezone: UTC+08:00
+2023-12-15 American Diner  ; activity: eating, eating: breakfast, time: 10:32, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot coffee, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick bread with butter
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
+    assets:special:vouchers:American Diner                                 -20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-12-15 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:49, timezone: UTC+08:00
@@ -329,7 +329,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: fried egg, food_or_drink: ham, food_or_drink: hot Ovaltine, food_or_drink: preserved vegetable and shredded pork with vermicelli in soup
 
-2023-12-19 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: dinner, time: 15:17:35, timezone: UTC+08:00
+2023-12-19 (T2#) American Diner  ; activity: eating, eating: dinner, time: 15:17:35, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: Italian hot dog (bolognaise & cheese powder)
 
@@ -337,7 +337,7 @@ include ../../../preludes/self.journal
     assets:deferred expenses:education:tuition:universities    -3 705.00 HKD = 0.00 HKD
     expenses:education:tuition:universities
 
-2023-12-20 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:01, timezone: UTC+08:00
+2023-12-20 American Diner  ; activity: eating, eating: breakfast, time: 10:01, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot coffee, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -377,7 +377,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -26.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: BBQ pork with rice + less rice
 
-2023-12-22 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:50, timezone: UTC+08:00
+2023-12-22 American Diner  ; activity: eating, eating: breakfast, time: 10:50, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
@@ -478,7 +478,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 2 sausages, food_or_drink: rice + less rice, food_or_drink: roast chicken chop, food_or_drink: 燒汁
 
-2023-12-27 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:55, timezone: UTC+08:00
+2023-12-27 American Diner  ; activity: eating, eating: breakfast, time: 10:55, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast with butter
 
@@ -495,14 +495,14 @@ include ../../../preludes/self.journal
     assets:accrued revenues:education
 
 2023-12-28 (COUPON#0001#83) 96f69720-5471-4e88-bebe-3db7a77a086c  ; activity: voucher, time: 10:32:43, timezone: UTC+08:00
-    equity:conversions:HKD-_PT/B:_PT/B                               50 000. _PT/B
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e         20.00 HKD  ; voucher: ed096bd9-4609-4c33-9930-a0c6b67dde2e ($20 Cash Coupon)
-    equity:external:self.alternatives                               -50 000. _PT/B
-    equity:conversions:HKD-_PT/B:HKD                                    -20.00 HKD
+    equity:conversions:HKD-_PT/B:_PT/B         50 000. _PT/B
+    assets:special:vouchers:American Diner         20.00 HKD  ; voucher: American Diner ($20 Cash Coupon)
+    equity:external:self.alternatives         -50 000. _PT/B
+    equity:conversions:HKD-_PT/B:HKD              -20.00 HKD
 
-2023-12-28 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:54, timezone: UTC+08:00
+2023-12-28 American Diner  ; activity: eating, eating: breakfast, time: 10:54, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick bread with butter
-    assets:special:vouchers:ed096bd9-4609-4c33-9930-a0c6b67dde2e           -20.00 HKD
+    assets:special:vouchers:American Diner                                 -20.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 
 2023-12-28 (1K1#331) 02337778-bf4b-4675-be04-ea1270e22e5f  ; activity: eating, eating: dinner, time: 14:55:25, timezone: UTC+08:00
@@ -529,7 +529,7 @@ include ../../../preludes/self.journal
     liabilities:credit cards:98f4ffe4-8cab-4a79-b54a-9a870d2a9bf8    1 792.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2023-12-30 (K1#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:34:39, timezone: UTC+08:00
+2023-12-30 (K1#) American Diner  ; activity: eating, eating: breakfast, time: 10:34:39, timezone: UTC+08:00
     expenses:food and drinks:dining                                         23.00 HKD  ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick bread with butter
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521
 

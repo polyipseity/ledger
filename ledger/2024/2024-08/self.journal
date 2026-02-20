@@ -56,7 +56,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-01 (081-1433) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:54:06, timezone: UTC+08:00
+2024-08-01 (081-1433) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:54:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -164,7 +164,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-08 (082-2617) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:27:51, timezone: UTC+08:00
+2024-08-08 (082-2617) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:27:51, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -288,7 +288,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-08-15 (082-2195) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 15:25:43, timezone: UTC+08:00
+2024-08-15 (082-2195) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 15:25:43, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: hot local milk tea, food_or_drink: 忌廉湯, food_or_drink: 迷你肉醬意粉
 
@@ -522,7 +522,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.40 HKD
     expenses:transport:trains
 
-2024-08-26 * b18865fd-acc7-4fbe-b21a-b3473640ca13  ; time: 17, timezone: UTC+08:00
+2024-08-26 * HKtag  ; time: 17, timezone: UTC+08:00
     revenues:rewards:competitions                                 -125.00 HKD
     assets:loans:friends:e2613673-8956-40d9-8024-53163878b766      125.00 HKD = 125.00 HKD
 

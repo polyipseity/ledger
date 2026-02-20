@@ -47,11 +47,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-02 (082-2779) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:29:36, timezone: UTC+08:00
+2024-05-02 (082-2779) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:29:36, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱即磨咖啡, food_or_drink: 迷你肉醬意粉
 
-2024-05-02 (082-2891) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 19:24:23, timezone: UTC+08:00
+2024-05-02 (082-2891) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 19:24:23, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.60 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 碎蛋沙律焗薯, food_or_drink: 青菜沙律
 
@@ -91,7 +91,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
-2024-05-03 (082-2020) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:05:15, timezone: UTC+08:00
+2024-05-03 (082-2020) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:05:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -156,7 +156,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-06 (082-2395) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:33:31, timezone: UTC+08:00
+2024-05-06 (082-2395) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:33:31, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
@@ -200,11 +200,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.80 HKD
     expenses:transport:buses
 
-2024-05-07 (082-2553) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: breakfast, time: 10:34:22, timezone: UTC+08:00
+2024-05-07 (082-2553) Oliver's Super Sandwiches  ; activity: eating, eating: breakfast, time: 10:34:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 炒蛋, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 茄汁焗豆, food_or_drink: 蕃茄濃湯長通粉, food_or_drink: 蜜味火腿
 
-2024-05-07 (081-1294) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:29:41, timezone: UTC+08:00
+2024-05-07 (081-1294) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:29:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
@@ -240,11 +240,11 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:48d0497b-6001-49ec-8928-94936ae9eaca        6.00 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings
 
-2024-05-08 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 09:59, timezone: UTC+08:00
+2024-05-08 American Diner  ; activity: eating, eating: breakfast, time: 09:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
-2024-05-08 (082-2047) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:54:37, timezone: UTC+08:00
+2024-05-08 (082-2047) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:54:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱即磨咖啡, food_or_drink: 迷你肉醬意粉
 
@@ -272,7 +272,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-09 (081-1792) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:02:34, timezone: UTC+08:00
+2024-05-09 (081-1792) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:02:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -332,7 +332,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-10 (082-2620) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:58:08, timezone: UTC+08:00
+2024-05-10 (082-2620) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:58:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱即磨咖啡, food_or_drink: 迷你肉醬意粉
 
@@ -380,7 +380,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-13 (082-2933) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:40:34, timezone: UTC+08:00
+2024-05-13 (082-2933) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:40:34, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -412,11 +412,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-14 (082-2123) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:09:03, timezone: UTC+08:00
+2024-05-14 (082-2123) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:09:03, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
-2024-05-14 (642417) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: dinner, time: 19:20, timezone: UTC+08:00
+2024-05-14 (642417) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, eating: dinner, time: 19:20, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: roast chicken with chips + mild
 
@@ -485,7 +485,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-16 (082-2345) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:16:41, timezone: UTC+08:00
+2024-05-16 (082-2345) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:16:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -513,7 +513,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-17 (082-2630) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:25:27, timezone: UTC+08:00
+2024-05-17 (082-2630) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:25:27, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -549,7 +549,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-05-18 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:19, timezone: UTC+08:00
+2024-05-18 American Diner  ; activity: eating, eating: breakfast, time: 10:19, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -685,7 +685,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-21 (081-1458) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: breakfast, time: 10:28:22, timezone: UTC+08:00
+2024-05-21 (081-1458) Oliver's Super Sandwiches  ; activity: eating, eating: breakfast, time: 10:28:22, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -28.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 炒蛋, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 茄汁焗豆, food_or_drink: 蕃茄濃湯長通粉, food_or_drink: 蜜味火腿
 
@@ -717,7 +717,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-22 (081-1839) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 15:40:47, timezone: UTC+08:00
+2024-05-22 (081-1839) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 15:40:47, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -916,7 +916,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-28 (081-1731) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 16:32:37, timezone: UTC+08:00
+2024-05-28 (081-1731) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 16:32:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 忌廉湯, food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉
 
@@ -968,7 +968,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-29 (081-1871) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 16:08:00, timezone: UTC+08:00
+2024-05-29 (081-1871) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 16:08:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 
@@ -1056,7 +1056,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-05-31 (082-2035) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: lunch, time: 14:41:06, timezone: UTC+08:00
+2024-05-31 (082-2035) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:41:06, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -29.20 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 熱港式伯爵奶茶, food_or_drink: 迷你肉醬意粉, food_or_drink: 迷你雙層沙律三文治
 

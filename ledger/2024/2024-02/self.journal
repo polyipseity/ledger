@@ -72,7 +72,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
-2024-02-02 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:41, timezone: UTC+08:00
+2024-02-02 American Diner  ; activity: eating, eating: breakfast, time: 10:41, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -167,7 +167,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -7.60 HKD
     expenses:transport:minibuses
 
-2024-02-05 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:52, timezone: UTC+08:00
+2024-02-05 American Diner  ; activity: eating, eating: breakfast, time: 10:52, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -191,7 +191,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-06 ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:59, timezone: UTC+08:00
+2024-02-06 American Diner  ; activity: eating, eating: lunch, time: 11:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: bacon, food_or_drink: mushroom cream sauce, food_or_drink: spaghetti
 
@@ -223,7 +223,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-07 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:46:12, timezone: UTC+08:00
+2024-02-07 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:46:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast with butter
 
@@ -275,7 +275,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-09 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:26:38, timezone: UTC+08:00
+2024-02-09 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:26:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -312,7 +312,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-14 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:54:56, timezone: UTC+08:00
+2024-02-14 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:54:56, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -344,7 +344,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-15 (614833) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: lunch, time: 13:49, timezone: UTC+08:00
+2024-02-15 (614833) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, eating: lunch, time: 13:49, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: vegetable biryani with salad
 
@@ -380,7 +380,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.50 HKD
     expenses:transport:trains
 
-2024-02-16 (082-2355) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 18:42:08, timezone: UTC+08:00
+2024-02-16 (082-2355) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 18:42:08, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.60 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: spaghetti bolognese
 
@@ -396,7 +396,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-19 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:47:59, timezone: UTC+08:00
+2024-02-19 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:47:59, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -440,7 +440,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-21 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:45:13, timezone: UTC+08:00
+2024-02-21 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:45:13, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -464,7 +464,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-22 (617613) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, eating: dinner, time: 17:00, timezone: UTC+08:00
+2024-02-22 (617613) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, eating: dinner, time: 17:00, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: roast chicken with chips + spicy
 
@@ -492,7 +492,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-23 (000-2709) 2d1171e9-9241-4c0a-bf27-1d1c2bdf6483  ; activity: eating, duration: PT1H37M45S, eating: dinner, time: 18:08:52, timezone: UTC+08:00
+2024-02-23 (000-2709) Ebeneezer's Kebabs & Pizzeria  ; activity: eating, duration: PT1H37M45S, eating: dinner, time: 18:08:52, timezone: UTC+08:00
     liabilities:loans:friends:3344b973-41df-45a9-bc47-0004ed1049db     -111.40 HKD
     expenses:food and drinks:dining
 
@@ -500,7 +500,7 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:3344b973-41df-45a9-bc47-0004ed1049db      111.40 HKD = 0.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2
 
-2024-02-23 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:24:04, timezone: UTC+08:00
+2024-02-23 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:24:04, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hash brown, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg
 
@@ -536,7 +536,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-26 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:57:04, timezone: UTC+08:00
+2024-02-26 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:57:04, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast
 
@@ -576,7 +576,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.60 HKD
     expenses:transport:buses
 
-2024-02-28 (T2#) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: breakfast, time: 10:58, timezone: UTC+08:00
+2024-02-28 (T2#) American Diner  ; activity: eating, eating: breakfast, time: 10:58, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -23.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: baked fried tomato beans, food_or_drink: hot chocolate, food_or_drink: mushroom (V), food_or_drink: scrambled egg, food_or_drink: thick toast
 
@@ -616,7 +616,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -32.00 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: roast mushroom and bean curd rice + less rice
 
-2024-02-29 (082-2160) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 19:10:17, timezone: UTC+08:00
+2024-02-29 (082-2160) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 19:10:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -41.80 HKD
     expenses:food and drinks:dining                                                    ; food_or_drink: 煙三文魚 · 蜆肉意粉配刁草忌廉汁
 

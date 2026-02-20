@@ -327,7 +327,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-07-17 (081-1453) 96da94cc-4caf-4935-92e6-409046be8486  ; activity: eating, eating: dinner, time: 16:56:00, timezone: UTC+08:00
+2025-07-17 (081-1453) Oliver's Super Sandwiches  ; activity: eating, eating: dinner, time: 16:56:00, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.10 HKD  ; food_or_drink: cream soup, food_or_drink: hot coffee, food_or_drink: mini bolognese spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.10 HKD
 
@@ -355,7 +355,7 @@ include ../../../preludes/self.journal
     expenses:transport:buses                                                 2.90 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
 
-2025-07-18 (173219, K224) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:56:03, timezone: UTC+08:00
+2025-07-18 (173219, K224) American Diner  ; activity: eating, eating: lunch, time: 11:56:03, timezone: UTC+08:00
     expenses:food and drinks:dining                                         38.00 HKD  ; food_or_drink: all day American breakfast, food_or_drink: hash brown, food_or_drink: scrambled egg
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -38.00 HKD
 

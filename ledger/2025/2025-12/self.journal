@@ -384,7 +384,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.20 HKD
     revenues:rewards                                                      -4.20 _PT/E
 
-2025-12-15 (298346, K192) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: lunch, time: 11:03:15, timezone: UTC+08:00
+2025-12-15 (298346, K192) American Diner  ; activity: eating, eating: lunch, time: 11:03:15, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: 忌廉煙三文魚意粉 + more spaghetti
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.00 HKD
 
@@ -463,7 +463,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
-2025-12-18 (301564, K646) ed096bd9-4609-4c33-9930-a0c6b67dde2e  ; activity: eating, eating: afternoon tea, time: 16:01:10, timezone: UTC+08:00
+2025-12-18 (301564, K646) American Diner  ; activity: eating, eating: afternoon tea, time: 16:01:10, timezone: UTC+08:00
     expenses:food and drinks:dining                                         33.00 HKD  ; food_or_drink: hot Ovaltine (8 oz), food_or_drink: 炸薯條, food_or_drink: 燒雞髀
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
 
