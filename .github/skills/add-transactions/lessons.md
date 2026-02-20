@@ -47,6 +47,11 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 
 - 2026-02-19: Octopus reload/eDDA transfer rule integrated → see `upsert-octopus-transactions/lessons.md` for the bank→wallet verification rule when adding reloads.
 
+## 2026-02-20 — Itemization clarification
+
+- Ensure menu lines showing multiple separate items are split; do not use `+` except for true modifiers. Integrated → `food_transactions.md` under "Itemization, Modifiers, Item Numbers, and Tagging".
+- 2026-02-20: Octopus merchant “其他” should map to Cafe 100% and match existing breakfast entry; avoid creating duplicates. Added payee mapping accordingly.
+
 ---
 
 (Keep this file short; historical detail and longer rationales may be stored in PR descriptions or in commit messages.)

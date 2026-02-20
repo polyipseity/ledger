@@ -19,3 +19,7 @@ Keep this file short and append dated one-line notes when adding examples or rul
 
 - Integrated worked examples into `examples.md` (duration insertion, KMB reward accrual, vending‑machine & public light bus mappings). Operational rules (bank→wallet verification, duplicate end‑time rows → `duration:`) are captured in `SKILL.md` and `specialized_transaction_import.md`.
 - Archived detailed bullets here — see `examples.md`, `SKILL.md`, and `specialized_transaction_import.md` for canonical guidance and worked examples.
+
+## 2026-02-20 — Payee mapping & matching
+
+- 2026-02-20: Octopus merchant “其他” was a duplicate Cafe 100% breakfast entry; added mapping and confirmed matching should occur instead of creating a new transaction.

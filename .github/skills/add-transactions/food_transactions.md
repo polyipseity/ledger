@@ -20,7 +20,7 @@ This file contains rules, clarifications, and examples specific to food and rest
 
 - **Always fully itemize all food and drink items.** Never use placeholders like "(see receipt)". Every item and its amount must be listed explicitly, with a separate `food_or_drink:` tag for each.
 - **For Taste and similar supermarkets or bakeries, always include the item number or code from the receipt as part of the `food_or_drink:` tag, if available.** For example, `food_or_drink: 091421 LA BOULANGERIE BREAD`.
-- Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`).
+- Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`). If a receipt line shows multiple full-priced menu items, they are **not** modifiers; do **not** join them with `+`.
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
 - Remove conjunction prefixes that are not part of the item name (e.g. "配朱古力" → "朱古力").
