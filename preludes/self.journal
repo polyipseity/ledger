@@ -96,6 +96,7 @@ account assets:special:rewards:credit cards                                     
 account assets:special:rewards:credit cards:928bfdb5-c29d-4126-b22e-84ea35390156                  ; type: A
 account assets:special:rewards:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                  ; type: A
 account assets:special:vouchers                                                                   ; type: A
+account assets:special:vouchers:4d3562ae-b4d4-4444-b428-33f0aced1462                              ; type: A
 account assets:special:vouchers:American Diner                                                    ; type: A
 account assets:special:vouchers:Consumption Voucher Scheme (Hong Kong)                            ; type: A
 account assets:special:vouchers:ParknShop                                                         ; type: A

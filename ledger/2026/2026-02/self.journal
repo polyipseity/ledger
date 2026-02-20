@@ -616,9 +616,56 @@ include ../../../preludes/self.journal
     liabilities:loans:friends:968eeeeb-a2b6-4c7c-a789-e315c628d24c       72.60 HKD = 0.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -72.60 HKD
 
+2026-02-20 (41218292, 32) Cafe 100%  ; activity: eating, duration: PT22M43S, eating: breakfast, time: 07:17:17, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         37.00 HKD  ; food_or_drink: 巴馬臣芝士軟包, food_or_drink: 輕量火腿絲通粉, food_or_drink: 野菌鮮奶炒滑蛋
+    expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -37.00 HKD
+
+2026-02-20 7-Eleven  ; activity: transfer, time: 07:42, timezone: UTC+08:00
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      150.00 HKD
+    assets:cash                                                           -150.00 HKD
+
+2026-02-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 07:50, timezone: UTC+08:00
+    expenses:transport:buses                                                12.10 HKD
+    assets:accrued revenues:rewards                                       12.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -12.10 HKD
+    revenues:rewards                                                     -12.10 _PT/E
+
+2026-02-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 08:13, timezone: UTC+08:00
+    expenses:transport:buses                                                 2.90 HKD
+    assets:accrued revenues:rewards                                        2.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
+    revenues:rewards                                                      -2.90 _PT/E
+
 2026-02-20 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 09:00, timezone: UTC+08:00
     assets:accrued revenues:incomes:education      136.00 HKD
     revenues:incomes:education                    -136.00 HKD
+
+2026-02-20 American Diner  ; activity: eating, eating: lunch, time: 11:40, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         39.00 HKD  ; food_or_drink: (unknown)
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -39.00 HKD
+
+2026-02-20 Swire  ; activity: consumption, time: 11:42, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: "Schweppes" +C Lemon Soda
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
+
+2026-02-20 4d3562ae-b4d4-4444-b428-33f0aced1462  ; activity: eating, eating: afternoon tea, time: 14:08, timezone: UTC+08:00
+    expenses:food and drinks:drinks                                    32.00 HKD  ; food_or_drink: Cafe Latte
+    assets:special:vouchers:4d3562ae-b4d4-4444-b428-33f0aced1462       32.00 HKD  ; voucher: free restricted drink voucher
+    assets:special:vouchers:4d3562ae-b4d4-4444-b428-33f0aced1462      -32.00 HKD  ; voucher: free restricted drink voucher
+    equity:unknown                                                    -32.00 HKD
+
+2026-02-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 15:53, timezone: UTC+08:00
+    expenses:transport:buses                                                 3.10 HKD
+    assets:accrued revenues:rewards                                        3.10 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
+    revenues:rewards                                                      -3.10 _PT/E
+
+2026-02-20 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 16:16, timezone: UTC+08:00
+    expenses:transport:buses                                                 5.90 HKD
+    assets:accrued revenues:rewards                                        5.90 _PT/E
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
+    revenues:rewards                                                      -5.90 _PT/E
 
 2026-02-25 * (87985710126, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, duration: -P1M, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD
