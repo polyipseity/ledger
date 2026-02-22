@@ -24,3 +24,21 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_SEA:_SEA                                            1.900 _SEA = 1.900 _SEA
     equity:external:self                                                       200 000. _PT/B = 200 000. _PT/B
     equity:opening/closing balances
+
+2026-02-14 self  ; activity: collect, duration: -P3M26D, time: 13, timezone: UTC+08:00
+    assets:recycables
+    revenues:recycables:food and drinks     -0.200 _MET
+    revenues:recycables:food and drinks     -0.100 _PLA
+    revenues:recycables:packaging           -0.300 _OPL
+
+2026-02-14 GREEN@*  ; activity: recycle, duration: PT0M16S, time: 13:11:46, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       13 GREEN$ = 8 209. GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                       0.200 _MET  ; rate: 10, rate: unit 0.1, recycle: 金屬, time: 13:11:30, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.300 _OPL  ; rate: 10, rate: unit 0.1, recycle: 其他塑膠, time: 13:11:38, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.100 _PLA  ; rate: 80, rate: unit 0.1, recycle: 膠樽, time: 13:11:46, timezone: UTC+08:00
+    assets:recycables                                                        -0.200 _MET = 0.000 _MET
+    assets:recycables                                                        -0.300 _OPL = 0.000 _OPL
+    assets:recycables                                                        -0.100 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_MET:GREEN$                                      -2 GREEN$
+    equity:conversions:GREEN$-_OPL:GREEN$                                      -3 GREEN$
+    equity:conversions:GREEN$-_PLA:GREEN$                                      -8 GREEN$
