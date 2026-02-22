@@ -51,6 +51,7 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 
 - Ensure menu lines showing multiple separate items are split; do not use `+` except for true modifiers. Integrated → `food_transactions.md` under "Itemization, Modifiers, Item Numbers, and Tagging".
 - 2026-02-20: Octopus merchant “其他” should map to Cafe 100% and match existing breakfast entry; avoid creating duplicates. Added payee mapping accordingly.
+- 2026-02-22: When a receipt shows hot coffee as a separate line with zero price, record it as its own posting (0.00 HKD) under `expenses:food and drinks:drinks` instead of bundling it into the dining total. Before creating a payee entry, always check `private.yaml` for a corresponding UUID; if found, use the UUID in the transaction and update `id_mappings.yml` with the relevant identifier instead of relying on the plain name (do not document the specific mapping here).
 
 ---
 

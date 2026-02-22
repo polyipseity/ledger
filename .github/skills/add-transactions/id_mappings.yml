@@ -150,7 +150,12 @@
     - [receipt_id]
   regex:
     receipt_id: "\\d{3}-\\d{4}"
-
+"7fc76083-5175-421d-8c6f-d15897b5ee8e":
+  orders:
+    - [n_ref_id, branch_id]
+  regex:
+    n_ref_id: "N\\d{11}"
+    branch_id: "[0-9A-Fa-f]{4}"
 "c3519e26-caa7-467e-8057-ff4a3eeabd55":
   orders:
     - [transaction_id]
