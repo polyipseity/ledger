@@ -46,6 +46,7 @@ Notes:
 - Tie-breaking & pairing:
   - Prefer matches containing a bank transfer reference (FRN...) when present.
   - Treat paired flows (bank transfer FRN credit followed by wallet→card debit on same date) as linked and update both times consistently.
+  - After updating a bank-transfer credit, inspect the very next journal entry; if it represents the corresponding reload (either tagged `activity: reload` or a self-to-self `activity: transfer`), adjust that entry’s datetime to the wallet→card timestamp and add a `duration:` metadata equal to the difference between the two times.
   - If multiple candidates remain, list them and require user confirmation; do not auto-apply.
 
 - Timezones: treat statement times as local (UTC+08:00) by default; preserve timezone tags and avoid implicit conversions unless the user requests one.

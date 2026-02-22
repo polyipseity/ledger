@@ -94,6 +94,32 @@ Notes: See `payee_mappings.yml`, `id_mappings.yml`, and `private.yaml` for mappi
 
 ---
 
+## 9. Recycling & GREEN@ points
+
+When you recycle materials using the GREEN@ mobile app, two transactions are required in `self.alternatives.journal`. First record the physical collection, then the point credit event. Example from a 2026‑02‑14 app log where 0.1 kg plastic bottles (+8 GREEN$), 0.3 kg other plastics (+3 GREEN$), and 0.2 kg metal (+2 GREEN$) were scanned:
+
+```hledger
+2026-02-14 self  ; activity: collect, duration: -P3M26D, time: 13, timezone: UTC+08:00
+    assets:recycables
+    revenues:recycables:food and drinks     -0.200 _MET
+    revenues:recycables:food and drinks     -0.100 _PLA
+    revenues:recycables:packaging           -0.300 _OPL
+
+2026-02-14 GREEN@*  ; activity: recycle, duration: PT0M16S, time: 13:11:46, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       13 GREEN$ = 8 209. GREEN$
+    equity:conversions:GREEN$-_MET:_MET                                       0.200 _MET  ; rate: 10, rate: unit 0.1, recycle: 金屬, time: 13:11:30, timezone: UTC+08:00
+    equity:conversions:GREEN$-_OPL:_OPL                                       0.300 _OPL  ; rate: 10, rate: unit 0.1, recycle: 其他塑膠, time: 13:11:38, timezone: UTC+08:00
+    equity:conversions:GREEN$-_PLA:_PLA                                       0.100 _PLA  ; rate: 80, rate: unit 0.1, recycle: 膠樽, time: 13:11:46, timezone: UTC+08:00
+    assets:recycables                                                        -0.200 _MET = 0.000 _MET
+    assets:recycables                                                        -0.300 _OPL = 0.000 _OPL
+    assets:recycables                                                        -0.100 _PLA = 0.000 _PLA
+    equity:conversions:GREEN$-_MET:GREEN$                                     -2 GREEN$
+    equity:conversions:GREEN$-_OPL:GREEN$                                     -3 GREEN$
+    equity:conversions:GREEN$-_PLA:GREEN$                                     -8 GREEN$
+```
+
+Note how the first transaction moves commodities out of the temporary `assets:recycables` account, and the second records the points earned along with detailed conversion metadata.
+
 ## 8. Gifts / Red packets (lai-see)
 
 Receiving and giving red packets (利是 / lai‑see) follows the same principles as other gifts: receipts are recorded against `equity:` (family or friends) and giving is recorded as an `expenses:gifts` posting. Use the asset account that actually moved (`assets:cash`, `assets:banks:<bank-uuid>`, or `assets:digital:*`) and include `; activity: gift` + payee UUID when available.

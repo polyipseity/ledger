@@ -88,6 +88,7 @@ See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for 
   - Use the most contextually accurate account and `eating:` tag (e.g., McDonald's combo in the afternoon → `eating: afternoon tea`).
   - Do **not** use Octopus eDDA debtor‑reference tokens for matching or id‑mappings; prefer FRN/transfer IDs, timestamps, and amounts (see `specialized_transaction_import.md`).
   - Maintain strict formatting and tag order for consistency and readability.
+  - When transcribing recycling activity from GREEN@ events, create two linked transactions in `self.alternatives.journal`: a `self` collect transaction reducing `assets:recycables` with appropriate `revenues:recycables:*` postings for each commodity, and a subsequent `GREEN@*` transaction crediting `assets:digital:GREEN@COMMMUNITY` with equity conversion lines that record weights and computed rates based on points earned. Compute rates from the observed points-to-weight ratio (standardized to 0.1‑kg units) and include `duration:` and per-line timestamps when available. Ensure balance assertions for both asset and point changes.
 
 ### Status markers
 

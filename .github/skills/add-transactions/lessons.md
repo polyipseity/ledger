@@ -46,12 +46,16 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 ## 2026-02-19 — Octopus reload / eDDA transfer rule (continuous learning)
 
 - 2026-02-19: Octopus reload/eDDA transfer rule integrated → see `upsert-octopus-transactions/lessons.md` for the bank→wallet verification rule when adding reloads.
+- 2026-02-22: expanded matching logic in `match-octopus-statement-transactions` to also adjust reload/transfer entries immediately following bank transfers by appending statement seconds (no duration tag).
+- 2026-02-22: when using the statement‑matching skill, always check for and update the adjacent reload/transfer entry after a bank transfer; do not add `duration:` metadata even if a time difference exists.
+- 2026-02-22: clarified that the skill should inspect only the immediately following journal row for reloads, and that seconds updates on both sides must be consistent.
 
 ## 2026-02-20 — Itemization clarification
 
 - Ensure menu lines showing multiple separate items are split; do not use `+` except for true modifiers. Integrated → `food_transactions.md` under "Itemization, Modifiers, Item Numbers, and Tagging".
 - 2026-02-20: Octopus merchant “其他” should map to Cafe 100% and match existing breakfast entry; avoid creating duplicates. Added payee mapping accordingly.
 - 2026-02-22: When a receipt shows hot coffee as a separate line with zero price, record it as its own posting (0.00 HKD) under `expenses:food and drinks:drinks` instead of bundling it into the dining total. Before creating a payee entry, always check `private.yaml` for a corresponding UUID; if found, use the UUID in the transaction and update `id_mappings.yml` with the relevant identifier instead of relying on the plain name (do not document the specific mapping here).
+- 2026-02-22: Recycling events logged via GREEN@ require two transactions: one collecting recycables (reducing `assets:recycables` and crediting `revenues:recycables:*`), and a follow‑on `GREEN@*` transaction that credits the earned GREEN$ and includes `equity:conversions` lines recording weights and computed rates. Header times should include minutes when available (e.g. `time: 13:11:46`), and the duration tag must be the negative interval since the previous collect transaction (calculate across files if needed). Within the `GREEN@*` transaction, list all conversion and asset‑removal lines in **strict chronological order** by their timestamp comments (earliest first). Rates follow the same style as earlier months (see 2025‑10 sample): values 80/10/10 with `rate: unit 0.1`. Keep the `rate:` comments consistent with the collected weight units. See the updated example in `examples.md`.
 
 ---
 
