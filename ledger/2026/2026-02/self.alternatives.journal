@@ -42,3 +42,7 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_MET:GREEN$                                      -2 GREEN$
     equity:conversions:GREEN$-_OPL:GREEN$                                      -3 GREEN$
     equity:conversions:GREEN$-_PLA:GREEN$                                      -8 GREEN$
+
+2026-02-14 unknown  ; activity: adjust, time: 13:12, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       50 GREEN$ = 8 259. GREEN$
+    equity:unknown                                                            -50 GREEN$

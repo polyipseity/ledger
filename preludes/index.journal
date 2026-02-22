@@ -10,6 +10,7 @@ account equity:external:self               ; type: E
 account equity:external:self.alternatives  ; type: E
 account equity:opening/closing balances    ; type: E
 account equity:unaccounted                 ; type: E
+account equity:unknown                     ; type: E
 account expenses                           ; type: X
 account expenses:depreciation              ; type: X
 account expenses:depreciation:wear         ; type: X
