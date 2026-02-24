@@ -15,6 +15,29 @@ assets:digital:Octopus cards:...      -28.00 HKD
 
 Notes: combine base item and modifiers with `+` and keep tags in posting comments only.
 
+## 1a. Verify beverage presence per transaction
+
+A single merchant may sometimes offer a free drink. **Record the drink only when it appears on the specific receipt.**
+
+Example A (coffee listed):
+
+```text
+2026-02-23 (41219150, 62) Cafe 100%  ; activity: eating, time: 08:08:31, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: 無糖高纖鮮奶麥皮, food_or_drink: 蛋治, food_or_drink: 鮮奶滑蛋三文治
+    expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶
+    assets:digital:Octopus cards:...                                       -35.00 HKD
+```
+
+Example B (no coffee):
+
+```text
+2026-02-23 (081-1648) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 12:39:39, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         39.30 HKD  ; food_or_drink: 川辣番茄濃湯, food_or_drink: 雞肉腸讚歧烏冬, food_or_drink: 香煎豬扒
+    assets:digital:Octopus cards:...                                       -39.30 HKD
+```
+
+Notes: each transaction must be treated on its own; do not generalize from past entries or merchant patterns.
+
 ## 2. Lending/Borrowing: Pending → Cleared
 
 ```hledger

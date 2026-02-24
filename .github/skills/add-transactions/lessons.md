@@ -43,6 +43,13 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 - Integrated → `specialized_transaction_import.md` & `upsert-octopus-transactions/lessons.md` for Octopus/eDDA matching heuristics (do **not** use debtor‑reference tokens; prefer FRN/transfer IDs, timestamps, and amounts) and the bank→wallet verification rule.
 - Archived detailed notes → see the referenced files above for the canonical rules and worked examples.
 
+## 2026-02-24 — Coffee line, prefix learning, and matching rules
+
+- Verified that free coffee lines may appear on some Cafe 100% receipts but not all; transactions must be handled individually. Added explicit examples to `examples.md` and rules to `food_transactions.md` under the complimentary item bullet.
+- Noted that the conjunction prefix “配” should always be stripped when it acts as “with” rather than being part of a food name; updated `food_transactions.md` accordingly.
+- When matching an Octopus/eDDA row to an existing journal transaction, **always update the header with any missing `duration:` computed from the end‑time row**. This prevents stale entries and maintains auditability.
+- After inserting or editing transactions, double‑check the entire journal to ensure **strict chronological order** (date → time). If entries are out‑of-order, move them immediately; chronological order is non-negotiable. (Reordered Feb 23 entries as a learning example.)
+
 ## 2026-02-19 — Octopus reload / eDDA transfer rule (continuous learning)
 
 - 2026-02-19: Octopus reload/eDDA transfer rule integrated → see `upsert-octopus-transactions/lessons.md` for the bank→wallet verification rule when adding reloads.

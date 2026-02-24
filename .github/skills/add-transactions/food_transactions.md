@@ -24,9 +24,11 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
 - Remove conjunction prefixes that are not part of the item name (e.g. "配朱古力" → "朱古力").
+- The prefix character "配" is especially common; always strip it from the item name when it means "with" rather than being part of the dish (e.g. "配蛋治" → "蛋治").
 - The middle dot character `・` separates distinct food items and should result in separate `food_or_drink:` entries.
 - Receipt sub-items (marked with `--`, `+`, or similar prefixes) are typically separate items or substitutions, not modifiers.
 - Complimentary/zero-cost items (e.g., "set hot coffee $0.0") should be treated as items with modifiers, not as separate line items. Include them using the `+` syntax to show customization.
+  - **Important:** only record a zero‑priced drink if it is explicitly listed on that receipt; do not assume every Cafe 100% breakfast includes coffee. Verify each transaction individually.
 - Items that cost $0 and describe the transaction type (e.g., "dine-in", "take-away") should be omitted entirely.
 
 ### Modifiers vs Items
