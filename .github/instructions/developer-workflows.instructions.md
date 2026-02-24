@@ -54,10 +54,10 @@ description: Development workflows, utility scripts, code patterns, and testing/
 - `pnpm run hledger:check` - Validate journals
 - `pnpm run hledger:format` - Format journals
 - `pnpm run hledger:format:check` - Check journal formatting
-- `pnpm run check:md` - Markdown lint
+- `pnpm run check:md` - Markdown lint (when running on specific files, add `--no-globs` and list the filenames to avoid scanning the whole repo)
 - `pnpm run check:prettier` - Prettier check
 - `pnpm run check:py` - Python checks (ruff)
-- `pnpm run format:md` - Markdown auto-fix
+- `pnpm run format:md` - Markdown auto-fix (add `--no-globs` with explicit filenames when targeting a subset)
 - `pnpm run format:prettier` - Prettier auto-fix
 - `pnpm run format:py` - Python auto-fix
 - `pnpm run commitlint` - Lint commit messages

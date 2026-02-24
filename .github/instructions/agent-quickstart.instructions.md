@@ -11,7 +11,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 
 - Read the relevant `.github/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
 - Run `pnpm install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.
-- Format & validate: `pnpm run format && pnpm run check` (alternatively, `pnpm run format:py`, `pnpm run format:md`, `pnpm run hledger:format` as needed).
+- Format & validate: `pnpm run format && pnpm run check` (alternatively, `pnpm run format:py`, `pnpm run format:md`, `pnpm run hledger:format` as needed).  When running `check:md` or `format:md` on a subset of files, append `--no-globs` and list the filenames explicitly to avoid linting the entire repo.
 - Run tests locally: `pnpm run test` (CI runs the same suite); use `pnpm run test:py` to run pytest directly.
 - When invoking Python scripts directly, set working directory to `scripts/` (tools that accept `cwd` should use that parameter).
 
