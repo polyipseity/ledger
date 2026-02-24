@@ -28,6 +28,7 @@ __all__ = (
     "read_script_cache",
     "write_script_cache",
     "file_hash",
+    "journal_hash",
     "script_key_from",
     "cache_file_path",
     "evict_old_scripts",
@@ -123,10 +124,51 @@ async def write_script_cache(content: CacheModel) -> None:
 
 
 async def file_hash(path: PathLike[str]) -> str:
-    """Return the SHA256 hex digest of ``path``'s current bytes."""
+    """Return the SHA256 hex digest of ``path``'s current bytes.
+
+    This helper is used for generic files such as script sources. Journal files
+    are text-oriented and have their own hashing logic; see
+    :func:`journal_hash` for that behaviour.
+    """
     async with await Path(path).open(mode="rb") as fh:
         data = await fh.read()
     return sha256(data).hexdigest()
+
+
+async def journal_hash(path: PathLike[str]) -> str:
+    """Compute a SHA256 digest of a journal-style text file.
+
+    Journal files (including those in ``preludes/``) are logically a list of
+    lines. When hashing we read the file as text, split into lines *without*
+    retaining the line endings, then remove any *leading* or *trailing* lines
+    that are empty or consist solely of whitespace.  Interior blank lines are
+    preserved so that indentation and deliberate spacing in the middle of the
+    file still affect the hash.  The digest is computed over the
+    ``"\n".join(trimmed_lines)`` byte sequence encoded as UTF-8. This keeps the
+    hash stable across platform newline differences and ignores extraneous
+    blank lines at the file edges.
+
+    A ``FileNotFoundError`` is raised if the path cannot be opened, matching
+    :func:`file_hash`.
+    """
+    # Read in text mode so we can splitlines() reliably.
+    # ``splitlines()`` removes line endings, exactly what we want.
+    async with await Path(path).open(mode="rt", encoding="utf-8") as fh:
+        text = await fh.read()
+    # ``splitlines()`` gives us the raw lines without endings.  We now trim
+    # *only* leading/trailing lines that are empty or whitespace-only; interior
+    # lines are left untouched to preserve indentation.  This matches the
+    # documented behaviour above.
+    all_lines = text.splitlines()
+    start = 0
+    end = len(all_lines)
+    while start < end and not all_lines[start].strip():
+        start += 1
+    while end > start and not all_lines[end - 1].strip():
+        end -= 1
+    trimmed = all_lines[start:end]
+    joined = "\n".join(trimmed).encode("utf-8")
+    return sha256(joined).hexdigest()
 
 
 # Path to the project's `preludes/` directory (resolved relative to the
@@ -216,7 +258,7 @@ async def should_skip_journal(script_id: PathLike[str], journal: PathLike[str]) 
             return False
 
         try:
-            cur_hash = await file_hash(journal)
+            cur_hash = await journal_hash(journal)
         except FileNotFoundError:
             return False
 
@@ -242,7 +284,7 @@ async def mark_journal_processed(
         entry = cache.root.setdefault(key, ScriptEntryModel())
         entry.last_access = now
         try:
-            cur_hash = await file_hash(journal)
+            cur_hash = await journal_hash(journal)
         except FileNotFoundError:
             return
         entry.files[fspath(journal)] = FileEntryModel(hash=cur_hash, last_success=now)
@@ -379,7 +421,7 @@ class JournalRunContext:
                 files = entry.files
                 file_entry = files.get(fspath(j))
                 try:
-                    cur_hash = await file_hash(j)
+                    cur_hash = await journal_hash(j)
                 except FileNotFoundError:
                     self.to_process.append(j)
                     continue
@@ -432,7 +474,7 @@ class JournalRunContext:
                 # Record hashes and per-file last_success for files we processed
                 for j in sorted(self._reported, key=fspath):
                     try:
-                        h = await file_hash(j)
+                        h = await journal_hash(j)
                     except FileNotFoundError:
                         # Missing files should simply be skipped
                         continue

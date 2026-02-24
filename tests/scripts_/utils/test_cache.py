@@ -44,8 +44,8 @@ async def test_journal_run_context_skipped_non_file_entry_replaced(
     key = await cmod.script_key_from(script_path)
     entry = cmod.ScriptEntryModel()
     entry.last_access = datetime.now(timezone.utc)
-    # compute the file hash so __aenter__ will consider it 'skipped'
-    h = await cmod.file_hash(j1)
+    # compute the journal hash so __aenter__ will consider it 'skipped'
+    h = await cmod.journal_hash(j1)
     # intentionally use a simple namespace instead of a FileEntryModel to simulate a malformed entry that might exist in older cache versions; it has a 'hash' attribute but is not a valid FileEntryModel
     entry.files[fspath(j1)] = cast(cmod.FileEntryModel, SimpleNamespace(hash=h))
     initial_cache.root[key] = entry
@@ -122,12 +122,107 @@ async def test_file_hash_and_script_key(tmp_path: PathLike[str]) -> None:
     h = await cmod.file_hash(p)
     assert h == sha256(b"hello").hexdigest()
 
-    script_path = Path(tmp_path) / "myscript.py"
+
+@pytest.mark.asyncio
+async def test_journal_hash_trims_edges_only(
+    tmp_path: PathLike[str],
+) -> None:
+    """Only leading/trailing blank or whitespace-only lines are removed.
+
+    Interior empty or whitespace-only lines should be preserved intact since
+    they may represent deliberate indentation or spacing.
+    """
+    j = Path(tmp_path) / "test.journal"
+    # leading and trailing blanks plus an interior blank and whitespace-only line
+    await j.write_text("\n   \nline1\n\n   \nline2\n   \n")
+
+    h = await cmod.journal_hash(j)
+    # expected content after trimming edges:
+    # "line1\n\n   \nline2"
+    expected = sha256(b"line1\n\n   \nline2").hexdigest()
+    assert h == expected
+
+
+@pytest.mark.asyncio
+async def test_journal_hash_preserves_internal_whitespace(
+    tmp_path: PathLike[str],
+) -> None:
+    """Interior lines with leading/trailing spaces are NOT stripped; content
+    is hashed verbatim once edge trimming is done."""
+    j = Path(tmp_path) / "test2.journal"
+    await j.write_text("line1\n  indented\nline2")
+    h = await cmod.journal_hash(j)
+    expected = sha256(b"line1\n  indented\nline2").hexdigest()
+    assert h == expected
+
+
+@pytest.mark.asyncio
+async def test_journal_hash_missing_raises(tmp_path: PathLike[str]) -> None:
+    """journal_hash should raise FileNotFoundError for missing files."""
+    missing = Path(tmp_path) / "nope.journal"
+    with pytest.raises(FileNotFoundError):
+        await cmod.journal_hash(missing)
+
+
+@pytest.mark.asyncio
+async def test_journal_hash_equivalent_newlines(tmp_path: PathLike[str]) -> None:
+    """Different newline sequences should not affect the hash."""
+    a = Path(tmp_path) / "a.journal"
+    b = Path(tmp_path) / "b.journal"
+    # write raw bytes directly to avoid newline translation or async open complications
+    await a.write_bytes(b"line1\nline2\n")
+    await b.write_bytes(b"line1\r\nline2\r\n\r\n")
+
+    ha = await cmod.journal_hash(a)
+    hb = await cmod.journal_hash(b)
+    assert ha == hb
+
+
+@pytest.mark.asyncio
+async def test_journal_hash_only_whitespace(tmp_path: PathLike[str]) -> None:
+    """A file containing only whitespace/blank lines hashes to the empty-string hash."""
+    j = Path(tmp_path) / "only.journal"
+    await j.write_text("\n   \n\r\n")
+    h = await cmod.journal_hash(j)
+    # sha256 of empty bytes
+    assert h == sha256(b"").hexdigest()
+
+
+@pytest.mark.asyncio
+async def test_should_skip_journal_ignores_edge_blanks(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Trailing or leading blank lines should not force reprocessing."""
+    await _patch_cache_to(tmp_path, monkeypatch)
+
+    script_path = Path(tmp_path) / "script.py"
     await script_path.write_text("print(1)\n")
 
-    key = await cmod.script_key_from(script_path)
-    assert script_path.name in key
-    assert "@" in key
+    j = Path(tmp_path) / "2024-01" / "blanks.journal"
+    await j.parent.mkdir(parents=True)
+    await j.write_text("line\n")
+
+    # mark processed with the initial content
+    await cmod.mark_journal_processed(script_path, j)
+    assert await cmod.should_skip_journal(script_path, j)
+
+    # append a couple of blank lines at end and start
+    await j.write_text("\n" + "line\n" + "\n\n")
+    # still skippable because edge blanks are trimmed
+    assert await cmod.should_skip_journal(script_path, j)
+
+    # interior blank should break the hash
+    await j.write_text("line\n\nline\n")
+    assert not await cmod.should_skip_journal(script_path, j)
+
+    # ensure that modifying only whitespace at the file edges still updates in cache
+    # (simulate script run that reprocesses and marks success)
+    await cmod.mark_journal_processed(script_path, j)
+    assert await cmod.should_skip_journal(script_path, j)
+
+    # finally, a substantive change should make it unskippable again
+    await j.write_text("different\n")
+    assert not await cmod.should_skip_journal(script_path, j)
 
 
 @pytest.mark.asyncio
@@ -351,7 +446,7 @@ async def test_journal_run_context_basic(
     entry = cmod.ScriptEntryModel()
     entry.last_access = datetime.now(timezone.utc)
     entry.files[fspath(j1)] = cmod.FileEntryModel(
-        hash=await cmod.file_hash(j1),
+        hash=await cmod.journal_hash(j1),
         last_success=datetime.now(timezone.utc),
     )
     initial_cache.root[key] = entry
@@ -667,7 +762,7 @@ async def test_should_skip_journal_returns_false_when_journal_missing(
     cache.root[key] = entry
     await cmod.write_script_cache(cache)
 
-    # Because the file is missing file_hash will raise and should_skip_journal should return False
+    # Because the journal is missing journal_hash will raise and should_skip_journal should return False
     assert (await cmod.should_skip_journal(script_path, j)) is False
 
 
@@ -735,7 +830,7 @@ async def test_journal_run_context_updates_last_success_for_skipped(
     entry.last_access = datetime.now(timezone.utc)
     old = datetime.now(timezone.utc) - timedelta(days=90)
     entry.files[fspath(j)] = cmod.FileEntryModel(
-        hash=await cmod.file_hash(j), last_success=old
+        hash=await cmod.journal_hash(j), last_success=old
     )
     initial_cache.root[key] = entry
     await cmod.write_script_cache(initial_cache)
