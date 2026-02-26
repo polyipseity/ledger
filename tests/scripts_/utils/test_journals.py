@@ -9,7 +9,6 @@ import logging
 from datetime import datetime
 from os import PathLike, fspath
 from types import SimpleNamespace
-from typing import Any
 
 import pytest
 from anyio import Path
@@ -290,7 +289,7 @@ async def test_run_hledger_handles_process_exit(
             """Return the predefined return code for the fake process."""
             return self._rc
 
-    async def fake_create(*args: Any, **kwargs: Any) -> FakeProc:
+    async def fake_create(*args: object, **kwargs: object) -> FakeProc:
         """Return a FakeProc instance to simulate subprocess creation."""
         # return a process with non-zero returncode to exercise error path
         return FakeProc(b"ok\n", b"", 0)
@@ -309,7 +308,7 @@ async def test_run_hledger_handles_process_exit(
     assert "ok" in out
 
     # Now simulate non-zero return code which should raise when raise_on_error=True
-    async def fake_create_bad(*args: Any, **kwargs: Any) -> FakeProc:
+    async def fake_create_bad(*args: object, **kwargs: object) -> FakeProc:
         """Return a FakeProc with non-zero returncode and stderr to exercise error logging."""
         return FakeProc(
             b"586061c8-6f1a-4e6c-96fa-fc3521e833b0\n",

@@ -11,7 +11,7 @@ from hashlib import sha256
 from json import JSONDecodeError
 from os import PathLike, fspath, path
 from types import SimpleNamespace
-from typing import Any, cast
+from typing import cast
 
 import pytest
 from anyio import Path
@@ -505,7 +505,7 @@ async def test_script_key_from_wrapped_exception(
             """Construct the BadPath (no-op)."""
             pass
 
-        async def open(self, *args: Any, **kwargs: Any) -> None:
+        async def open(self, *args: object, **kwargs: object) -> None:
             """Raise a runtime error when open is called to simulate failure."""
             raise RuntimeError("boom")
 
