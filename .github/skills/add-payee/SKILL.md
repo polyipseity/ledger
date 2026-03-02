@@ -18,7 +18,7 @@ This skill describes how to add a new payee to the ledger system.
 
 - When a new merchant, person, organization, or UUID payee is encountered in a transaction or needs to be registered for future use.
 
-**Example & guidance:** See `./examples.md` for a short example of adding a payee to `preludes/self.journal`. Validate with `pnpm run format` and `pnpm run check` after adding.
+**Example & guidance:** See `./examples.md` for a short example of adding a payee to `preludes/self.journal`. Validate with `bun run format` and `bun run check` after adding.
 
 ## Steps
 
@@ -37,7 +37,7 @@ This skill describes how to add a new payee to the ledger system.
 
 4. **Validation**
 
-      **Note:** Use the canonical formatting and validation workflow: see `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for steps and examples (prefer `pnpm run format` and `pnpm run check`).
+      **Note:** Use the canonical formatting and validation workflow: see `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for steps and examples (prefer `bun run format` and `bun run check`).
 
 ## Anti-Patterns
 

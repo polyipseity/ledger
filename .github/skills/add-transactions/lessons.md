@@ -9,7 +9,7 @@ This file collects short, actionable lessons learned and continuous improvement 
   2. Integrate the lesson's meaning as a concise improvement into that target file (short bullet, clarification, or example), keeping the authoritative files discoverable and actionable.
   3. Replace the original entry in `lessons.md` with a one-line pointer, e.g. `Archived → See <file> <section>`, or remove it entirely after integration.
 - Always prefer improving the authoritative source (SKILL.md, `examples.md`, or a theme file) so that lessons remain actionable and easier to find.
-- After making such changes, run `pnpm run format` and `pnpm run test` to validate docs and tests.
+- After making such changes, run `bun run format` and `bun run test` to validate docs and tests.
 
 ## 2026-02-01 (AI skill update, integrated)
 
@@ -34,7 +34,7 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 - 2026-02-19: Added extra red-packet variants (WeChat/Alipay, group‑split, corporate, reimbursement) to `examples.md` — clarifies wallet vs bank receipts, pool distribution, and when to use `equity:organizations` vs `equity:friends`.
 - 2026-02-19: Added `equity:unknown:strangers` account and worked examples for gifts from strangers/promotional sources (use this when sender is a stranger, not truly unidentified).
 - Keep both files non-confidential; use placeholder UUIDs and anonymized data only.
-- Run `pnpm run format` and `pnpm run test` after editing examples or lessons to keep docs and tests in sync.
+- Run `bun run format` and `bun run test` after editing examples or lessons to keep docs and tests in sync.
 
 ## 2026-02-19 — Payee/id fixes & metadata (consolidated)
 

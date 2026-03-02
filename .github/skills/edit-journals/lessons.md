@@ -8,8 +8,8 @@ Keep this file short. Append dated one-line notes for rationale when adding exam
   1. Pick the best target file in this skill folder for the lesson (e.g., `SKILL.md` procedures, `examples.md`).
   2. Integrate the lesson as a concise clarification or example in that file.
   3. Replace the lesson entry in `lessons.md` with a one-line pointer or delete it after integration.
-- Keep `lessons.md` focused on recent actionable items and run `pnpm run format` and `pnpm run test` after edits.
+- Keep `lessons.md` focused on recent actionable items and run `bun run format` and `bun run test` after edits.
 
 ## 2026-02-08
 
-- Prefer `pnpm run format` and `pnpm run check` for validation after edits.
+- Prefer `bun run format` and `bun run check` for validation after edits.

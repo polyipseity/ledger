@@ -5,10 +5,10 @@ Use these non-confidential, canonical worked examples when performing Pass 1 (up
 ## Pass 1 (Update Only)
 
 - Example: Octopus row 2026-01-24 12:11 amount 35.00 matches an existing journal transaction dated 2026-01-24 11:27:42.
-  - Action: Re-open the journal, confirm date & amount match. If time difference ≥ 2 minutes and the journal entry has `time:` but no `duration:`, insert `duration: PT43M` immediately after `time:` in the header comment and run `pnpm run format` and `pnpm run check`. Do not change postings or payee. If ambiguous, stop and ask the user.
+  - Action: Re-open the journal, confirm date & amount match. If time difference ≥ 2 minutes and the journal entry has `time:` but no `duration:`, insert `duration: PT32M29S` immediately after `time:` in the header comment and run `bun run format` and `bun run check`. Do not change postings or payee. If ambiguous, stop and ask the user.
 
 - Example (duration insertion): Octopus row 2026-02-09 09:34 amount 35.00 matches a journal transaction at 2026-02-09 09:01:31 (difference 32m29s).
-  - Action: add `duration: PT32M29S` directly in the transaction header (immediately after `time:` and before `timezone:`). Run `pnpm run format` and `pnpm run check`.
+  - Action: add `duration: PT32M29S` directly in the transaction header (immediately after `time:` and before `timezone:`). Run `bun run format` and `bun run check`.
 
   Worked header example:
 
@@ -19,7 +19,7 @@ Use these non-confidential, canonical worked examples when performing Pass 1 (up
 ## Pass 2 (Add Only)
 
 - Example: Unmatched Octopus row 2026-01-25 12:38 amount 78.00 for a confidential payee.
-  - Action: Check `payee_mappings.yml` and `private.yaml`. If a UUID exists, use it; if not, ask the user. Register any new payee in `preludes/self.journal`, insert the new transaction in strict chronological order, run `pnpm run format` and `pnpm run check`, and commit with the single-line ledger header (e.g., `ledger(self.journal): add 1 transaction(s)`).
+  - Action: Check `payee_mappings.yml` and `private.yaml`. If a UUID exists, use it; if not, ask the user. Register any new payee in `preludes/self.journal`, insert the new transaction in strict chronological order, run `bun run format` and `bun run check`, and commit with the single-line ledger header (e.g., `ledger(self.journal): add 1 transaction(s)`).
 
 - Example (group-bill mismatch — ask the user): Octopus row 2026-02-10 20:00 amount 300.00 HKD; the journal contains two separate postings (100.00 HKD and 200.00 HKD) representing per-person shares.
   - Action: **Do not** match the Octopus aggregate total to any individual posting or attempt to split automatically. Stop and ask the user whether the Octopus row should be left unmatched, applied to one of the existing postings, or transcribed as a new aggregated transaction. Add a worked-note to `lessons.md` if the chosen action is to be repeated in future imports.

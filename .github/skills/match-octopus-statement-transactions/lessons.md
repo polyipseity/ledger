@@ -7,7 +7,7 @@ Keep this file concise. Append dated one-line notes when adding examples or rule
 - For each older or undated entry:
   1. Determine whether the lesson should be integrated into `SKILL.md` (behavior/guidelines) or `examples.md` (worked examples).
   2. Add a short update to that file and replace the lesson entry here with a one-line pointer or delete it after integration.
-- Keep `lessons.md` recent and actionable; run `pnpm run format` and `pnpm run test` after updates.
+- Keep `lessons.md` recent and actionable; run `bun run format` and `bun run test` after updates.
 
 ## 2026-02-08
 

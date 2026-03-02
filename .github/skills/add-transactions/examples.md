@@ -103,7 +103,7 @@ Notes: add accrual posting between expense and payment posting; use `_PT/E` or a
 ## 7. Octopus eDDA Top-Up (Specialized Import)
 
 - Pass 1 (update existing): If an Octopus row matches date+amount within heuristics, update the existing transaction header (add `duration:` or missing tags), do not duplicate.
-- Pass 2 (add new): If no match, insert new transaction at correct chronological position with full IDs in parentheses, tags (`activity`, `time`, `timezone`), and validate with `pnpm run format` and `pnpm run check`.
+- Pass 2 (add new): If no match, insert new transaction at correct chronological position with full IDs in parentheses, tags (`activity`, `time`, `timezone`), and validate with `bun run format` and `bun run check`.
 
 Example (conceptual):
 

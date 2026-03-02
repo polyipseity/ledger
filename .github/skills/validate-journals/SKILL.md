@@ -20,11 +20,11 @@ Validate journals to catch errors and ensure consistency before committing.
 
 ## Quick Start
 
-**Note:** Use canonical scripts: `pnpm run format` then `pnpm run check` (or `python -m ...` with `cwd=scripts/` when required). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/agent-quickstart.instructions.md` for details and quick commands.
+**Note:** Use canonical scripts: `bun run format` then `bun run check` (or `python -m ...` with `cwd=scripts/` when required). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/agent-quickstart.instructions.md` for details and quick commands.
 
 **Examples:** See `./examples.md` for quick validation command examples and common fixes.
 
-**Tip (integrated):** Run `pnpm run format` first to reduce noisy validation failures — advice reflected in `lessons.md`.
+**Tip (integrated):** Run `bun run format` first to reduce noisy validation failures — advice reflected in `lessons.md`.
 
 ## What Check Validates
 
@@ -60,7 +60,7 @@ The formatter normalizes:
 - Comment properties alphabetically: `activity:, eating:, time:, timezone:`
 - Preserves UUIDs: `assets:banks:<bank-uuid>`
 
-**Note:** See `.github/instructions/common-workflows.instructions.md` for the canonical Pre-Commit Checklist (Husky + lint-staged) and setup instructions, including running `pnpm run format`, `python -m check`, and `pnpm run test`. Also see `.github/instructions/developer-workflows.instructions.md` for `scripts/` working directory guidance.
+**Note:** See `.github/instructions/common-workflows.instructions.md` for the canonical Pre-Commit Checklist (Husky + lint-staged) and setup instructions, including running `bun run format`, `python -m check`, and `bun run test`. Also see `.github/instructions/developer-workflows.instructions.md` for `scripts/` working directory guidance.
 
 ## Checking Specific Months
 

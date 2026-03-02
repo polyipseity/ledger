@@ -1,7 +1,7 @@
 # CI: Build & Test
 #
 # Purpose:
-#   - Run repository checks: setup pnpm, install dependencies, install hledger, and run `pnpm run check`.
+#   - Run repository checks: setup bun, install dependencies, install hledger, and run `bun run check`.
 #   - Ensure a minimal, reproducible environment for quick CI feedback.
 #
 # Triggers:
@@ -9,7 +9,7 @@
 #
 # Security & reproducibility notes:
 #   - Use least-privilege permissions (contents: read) and pin action versions where appropriate.
-#   - Use local caches for pnpm/uv to speed builds and reduce external load.
+#   - Use local caches for bun/uv to speed builds and reduce external load.
 
 name: "CI: Build & Test"
 

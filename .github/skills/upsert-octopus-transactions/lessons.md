@@ -8,7 +8,7 @@ Keep this file short and append dated one-line notes when adding examples or rul
   1. Determine the best target file in this skill folder (e.g., `SKILL.md`, `examples.md`, or a helper file) where the rule belongs.
   2. Integrate the lesson as a concise improvement in that file (bullet, example, or short clarification).
   3. Replace the lesson entry in `lessons.md` with a one-line pointer (e.g., `Archived → See examples.md: Octopus Pass 1`) or delete it after integration.
-- Keep `lessons.md` focused on recent, actionable items only. Run `pnpm run format` and `pnpm run test` after edits.
+- Keep `lessons.md` focused on recent, actionable items only. Run `bun run format` and `bun run test` after edits.
 
 ## 2026-02-08
 

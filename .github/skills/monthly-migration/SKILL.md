@@ -37,7 +37,7 @@ Guide for migrating journals at the start of each month.
 - Copy the generated closing balances into the previous-month journal and the opening balances into the new month (after the prelude include).
 - Ensure the new month directory and `self.journal` exist and include the correct prelude (`include ../../../preludes/self.journal`).
 - Verify closing timestamps and opening timestamps are correct (closing at 23:59:59, opening at 00:00:00).
-- Validate and format (prefer `pnpm run format` and `pnpm run check`).
+- Validate and format (prefer `bun run format` and `bun run check`).
 - Commit using a suitable `chore(migration):` header and include migration context in the commit message.
 
 For detailed examples and edge cases, see `.github/instructions/developer-workflows.instructions.md` and `./examples.md`. (Examples and a short checklist are in `examples.md`.)

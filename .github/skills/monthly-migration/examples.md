@@ -17,7 +17,7 @@ hledger close -f ledger/2025/2025-12/self.alternatives.journal --migrate > migra
 ## Verification
 
 - Verify closing timestamp `23:59:59` and opening `00:00:00`.
-- Run `pnpm run format` and `pnpm run check`.
+- Run `bun run format` and `bun run check`.
 - Commit with `chore(migration): migrate 2025-12 → 2026-01` and short rationale.
 
 (Keep examples concise and non-confidential.)

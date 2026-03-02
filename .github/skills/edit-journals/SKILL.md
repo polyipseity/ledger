@@ -27,7 +27,7 @@ This skill provides comprehensive guidance for editing hledger journal files whi
 - Include the appropriate prelude at the top of every monthly journal (`include ../../../preludes/self.journal` or `self.alternatives.journal`).
 - Use balance assertions (`= balance CURRENCY`) for bank reconciliations, transfers, and loans where applicable.
 - Always include required tags (`timezone: UTC+08:00`, `activity`, `time`); use `duration`, `food_or_drink`, `item`, `location` when relevant.
-- Format and validate using canonical scripts: `pnpm run format` then `pnpm run check` (see `.github/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
+- Format and validate using canonical scripts: `bun run format` then `bun run check` (see `.github/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
 - Preserve monthly opening/closing patterns for reconciliation and migration.
 - The formatter sorts comment properties; keep transaction comment keys ordered and concise.
 
