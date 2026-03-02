@@ -1,2 +1,2 @@
-# Run lint-staged
-pnpm exec -- lint-staged
+#!/usr/bin/env sh
+bun x --no-install -- lint-staged

@@ -92,4 +92,4 @@ Always use relative paths with consistent depth (`../` repeated 3 times for mont
 
 ## Script Usage
 
-See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `pnpm run <script>` from the repository root; if no pnpm wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.
+See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `bun run <script>` from the repository root; if no bun wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.

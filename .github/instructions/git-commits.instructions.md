@@ -39,20 +39,20 @@ CRITICAL: For these ledger transaction commits, DO NOT include a rationale or bo
 
 - This repository uses `commitlint` + `husky` to enforce commit header patterns and body line length (100 chars max), and to block ledger transaction commits from having bodies. This is a hard requirement: commits that do not comply will be rejected.
 
-- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `pnpm run hledger:format:check` and `pnpm run hledger:check` on staged `*.journal` files. Agents should install deps and run the pnpm scripts before committing:
-  - pnpm install
-  - pnpm run markdownlint         # markdown linting
-  - pnpm run markdownlint:fix     # optional: auto-fix markdown issues
-  - pnpm run hledger:format       # format journals (may modify files)
-  - pnpm run hledger:check        # run hledger checks
-  - pnpm run test                 # run unit tests (Husky also registers a `pre-push` that will run this)
+- Local pre-commit checks: Husky calls `lint-staged` which in this repo runs `bun run hledger:format:check` and `bun run hledger:check` on staged `*.journal` files. Agents should install deps and run the bun scripts before committing:
+  - bun install
+  - bun run markdownlint         # markdown linting
+  - bun run markdownlint:fix     # optional: auto-fix markdown issues
+  - bun run hledger:format       # format journals (may modify files)
+  - bun run hledger:check        # run hledger checks
+  - bun run test                 # run unit tests (Husky also registers a `pre-push` that will run this)
 
-- CI enforcement: GitHub Actions runs `pnpm install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
+- CI enforcement: GitHub Actions runs `bun install` and then the `commitlint` workflow (commit message checks) and `check`/`format-check` workflows for journal validation.
 
 Note for agents: when committing ledger transaction changes, follow the single-line `ledger(...)` header rule exactly and do NOT include a commit body — the commit must be parsable by automated tools.
 
 ## Agent / automated commits
 
-Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`). Only use direct Python invocations or script wrappers in `scripts/` if no pnpm script is available, and set cwd to `scripts/`.
+Agents and automation (bots, assistants) MUST follow the same Conventional Commits rules as humans. In addition, before committing, agents MUST run the repository's formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`). Only use direct Python invocations or script wrappers in `scripts/` if no bun script is available, and set cwd to `scripts/`.
 
 When an agent makes a normal (non-ledger) commit and a motivation or rationale is available, the agent SHOULD include that rationale in the commit body. Keep commit bodies concise and wrapped to a reasonable line length. For ledger transaction commits, the existing rule still applies: use the exact single-line `ledger(...)` header and do NOT include a commit body.

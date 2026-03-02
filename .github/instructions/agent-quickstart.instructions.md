@@ -10,21 +10,21 @@ This file is a concise checklist for AI agents working in this repository. Read 
 ## Core checklist (do this every time)
 
 - Read the relevant `.github/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
-- Run `pnpm install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.
-- Format & validate: `pnpm run format && pnpm run check` (alternatively, `pnpm run format:py`, `pnpm run format:md`, `pnpm run hledger:format` as needed).  When running `check:md` or `format:md` on a subset of files, append `--no-globs` and list the filenames explicitly to avoid linting the entire repo.
-- Run tests locally: `pnpm run test` (CI runs the same suite); use `pnpm run test:py` to run pytest directly.
+- Run `bun install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.
+- Format & validate: `bun run format && bun run check` (alternatively, `bun run format:py`, `bun run format:md`, `bun run hledger:format` as needed).  When running `check:md` or `format:md` on a subset of files, append `--no-globs` and list the filenames explicitly to avoid linting the entire repo.
+- Run tests locally: `bun run test` (CI runs the same suite); use `bun run test:py` to run pytest directly.
 - When invoking Python scripts directly, set working directory to `scripts/` (tools that accept `cwd` should use that parameter).
 
 ## Quick commands & examples
 
-- Validate journals: `pnpm run hledger:check` or `python -m scripts.check` (with `cwd=scripts/`).
-- Format journals: `pnpm run hledger:format` or `python -m scripts.format`.
+- Validate journals: `bun run hledger:check` or `python -m scripts.check` (with `cwd=scripts/`).
+- Format journals: `bun run hledger:format` or `python -m scripts.format`.
 - Discover monthly journals (scripts use this glob): `**/*[0-9]{4}-[0-9]{2}/*.journal`.
 - Encrypt/decrypt secrets: `python -m scripts.encrypt` / `python -m scripts.decrypt` (use `private.yaml.gpg` only when authorized).
 
 ## Project-specific rules & gotchas
 
-- ALWAYS prefer `pnpm run <script>` when a wrapper exists. If no wrapper, run the Python script from `scripts/`.
+- ALWAYS prefer `bun run <script>` when a wrapper exists. If no wrapper, run the Python script from `scripts/.`
 - Never leak or hard-code secrets from `private.yaml` (encrypted file: `private.yaml.gpg`). If you need decrypt rights, ask.
 - Follow code conventions strictly: `os.PathLike` for path parameters, timezone-aware UTC datetimes, complete type annotations, `__all__` module exports, and use Ruff for formatting. Prefer PEP 585 built-in generics for concrete containers (for example `list[str]`, `dict[str, int]`) and use `collections.abc` for abstract interfaces (for example `collections.abc.Sequence[str]`, `collections.abc.Mapping[str, int]`) instead of `typing`-based ABCs.
 - Tests: one test file per production file; mirror `tests/` structure to the source layout. Prefer annotating pytest filesystem fixtures as `tmp_path: PathLike[str]` in test signatures and, when converting a path-like object to `str`, **always** use `os.fspath(path_like)` rather than `str(path_like)` so the filesystem path protocol is preserved and static checkers remain happy.
@@ -49,7 +49,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 ## Editing Skills & Instructions (short checklist)
 
 - Add or update the `SKILL.md`/instruction text only after confirming exact behaviour with maintainers if unclear.
-- Add or update unit tests that cover any changed behaviour (mirror `tests/` structure). Run `pnpm run test` and fix failures before committing.
+- Add or update unit tests that cover any changed behaviour (mirror `tests/` structure). Run `bun run test` and fix failures before committing.
 - Update `AGENTS.md` and `agent-quickstart.instructions.md` if you introduce new commands, scripts, or workflow steps.
 - Add a brief entry to the skill's `lessons.md` explaining why the change was made, and add a simple example to `examples.md` if helpful.
 

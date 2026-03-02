@@ -23,16 +23,16 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 - **Components**
   - **Preludes** (`preludes/*.journal`): single source of truth for accounts, commodities, payees, and tag definitions.
   - **Ledger journals** (`ledger/...`): hierarchical year/month journals. Monthly files contain transactions and include the prelude files.
-  - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `pnpm` wrappers; if none exist run Python scripts with `cwd=scripts/`.
+  - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `bun` wrappers; if none exist run Python scripts with `cwd=scripts/.`
   - **Agent Skills** (`.github/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
   - **CI & hooks** (`.github/workflows/*`, Husky + lint-staged): run formatters, checks, and tests on push and pre-push.
 
 - **Data flow**
-  - Transaction entry → monthly journal → local validation/formatting (`pnpm run format` / `pnpm run check`) → PR and CI checks → commit/push
+  - Transaction entry → monthly journal → local validation/formatting (`bun run format` / `bun run check`) → PR and CI checks → commit/push
   - Monthly close and migration uses `hledger close --migrate` (run from repo root) and helper scripts in `scripts/` when needed.
 
 - **Key constraints & common pitfalls**
-  - **Always** use `pnpm run <script>` when a wrapper exists. If not, run Python scripts with the working directory set to `scripts/` (tools that accept `cwd` should use that parameter).
+  - **Always** use `bun run <script>` when a wrapper exists. If not, run Python scripts with the working directory set to `scripts/` (tools that accept `cwd` should use that parameter).
   - **Do not** decrypt or expose `private.yaml` contents unless explicitly authorized. Encrypted secrets live in `private.yaml.gpg`.
   - Code conventions matter: use `os.PathLike`, timezone-aware UTC datetimes, complete type annotations, `__all__` exports, and Ruff for formatting (see Agent Code Conventions below).
   - Running scripts from the wrong directory is the most common agent error — double-check `cwd` every time.
@@ -40,9 +40,9 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 ## Agent Quick Start ✅
 
 1. **Read the skill**: Open the relevant `.github/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
-2. **Install deps**: Run `pnpm install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
-3. **Format & validate locally**: `pnpm run format && pnpm run check` (fix issues before committing).
-4. **Run scripts properly**: Prefer `pnpm run <script>`; if not available, run `python -m scripts.<cmd>` with `cwd=scripts/`.
+2. **Install deps**: Run `bun install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
+3. **Format & validate locally**: `bun run format && bun run check` (fix issues before committing).
+4. **Run scripts properly**: Prefer `bun run <script>`; if not available, run `python -m scripts.<cmd>` with `cwd=scripts/.`
 5. **Make small, tested changes**: Add or update tests under `tests/` that mirror the source layout for any code changes.
    - **If you edit instruction files or SKILLs**, add or update tests that cover the new behaviour, and update `AGENTS.md`/the relevant `SKILL.md` or examples as needed.
 6. **Commit rules**: Follow `.github/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
@@ -107,16 +107,16 @@ These conventions are lightweight but help keep agent-generated edits consistent
 
 **Journal file naming reminder:** Always use the full path `ledger/[year]/[year]-[month]/[name].journal` when referring to monthly journals, not just `[year]/[year]-[month]/[name].journal`.
 
-**Script commands: Always use pnpm script wrappers if available**
+**Script commands: Always use bun script wrappers if available**
 
-- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- For all operations, prefer `bun run <script>` (e.g., `bun run check`, `bun run format`, `bun run hledger:check`, `bun run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
-**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `uv run --locked ruff format` and `uv run --locked ruff check --fix` (or the equivalent pnpm script wrappers).
+**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `uv run --locked ruff format` and `uv run --locked ruff check --fix` (or the equivalent bun script wrappers).
 
-**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
+**Critical:** Always use the bun script wrapper if it exists. Only fall back to direct invocation or script wrappers if no bun script is available. Always double-check the working directory before running any script command.
 
 **Module exports:** All Python modules in `scripts/` and all test modules/files MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) to explicitly control the module's public exports. For test files (for example, files under `tests/` and files named `test_*.py`), default to an empty tuple `()` — tests should not export public symbols. If a module has no public exports, use an empty tuple `()`. Keep `__all__` tuples up-to-date and place them at the top-level of the file; do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`). Instead import names normally and use `__all__` to control what the module exports.
 
@@ -126,7 +126,7 @@ These conventions are lightweight but help keep agent-generated edits consistent
 
 **Use `uv` for Python dependency management and installs.** Prefer `uv sync` for project-based installs and commit `uv.lock` for reproducible installs.
 
-**Note:** `pnpm install` triggers the `prepare` script which runs `uv sync` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax and the project lockfile `uv.lock`. In CI we run `pnpm install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` in a single step to install Node and Python dependencies deterministically. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment (the install is project-scoped and respects `uv.lock`).
+Note: `bun install` triggers the `prepare` script which runs `uv sync` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax and the project lockfile `uv.lock`. In CI we run `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` in a single step to install Node and Python dependencies deterministically. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment (the install is project-scoped and respects `uv.lock`).
 
 ## Quick Start
 
@@ -142,15 +142,15 @@ Skills:
 Instructions:
 
 - Security: [security.instructions.md](.github/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `pnpm install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
+- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `bun install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
 
 ## VS Code Setup
 
 **Chat configuration**: Enable `chat.useAgentsMdFile` in settings. Leave `chat.useNestedAgentsMdFiles` disabled (single root AGENTS.md). Use "Chat: Configure Instructions" to verify active files.
 
-**Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`pnpm run markdownlint:fix`). Always format before commit.
+**Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`bun run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the pnpm script wrappers (e.g., `pnpm run format`, `pnpm run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `pnpm run test` before pushing — a Husky `pre-push` hook runs `pnpm run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — a Husky `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
 
 **Todo List Tool Reminder:**
 

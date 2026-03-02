@@ -9,11 +9,11 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 ## Script Usage Policy
 
-**Always use pnpm script wrappers if available.**
+**Always use bun script wrappers if available.**
 
-- For all operations, prefer `pnpm run <script>` (e.g., `pnpm run check`, `pnpm run format`, `pnpm run hledger:check`, `pnpm run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no pnpm script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
-- **Exception for lint-staged:** when a command is invoked by `lint-staged` and must receive the list of staged file paths (for example, formatting only staged files), invoke the underlying command directly (for example `python -m scripts.format`) rather than `pnpm run <script>` so the staged file paths are forwarded as argv. `pnpm run` does not reliably forward arbitrary file arguments in this context. Recommended lint-staged invocations in this repository:
+- For all operations, prefer `bun run <script>` (e.g., `bun run check`, `bun run format`, `bun run hledger:check`, `bun run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
+- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- **Exception for lint-staged:** when a command is invoked by `lint-staged` and must receive the list of staged file paths (for example, formatting only staged files), invoke the underlying command directly (for example `python -m scripts.format`) rather than `bun run <script>` so the staged file paths are forwarded as argv. `bun run` does not reliably forward arbitrary file arguments in this context. Recommended lint-staged invocations in this repository:
   - **Markdown:** `markdownlint-cli2 --fix`
   - **Prettier:** `prettier --write`
   - **Python formatters:** run each as a separate command so each receives the file list:
@@ -27,40 +27,40 @@ description: Development workflows, utility scripts, code patterns, and testing/
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
-**Critical:** Always use the pnpm script wrapper if it exists. Only fall back to direct invocation or script wrappers if no pnpm script is available. Always double-check the working directory before running any script command.
+**Critical:** Always use the bun script wrapper if it exists. Only fall back to direct invocation or script wrappers if no bun script is available. Always double-check the working directory before running any script command.
 
-### Validation and Formatting (fallback if no pnpm script)
+### Validation and Formatting (fallback if no bun script)
 
 - `python -m scripts.check` - Validate journals (hledger strict checking)
 - `python -m scripts.format` - Auto-format journals (hledger print, sort properties)
 - `python -m scripts.format --check` - Validate formatting without modifying
 
-### Modifications (fallback if no pnpm script)
+### Modifications (fallback if no bun script)
 
 - `python -m scripts.depreciate [--from YYYY-MM] [--to YYYY-MM] ITEM AMOUNT CURRENCY` - Depreciate asset
 - `python -m scripts.shift [--from YYYY-MM] [--to YYYY-MM] ACCOUNT AMOUNT CURRENCY` - Shift balances
 - `python -m scripts.replace FIND REPLACE` - Find/replace across journals
 
-### Security (fallback if no pnpm script)
+### Security (fallback if no bun script)
 
 - `python -m scripts.encrypt` - Encrypt private.yaml
 - `python -m scripts.decrypt` - Decrypt private.yaml.gpg
 
-## pnpm Tasks
+## bun Tasks
 
-- `pnpm install` - Install dependencies
-- `pnpm run check` - Validate journals and run all checks
-- `pnpm run format` - Run all formatters (journals, markdown, prettier, python)
-- `pnpm run hledger:check` - Validate journals
-- `pnpm run hledger:format` - Format journals
-- `pnpm run hledger:format:check` - Check journal formatting
-- `pnpm run check:md` - Markdown lint (when running on specific files, add `--no-globs` and list the filenames to avoid scanning the whole repo)
-- `pnpm run check:prettier` - Prettier check
-- `pnpm run check:py` - Python checks (ruff)
-- `pnpm run format:md` - Markdown auto-fix (add `--no-globs` with explicit filenames when targeting a subset)
-- `pnpm run format:prettier` - Prettier auto-fix
-- `pnpm run format:py` - Python auto-fix
-- `pnpm run commitlint` - Lint commit messages
+- `bun install` - Install dependencies
+- `bun run check` - Validate journals and run all checks
+- `bun run format` - Run all formatters (journals, markdown, prettier, python)
+- `bun run hledger:check` - Validate journals
+- `bun run hledger:format` - Format journals
+- `bun run hledger:format:check` - Check journal formatting
+- `bun run check:md` - Markdown lint (when running on specific files, add `--no-globs` and list the filenames to avoid scanning the whole repo)
+- `bun run check:prettier` - Prettier check
+- `bun run check:py` - Python checks (ruff)
+- `bun run format:md` - Markdown auto-fix (add `--no-globs` with explicit filenames when targeting a subset)
+- `bun run format:prettier` - Prettier auto-fix
+- `bun run format:py` - Python auto-fix
+- `bun run commitlint` - Lint commit messages
 
   Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`. The Prettier file globs have been expanded to include additional file types (for example: astro, graphql, json5, mdx, svelte, vue, xml) to ensure broader formatting coverage.
 
@@ -72,7 +72,7 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 
 - Frozen dataclasses: `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)`
 - Concurrency: `asyncio.BoundedSemaphore` limited to CPU count (or 4)
-- I/O: Accept `os.PathLike` for public API types; use `anyio.Path` or coerce `PathLike` to `anyio.Path` for internal async file operations (e.g., when using async `.open()` and other async path methods). When converting `PathLike` objects to `str` (for example, when passing paths to subprocesses or APIs that require plain strings), **always** use `os.fspath(path_like)` instead of `str(path_like)` so the filesystem path protocol is correctly honored. Imports must be at module top-level; both `import ...` and `from ... import ...` forms are allowed at module top-level — prefer `from module import name` where practical (for example, `from os import fspath`) and never use inline/runtime imports. This policy is enforced by Ruff's `import-outside-top-level` rule (PLC0415); run `pnpm run check:py` locally and in CI to validate.
+- I/O: Accept `os.PathLike` for public API types; use `anyio.Path` or coerce `PathLike` to `anyio.Path` for internal async file operations (e.g., when using async `.open()` and other async path methods). When converting `PathLike` objects to `str` (for example, when passing paths to subprocesses or APIs that require plain strings), **always** use `os.fspath(path_like)` instead of `str(path_like)` so the filesystem path protocol is correctly honored. Imports must be at module top-level; both `import ...` and `from ... import ...` forms are allowed at module top-level — prefer `from module import name` where practical (for example, `from os import fspath`) and never use inline/runtime imports. This policy is enforced by Ruff's `import-outside-top-level` rule (PLC0415); run `bun run check:py` locally and in CI to validate.
 - Type hints & complete annotations: Use modern typing styles (PEP 585 / PEP 604). Complete type annotations are **MANDATORY** for all Python code, including function signatures and return types, public APIs, classes, dataclasses, and test functions (including their arguments and return types). Annotate local variables in tests and in complex functions where it improves clarity or static analysis. Use built-in generics (`dict`, `list`, `set`, `tuple`, `frozenset`) instead of `typing.Dict`, `typing.List`, etc. Import abstract base types from `collections.abc` (for example, `collections.abc.Awaitable`, `collections.abc.Iterable`, `collections.abc.Mapping`, `collections.abc.Sequence`, `collections.abc.Callable`) — do **not** import these ABC names from `typing`. Prefer `X | Y` for unions/optionals instead of `typing.Optional` when targeting supported Python versions.
   - Pylance strict compatibility: All new or edited code must be written and annotated so that **Pylance configured with `typeCheckingMode: "strict"` reports no type errors**. Strive for code that passes `pyright`/Pylance strict checks in CI and locally.
   - No `Any`/`Unknown`: **Never** use `Any` or `Unknown` in type annotations. Instead, prefer explicit concrete types, small Protocols, TypedDicts, or `typing.cast` at call sites only if accompanied by an explanatory comment and a follow-up TODO to improve typing.
@@ -83,22 +83,22 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 
 - Tests are written using `pytest` and live in the `tests/` directory (files named `test_*.py`).
 - Test file layout: Create one test file per source file. Tests should mirror the source directory structure under `tests/` (for example, `tests/path/to/test_module.py` for `src/path/to/module.py`). Only split a source's tests into multiple files in very rare cases when a single test file would otherwise be excessively long.
-- Run the full test suite locally via `pnpm run test` (this invokes `uv run --locked pytest`). Use `pnpm run test:py` to run pytest directly if needed.
+- Run the full test suite locally via `bun run test` (this invokes `uv run --locked pytest`). Use `bun run test:py` to run pytest directly if needed.
 - Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `uv run --locked pytest --cov` to generate coverage output.
 - Async tests: When testing asynchronous code, always write tests as `async def` and decorate them with `@pytest.mark.asyncio`; use `await` to run coroutines directly in the test body. Do **not** use event loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle under pytest and can conflict with pytest-asyncio’s event loop fixtures.
 - When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
-- CI runs the test suite and Husky registers a `pre-push` hook that will run `pnpm run test` before pushing — run tests locally to avoid blocked pushes.
+- CI runs the test suite and Husky registers a `pre-push` hook that will run `bun run test` before pushing — run tests locally to avoid blocked pushes.
 
 ## Pre-Commit Validation (Husky + lint-staged)
 
 ```powershell
-pnpm run format        # Run all formatters (formats files repo-wide)
-pnpm run check         # Validate all journals and run all checks
+bun run format        # Run all formatters (formats files repo-wide)
+bun run check         # Validate all journals and run all checks
 # Fix any errors before commit
 git commit -m "message"
 ```
 
-**Setup:** `prepare` now runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. In CI we run `pnpm install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` as a single step to install Node and Python dependencies deterministically. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `uv sync` locally to reproduce the behavior). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
+**Setup:** `prepare` now runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. In CI we run `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` as a single step to install Node and Python dependencies deterministically. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `uv sync` locally to reproduce the behaviour). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
 **Script commands: Always run from the `scripts/` directory**
 
 - For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
