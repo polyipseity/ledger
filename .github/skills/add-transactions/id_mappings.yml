@@ -41,6 +41,12 @@
   regex:
     receipt_id: "\\d{5,}\\/\\d{3}"
     kiosk_code: "\\d{1,}"
+"Yoshinoya":
+  orders:
+    - [receipt_id, kiosk_code]
+  regex:
+    receipt_id: "\\d{5}\\/\\d{3}"
+    kiosk_code: "\\d{1,}"
 "McDonald's":
   orders:
     - [machine_txn, order_no, csn]
@@ -124,6 +130,13 @@
   regex:
     receipt_no: "\\d{2}\\/\\d{6}"
 
+"阿土伯鹽水雞":
+  orders:
+    - [receipt_id, kiosk_code]
+  regex:
+    receipt_id: "\\d{3,5}"
+    kiosk_code: "\\d{4}"
+
 "Dondonya":
   orders:
     - [receipt_no, table_number]
@@ -138,12 +151,27 @@
     transaction_id: "\\d{6}"
     table_number: "\\d{1,3}"
 
+"TamJai SamGor":
+  orders:
+    - [receipt_id, branch_code, table_number]
+  regex:
+    receipt_id: "\\d{12}"
+    branch_code: "\\d{4}"
+    table_number: "K\\d+"
+
 "UNY":
   orders:
     - [barcode, transaction_id]
   regex:
     barcode: "\\d{19}"
     transaction_id: "\\d{6}"
+
+"Jollibee":
+  orders:
+    - [order_id, branch]
+  regex:
+    order_id: "D\\d{20}"
+    branch: "K\\d{3}"
 
 "Oliver's Super Sandwiches":
   orders:

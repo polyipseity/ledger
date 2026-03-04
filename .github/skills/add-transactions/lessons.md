@@ -47,6 +47,7 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 
 - Verified that free coffee lines may appear on some Cafe 100% receipts but not all; transactions must be handled individually. Added explicit examples to `examples.md` and rules to `food_transactions.md` under the complimentary item bullet.
 - Noted that the conjunction prefix “配” should always be stripped when it acts as “with” rather than being part of a food name; updated `food_transactions.md` accordingly.
+- When a menu line ends with “配” followed by another item (e.g. “麻辣汤滑牛肉蜂巢豆腐米线配汽水”), split it into two food_or_drink entries – the main dish and the companion item – and record the companion as a separate posting, zero‑priced if its cost is bundled. Also, if available in the original receipt, break out embedded ingredients and modifiers (滑牛肉, 蜂巢豆腐, 麻辣汤底 + 3小辣, 米綫爽) into separate `food_or_drink:` tags for clarity.
 - When matching an Octopus/eDDA row to an existing journal transaction, **always update the header with any missing `duration:` computed from the end‑time row**. This prevents stale entries and maintains auditability.
 - After inserting or editing transactions, double‑check the entire journal to ensure **strict chronological order** (date → time). If entries are out‑of-order, move them immediately; chronological order is non-negotiable. (Reordered Feb 23 entries as a learning example.)
 

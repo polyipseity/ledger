@@ -28,6 +28,11 @@
 "大生生活超市": ["大生生活超市 (DS Groceries)"]
 "UNY": ["UNY"]
 "DONDONYA": ["Dondonya"]
+"阿士伯鹽水雞": ["阿土伯鹽水雞"]
+
+"Appolo (Magic House) Superstore Ltd": ["Appolo"]
+"Appolo": ["Appolo"]
+"American Diner": ["American Diner"]
 
 # Example one-to-many mappings (use sparingly; prefer creating more-specific keys where possible):
 "Maxim's": ["Maxim's Canteen II, HKUST", "Maxim's Cakes"]
