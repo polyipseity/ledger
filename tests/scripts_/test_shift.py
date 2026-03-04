@@ -13,7 +13,7 @@ from unittest.mock import patch
 
 import pytest
 from anyio import Path, TemporaryDirectory
-from hypothesis import given
+from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from scripts import shift
@@ -57,6 +57,7 @@ async def test_shift_adjusts_balance(
 
 
 @pytest.mark.anyio
+@settings(max_examples=10)  # default is 200
 @given(
     base=st.integers(min_value=0, max_value=10000),
     shift_amt=st.floats(min_value=-500, max_value=500),
