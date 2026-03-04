@@ -7,6 +7,8 @@ description: Practical task guides for frequently performed operations including
 
 **Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
+- Asynchronous helper code should use AnyIO/Asyncer; do not import `asyncio` directly.
+
 Frequently performed operations organized into Agent Skills:
 
 ## Adding Transactions

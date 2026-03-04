@@ -17,7 +17,7 @@ from tests.conftest import AsyncFileFactory, RunModuleHelper
 __all__ = ()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_async_file_factory_disk_and_memory(
     async_file_factory: AsyncFileFactory, tmp_path: PathLike[str]
 ) -> None:
@@ -48,7 +48,7 @@ async def test_async_file_factory_disk_and_memory(
         assert mem.last_written == "new"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_async_file_factory_seek_truncate_and_context(
     async_file_factory: AsyncFileFactory, tmp_path: PathLike[str]
 ) -> None:
@@ -86,7 +86,7 @@ def test_async_file_factory_errors(async_file_factory: AsyncFileFactory) -> None
         async_file_factory(cast(Literal["memory"], "unknown"), "x")
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_run_module_helper_runs_and_handles_close_exception(
     tmp_path: PathLike[str],
     monkeypatch: pytest.MonkeyPatch,
@@ -105,7 +105,7 @@ asyncio.run(None)
     assert ran["ran"] is True
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_run_module_helper_sets_sys_argv_and_runs_module(
     tmp_path: PathLike[str],
     monkeypatch: pytest.MonkeyPatch,

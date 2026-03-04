@@ -26,13 +26,13 @@ async def _err_msg(msg: str) -> None:
     raise RuntimeError(msg)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_gather_and_raise_no_error() -> None:
     """When all tasks succeed, gather_and_raise should return normally."""
     await concurrency.gather_and_raise(_ok_x(1), _ok_x(2))
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_gather_and_raise_with_errors() -> None:
     """When tasks raise, a BaseExceptionGroup is raised containing them."""
     with pytest.raises(BaseExceptionGroup) as exc:

@@ -119,7 +119,7 @@ def test_parse_amount_various(whole: int, frac: int) -> None:
     assert abs(journals.parse_amount(s2) - val) < 1e-9
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_make_datetime_range_filters_and_filter_journals_between(
     tmp_path: PathLike[str],
 ) -> None:
@@ -141,7 +141,7 @@ async def test_make_datetime_range_filters_and_filter_journals_between(
     assert p1 in filtered and p2 not in filtered
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_find_monthly_and_all(tmp_path: PathLike[str]) -> None:
     """`find_monthly_journals` and `find_all_journals` should discover files under a ledger folder."""
     repo = Path(tmp_path) / "ledger"
@@ -166,7 +166,7 @@ def test_parse_period_invalid_raises() -> None:
         journals.parse_period_end("also-bad")
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_run_hledger_missing(monkeypatch: pytest.MonkeyPatch) -> None:
     """When the `hledger` executable is not found in PATH run_hledger should raise FileNotFoundError."""
 
@@ -234,7 +234,7 @@ def test_format_journal_list_handles_path_exceptions() -> None:
     assert "-" in s
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_find_monthly_with_files_param(tmp_path: PathLike[str]) -> None:
     """When explicit file paths are supplied, `find_monthly_journals` should resolve and return them."""
     repo = Path(tmp_path) / "ledger"
@@ -265,7 +265,7 @@ def test_filter_journals_skips_invalid_parent_names() -> None:
     assert out == []
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_run_hledger_handles_process_exit(
     monkeypatch: pytest.MonkeyPatch,
     caplog: pytest.LogCaptureFixture,

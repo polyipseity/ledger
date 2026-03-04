@@ -14,7 +14,7 @@ from tests.conftest import RunModuleHelper
 __all__ = ()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_replace_rewrites_files(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -38,7 +38,7 @@ async def test_replace_rewrites_files(
     )
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_replace_property_many_files(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -66,7 +66,7 @@ async def test_replace_property_many_files(
         assert c.replace("OLD", "NEW") in text
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_replace_with_no_journals(monkeypatch: pytest.MonkeyPatch) -> None:
     """When no journals are discovered, replace should complete without error."""
 
@@ -81,7 +81,7 @@ async def test_replace_with_no_journals(monkeypatch: pytest.MonkeyPatch) -> None
         await replace.main(args)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_replace_parser_invoke_calls_main(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -109,7 +109,7 @@ def test_replace_parser_requires_args() -> None:
     assert ns.replace == "repltext"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_replace_noop_leaves_files_unchanged(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

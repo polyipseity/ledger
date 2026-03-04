@@ -37,7 +37,7 @@ def test_get_script_folder_negative_raises() -> None:
         files.get_script_folder(depth=-1)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_get_ledger_folder_points_to_ledger() -> None:
     """get_ledger_folder() returns an existing path named 'ledger'."""
     ledger = files.get_ledger_folder()
@@ -67,7 +67,7 @@ def test_get_script_folder_no_caller_frame_raises(
         files.get_script_folder()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_file_update_if_changed_roundtrip(tmp_path: PathLike[str]) -> None:
     """file_update_if_changed should write new content and leave unchanged files alone."""
     fp = Path(tmp_path) / "test.journal"
@@ -99,7 +99,7 @@ def test_get_ledger_folder_contains_ledger_name() -> None:
     assert Path(p).name == "ledger"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) -> None:
     """file_update_if_changed writes only when the updater changes the text."""
     p = Path(tmp_path) / "journal.journal"
@@ -115,7 +115,7 @@ async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) ->
 
 
 # Property-based tests for files
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @given(st.text(max_size=200))
 async def test_file_update_if_changed_with_random_text(s: str) -> None:
     """Property-based async test: file updater handles random text values using a real tempfile."""
@@ -190,7 +190,7 @@ def text_and_updater(draw: st.DrawFn) -> tuple[str, Callable[[str], str]]:
     return s, updater
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @given(text_and_updater())
 async def test_file_update_if_changed_semantics(
     pair: tuple[str, Callable[[str], str]],

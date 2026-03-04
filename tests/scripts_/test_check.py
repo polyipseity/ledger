@@ -26,7 +26,7 @@ def test_check_parser_invoke_callable() -> None:
     assert hasattr(ns, "invoke")
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_check_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -> None:
     """The parser's `invoke` should call :func:`check.main` with parsed args."""
     called: dict[str, object] = {}
@@ -43,7 +43,7 @@ async def test_check_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -
     assert isinstance(called.get("args"), check.Arguments)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_check_main_runs_hledger_for_each_journal(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ):
@@ -131,7 +131,7 @@ async def test_check_main_runs_hledger_for_each_journal(
     assert len(calls) == 2, "run_hledger should be invoked for both discovered journals"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_check_logs_skipped_when_skipped(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -188,7 +188,7 @@ async def test_check_logs_skipped_when_skipped(
     assert exc.value.code == 0
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_check_propagates_hledger_errors(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -255,7 +255,7 @@ async def test_check_propagates_hledger_errors(
     assert any(isinstance(e, CalledProcessError) for e in eg.value.exceptions)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_check_logs_processed_when_reported(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

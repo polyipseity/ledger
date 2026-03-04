@@ -175,7 +175,7 @@ def test_format_parser_check_flag() -> None:
     assert ns.check is True
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_format_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -> None:
     """The `format` parser's invoke wrapper should call :func:`format.main` with parsed args."""
     called: dict[str, fmt.Arguments] = {}
@@ -193,7 +193,7 @@ async def test_format_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) 
     assert called["args"].check is True
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test__format_journal_check_true_unformatted(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -245,7 +245,7 @@ async def test__format_journal_check_true_unformatted(
     assert jpath in unformatted
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test__format_journal_check_false_reports_success(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -288,7 +288,7 @@ async def test__format_journal_check_false_reports_success(
     assert jpath in s.reported
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_main_check_exits_with_1(
     tmp_path: PathLike[str],
     monkeypatch: pytest.MonkeyPatch,
@@ -358,7 +358,7 @@ async def test_main_check_exits_with_1(
     assert exc.value.code == 1
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_main_reports_processed_when_reported(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -410,7 +410,7 @@ async def test_main_reports_processed_when_reported(
     monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_format_main_logs_skipped_when_skipped(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -467,7 +467,7 @@ async def test_format_main_logs_skipped_when_skipped(
     assert exc.value.code == 0
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_main_check_with_no_unformatted(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -535,7 +535,7 @@ async def test_main_check_with_no_unformatted(
     assert exc.value.code == 0
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test__format_journal_propagates_hledger_error(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

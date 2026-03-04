@@ -17,7 +17,7 @@ from tests.conftest import RunModuleHelper
 __all__ = ()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_depreciate_appends_transaction(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -68,7 +68,7 @@ def test_depreciate_parser_with_from_to_flags() -> None:
     assert getattr(ns, "to") is not None, "expected parser to set 'to' end period"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_depreciate_main_logs_skipped_when_skipped(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -134,7 +134,7 @@ async def test_depreciate_main_logs_skipped_when_skipped(
     assert exc.value.code == 0
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_depreciate_parser_invoke_calls_main(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -161,7 +161,7 @@ def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
     assert called["ran"] is True
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_depreciate_inserts_accumulated_when_depreciation_present_with_blank(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -192,7 +192,7 @@ async def test_depreciate_inserts_accumulated_when_depreciation_present_with_bla
     assert "item: widget" in contents
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_depreciate_appends_when_no_trailing_blank(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

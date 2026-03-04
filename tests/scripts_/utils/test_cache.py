@@ -21,7 +21,7 @@ from scripts.utils import cache as cmod
 __all__ = ()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_skipped_non_file_entry_replaced(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -83,7 +83,7 @@ async def _patch_cache_to(
     return target
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_write_roundtrip(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -106,7 +106,7 @@ async def test_read_write_roundtrip(
     assert "script@abc" in read_back.root
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_file_hash_and_script_key(tmp_path: PathLike[str]) -> None:
     """`file_hash` computes sha256 and `script_key_from` embeds file name and sha.
 
@@ -123,7 +123,7 @@ async def test_file_hash_and_script_key(tmp_path: PathLike[str]) -> None:
     assert h == sha256(b"hello").hexdigest()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_hash_trims_edges_only(
     tmp_path: PathLike[str],
 ) -> None:
@@ -143,7 +143,7 @@ async def test_journal_hash_trims_edges_only(
     assert h == expected
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_hash_preserves_internal_whitespace(
     tmp_path: PathLike[str],
 ) -> None:
@@ -156,7 +156,7 @@ async def test_journal_hash_preserves_internal_whitespace(
     assert h == expected
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_hash_missing_raises(tmp_path: PathLike[str]) -> None:
     """journal_hash should raise FileNotFoundError for missing files."""
     missing = Path(tmp_path) / "nope.journal"
@@ -164,7 +164,7 @@ async def test_journal_hash_missing_raises(tmp_path: PathLike[str]) -> None:
         await cmod.journal_hash(missing)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_hash_equivalent_newlines(tmp_path: PathLike[str]) -> None:
     """Different newline sequences should not affect the hash."""
     a = Path(tmp_path) / "a.journal"
@@ -178,7 +178,7 @@ async def test_journal_hash_equivalent_newlines(tmp_path: PathLike[str]) -> None
     assert ha == hb
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_hash_only_whitespace(tmp_path: PathLike[str]) -> None:
     """A file containing only whitespace/blank lines hashes to the empty-string hash."""
     j = Path(tmp_path) / "only.journal"
@@ -188,7 +188,7 @@ async def test_journal_hash_only_whitespace(tmp_path: PathLike[str]) -> None:
     assert h == sha256(b"").hexdigest()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_should_skip_journal_ignores_edge_blanks(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -225,7 +225,7 @@ async def test_should_skip_journal_ignores_edge_blanks(
     assert not await cmod.should_skip_journal(script_path, j)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_script_key_always_includes_preludes_component(
     tmp_path: PathLike[str],
 ) -> None:
@@ -236,7 +236,7 @@ async def test_script_key_always_includes_preludes_component(
     assert "+preludes@" in key
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_script_key_changes_when_prelude_files_change(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -259,7 +259,7 @@ async def test_script_key_changes_when_prelude_files_change(
     assert key1 != key2
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_should_skip_journal_respects_preludes_changes(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -288,7 +288,7 @@ async def test_should_skip_journal_respects_preludes_changes(
     assert (await cmod.should_skip_journal(script_path, journal_path)) is False
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_should_skip_and_mark_journal_processed(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -386,7 +386,7 @@ def test_evict_respects_separate_durations() -> None:
     assert "b" not in cache.root["sfile@x"].files
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_file_hash_missing_raises(tmp_path: PathLike[str]) -> None:
     """file_hash should raise FileNotFoundError for missing files."""
     missing = Path(tmp_path) / "nope.txt"
@@ -394,7 +394,7 @@ async def test_file_hash_missing_raises(tmp_path: PathLike[str]) -> None:
         await cmod.file_hash(missing)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_file_hash_handles_binary(tmp_path: PathLike[str]) -> None:
     """Ensure file_hash works on binary files as well."""
     p = Path(tmp_path) / "bin.bin"
@@ -403,7 +403,7 @@ async def test_file_hash_handles_binary(tmp_path: PathLike[str]) -> None:
     assert isinstance(h, str) and len(h) == 64
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_mark_journal_processed_with_missing_journal(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -424,7 +424,7 @@ async def test_mark_journal_processed_with_missing_journal(
     assert key not in cache_after.root
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_basic(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -470,7 +470,7 @@ async def test_journal_run_context_basic(
     assert entry2.files[fspath(j2)].last_success is not None
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_script_cache_invalid_json(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -484,7 +484,7 @@ async def test_read_script_cache_invalid_json(
     assert cache.root == {}
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_script_key_from_missing_raises(tmp_path: PathLike[str]) -> None:
     """script_key_from should raise FileNotFoundError for unreadable script paths."""
     missing = Path(tmp_path) / "no_such.py"
@@ -492,7 +492,7 @@ async def test_script_key_from_missing_raises(tmp_path: PathLike[str]) -> None:
         await cmod.script_key_from(missing)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_script_key_from_wrapped_exception(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -516,7 +516,7 @@ async def test_script_key_from_wrapped_exception(
         await cmod.script_key_from(missing)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_exception_does_not_record_files(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -597,7 +597,7 @@ def test_cache_file_path_creates_dir(tmp_path: PathLike[str]) -> None:
     assert path.basename(path.dirname(p)) == "__pycache__"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_script_cache_empty_file(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -610,7 +610,7 @@ async def test_read_script_cache_empty_file(
     assert cache.root == {}
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_script_cache_validation_error(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -624,7 +624,7 @@ async def test_read_script_cache_validation_error(
     assert cache.root == {}
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_script_cache_handles_json_decode_error(
     tmp_path: PathLike[str],
     monkeypatch: pytest.MonkeyPatch,
@@ -659,7 +659,7 @@ async def test_read_script_cache_handles_json_decode_error(
     assert any("invalidating all caches" in rec.getMessage() for rec in caplog.records)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_read_script_cache_handles_model_validate_raising(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -681,7 +681,7 @@ async def test_read_script_cache_handles_model_validate_raising(
     assert cache.root == {}
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_entry_persists_when_reported_file_missing(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -705,7 +705,7 @@ async def test_journal_run_context_entry_persists_when_reported_file_missing(
     assert fspath(j1) not in entry.files
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_mark_journal_processed_writes_entry_when_file_exists(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -729,7 +729,7 @@ async def test_mark_journal_processed_writes_entry_when_file_exists(
     assert isinstance(entry.files[fspath(j)], cmod.FileEntryModel)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_missing_script_raises(
     tmp_path: PathLike[str],
 ) -> None:
@@ -741,7 +741,7 @@ async def test_journal_run_context_missing_script_raises(
             pass
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_should_skip_journal_returns_false_when_journal_missing(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -766,7 +766,7 @@ async def test_should_skip_journal_returns_false_when_journal_missing(
     assert (await cmod.should_skip_journal(script_path, j)) is False
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_should_skip_journal_returns_false_when_no_file_entry(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -809,7 +809,7 @@ def test_evict_removes_files_with_no_last_success() -> None:
     assert "a" not in cache.root["script@x"].files
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_journal_run_context_updates_last_success_for_skipped(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

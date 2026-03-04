@@ -29,6 +29,16 @@ __all__ = (
 )
 
 
+@pytest.fixture
+def anyio_backend():
+    """Return the desired backend for AnyIO-based tests.
+
+    Using a tuple with ``use_uvloop=True`` requests uvloop explicitly.
+    AnyIO still handles platform differences (winloop on Windows) automatically.
+    """
+    return ("asyncio", {"use_uvloop": True})
+
+
 class AsyncFileBase(ABC):
     """Abstract async file interface used by test helpers.
 

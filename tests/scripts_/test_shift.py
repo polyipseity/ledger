@@ -22,7 +22,7 @@ from tests.conftest import RunModuleHelper
 __all__ = ()
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_adjusts_balance(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -56,7 +56,7 @@ async def test_shift_adjusts_balance(
     )
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 @given(
     base=st.integers(min_value=0, max_value=10000),
     shift_amt=st.floats(min_value=-500, max_value=500),
@@ -99,7 +99,7 @@ def test_shift_parser_parses_flags() -> None:
     assert hasattr(ns, "from") or hasattr(ns, "from_")
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_no_matching_account_leaves_file(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -128,7 +128,7 @@ async def test_shift_no_matching_account_leaves_file(
     assert "assets:other" in contents
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -> None:
     """Parser invoke for shift should call the main coroutine with appropriate args."""
     called: dict[str, shift.Arguments] = {}
@@ -146,7 +146,7 @@ async def test_shift_parser_invoke_calls_main(monkeypatch: pytest.MonkeyPatch) -
     assert called["args"].account == "assets:bank"
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_filters_by_month(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -183,7 +183,7 @@ async def test_shift_filters_by_month(
     assert ("1,100.00 HKD" in contents2) or ("1100.00 HKD" in contents2)
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_opening_and_closing_behaviour(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -216,7 +216,7 @@ async def test_shift_opening_and_closing_behaviour(
     assert "1,050.00 HKD" in contents or "1050.00 HKD" in contents
 
 
-@pytest.mark.asyncio
+@pytest.mark.anyio
 async def test_shift_logs_skipped_when_skipped(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
