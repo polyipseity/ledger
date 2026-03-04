@@ -1,8 +1,29 @@
 include ../../../preludes/self.journal
 
+2026-03-01 (082-2557) Oliver's Super Sandwiches  ; activity: eating, eating: lunch, time: 14:20:29, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         39.50 HKD  ; food_or_drink: 蘑菇忌廉湯長通粉, food_or_drink: 香煎豬扒
+    expenses:food and drinks:dining                                          6.00 HKD  ; food_or_drink: 迷你淋咖哩薯仔雞肉批
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.50 HKD
+
+2026-03-01 (000-960153, 34) Saizeriya  ; activity: eating, eating: dinner, time: 18:24:53, duration: PT55M7S, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
+
 2026-03-01 ! (MKB961LTZQ, 802083850478) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
     expenses:services:clouds:Apple                        8.10 HKD
     assets:deferred expenses:services:clouds:Apple       -8.10 HKD
+
+2026-03-02 (5100598757) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:24:31, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         32.50 HKD  ; food_or_drink: 焗豬扒飯
+    expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: 凍蘋果綠茶
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
+
+2026-03-02 (7/075237) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 16:27:48, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 田園熱狗香辣薯角
+    expenses:food and drinks:dining                                          5.00 HKD  ; food_or_drink: 火腿絲扭紋粉(細)
+    expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 即磨咖啡 + 多奶
+    assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -30.00 HKD
 
 2026-03-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
