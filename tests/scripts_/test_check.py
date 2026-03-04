@@ -149,10 +149,17 @@ async def test_check_logs_skipped_when_skipped(
     monkeypatch.setattr(check, "find_monthly_journals", fake_find)
 
     class DummyRun3:
-        """JournalRunContext stub used in tests to simulate skipped journals."""
+        """JournalRunContext stub used in tests to simulate skipped journals.
+
+        Accepts extra args/kwargs for future constructor changes.
+        """
 
         def __init__(
-            self, script_id: PathLike[str], j: Sequence[PathLike[str]]
+            self,
+            script_id: PathLike[str],
+            j: Sequence[PathLike[str]],
+            *args: object,
+            **kwargs: object,
         ) -> None:
             """Initialize with no journals to process and one skipped journal."""
             self.to_process = []

@@ -86,9 +86,18 @@ async def test_depreciate_main_logs_skipped_when_skipped(
     monkeypatch.setattr(depreciate, "find_monthly_journals", fake_find)
 
     class DummyRun:
-        """Stub JournalRunContext for depreciation tests that simulates skipped journals."""
+        """Stub JournalRunContext for depreciation tests that simulates skipped journals.
 
-        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+        Accepts extra args/kwargs for compatibility with cache flag.
+        """
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
             """Initialize with an empty to_process list and a single skipped journal."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = [repo / "2024-01" / "a.journal"]

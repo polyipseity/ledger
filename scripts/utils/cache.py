@@ -384,8 +384,22 @@ class JournalRunContext:
     """
 
     def __init__(
-        self, script_id: PathLike[str], journals: Iterable[PathLike[str]]
+        self,
+        script_id: PathLike[str],
+        journals: Iterable[PathLike[str]],
+        *,
+        cache: bool = True,
     ) -> None:
+        """Create a JournalRunContext.
+
+        Parameters:
+            script_id: Path to the invoking script (used to compute a cache key).
+            journals: Iterable of journal Path objects to consider for processing.
+            cache: When ``False`` the context disables all cache lookups and
+                writes. This mode is used by ``clopen.py`` where a full run is
+                always required and caching is unnecessary. The default ``True``
+                preserves the existing behaviour for other scripts.
+        """
         """Create a JournalRunContext.
 
         Parameters:
@@ -402,14 +416,22 @@ class JournalRunContext:
         self.skipped: list[PathLike[str]] = []
         self._reported: set[PathLike[str]] = set()
         self._script_key: str | None = None
+        # disable cache operations when False
+        self._cache = cache
 
     async def __aenter__(self) -> Self:
         """Enter the async context.
 
-        On entry this acquires the cache lock, loads the cache, and partitions
-        the provided journals into ``to_process`` (changed or new) and
-        ``skipped`` (unchanged since last success) based on file hashes.
+        On entry this either partitions the provided journals via the cache (the
+        original behaviour) or, when caching is disabled, treats every journal as
+        needing processing.
         """
+        if not self._cache:
+            # skip loading/writing cache entirely
+            self.to_process = list(self._journals)
+            self.skipped = []
+            return self
+
         async with _CACHE_LOCK:
             cache = await read_script_cache()
             key = await script_key_from(self.script_id)
@@ -460,6 +482,10 @@ class JournalRunContext:
         The cache is then pruned via :func:`evict_old_scripts` and written to
         disk using :func:`write_script_cache`.
         """
+        # If caching is disabled there is nothing to persist.
+        if not self._cache:
+            return False
+
         # Always update last_access so we record when the script was last run.
         async with _CACHE_LOCK:
             cache = await read_script_cache()

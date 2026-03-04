@@ -321,9 +321,18 @@ async def test_main_check_exits_with_1(
     monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
 
     class DummyRun:
-        """Stub JournalRunContext that marks our journal as to_process."""
+        """Stub JournalRunContext that marks our journal as to_process.
 
-        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+        Accepts arbitrary args/kwargs for compatibility with cache flag.
+        """
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
             """Initialize the stub with the journal list and empty reported/skipped lists."""
             self.to_process = [jpath]
             self.skipped: list[PathLike[str]] = []
@@ -377,9 +386,18 @@ async def test_main_reports_processed_when_reported(
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
 
     class DummyRun:
-        """Session stub used in format tests to simulate reported files."""
+        """Session stub used in format tests to simulate reported files.
 
-        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+        Accepts extra args/kwargs for compatibility with cache flag.
+        """
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
             """Initialize with provided journals and a pre-populated reported list."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = []
@@ -429,9 +447,18 @@ async def test_format_main_logs_skipped_when_skipped(
     monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
 
     class DummyRun2:
-        """Stub JournalRunContext used in format tests to simulate skipped journals."""
+        """Stub JournalRunContext used in format tests to simulate skipped journals.
 
-        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+        Accepts extra args/kwargs for compatibility with cache flag.
+        """
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
             """Initialize the stub with provided journals and skipped list."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = [jpath]

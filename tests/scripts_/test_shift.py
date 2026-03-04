@@ -231,9 +231,19 @@ async def test_shift_logs_skipped_when_skipped(
     monkeypatch.setattr(shift, "get_ledger_folder", lambda: ledger)
 
     class DummyRun:
-        """JournalRunContext stub for shift tests that exposes to_process/skipped lists."""
+        """JournalRunContext stub for shift tests that exposes to_process/skipped lists.
 
-        def __init__(self, script_id: PathLike[str], j: list[PathLike[str]]) -> None:
+        The real :class:`JournalRunContext` will soon accept a ``cache`` keyword
+        so the stub must tolerate extra positional or keyword arguments.
+        """
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
             """Initialize with given journals; used to simulate session behaviour."""
             self.to_process = []
             self.skipped: list[PathLike[str]] = j
