@@ -37,7 +37,7 @@ include ../../../preludes/self.journal
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093                                -2 872.80 HKD = -2 872.80 HKD
     equity:opening/closing balances
 
-2026-02-01 * (pi_3SvjSmBMoBY3wEtc0mRzXhxs) ******@*****.com  ; activity: support, rate: 7.65674, time: 03:04:09, timezone: UTC+08:00
+2026-02-01 * (pi_3SvjSmBMoBY3wEtc0mRzXhxs) ******@*****.com  ; activity: support, time: 03:04:09, timezone: UTC+08:00
     equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.65674
     assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       35.92 HKD
     expenses:fees:Stripe                                              3.98 HKD
@@ -713,6 +713,14 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                         -168.90 _PT/E
     revenues:rewards                                                          -5.00 _PT/E
 
+2026-02-23 * (pi_3T3kRNBMoBY3wEtc21miTJFA) **********@*****.com  ; activity: support, time: 05:43:52, timezone: UTC+08:00
+    equity:conversions:HKD-USD:USD                                    5.46 USD  ; rate: 7.65824
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc       35.92 HKD
+    expenses:fees:Stripe                                              3.98 HKD
+    expenses:fees:Buy Me a Coffee                                     1.91 HKD
+    equity:conversions:HKD-USD:HKD                                  -41.81 HKD
+    revenues:donations:Buy Me a Coffee:polyipseity                   -5.46 USD
+
 2026-02-23 (41219150, 62) Cafe 100%  ; activity: eating, duration: PT29M29S, time: 08:08:31, timezone: UTC+08:00
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: 無糖高纖鮮奶麥皮, food_or_drink: 蛋治, food_or_drink: 鮮奶滑蛋三文治
     expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶
@@ -867,6 +875,10 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                6.50 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -6.50 HKD
 
+2026-02-26 (749337218319835136) bank  ; CREDIT INTEREST, activity: interests, time: 23:59:59, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings        0.05 HKD
+    revenues:interests                                                  -0.05 HKD
+
 2026-02-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 07:42, timezone: UTC+08:00
     expenses:transport:buses                                                12.10 HKD
     assets:accrued revenues:rewards                                       12.10 _PT/E
@@ -897,6 +909,26 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         43.00 HKD  ; food_or_drink: 任選5款配料 + 鹽酥 + 西蘭花 + 凍豆腐 + 馬鈴薯 + 金針菇 + 美式奧爾良(小辣)
     expenses:food and drinks:dining                                          8.00 HKD  ; food_or_drink: 加撈麵
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -51.00 HKD
+
+2026-02-27 * Game Zone  ; activity: consumption, duration: PT15M, time: 14:55, timezone: UTC+08:00
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-02-27 * Game Zone  ; activity: consumption, duration: PT13M, time: 15:13, timezone: UTC+08:00
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-02-27 * Game Zone  ; activity: consumption, duration: PT16M, time: 15:37, timezone: UTC+08:00
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-02-27 * Game Zone  ; activity: consumption, duration: PT15M, time: 16:01, timezone: UTC+08:00
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD
+
+2026-02-27 * Game Zone  ; activity: consumption, duration: PT14M, time: 16:21, timezone: UTC+08:00
+    expenses:gaming:maimai                                                6.00 HKD
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD = -30.00 HKD
 
 2026-02-27 (C2R96258917, FRN20260227PAYD0103212302524) self  ; activity: transfer, time: 17:05, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
@@ -933,6 +965,10 @@ include ../../../preludes/self.journal
     assets:accrued revenues:rewards                                        4.20 _PT/E
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.20 HKD
     revenues:rewards                                                      -4.20 _PT/E
+
+2026-02-28 (MKB98ZB6L5, 652099410969, 792587) Apple  ; activity: service, time: 17:03, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
 
 2026-02-28 (2026022826650, 6650, K2) TamJai SamGor  ; activity: eating, eating: dinner, time: 20:30:19, timezone: UTC+08:00
     expenses:food and drinks:dining                                         43.00 HKD  ; food_or_drink: 汽水, food_or_drink: 滑牛肉, food_or_drink: 米綫爽, food_or_drink: 蜂巢豆腐, food_or_drink: 麻辣汤底 + 3小辣, food_or_drink: 麻辣汤滑牛肉蜂巢豆腐米线

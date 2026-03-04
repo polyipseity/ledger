@@ -17,12 +17,16 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -5.90 HKD
     revenues:rewards                                                      -5.90 _PT/E
 
+2026-03-01 (C3198332175, N30189064789, HD126301864789) bfa32943-960d-4df1-9997-e2391f5551a1  ; activity: repayment, time: 17:38, timezone: UTC+08:00
+    liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       30.00 HKD = 0.00 HKD
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       -30.00 HKD
+
 2026-03-01 (000-960153, 34) Saizeriya  ; activity: eating, duration: PT55M7S, eating: dinner, time: 18:24:53, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
 
-2026-03-01 self  ; activity: transfer, time: 19:12, timezone: UTC+08:00
+2026-03-01 (C3198438419, FRN20260301PAYD0103218301180) self  ; activity: transfer, time: 19:12, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -48,6 +52,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         32.50 HKD  ; food_or_drink: 焗豬扒飯
     expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: 凍蘋果綠茶
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
+
+2026-03-02 (FRN20260302PAYC0103221328803, po_1T5pwXBMoBY3wEtc5NypPPBD) Stripe  ; activity: payout, time: 15:22:16, timezone: UTC+08:00
+    assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings       35.92 HKD
+    assets:digital:Stripe:bcb642b1-392c-4f0b-84a1-96785fd1a0dc         -35.92 HKD = 0.00 HKD
 
 2026-03-02 (7/075237) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 16:27:48, timezone: UTC+08:00
     expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 田園熱狗香辣薯角
@@ -88,7 +96,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: 凍蘋果綠茶
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -34.00 HKD
 
-2026-03-03 self  ; activity: transfer, time: 20:48, timezone: UTC+08:00
+2026-03-03 (C3300560358, FRN20260303PAYD0103225471448) self  ; activity: transfer, time: 20:48, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
@@ -108,6 +116,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
     expenses:food and drinks:dining                                          8.00 HKD  ; food_or_drink: 白飯
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -33.00 HKD
+
+2026-03-30 ! (MKB98ZB6L5) Apple  ; activity: service, time: 23:59:59, timezone: UTC+08:00
+    expenses:services:clouds:Apple                        8.10 HKD
+    assets:deferred expenses:services:clouds:Apple       -8.10 HKD
 
 2026-03-31 ! depreciation  ; activity: depreciation, time: 23:59:59, timezone: UTC+08:00
     expenses:depreciation
