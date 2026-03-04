@@ -128,7 +128,7 @@
   orders:
     - [receipt_no]
   regex:
-    receipt_no: "\\d{2}\\/\\d{6}"
+    receipt_no: "\\d{1,2}\\/\\d{6}"
 
 "阿土伯鹽水雞":
   orders:
@@ -166,6 +166,12 @@
     barcode: "\\d{19}"
     transaction_id: "\\d{6}"
 
+"20b484a5-3c01-42f3-875c-e95509b3de22":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "\\d{10}"
+
 "Jollibee":
   orders:
     - [order_id, branch]
@@ -178,6 +184,12 @@
     - [receipt_id]
   regex:
     receipt_id: "\\d{3}-\\d{4}"
+"Subway":
+  orders:
+    - [receipt_id, transaction_id]
+  regex:
+    receipt_id: "\\d{12,20}"
+    transaction_id: "\\d{4}"
 "7fc76083-5175-421d-8c6f-d15897b5ee8e":
   orders:
     - [n_ref_id, branch_id]
