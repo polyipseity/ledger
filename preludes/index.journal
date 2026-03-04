@@ -37,6 +37,7 @@ payee unknown
 tag _conversion-matched
 tag _price-matched
 tag activity
+tag clopen
 tag datetime
 tag depreciation
 tag duration
