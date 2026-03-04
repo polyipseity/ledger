@@ -84,7 +84,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 
 ## 4. Validation and Commit
 
-**Note:** Use the canonical formatting and validation workflow: run `bun run format` then `bun run check` (or use `python -m ...` with `cwd=scripts/`). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for details. Review changes and commit using the correct ledger commit header. **If any error or ambiguity arises during validation, ask the user for clarification.**
+**Note:** Use the canonical formatting and validation workflow: run `bun run format` then `bun run check` (or use `python -m ...` with `cwd=scripts/`). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for details. Review changes and stage/commit them using the correct ledger commit header **only if the user has explicitly asked you to make a commit**; otherwise you may simply stop after validation. **If any error or ambiguity arises during validation, ask the user for clarification.**
 
 ## 5. Examples of When to Ask for Clarification
 

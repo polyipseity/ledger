@@ -56,6 +56,18 @@
   - "A-1 Bakery"
   - "Saizeriya" # 2026-02-22 lunch in Octopus feed (39.00 HKD) was actually Saizeriya
 
+# Chinese names for common fast food
+"肯德基":
+  - "KFC"
+"麥當勞":
+  - "McDonald's"
+"譚仔三哥米線":
+  - "TamJai SamGor"
+"美國三文治公司":
+  - "American Diner"
+"阿波羅美極屋":
+  - "Appolo"
+
 # Retail
 "百佳":
   - "Taste"
@@ -79,3 +91,12 @@
 
 "其他":
   - "Cafe 100%"
+
+"UnicornStores(HK)Ltd":
+  - "UNY"
+
+"EVER GREEN":
+  - "阿土伯鹽水雞"
+
+"快樂蜂":
+  - "Jollibee"

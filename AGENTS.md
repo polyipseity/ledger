@@ -12,6 +12,8 @@
 
 **Ask instead of guessing.** If anything is ambiguous, pause and request clarification rather than making assumptions.
 
+**Commit only when asked.** Unless the user explicitly requests a commit, you may finish after validating and do not need to stage or push any changes. This preference is documented in relevant skill instructions.
+
 ## Project Overview
 
 Personal accounting system using **hledger** (plain text accounting) to track financial transactions organized by year/month.
