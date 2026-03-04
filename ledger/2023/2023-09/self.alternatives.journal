@@ -1,6 +1,6 @@
 include ../../../preludes/self.alternatives.journal
 
-2023-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2023-09-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704           44 GREEN$ = 44 GREEN$
     assets:digital:SheepIt Render Farm:polyipseity                          4 699 652. _PT/A = 4 699 652. _PT/A
     assets:recycables                                                             0.037 _OPL = 0.037 _OPL
@@ -419,7 +419,7 @@ include ../../../preludes/self.alternatives.journal
     revenues:recycables:food and drinks     -0.043 _PLA  ; collect: 2 plastic bottles
     assets:recycables
 
-2023-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2023-09-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:recycables                                                              -0.100 _BEC = 0.000 _BEC
     assets:recycables                                                              -0.052 _MET = 0.000 _MET
     assets:recycables                                                              -0.133 _OPL = 0.000 _OPL

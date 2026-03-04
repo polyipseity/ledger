@@ -1,6 +1,6 @@
 include ../../../preludes/self.journal
 
-2025-02-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2025-02-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:education:scholarships                                                40 000.00 HKD = 40 000.00 HKD
     assets:accrued revenues:rewards:competitions                                                   3 750.00 HKD = 3 750.00 HKD
     assets:accrued revenues:incomes:education                                                      5 053.75 HKD = 5 053.75 HKD
@@ -853,7 +853,7 @@ include ../../../preludes/self.journal
     expenses:services:support                       20.79 HKD  ; item: AppleCare+ for iPad 10
     assets:deferred expenses:services:support      -20.79 HKD
 
-2025-02-28 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2025-02-28 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:rewards:competitions                                           -3 750.00 HKD = 0.00 HKD
     assets:accrued revenues:education:scholarships                                        -40 000.00 HKD = 0.00 HKD
     assets:accrued revenues:incomes:education                                                -877.50 HKD = 0.00 HKD

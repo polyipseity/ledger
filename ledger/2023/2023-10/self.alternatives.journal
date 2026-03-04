@@ -1,6 +1,6 @@
 include ../../../preludes/self.alternatives.journal
 
-2023-10-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2023-10-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:recycables                                                              0.100 _BEC = 0.100 _BEC
     assets:recycables                                                              0.052 _MET = 0.052 _MET
     assets:recycables                                                              0.133 _OPL = 0.133 _OPL
@@ -360,7 +360,7 @@ include ../../../preludes/self.alternatives.journal
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0    1 111. _PT/B = 47 882. _PT/B
     revenues:activities:walking
 
-2023-10-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2023-10-31 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:recycables                                                                                  -0.084 _MET = 0.000 _MET
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                               -187 GREEN$ = 0 GREEN$
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        -47 882. _PT/B = 0 _PT/B

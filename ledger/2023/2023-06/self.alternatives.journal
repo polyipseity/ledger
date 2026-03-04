@@ -1,6 +1,6 @@
 include ../../../preludes/self.alternatives.journal
 
-2023-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2023-06-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      2 009 311. _PT/A = 2 009 311. _PT/A
     equity:opening/closing balances
     [assets:digital:SheepIt Render Farm:polyipseity]            -37 _FRM = -37 _FRM
@@ -106,7 +106,7 @@ include ../../../preludes/self.alternatives.journal
     [expenses:compute:SheepIt Render Farm]                   152 _FRM
     [assets:digital:SheepIt Render Farm:polyipseity]
 
-2023-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2023-06-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:digital:SheepIt Render Farm:polyipseity      -2 775 196. _PT/A = 0 _PT/A
     equity:opening/closing balances
     [assets:digital:SheepIt Render Farm:polyipseity]        -20 036. _FRM = 0 _FRM

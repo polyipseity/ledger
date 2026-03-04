@@ -1,6 +1,6 @@
 include ../../../preludes/self.journal
 
-2025-11-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2025-11-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:rewards                                                                108.00 _PT/E = 108.00 _PT/E
     assets:accrued revenues:incomes:education                                                      2 686.00 HKD = 2 686.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                   1 399.60 HKD = 1 399.60 HKD
@@ -1167,7 +1167,7 @@ include ../../../preludes/self.journal
     expenses:services:support                       16.63 HKD  ; item: AppleCare+ for Apple Watch SE Aluminum
     assets:deferred expenses:services:support      -37.42 HKD
 
-2025-11-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2025-11-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:rewards                                                               -125.50 _PT/E = 0.00 _PT/E
     assets:accrued revenues:incomes:education                                                     -1 224.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                  -1 399.60 HKD = 0.00 HKD

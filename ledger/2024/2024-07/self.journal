@@ -1,6 +1,6 @@
 include ../../../preludes/self.journal
 
-2024-07-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2024-07-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:accumulated depreciation                                                        -1 834.06 HKD = -1 834.06 HKD
     assets:accumulated depreciation                                                          -333.33 KRW = -333.33 KRW
     assets:accrued revenues:incomes:tutoring                                                  390.00 HKD = 390.00 HKD
@@ -912,7 +912,7 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation       -1.00 HKD  ; item: 050508506 STEREO EARAPHONE (WITH MICROPHONE MI-BBL)
     expenses:depreciation
 
-2024-07-31 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2024-07-31 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accumulated depreciation                                                                2 107.89 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                  666.66 KRW = 0.00 KRW
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                    -800.00 HKD = 0.00 HKD

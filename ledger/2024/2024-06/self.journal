@@ -1,6 +1,6 @@
 include ../../../preludes/self.journal
 
-2024-06-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2024-06-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:accumulated depreciation                                                        -1 557.23 HKD = -1 557.23 HKD
     assets:accrued revenues:education                                                          35.00 HKD = 35.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25              800.00 HKD = 800.00 HKD
@@ -791,7 +791,7 @@ include ../../../preludes/self.journal
     assets:accumulated depreciation     -333.33 KRW  ; item: Leopold wire keycap remover
     expenses:depreciation
 
-2024-06-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2024-06-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accumulated depreciation                                                         1 834.06 HKD = 0.00 HKD
     assets:accumulated depreciation                                                           333.33 KRW = 0.00 KRW
     assets:accrued revenues:incomes:tutoring                                                 -390.00 HKD = 0.00 HKD

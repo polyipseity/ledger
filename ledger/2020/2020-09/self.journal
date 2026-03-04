@@ -1,6 +1,6 @@
 include ../../../preludes/self.journal
 
-2020-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2020-09-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7              49.00 HKD = 49.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            -16 082.90 HKD = -16 082.90 HKD
     liabilities:accrued expenses:insurances:levy                                             -47.04 HKD = -47.04 HKD
@@ -15,7 +15,7 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:levy                                             5.88 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4
 
-2020-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2020-09-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7           -101.00 HKD = 0.00 HKD
     equity:kins:families:3833b42e-dad3-425c-b254-904be68993e4                            21 965.35 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:levy                                             41.16 HKD = 0.00 HKD

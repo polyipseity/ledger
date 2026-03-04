@@ -1,6 +1,6 @@
 include ../../../preludes/self.alternatives.journal
 
-2024-09-01 opening balances  ; time: 00:00:00, timezone: UTC+08:00
+2024-09-01 opening balances  ; clopen: , time: 00:00:00, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            7 021. GREEN$ = 7 021. GREEN$
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        74 000. _PT/B = 74 000. _PT/B
     assets:digital:SheepIt Render Farm:polyipseity                                                   29 311. _FRM = 29 311. _FRM
@@ -128,7 +128,7 @@ include ../../../preludes/self.alternatives.journal
     equity:conversions:GREEN$-_OPL:GREEN$                                      -2 GREEN$
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704       15 GREEN$ = 7 419. GREEN$
 
-2024-09-30 closing balances  ; time: 23:59:59, timezone: UTC+08:00
+2024-09-30 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704                            -7 419. GREEN$ = 0 GREEN$
     assets:digital:96f69720-5471-4e88-bebe-3db7a77a086c:25ae7c7d-49b5-4df6-8ded-044d96eaeaf0        -74 000. _PT/B = 0 _PT/B
     assets:digital:SheepIt Render Farm:polyipseity                                                   -29 311. _FRM = 0 _FRM
