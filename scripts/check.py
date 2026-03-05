@@ -24,6 +24,7 @@ from .utils.journals import find_monthly_journals, format_journal_list, run_hled
 
 __all__ = ("Arguments", "main", "parser")
 
+"""Tuple of hledger check subcommand names run against each journal."""
 _HLEDGER_CHECKS = (
     "accounts",
     "assertions",

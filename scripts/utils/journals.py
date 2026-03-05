@@ -14,6 +14,7 @@ from subprocess import CalledProcessError
 
 from anyio import Path
 
+"""Module-level logger for journal discovery and hledger subprocess helpers."""
 logger = logging.getLogger(__name__)
 
 __all__ = (
@@ -29,8 +30,10 @@ __all__ = (
     "run_hledger",
 )
 
+"""Limits concurrent hledger subprocess invocations to avoid resource exhaustion."""
 _SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
 
+"""Default number of decimal places for amount formatting in journal output."""
 DEFAULT_AMOUNT_DECIMAL_PLACES = 2
 
 

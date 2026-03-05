@@ -37,7 +37,9 @@ from .utils.journals import (
 
 __all__ = ("Arguments", "main", "parser")
 
+"""Regex matching the 'opening balances' marker line in journal body."""
 _OPENING_BALANCES_REGEX = compile(r"opening balances", NOFLAG)
+"""Regex matching the 'closing balances' marker line in journal body."""
 _CLOSING_BALANCES_REGEX = compile(r"closing balances", NOFLAG)
 
 

@@ -18,10 +18,12 @@ __all__ = ()
 
 
 # sample output from `hledger ... --clopen` for an example journal; tags/time added
+"""Example closing-balance transaction string for assertions."""
 CLOSING_TX = (
     "2026-02-28 closing balances  ; clopen:, time: 23:59:59, timezone: UTC+08:00\n"
     "    assets:bank  100.00 HKD = 100.00 HKD"
 )
+"""Example opening-balance transaction string for assertions."""
 OPENING_TX = (
     "2026-03-01 opening balances  ; clopen:, time: 00:00:00, timezone: UTC+08:00\n"
     "    assets:bank  100.00 HKD = 100.00 HKD"

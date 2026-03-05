@@ -34,9 +34,13 @@ from .utils.journals import (
 
 __all__ = ("Arguments", "main", "parser")
 
+"""Regex matching a depreciation transaction line (date + optional status + 'depreciation')."""
 _DEPRECIATION_REGEX = compile(r"^\d{4}-\d{2}-\d{2} +(?:[!*] +)?depreciation", NOFLAG)
+"""Account name for depreciation expense entries."""
 _DEPRECIATION_ACCOUNT = "expenses:depreciation"
+"""Account name for accumulated depreciation (balance sheet)."""
 _ACCUMULATED_DEPRECIATION_ACCOUNT = "assets:accumulated depreciation"
+"""Timezone used for journal datetimes (e.g. closing/opening balance times)."""
 _TIMEZONE = "UTC+08:00"
 
 

@@ -36,8 +36,11 @@ __all__ = (
 
 
 # Cache filename derived from this module's filename (e.g. "cache.cache.json").
+"""Stem of this module's filename, used to build cache filenames."""
 _MODULE_STEM = splitext(basename(__file__))[0]
+"""Cache filename for this script (e.g. cache.cache.json)."""
 _SCRIPT_CACHE_NAME = f"{_MODULE_STEM}.cache.json"
+"""Asyncio lock protecting concurrent reads/writes of the script cache file."""
 _CACHE_LOCK: Lock = Lock()
 
 
@@ -175,6 +178,7 @@ async def journal_hash(path: PathLike[str]) -> str:
 # repository root). Exposed as a module-level variable so tests can override
 # it when needed. Use an anyio `Path` so callers/tests can work with a
 # path-like object directly.
+"""Path to the preludes directory (repository root / preludes)."""
 _PRELUDES_DIR: Path = Path(__file__).parent.parent.parent / "preludes"
 
 
