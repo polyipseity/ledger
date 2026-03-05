@@ -7,6 +7,7 @@ from os import PathLike
 from anyio import Path
 from anyio import Path as AnyioPath
 
+"""Public symbols exported by this module."""
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
 

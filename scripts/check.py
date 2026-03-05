@@ -22,6 +22,7 @@ from .utils.concurrency import gather_and_raise
 from .utils.files import get_ledger_folder
 from .utils.journals import find_monthly_journals, format_journal_list, run_hledger
 
+"""Public symbols exported by this module."""
 __all__ = ("Arguments", "main", "parser")
 
 """Tuple of hledger check subcommand names run against each journal."""
@@ -135,6 +136,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
 if __name__ == "__main__":
     basicConfig(level=INFO)
+    """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
     # maintain compatibility with existing invocation pattern
     run(entry.invoke(entry))

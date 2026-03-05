@@ -18,6 +18,7 @@ from scripts import format as fmt
 from scripts.utils.cache import JournalRunContext
 from tests.conftest import RunModuleHelper
 
+"""Public symbols exported by this module (none)."""
 __all__ = ()
 
 

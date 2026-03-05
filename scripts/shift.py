@@ -35,6 +35,7 @@ from .utils.journals import (
     parse_period_start,
 )
 
+"""Public symbols exported by this module."""
 __all__ = ("Arguments", "main", "parser")
 
 """Regex matching the 'opening balances' marker line in journal body."""
@@ -210,5 +211,6 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
 if __name__ == "__main__":
     basicConfig(level=INFO)
+    """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
     run(entry.invoke(entry))

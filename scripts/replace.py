@@ -19,6 +19,7 @@ from .utils.concurrency import gather_and_raise
 from .utils.files import file_update_if_changed, get_ledger_folder
 from .utils.journals import find_all_journals
 
+"""Public symbols exported by this module."""
 __all__ = ("Arguments", "main", "parser")
 
 
@@ -110,5 +111,6 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
 if __name__ == "__main__":
     basicConfig(level=INFO)
+    """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
     run(entry.invoke(entry))

@@ -21,6 +21,7 @@ from typing import Any, Literal, Protocol, Self, overload
 import pytest
 from anyio import Path
 
+"""Public symbols exported by this module."""
 __all__ = (
     "AsyncFileFactory",
     "RunModuleHelper",

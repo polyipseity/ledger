@@ -18,6 +18,7 @@ from anyio import Path
 
 from scripts.utils import cache as cmod
 
+"""Public symbols exported by this module (none)."""
 __all__ = ()
 
 

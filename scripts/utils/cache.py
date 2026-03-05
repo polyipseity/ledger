@@ -18,6 +18,7 @@ from typing import Self
 from anyio import Path
 from pydantic import BaseModel, Field, RootModel, ValidationError
 
+"""Public symbols exported by this module."""
 __all__ = (
     "FileEntryModel",
     "ScriptEntryModel",

@@ -17,6 +17,7 @@ from anyio import Path
 """Module-level logger for journal discovery and hledger subprocess helpers."""
 logger = logging.getLogger(__name__)
 
+"""Public symbols exported by this module."""
 __all__ = (
     "DEFAULT_AMOUNT_DECIMAL_PLACES",
     "find_monthly_journals",

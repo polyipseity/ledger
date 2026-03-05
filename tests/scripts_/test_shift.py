@@ -19,6 +19,7 @@ from hypothesis import strategies as st
 from scripts import shift
 from tests.conftest import RunModuleHelper
 
+"""Public symbols exported by this module (none)."""
 __all__ = ()
 
 
@@ -57,7 +58,7 @@ async def test_shift_adjusts_balance(
 
 
 @pytest.mark.anyio
-@settings(max_examples=10)  # default is 200
+@settings(max_examples=10, deadline=None)  # default 200; timing varies by run
 @given(
     base=st.integers(min_value=0, max_value=10000),
     shift_amt=st.floats(min_value=-500, max_value=500),

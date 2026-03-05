@@ -15,6 +15,7 @@ from hypothesis import strategies as st
 
 from scripts.utils import files
 
+"""Public symbols exported by this module (none)."""
 __all__ = ()
 
 

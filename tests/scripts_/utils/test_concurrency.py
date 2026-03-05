@@ -11,6 +11,7 @@ import pytest
 
 from scripts.utils import concurrency
 
+"""Public symbols exported by this module (none)."""
 __all__ = ()
 
 

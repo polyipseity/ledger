@@ -3,6 +3,7 @@
 from asyncio import gather
 from collections.abc import Awaitable
 
+"""Public symbols exported by this module."""
 __all__ = ("gather_and_raise",)
 
 
