@@ -44,7 +44,7 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 1. **Read the skill**: Open the relevant `.agents/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
 2. **Install deps**: Run `bun install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
 3. **Format & validate locally**: `bun run format && bun run check` (fix issues before committing).
-4. **Run scripts properly**: Prefer `bun run <script>`; if not available, run `python -m scripts.<cmd>` with `cwd=scripts/.`
+4. **Run scripts properly**: Prefer `bun run <script>`; if not available, run `uv run -m scripts.<cmd>` with `cwd=scripts/.`
 5. **Make small, tested changes**: Add or update tests under `tests/` that mirror the source layout for any code changes.
    - **If you edit instruction files or SKILLs**, add or update tests that cover the new behaviour, and update `AGENTS.md`/the relevant `SKILL.md` or examples as needed.
 6. **Commit rules**: Follow `.agents/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
@@ -112,7 +112,7 @@ These conventions are lightweight but help keep agent-generated edits consistent
 **Script commands: Always use bun script wrappers if available**
 
 - For all operations, prefer `bun run <script>` (e.g., `bun run check`, `bun run format`, `bun run hledger:check`, `bun run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
+- Only use direct Python invocations (e.g., `uv run -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
 - **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
 - For `hledger close --migrate`, run from the repository root as well.
 
