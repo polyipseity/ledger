@@ -31,7 +31,7 @@ Close previous month and initialize new month with proper balance assertions.
 
 ## Script Usage
 
-See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. Short: prefer `bun run <script>` from the repository root; if none exists, run Python scripts with `cwd=scripts/.`
+See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. Short: prefer `bun run <script>` from the repository root; if none exists, run Python scripts with `cwd=scripts/.`
 
 ## Pre-Commit Checklist (Husky + lint-staged)
 
@@ -44,7 +44,7 @@ See `.github/instructions/developer-workflows.instructions.md` for the canonical
 7. Prepare hooks: `bun install` (registers Husky hooks via the `prepare` script; lint-staged is configured in `.lintstagedrc.mjs`). Note: `bun install` runs `prepare`, which runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
 8. Commit: `git commit -S -m "chore: describe changes"`
 
-**Note:** When a `lint-staged` command needs the list of staged file paths (for example, formatting only staged files), prefer invoking the underlying command directly so the file list is forwarded (for example: `python -m scripts.format`). See `.github/instructions/developer-workflows.instructions.md` for the canonical guidance.
+**Note:** When a `lint-staged` command needs the list of staged file paths (for example, formatting only staged files), prefer invoking the underlying command directly so the file list is forwarded (for example: `python -m scripts.format`). See `.agents/instructions/developer-workflows.instructions.md` for the canonical guidance.
 
 ## Related Documentation
 

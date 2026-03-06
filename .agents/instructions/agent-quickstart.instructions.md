@@ -9,7 +9,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 
 ## Core checklist (do this every time)
 
-- Read the relevant `.github/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
+- Read the relevant `.agents/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
 - Run `bun install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.
 - Format & validate: `bun run format && bun run check` (alternatively, `bun run format:py`, `bun run format:md`, `bun run hledger:format` as needed).  When running `check:md` or `format:md` on a subset of files, append `--no-globs` and list the filenames explicitly to avoid linting the entire repo.
 - Run tests locally: `bun run test` (CI runs the same suite); use `bun run test:py` to run pytest directly.
@@ -31,13 +31,13 @@ This file is a concise checklist for AI agents working in this repository. Read 
 
 ## When editing journals
 
-- Follow `.github/instructions/editing-guidelines.instructions.md` and the `add-transactions` and `edit-journals` skills precisely.
+- Follow `.agents/instructions/editing-guidelines.instructions.md` and the `add-transactions` and `edit-journals` skills precisely.
 - Journal path format: `ledger/YYYY/YYYY-MM/self.journal`.
 - Use status markers correctly: `!` = pending, `*` = cleared, none = normal.
 
 ## Commit & PR guidance
 
-- Use Conventional Commits and follow `.github/instructions/git-commits.instructions.md`.
+- Use Conventional Commits and follow `.agents/instructions/git-commits.instructions.md`.
 - For journal-only commits use the single-line header format: `ledger(<list>): add N / edit M transaction(s)` (no body).
 - Ensure commit bodies are wrapped to **72 characters** or fewer where possible (preferred); linting enforces a hard **100-character** maximum and will block commits that exceed it.
 

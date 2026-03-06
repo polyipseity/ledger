@@ -7,7 +7,7 @@ This file extends the add-transactions skill with generalized rules for transcri
 **All rules below are subject to these mandatory best practices:**
 
 - **Net Amount Posting:** Always post the net amount (after all fees) to the digital payment asset account (e.g., Stripe, PayPal, etc.). Never use the gross payment amount for this posting. The net amount is the actual value credited to your platform balance and is essential for balanced transactions and accurate asset tracking.
-- **Second Precision Time Tags:** Record full HH:MM:SS timestamps when available; see `.github/instructions/transaction-format.instructions.md` for ordering and timezone rules.
+- **Second Precision Time Tags:** Record full HH:MM:SS timestamps when available; see `.agents/instructions/transaction-format.instructions.md` for ordering and timezone rules.
 
 Any deviation from these rules will result in unbalanced or non-compliant journal entries.
 

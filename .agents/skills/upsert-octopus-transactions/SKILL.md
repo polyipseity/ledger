@@ -5,7 +5,7 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 
 # Upsert Octopus Transactions Skill
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise command checklist.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise command checklist.
 
 ## 🚩 Absolute Rules for Agents
 
@@ -26,8 +26,8 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 ## 1. Preparation: Load All Context
 
 1. **You must always read the confidential payee mapping file**: `private.yaml`, and ensure you understand which payees are confidential and require UUIDs. This must always be remembered for correct payee handling.
-2. **You must always read the payee mapping file**: `.github/skills/upsert-octopus-transactions/payee_mappings.yml`. This must always be referenced for correct payee mapping.
-**Note:** Process Octopus transactions in chronological order; see `.github/instructions/transaction-format.instructions.md` for canonical ordering rules.
+2. **You must always read the payee mapping file**: `.agents/skills/upsert-octopus-transactions/payee_mappings.yml`. This must always be referenced for correct payee mapping.
+**Note:** Process Octopus transactions in chronological order; see `.agents/instructions/transaction-format.instructions.md` for canonical ordering rules.
    - Do not transcribe or prepare any journal transactions from the Octopus transactions until Pass 2.
 3. **If any mapping is missing, ambiguous, or unclear,** you must ask the user for the correct mapping and update the file before continuing. **Never guess.**
 4. **For confidential payees,** after mapping, must check `private.yaml` for a UUID. If a UUID exists, use it as the payee in the journal. **Never expose confidential names.**
@@ -69,7 +69,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 1. For each Octopus transaction that was not matched in Pass 1:
    - **Must check the payee mapping file for the merchant name.** If missing, ambiguous, or one-to-many and context is insufficient, ask the user for the correct mapping and update the file before proceeding.
    - For confidential payees, after mapping, check `private.yaml` for a UUID and use it in the journal. Never expose confidential names.
-   - Add a new journal transaction using the mapping. **Note:** Insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
+   - Add a new journal transaction using the mapping. **Note:** Insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md`.
       - For vending machine transactions (e.g., Swire), use `expenses:food and drinks:drinks` as the expense account.
       - For bus transport transactions (Kowloon Motor Bus/Long Win Bus), also record the reward accrual and revenue postings. Add an `assets:accrued revenues:rewards` posting with the fare amount in `_PT/E` (positive) and a corresponding `revenues:rewards` posting with the negative same amount in `_PT/E`. This ensures accumulated reward points are tracked consistently for bus fares.
    - For each new payee, register it in `preludes/self.journal` (alphabetized); for confidential payees register the UUID. See `add-payee` skill for process.
@@ -77,14 +77,14 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 
 **Never add a transaction in Pass 1. Never update an existing transaction in Pass 2.**
 
-- Insert new transactions in their correct chronological position (see `.github/instructions/transaction-format.instructions.md`).
+- Insert new transactions in their correct chronological position (see `.agents/instructions/transaction-format.instructions.md`).
 - Within each transaction, order postings with debits first (increases), then credits (decreases).
 - For each new payee, register it in `preludes/self.journal` (alphabetized). For confidential payees, register the UUID.
 - **If any ambiguity exists in transaction details, ordering, or payee registration, ask the user for clarification.**
 
 ## 4. Validation and Commit
 
-**Note:** Use the canonical formatting and validation workflow: run `bun run format` then `bun run check` (or use `python -m ...` with `cwd=scripts/`). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for details. Review changes and stage/commit them using the correct ledger commit header **only if the user has explicitly asked you to make a commit**; otherwise you may simply stop after validation. **If any error or ambiguity arises during validation, ask the user for clarification.**
+**Note:** Use the canonical formatting and validation workflow: run `bun run format` then `bun run check` (or use `python -m ...` with `cwd=scripts/`). See `.agents/instructions/developer-workflows.instructions.md` and `.agents/instructions/common-workflows.instructions.md` for details. Review changes and stage/commit them using the correct ledger commit header **only if the user has explicitly asked you to make a commit**; otherwise you may simply stop after validation. **If any error or ambiguity arises during validation, ask the user for clarification.**
 
 ## 5. Examples of When to Ask for Clarification
 

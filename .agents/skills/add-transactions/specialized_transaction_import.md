@@ -26,14 +26,14 @@ This document describes the general workflow and best practices for automating t
         - Insert a new transaction at the correct chronological position, using the standard format and all extracted metadata.
 
 4. **Formatting and Validation**
-    - **Note:** Insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md` for canonical rules.
+    - **Note:** Insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md` for canonical rules.
     - Use the correct account names and UUIDs as per project conventions.
     - Format all tags and columns according to the repository’s transaction-format and editing-guidelines.
     - Always validate and format the journal file after changes.
 
 5. **Anti-Patterns**
     - Do not add duplicate transactions for the same unique identifier.
-    - **Note:** Do not insert transactions out of chronological order; see `.github/instructions/transaction-format.instructions.md` for details.
+    - **Note:** Do not insert transactions out of chronological order; see `.agents/instructions/transaction-format.instructions.md` for details.
     - Do not omit required metadata or tags.
     - Do not use incorrect or generic account names.
     - Do not modify unrelated transactions.

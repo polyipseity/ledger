@@ -9,9 +9,9 @@ Purpose: Import and normalize transactions from receipts, statements, and struct
 
 Core guidance:
 
-- Use full ledger paths (e.g., `ledger/2024/2024-01/self.journal`) and insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
-- Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules; see `.github/instructions/agent-quickstart.instructions.md` for a concise command checklist.
-- Use canonical scripts for formatting/validation (`bun run format` then `bun run check`); see `.github/instructions/developer-workflows.instructions.md`.
+- Use full ledger paths (e.g., `ledger/2024/2024-01/self.journal`) and insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md`.
+- Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules; see `.agents/instructions/agent-quickstart.instructions.md` for a concise command checklist.
+- Use canonical scripts for formatting/validation (`bun run format` then `bun run check`); see `.agents/instructions/developer-workflows.instructions.md`.
 - Update the theme/aspect files below when introducing new patterns—these are authoritative for type-specific rules.
 
 Theme/aspect files (authoritative):
@@ -27,7 +27,7 @@ Theme/aspect files (authoritative):
 - [Image & Attachment Handling](./image_attachment_rules.md) — When to use: transcribing from receipt images or when attachments require validation.
 - [Specialized Transaction Import & Automation](./specialized_transaction_import.md) — When to use: structured imports (CSV, email, API) and automation flows (Octopus eDDA, etc.).
 
-Refer to each theme file for detailed rules; for canonical worked examples and edge cases see `./examples.md`. For quick definitions and key terms, see `.github/instructions/agent-glossary.instructions.md`.
+Refer to each theme file for detailed rules; for canonical worked examples and edge cases see `./examples.md`. For quick definitions and key terms, see `.agents/instructions/agent-glossary.instructions.md`.
 
 Canonical rule locations (quick map):
 
@@ -39,7 +39,7 @@ Canonical rule locations (quick map):
 
 If a lesson in `lessons.md` needs integration, add it to the relevant file above and replace the lesson entry with a one-line pointer.
 
-Refer to each theme file for detailed rules, examples, and test expectations. For quick definitions and key terms, see `.github/instructions/agent-glossary.instructions.md`.
+Refer to each theme file for detailed rules, examples, and test expectations. For quick definitions and key terms, see `.agents/instructions/agent-glossary.instructions.md`.
 
 ## Mapping and Translation Files
 
@@ -58,7 +58,7 @@ Each file contains its own documentation and must be referenced for correct tran
 
 ## Validation Reminder
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
 
 Example:
 
@@ -92,7 +92,7 @@ See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for 
 
 ### Status markers
 
-Use status markers only for lending/borrowing transactions. See `lending_borrowing_transactions.md` and `.github/instructions/transaction-format.instructions.md` for canonical rules and examples.
+Use status markers only for lending/borrowing transactions. See `lending_borrowing_transactions.md` and `.agents/instructions/transaction-format.instructions.md` for canonical rules and examples.
 
 Other previous learnings remain in effect:
 
@@ -109,7 +109,7 @@ Other previous learnings remain in effect:
 - **Never leak Octopus numbers or personal IDs** in any transaction, mapping, or documentation. These must be treated as confidential and must not appear in journal entries, ID mappings, or skill documentation. Only use anonymized or mapped UUIDs where required.
 - **Never leak attachment filenames or add an `attachment` tag** in any transaction. Do not reference image or file names in the journal.
 - **Only one `include` line** for the prelude should appear at the top of each journal file. Remove any duplicates.
-**Note:** For chronological ordering rules, see `.github/instructions/transaction-format.instructions.md`.
+**Note:** For chronological ordering rules, see `.agents/instructions/transaction-format.instructions.md`.
 - When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
 - **Verify insertion location:** Do not rely blindly on tools to insert at the correct place—always check and correct placement manually if needed.
 

@@ -6,9 +6,9 @@ summary: Add a new payee (merchant, person, organization, or UUID) to the correc
 
 # Skill: Add Payee
 
-**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 **Payee directives must always be added to a `preludes/` journal file, never to monthly or yearly journals. If you encounter a strict payee error (e.g., 'payee ... has not been declared'), resolve it by adding the payee to the appropriate `preludes/` file as described below.**
 
@@ -37,7 +37,7 @@ This skill describes how to add a new payee to the ledger system.
 
 4. **Validation**
 
-      **Note:** Use the canonical formatting and validation workflow: see `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/common-workflows.instructions.md` for steps and examples (prefer `bun run format` and `bun run check`).
+      **Note:** Use the canonical formatting and validation workflow: see `.agents/instructions/developer-workflows.instructions.md` and `.agents/instructions/common-workflows.instructions.md` for steps and examples (prefer `bun run format` and `bun run check`).
 
 ## Anti-Patterns
 
@@ -46,6 +46,6 @@ This skill describes how to add a new payee to the ledger system.
 
 ## Related Documentation
 
-- [Editing Guidelines](../../.github/instructions/editing-guidelines.instructions.md)
-- [Transaction Format Conventions](../../.github/instructions/transaction-format.instructions.md)
-- [Architecture & File Organization](../../.github/instructions/architecture.instructions.md)
+- [Editing Guidelines](../../.agents/instructions/editing-guidelines.instructions.md)
+- [Transaction Format Conventions](../../.agents/instructions/transaction-format.instructions.md)
+- [Architecture & File Organization](../../.agents/instructions/architecture.instructions.md)

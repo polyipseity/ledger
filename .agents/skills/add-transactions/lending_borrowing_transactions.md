@@ -18,7 +18,7 @@ This file contains rules, clarifications, and examples specific to lending, borr
 
 If you see a status marker in any transaction that is not a loan/repayment, it is an error and must be corrected.
 
-Repayments must update status of related pending transactions. Use liability assertion (`= 0.00 <CURRENCY>`) when settling a liability. Always use canonical payee names or UUIDs as per SKILL.md. **Note:** Insert transactions in strict chronological order; see `.github/instructions/transaction-format.instructions.md`.
+Repayments must update status of related pending transactions. Use liability assertion (`= 0.00 <CURRENCY>`) when settling a liability. Always use canonical payee names or UUIDs as per SKILL.md. **Note:** Insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md`.
 
 **Examples:** See `./examples.md` for canonical lending/borrowing and shared expense patterns.
 

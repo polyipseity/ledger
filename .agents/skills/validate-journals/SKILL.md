@@ -7,7 +7,7 @@ description: Validate hledger journal files using check/format scripts. Includes
 
 **Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` for workflow rules.
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 Validate journals to catch errors and ensure consistency before committing.
 
@@ -20,7 +20,7 @@ Validate journals to catch errors and ensure consistency before committing.
 
 ## Quick Start
 
-**Note:** Use canonical scripts: `bun run format` then `bun run check` (or `python -m ...` with `cwd=scripts/` when required). See `.github/instructions/developer-workflows.instructions.md` and `.github/instructions/agent-quickstart.instructions.md` for details and quick commands.
+**Note:** Use canonical scripts: `bun run format` then `bun run check` (or `python -m ...` with `cwd=scripts/` when required). See `.agents/instructions/developer-workflows.instructions.md` and `.agents/instructions/agent-quickstart.instructions.md` for details and quick commands.
 
 **Examples:** See `./examples.md` for quick validation command examples and common fixes.
 
@@ -60,7 +60,7 @@ The formatter normalizes:
 - Comment properties alphabetically: `activity:, eating:, time:, timezone:`
 - Preserves UUIDs: `assets:banks:<bank-uuid>`
 
-**Note:** See `.github/instructions/common-workflows.instructions.md` for the canonical Pre-Commit Checklist (Husky + lint-staged) and setup instructions, including running `bun run format`, `python -m check`, and `bun run test`. Also see `.github/instructions/developer-workflows.instructions.md` for `scripts/` working directory guidance.
+**Note:** See `.agents/instructions/common-workflows.instructions.md` for the canonical Pre-Commit Checklist (Husky + lint-staged) and setup instructions, including running `bun run format`, `python -m check`, and `bun run test`. Also see `.agents/instructions/developer-workflows.instructions.md` for `scripts/` working directory guidance.
 
 ## Checking Specific Months
 

@@ -7,7 +7,7 @@ applyTo: "**/*.journal"
 
 # Editing Guidelines
 
-**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
 
 ## Account and Payee Directive Ordering
 
@@ -29,15 +29,15 @@ See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 
 ## Script Usage for Validation/Formatting
 
-**Scripts & validation**: See `.github/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `bun run check`/`bun run format`; if running Python directly, set `cwd=scripts/.`
+**Scripts & validation**: See `.agents/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `bun run check`/`bun run format`; if running Python directly, set `cwd=scripts/.`
 
 - Include preludes in monthly journals
 - Maintain balance assertions
 - Tag all transactions appropriately
 - Format and validate before committing
 - Maintain opening/closing patterns
-- **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.github/instructions/transaction-format.instructions.md` for the canonical rules.
-- **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.github/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
+- **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.agents/instructions/transaction-format.instructions.md` for the canonical rules.
+- **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.agents/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
 - When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
 
 ### Testing ⚙️

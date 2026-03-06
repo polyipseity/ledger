@@ -6,11 +6,11 @@ description: Understand the hierarchical journal structure, file organization, a
 
 # Architecture & File Organization
 
-**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
 
 ## Hierarchical Journal Structure
 
-The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes. Payees must be registered in `preludes/*.journal` and kept alphabetized; see `.github/instructions/transaction-format.instructions.md` and the `add-payee` skill for canonical rules.
+The ledger is organized in a hierarchical tree structure with shared definitions inherited from preludes. Payees must be registered in `preludes/*.journal` and kept alphabetized; see `.agents/instructions/transaction-format.instructions.md` and the `add-payee` skill for canonical rules.
 
 - **Entry point**: [ledger/index.journal](../../ledger/index.journal) includes `self.journal` and `self.alternatives.journal`
 - **Year-level**: [ledger/YYYY/self.journal](../../ledger/2024/self.journal) includes monthly journals (e.g., `2024-01/self.journal`)
@@ -92,4 +92,4 @@ Always use relative paths with consistent depth (`../` repeated 3 times for mont
 
 ## Script Usage
 
-See `.github/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `bun run <script>` from the repository root; if no bun wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.
+See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `bun run <script>` from the repository root; if no bun wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.

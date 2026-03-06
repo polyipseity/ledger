@@ -20,4 +20,4 @@ Notes and validation
 
 - Confirm the correct point currency and account when the reward program differs from `_PT/E` and update the posting accordingly.
 - When automating imports, prefer to detect this pattern by payee name (`Kowloon Motor Bus`, `Long Win Bus`) or by explicit program metadata in the source data. If uncertain, prompt the user before adding accrual lines.
-- Remember to include `timezone:` on transport transactions that include a time. **Note:** Follow canonical chronological ordering rules: see `.github/instructions/transaction-format.instructions.md`.
+- Remember to include `timezone:` on transport transactions that include a time. **Note:** Follow canonical chronological ordering rules: see `.agents/instructions/transaction-format.instructions.md`.

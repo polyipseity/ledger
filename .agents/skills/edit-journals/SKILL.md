@@ -7,9 +7,9 @@ description: Edit hledger journal files following best practices and conventions
 
 # Edit Journals Skill
 
-**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for workflow rules and a concise checklist.
+**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for workflow rules and a concise checklist.
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 This skill provides comprehensive guidance for editing hledger journal files while maintaining consistency, validity, and adherence to project conventions.
 
@@ -27,11 +27,11 @@ This skill provides comprehensive guidance for editing hledger journal files whi
 - Include the appropriate prelude at the top of every monthly journal (`include ../../../preludes/self.journal` or `self.alternatives.journal`).
 - Use balance assertions (`= balance CURRENCY`) for bank reconciliations, transfers, and loans where applicable.
 - Always include required tags (`timezone: UTC+08:00`, `activity`, `time`); use `duration`, `food_or_drink`, `item`, `location` when relevant.
-- Format and validate using canonical scripts: `bun run format` then `bun run check` (see `.github/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
+- Format and validate using canonical scripts: `bun run format` then `bun run check` (see `.agents/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
 - Preserve monthly opening/closing patterns for reconciliation and migration.
 - The formatter sorts comment properties; keep transaction comment keys ordered and concise.
 
-For detailed examples and edge cases, see `.github/instructions/transaction-format.instructions.md` and `.github/instructions/editing-guidelines.instructions.md`.
+For detailed examples and edge cases, see `.agents/instructions/transaction-format.instructions.md` and `.agents/instructions/editing-guidelines.instructions.md`.
 
 ### 8. Document Complex Transactions
 
@@ -131,7 +131,7 @@ tag activity
 
 ### ❌ Do Not Leave Unencrypted Confidential Files
 
-**Note:** Never commit unencrypted `private.yaml`. See `.github/instructions/security.instructions.md` for the canonical encryption/decryption workflow and requirements.
+**Note:** Never commit unencrypted `private.yaml`. See `.agents/instructions/security.instructions.md` for the canonical encryption/decryption workflow and requirements.
 
 ### ❌ Do Not Remove Existing Accounts or Payees
 
@@ -185,7 +185,7 @@ git status
 git diff
 
 # 6. Commit
-# Use `.github/instructions/git-commits.instructions.md`. For ledger transaction commits use the ledger header and no body.
+# Use `.agents/instructions/git-commits.instructions.md`. For ledger transaction commits use the ledger header and no body.
 git add .
 git commit -S -m "chore(edit): apply journal edits"
 

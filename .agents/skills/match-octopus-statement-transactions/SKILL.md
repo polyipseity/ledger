@@ -5,9 +5,9 @@ description: "Match Octopus Wallet statement rows to journal transactions and up
 
 # Match Octopus Statement Transactions
 
-**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 ## Purpose
 
@@ -71,7 +71,7 @@ Typical seconds-only edits are omitted from the normal summary. To include those
   python -m check    # set cwd to scripts/
   ```
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical script usage and working-directory rules.
 
 - The skill can produce a patch/diff for review but does not commit changes.
 
@@ -83,7 +83,7 @@ Typical seconds-only edits are omitted from the normal summary. To include those
 
 - Be conservative: require a unique match before auto-editing. When unsure, surface candidate matches for human confirmation.
 - The user is responsible for committing any repository changes.
-  - If an agent commits changes on your behalf, the agent must follow `.github/instructions/git-commits.instructions.md`. For ledger transaction commits use the exact `ledger(<journal-list>): add N / edit M transaction(s)` header and no body.
+  - If an agent commits changes on your behalf, the agent must follow `.agents/instructions/git-commits.instructions.md`. For ledger transaction commits use the exact `ledger(<journal-list>): add N / edit M transaction(s)` header and no body.
 
 ## Example invocation
 

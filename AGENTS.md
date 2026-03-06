@@ -26,7 +26,7 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
   - **Preludes** (`preludes/*.journal`): single source of truth for accounts, commodities, payees, and tag definitions.
   - **Ledger journals** (`ledger/...`): hierarchical year/month journals. Monthly files contain transactions and include the prelude files.
   - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `bun` wrappers; if none exist run Python scripts with `cwd=scripts/.`
-  - **Agent Skills** (`.github/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
+  - **Agent Skills** (`.agents/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
   - **CI & hooks** (`.github/workflows/*`, Husky + lint-staged): run formatters, checks, and tests on push and pre-push.
 
 - **Data flow**
@@ -41,41 +41,41 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
 
 ## Agent Quick Start ✅
 
-1. **Read the skill**: Open the relevant `.github/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
+1. **Read the skill**: Open the relevant `.agents/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
 2. **Install deps**: Run `bun install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
 3. **Format & validate locally**: `bun run format && bun run check` (fix issues before committing).
 4. **Run scripts properly**: Prefer `bun run <script>`; if not available, run `python -m scripts.<cmd>` with `cwd=scripts/.`
 5. **Make small, tested changes**: Add or update tests under `tests/` that mirror the source layout for any code changes.
    - **If you edit instruction files or SKILLs**, add or update tests that cover the new behaviour, and update `AGENTS.md`/the relevant `SKILL.md` or examples as needed.
-6. **Commit rules**: Follow `.github/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
+6. **Commit rules**: Follow `.agents/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
 7. **Use the Todo List Tool** for multi-step work and ask clarification questions rather than guessing when ambiguous
 
 If anything is unclear about these steps, ask a short clarifying question before proceeding.
 
 ## Documentation Structure
 
-Core instructions (`.github/instructions/`):
+Core instructions (`.agents/instructions/`):
 
-- [architecture.instructions.md](.github/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
-- [transaction-format.instructions.md](.github/instructions/transaction-format.instructions.md) – Comprehensive guide to hledger transaction syntax, required and optional tags, formatting conventions, and pattern usage for accurate and readable journal entries.
-- [account-hierarchy.instructions.md](.github/instructions/account-hierarchy.instructions.md) – Complete documentation of all account types (over 50), including their purposes, relationships, and meanings within the asset, liability, equity, expense, and revenue categories.
-- [developer-workflows.instructions.md](.github/instructions/developer-workflows.instructions.md) – Covers developer scripts, Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
-- [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) – Step-by-step guides for frequently performed ledger operations, including transaction entry, monthly migration, and script usage, to streamline routine tasks.
-- [editing-guidelines.instructions.md](.github/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with anti-patterns to avoid and tips for structure, assertions, and includes.
-- [security.instructions.md](.github/instructions/security.instructions.md) – Instructions for encryption, UUID privacy, and secure handling of confidential data, ensuring privacy and compliance throughout the ledger.
-- [alternatives-journal.instructions.md](.github/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
-- [dependencies.instructions.md](.github/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
-- [git-commits.instructions.md](.github/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
-- [agent-quickstart.instructions.md](.github/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
+- [architecture.instructions.md](.agents/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
+- [transaction-format.instructions.md](.agents/instructions/transaction-format.instructions.md) – Comprehensive guide to hledger transaction syntax, required and optional tags, formatting conventions, and pattern usage for accurate and readable journal entries.
+- [account-hierarchy.instructions.md](.agents/instructions/account-hierarchy.instructions.md) – Complete documentation of all account types (over 50), including their purposes, relationships, and meanings within the asset, liability, equity, expense, and revenue categories.
+- [developer-workflows.instructions.md](.agents/instructions/developer-workflows.instructions.md) – Covers developer scripts, Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
+- [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) – Step-by-step guides for frequently performed ledger operations, including transaction entry, monthly migration, and script usage, to streamline routine tasks.
+- [editing-guidelines.instructions.md](.agents/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with anti-patterns to avoid and tips for structure, assertions, and includes.
+- [security.instructions.md](.agents/instructions/security.instructions.md) – Instructions for encryption, UUID privacy, and secure handling of confidential data, ensuring privacy and compliance throughout the ledger.
+- [alternatives-journal.instructions.md](.agents/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
+- [dependencies.instructions.md](.agents/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
+- [git-commits.instructions.md](.agents/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
+- [agent-quickstart.instructions.md](.agents/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
 
-Agent Skills (`.github/skills/`):
+Agent Skills (`.agents/skills/`):
 
-- [add-transactions](.github/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication.
-- [upsert-octopus-transactions](.github/skills/upsert-octopus-transactions/SKILL.md) – Add or update Octopus card transactions from app history, including transport and reloads, with proper mapping.
-- [match-octopus-statement-transactions](.github/skills/match-octopus-statement-transactions/SKILL.md) – Match Octopus Wallet statement rows to journal transactions and update transaction datetimes for accuracy.
-- [monthly-migration](.github/skills/monthly-migration/SKILL.md) – Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
-- [edit-journals](.github/skills/edit-journals/SKILL.md) – Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
-- [validate-journals](.github/skills/validate-journals/SKILL.md) – Validate and format hledger journals before commit using check/format scripts for consistency.
+- [add-transactions](.agents/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication.
+- [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/SKILL.md) – Add or update Octopus card transactions from app history, including transport and reloads, with proper mapping.
+- [match-octopus-statement-transactions](.agents/skills/match-octopus-statement-transactions/SKILL.md) – Match Octopus Wallet statement rows to journal transactions and update transaction datetimes for accuracy.
+- [monthly-migration](.agents/skills/monthly-migration/SKILL.md) – Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
+- [edit-journals](.agents/skills/edit-journals/SKILL.md) – Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
+- [validate-journals](.agents/skills/validate-journals/SKILL.md) – Validate and format hledger journals before commit using check/format scripts for consistency.
 
 ## Agent Code Conventions
 
@@ -134,17 +134,17 @@ Note: `bun install` triggers the `prepare` script which runs `uv sync` to instal
 
 Skills:
 
-- [add-payee](.github/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
-- [add-transactions](.github/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. Includes a general framework for specialized transaction import and automation.
-- [upsert-octopus-transactions](.github/skills/upsert-octopus-transactions/): Upsert (add or update) Octopus card transactions from app history, including transport and reloads, and update durations.
-- [monthly-migration](.github/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
-- [edit-journals](.github/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
-- [validate-journals](.github/skills/validate-journals/): Validate and format hledger journals before commit using check/format scripts.
+- [add-payee](.agents/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
+- [add-transactions](.agents/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. Includes a general framework for specialized transaction import and automation.
+- [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/): Upsert (add or update) Octopus card transactions from app history, including transport and reloads, and update durations.
+- [monthly-migration](.agents/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
+- [edit-journals](.agents/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
+- [validate-journals](.agents/skills/validate-journals/): Validate and format hledger journals before commit using check/format scripts.
 
 Instructions:
 
-- Security: [security.instructions.md](.github/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- Husky + lint-staged: [common-workflows.instructions.md](.github/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `bun install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
+- Security: [security.instructions.md](.agents/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
+- Husky + lint-staged: [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `bun install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
 
 ## VS Code Setup
 
@@ -152,7 +152,7 @@ Instructions:
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`bun run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.github/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — a Husky `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.agents/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — a Husky `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
 
 **Todo List Tool Reminder:**
 

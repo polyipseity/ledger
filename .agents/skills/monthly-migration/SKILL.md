@@ -9,9 +9,9 @@ description: Perform monthly journal migration using hledger close --migrate to 
 
 **Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` for workflow rules.
 
-**Note:** See `AGENTS.md` and `.github/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
+**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
 
-**Note:** See `.github/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
 
 Guide for migrating journals at the start of each month.
 
@@ -23,7 +23,7 @@ Guide for migrating journals at the start of each month.
 
 **Examples:** See `./examples.md` for canonical migration commands and verification steps.
 
-**Quick reference:** See `.github/instructions/agent-glossary.instructions.md` for short definitions.
+**Quick reference:** See `.agents/instructions/agent-glossary.instructions.md` for short definitions.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Guide for migrating journals at the start of each month.
 - Validate and format (prefer `bun run format` and `bun run check`).
 - Commit using a suitable `chore(migration):` header and include migration context in the commit message.
 
-For detailed examples and edge cases, see `.github/instructions/developer-workflows.instructions.md` and `./examples.md`. (Examples and a short checklist are in `examples.md`.)
+For detailed examples and edge cases, see `.agents/instructions/developer-workflows.instructions.md` and `./examples.md`. (Examples and a short checklist are in `examples.md`.)
 
 ## Do's and Don'ts
 
