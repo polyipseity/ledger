@@ -5,4 +5,5 @@ module-level `__all__` and keep it empty so tests do not export
 public symbols.
 """
 
+"""Public API exports for test package (none)."""
 __all__ = ()

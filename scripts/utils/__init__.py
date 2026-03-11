@@ -6,4 +6,5 @@ public APIs via their own ``__all__`` and callers should import from the
 specific submodule (for example ``from .journals import ...``).
 """
 
+"""Public API exports (none)."""
 __all__ = ()

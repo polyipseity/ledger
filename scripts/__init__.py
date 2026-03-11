@@ -5,4 +5,5 @@ Making `scripts` a package allows invoking scripts as modules with
 reliable manner.
 """
 
+"""Public API exports (none)."""
 __all__ = ()

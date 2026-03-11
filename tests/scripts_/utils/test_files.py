@@ -6,11 +6,12 @@ inputs.
 """
 
 from collections.abc import Callable
+from datetime import timedelta
 from os import PathLike
 
 import pytest
 from anyio import Path, TemporaryDirectory
-from hypothesis import given
+from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from scripts.utils import files
@@ -117,6 +118,7 @@ async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) ->
 
 # Property-based tests for files
 @pytest.mark.anyio
+@settings(deadline=timedelta(seconds=1))  # increase deadline for async property tests
 @given(st.text(max_size=200))
 async def test_file_update_if_changed_with_random_text(s: str) -> None:
     """Property-based async test: file updater handles random text values using a real tempfile."""
