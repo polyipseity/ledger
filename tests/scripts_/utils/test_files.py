@@ -122,7 +122,9 @@ async def test_file_update_if_changed_with_random_text(s: str) -> None:
     """Property-based async test: file updater handles random text values using a real tempfile."""
     async with TemporaryDirectory() as td:
         p = Path(td) / "f.journal"
-        await p.write_text(s)
+        # write without newline translation so the file contains exactly `s`
+        async with await p.open("w", encoding="UTF-8", newline="") as f:
+            await f.write(s)
 
         changed = await files.file_update_if_changed(p, lambda text: text[::-1])
         assert isinstance(changed, bool)
@@ -205,7 +207,9 @@ async def test_file_update_if_changed_semantics(
 
     async with TemporaryDirectory() as td:
         p = Path(td) / "g.journal"
-        await p.write_text(orig)
+        # avoid any newline conversion when seeding the file for semantics tests
+        async with await p.open("w", encoding="UTF-8", newline="") as f:
+            await f.write(orig)
 
         changed = await files.file_update_if_changed(p, updater)
         expected = updater(orig)
