@@ -24,3 +24,7 @@ Keep this file short and append dated one-line notes when adding examples or rul
 
 - 2026-02-20: Octopus merchant “其他” was a duplicate Cafe 100% breakfast entry; added mapping and confirmed matching should occur instead of creating a new transaction.
 - 2026-02-22: When matching an Octopus row to an existing journal transaction, **add a `duration:` tag only if the matched transaction does not already include one**. Compute duration using the difference between the original transaction time and the duplicate/end time from the Octopus feed; if the entry already has a duration, leave it untouched. Also ensure you **preserve any existing `food_or_drink` postings and zero‑price lines** – do not strip item details when adding duration to a matched row. No extra comments are required after matching.
+
+## 2026-03-11 — Continuous learning
+
+- User reminder: a recent import omitted a duration update; the ledger was fixed manually. Added stronger warning above and ensured examples highlight the rule. Update whenever you discover recurring oversights.

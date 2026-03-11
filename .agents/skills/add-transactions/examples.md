@@ -38,7 +38,18 @@ When a receipt shows several distinct menu items under a single total price, tre
     assets:cash                          -34.00 HKD
 ```
 
-Notes: the receipt does not break out individual amounts; the comment tags merely reflect the list of items and modifiers that came with the set.
+Notes: the receipt does not break out individual amounts; the comment tags merely reflect the list of items and modifiers that came with the set.  Additionally, drop any leading “配” from an item and treat the following text as its own item (e.g. `無糖高纖鮮奶麥皮 配蛋治`).
+
+#### TamJai SamGor specifics
+
+```text
+2026-03-09 (202603096752, 5124, K2) TamJai SamGor  ; activity: eating, eating: afternoon tea, time: 16:00:15, timezone: UTC+08:00
+    expenses:food and drinks:dining      43.00 HKD  ; food_or_drink: 米線爽 + 腩肉, food_or_drink: 罐裝無糖可樂, food_or_drink: 鮮冬菇, food_or_drink: 麻辣湯底 + 3小辣, food_or_drink: 麻辣脆肉鮮冬菇米線
+    assets:digital:Octopus cards:...    -43.00 HKD
+```
+
+Ensure modifiers like 米線爽 are recorded correctly and translate OCR mistakes (雀巢無糖可樂 → 罐裝無糖可樂).
+
 Example B (no coffee):
 
 ```text

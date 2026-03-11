@@ -55,7 +55,7 @@ During pass 1, do not transcribe or prepare journal transactions. Keep the Octop
 After each match, apply the update for a match individually using a tiny precise patch to existing journal transactions only.
 
 - If a journal entry’s time is earlier and the Octopus time is later, and the journal entry has a `time:` tag but no `duration:`, calculate and add a `duration:` tag (Octopus time - journal time) if the difference is ≥2 minutes. If the difference is <2 minutes, do not update.
-      - If the journal entry already has a `duration:`, do not update it.
+      - If the journal entry already has a `duration:`, do not update it. This is the most frequently overlooked rule; several past imports required a follow‑up correction when the duration was forgotten, so double‑check carefully before finalizing pass 1.
       - **IMPORTANT: When adding a `duration:` tag, you must insert it directly into the transaction header comment, immediately after the `time:` field and before the `timezone:` field. Do not add a new line or posting. Only the header comment is updated.**
 
 ### Examples & worked cases

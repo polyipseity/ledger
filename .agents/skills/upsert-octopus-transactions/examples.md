@@ -6,6 +6,7 @@ Use these non-confidential, canonical worked examples when performing Pass 1 (up
 
 - Example: Octopus row 2026-01-24 12:11 amount 35.00 matches an existing journal transaction dated 2026-01-24 11:27:42.
   - Action: Re-open the journal, confirm date & amount match. If time difference ≥ 2 minutes and the journal entry has `time:` but no `duration:`, insert `duration: PT32M29S` immediately after `time:` in the header comment and run `bun run format` and `bun run check`. Do not change postings or payee. If ambiguous, stop and ask the user.
+  - **Tip:** Agents have occasionally forgotten this step, which required a later manual correction; treat duration checks as part of every match.
 
 - Example (duration insertion): Octopus row 2026-02-09 09:34 amount 35.00 matches a journal transaction at 2026-02-09 09:01:31 (difference 32m29s).
   - Action: add `duration: PT32M29S` directly in the transaction header (immediately after `time:` and before `timezone:`). Run `bun run format` and `bun run check`.
