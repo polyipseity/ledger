@@ -895,6 +895,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         24.00 HKD  ; food_or_drink: G.鮮蘑菇炒蛋, food_or_drink: 熱咖啡 (8oz), food_or_drink: 薯餅
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -24.00 HKD
 
+2026-02-27 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 09:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
 2026-02-27 Kowloon Motor Bus/Long Win Bus  ; activity: transport, time: 13:10, timezone: UTC+08:00
     expenses:transport:buses                                                 1.10 HKD
     assets:accrued revenues:rewards                                        1.10 _PT/E
@@ -950,6 +954,10 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                4.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.40 HKD
 
+2026-02-28 7e049a63-ac77-450b-a5f1-4d9a984421dd  ; activity: education, duration: PT2H, time: 08:00, timezone: UTC+08:00
+    assets:accrued revenues:incomes:education      136.00 HKD
+    revenues:incomes:education                    -136.00 HKD
+
 2026-02-28 Mass Transit Railway  ; activity: transport, time: 10:25, timezone: UTC+08:00
     expenses:transport:trains                                                1.40 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -1.40 HKD
@@ -991,7 +999,7 @@ include ../../../preludes/self.journal
 
 2026-02-28 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
     assets:accrued revenues:rewards                                                               -95.30 _PT/E = 0.00 _PT/E
-    assets:accrued revenues:incomes:education                                                      -272.00 HKD = 0.00 HKD
+    assets:accrued revenues:incomes:education                                                      -544.00 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25                 -1 399.60 HKD = 0.00 HKD
     assets:accrued revenues:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                -24 799.02 HKD = 0.00 HKD
     assets:accumulated depreciation                                                                   3.00 EUR = 0.00 EUR
@@ -1024,7 +1032,7 @@ include ../../../preludes/self.journal
     liabilities:accrued expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25            38 862.00 HKD = 0.00 HKD
     liabilities:accrued expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7            11 753.14 HKD = 0.00 HKD
     liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1                                   30.00 HKD = 0.00 HKD
-    equity:opening/closing balances                                                              39 163.60 HKD
+    equity:opening/closing balances                                                              39 435.60 HKD
     equity:opening/closing balances                                                                    1 _PT/D
     equity:opening/closing balances                                                               338.20 _PT/E
     equity:opening/closing balances                                                                59.20 _PT/F
