@@ -17,7 +17,8 @@ from hypothesis import given, settings
 from hypothesis import strategies as st
 
 from scripts import shift
-from tests.conftest import RunModuleHelper
+
+from ..utils import RunModuleHelper
 
 """Public symbols exported by this module (none)."""
 __all__ = ()

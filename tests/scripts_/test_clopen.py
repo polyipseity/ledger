@@ -12,7 +12,8 @@ import pytest
 from anyio import Path
 
 from scripts import clopen
-from tests.conftest import RunModuleHelper
+
+from ..utils import RunModuleHelper
 
 """Public symbols exported by this module (none)."""
 __all__ = ()
