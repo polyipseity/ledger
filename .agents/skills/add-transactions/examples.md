@@ -28,6 +28,17 @@ Example A (coffee listed):
     assets:digital:Octopus cards:...                                       -35.00 HKD
 ```
 
+### 1b. Bundled meal with multiple named items (Cafe 100% style)
+
+When a receipt shows several distinct menu items under a single total price, treat each named component as a separate tag separated by commas; use `+` only for modifiers such as ice/sweetness levels. The price is carried on the first posting line only.
+
+```text
+2026-03-07 Cafe 100%  ; activity: eating, eating: lunch, time: 15:31:32, timezone: UTC+08:00
+    expenses:food and drinks:dining       34.00 HKD  ; food_or_drink: 雪菜肉絲湯米粉, food_or_drink: 奶油多士, food_or_drink: 即食麵, food_or_drink: 奶油厚多士, food_or_drink: 紅豆冰 + 少冰 + 走甜
+    assets:cash                          -34.00 HKD
+```
+
+Notes: the receipt does not break out individual amounts; the comment tags merely reflect the list of items and modifiers that came with the set.
 Example B (no coffee):
 
 ```text

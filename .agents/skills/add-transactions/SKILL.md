@@ -12,6 +12,7 @@ Core guidance:
 - Use full ledger paths (e.g., `ledger/2024/2024-01/self.journal`) and insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md`.
 - Use the Todo List Tool for multi-step tasks and follow `AGENTS.md` workflow rules; see `.agents/instructions/agent-quickstart.instructions.md` for a concise command checklist.
 - Use canonical scripts for formatting/validation (`bun run format` then `bun run check`); see `.agents/instructions/developer-workflows.instructions.md`.
+- When adding tests for this skill, place them under a `tests_<hash>` subdirectory within the skill folder. The workspace `pyproject.toml` is already configured to discover any `.agents/skills/**/tests_*` directories, so new tests will run automatically during `bun run test`.
 - Update the theme/aspect files below when introducing new patterns—these are authoritative for type-specific rules.
 
 Theme/aspect files (authoritative):

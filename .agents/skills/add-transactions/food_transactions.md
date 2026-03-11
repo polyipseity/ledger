@@ -12,6 +12,8 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Always use canonical payee names (see payee_mappings.yml). All mapping values in `payee_mappings.yml` are YAML sequences (lists). If a list contains multiple canonical candidates, disambiguate using contextual cues (store/branch id, receipt tokens, item categories, locality); prompt for clarification if context is insufficient.
 - Normalize food/drink items and modifiers (see below for rules)
 - Use `food_or_drink:` tag in posting comments for each item
+- Within a `food_or_drink:` tag, do not escape quotation marks; write `"` directly and **avoid comma characters** (replace them with semicolons) to prevent accidental splitting into multiple tags.
+- Preserve the language of the original receipt item names; do not translate English names into Chinese (or vice versa) unless the mapping file explicitly requires it.
 - Use English translations from food_translations.yml only after user approval
 - Split items and modifiers as per the rules below
 - Do not invent new tags; only use those declared in the prelude
@@ -20,7 +22,9 @@ This file contains rules, clarifications, and examples specific to food and rest
 
 - **Always fully itemize all food and drink items.** Never use placeholders like "(see receipt)". Every item and its amount must be listed explicitly, with a separate `food_or_drink:` tag for each.
 - **For Taste and similar supermarkets or bakeries, always include the item number or code from the receipt as part of the `food_or_drink:` tag, if available.** For example, `food_or_drink: 091421 LA BOULANGERIE BREAD`.
-- Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`). If a receipt line shows multiple full-priced menu items, they are **not** modifiers; do **not** join them with `+`.
+- Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`).
+  - A common Cafe 100% pattern shows a bundled set with several named components under one total amount; record each named component as a separate tag and use commas between them, reserving `+` for true modifiers (ice level, sweetness). See examples.md for a worked example.
+  - If a receipt line shows multiple full-priced menu items, they are **not** modifiers; do **not** join them with `+`.
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
 - Remove conjunction prefixes that are not part of the item name (e.g. "配朱古力" → "朱古力").

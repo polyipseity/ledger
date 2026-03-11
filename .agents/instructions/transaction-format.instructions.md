@@ -155,6 +155,7 @@ Track currency conversion transactions to maintain rate information.
 
 - **Always split each food or drink item into a separate `food_or_drink:` tag.**
 - **Do not combine multiple items into a single tag.**
+  - When multiple named menu items appear under one total price (e.g. a Cafe 100% set), record each name as a separate tag separated by commas; only use `+` for modifiers such as ice level or sweetness.
 - **Do not add translations unless required by convention.**
 - **Maintain the order of items as they appear on the receipt.**
 - **If an item description is missing or unreadable, use `food_or_drink: (unknown)` as a placeholder and prefer to confirm with the user before guessing.**

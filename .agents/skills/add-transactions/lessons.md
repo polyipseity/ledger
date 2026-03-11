@@ -43,6 +43,13 @@ Use status markers only for lending/borrowing transactions. Update pending (`!`)
 - Integrated → `specialized_transaction_import.md` & `upsert-octopus-transactions/lessons.md` for Octopus/eDDA matching heuristics (do **not** use debtor‑reference tokens; prefer FRN/transfer IDs, timestamps, and amounts) and the bank→wallet verification rule.
 - Archived detailed notes → see the referenced files above for the canonical rules and worked examples.
 
+## 2026-03-10 — Tag formatting & language consistency
+
+- `food_or_drink` tags should never escape quotation marks; write `"` as `"` directly inside the string (no backslash).  If the item name contains a comma, replace the comma with a semicolon to avoid the tag being split into two separate tags.
+- Do not translate item names when the receipt already provides them in English; preserve the original language for clarity and later automated matching.
+- When adding new Sukiya transactions include both RHK-... and 4-7 digit receipt IDs in the payee line; update `id_mappings.yml` accordingly (see 2026‑03‑06 example).
+- Ensure all McDonald’s entries use the same language consistency across receipts – recent edits fixed both 5‑ and 6‑March rows.- **Cafe 100% bundled meals:** When a single-price receipt lists multiple named items, record each as a comma-separated tag and only use `+` for modifiers (ice/sweetness, etc.).  See `food_transactions.md` and `examples.md` for the integrated guidance and a worked example.
+
 ## 2026-02-24 — Coffee line, prefix learning, and matching rules
 
 - Verified that free coffee lines may appear on some Cafe 100% receipts but not all; transactions must be handled individually. Added explicit examples to `examples.md` and rules to `food_transactions.md` under the complimentary item bullet.
