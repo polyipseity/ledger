@@ -21,12 +21,12 @@ export default {
         "docs",
         "feat",
         "fix",
+        "ledger", // custom type for ledger-related commits
         "perf",
         "refactor",
         "revert",
         "style",
         "test",
-        "ledger",
       ],
     ],
   },
