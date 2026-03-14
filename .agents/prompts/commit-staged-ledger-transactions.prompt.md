@@ -2,7 +2,6 @@
 name: commit-staged-ledger-transactions
 description: Commit staged hledger transaction changes using strict ledger(...) format. Journal files are detected from staged changes. User provides number of transactions added/edited via input or extra.
 argument-hint: added=3 edited=2 (optional extras; see below)"
-agent: agent
 ---
 
 # Commit Staged Ledger Transactions
