@@ -25,6 +25,7 @@ This file contains rules, clarifications, and examples specific to food and rest
 - **For Taste and similar supermarkets or bakeries, always include the item number or code from the receipt as part of the `food_or_drink:` tag, if available.** For example, `food_or_drink: 091421 LA BOULANGERIE BREAD`.
 - Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`).
   - Drop a leading "配" prefix when present; it means "with" and not part of the item name (e.g. `麥皮 配蛋治` → two tags `麥皮, 蛋治`).
+  - If a menu line embeds `配` as a connector between two named items (e.g., `...米線配汽水`), split into two items: the main dish and the companion item. Record the companion as its own posting when priced separately, or as a `0.00` posting when explicitly shown as bundled/free.
   - If a receipt line shows multiple full-priced menu items, they are **not** modifiers; do **not** join them with `+`.
   - If the receipt uses `+` between what appears to be full menu items (especially in Chinese item names), treat those as separate items and reformat using commas instead of `+`.
   - A common Cafe 100% pattern shows a bundled set with several named components under one total amount; record each named component as a separate tag and use commas between them, reserving `+` only for true modifiers (ice level, sweetness, milk, etc.). See examples.md for a worked example.
@@ -36,7 +37,9 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Remove leading or trailing descriptors that are not part of the dish name, such as time-of-day markers like `(早)`, `(午)`, `(晚)`, transaction markers like `轉`, or accidental leading `+` characters. These are metadata, not menu items.
 - The middle dot character `・` separates distinct food items and should result in separate `food_or_drink:` entries.
 - Receipt sub-items (marked with `--`, `+`, or similar prefixes) are typically separate items or substitutions, not modifiers.
-- Complimentary/zero-cost items (e.g., "set hot coffee $0.0") should be treated as items with modifiers, not as separate line items. Include them using the `+` syntax to show customization.
+- Complimentary/zero-cost items (e.g., "set hot coffee $0.0") should still be recorded explicitly with modifiers using `+` syntax.
+  - Preferred posting pattern: use a dedicated `expenses:food and drinks:drinks  0.00 HKD` line for the zero-priced drink when the receipt shows it as a separate drink line.
+  - If the receipt does not show a complimentary item, do not add one.
   - **Important:** only record a zero‑priced drink if it is explicitly listed on that receipt; do not assume every Cafe 100% breakfast includes coffee. Verify each transaction individually.
 - Items that cost $0 and describe the transaction type (e.g., "dine-in", "take-away") should be omitted entirely.
 

@@ -40,8 +40,6 @@ Canonical rule locations (quick map):
 
 If a lesson in `lessons.md` needs integration, add it to the relevant file above and replace the lesson entry with a one-line pointer.
 
-Refer to each theme file for detailed rules, examples, and test expectations. For quick definitions and key terms, see `.agents/instructions/agent-glossary.instructions.md`.
-
 ## Mapping and Translation Files
 
 - [payee_mappings.yml](./payee_mappings.yml) — For mapping payee aliases, translations, and alternate names to canonical payee names. All mapping values MUST be YAML sequences (lists). Use one-element lists for unambiguous one-to-one mappings; use multi-element lists only when a single alias may legitimately refer to multiple canonical payees. When a list contains multiple candidates, disambiguate using context (store/branch ID, receipt tokens, item categories, locality); if context is insufficient, prompt for clarification and update the mapping with a more-specific key. This is **not** for UUID mapping or ID mapping. Always use this file to normalize payee names in transactions.
@@ -70,50 +68,21 @@ python -m check    # set cwd to scripts/
 
 ## Lessons & Continuous Improvements
 
-See `./lessons.md` for consolidated, actionable lessons and `./examples.md` for canonical worked examples and edge cases. If a `lessons.md` entry needs integration into this SKILL, `examples.md`, or a theme file, follow the integration-first process described in `./lessons.md` and run `bun run format` and `bun run test` afterwards.
+See `./lessons.md` for the active queue and integration pointers. This file should contain only short, unresolved notes. After integrating a lesson into a canonical file (`SKILL.md`, a theme file, or `examples.md`), replace that lesson with a one-line pointer and remove detailed duplicated text.
 
-- **Account and Tag Selection:**
-  - Use the most specific and correct account (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
-  - Use the correct `eating:` tag (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
-  - Align columns and tags for readability. Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.
-- **Identifiers and Traceability:**
-  - Always include only the identifiers specified by the payee's rule in `id_mappings.yml` in the payee line for traceability; see `platform_payout_transactions.md` and `id_mappings.yml` for platform-payout identifier rules (include `po_...` where appropriate; never include `ba_...`).
-- **Generalized Learnings:**
-  - Always cross-reference `private.yaml`, `payee_mappings.yml`, and `id_mappings.yml` before assigning payees or formatting identifiers.
-  - Record item modifiers inline with the `food_or_drink:` line (do **not** use a separate `modifiers:` tag).
-  - Record discounted item prices directly; do **not** add routine discounts as explicit negative postings.
-  - Split aggregated/combined receipt item lines into separate `food_or_drink:` entries when the receipt lists distinct items.
-  - If a receipt shows order vs payment timestamps, add `duration:` equal to the difference where appropriate (do **not** create duplicate transactions for end‑time rows).
-  - Record meaningful zero‑priced items as `0.00` postings with modifiers inline when they reflect consumption or choices (e.g., `熱咖啡 + 多奶`).
-  - Treat ordering‑method descriptors (e.g., `使用二維碼自助點餐`, `外賣/自取`) as metadata — do **not** transcribe them as postings.
-  - Use the most contextually accurate account and `eating:` tag (e.g., McDonald's combo in the afternoon → `eating: afternoon tea`).
-  - For consumable clothing and similar items, prefer `expenses:clothing` (or other appropriate expense accounts) rather than capitalizing them as `assets:objects:clothing` with depreciation unless the purchase is clearly a long-lived asset.
-  - Do **not** use Octopus eDDA debtor‑reference tokens for matching or id‑mappings; prefer FRN/transfer IDs, timestamps, and amounts (see `specialized_transaction_import.md`).
-  - Maintain strict formatting and tag order for consistency and readability.
-  - When transcribing recycling activity from GREEN@ events, create two linked transactions in `self.alternatives.journal`: a `self` collect transaction reducing `assets:recycables` with appropriate `revenues:recycables:*` postings for each commodity, and a subsequent `GREEN@*` transaction crediting `assets:digital:GREEN@COMMMUNITY` with equity conversion lines that record weights and computed rates based on points earned. Compute rates from the observed points-to-weight ratio (standardized to 0.1‑kg units) and include `duration:` and per-line timestamps when available. Ensure balance assertions for both asset and point changes.
+Consolidated cross-theme reminders:
+
+- Use the most specific account and contextually correct tags (`activity:`, `eating:`, etc.), and keep tag order/format aligned with `.agents/instructions/transaction-format.instructions.md`.
+- Always resolve payee + identifiers via `private.yaml` (UUIDs), `payee_mappings.yml` (name normalization), and `id_mappings.yml` (identifier order/regex).
+- For food entries: modifiers must be inline in `food_or_drink:` values, routine discounts should be reflected in item prices (not separate negative discount postings), and ordering-method descriptors are metadata (not posting lines).
+- If start/end timestamps are both present, add `duration:` and update existing entries rather than creating duplicates for end-time rows.
+- Never use Octopus eDDA debtor-reference tokens for matching or mapping; match with FRN/transfer ids + timestamp + amount.
+- Keep journals strictly chronological and fix structural issues (misplaced transactions, duplicate includes) before finishing.
+- Keep outputs non-confidential: no leaked personal ids, Octopus numbers, employee names, or attachment filenames.
 
 ### Status markers
 
 Use status markers only for lending/borrowing transactions. See `lending_borrowing_transactions.md` and `.agents/instructions/transaction-format.instructions.md` for canonical rules and examples.
-
-Other previous learnings remain in effect:
-
-- **OCR accuracy:** When transcribing from receipts or images, always stick to the recognized characters for item names and details. Only make corrections if the OCR result is obviously wrong. Do not over-correct or invent new names.
-- **YAML doc comment placement:** When adding new mappings to YAML files (such as id_mappings.yml), always place new content after the documentation comment at the top of the file, not before.
-- **YAML regex escaping:** When writing regex strings in YAML files (such as id_mappings.yml), always escape backslashes (e.g., use `\\d` instead of `\d`).
-- **ID mapping location:** Never put payee-specific ID mapping rules in this SKILL.md file. All such rules must be placed only in id_mappings.yml, after the documentation comment.
-- **Taste ID mapping:** For Taste, always use the 17-digit numeric ID and the 24-character transaction ID, in that order, if both are present. See [payee_id_mapping_rules.md](./payee_id_mapping_rules.md) for details and regex.
-- **Hotpot/restaurant item multiplicity:** If a food or fee item is ordered more than once, record as `food_or_drink: <item> ×N` (with a space before `×`, no space after). Use the exact multiplicity as shown on the receipt.
-- **Service charge and rounding translation:** When translating service fee and rounding, only keep the English translation (e.g., `10% service charge`, `rounding`), not the original Chinese. Do not duplicate both.
-- **Tea/cover charge as fee:** If an item like "茶水$12/位" (tea per person) is present, record it as a fee, not as dining.
-- **No extraneous comments:** Do not add unnecessary comments at the end of the transaction (e.g., receipt details, employee names, or explanations). Only include what is required by the format.
-- **No employee names:** Never include employee or staff names from receipts in the journal.
-- **Never leak Octopus numbers or personal IDs** in any transaction, mapping, or documentation. These must be treated as confidential and must not appear in journal entries, ID mappings, or skill documentation. Only use anonymized or mapped UUIDs where required.
-- **Never leak attachment filenames or add an `attachment` tag** in any transaction. Do not reference image or file names in the journal.
-- **Only one `include` line** for the prelude should appear at the top of each journal file. Remove any duplicates.
-**Note:** For chronological ordering rules, see `.agents/instructions/transaction-format.instructions.md`.
-- When editing, always check for and correct structural errors (e.g., duplicate includes, misplaced transactions) before finishing.
-- **Verify insertion location:** Do not rely blindly on tools to insert at the correct place—always check and correct placement manually if needed.
 
 #### Shared Expense and Repayment Pattern (Critical)
 

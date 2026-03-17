@@ -1,77 +1,44 @@
-# Add Transactions — Lessons Learned & Continuous Improvement
+# Add Transactions — Lessons (Active Queue + Integration Log)
 
-This file collects short, actionable lessons learned and continuous improvement notes for the Add Transactions skill. Keep it concise and append dated entries with a short rationale.
+Use this file as a lightweight queue for unresolved learnings. The authoritative rules must live in `SKILL.md`, theme files, `examples.md`, or mapping YAML files.
 
-## Consolidation policy
+## Workflow
 
-- If this file exceeds **8 dated entries** or becomes longer than a single screen, do NOT archive entries verbatim into SKILL.md. Instead, for each older or undated entry:
-  1. Interpret the entry's purpose and decide which file in this skill folder (for example: `SKILL.md`, `examples.md`, a theme file) should be improved to capture the lesson.
-  2. Integrate the lesson's meaning as a concise improvement into that target file (short bullet, clarification, or example), keeping the authoritative files discoverable and actionable.
-  3. Replace the original entry in `lessons.md` with a one-line pointer, e.g. `Archived → See <file> <section>`, or remove it entirely after integration.
-- Always prefer improving the authoritative source (SKILL.md, `examples.md`, or a theme file) so that lessons remain actionable and easier to find.
-- After making such changes, run `bun run format` and `bun run test` to validate docs and tests.
+1. Add new learnings as short dated bullets under **Active queue**.
+2. Integrate each learning into the right canonical file.
+3. Replace the detailed bullet with a one-line pointer under **Integrated archive**.
+4. Keep this file concise (single-screen target).
 
-## 2026-02-01 (AI skill update, integrated)
+## Active queue
 
-Integrated → See the canonical files for each rule (added pointers in `SKILL.md`):
+- *(empty)*
 
-- Payee/ID rules → `payee_id_mapping_rules.md` (mapping/ID handling)
-- Food/Drink tagging & translation → `food_transactions.md` + `food_translations.yml`
-- Posting and tag validation → `posting_tag_rules.md`
-- Lending/repayment status markers → `lending_borrowing_transactions.md`
-- Octopus & specialized import heuristics → `specialized_transaction_import.md` and `examples.md`
+## Integrated archive
 
-If you need a specific lesson re-integrated as an explicit bullet or example in a canonical file, tell me which item and I'll add a concise example/clarification in the matching file and replace this pointer with `Integrated → <file>:<section>`.
+### 2026-03-10 — Tag formatting, language consistency, and Cafe 100% itemization
 
-## Status markers
+Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`
 
-Use status markers only for lending/borrowing transactions. Update pending (`!`) to cleared (`*`) when settled, and use liability assertions when repaying.
+### 2026-02-24 — Complimentary coffee, 配-prefix splitting, and ordering discipline
 
-## Change process
+Integrated → `food_transactions.md`, `examples.md`, `SKILL.md`
 
-- When adding a new example to `./examples.md`, append a short one-line note to `./lessons.md` explaining the reason and any rule it illuminates.
-- 2026-02-19: Added `gifts / red-packet (lai-see)` worked examples to `examples.md` — clarifies receive (equity) vs give (expense) patterns and asset-account choices.
-- 2026-02-19: Added extra red-packet variants (WeChat/Alipay, group‑split, corporate, reimbursement) to `examples.md` — clarifies wallet vs bank receipts, pool distribution, and when to use `equity:organizations` vs `equity:friends`.
-- 2026-02-19: Added `equity:unknown:strangers` account and worked examples for gifts from strangers/promotional sources (use this when sender is a stranger, not truly unidentified).
-- Keep both files non-confidential; use placeholder UUIDs and anonymized data only.
-- Run `bun run format` and `bun run test` after editing examples or lessons to keep docs and tests in sync.
+### 2026-02-22 — Octopus/eDDA statement matching refinements
 
-## 2026-02-19 — Payee/id fixes & metadata (consolidated)
+Integrated → `match-octopus-statement-transactions/SKILL.md`, `upsert-octopus-transactions/lessons.md`, `specialized_transaction_import.md`
 
-- Integrated → `SKILL.md: Generalized Learnings` (modifiers inline, discounts as item prices, split aggregated items, zero‑priced item handling, ordering‑method metadata, meal classification).
-- Integrated → `id_mappings.yml` & `payee_mappings.yml` for vendor id/payee additions (Ebeneezer's, Oliver's Super Sandwiches, UNY, Dondonya, 岡山一番店拉麵, 9da2b39f-...).
-- Integrated → `specialized_transaction_import.md` & `upsert-octopus-transactions/lessons.md` for Octopus/eDDA matching heuristics (do **not** use debtor‑reference tokens; prefer FRN/transfer IDs, timestamps, and amounts) and the bank→wallet verification rule.
-- Archived detailed notes → see the referenced files above for the canonical rules and worked examples.
+### 2026-02-20 — Itemization clarification and zero-priced drink posting
 
-## 2026-03-10 — Tag formatting & language consistency
+Integrated → `food_transactions.md`, `examples.md`, `payee_mappings.yml`
 
-- `food_or_drink` tags should never escape quotation marks; write `"` as `"` directly inside the string (no backslash).  If the item name contains a comma, replace the comma with a semicolon to avoid the tag being split into two separate tags.
-- Do not translate item names when the receipt already provides them in English; preserve the original language for clarity and later automated matching.
-- When adding new Sukiya transactions include both RHK-... and 4-7 digit receipt IDs in the payee line; update `id_mappings.yml` accordingly (see 2026‑03‑06 example).
-- Ensure all McDonald’s entries use the same language consistency across receipts – recent edits fixed both 5‑ and 6‑March rows.- **Cafe 100% bundled meals:** When a single-price receipt lists multiple named items, record each as a comma-separated tag and only use `+` for modifiers (ice/sweetness, etc.).  See `food_transactions.md` and `examples.md` for the integrated guidance and a worked example.
+### 2026-02-19 — Payee/ID fixes and metadata cleanup
 
-## 2026-02-24 — Coffee line, prefix learning, and matching rules
+Integrated → `SKILL.md`, `id_mappings.yml`, `payee_mappings.yml`, `specialized_transaction_import.md`
 
-- Verified that free coffee lines may appear on some Cafe 100% receipts but not all; transactions must be handled individually. Added explicit examples to `examples.md` and rules to `food_transactions.md` under the complimentary item bullet.
-- Noted that the conjunction prefix “配” should always be stripped when it acts as “with” rather than being part of a food name; updated `food_transactions.md` accordingly.
-- When a menu line ends with “配” followed by another item (e.g. “麻辣汤滑牛肉蜂巢豆腐米线配汽水”), split it into two food_or_drink entries – the main dish and the companion item – and record the companion as a separate posting, zero‑priced if its cost is bundled. Also, if available in the original receipt, break out embedded ingredients and modifiers (滑牛肉, 蜂巢豆腐, 麻辣汤底 + 3小辣, 米綫爽) into separate `food_or_drink:` tags for clarity.
-- When matching an Octopus/eDDA row to an existing journal transaction, **always update the header with any missing `duration:` computed from the end‑time row**. This prevents stale entries and maintains auditability.
-- After inserting or editing transactions, double‑check the entire journal to ensure **strict chronological order** (date → time). If entries are out‑of-order, move them immediately; chronological order is non-negotiable. (Reordered Feb 23 entries as a learning example.)
+### 2026-02-19 — Gifts/red-packet example expansion
 
-## 2026-02-19 — Octopus reload / eDDA transfer rule (continuous learning)
+Integrated → `examples.md`
 
-- 2026-02-19: Octopus reload/eDDA transfer rule integrated → see `upsert-octopus-transactions/lessons.md` for the bank→wallet verification rule when adding reloads.
-- 2026-02-22: expanded matching logic in `match-octopus-statement-transactions` to also adjust reload/transfer entries immediately following bank transfers by appending statement seconds (no duration tag).
-- 2026-02-22: when using the statement‑matching skill, always check for and update the adjacent reload/transfer entry after a bank transfer; do not add `duration:` metadata even if a time difference exists.
-- 2026-02-22: clarified that the skill should inspect only the immediately following journal row for reloads, and that seconds updates on both sides must be consistent.
+### 2026-02-01 — Initial add-transactions rule consolidation
 
-## 2026-02-20 — Itemization clarification
-
-- Ensure menu lines showing multiple separate items are split; do not use `+` except for true modifiers. Integrated → `food_transactions.md` under "Itemization, Modifiers, Item Numbers, and Tagging".
-- 2026-02-20: Octopus merchant “其他” should map to Cafe 100% and match existing breakfast entry; avoid creating duplicates. Added payee mapping accordingly.
-- 2026-02-22: When a receipt shows hot coffee as a separate line with zero price, record it as its own posting (0.00 HKD) under `expenses:food and drinks:drinks` instead of bundling it into the dining total. Before creating a payee entry, always check `private.yaml` for a corresponding UUID; if found, use the UUID in the transaction and update `id_mappings.yml` with the relevant identifier instead of relying on the plain name (do not document the specific mapping here).
-- 2026-02-22: Recycling events logged via GREEN@ require two transactions: one collecting recycables (reducing `assets:recycables` and crediting `revenues:recycables:*`), and a follow‑on `GREEN@*` transaction that credits the earned GREEN$ and includes `equity:conversions` lines recording weights and computed rates. Header times should include minutes when available (e.g. `time: 13:11:46`), and the duration tag must be the negative interval since the previous collect transaction (calculate across files if needed). Within the `GREEN@*` transaction, list all conversion and asset‑removal lines in **strict chronological order** by their timestamp comments (earliest first). Rates follow the same style as earlier months (see 2025‑10 sample): values 80/10/10 with `rate: unit 0.1`. Keep the `rate:` comments consistent with the collected weight units. See the updated example in `examples.md`.
-
----
-
-(Keep this file short; historical detail and longer rationales may be stored in PR descriptions or in commit messages.)
+Integrated → `payee_id_mapping_rules.md`, `food_transactions.md`, `posting_tag_rules.md`, `lending_borrowing_transactions.md`, `specialized_transaction_import.md`

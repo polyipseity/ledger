@@ -44,7 +44,7 @@ Example (don’t treat full menu items as modifiers):
 
 ```text
 2026-03-15 (41225144, 17) Cafe 100%  ; activity: eating, eating: breakfast, time: 11:29:49, timezone: UTC+08:00
-    expenses:food and drinks:dining   37.00 HKD  ; food_or_drink: (早)野菌鮮奶炒滑蛋, food_or_drink: 輕量火腿絲通粉, food_or_drink: 轉 蒜香牛油多士
+    expenses:food and drinks:dining   37.00 HKD  ; food_or_drink: 野菌鮮奶炒滑蛋, food_or_drink: 輕量火腿絲通粉, food_or_drink: 蒜香牛油多士
     expenses:food and drinks:drinks    0.00 HKD   ; food_or_drink: 熱咖啡 + 多奶
     assets:digital:Octopus cards:...  -37.00 HKD
 ```
