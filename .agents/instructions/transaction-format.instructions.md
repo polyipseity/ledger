@@ -163,6 +163,7 @@ Track currency conversion transactions to maintain rate information.
 ## Account and Tag Selection
 
 - **Use the most specific and correct account** (e.g., `dining`, `snacks`, etc.) as per the context and conventions. Do not default to a generic or similar account if a more precise one is available.
+- **For apparel and similar consumables**, prefer `expenses:clothing` (or another appropriate expense account) unless the item is clearly a long-lived asset intended for depreciation; in that case use `assets:objects:clothing` with depreciation metadata.
 - **Use the correct `eating:` tag** (`lunch`, `afternoon tea`, etc.) based on the actual meal or context from the receipt.
 - **Align columns and tags for readability.**
 - **Follow the tag order and formatting conventions strictly as per the project’s transaction-format instructions.**

@@ -7,6 +7,7 @@ This file contains all rules and best practices for payee normalization, payee m
 ## Payee Mapping Rules
 
 - Always check `private.yaml` for payee/counterparty mapping. If a UUID is present, use the UUID as the payee.
+- When a payee uses a private UUID, ensure `id_mappings.yml` contains an entry for that UUID (so IDs can be included in the payee line) and use the UUID in transactions instead of the plain name.
 - Use canonical payee names from `payee_mappings.yml` if no UUID is present.
 - Never use masked/partial names from receipts. Do not add region/location unless it is part of the canonical payee name.
 - Do NOT add clearly-invalid tokens (IDs, kiosk labels, or numeric prefixes) as keys in `payee_mappings.yml`.

@@ -40,6 +40,57 @@ When a receipt shows several distinct menu items under a single total price, tre
 
 Notes: the receipt does not break out individual amounts; the comment tags merely reflect the list of items and modifiers that came with the set.  Additionally, drop any leading “配” from an item and treat the following text as its own item (e.g. `無糖高纖鮮奶麥皮 配蛋治`).
 
+Example (don’t treat full menu items as modifiers):
+
+```text
+2026-03-15 (41225144, 17) Cafe 100%  ; activity: eating, eating: breakfast, time: 11:29:49, timezone: UTC+08:00
+    expenses:food and drinks:dining   37.00 HKD  ; food_or_drink: (早)野菌鮮奶炒滑蛋, food_or_drink: 輕量火腿絲通粉, food_or_drink: 轉 蒜香牛油多士
+    expenses:food and drinks:drinks    0.00 HKD   ; food_or_drink: 熱咖啡 + 多奶
+    assets:digital:Octopus cards:...  -37.00 HKD
+```
+
+In this example, the three named food components are separate items; only the drink uses `+` to join a modifier (多奶). Note that the leading `(早)` and the prefix `轉` were removed because they are metadata/ordering markers, not part of the dish names.
+
+### Bilingual item preference (English first)
+
+When a receipt shows the same item in both Chinese and English, prefer the English name in the journal:
+
+```text
+# Receipt line example:
+# Hot Chocolate (熱朱古力)
+
+expenses:food and drinks:drinks  0.00 HKD  ; food_or_drink: Hot Chocolate
+```
+
+### TamJai SamGor / noodle shop itemization
+
+Some noodle-shop receipts list core dishes and add-ons using `+`, but the add-ons are standalone items (not modifiers). In those cases, split them into separate `food_or_drink:` tags.
+
+```text
+2026-03-16 (202603166333, 6333, K3) TamJai SamGor  ; activity: eating, eating: lunch, time: 13:07:01, timezone: UTC+08:00
+    expenses:food and drinks:dining  43.00 HKD  ; food_or_drink: 娃娃菜, food_or_drink: 清牛肉, food_or_drink: 番茄湯底 + 10小辣, food_or_drink: 番茄湯滑牛娃娃菜米線配汽水 + 不要芽菜 + 不要韭菜 + 辣
+    expenses:food and drinks:dining   5.00 HKD  ; food_or_drink: 蒟蒻麵
+    expenses:food and drinks:dining   5.00 HKD  ; food_or_drink: 火腿
+    expenses:food and drinks:dining   5.00 HKD  ; food_or_drink: 凍檸檬茶
+    expenses:food and drinks:dining   6.00 HKD  ; food_or_drink: 芒果凍, food_or_drink: 金桔汁
+    expenses:food and drinks:dining  43.00 HKD  ; food_or_drink: 砂砂湯底 + 3小辣, food_or_drink: 砂砂湯雞肉豆卜米線配汽水 + 米線爽, food_or_drink: 罐裝無糖可樂, food_or_drink: 豆卜, food_or_drink: 雞肉
+    assets:digital:Octopus cards:... -107.00 HKD
+```
+
+Note: `火腿` and `蒟蒻麵` are separate items, not modifiers, even though the receipt uses `+` to join them.
+
+### McDonald's English preference
+
+When McDonald's receipts include both English and Chinese for menu items, prefer the English naming in the journal entry:
+
+```text
+2026-03-16 (58C75E/3256, 747, 444) McDonald's  ; activity: eating, eating: afternoon tea, time: 16:47:07, timezone: UTC+08:00
+    expenses:food and drinks:dining  35.50 HKD  ; food_or_drink: Hot Chocolate, food_or_drink: Fries L.Combo, food_or_drink: McNuggets 6pcs L.Meal, food_or_drink: Tom Yum Kung fl.Seasoning, food_or_drink: Laksa Flavored Sauce
+    assets:digital:Octopus cards:... -35.50 HKD
+```
+
+Even when the receipt shows local-language versions, always choose the English version when it is available.
+
 #### TamJai SamGor specifics
 
 ```text

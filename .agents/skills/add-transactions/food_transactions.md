@@ -14,6 +14,7 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Use `food_or_drink:` tag in posting comments for each item
 - Within a `food_or_drink:` tag, do not escape quotation marks; write `"` directly and **avoid comma characters** (replace them with semicolons) to prevent accidental splitting into multiple tags.
 - Preserve the language of the original receipt item names; do not translate English names into Chinese (or vice versa) unless the mapping file explicitly requires it.
+- When the same item is listed in multiple languages on the receipt (for example, `Hot Chocolate (熱朱古力)` or `熱朱古力 (Hot Chocolate)`), prefer the English name in the journal. If no English appears, keep the first language shown.
 - Use English translations from food_translations.yml only after user approval
 - Split items and modifiers as per the rules below
 - Do not invent new tags; only use those declared in the prelude
@@ -24,12 +25,15 @@ This file contains rules, clarifications, and examples specific to food and rest
 - **For Taste and similar supermarkets or bakeries, always include the item number or code from the receipt as part of the `food_or_drink:` tag, if available.** For example, `food_or_drink: 091421 LA BOULANGERIE BREAD`.
 - Separate distinct food/drink items into separate `food_or_drink:` tags, even if listed together on the receipt (e.g. "麵包, 咖啡" → `food_or_drink: 麵包, food_or_drink: 咖啡`).
   - Drop a leading "配" prefix when present; it means "with" and not part of the item name (e.g. `麥皮 配蛋治` → two tags `麥皮, 蛋治`).
-  - A common Cafe 100% pattern shows a bundled set with several named components under one total amount; record each named component as a separate tag and use commas between them, reserving `+` for true modifiers (ice level, sweetness). See examples.md for a worked example.
   - If a receipt line shows multiple full-priced menu items, they are **not** modifiers; do **not** join them with `+`.
+  - If the receipt uses `+` between what appears to be full menu items (especially in Chinese item names), treat those as separate items and reformat using commas instead of `+`.
+  - A common Cafe 100% pattern shows a bundled set with several named components under one total amount; record each named component as a separate tag and use commas between them, reserving `+` only for true modifiers (ice level, sweetness, milk, etc.). See examples.md for a worked example.
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
 - Remove conjunction prefixes that are not part of the item name (e.g. "配朱古力" → "朱古力").
 - The prefix character "配" is especially common; always strip it from the item name when it means "with" rather than being part of the dish (e.g. "配蛋治" → "蛋治").
+- Remove ordering/meal markers such as "堂食", "外賣", "自取", and the set indicator "餐" when they are not part of the food/drink name but instead describe service type or a set meal context. This includes removing these markers when shown in parentheses (e.g., "壽司$8 (堂食)" should become just "壽司$8").
+- Remove leading or trailing descriptors that are not part of the dish name, such as time-of-day markers like `(早)`, `(午)`, `(晚)`, transaction markers like `轉`, or accidental leading `+` characters. These are metadata, not menu items.
 - The middle dot character `・` separates distinct food items and should result in separate `food_or_drink:` entries.
 - Receipt sub-items (marked with `--`, `+`, or similar prefixes) are typically separate items or substitutions, not modifiers.
 - Complimentary/zero-cost items (e.g., "set hot coffee $0.0") should be treated as items with modifiers, not as separate line items. Include them using the `+` syntax to show customization.
@@ -40,7 +44,9 @@ This file contains rules, clarifications, and examples specific to food and rest
 
 - Modifiers are preparation adjustments applied to a base item (e.g., "more milk", "less ice"). Use `+` syntax: `food_or_drink: hot coffee + more milk`.
 - Items are distinct food components, even if listed as sub-items on the receipt (e.g., "sweet corn", "garlic butter on toast"). List separately: `food_or_drink: item1, food_or_drink: item2`.
+- In Chinese receipts, modifiers tend to be short phrases about preparation (e.g., 去冰, 少糖, 無糖, 多奶, 加奶, 轉配). If the text after a `+` looks like a standalone dish name (often including nouns like 麵/飯/湯/粉/餃/肉/菜/etc.), treat it as a separate item and split with commas instead.
 - If a sequence of `food_or_drink:` tags is present and the first is a base item (e.g., a drink) and the following are modifiers (e.g., ice level, sweetness, size), combine them into a single tag using the `+` syntax. For example, `food_or_drink: 冰蜜檸檬綠茶, food_or_drink: 去冰, food_or_drink: 7分甜` should become `food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜`.
+- Use common sense when determining modifier relationships: if a modifier clearly applies to a specific item (e.g., `多奶` clearly modifies a coffee or tea), attach it to that item rather than leaving it as a standalone `food_or_drink:` tag. If it is ambiguous, choose the most plausible base item and keep the tags readable, but flag it for review if needed.
 
 #### Example: Drink with Modifiers
 
@@ -70,6 +76,7 @@ Result: food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜
 - Payee/IDs/item code normalization: Prefer canonical payee names, clarify ambiguous names, and use UUIDs for confidentiality if mapped. **Always check `private.yaml` for a UUID mapping and use the UUID as the payee if present.**
 - Timezone: All transactions that include a time must also include an explicit `timezone:` (e.g., `timezone: UTC+08:00`). This helps compute durations reliably and keeps entries consistent across journals.
 - Duration calculation: If both start and end times are present (for example, an order/printed time and a settlement/transaction time displayed on the receipt), compute an ISO-8601 duration and add it as a `duration:` tag on the transaction header (e.g., `duration: PT34M19S`). Use the receipt's timestamps and the explicit `timezone:` when computing durations.
+  - If the receipt shows a later “end/settlement” time separate from the printed/ordered time, use that later time as the end point when calculating duration.
 - Modifier detection: If a sequence of `food_or_drink:` tags contains a base item followed by modifiers (for example: `奶茶`, then `多奶`), combine them using `+` into a single tag: `food_or_drink: 奶茶 + 多奶`. Do not leave modifiers as standalone tags.
 
 See SKILL.md for general procedures and cross-theme rules.

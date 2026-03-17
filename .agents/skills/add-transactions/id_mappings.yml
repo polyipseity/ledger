@@ -158,10 +158,10 @@
 
 "TamJai SamGor":
   orders:
-    - [receipt_id, branch_code, table_number]
+    - [receipt_id, call_number, table_number]
   regex:
     receipt_id: "\\d{12}"
-    branch_code: "\\d{4}"
+    call_number: "\\d{4}"
     table_number: "K\\d+"
 
 "UNY":
@@ -176,6 +176,20 @@
     - [receipt_id]
   regex:
     receipt_id: "\\d{10}"
+
+"Sushi Express":
+  orders:
+    - [transaction_id, terminal_id]
+  regex:
+    transaction_id: "A\\d{10}"
+    terminal_id: "T\\d{3,6}"
+
+"759 Store":
+  orders:
+    - [transaction_id, terminal_id]
+  regex:
+    transaction_id: "\\d{16}"
+    terminal_id: "[0-9A-Z]{22}"
 
 "Jollibee":
   orders:
