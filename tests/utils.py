@@ -351,13 +351,17 @@ def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
                 return wrapper
 
             self._monkeypatch.setattr(asyncer, "runnify", fake_runnify)
-            self._monkeypatch.setattr(sys, "argv", argv)
+            previous_argv = sys.argv[:]
+            try:
+                sys.argv[:] = argv
 
-            # Ensure a fresh import context to avoid runpy-related runtime warnings
-            for m in (module_name, "scripts"):
-                sys.modules.pop(m, None)
+                # Ensure a fresh import context to avoid runpy-related runtime warnings
+                for m in (module_name, "scripts"):
+                    sys.modules.pop(m, None)
 
-            runpy.run_module(module_name, run_name="__main__")
+                runpy.run_module(module_name, run_name="__main__")
+            finally:
+                sys.argv[:] = previous_argv
             return called
 
     return _RunModule(monkeypatch)
