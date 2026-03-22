@@ -1,4 +1,4 @@
-# https://github.com/github/gitignore/blob/53fee13f20a05efc93ef4edcad0c62863520e268/Python.gitignore {
+# <https://github.com/github/gitignore/blob/53fee13f20a05efc93ef4edcad0c62863520e268/Python.gitignore> {
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -217,7 +217,7 @@ __marimo__/
 .streamlit/secrets.toml
 # }
 
-# https://github.com/github/gitignore/blob/53fee13f20a05efc93ef4edcad0c62863520e268/Node.gitignore {
+# <https://github.com/github/gitignore/blob/53fee13f20a05efc93ef4edcad0c62863520e268/Node.gitignore> {
 # Logs
 logs
 *.log
