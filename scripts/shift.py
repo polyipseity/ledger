@@ -209,8 +209,17 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
     return parser
 
 
-if __name__ == "__main__":
+async def main0():
+    """Entry point for running the script directly. Parses CLI arguments and invokes main()."""
     basicConfig(level=INFO)
-    """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
-    runnify(entry.invoke)(entry)
+    await entry.invoke(entry)
+
+
+def __main__():
+    """Entry point for running the script directly."""
+    runnify(main0, backend_options={"use_uvloop": True})()
+
+
+if __name__ == "__main__":
+    __main__()
