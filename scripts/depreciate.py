@@ -6,7 +6,6 @@ entries are present and appends a new depreciation transaction if necessary.
 """
 
 from argparse import ArgumentParser, Namespace
-from asyncio import run
 from calendar import monthrange
 from collections.abc import Callable, Iterator
 from dataclasses import dataclass
@@ -19,6 +18,7 @@ from sys import argv, exit
 from typing import final
 
 from anyio import Path
+from asyncer import runnify
 
 from .utils.cache import JournalRunContext
 from .utils.concurrency import gather_and_raise
@@ -237,4 +237,4 @@ if __name__ == "__main__":
     basicConfig(level=INFO)
     """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
-    run(entry.invoke(entry))
+    runnify(entry.invoke)(entry)

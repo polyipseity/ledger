@@ -323,6 +323,6 @@ async def test_check_logs_processed_when_reported(
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
-    """Running the module as a script should call :func:`asyncio.run` with the parser-invoked coroutine."""
+    """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper("scripts.check", ["scripts.check"])  # avoid pytest args
     assert called["ran"] is True

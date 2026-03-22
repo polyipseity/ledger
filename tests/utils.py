@@ -10,14 +10,14 @@ Type hints:
   string for in-memory files.
 """
 
-import asyncio
 import runpy
 import sys
 from abc import ABC, abstractmethod
-from collections.abc import Coroutine
+from collections.abc import Callable
 from os import PathLike
 from typing import Any, Literal, Protocol, Self, overload
 
+import asyncer
 import pytest
 from anyio import Path
 
@@ -312,38 +312,43 @@ class RunModuleHelper(ABC):
 
 @pytest.fixture
 def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
-    """Return a helper that runs a module as a script with a safe fake asyncio.run.
+    """Return a helper that runs a module as a script with a safe fake asyncer.runnify.
 
     The returned callable takes ``module_name`` and ``argv`` and returns a dict
     containing a ``ran`` boolean (mirroring previous tests' pattern). The
-    helper sets ``sys.argv`` for the module, patches ``asyncio.run`` with a
-    fake that closes the coroutine to avoid 'coroutine was never awaited'
-    warnings, and clears the module from ``sys.modules`` so ``runpy`` imports
-    it afresh for each invocation.
+    helper sets ``sys.argv`` for the module, patches ``asyncer.runnify`` with a
+    fake that prevents coroutine warnings, and clears the module from ``sys.modules``
+    so ``runpy`` imports it afresh for each invocation.
     """
 
     class _RunModule(RunModuleHelper):
-        """Helper that runs a module under test using a patched asyncio.run and argv."""
+        """Helper that runs a module under test using a patched asyncer.runnify and argv."""
 
         def __init__(self, monkeypatch: pytest.MonkeyPatch) -> None:
             """Store the provided pytest.MonkeyPatch for later use."""
             self._monkeypatch = monkeypatch
 
         def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]:
-            """Run the specified module with a fake asyncio.run that records execution."""
+            """Run the specified module with a fake asyncer.runnify that records execution."""
             called: dict[str, bool] = {"ran": False}
 
-            def fake_run(coro: Coroutine[Any, Any, Any]) -> None:
-                """Fake asyncio.run replacement that marks the module as run and
-                closes the coroutine to avoid "coroutine was never awaited" warnings."""
+            def fake_runnify(async_func: Callable[..., Any]) -> Callable[..., Any]:
+                """Fake asyncer.runnify replacement that marks the module as run and
+                returns a wrapper that closes the coroutine to avoid warnings."""
                 called["ran"] = True
-                try:
-                    coro.close()
-                except Exception:
-                    # If coro isn't a coroutine or close fails, ignore the error.
-                    pass
 
-            self._monkeypatch.setattr(asyncio, "run", fake_run)
+                def wrapper(*args: Any, **kwargs: Any) -> None:
+                    """Wrapper that closes the coroutine from the async function."""
+                    try:
+                        coro = async_func(*args, **kwargs)
+                        coro.close()
+                    except Exception:
+                        # If coro isn't a coroutine or close fails, ignore the error.
+                        pass
+
+                return wrapper
+
+            self._monkeypatch.setattr(asyncer, "runnify", fake_runnify)
             self._monkeypatch.setattr(sys, "argv", argv)
 
             # Ensure a fresh import context to avoid runpy-related runtime warnings

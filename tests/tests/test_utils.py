@@ -93,12 +93,12 @@ async def test_run_module_helper_runs_and_handles_close_exception(
     monkeypatch: pytest.MonkeyPatch,
     run_module_helper: RunModuleHelper,
 ) -> None:
-    """Ensure run_module_helper calls patched asyncio.run and handles close exceptions."""
-    # Create a module that calls asyncio.run(None) which will cause fake_run to
-    # attempt to call None.close() and raise an AttributeError that's swallowed.
+    """Ensure run_module_helper calls patched asyncer.runnify and handles close errors."""
+    # Create a module that calls asyncer.runnify with a fake coroutine factory
+    # so the fake wrapper is invoked and its close handling path is exercised.
     mod_path = Path(tmp_path) / "mod_run_close.py"
-    await mod_path.write_text("""import asyncio
-asyncio.run(None)
+    await mod_path.write_text("""import asyncer
+asyncer.runnify(lambda: None)()
 """)
     monkeypatch.syspath_prepend(tmp_path)  # type: ignore[reportUnknownMemberType]
 
@@ -114,10 +114,10 @@ async def test_run_module_helper_sets_sys_argv_and_runs_module(
 ) -> None:
     """Verify the helper sets sys.argv for the module and runs it afresh each time."""
     mod_path = Path(tmp_path) / "mod_run_args.py"
-    await mod_path.write_text("""import sys, asyncio, pathlib
+    await mod_path.write_text("""import sys, pathlib, asyncer
 p = pathlib.Path(__file__).with_suffix('.argv')
 p.write_text(' '.join(sys.argv))
-asyncio.run(None)
+asyncer.runnify(lambda: None)()
 """)
 
     monkeypatch.syspath_prepend(tmp_path)  # type: ignore[reportUnknownMemberType]

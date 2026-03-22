@@ -5,7 +5,6 @@ cache file is placed in ``./__pycache__`` and its name is derived
 from the module's filename: ``{stem}.cache.json`` (for example: ``cache.cache.json``).
 """
 
-from asyncio import Lock
 from collections.abc import Iterable, Sequence
 from datetime import datetime, timezone
 from hashlib import sha256
@@ -15,7 +14,7 @@ from os import PathLike, fspath, makedirs, walk
 from os.path import basename, dirname, isdir, join, relpath, splitext
 from typing import Self
 
-from anyio import Path
+from anyio import Lock, Path
 from pydantic import BaseModel, Field, RootModel, ValidationError
 
 """Public symbols exported by this module."""
@@ -41,7 +40,7 @@ __all__ = (
 _MODULE_STEM = splitext(basename(__file__))[0]
 """Cache filename for this script (e.g. cache.cache.json)."""
 _SCRIPT_CACHE_NAME = f"{_MODULE_STEM}.cache.json"
-"""Asyncio lock protecting concurrent reads/writes of the script cache file."""
+"""Anyio lock protecting concurrent reads/writes of the script cache file."""
 _CACHE_LOCK: Lock = Lock()
 
 

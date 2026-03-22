@@ -165,7 +165,7 @@ async def test_depreciate_parser_invoke_calls_main(
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
-    """Running the module as a script should call :func:`asyncio.run` with the parser-invoked coroutine."""
+    """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper(
         "scripts.depreciate", ["scripts.depreciate", "x", "1", "HKD"]
     )  # avoid pytest args

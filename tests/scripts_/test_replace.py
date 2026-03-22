@@ -134,7 +134,7 @@ async def test_replace_noop_leaves_files_unchanged(
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
-    """Running the module as a script should call :func:`asyncio.run` with the parser-invoked coroutine."""
+    """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper(
         "scripts.replace", ["scripts.replace", "a", "b"]
     )  # avoid pytest args

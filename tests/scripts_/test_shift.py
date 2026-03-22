@@ -290,7 +290,7 @@ async def test_shift_logs_skipped_when_skipped(
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
-    """Running the module as a script should call :func:`asyncio.run` with the parser-invoked coroutine."""
+    """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper(
         "scripts.shift", ["scripts.shift", "assets:bank", "1", "HKD"]
     )  # avoid pytest args

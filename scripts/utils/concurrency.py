@@ -1,7 +1,8 @@
 """Small concurrency helpers."""
 
-from asyncio import gather
 from collections.abc import Awaitable
+
+from asyncer import create_task_group
 
 """Public symbols exported by this module."""
 __all__ = ("gather_and_raise",)
@@ -10,8 +11,8 @@ __all__ = ("gather_and_raise",)
 async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
     """Run many awaitables concurrently and raise grouped exceptions.
 
-    This helper wraps :func:`asyncio.gather(..., return_exceptions=True)` and
-    converts any returned exceptions into a single :class:`BaseExceptionGroup`.
+    This helper wraps structured concurrency task groups with exception
+    gathering and converts any raised exceptions into a single :class:`BaseExceptionGroup`.
 
     Parameters
     ----------
@@ -24,7 +25,20 @@ async def gather_and_raise(*awaitables: Awaitable[object]) -> None:
         If any of the awaitables raised; the group's members will be the
         individual exceptions raised by those awaitables.
     """
-    results = await gather(*awaitables, return_exceptions=True)
-    errs = tuple(err for err in results if isinstance(err, BaseException))
+    errs: list[BaseException] = []
+
+    async def _await(a: Awaitable[object]) -> object:
+        """Helper to await an awaitable and capture exceptions."""
+        return await a
+
+    try:
+        async with create_task_group() as tg:
+            for awaitable in awaitables:
+                tg.soonify(_await)(awaitable)
+    except BaseExceptionGroup as eg:
+        errs.extend(eg.exceptions)
+    except BaseException as e:
+        errs.append(e)
+
     if errs:
         raise BaseExceptionGroup("One or more tasks failed", errs)

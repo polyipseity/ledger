@@ -6,7 +6,6 @@ exceptions from the subprocess call.
 """
 
 from argparse import ArgumentParser, Namespace
-from asyncio import run
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from functools import wraps
@@ -16,6 +15,7 @@ from sys import argv, exit
 from typing import final
 
 from anyio import Path
+from asyncer import runnify
 
 from .utils.cache import JournalRunContext
 from .utils.concurrency import gather_and_raise
@@ -139,4 +139,4 @@ if __name__ == "__main__":
     """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
     # maintain compatibility with existing invocation pattern
-    run(entry.invoke(entry))
+    runnify(entry.invoke)(entry)

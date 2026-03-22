@@ -413,7 +413,7 @@ async def test_parser_invokes_main(monkeypatch: pytest.MonkeyPatch) -> None:
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
-    """Running the module as a script should ultimately call ``asyncio.run``.
+    """Running the module as a script should ultimately call ``runnify``.
 
     This mirrors the tests present for the other helper scripts.
     """

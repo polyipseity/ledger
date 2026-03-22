@@ -1,8 +1,6 @@
 """Journal discovery, date parsing and hledger subprocess helpers."""
 
 import logging
-from asyncio import BoundedSemaphore, create_subprocess_exec, gather
-from asyncio.subprocess import DEVNULL, PIPE
 from calendar import monthrange
 from collections.abc import Callable, Iterable, Sequence
 from contextlib import suppress
@@ -10,9 +8,10 @@ from datetime import datetime
 from glob import iglob
 from os import PathLike, cpu_count
 from shutil import which
-from subprocess import CalledProcessError
+from subprocess import DEVNULL, PIPE, CalledProcessError
 
-from anyio import Path
+from anyio import Path, Semaphore, run_process
+from asyncer import SoonValue, create_task_group
 
 """Module-level logger for journal discovery and hledger subprocess helpers."""
 logger = logging.getLogger(__name__)
@@ -32,7 +31,7 @@ __all__ = (
 )
 
 """Limits concurrent hledger subprocess invocations to avoid resource exhaustion."""
-_SUBPROCESS_SEMAPHORE = BoundedSemaphore(cpu_count() or 4)
+_SUBPROCESS_SEMAPHORE = Semaphore(cpu_count() or 4)
 
 """Default number of decimal places for amount formatting in journal output."""
 DEFAULT_AMOUNT_DECIMAL_PLACES = 2
@@ -62,15 +61,18 @@ async def find_monthly_journals(
         A sequence of resolved :class:`os.PathLike` objects.
     """
     if files:
-        return await gather(*(Path(path).resolve(strict=True) for path in files))
+        resolved: list[SoonValue[Path]] = []
+        async with create_task_group() as tg:
+            for path in files:
+                resolved.append(tg.soonify(Path(path).resolve)(strict=True))
+        return tuple(r.value for r in resolved)
 
     pattern = "**/*[0123456789][0123456789][0123456789][0123456789]-[0123456789][0123456789]/*.journal"
-    return await gather(
-        *(
-            Path(folder, path).resolve(strict=True)
-            for path in iglob(pattern, root_dir=folder, recursive=True)
-        )
-    )
+    resolved = []
+    async with create_task_group() as tg:
+        for path in iglob(pattern, root_dir=folder, recursive=True):
+            resolved.append(tg.soonify(Path(folder, path).resolve)(strict=True))
+    return tuple(r.value for r in resolved)
 
 
 async def find_all_journals(folder: PathLike[str]) -> Sequence[PathLike[str]]:
@@ -90,12 +92,11 @@ async def find_all_journals(folder: PathLike[str]) -> Sequence[PathLike[str]]:
     Sequence[PathLike]
         A sequence of resolved :class:`os.PathLike` objects.
     """
-    return await gather(
-        *(
-            Path(folder, path).resolve(strict=True)
-            for path in iglob("**/*.journal", root_dir=folder, recursive=True)
-        )
-    )
+    resolved: list[SoonValue[Path]] = []
+    async with create_task_group() as tg:
+        for path in iglob("**/*.journal", root_dir=folder, recursive=True):
+            resolved.append(tg.soonify(Path(folder, path).resolve)(strict=True))
+    return tuple(r.value for r in resolved)
 
 
 def make_datetime_range_filters(
@@ -330,24 +331,23 @@ async def run_hledger(
     if hledger_prog is None:
         raise FileNotFoundError("hledger executable not found in PATH")
 
+    cli = (
+        hledger_prog,
+        "--file",
+        journal,
+        *(("--strict",) if strict else ()),
+        *args,
+    )
     async with _SUBPROCESS_SEMAPHORE:
-        cli = (
-            hledger_prog,
-            "--file",
-            journal,
-            *(("--strict",) if strict else ()),
-            *args,
-        )
-        proc = await create_subprocess_exec(
-            *cli,
+        proc = await run_process(
+            cli,
             stdin=DEVNULL,
             stdout=PIPE,
             stderr=PIPE,
         )
-        out_bytes, err_bytes = await proc.communicate()
-        stdout = out_bytes.decode().replace("\r\n", "\n")
-        stderr = err_bytes.decode().replace("\r\n", "\n")
-        returncode = await proc.wait()
+        stdout = proc.stdout.decode().replace("\r\n", "\n")
+        stderr = proc.stderr.decode().replace("\r\n", "\n")
+        returncode = proc.returncode
         if returncode and log_on_error:
             logger.error(
                 "hledger %r exited with returncode=%d\nstdout:\n%s\nstderr:\n%s",

@@ -5,9 +5,8 @@ exceptions raised by concurrent tasks into a :class:`BaseExceptionGroup` and
 returns normally when all tasks succeed.
 """
 
-import asyncio
-
 import pytest
+from anyio import sleep
 
 from scripts.utils import concurrency
 
@@ -17,13 +16,13 @@ __all__ = ()
 
 async def _ok_x(x: int) -> int:
     """A trivial coroutine that returns the given integer."""
-    await asyncio.sleep(0)
+    await sleep(0)
     return x
 
 
 async def _err_msg(msg: str) -> None:
     """A trivial coroutine that raises a RuntimeError."""
-    await asyncio.sleep(0)
+    await sleep(0)
     raise RuntimeError(msg)
 
 

@@ -6,7 +6,6 @@ when the file contents change.
 """
 
 from argparse import ArgumentParser, Namespace
-from asyncio import run
 from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
@@ -14,6 +13,8 @@ from logging import INFO, basicConfig, info
 from os import PathLike
 from sys import argv, exit
 from typing import final
+
+from asyncer import runnify
 
 from .utils.concurrency import gather_and_raise
 from .utils.files import file_update_if_changed, get_ledger_folder
@@ -113,4 +114,4 @@ if __name__ == "__main__":
     basicConfig(level=INFO)
     """Parsed CLI namespace used to invoke the entrypoint."""
     entry = parser().parse_args(argv[1:])
-    run(entry.invoke(entry))
+    runnify(entry.invoke)(entry)
