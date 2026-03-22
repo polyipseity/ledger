@@ -332,7 +332,9 @@ def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
             """Run the specified module with a fake asyncer.runnify that records execution."""
             called: dict[str, bool] = {"ran": False}
 
-            def fake_runnify(async_func: Callable[..., Any]) -> Callable[..., Any]:
+            def fake_runnify(
+                async_func: Callable[..., Any], *_args: object, **_kwargs: object
+            ) -> Callable[..., Any]:
                 """Fake asyncer.runnify replacement that marks the module as run and
                 returns a wrapper that closes the coroutine to avoid warnings."""
                 called["ran"] = True

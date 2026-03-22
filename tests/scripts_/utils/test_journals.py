@@ -273,29 +273,21 @@ async def test_run_hledger_handles_process_exit(
 ) -> None:
     """Simulate subprocess success and failure for `run_hledger` using a fake process."""
 
-    class FakeProc:
-        """Minimal fake process object that exposes `communicate` and `wait` for tests."""
+    class FakeRunProcessResult:
+        """Minimal object emulating anyio's run_process result."""
 
-        def __init__(self, out: bytes, err: bytes, rc: int):
-            """Initialize the fake process with predefined stdout, stderr, and return code."""
-            self._out = out
-            self._err = err
-            self._rc = rc
+        def __init__(self, out: bytes, err: bytes, rc: int) -> None:
+            """Initialize fake process result properties for stdout/stderr/returncode."""
+            self.stdout = out
+            self.stderr = err
+            self.returncode = rc
 
-        async def communicate(self) -> tuple[bytes, bytes]:
-            """Return predefined stdout/stderr bytes for the fake process."""
-            return self._out, self._err
+    async def fake_run_process(*args: object, **kwargs: object) -> FakeRunProcessResult:
+        """Return a fake process result to simulate anyio subprocess execution."""
+        # return a process with zero returncode to exercise success path
+        return FakeRunProcessResult(b"ok\n", b"", 0)
 
-        async def wait(self) -> int:
-            """Return the predefined return code for the fake process."""
-            return self._rc
-
-    async def fake_create(*args: object, **kwargs: object) -> FakeProc:
-        """Return a FakeProc instance to simulate subprocess creation."""
-        # return a process with non-zero returncode to exercise error path
-        return FakeProc(b"ok\n", b"", 0)
-
-    monkeypatch.setattr(journals, "create_subprocess_exec", fake_create)
+    monkeypatch.setattr(journals, "run_process", fake_run_process)
 
     def fake_which(prog: str) -> str:
         """Return a non-empty string to simulate an executable being found in PATH."""
@@ -309,15 +301,17 @@ async def test_run_hledger_handles_process_exit(
     assert "ok" in out
 
     # Now simulate non-zero return code which should raise when raise_on_error=True
-    async def fake_create_bad(*args: object, **kwargs: object) -> FakeProc:
-        """Return a FakeProc with non-zero returncode and stderr to exercise error logging."""
-        return FakeProc(
+    async def fake_run_process_bad(
+        *args: object, **kwargs: object
+    ) -> FakeRunProcessResult:
+        """Return a fake process result with non-zero returncode and stderr to exercise error logging."""
+        return FakeRunProcessResult(
             b"586061c8-6f1a-4e6c-96fa-fc3521e833b0\n",
             b"fa27ffae-770c-48b3-a232-ad63b23a9415\n",
             2,
         )
 
-    monkeypatch.setattr(journals, "create_subprocess_exec", fake_create_bad)
+    monkeypatch.setattr(journals, "run_process", fake_run_process_bad)
 
     with caplog.at_level(logging.ERROR):
         with pytest.raises(Exception):
