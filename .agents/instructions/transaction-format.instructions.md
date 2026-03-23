@@ -159,6 +159,7 @@ Track currency conversion transactions to maintain rate information.
 - **Do not add translations unless required by convention.**
 - **Maintain the order of items as they appear on the receipt.**
 - **If an item description is missing or unreadable, use `food_or_drink: (unknown)` as a placeholder and prefer to confirm with the user before guessing.**
+- **For multiline combo meals with modifiers and add-ons, use a dedicated starting item line for the base combo cost and list each modifier/add-on on 0.00 or incremental lines as separate `food_or_drink:` entries to preserve receipt fidelity.**
 
 ## Account and Tag Selection
 

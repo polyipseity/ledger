@@ -80,6 +80,8 @@ Consolidated cross-theme reminders:
 - Keep journals strictly chronological and fix structural issues (misplaced transactions, duplicate includes) before finishing.
 - Keep outputs non-confidential: no leaked personal ids, Octopus numbers, employee names, or attachment filenames.
 
+- New continuous learning rule: For itemized food receipts with a basket + modifiers, prefer multi-line itemization with explicit 0.00 modifier lines and a single paid line for net subtotal, to preserve receipt detail and enable comparison with source tax invoice.
+
 ### Status markers
 
 Use status markers only for lending/borrowing transactions. See `lending_borrowing_transactions.md` and `.agents/instructions/transaction-format.instructions.md` for canonical rules and examples.

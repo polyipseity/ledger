@@ -47,6 +47,12 @@
   regex:
     receipt_id: "\\d{5}\\/\\d{3}"
     kiosk_code: "\\d{1,}"
+"紅豆餐室":
+  orders:
+    - [cardno, tblno]
+  regex:
+    cardno: "\\d{6}"
+    tblno: "[0-9A-Z]{1,3}"
 "McDonald's":
   orders:
     - [machine_txn, order_no, csn]
@@ -159,10 +165,11 @@
 "TamJai SamGor":
   orders:
     - [receipt_id, call_number, table_number]
+    - [receipt_id, table_number]
   regex:
-    receipt_id: "\\d{12}"
+    receipt_id: "(?:\\d{3}-\\d{4}|\\d{12})"
     call_number: "\\d{4}"
-    table_number: "K\\d+"
+    table_number: "[0-9A-Z]{2,4}"
 
 "UNY":
   orders:
