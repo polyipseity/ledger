@@ -10,6 +10,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 ## Core checklist (do this every time)
 
 - Read the relevant `.agents/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
+- Do not use the `memory` tool to permanently store policy or workflow decisions. Persist changes in the repository documentation and skill/instruction files instead; use in-memory storage only for transient state during the current request.
 - Run `bun install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.
 - Format & validate: `bun run format && bun run check` (alternatively, `bun run format:py`, `bun run format:md`, `bun run hledger:format` as needed).  When running `check:md` or `format:md` on a subset of files, append `--no-globs` and list the filenames explicitly to avoid linting the entire repo.
 - Run tests locally: `bun run test` (CI runs the same suite); use `bun run test:py` to run pytest directly.

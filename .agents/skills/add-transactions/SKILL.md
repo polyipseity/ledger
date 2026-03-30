@@ -79,6 +79,7 @@ Consolidated cross-theme reminders:
 - Never use Octopus eDDA debtor-reference tokens for matching or mapping; match with FRN/transfer ids + timestamp + amount.
 - Keep journals strictly chronological and fix structural issues (misplaced transactions, duplicate includes) before finishing.
 - Keep outputs non-confidential: no leaked personal ids, Octopus numbers, employee names, or attachment filenames.
+- Do not rely on the runtime memory store for workflow rules. Instead, persist rule updates directly in skill or instruction files (`.agents/skills/*/SKILL.md`, `.agents/instructions/*.instructions.md`, `AGENTS.md`) so the repository is self-documenting and reviewers can audit behavior.
 
 - New continuous learning rule: For itemized food receipts with a basket + modifiers, prefer multi-line itemization with explicit 0.00 modifier lines and a single paid line for net subtotal, to preserve receipt detail and enable comparison with source tax invoice.
 

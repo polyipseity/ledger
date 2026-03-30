@@ -162,6 +162,12 @@
     transaction_id: "\\d{6}"
     table_number: "\\d{1,3}"
 
+"麵屋竜平":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "A\\d{3}"
+
 "TamJai SamGor":
   orders:
     - [receipt_id, call_number, table_number]
@@ -180,9 +186,10 @@
 
 "20b484a5-3c01-42f3-875c-e95509b3de22":
   orders:
-    - [receipt_id]
+    - [receipt_id, table_number]
   regex:
-    receipt_id: "\\d{10}"
+    receipt_id: "(?:\\d{3}-\\d{5}|\\d{10})"
+    table_number: "\\d{1,4}"
 
 "Sushi Express":
   orders:

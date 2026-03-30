@@ -11,7 +11,8 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 
 ## Active queue
 
-- *(empty)*
+- 2026-03-28 — Corrected Genki Sushi entry to UUID resolved payee and updated id_mappings for `20b484a5-3c01-42f3-875c-e95509b3de22` (receipt/table pair). See integration pointer below.
+- 2026-03-28 — TamJai SamGor itemization rule refined: base meal handling, modifier flags (不要芽菜/不要韭菜/不要腐皮), and per-item food_or_drink metadata should be explicit for all repeated C1 combos in single transaction.
 
 ## Integrated archive
 
