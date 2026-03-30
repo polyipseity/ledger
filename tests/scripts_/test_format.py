@@ -598,6 +598,80 @@ async def test__format_journal_propagates_hledger_error(
         await fmt._format_journal(jpath, [], False, Session())
 
 
+@pytest.mark.anyio
+async def test_format_main_includes_hledger_failure_reason(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Main should surface hledger stderr details when formatting fails."""
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> list[PathLike[str]]:
+        """Return the single test journal for processing."""
+        return [jpath]
+
+    async def error_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        """Simulate a failing `hledger print` execution with stderr details."""
+        raise CalledProcessError(
+            3,
+            ["hledger", "print"],
+            output="",
+            stderr="formatter parse error",
+        )
+
+    class DummyRun:
+        """Minimal JournalRunContext stub with one journal to process."""
+
+        def __init__(
+            self,
+            script_id: PathLike[str],
+            j: list[PathLike[str]],
+            *args: object,
+            **kwargs: object,
+        ) -> None:
+            """Initialize the stub with one journal and empty tracked lists."""
+            self.to_process = [jpath]
+            self.skipped: list[PathLike[str]] = []
+            self._reported: list[PathLike[str]] = []
+
+        async def __aenter__(self) -> Self:
+            """Async context entry returning this stub."""
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            """Async context exit with no special cleanup."""
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            """Record successful processing for parity with real context object."""
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            """Return reported journals for assertions if needed."""
+            return self._reported
+
+    monkeypatch.setattr(fmt, "find_monthly_journals", fake_find)
+    monkeypatch.setattr(fmt, "run_hledger", error_run_hledger)
+    monkeypatch.setattr(fmt, "JournalRunContext", DummyRun)
+
+    with pytest.raises(BaseExceptionGroup) as eg:
+        await fmt.main(fmt.Arguments(check=False, files=None))
+
+    assert "stderr: formatter parse error" in str(eg.value)
+
+
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
     """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper(

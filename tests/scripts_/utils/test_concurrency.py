@@ -5,6 +5,8 @@ exceptions raised by concurrent tasks into a :class:`BaseExceptionGroup` and
 returns normally when all tasks succeed.
 """
 
+from subprocess import CalledProcessError
+
 import pytest
 from anyio import sleep
 
@@ -26,6 +28,12 @@ async def _err_msg(msg: str) -> None:
     raise RuntimeError(msg)
 
 
+async def _err_called_process(stderr: str) -> None:
+    """Raise a :class:`CalledProcessError` after yielding control once."""
+    await sleep(0)
+    raise CalledProcessError(2, ["hledger", "check"], output="", stderr=stderr)
+
+
 @pytest.mark.anyio
 async def test_gather_and_raise_no_error() -> None:
     """When all tasks succeed, gather_and_raise should return normally."""
@@ -39,3 +47,14 @@ async def test_gather_and_raise_with_errors() -> None:
         await concurrency.gather_and_raise(_err_msg("a"), _err_msg("b"), _ok_x(1))
     # The group should contain the two runtime errors
     assert any(isinstance(e, RuntimeError) for e in exc.value.exceptions)
+
+
+@pytest.mark.anyio
+async def test_gather_and_raise_includes_called_process_details() -> None:
+    """CalledProcessError summaries should include stderr details in group message."""
+    with pytest.raises(BaseExceptionGroup) as exc:
+        await concurrency.gather_and_raise(_err_called_process("parse failure"))
+
+    msg = str(exc.value)
+    assert "Command ['hledger', 'check'] failed with exit code 2." in msg
+    assert "stderr: parse failure" in msg

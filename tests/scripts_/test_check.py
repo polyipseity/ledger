@@ -262,6 +262,7 @@ async def test_check_propagates_hledger_errors(
         await check.main(check.Arguments(files=None))
     # ensure the wrapped exception is the CalledProcessError we raised
     assert any(isinstance(e, CalledProcessError) for e in eg.value.exceptions)
+    assert "stderr: fail" in str(eg.value)
 
 
 @pytest.mark.anyio
