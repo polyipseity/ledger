@@ -28,3 +28,11 @@ Keep this file short and append dated one-line notes when adding examples or rul
 ## 2026-03-11 — Continuous learning
 
 - User reminder: a recent import omitted a duration update; the ledger was fixed manually. Added stronger warning above and ensured examples highlight the rule. Update whenever you discover recurring oversights.
+
+## 2026-04-08 — Payee mapping
+
+- For Octopus feed names that map to confidential payees, use the canonical mapping string in `payee_mappings.yml` and the private UUID payee in the journal transaction. This keeps mapping rules explicit while preserving privacy.
+
+## 2026-04-08 — Opening balance propagation
+
+- When the closing balances of a journal are adjusted, update the opening balances for the same accounts in the next journal. The opening transaction must reflect the corrected start-of-month balances after any closing-balance edits.
