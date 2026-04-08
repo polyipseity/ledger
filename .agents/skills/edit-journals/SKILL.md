@@ -47,6 +47,10 @@ Helps future understanding of why transactions were recorded.
 
 ## Anti-Patterns to Avoid
 
+**For a comprehensive list of anti-patterns across all skills, see `.agents/instructions/continuous-learning.instructions.md`** (consolidated guide to pitfalls discovered through repeated use).
+
+Below are the most critical patterns specific to journal editing:
+
 ### ❌ Do Not Edit Year-Level Journals Manually
 
 The year-level `ledger/YYYY/self.journal` files should **only** contain include directives:
@@ -225,3 +229,15 @@ git push
 - [Account Hierarchy & Meanings](../../instructions/account-hierarchy.instructions.md) - All available accounts
 - [Security Practices](../../instructions/security.instructions.md) - Handling confidential data
 - [Common Workflows](../../instructions/common-workflows.instructions.md) - Other practical procedures
+- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Lessons learned and anti-patterns to avoid
+
+## Lessons Learned
+
+See `./lessons.md` for active learnings and integration pointers. For consolidated insights across all skills (replaces scattered lessons.md), see `.agents/instructions/continuous-learning.instructions.md`:
+
+- **Most critical:** Running scripts from wrong directory (working directory is the #1 error)
+- **Payee/account ordering:** Must stay in strict lexicographical order; proactively correct during edits
+- **Balance assertions:** Use on sensitive postings; closing transactions must assert all accounts to zero
+- **Format-before-check:** Always run `bun run format` before `bun run check` to reduce noise
+
+When adding entries to `./lessons.md`, keep them brief and integrate into `SKILL.md` main sections, theme files, or `examples.md` after resolving the issue.

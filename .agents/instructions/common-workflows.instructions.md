@@ -54,3 +54,4 @@ See `.agents/instructions/developer-workflows.instructions.md` for the canonical
 - [edit-journals](../skills/edit-journals/) - Edit journals with best practices
 - [validate-journals](../skills/validate-journals/) - Validate and format journals
 - [Developer Workflows](./developer-workflows.instructions.md) - Script patterns and Python conventions
+- [Continuous Learning & Common Pitfalls](./continuous-learning.instructions.md) - Lessons learned across all workflows

@@ -81,8 +81,24 @@ hledger -f ledger/index.journal register "assets:cash"
 - Keep preludes clean
 - Always run `python -m check` before committing
 
+## Lessons Learned
+
+See `.agents/instructions/continuous-learning.instructions.md` for consolidated lessons and best practices. Key insight for this skill:
+
+**Format-then-check rule (2026-02-08):** Running `bun run format` before `bun run check` reduces validation failures by automatically fixing formatting issues. This reduces noise and makes debugging easier.
+
+**Common patterns:**
+
+- Missing prelude includes in monthly journals
+- Out-of-order transactions or accounts
+- Unbalanced postings
+- Missing timezone tags
+
+When patterns emerge, add to `./lessons.md` and integrate into SKILL.md main sections.
+
 ## Related Documentation
 
 - [Developer Workflows](../../instructions/developer-workflows.instructions.md) - Script patterns
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices
 - [Common Workflows](../../instructions/common-workflows.instructions.md) - Workflows overview
+- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Consolidated lessons

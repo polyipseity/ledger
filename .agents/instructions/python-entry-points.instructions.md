@@ -8,7 +8,7 @@ applyTo: "**/*.py"
 
 This document establishes the convention for Python scripts and modules in the ledger project that expose entry points for direct execution. All scripts in `scripts/` and any `__main__.py` modules must follow this pattern.
 
-**Inheritance note:** This convention extends the parent repository's Python entry points convention (see `../../.agents/instructions/python-entry-points.instructions.md`). Local scripts follow the same `__main__ == "__main__"` pattern with Asyncer integration. Refer to the parent documentation for comprehensive guidance; this file provides ledger-specific context.
+**Inheritance note:** This convention extends the parent repository's Python entry points convention (see `../../instructions/python-entry-points.instructions.md`). Local scripts follow the same `__main__ == "__main__"` pattern with Asyncer integration. Refer to the parent documentation for comprehensive guidance; this file provides ledger-specific context.
 
 ## Quick Pattern (Async)
 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
 ## Integration with Parent Convention
 
-This ledger project inherits the parent repository's Python entry points convention. Refer to `../../.agents/instructions/python-entry-points.instructions.md` for:
+This ledger project inherits the parent repository's Python entry points convention. Refer to `../../instructions/python-entry-points.instructions.md` for:
 
 - Detailed rationale and background
 - Integration with argparse and Click
@@ -251,7 +251,7 @@ if __name__ == "__main__":
 
 ## See Also
 
-- Parent repository convention: `../../.agents/instructions/python-entry-points.instructions.md`
+- Parent repository convention: `../../instructions/python-entry-points.instructions.md`
 - Ledger testing guidance: `testing.instructions.md`
 - Developer workflows: `developer-workflows.instructions.md`
 - Common workflows: `common-workflows.instructions.md`

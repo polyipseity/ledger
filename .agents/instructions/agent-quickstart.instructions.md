@@ -9,6 +9,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 
 ## Core checklist (do this every time)
 
+- **Consult continuous learning guide**: See [continuous-learning.instructions.md](./continuous-learning.instructions.md) **first** if you encounter a problem or are unsure about a pattern. It consolidates lessons learned, anti-patterns, and best practices from repeated use.
 - Read the relevant `.agents/skills/<task>/SKILL.md` and any `examples.md` or `lessons.md` included for that skill.
 - Do not use the `memory` tool to permanently store policy or workflow decisions. Persist changes in the repository documentation and skill/instruction files instead; use in-memory storage only for transient state during the current request.
 - Run `bun install` once to get Node + Python tooling; `prepare` runs `uv sync` to provision Python dev extras.

@@ -85,6 +85,17 @@ Typical seconds-only edits are omitted from the normal summary. To include those
 - The user is responsible for committing any repository changes.
   - If an agent commits changes on your behalf, the agent must follow `.agents/instructions/git-commits.instructions.md`. For ledger transaction commits use the exact `ledger(<journal-list>): add N / edit M transaction(s)` header and no body.
 
+## Lessons Learned
+
+For consolidated lessons across all skills and matching patterns, see `.agents/instructions/continuous-learning.instructions.md` and `upsert-octopus-transactions/lessons.md`.
+
+Key insights:
+
+- Matching priority: exact date + signed amount first; then amount + reference ID; then amount + nearest date
+- Time updates: always preserve existing times; only append seconds if missing
+- Paired flows: bank transfer credit + wallet reload should be linked with consistent durations
+- Ambiguous matches: always surface to user for confirmation; never auto-apply
+
 ## Example invocation
 
 Use match octopus statement transactions on December 2025 PNG and update journal entries; show summary.

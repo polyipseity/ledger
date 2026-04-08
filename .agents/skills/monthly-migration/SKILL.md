@@ -71,3 +71,17 @@ cat ledger/2026/2026-01/self.journal | head -50  # View opening
 - [Architecture](../../instructions/architecture.instructions.md) - Journal structure
 - [Common Workflows](../../instructions/common-workflows.instructions.md) - Other workflows
 - [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices
+- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Lessons learned
+
+## Lessons Learned
+
+See `./lessons.md` for active learnings. For consolidated insights across all skills, see `.agents/instructions/continuous-learning.instructions.md`:
+
+Key patterns:
+
+- Always run migration for **both** `self.journal` and `self.alternatives.journal`
+- Ensure closing timestamps are 23:59:59 and opening timestamps are 00:00:00
+- Validate thoroughly before committing migration changes
+- Use todo list tool to track both journal migrations separately
+
+When new patterns emerge, document in `./lessons.md` and integrate into SKILL.md or examples.md.

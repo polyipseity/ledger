@@ -1,6 +1,6 @@
 ---
 name: add-payee
-summary: Add a new payee (merchant, person, organization, or UUID) to the correct preludes journal file, maintaining strict lexicographical order.
+description: Add a new payee (merchant, person, organization, or UUID) to the correct preludes journal file, maintaining strict lexicographical order.
 ---
 
 
@@ -44,8 +44,15 @@ This skill describes how to add a new payee to the ledger system.
 - **Never add payees to monthly or yearly journals.** Always use a `preludes/` file.
 - Inserting payees out of order, or failing to correct existing order mistakes
 
+## Lessons Learned
+
+For consolidated lessons across all skills, see `.agents/instructions/continuous-learning.instructions.md`.
+
+Key pattern: Payees must **always** be kept in strict lexicographical (ASCII/Unicode) order. When adding or editing, scan the entire payee section and proactively correct any out-of-order entries. This prevents merge conflicts and ensures consistency.
+
 ## Related Documentation
 
-- [Editing Guidelines](../../.agents/instructions/editing-guidelines.instructions.md)
-- [Transaction Format Conventions](../../.agents/instructions/transaction-format.instructions.md)
-- [Architecture & File Organization](../../.agents/instructions/architecture.instructions.md)
+- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md)
+- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md)
+- [Architecture & File Organization](../../instructions/architecture.instructions.md)
+- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Lessons learned

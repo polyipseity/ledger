@@ -69,8 +69,12 @@ This pattern ensures correct tracking of group expenses, liabilities, and repaym
 
 ## Anti-Patterns to Avoid
 
+**For comprehensive anti-patterns reference, see [continuous-learning.instructions.md](./continuous-learning.instructions.md)** — consolidated guide to pitfalls and lessons learned across all skills.
+
+Below are the most critical patterns specific to journal editing:
+
 - Manually editing year-level journals (use monthly journals only)
-- Committing without validation (`python -m check`)
+- Committing without validation (`bun run format && bun run check`)
 - Missing timezone tags (always use UTC+08:00)
 - Spaces in account names (use colons)
 - Unencrypted confidential files (encrypt before commit)
@@ -84,3 +88,4 @@ This pattern ensures correct tracking of group expenses, liabilities, and repaym
 - [validate-journals](../skills/validate-journals/) - Validation and formatting
 - [Transaction Format Conventions](./transaction-format.instructions.md) - Transaction structure
 - [Account Hierarchy](./account-hierarchy.instructions.md) - All available accounts
+- [Continuous Learning & Common Pitfalls](./continuous-learning.instructions.md) - Lessons learned and anti-patterns

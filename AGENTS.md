@@ -54,19 +54,32 @@ If anything is unclear about these steps, ask a short clarifying question before
 
 ## Documentation Structure
 
-Core instructions (`.agents/instructions/`):
+**Core instructions** (`.agents/instructions/`):
 
-- [architecture.instructions.md](.agents/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
+**Learning & Continuous Improvement:**
+
+- [continuous-learning.instructions.md](.agents/instructions/continuous-learning.instructions.md) – **START HERE for lessons, anti-patterns, and best practices.** Consolidated guide to all discoveries, recurring issues, and proven solutions across skills and workflows. Replaces scattered `lessons.md` files with unified reference.
+
+**Foundation & Reference:**
+
+- [agent-quickstart.instructions.md](.agents/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
+- [agent-glossary.instructions.md](.agents/instructions/agent-glossary.instructions.md) – Short, canonical definitions of common agent terms and quick reminders used by skills and instructions.
 - [transaction-format.instructions.md](.agents/instructions/transaction-format.instructions.md) – Comprehensive guide to hledger transaction syntax, required and optional tags, formatting conventions, and pattern usage for accurate and readable journal entries.
 - [account-hierarchy.instructions.md](.agents/instructions/account-hierarchy.instructions.md) – Complete documentation of all account types (over 50), including their purposes, relationships, and meanings within the asset, liability, equity, expense, and revenue categories.
-- [developer-workflows.instructions.md](.agents/instructions/developer-workflows.instructions.md) – Covers developer scripts, Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
+- [editing-guidelines.instructions.md](.agents/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with chronological ordering, payee/account registration, and structure guidelines.
+
+**System & Development:**
+
+- [architecture.instructions.md](.agents/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
+- [developer-workflows.instructions.md](.agents/instructions/developer-workflows.instructions.md) – Covers script execution (working directory rules), Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
+- [dependencies.instructions.md](.agents/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
+
+**Specialized Topics:**
+
 - [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) – Step-by-step guides for frequently performed ledger operations, including transaction entry, monthly migration, and script usage, to streamline routine tasks.
-- [editing-guidelines.instructions.md](.agents/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with anti-patterns to avoid and tips for structure, assertions, and includes.
 - [security.instructions.md](.agents/instructions/security.instructions.md) – Instructions for encryption, UUID privacy, and secure handling of confidential data, ensuring privacy and compliance throughout the ledger.
 - [alternatives-journal.instructions.md](.agents/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
-- [dependencies.instructions.md](.agents/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
 - [git-commits.instructions.md](.agents/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
-- [agent-quickstart.instructions.md](.agents/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
 
 Agent Skills (`.agents/skills/`):
 

@@ -102,6 +102,8 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 
 ## 6. Anti-Patterns (STRICTLY FORBIDDEN)
 
+**See `.agents/instructions/continuous-learning.instructions.md` for comprehensive anti-pattern reference** across all skills. Critical patterns specific to upsert:
+
 - Never guess or infer a mapping or payee.
 - Never add a transaction if a contextual match exists (in Pass 1).
 - Never update a transaction in Pass 2.
@@ -109,6 +111,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 - Never add a transaction for 八達通轉賬 (typo: 八達通專帳) as payee—always map.
 - Never skip the todo list tool for multi-step work.
 - Never proceed past any ambiguity—always ask the user.
+- **Most frequently overlooked:** If journal entry already has `duration:`, leave it alone. This has caused post-import fixes in past sessions.
 
 ## 7. Summary Table (Strict Two-Pass)
 
@@ -130,3 +133,17 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 - [ ] All changes validated and committed
 
 **If you are ever unsure, always ask the user for clarification before proceeding.**
+
+## 10. Lessons Learned
+
+See `./lessons.md` for active learnings and integration pointers. For consolidated insights across all skills (replaces scattered lessons.md), see `.agents/instructions/continuous-learning.instructions.md`:
+
+**Most critical lesson:** When matching Octopus end-time rows, only add `duration:` if the journal entry doesn't already have one. This is the most frequently overlooked rule; past imports have required manual correction when this was forgotten.
+
+**Key patterns (2026):**
+
+- Octopus/eDDA statement matching: Use FRN/transfer IDs + timestamp + amount; never use debtor-reference tokens (⭐ integrated into SKILL.md)
+- KMB reward accrual: Record reward line + revenue posting for bus fares (⭐ integrated into Pass 2 guidance)
+- Duration calculation: Pass 1-matched entries require duration only if missing (⭐ most critical rule; double-check before finalizing)
+
+When adding entries to `./lessons.md`, keep them brief (1-2 lines per dated entry) and integrate findings into this SKILL.md, examples.md, or specialized_transaction_import.md after resolving.

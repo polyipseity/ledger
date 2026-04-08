@@ -66,11 +66,18 @@ python -m format   # set cwd to scripts/
 python -m check    # set cwd to scripts/
 ```
 
-## Lessons & Continuous Improvements
+## Lessons & Continuous Learning
 
-See `./lessons.md` for the active queue and integration pointers. This file should contain only short, unresolved notes. After integrating a lesson into a canonical file (`SKILL.md`, a theme file, or `examples.md`), replace that lesson with a one-line pointer and remove detailed duplicated text.
+See `./lessons.md` for the active queue of current learnings. **For consolidated insights across all skills (replaces scattered lessons.md), see `.agents/instructions/continuous-learning.instructions.md`** — a unified guide to lessons, anti-patterns, and best practices discovered through repeated use.
 
-Consolidated cross-theme reminders:
+For guidelines on integrating new lessons:
+
+1. Add new findings to `./lessons.md` with date and short description
+2. Integrate into the relevant canonical file (SKILL.md, theme file, examples.md, or mapping YAML)
+3. Replace detailed lesson with a one-line pointer in `./lessons.md`
+4. Keep this file concise (single-screen)
+
+Consolidated cross-theme reminders (key rules discovered through use):
 
 - Use the most specific account and contextually correct tags (`activity:`, `eating:`, etc.), and keep tag order/format aligned with `.agents/instructions/transaction-format.instructions.md`.
 - Always resolve payee + identifiers via `private.yaml` (UUIDs), `payee_mappings.yml` (name normalization), and `id_mappings.yml` (identifier order/regex).
@@ -81,7 +88,11 @@ Consolidated cross-theme reminders:
 - Keep outputs non-confidential: no leaked personal ids, Octopus numbers, employee names, or attachment filenames.
 - Do not rely on the runtime memory store for workflow rules. Instead, persist rule updates directly in skill or instruction files (`.agents/skills/*/SKILL.md`, `.agents/instructions/*.instructions.md`, `AGENTS.md`) so the repository is self-documenting and reviewers can audit behavior.
 
-- New continuous learning rule: For itemized food receipts with a basket + modifiers, prefer multi-line itemization with explicit 0.00 modifier lines and a single paid line for net subtotal, to preserve receipt detail and enable comparison with source tax invoice.
+**Recent lessons (integrated into canonical files, see continuous-learning for details):**
+
+- 2026-04-08 — Saizeriya & American Diner receipt header ID conventions → `food_transactions.md`, `examples.md`, `id_mappings.yml`
+- 2026-03-10 — Tag formatting & language consistency → `food_transactions.md`, `examples.md`
+- 2026-02-24 — Complimentary items & modifier splitting → `food_transactions.md`, `examples.md`, `SKILL.md`
 
 ### Status markers
 
