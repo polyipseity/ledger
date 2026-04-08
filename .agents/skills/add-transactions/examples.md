@@ -91,6 +91,16 @@ When McDonald's receipts include both English and Chinese for menu items, prefer
 
 Even when the receipt shows local-language versions, always choose the English version when it is available.
 
+When the receipt already prints a standalone add-on or side dish as its own line, keep that exact name and do not prepend `配` in the journal:
+
+```text
+2026-04-02 (5873AD/3026, 844, 42) McDonald's  ; activity: eating, eating: dinner, time: 23:49:18, timezone: UTC+08:00
+    expenses:food and drinks:dining  37.00 HKD  ; food_or_drink: 豬柳蛋漢堡餐(大)
+    expenses:food and drinks:dining   0.00 HKD  ; food_or_drink: 星星薯餅(增量裝)
+    expenses:food and drinks:dining   0.00 HKD  ; food_or_drink: 熱朱古力
+    assets:digital:Octopus cards:... -37.00 HKD
+```
+
 #### TamJai SamGor specifics
 
 ```text
@@ -104,9 +114,10 @@ Ensure modifiers like 米線爽 are recorded correctly and translate OCR mistake
 ### Saizeriya and American Diner header IDs
 
 ```text
-2026-04-01 (000-964096, 36) Saizeriya  ; activity: eating, duration: PT28M45S, eating: lunch, time: 11:59:47, timezone: UTC+08:00
-    expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: 雞肉多利亞
-    assets:digital:Octopus cards:...                                       -30.00 HKD
+2026-04-03 (000-964351, 34) Saizeriya  ; activity: eating, duration: PT35M17S, eating: lunch, time: 11:10:19, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
+    expenses:food and drinks:dining                                         12.00 HKD  ; food_or_drink: 蒜香法包
+    assets:digital:Octopus cards:...                                       -37.00 HKD
 
 2026-04-02 (374369, K459) American Diner  ; activity: eating, eating: lunch, time: 12:45:33, timezone: UTC+08:00
     expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: 忌廉煙火腿粟米蜆肉意粉, food_or_drink: 薯條
@@ -114,6 +125,16 @@ Ensure modifiers like 米線爽 are recorded correctly and translate OCR mistake
 ```
 
 When a receipt provides a second identifier after the main receipt number, include it in the journal header so the transaction can be uniquely tracked and matched. The secondary value may be a table or kiosk code.
+
+If the receipt also prints unrelated POS footer codes, do not move those into the journal header unless they are part of the merchant's own receipt identifier scheme.
+
+```text
+2026-04-03 (018-00123) Appolo  ; activity: eating, eating: snacks, time: 20:36:22, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         12.00 HKD  ; food_or_drink: 海苔小丸子 90g
+    assets:digital:Octopus cards:...                                       -12.00 HKD
+```
+
+Note: keep only the sale receipt number in the header here; the longer POS footer code belongs to the receipt body, not the journal header.
 
 Example B (no coffee):
 
