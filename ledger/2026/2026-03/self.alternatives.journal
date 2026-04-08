@@ -7,3 +7,11 @@ include ../../../preludes/self.alternatives.journal
     equity:opening/closing balances                                             -8 259. GREEN$
     equity:opening/closing balances                                              -29 311. _FRM
     equity:opening/closing balances                                         -22 943 547. _PT/A
+
+2026-03-31 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
+    assets:digital:GREEN@COMMMUNITY:1683f1aa-61c7-43cc-b9f3-58da24a81704        -8 259. GREEN$ = 0 GREEN$
+    assets:digital:SheepIt Render Farm:polyipseity                               -29 311. _FRM = 0 _FRM
+    assets:digital:SheepIt Render Farm:polyipseity                          -22 943 547. _PT/A = 0 _PT/A
+    equity:opening/closing balances                                              8 259. GREEN$
+    equity:opening/closing balances                                               29 311. _FRM
+    equity:opening/closing balances                                          22 943 547. _PT/A
