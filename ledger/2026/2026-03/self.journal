@@ -585,7 +585,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 罐裝無糖可樂 x1
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -43.00 HKD
 
-2026-03-21 Swire  ; activity: consumption, time: 20:57, timezone: UTC+08:00
+2026-03-21 Swire  ; activity: eating, eating: drinks, time: 20:57, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -632,7 +632,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 堂食
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
 
-2026-03-23 Swire  ; activity: consumption, time: 16:18, timezone: UTC+08:00
+2026-03-23 Swire  ; activity: eating, eating: drinks, time: 16:18, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -666,7 +666,7 @@ include ../../../preludes/self.journal
     expenses:transport:minibuses                                             8.30 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -8.30 HKD
 
-2026-03-24 Swire  ; activity: consumption, time: 18:07, timezone: UTC+08:00
+2026-03-24 Swire  ; activity: eating, eating: drinks, time: 18:07, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -807,7 +807,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.50 HKD  ; food_or_drink: BBQ sauce, food_or_drink: Honey BBQ Seasoning, food_or_drink: L Coke No Sugar Combo, food_or_drink: LFries L.Combo, food_or_drink: McNuggets 6pcs L.Meal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.50 HKD
 
-2026-03-28 Swire  ; activity: consumption, time: 17:41, timezone: UTC+08:00
+2026-03-28 Swire  ; activity: eating, eating: drinks, time: 17:41, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -871,7 +871,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -2.90 HKD
     revenues:rewards                                                      -2.90 _PT/E
 
-2026-03-30 Swire  ; activity: consumption, time: 19:23, timezone: UTC+08:00
+2026-03-30 Swire  ; activity: eating, eating: drinks, time: 19:23, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -915,7 +915,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
-2026-03-31 Swire  ; activity: consumption, time: 15:13, timezone: UTC+08:00
+2026-03-31 Swire  ; activity: eating, eating: drinks, time: 15:13, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
@@ -923,7 +923,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.50 HKD  ; food_or_drink: BBQ sauce, food_or_drink: Hash Brown Stars(XL), food_or_drink: Hot Chocolate, food_or_drink: McNuggets 6pcs L Meal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.50 HKD
 
-2026-03-31 Swire  ; activity: consumption, time: 21:07, timezone: UTC+08:00
+2026-03-31 Swire  ; activity: eating, eating: drinks, time: 21:07, timezone: UTC+08:00
     expenses:food and drinks:drinks                                          4.00 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.00 HKD
 
