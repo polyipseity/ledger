@@ -35,6 +35,7 @@ Guide for migrating journals at the start of each month.
 
 - Run `hledger close --migrate -f ledger/YYYY/YYYY-MM/self.journal` for each journal to generate closing/opening transactions.
 - Copy the generated closing balances into the previous-month journal and the opening balances into the new month (after the prelude include).
+- If a previous month's closing balances are corrected after the next month has already been created, update the next month’s opening balances to match the corrected closing balances.
 - Ensure the new month directory and `self.journal` exist and include the correct prelude (`include ../../../preludes/self.journal`).
 - Verify closing timestamps and opening timestamps are correct (closing at 23:59:59, opening at 00:00:00).
 - Validate and format (prefer `bun run format` and `bun run check`).

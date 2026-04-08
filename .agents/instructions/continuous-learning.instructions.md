@@ -124,16 +124,17 @@ bun run format
 
 ### Octopus Transaction Upsert
 
-| Anti-Pattern                                        | Symptom                                             | Fix                                                                                           | Priority     |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------ |
-| **Guessing matches (Pass 1)**                       | Duplicates; incorrect duration                      | Match **only** on date + amount + time (±1.5 hrs); ignore payee/merchant/tags                 | **CRITICAL** |
-| **Filtering Pass 1 by payee name**                  | Missed matches; unintended duplicates               | **Absolutely ignore** merchant/payee/nature; check **every** journal entry by date+amount     | **CRITICAL** |
-| **Forgetting to update `duration:` when matching**  | Time tracking incomplete; pass 1 errors             | When matching: if journal entry has `time:` but no `duration:`, add duration tag              | **HIGH**     |
-| **Updating duration but leaving it out of comment** | Validation failure; missing metadata                | Duration MUST be inserted into the header comment, between `time:` and `timezone:`            | **HIGH**     |
-| **Not checking if duration already exists**         | Overwriting intentional durations; fixes needed     | **Most frequently overlooked rule:** If journal entry already has `duration:`, leave it alone | **HIGH**     |
-| **Adding transactions in Pass 1**                   | Duplicates; confused workflow                       | Pass 1 = match existing only; Pass 2 = add new only; never mix                                | **CRITICAL** |
-| **Skipping todo list for multi-step upsert**        | Confusion; incomplete work; lost progress           | Always use `manage_todo_list` to track Pass 1, Pass 2, validation, commit separately          | **MEDIUM**   |
-| **Not asking for mapping clarification**            | Wrong payee; privacy violations; later fixes needed | If any payee mapping is missing, ambiguous, or contextually unclear, stop and ask             | **CRITICAL** |
+| Anti-Pattern                                        | Symptom                                             | Fix                                                                                                                                                      | Priority     |
+| --------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| **Guessing matches (Pass 1)**                       | Duplicates; incorrect duration                      | Match **only** on date + amount + time (±1.5 hrs); ignore payee/merchant/tags                                                                            | **CRITICAL** |
+| **Filtering Pass 1 by payee name**                  | Missed matches; unintended duplicates               | **Absolutely ignore** merchant/payee/nature; check **every** journal entry by date+amount                                                                | **CRITICAL** |
+| **Forgetting to update `duration:` when matching**  | Time tracking incomplete; pass 1 errors             | When matching: if journal entry has `time:` but no `duration:`, add duration tag                                                                         | **HIGH**     |
+| **Updating duration but leaving it out of comment** | Validation failure; missing metadata                | Duration MUST be inserted into the header comment, between `time:` and `timezone:`                                                                       | **HIGH**     |
+| **Not checking if duration already exists**         | Overwriting intentional durations; fixes needed     | **Most frequently overlooked rule:** If journal entry already has `duration:`, leave it alone                                                            | **HIGH**     |
+| **Adding transactions in Pass 1**                   | Duplicates; confused workflow                       | Pass 1 = match existing only; Pass 2 = add new only; never mix                                                                                           | **CRITICAL** |
+| **Skipping todo list for multi-step upsert**        | Confusion; incomplete work; lost progress           | Always use `manage_todo_list` to track Pass 1, Pass 2, validation, commit separately                                                                     | **MEDIUM**   |
+| **Failing to update next-month openings**           | Month boundary balances disagree                    | After month-end closing fixes, verify the next month's `opening balances`; compare isolated `closing balances` and `opening balances` blocks by currency | **HIGH**     |
+| **Not asking for mapping clarification**            | Wrong payee; privacy violations; later fixes needed | If any payee mapping is missing, ambiguous, or contextually unclear, stop and ask                                                                        | **CRITICAL** |
 
 ---
 

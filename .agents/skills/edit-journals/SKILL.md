@@ -29,6 +29,7 @@ This skill provides comprehensive guidance for editing hledger journal files whi
 - Always include required tags (`timezone: UTC+08:00`, `activity`, `time`); use `duration`, `food_or_drink`, `item`, `location` when relevant.
 - Format and validate using canonical scripts: `bun run format` then `bun run check` (see `.agents/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
 - Preserve monthly opening/closing patterns for reconciliation and migration.
+- If you correct a previous month's closing balances after the next month's journal already exists, update the next month’s opening balances to match the corrected closing balances.
 - The formatter sorts comment properties; keep transaction comment keys ordered and concise.
 
 For detailed examples and edge cases, see `.agents/instructions/transaction-format.instructions.md` and `.agents/instructions/editing-guidelines.instructions.md`.
