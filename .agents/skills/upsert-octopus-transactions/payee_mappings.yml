@@ -30,6 +30,9 @@
 "專線小巴":
   - "public light bus"
 
+"城巴":
+  - "Citybus/New World First Bus"
+
 # Transfers
 # Both the correct Octopus reload/transfer text and the common typo are mapped to 'self'.
 # '八達通轉賬' is the correct text for Octopus reload/transfer between own accounts.
@@ -63,6 +66,8 @@
   - "McDonald's"
 "譚仔三哥米線":
   - "TamJai SamGor"
+"ITO GROUP":
+  - "麵屋竜平"
 "美國三文治公司":
   - "American Diner"
 "阿波羅美極屋":
@@ -75,10 +80,10 @@
   - "7-Eleven"
 "Union Cash Register Co. Ltd.":
   - "Cafe 100%" # could be other payees
-"自動販賣機":
-  - "Swire" # via: COKE+ vending machine
 "太古可口可樂":
   - "Swire"
+"自動販賣機":
+  - "Swire" # via: COKE+ vending machine
 "Pin Me Limited":
   - "Comebuytea" # could be other payees
 "Appolo (Magic House) Superstore Ltd":
