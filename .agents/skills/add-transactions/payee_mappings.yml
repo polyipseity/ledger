@@ -40,6 +40,8 @@
 "Appolo (Magic House) Superstore Ltd": ["Appolo"]
 "Appolo": ["Appolo"]
 "American Diner": ["American Diner"]
+"Sushiro": ["Sushiro"]
+"スシロー": ["Sushiro"]
 "759阿信屋": ["759 Store"]
 
 # Example one-to-many mappings (use sparingly; prefer creating more-specific keys where possible):

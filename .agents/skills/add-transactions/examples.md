@@ -111,6 +111,21 @@ When the receipt already prints a standalone add-on or side dish as its own line
 
 Ensure modifiers like 米線爽 are recorded correctly and translate OCR mistakes (雀巢無糖可樂 → 罐裝無糖可樂).
 
+### Sushiro shared bill with receipt-id header
+
+When a Sushiro receipt is split between diners, keep the receipt ID in the journal header, record the full item and fee totals, and use negative expense postings plus an `equity:friends:<uuid>` line to balance the other person's share.
+
+```text
+2026-04-07 (512604076122) Sushiro  ; activity: eating, eating: dinner, time: 21:00:03, timezone: UTC+08:00
+    expenses:food and drinks:dining                          223.00 HKD  ; food_or_drink: 13件
+    expenses:food and drinks:fees                             22.00 HKD  ; food_or_drink: 10% service charge
+    expenses:food and drinks:dining                         -111.50 HKD  ; others' share
+    expenses:food and drinks:fees                            -11.00 HKD  ; others' share
+    equity:friends:4491140b-7e34-48fe-8e3d-aca591ed6d6e     -122.50 HKD
+```
+
+Notes: use the exact split shown on the receipt; do not collapse the transaction into a single card-payment posting when a shared-bill split is present.
+
 ### Saizeriya and American Diner header IDs
 
 ```text

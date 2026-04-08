@@ -15,12 +15,19 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 - 2026-03-28 — TamJai SamGor itemization rule refined: base meal handling, modifier flags (不要芽菜/不要韭菜/不要腐皮), and per-item food_or_drink metadata should be explicit for all repeated C1 combos in single transaction.
 - 2026-04-03 — McDonald's/food receipt detail: keep standalone item names exactly as printed; do not prefix bundled sides/drinks with `配` when the receipt already lists them separately.
 - 2026-04-03 — Receipt header fidelity: keep full printed identifiers such as `000-964351` and `018-00123`; do not truncate leading zeroes or promote footer/POS codes into the transaction header.
+- 2026-04-06 — Cafe 100% header fidelity: preserve the printed identifier order exactly as received (`transaction_id`, then `table_number`); do not normalize or swap the header tokens.
+- 2026-04-06 — TamJai SamGor timing: when a receipt shows both `落單時間` and `結帳時間`, use the order time as `time:` and derive `duration:` from the gap to the closing time.
+- 2026-04-06 — Wellcome fruit purchases: classify produce buys as `activity: eating, eating: fruits`, keep the exact printed fruit wording, and avoid relabeling them as generic consumption.
 
 ## Integrated archive
 
 ### 2026-04-08 — Saizeriya and American Diner receipt header ID conventions
 
 Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`
+
+### 2026-04-07 — Sushiro shared bill receipt and split pattern
+
+Integrated → `examples.md`, `continuous-learning.instructions.md`
 
 ### 2026-03-10 — Tag formatting, language consistency, and Cafe 100% itemization
 

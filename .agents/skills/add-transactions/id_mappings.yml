@@ -72,12 +72,23 @@
   regex:
     receipt_id: "\\d{6}"
     kiosk_code: "K\\d{3,4}"
+"Wellcome":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "\\d{18,20}"
 "Saizeriya":
   orders:
     - [receipt_id, table_number]
   regex:
     receipt_id: "\\d{3}-\\d{6}"
     table_number: "\\d{1,3}"
+
+"嗦嗦 (DZô DZô)":
+  orders:
+    - [receipt_id]
+  regex:
+    receipt_id: "DDNT\\d{8}"
 
 "Ebeneezer's Kebabs & Pizzeria":
   orders:

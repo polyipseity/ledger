@@ -150,6 +150,10 @@ bun run format
 
 - Receipt header ID conventions now in `id_mappings.yml`; update mapping when adding new payee receipts
 
+**Sushiro shared bill splitting (2026-04-07):**
+
+- Keep the receipt ID in the header, split the bill into full item/fee postings, and balance the other person's share with negative expense postings plus `equity:friends:<uuid>`
+
 **Tag formatting & language consistency (2026-03-10):**
 
 - Cafe 100% itemization rule: always check receipt for zero-priced items; never assume
