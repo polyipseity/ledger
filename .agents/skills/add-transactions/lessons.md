@@ -16,6 +16,10 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 
 ## Integrated archive
 
+### 2026-04-08 — Saizeriya and American Diner receipt header ID conventions
+
+Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`
+
 ### 2026-03-10 — Tag formatting, language consistency, and Cafe 100% itemization
 
 Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`

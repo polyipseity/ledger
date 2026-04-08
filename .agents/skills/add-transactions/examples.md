@@ -101,6 +101,20 @@ Even when the receipt shows local-language versions, always choose the English v
 
 Ensure modifiers like 米線爽 are recorded correctly and translate OCR mistakes (雀巢無糖可樂 → 罐裝無糖可樂).
 
+### Saizeriya and American Diner header IDs
+
+```text
+2026-04-01 (000-964096, 36) Saizeriya  ; activity: eating, duration: PT28M45S, eating: lunch, time: 11:59:47, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: 雞肉多利亞
+    assets:digital:Octopus cards:...                                       -30.00 HKD
+
+2026-04-02 (374369, K459) American Diner  ; activity: eating, eating: lunch, time: 12:45:33, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.00 HKD  ; food_or_drink: 忌廉煙火腿粟米蜆肉意粉, food_or_drink: 薯條
+    assets:digital:Octopus cards:...                                       -36.00 HKD
+```
+
+When a receipt provides a second identifier after the main receipt number, include it in the journal header so the transaction can be uniquely tracked and matched. The secondary value may be a table or kiosk code.
+
 Example B (no coffee):
 
 ```text
