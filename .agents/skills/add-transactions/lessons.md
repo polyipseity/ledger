@@ -52,7 +52,3 @@ Integrated → `SKILL.md`, `id_mappings.yml`, `payee_mappings.yml`, `specialized
 ### 2026-02-19 — Gifts/red-packet example expansion
 
 Integrated → `examples.md`
-
-### 2026-02-01 — Initial add-transactions rule consolidation
-
-Integrated → `payee_id_mapping_rules.md`, `food_transactions.md`, `posting_tag_rules.md`, `lending_borrowing_transactions.md`, `specialized_transaction_import.md`
