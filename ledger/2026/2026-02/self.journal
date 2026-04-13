@@ -72,11 +72,11 @@ include ../../../preludes/self.journal
     assets:objects:decorations                                      -181.80 HKD  ; item: KT 16cm 斜背公仔
     assets:objects:food and drinks                                   -24.00 HKD  ; item: 日本明治片裝黑朱古力 120g
 
-2026-02-01 (C2172829593, FRN20260201PAYD0103141005869) self  ; activity: transfer, time: 14:51, timezone: UTC+08:00, via: eDDA
+2026-02-01 (C2172829593, FRN20260201PAYD0103141005869) self  ; activity: transfer, time: 14:51:11, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-01 self  ; activity: reload, time: 14:51, timezone: UTC+08:00
+2026-02-01 self  ; activity: reload, time: 14:51:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -141,11 +141,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
 
-2026-02-03 (C2374906843, FRN20260203PAYD0103147838119) self  ; activity: transfer, time: 13:25, timezone: UTC+08:00, via: eDDA
+2026-02-03 (C2374906843, FRN20260203PAYD0103147838119) self  ; activity: transfer, time: 13:25:08, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-03 self  ; activity: reload, time: 13:25, timezone: UTC+08:00
+2026-02-03 self  ; activity: reload, time: 13:25:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -214,11 +214,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:drinks                                          4.00 HKD  ; food_or_drink: 凍蘋果綠茶
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -36.50 HKD
 
-2026-02-05 (C2577447909, FRN20260205PAYD0103155503246) self  ; activity: transfer, time: 20:30, timezone: UTC+08:00, via: eDDA
+2026-02-05 (C2577447909, FRN20260205PAYD0103155503246) self  ; activity: transfer, time: 20:30:11, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-05 self  ; activity: reload, time: 20:30, timezone: UTC+08:00
+2026-02-05 self  ; activity: reload, time: 20:30:15, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -281,11 +281,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
     revenues:rewards                                                     -10.00 _PT/E
 
-2026-02-09 (C2980819443, FRN20260209PAYD0103165437443) self  ; activity: transfer, time: 11:37, timezone: UTC+08:00, via: eDDA
+2026-02-09 (C2980819443, FRN20260209PAYD0103165437443) self  ; activity: transfer, time: 11:37:53, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-09 self  ; activity: reload, time: 11:37, timezone: UTC+08:00
+2026-02-09 self  ; activity: reload, time: 11:37:57, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -366,11 +366,11 @@ include ../../../preludes/self.journal
     expenses:transport:trains                                                3.20 HKD
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.20 HKD
 
-2026-02-10 (C2A82340159, FRN20260210PAYD0103169876022) self  ; activity: transfer, time: 21:00, timezone: UTC+08:00, via: eDDA
+2026-02-10 (C2A82340159, FRN20260210PAYD0103169876022) self  ; activity: transfer, time: 21:00:22, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-10 self  ; activity: reload, time: 21:00, timezone: UTC+08:00
+2026-02-10 self  ; activity: reload, time: 21:00:25, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -425,11 +425,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         35.00 HKD  ; food_or_drink: 無糖高纖鮮奶麥皮, food_or_drink: 熱咖啡 + 多奶, food_or_drink: 蛋治, food_or_drink: 鮮奶滑蛋三文治
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
-2026-02-12 (C2C83891132, FRN20260212PAYD0103174484919) self  ; activity: transfer, time: 14:10, timezone: UTC+08:00, via: eDDA
+2026-02-12 (C2C83891132, FRN20260212PAYD0103174484919) self  ; activity: transfer, time: 14:10:29, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-12 self  ; activity: reload, time: 14:10, timezone: UTC+08:00
+2026-02-12 self  ; activity: reload, time: 14:10:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -510,11 +510,11 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -3.10 HKD
     revenues:rewards                                                      -3.10 _PT/E
 
-2026-02-13 (C2D85244229, FRN20260213PAYD0103178497241) self  ; activity: transfer, time: 20:53, timezone: UTC+08:00, via: eDDA
+2026-02-13 (C2D85244229, FRN20260213PAYD0103178497241) self  ; activity: transfer, time: 20:53:07, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-13 self  ; activity: reload, time: 20:53, timezone: UTC+08:00
+2026-02-13 self  ; activity: reload, time: 20:53:17, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -592,11 +592,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         21.00 HKD  ; food_or_drink: (unknown) ×2
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -21.00 HKD
 
-2026-02-18 (C2I89208123, FRN20260218PAYD0103189773813) self  ; activity: transfer, time: 21:47, timezone: UTC+08:00, via: eDDA
+2026-02-18 (C2I89208123, FRN20260218PAYD0103189773813) self  ; activity: transfer, time: 21:47:44, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-18 self  ; activity: reload, time: 21:47, timezone: UTC+08:00
+2026-02-18 self  ; activity: reload, time: 21:47:54, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -688,11 +688,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:drinks                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -35.00 HKD
 
-2026-02-22 (C2M91910097, FRN20260222PAYD0103198098926) self  ; activity: transfer, time: 16:13, timezone: UTC+08:00, via: eDDA
+2026-02-22 (C2M91910097, FRN20260222PAYD0103198098926) self  ; activity: transfer, time: 16:13:30, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-22 self  ; activity: reload, time: 16:13, timezone: UTC+08:00
+2026-02-22 self  ; activity: reload, time: 16:13:33, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -774,11 +774,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         10.00 HKD  ; food_or_drink: BUENO KINDER
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -10.00 HKD
 
-2026-02-24 (C2O93336681, FRN20260224PAYD0103202642472) self  ; activity: transfer, time: 14:04, timezone: UTC+08:00
+2026-02-24 (C2O93336681, FRN20260224PAYD0103202642472) self  ; activity: transfer, time: 14:04:09, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-24 self  ; activity: reload, time: 14:04, timezone: UTC+08:00
+2026-02-24 self  ; activity: reload, time: 14:04:12, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -847,11 +847,11 @@ include ../../../preludes/self.journal
     expenses:food and drinks:snacks                                         13.30 HKD  ; food_or_drink: (unknown) ×2
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -13.30 HKD
 
-2026-02-26 (C2Q95315790, FRN20260226PAYD0103208927081) self  ; activity: transfer, time: 18:19, timezone: UTC+08:00
+2026-02-26 (C2Q95315790, FRN20260226PAYD0103208927081) self  ; activity: transfer, time: 18:19:33, timezone: UTC+08:00
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-26 self  ; activity: reload, time: 18:19, timezone: UTC+08:00
+2026-02-26 self  ; activity: reload, time: 18:19:37, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -934,11 +934,11 @@ include ../../../preludes/self.journal
     expenses:gaming:maimai                                                6.00 HKD
     liabilities:loans:friends:bfa32943-960d-4df1-9997-e2391f5551a1       -6.00 HKD = -30.00 HKD
 
-2026-02-27 (C2R96258917, FRN20260227PAYD0103212302524) self  ; activity: transfer, time: 17:05, timezone: UTC+08:00, via: eDDA
+2026-02-27 (C2R96258917, FRN20260227PAYD0103212302524) self  ; activity: transfer, time: 17:05:34, timezone: UTC+08:00, via: eDDA
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2        200.00 HKD
     assets:banks:eb3a5344-9cdb-471f-a489-ea8981329cd6:HKD savings     -200.00 HKD
 
-2026-02-27 self  ; activity: reload, time: 17:05, timezone: UTC+08:00
+2026-02-27 self  ; activity: reload, time: 17:05:38, timezone: UTC+08:00
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      200.00 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2           -200.00 HKD
 
@@ -974,7 +974,7 @@ include ../../../preludes/self.journal
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521       -4.20 HKD
     revenues:rewards                                                      -4.20 _PT/E
 
-2026-02-28 (MKB98ZB6L5, 652099410969, 792587) Apple  ; activity: service, time: 17:03, timezone: UTC+08:00
+2026-02-28 (MKB98ZB6L5, 652099410969, 792587) Apple  ; activity: service, time: 17:03:23, timezone: UTC+08:00
     assets:deferred expenses:services:clouds:Apple                     8.10 HKD
     assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
 

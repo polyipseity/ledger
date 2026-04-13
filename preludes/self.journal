@@ -29,6 +29,7 @@ account assets:deferred expenses:activities                                     
 account assets:deferred expenses:education                                                        ; type: A
 account assets:deferred expenses:education:books                                                  ; type: A
 account assets:deferred expenses:education:incidental                                             ; type: A
+account assets:deferred expenses:education:exchange                                               ; type: A
 account assets:deferred expenses:education:tuition                                                ; type: A
 account assets:deferred expenses:education:tuition:universities                                   ; type: A
 account assets:deferred expenses:fees:Hong Kong Government                                        ; type: A
@@ -154,6 +155,7 @@ account expenses:consumption                                                    
 account expenses:consumption:software                                                             ; type: X
 account expenses:education                                                                        ; type: X
 account expenses:education:books                                                                  ; type: X
+account expenses:education:exchange                                                               ; type: X
 account expenses:education:incidental                                                             ; type: X
 account expenses:education:tuition                                                                ; type: X
 account expenses:education:tuition:universities                                                   ; type: X
@@ -195,6 +197,8 @@ account expenses:insurances:life:7435ecd0-fbc5-4f80-bfdf-d26ee85a1f25           
 account expenses:insurances:life:d2926e7a-1f12-4194-92be-978768d964a7                             ; type: X
 account expenses:repairs                                                                          ; type: X
 account expenses:services                                                                         ; type: X
+account expenses:services:AI                                                                      ; type: X
+account expenses:services:AI:Cursor                                                               ; type: X
 account expenses:services:clouds                                                                  ; type: X
 account expenses:services:clouds:Apple                                                            ; type: X
 account expenses:services:clouds:Google                                                           ; type: X
@@ -338,6 +342,7 @@ payee 49c186e5-f575-43ec-b73b-48d200eb27be
 payee 4d3562ae-b4d4-4444-b428-33f0aced1462
 payee 4e2b1f6d-2c3a-4b1f-9e74-6c1bd2a7b3f1
 payee 51b339c5-b778-463d-8070-9c18ff6d88c0
+payee 52e9a2d2-bf26-46bb-b135-b8c09cdb7074
 payee 547f30bb-3f8d-47b4-9ef9-7b808b09f8f1
 payee 56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f
 payee 5e758af5-23c0-4038-b161-06757132e875
@@ -355,6 +360,7 @@ payee 7fc76083-5175-421d-8c6f-d15897b5ee8e
 payee 83282154-a569-4443-8df3-675a5a48e4a2
 payee 856ec2f9-6367-4726-9301-a2a6dde358c0
 payee 88e71e74-7f85-4a0a-ab31-ecab094622a5
+payee 8e2c9fd0-31d9-4b76-8a86-f5a874062451
 payee 93e360c4-2428-4e2c-969d-6b1a3a7e127f
 payee 968eeeeb-a2b6-4c7c-a789-e315c628d24c
 payee 96f69720-5471-4e88-bebe-3db7a77a086c
@@ -379,6 +385,7 @@ payee Candian Pizza
 payee Circle K
 payee Citybus/New World First Bus
 payee Comebuytea
+payee Cursor
 payee DBS Bank
 payee Da Mario
 payee Daiso
