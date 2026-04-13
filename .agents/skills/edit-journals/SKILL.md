@@ -30,6 +30,7 @@ This skill provides comprehensive guidance for editing hledger journal files whi
 - Format and validate using canonical scripts: `bun run format` then `bun run check` (see `.agents/instructions/developer-workflows.instructions.md`). Fix all errors before committing.
 - Preserve monthly opening/closing patterns for reconciliation and migration.
 - If you correct a previous month's closing balances after the next month's journal already exists, update the next month’s opening balances to match the corrected closing balances.
+- When troubleshooting with temporary journals, create the temp file in the same month directory or run hledger from that directory so relative `include` paths resolve.
 - The formatter sorts comment properties; keep transaction comment keys ordered and concise.
 
 For detailed examples and edge cases, see `.agents/instructions/transaction-format.instructions.md` and `.agents/instructions/editing-guidelines.instructions.md`.

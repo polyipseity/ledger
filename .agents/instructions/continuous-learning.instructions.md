@@ -23,6 +23,7 @@ This file consolidates lessons, anti-patterns, and continuous improvements disco
 - **Only use `python -m scripts.<cmd>` when no `bun run <script>` wrapper exists**
 - **When using Python directly, set `cwd=scripts/`** in tool parameters
 - **For `hledger close --migrate`, run from repo root**
+- When creating temporary journals for diagnosis, put the temp file in the same journal directory or run hledger from that directory so relative `include` paths resolve correctly.
 
 **Examples of wrong vs. right:**
 
@@ -51,6 +52,8 @@ bun run format
 
 **Consolidated rule:** Run **`bun run format` BEFORE `bun run check`**. Formatting often fixes validation errors automatically.
 
+**Boundary rule:** When correcting a month-end closing balance, validate the corrected month and the following month together so the opening balances match the corrected closing balances.
+
 ### Pre-commit Validation Checklist
 
 1. **Format Markdown** (if editing instructions): `bun run markdownlint:fix`
@@ -74,15 +77,16 @@ bun run format
 
 ### Journal Structure & Editing
 
-| Anti-Pattern                                | Symptom                                                   | Fix                                                                                                                 | Priority     |
-| ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
-| **Editing year-level journals**             | Transactions out of monthly hierarchy                     | Always edit `ledger/YYYY/YYYY-MM/*.journal`; year files are includes only                                           | **CRITICAL** |
-| **Out-of-chronological-order transactions** | Validation fails; reports out-of-order; hledger confusion | Always insert transactions in strict date+time order; use `.agents/instructions/transaction-format.instructions.md` | **CRITICAL** |
-| **Missing timezone tags**                   | Ambiguous transaction times; breaks reporting             | Every transaction MUST have `timezone: UTC+08:00` in comment                                                        | **CRITICAL** |
-| **Payees declared in monthly journals**     | Duplicate payees; validation fails                        | **Always** declare payees in `preludes/self.journal` only, alphabetized                                             | **CRITICAL** |
-| **Payees out of lexicographical order**     | Merge conflicts; maintenance issues                       | Check entire payee section; insert any new payee in correct ASCII order                                             | **HIGH**     |
-| **Accounts out of lexicographical order**   | Same as payees                                            | Check entire account section; move any out-of-order entries                                                         | **HIGH**     |
-| **Committing without validation**           | Downstream validation failures; CI blockers               | Always run `bun run format && bun run check` before commit                                                          | **HIGH**     |
+| Anti-Pattern                                  | Symptom                                                   | Fix                                                                                                                 | Priority     |
+| --------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
+| **Editing year-level journals**               | Transactions out of monthly hierarchy                     | Always edit `ledger/YYYY/YYYY-MM/*.journal`; year files are includes only                                           | **CRITICAL** |
+| **Out-of-chronological-order transactions**   | Validation fails; reports out-of-order; hledger confusion | Always insert transactions in strict date+time order; use `.agents/instructions/transaction-format.instructions.md` | **CRITICAL** |
+| **Missing timezone tags**                     | Ambiguous transaction times; breaks reporting             | Every transaction MUST have `timezone: UTC+08:00` in comment                                                        | **CRITICAL** |
+| **Payees declared in monthly journals**       | Duplicate payees; validation fails                        | **Always** declare payees in `preludes/self.journal` only, alphabetized                                             | **CRITICAL** |
+| **Payees out of lexicographical order**       | Merge conflicts; maintenance issues                       | Check entire payee section; insert any new payee in correct ASCII order                                             | **HIGH**     |
+| **Accounts out of lexicographical order**     | Same as payees                                            | Check entire account section; move any out-of-order entries                                                         | **HIGH**     |
+| **Committing without validation**             | Downstream validation failures; CI blockers               | Always run `bun run format && bun run check` before commit                                                          | **HIGH**     |
+| **Running formatter on unparseable journals** | Formatting fails before it can normalize the file         | Fix syntax and invalid account or payee definitions before running `bun run format`                                 | **HIGH**     |
 
 ### Transaction Entry & Tagging
 
@@ -124,17 +128,17 @@ bun run format
 
 ### Octopus Transaction Upsert
 
-| Anti-Pattern                                        | Symptom                                             | Fix                                                                                                                                                      | Priority     |
-| --------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| **Guessing matches (Pass 1)**                       | Duplicates; incorrect duration                      | Match **only** on date + amount + time (±1.5 hrs); ignore payee/merchant/tags                                                                            | **CRITICAL** |
-| **Filtering Pass 1 by payee name**                  | Missed matches; unintended duplicates               | **Absolutely ignore** merchant/payee/nature; check **every** journal entry by date+amount                                                                | **CRITICAL** |
-| **Forgetting to update `duration:` when matching**  | Time tracking incomplete; pass 1 errors             | When matching: if journal entry has `time:` but no `duration:`, add duration tag                                                                         | **HIGH**     |
-| **Updating duration but leaving it out of comment** | Validation failure; missing metadata                | Duration MUST be inserted into the header comment, between `time:` and `timezone:`                                                                       | **HIGH**     |
-| **Not checking if duration already exists**         | Overwriting intentional durations; fixes needed     | **Most frequently overlooked rule:** If journal entry already has `duration:`, leave it alone                                                            | **HIGH**     |
-| **Adding transactions in Pass 1**                   | Duplicates; confused workflow                       | Pass 1 = match existing only; Pass 2 = add new only; never mix                                                                                           | **CRITICAL** |
-| **Skipping todo list for multi-step upsert**        | Confusion; incomplete work; lost progress           | Always use `manage_todo_list` to track Pass 1, Pass 2, validation, commit separately                                                                     | **MEDIUM**   |
-| **Failing to update next-month openings**           | Month boundary balances disagree                    | After month-end closing fixes, verify the next month's `opening balances`; compare isolated `closing balances` and `opening balances` blocks by currency | **HIGH**     |
-| **Not asking for mapping clarification**            | Wrong payee; privacy violations; later fixes needed | If any payee mapping is missing, ambiguous, or contextually unclear, stop and ask                                                                        | **CRITICAL** |
+| Anti-Pattern                                        | Symptom                                             | Fix                                                                                                                                                    | Priority     |
+| --------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| **Guessing matches (Pass 1)**                       | Duplicates; incorrect duration                      | Match **only** on date + amount + time (±1.5 hrs); ignore payee/merchant/tags                                                                          | **CRITICAL** |
+| **Filtering Pass 1 by payee name**                  | Missed matches; unintended duplicates               | **Absolutely ignore** merchant/payee/nature; check **every** journal entry by date+amount                                                              | **CRITICAL** |
+| **Forgetting to update `duration:` when matching**  | Time tracking incomplete; pass 1 errors             | When matching: if journal entry has `time:` but no `duration:`, add duration tag                                                                       | **HIGH**     |
+| **Updating duration but leaving it out of comment** | Validation failure; missing metadata                | Duration MUST be inserted into the header comment, between `time:` and `timezone:`                                                                     | **HIGH**     |
+| **Not checking if duration already exists**         | Overwriting intentional durations; fixes needed     | **Most frequently overlooked rule:** If journal entry already has `duration:`, leave it alone                                                          | **HIGH**     |
+| **Adding transactions in Pass 1**                   | Duplicates; confused workflow                       | Pass 1 = match existing only; Pass 2 = add new only; never mix                                                                                         | **CRITICAL** |
+| **Skipping todo list for multi-step upsert**        | Confusion; incomplete work; lost progress           | Always use `manage_todo_list` to track Pass 1, Pass 2, validation, commit separately                                                                   | **MEDIUM**   |
+| **Failing to update next-month openings**           | Month boundary balances disagree                    | After month-end closing fixes, update the next month's `opening balances` to match the corrected closing balances and verify both months with hledger. | **HIGH**     |
+| **Not asking for mapping clarification**            | Wrong payee; privacy violations; later fixes needed | If any payee mapping is missing, ambiguous, or contextually unclear, stop and ask                                                                      | **CRITICAL** |
 
 ---
 
@@ -216,6 +220,7 @@ bun run format
 
 - Prefer `bun run format` and `bun run check` (established pattern)
 - Always run format before validate to reduce noisy failures
+- `scripts.format` uses `hledger print`; if the file is not parseable or contains invalid accounts, formatting can fail before it runs. Fix ledger syntax and account declarations first.
 
 **Prelude ordering (Ongoing):**
 
@@ -226,6 +231,8 @@ bun run format
 
 - Use on sensitive postings (transfers, loans) to catch entry errors early
 - Closing transactions must assert all accounts to `= 0.00 CURRENCY`
+- When correcting monthly closing balances, update the next month's `opening balances` immediately and validate both months together to avoid boundary mismatches.
+- Small rounding mismatches (for example, 0.03 HKD) can still make a closing/opening block unbalanced; use the affected bank account's running balance to diagnose the precise adjustment.
 
 ### Validation Skill
 

@@ -42,14 +42,15 @@ The `python -m check` script runs hledger `--strict` mode checking:
 
 ## Common Errors & Fixes
 
-| Error                    | Fix                               |
-| ------------------------ | --------------------------------- |
-| Account not defined      | Add to `preludes/self.journal`    |
-| Balance mismatch         | Fix transaction or prior balances |
-| Transaction not balanced | Add missing postings              |
-| Payee not defined        | Add to `preludes/self.journal`    |
-| Tag not defined          | Add to `preludes/self.journal`    |
-| Date out of order        | Correct date or reorder           |
+| Error                          | Fix                                                                                                |
+| ------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Account not defined            | Add to `preludes/self.journal`                                                                     |
+| Balance mismatch               | Fix transaction or prior balances                                                                  |
+| Transaction not balanced       | Add missing postings                                                                               |
+| Payee not defined              | Add to `preludes/self.journal`                                                                     |
+| Tag not defined                | Add to `preludes/self.journal`                                                                     |
+| Date out of order              | Correct date or reorder                                                                            |
+| Small closing/opening mismatch | Compare the affected account running balance and adjust the matched opening/closing equity posting |
 
 ## Format Validation
 
@@ -79,6 +80,7 @@ hledger -f ledger/index.journal register "assets:cash"
 - Format before validation
 - Fix errors immediately
 - Keep preludes clean
+- When fixing month-end balances, validate the corrected month and the following month together
 - Always run `python -m check` before committing
 
 ## Lessons Learned
