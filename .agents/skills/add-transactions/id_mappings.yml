@@ -192,7 +192,7 @@
     - [receipt_id, call_number, table_number]
     - [receipt_id, table_number]
   regex:
-    receipt_id: "(?:\\d{3}-\\d{4}|\\d{12})"
+    receipt_id: "(?:\\d{3}-)?\\d{4}"
     call_number: "\\d{4}"
     table_number: "[0-9A-Z]{2,4}"
 

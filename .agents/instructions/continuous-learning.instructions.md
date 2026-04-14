@@ -24,6 +24,7 @@ This file consolidates lessons, anti-patterns, and continuous improvements disco
 - **When using Python directly, set `cwd=scripts/`** in tool parameters
 - **For `hledger close --migrate`, run from repo root**
 - When creating temporary journals for diagnosis, put the temp file in the same journal directory or run hledger from that directory so relative `include` paths resolve correctly.
+- When running multi-line Python or shell diagnostics, be mindful of the current shell. Avoid Bash-style heredoc syntax such as `python - <<'PY'` in PowerShell and prefer `python -c` or a temp script file instead.
 
 **Examples of wrong vs. right:**
 

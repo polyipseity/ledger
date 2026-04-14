@@ -24,8 +24,8 @@ description: Development workflows, utility scripts, code patterns, and testing/
   Note: When listing multiple commands for the same glob in `lint-staged`, provide them as an array so each command is executed with the staged file list appended.
 
   **Formatting policy change:** This repository uses **Ruff** as the single authority for Python formatting and import sorting (Ruff provides Black-compatible formatting and import ordering features). **Black** and **isort** are intentionally **not used**; do not add them to dependencies or workflow steps. Use `uv run --locked ruff format` and `uv run --locked ruff check --fix` for formatting and import sorting.
-- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
-- For `hledger close --migrate`, run from the repository root as well.
+- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.- Be mindful of shell syntax differences. In PowerShell, avoid Bash-style command patterns such as `cd /d ...` and heredoc blocks like `python - <<'PY'`; prefer `Set-Location` or using a temporary Python script file for multi-line diagnostics.
+- When creating temporary diagnostic journals, place them adjacent to the original monthly journal so relative `include` statements resolve correctly.- For `hledger close --migrate`, run from the repository root as well.
 
 **Critical:** Always use the bun script wrapper if it exists. Only fall back to direct invocation or script wrappers if no bun script is available. Always double-check the working directory before running any script command.
 
