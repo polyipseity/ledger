@@ -13,8 +13,7 @@ This file contains rules, clarifications, and examples specific to food and rest
 - Normalize food/drink items and modifiers (see below for rules)
 - Use `food_or_drink:` tag in posting comments for each item
 - Within a `food_or_drink:` tag, do not escape quotation marks; write `"` directly and **avoid comma characters** (replace them with semicolons) to prevent accidental splitting into multiple tags.
-- Preserve the language of the original receipt item names; do not translate English names into Chinese (or vice versa) unless the mapping file explicitly requires it.
-- When the same item is listed in multiple languages on the receipt (for example, `Hot Chocolate (熱朱古力)` or `熱朱古力 (Hot Chocolate)`), prefer the English name in the journal. If no English appears, keep the first language shown.
+- **Food tag language consistency:** Preserve the language of the original receipt item names; do not translate English names into Chinese (or vice versa) unless the mapping file explicitly requires it. When the same item is listed in multiple languages on the receipt (for example, `Hot Chocolate (熱朱古力)` or `熱朱古力 (Hot Chocolate)`), prefer the English name in the journal. If no English appears, keep the first language shown on the receipt. Validated examples: Saizeriya 2026-04-15 preserves Italian-style dish names exactly as printed (意式野菜焗蛋, A香蒜辣汁野菌西蘭花); American Diner 2026-04-17 preserves Chinese dish codes with names (G.鮮蘑菇炒蛋). Do not apply translation mappings without explicit user approval in the transaction.
 - Use English translations from food_translations.yml only after user approval
 - Split items and modifiers as per the rules below
 - Do not invent new tags; only use those declared in the prelude
@@ -42,6 +41,7 @@ This file contains rules, clarifications, and examples specific to food and rest
   - If the receipt does not show a complimentary item, do not add one.
   - **Important:** only record a zero‑priced drink if it is explicitly listed on that receipt; do not assume every Cafe 100% breakfast includes coffee. Verify each transaction individually.
 - Items that cost $0 and describe the transaction type (e.g., "dine-in", "take-away") should be omitted entirely.
+- **Zero-priced itemization consistency:** When a receipt itemizes multiple zero-priced components (e.g., toppings, modifiers, garnishes, complimentary sides bundled with a base meal), record each component as a separate posting line with its own `food_or_drink:` tag. This preserves receipt structure fidelity and enables accurate audit trails. Example: TamJai SamGor breakfast combo on 2026-04-16 itemizes as 1 × 33.00 HKD base meal posting followed by 3 × 0.00 HKD postings for each named modifier (黑糖, 紅豆, 芋圓), each with its own `food_or_drink:` tag. The total still balances (33.00), but each component is explicitly logged.
 
 ### Modifiers vs Items
 
@@ -79,7 +79,10 @@ Result: food_or_drink: 冰蜜檸檬綠茶 + 去冰 + 7分甜
 - Payee/IDs/item code normalization: Prefer canonical payee names, clarify ambiguous names, and use UUIDs for confidentiality if mapped. **Always check `private.yaml` for a UUID mapping and use the UUID as the payee if present.**
 - If the receipt header includes multiple IDs (for example `000-964096, 36` at Saizeriya or `374369, K459` at American Diner), preserve both identifiers in the journal header in the order defined by `id_mappings.yml`.
 - Timezone: All transactions that include a time must also include an explicit `timezone:` (e.g., `timezone: UTC+08:00`). This helps compute durations reliably and keeps entries consistent across journals.
-- Duration calculation: If both start and end times are present (for example, an order/printed time and a settlement/transaction time displayed on the receipt), compute an ISO-8601 duration and add it as a `duration:` tag on the transaction header (e.g., `duration: PT34M19S`). Use the receipt's timestamps and the explicit `timezone:` when computing durations.
+- **Duration calculation precision:** If both start and end times are present (for example, an order/printed time and a settlement/transaction time displayed on the receipt), compute an ISO-8601 duration and add it as a `duration:` tag on the transaction header (e.g., `duration: PT34M19S`). Use the receipt's timestamps and the explicit `timezone:` when computing durations. Duration represents the time elapsed from order placement to payment settlement, not total "dwell time" in the venue. Examples from 2026-04-15–2026-04-18 batch:
+  - 2026-04-16 TamJai SamGor: Order time 10:27:01, checkout ~11:03:53 = `duration: PT36M52S` (36 minutes 52 seconds)
+  - 2026-04-18 Saizeriya: Order time 12:27:18, checkout ~12:57:56 = `duration: PT30M38S` (30 minutes 38 seconds)
+  - These durations validate that calculated values are precise to the second and consistent with receipt timestamps.
   - If the receipt shows a later “end/settlement” time separate from the printed/ordered time, use that later time as the end point when calculating duration.
 - Modifier detection: If a sequence of `food_or_drink:` tags contains a base item followed by modifiers (for example: `奶茶`, then `多奶`), combine them using `+` into a single tag: `food_or_drink: 奶茶 + 多奶`. Do not leave modifiers as standalone tags.
 

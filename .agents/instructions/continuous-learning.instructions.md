@@ -155,6 +155,15 @@ bun run format
 **Saizeriya & American Diner (2026-04-08):**
 
 - Receipt header ID conventions now in `id_mappings.yml`; update mapping when adding new payee receipts
+- Saizeriya QR-order metadata lines should not be recorded.
+
+**Food transaction pattern validation (2026-04-18):**
+
+- **Zero-priced itemization consistency:** TamJai SamGor (04-16) and American Diner (04-17) validated pattern: each bundled meal component gets its own posting line + `food_or_drink:` tag, even if zero-priced. Saizeriya entries (04-15, 04-18) show simple two-line structure (2 paid items + 1 payment). Consistency rule: preserve receipt structure exactly—do not collapse or group postings beyond what's printed. See `food_transactions.md` for detailed rule.
+- **Duration precision:** TamJai (04-16) PT36M52S (order 10:27:01 → checkout ~11:03:53) and Saizeriya (04-18) PT30M38S (order 12:27:18 → checkout ~12:57:56) validate second-level precision. Always calculate from receipt timestamps + explicit UTC+08:00 timezone tag. Format as ISO-8601 `duration:` in transaction header. See `food_transactions.md` for rule.
+- **Shared expense equity vs. liability:** HKUST ramen (04-17) demonstrates immediate same-day split: itemizes dining + drinks postings, then adds single `equity:friends:4491140b-7e34-48fe-8e3d-aca591ed6d6e` posting with -50.50 HKD (negative = friend's share offset). Contrast with deferred reimbursements (2026-04-04 DZô DZô on credit): use `liabilities:credit cards:` + pending `!` marker + settlement assertion. See `lending_borrowing_transactions.md` for distinction rule.
+- **Food tag language preservation:** Saizeriya entries preserve Italian-style names (意式野菜烤蛋, A香蒜辣汁野菌西蘭花), American Diner preserves Chinese + dish-code (G.鮮蘑菇炒蛋). No translation without approval. See `food_transactions.md` for rule.
+- **ID mapping compliance:** All 5 entries follow `id_mappings.yml` ordering: Saizeriya (receipt_id, table_number), American Diner (receipt_id, kiosk_code), TamJai (receipt_id, table_id). No new mappings required; existing rules applied correctly across multiple transactions. Validates established patterns are working at scale.
 
 **Sushiro shared bill splitting (2026-04-07):**
 

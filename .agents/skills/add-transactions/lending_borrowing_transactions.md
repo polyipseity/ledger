@@ -24,11 +24,32 @@ Repayments must update status of related pending transactions. Use liability ass
 
 ### Shared Expense and Repayment Pattern
 
-For group meals or shared expenses paid by a friend, follow the shared expense and repayment pattern:
+For group meals or shared expenses, the pattern depends on whether the expense is settled **immediately** (same-day split with friends present) or **deferred** (you paid first, repayment pending):
 
-- In the original transaction, itemize all expenses, add `equity:friends:<uuid>` lines for each friend's share, negative expense lines for others' shares, and a `liabilities:loans:friends:<uuid>` line for the total paid by the friend (with balance assertion).
+#### Immediate Same-Day Split (Use `equity:friends:`)
+
+If the expense is split on the spot among friends who are co-diners and settlement is immediate:
+
+- In the original transaction, itemize all expenses, add `equity:friends:<uuid>` lines with **negative amounts** for each friend's share (representing their equity in the shared meal).
+- This is NOT a loan; the friends' shares are recorded as offsets to the expense.
+- The payee is the venue (e.g., restaurant name or UUID), not the friend.
+- Use `equity:friends:<uuid>` only for immediate splits where ownership/cost is clarified at the time of transaction.
+- Example: 2026-04-17 HKUST ramen venue transaction with friend UUID `4491140b-7e34-48fe-8e3d-aca591ed6d6e`: itemizes 36.50 + 10.00 + 4.00 HKD across dining and drinks accounts, then adds a single `equity:friends:4491140b-7e34-48fe-8e3d-aca591ed6d6e` posting with -50.50 HKD (their entire share). This balances the transaction and clarifies that half the expense belongs to the friend by agreement at the time.
+
+#### Deferred Settlement or Reimbursement (Use `liabilities:` and Status Markers)
+
+If the expense is paid by you but repayment is deferred or you expect reimbursement:
+
+- In the original transaction, itemize all expenses and add a `liabilities:` posting (e.g., `liabilities:loans:friends:<uuid>` or `liabilities:credit cards:` if credit was extended).
+- Mark the original transaction as pending (`!`) if repayment is outstanding.
 - When repaying, add a transaction debiting your asset and crediting the liability, asserting the balance to zero.
 - Use placeholders for new friends without UUIDs and update later.
+- Example: 2026-04-04 DZô DZô shared meal: if you paid on credit and a friend owes you reimbursement, use `liabilities:credit cards:` and mark as pending (`!`) until repaid.
+
+**Key Distinction:**
+
+- `equity:friends:` = immediate same-day split, no loan involved, friends present, cost clarified at transaction time
+- `liabilities:` = deferred settlement, reimbursement expected or pending, possibly on credit, tracked with status markers
 
 See editing-guidelines and add-transactions SKILL.md for full details and rationale.
 

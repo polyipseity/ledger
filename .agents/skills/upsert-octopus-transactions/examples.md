@@ -44,11 +44,11 @@ Use these non-confidential, canonical worked examples when performing Pass 1 (up
       expenses:transport:buses                                                 8.80 HKD
       assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -8.80 HKD
 - Example (vending-machine mapping → Swire): Octopus row 2026-02-09 20:09 amount 4.00 `太古可口可樂`.
-  - Action: Map merchant name to `Swire` in `payee_mappings.yml` and add a simple consumption posting.
+  - Action: Map merchant name to `Swire` in `payee_mappings.yml` and add a small beverage posting with `activity: eating, eating: drinks`.
 
   Worked posting example:
 
-  2026-02-09 Swire  ; activity: consumption, time: 20:09, timezone: UTC+08:00
+  2026-02-09 Swire  ; activity: eating, eating: drinks, time: 20:09, timezone: UTC+08:00
       expenses:food and drinks:drinks                                         4.00 HKD
       assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -4.00 HKD
 

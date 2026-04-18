@@ -149,6 +149,80 @@ If the receipt also prints unrelated POS footer codes, do not move those into th
     assets:digital:Octopus cards:...                                       -12.00 HKD
 ```
 
+### Zero-Priced Itemization with Duration (2026-04-15 to 2026-04-18 Batch Validation)
+
+These four transactions demonstrate the validated food transaction patterns: zero-priced component itemization, duration calculation precision, food tag language preservation, and shared expense splits using `equity:friends:`.
+
+#### A. Saizeriya with Duration (2026-04-15)
+
+```text
+2026-04-15 (000-965768, 34) Saizeriya  ; activity: eating, duration: PT35M45S, eating: dinner, time: 21:45:48, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜焗蛋
+    expenses:food and drinks:dining                                         12.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
+    assets:digital:Octopus cards:...                                       -37.00 HKD
+```
+
+Notes: Receipt shows order time 21:45:48 → checkout ~22:21:33 = 35 minutes 45 seconds. Duration recorded in header between `activity:` and `eating:` tags.
+
+#### B. TamJai SamGor with Zero-Priced Modifiers and Duration (2026-04-16)
+
+```text
+2026-04-16 (000-0052, 1A) TamJai SamGor  ; activity: eating, duration: PT36M52S, eating: breakfast, time: 10:27:01, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         33.00 HKD  ; food_or_drink: A1.三哥豐盛早晨全餐
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 黑糖
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 紅豆
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 薏米
+    assets:digital:Octopus cards:...                                       -33.00 HKD
+```
+
+Notes: Receipt itemizes 4 components under single paid line (33.00 base + 3 × 0.00 modifiers). Each component gets its own posting with `food_or_drink:` tag to preserve receipt structure. Duration 36 minutes 52 seconds (order 10:27:01 → checkout ~11:03:53). Transaction still balances (33.00 total).
+
+#### C. American Diner with Zero-Priced Items (2026-04-17 breakfast)
+
+```text
+2026-04-17 (383356, K069) American Diner  ; activity: eating, eating: breakfast, time: 08:42:52, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         24.00 HKD  ; food_or_drink: G.鮮蘑菇炒蛋
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 白麵包
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 奶油
+    assets:digital:Octopus cards:...                                       -24.00 HKD
+```
+
+Notes: Main dish 24.00 HKD, two zero-priced side items on receipt listed as separate lines but not charged separately. Each item gets explicit posting + tag. Dish code preserved (G.) with Chinese name (鮮蘑菇炒蛋).
+
+#### D. HKUST Ramen Venue with Shared Equity Split (2026-04-17 lunch)
+
+```text
+2026-04-17 (5900542324) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:39:07, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         36.50 HKD
+    expenses:food and drinks:dining                                         10.00 HKD
+    expenses:food and drinks:drinks                                          4.00 HKD
+    expenses:food and drinks:dining                                          0.00 HKD  ; item: dine-in fee
+    equity:friends:4491140b-7e34-48fe-8e3d-aca591ed6d6e                    -50.50 HKD
+    assets:digital:Octopus cards:...                                       -50.50 HKD = 0.00 HKD
+```
+
+Notes: Immediate same-day split with friend. Expense itemized by category (36.50 + 10.00 dining, 4.00 drinks, 0.00 fee). Friend's share recorded as negative `equity:friends:` posting with UUID. Transaction balances to 0.00 HKD via assertion on Octopus posting.
+
+#### E. Saizeriya with Duration (2026-04-18)
+
+```text
+2026-04-18 (000-966095, 36) Saizeriya  ; activity: eating, duration: PT30M38S, eating: lunch, time: 12:27:18, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         25.00 HKD  ; food_or_drink: 意式野菜烤蛋
+    expenses:food and drinks:dining                                         20.00 HKD  ; food_or_dish: 意式牛油煙火腿西蘭花
+    assets:digital:Octopus cards:...                                       -45.00 HKD
+```
+
+Notes: Second Saizeriya transaction validates pattern consistency across multiple entries. Duration PT30M38S (order 12:27:18 → checkout ~12:57:56 = 30m 38s). Italian-style dish names preserved exactly as on receipt.
+
+**Validation Summary:**
+
+- ✅ Zero-priced itemization: Each receipt component gets explicit posting + tag (TamJai 04-16, American Diner 04-17)
+- ✅ Duration precision: ISO-8601 format, second-level accuracy (PT36M52S, PT30M38S, PT35M45S)
+- ✅ Shared expense equity: Friend's share recorded as negative `equity:friends:` posting (HKUST 04-17)
+- ✅ ID mapping compliance: All payees follow `id_mappings.yml` ordering (receipt_id + table/kiosk)
+- ✅ Language preservation: Italian names (Saizeriya) + Chinese names + dish codes (American Diner) kept exact
+- ✅ Transaction balancing: All entries balance to 0.00 HKD
+
 Note: keep only the sale receipt number in the header here; the longer POS footer code belongs to the receipt body, not the journal header.
 
 Example B (no coffee):

@@ -68,6 +68,7 @@ Only in pass 2, transcribe or prepare journal transactions for any Octopus trans
 
 1. For each Octopus transaction that was not matched in Pass 1:
    - **Must check the payee mapping file for the merchant name.** If missing, ambiguous, or one-to-many and context is insufficient, ask the user for the correct mapping and update the file before proceeding.
+   - For small beverage or vending-machine merchants such as `太古可口可樂` and `自動販賣機`, map to `Swire` and use `expenses:food and drinks:drinks`. These 3-5 HKD beverage transactions are easy to miss, so treat them as a separate review category during Pass 2.
    - For confidential payees, after mapping, check `private.yaml` for a UUID and use it in the journal. Never expose confidential names.
    - Add a new journal transaction using the mapping. **Note:** Insert transactions in strict chronological order; see `.agents/instructions/transaction-format.instructions.md`.
       - For vending machine transactions (e.g., Swire), use `expenses:food and drinks:drinks` as the expense account.

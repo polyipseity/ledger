@@ -83,7 +83,7 @@ If anything is unclear about these steps, ask a short clarifying question before
 
 Agent Skills (`.agents/skills/`):
 
-- [add-transactions](.agents/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication.
+- [add-transactions](.agents/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication. For multi-entry requests (2+ transactions), uses a separate subagent per transaction to enable parallelization and focused scope.
 - [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/SKILL.md) – Add or update Octopus card transactions from app history, including transport and reloads, with proper mapping.
 - [match-octopus-statement-transactions](.agents/skills/match-octopus-statement-transactions/SKILL.md) – Match Octopus Wallet statement rows to journal transactions and update transaction datetimes for accuracy.
 - [monthly-migration](.agents/skills/monthly-migration/SKILL.md) – Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
@@ -148,7 +148,7 @@ Note: `bun install` triggers the `prepare` script which runs `uv sync` to instal
 Skills:
 
 - [add-payee](.agents/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
-- [add-transactions](.agents/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. Includes a general framework for specialized transaction import and automation.
+- [add-transactions](.agents/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. For multi-entry requests (2+ transactions), delegates each entry to a separate subagent for parallelizable processing.
 - [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/): Upsert (add or update) Octopus card transactions from app history, including transport and reloads, and update durations.
 - [monthly-migration](.agents/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
 - [edit-journals](.agents/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.

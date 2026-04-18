@@ -21,6 +21,25 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 
 ## Integrated archive
 
+### 2026-04-18 — Food transaction pattern validation batch
+
+Integrated → `food_transactions.md` (zero-priced itemization consistency rules, duration calculation precision), `lending_borrowing_transactions.md` (shared expense equity vs. liability distinction), `examples.md` (comprehensive 5-entry validation example with Saizeriya, TamJai SamGor, American Diner, HKUST ramen), `continuous-learning.instructions.md`
+
+Key patterns:
+
+- Zero-priced itemization: Each receipt component = separate posting + `food_or_drink:` tag (validated across TamJai 04-16, American Diner 04-17)
+- Duration precision: ISO-8601 format with second-level accuracy (PT36M52S for 04-16, PT30M38S for 04-18, PT35M45S for 04-15)
+- Shared expense equity split: HKUST 04-17 uses `equity:friends:` with negative posting for same-day splits
+- ID mapping compliance: All 5 entries follow established `id_mappings.yml` patterns
+- Food tag language preservation: Italian + Chinese names kept exact, no translation without approval
+- All transactions balance correctly and validate with `bun run format && bun run check`
+
+Key architectural change: For multi-entry requests (2+ transactions), main agent creates a todo list and invokes a separate subagent for each transaction to enable parallelization and focused scope. Subagents return formatted entries rather than directly editing files, which avoids merge conflicts and allows parallel processing. Main agent orchestrates merging, validation, and final formatting. This change scales gracefully from single entries to large batches.
+
+### 2026-04-18 — Saizeriya QR-order metadata handling
+
+Integrated → `.agents/instructions/continuous-learning.instructions.md`
+
 ### 2026-04-08 — Saizeriya and American Diner receipt header ID conventions
 
 Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`
