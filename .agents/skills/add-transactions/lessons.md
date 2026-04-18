@@ -52,22 +52,8 @@ Integrated → `examples.md`, `continuous-learning.instructions.md`
 
 Integrated → `food_transactions.md`, `examples.md`, `id_mappings.yml`
 
-### 2026-02-24 — Complimentary coffee, 配-prefix splitting, and ordering discipline
+### 2026-02-24 — Food formatting, Octopus matching, and payee/ID integration
 
-Integrated → `food_transactions.md`, `examples.md`, `SKILL.md`
+Integrated → `food_transactions.md`, `examples.md`, `SKILL.md`, `match-octopus-statement-transactions/SKILL.md`, `upsert-octopus-transactions/lessons.md`, `specialized_transaction_import.md`, `id_mappings.yml`, `payee_mappings.yml`
 
-### 2026-02-22 — Octopus/eDDA statement matching refinements
-
-Integrated → `match-octopus-statement-transactions/SKILL.md`, `upsert-octopus-transactions/lessons.md`, `specialized_transaction_import.md`
-
-### 2026-02-20 — Itemization clarification and zero-priced drink posting
-
-Integrated → `food_transactions.md`, `examples.md`, `payee_mappings.yml`
-
-### 2026-02-19 — Payee/ID fixes and metadata cleanup
-
-Integrated → `SKILL.md`, `id_mappings.yml`, `payee_mappings.yml`, `specialized_transaction_import.md`
-
-### 2026-02-19 — Gifts/red-packet example expansion
-
-Integrated → `examples.md`
+Covers: complimentary coffee & 配-prefix splitting, Octopus/eDDA statement matching refinements, itemization clarification, zero-priced drink posting, payee/ID fixes, and gifts/red-packet examples.
