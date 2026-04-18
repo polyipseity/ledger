@@ -5,7 +5,7 @@ build-backend = "uv_build"
 [project]
 name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a"
 version = "0.0.0"
-requires-python = ">=3.12.0"
+requires-python = ">=3.14.0"
 description = "Personal ledger tooling"
 license = {file = "LICENSE.txt"}
 readme = "README.md"
