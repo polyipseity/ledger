@@ -97,7 +97,7 @@ uv sync
 
 ### Type checking
 
-**Why:** Fast editor and CI feedback for Python types. This repository uses **Pyright** for static type checking and **Ruff** for linting/formatting (Ruff is the single tool used for Python linting, formatting, and import-sorting; neither Black nor isort are used here). Run locally with `bun run check:py` (this runs Pyright alongside Ruff); CI runs the Python linters (`bun run check:py`).
+**Why:** Fast editor and CI feedback for Python types. This repository uses **ty** for static type checking and **Ruff** for linting/formatting (Ruff is the single tool used for Python linting, formatting, and import-sorting; neither Black nor isort are used here). Run locally with `bun run check:py` (this runs ty alongside Ruff); CI runs the Python linters (`bun run check:py`).
 
 ### PowerShell (for Windows users)
 

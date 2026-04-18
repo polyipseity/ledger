@@ -133,7 +133,7 @@ When writing a new script or updating an existing one:
 - [ ] Add docstrings to `main()` and `__main__()`
 - [ ] Use appropriate exit codes (0, 1, 2, 3)
 - [ ] Test by importing `main()` directly; do not trigger the guard
-- [ ] Run `pyright`, `ruff check`, and `pytest` locally before committing
+- [ ] Run `ty check`, `ruff check`, and `pytest` locally before committing
 
 ## Examples
 
