@@ -47,15 +47,10 @@ def _sort_props(line: str) -> str:
     formatted_parts: list[str] = []
     for part in _group_props(cmt.split(",")):
         if isinstance(part, str):
-            formatted_parts.append(part.strip())
+            formatted_parts.append(part)
             continue
         # part is a list[tuple[str,str]] - sort by key then join
-        formatted_parts.append(
-            ", ".join(
-                ": ".join(prop)
-                for prop in sorted(tuple(cmp.strip() for cmp in grp) for grp in part)
-            )
-        )
+        formatted_parts.append(", ".join(": ".join(prop) for prop in sorted(part)))
 
     return f"{code}  ; {', '.join(formatted_parts)}"
 
@@ -70,14 +65,14 @@ def _group_props(sections: Iterable[str]) -> Iterable[str | Sequence[tuple[str, 
     """
     ret: list[tuple[str, str]] = []
     for section in sections:
-        sec = tuple(section.split(":", 1))
+        sec = section.split(":", 1)
         if len(sec) == 2:
-            ret.append(sec)
+            ret.append((sec[0].strip(), sec[1].strip()))
             continue
         if ret:
             yield ret
             ret = []
-        yield sec[0]
+        yield sec[0].strip()
     if ret:
         yield ret
 

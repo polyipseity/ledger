@@ -471,7 +471,7 @@ class JournalRunContext:
         This property provides a convenient, read-only view over the internal
         ``_reported`` set preserving a stable ordering for display purposes.
         """
-        return sorted(self._reported, key=fspath)
+        return sorted(self._reported, key=lambda p: fspath(p))
 
     async def __aexit__(
         self, exc_type: type | None, exc: BaseException | None, tb: object | None
@@ -502,7 +502,7 @@ class JournalRunContext:
             # and update per-file last_success for reported and skipped files.
             if exc_type is None:
                 # Record hashes and per-file last_success for files we processed
-                for j in sorted(self._reported, key=fspath):
+                for j in sorted(self._reported, key=lambda p: fspath(p)):
                     try:
                         h = await journal_hash(j)
                     except FileNotFoundError:
@@ -511,7 +511,7 @@ class JournalRunContext:
                     entry.files[fspath(j)] = FileEntryModel(hash=h, last_success=now)
 
                 # Skipped files are treated as successful as well; update their last_success
-                for j in sorted(self.skipped, key=fspath):
+                for j in sorted(self.skipped, key=lambda p: fspath(p)):
                     files = entry.files
                     f_entry = files.get(fspath(j))
                     if isinstance(f_entry, FileEntryModel):

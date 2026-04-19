@@ -100,7 +100,7 @@ async def test_run_module_helper_runs_and_handles_close_exception(
     await mod_path.write_text("""import asyncer
 asyncer.runnify(lambda: None)()
 """)
-    monkeypatch.syspath_prepend(tmp_path)  # type: ignore[reportUnknownMemberType]
+    monkeypatch.syspath_prepend(tmp_path)
 
     ran = run_module_helper("mod_run_close", ["mod_run_close"])
     assert ran["ran"] is True
@@ -120,7 +120,7 @@ p.write_text(' '.join(sys.argv))
 asyncer.runnify(lambda: None)()
 """)
 
-    monkeypatch.syspath_prepend(tmp_path)  # type: ignore[reportUnknownMemberType]
+    monkeypatch.syspath_prepend(tmp_path)
 
     ran = run_module_helper("mod_run_args", ["mod_run_args", "A", "B"])
     assert ran["ran"] is True

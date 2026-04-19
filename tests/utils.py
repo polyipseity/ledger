@@ -14,7 +14,7 @@ import runpy
 import sys
 from abc import ABC, abstractmethod
 from collections.abc import Callable
-from os import PathLike
+from os import PathLike, fspath
 from typing import Any, Literal, Protocol, Self, overload
 
 import asyncer
@@ -287,7 +287,7 @@ def async_file_factory() -> AsyncFileFactory:
         if kind == "disk":
             if not isinstance(arg, PathLike):
                 raise TypeError("disk factory requires a os.PathLike")
-            return DiskAsyncFilePath(arg)
+            return DiskAsyncFilePath(fspath(arg))
         if kind == "memory":
             if not isinstance(arg, str):
                 raise TypeError("memory factory requires initial text")

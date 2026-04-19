@@ -119,6 +119,7 @@ async def main(args: Arguments) -> None:
                                 bool(_OPENING_BALANCES_REGEX.search(line)),
                                 bool(_CLOSING_BALANCES_REGEX.search(line)),
                             )
+                        match = None
                         if (
                             datetime_ is None
                             or not from_filter(datetime_)
