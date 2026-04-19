@@ -576,6 +576,23 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                         20.00 HKD  ; food_or_drink: A香蒜辣汁野菌西蘭花
     assets:digital:Octopus cards:1608ef20-afcd-4cd0-9631-2c7b15437521      -45.00 HKD
 
+2026-04-18 (000-0221, 4A) TamJai SamGor  ; activity: eating, duration: PT37M16S, eating: dinner, time: 15:35:34, timezone: UTC+08:00
+    expenses:food and drinks:dining                                     33.00 HKD  ; food_or_drink: F.三哥港式特餐
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 番茄湯滑牛肉通粉
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 炒蛋
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 熱阿華田 + 走攪棍
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093      -33.00 HKD
+
+2026-04-19 (000-0041, 13A) TamJai SamGor  ; activity: eating, duration: PT1H21M29S, eating: breakfast, time: 09:43:10, timezone: UTC+08:00
+    expenses:food and drinks:dining                                     33.00 HKD  ; food_or_drink: A2.脆皮雞扒醒晨早餐
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: A2雞扒早餐
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 烘底牛油多士
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 脆皮雞扒
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 火腿豆腐雞湯米線 + 米線爽
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶 + 走攪棍
+    expenses:food and drinks:dining                                    -30.00 HKD  ; food_or_drink: 電子印花卡禮施 $30 早餐電子現金券
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -3.00 HKD
+
 2026-04-25 ! (53152720326, ac413786-e691-4e04-ab89-e9f4405f6418) 72b80c1a-8d63-4409-ac13-b32d51a26e94  ; activity: service, duration: -P1M, time: 23:59:59, timezone: UTC+08:00
     expenses:services:internet                      149.00 HKD
     assets:deferred expenses:services:internet     -149.00 HKD = -0.30 HKD
