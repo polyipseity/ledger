@@ -122,21 +122,27 @@ async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) ->
 @given(st.text(max_size=200))
 async def test_file_update_if_changed_with_random_text(s: str) -> None:
     """Property-based async test: file updater handles random text values using a real tempfile."""
+
+    def normalize(t: str) -> str:
+        """Normalize all newline variants (\r\n, \r) to a single LF (\n)."""
+        return t.replace("\r\n", "\n").replace("\r", "\n")
+
     async with TemporaryDirectory() as td:
         p = Path(td) / "f.journal"
         # write without newline translation so the file contains exactly `s`
         async with await p.open("w", encoding="UTF-8", newline="") as f:
             await f.write(s)
 
+        # The updater runs on normalized content (file uses newline="" internally)
         changed = await files.file_update_if_changed(p, lambda text: text[::-1])
         assert isinstance(changed, bool)
         if changed:
-            # Normalize newlines to avoid platform-specific CR/LF issues
-            def normalize(t: str) -> str:
-                """Normalize newlines to a single LF for cross-platform comparisons."""
-                return t.replace("\r\n", "\n").replace("\r", "\n")
-
-            assert normalize(await p.read_text()) == normalize(s[::-1])
+            # 1. Read the result (uses universal newlines by default)
+            actual = await p.read_text(encoding="UTF-8")
+            # 2. Normalize original input BEFORE reversing for expected result
+            expected = normalize(s)[::-1]
+            # 3. Compare normalized forms
+            assert normalize(actual) == normalize(expected)
 
 
 # Property test: updater semantics
