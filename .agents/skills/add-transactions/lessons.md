@@ -21,6 +21,10 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 
 ## Integrated archive
 
+- 2026-04-19 — TamJai SamGor voucher discount pattern: separate negative expense posting for receipt-printed voucher usage, plus final credit-card liability payment.
+
+Integrated → `food_transactions.md`, `examples.md`, `SKILL.md`
+
 ### 2026-04-18 — Food transaction pattern validation batch
 
 Integrated → `food_transactions.md` (zero-priced itemization consistency rules, duration calculation precision), `lending_borrowing_transactions.md` (shared expense equity vs. liability distinction), `examples.md` (comprehensive 5-entry validation example with Saizeriya, TamJai SamGor, American Diner, HKUST ramen), `continuous-learning.instructions.md`

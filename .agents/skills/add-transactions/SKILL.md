@@ -329,7 +329,7 @@ Consolidated cross-theme reminders (key rules discovered through use):
 
 - Use the most specific account and contextually correct tags (`activity:`, `eating:`, etc.), and keep tag order/format aligned with `.agents/instructions/transaction-format.instructions.md`.
 - Always resolve payee + identifiers via `private.yaml` (UUIDs), `payee_mappings.yml` (name normalization), and `id_mappings.yml` (identifier order/regex).
-- For food entries: modifiers must be inline in `food_or_drink:` values, routine discounts should be reflected in item prices (not separate negative discount postings), and ordering-method descriptors are metadata (not posting lines).
+- For food entries: modifiers must be inline in `food_or_drink:` values, routine price reductions should be reflected in item amounts, and explicit receipt-printed voucher or cash-card discounts should be recorded as a separate negative expense posting with a `food_or_drink:` comment. Ordering-method descriptors are metadata (not posting lines).
 - If start/end timestamps are both present, add `duration:` and update existing entries rather than creating duplicates for end-time rows.
 - Never use Octopus eDDA debtor-reference tokens for matching or mapping; match with FRN/transfer ids + timestamp + amount.
 - Keep journals strictly chronological and fix structural issues (misplaced transactions, duplicate includes) before finishing.
@@ -338,6 +338,7 @@ Consolidated cross-theme reminders (key rules discovered through use):
 
 **Recent lessons (integrated into canonical files, see continuous-learning for details):**
 
+- 2026-04-19 — TamJai SamGor voucher discount pattern: separate negative expense posting for receipt-printed voucher usage, plus final credit-card liability payment.
 - 2026-04-08 — Saizeriya & American Diner receipt header ID conventions → `food_transactions.md`, `examples.md`, `id_mappings.yml`
 - 2026-03-10 — Tag formatting & language consistency → `food_transactions.md`, `examples.md`
 - 2026-02-24 — Complimentary items & modifier splitting → `food_transactions.md`, `examples.md`, `SKILL.md`

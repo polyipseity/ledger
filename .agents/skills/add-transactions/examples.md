@@ -177,7 +177,24 @@ Notes: Receipt shows order time 21:45:48 → checkout ~22:21:33 = 35 minutes 45 
 
 Notes: Receipt itemizes 4 components under single paid line (33.00 base + 3 × 0.00 modifiers). Each component gets its own posting with `food_or_drink:` tag to preserve receipt structure. Duration 36 minutes 52 seconds (order 10:27:01 → checkout ~11:03:53). Transaction still balances (33.00 total).
 
-#### C. American Diner with Zero-Priced Items (2026-04-17 breakfast)
+#### C. TamJai SamGor with Receipt-Printed Voucher Discount (2026-04-19)
+
+```text
+2026-04-19 (000-0041, 13A) TamJai SamGor  ; activity: eating, duration: PT1H21M29S, eating: breakfast, time: 09:43:10, timezone: UTC+08:00
+    expenses:food and drinks:dining                                         33.00 HKD  ; food_or_drink: A2.脆皮雞扒/醒晨早餐
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: A2雞扒小早餐
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 烘底牛油多士
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 腿反雞扒小
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 火腿豆腐雞湯米線
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 米線爽
+    expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶 + 走攪棍
+    expenses:food and drinks:dining                                        -30.00 HKD  ; food_or_drink: 電子印花卡禮施 $30 早餐電子現金券
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093            -3.00 HKD
+```
+
+Notes: When a receipt prints a separate voucher or e-coupon discount line, record it as a negative expense posting and preserve the final payment as a separate credit-card liability posting.
+
+#### D. American Diner with Zero-Priced Items (2026-04-17 breakfast)
 
 ```text
 2026-04-17 (383356, K069) American Diner  ; activity: eating, eating: breakfast, time: 08:42:52, timezone: UTC+08:00
@@ -189,7 +206,7 @@ Notes: Receipt itemizes 4 components under single paid line (33.00 base + 3 × 0
 
 Notes: Main dish 24.00 HKD, two zero-priced side items on receipt listed as separate lines but not charged separately. Each item gets explicit posting + tag. Dish code preserved (G.) with Chinese name (鮮蘑菇炒蛋).
 
-#### D. HKUST Ramen Venue with Shared Equity Split (2026-04-17 lunch)
+#### E. HKUST Ramen Venue with Shared Equity Split (2026-04-17 lunch)
 
 ```text
 2026-04-17 (5900542324) 20b484a5-3c01-42f3-875c-e95509b3de22  ; activity: eating, eating: lunch, time: 12:39:07, timezone: UTC+08:00
@@ -203,7 +220,7 @@ Notes: Main dish 24.00 HKD, two zero-priced side items on receipt listed as sepa
 
 Notes: Immediate same-day split with friend. Expense itemized by category (36.50 + 10.00 dining, 4.00 drinks, 0.00 fee). Friend's share recorded as negative `equity:friends:` posting with UUID. Transaction balances to 0.00 HKD via assertion on Octopus posting.
 
-#### E. Saizeriya with Duration (2026-04-18)
+#### F. Saizeriya with Duration (2026-04-18)
 
 ```text
 2026-04-18 (000-966095, 36) Saizeriya  ; activity: eating, duration: PT30M38S, eating: lunch, time: 12:27:18, timezone: UTC+08:00
