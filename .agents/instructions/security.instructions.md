@@ -7,8 +7,6 @@ applyTo: "private.yaml*"
 
 # Security Practices
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
-
 Guidance for handling confidential data in this personal accounting system.
 
 ## private.yaml File Management
@@ -41,16 +39,8 @@ This separation allows journals to remain readable and shareable (with UUIDs as 
 After editing `private.yaml` locally:
 
 ```powershell
-python -m encrypt
-```
-
-**Tip:** For a short checklist of encryption/decryption commands and quick troubleshooting, see `.agents/instructions/agent-quickstart.instructions.md`.
-
-Or use the equivalent script:
-
-```powershell
-.\scripts\encrypt.sh       # Linux/macOS
 .\scripts\encrypt.bat      # Windows
+.\scripts\encrypt.sh       # Linux/macOS
 ```
 
 **What happens:**
@@ -71,14 +61,8 @@ Or use the equivalent script:
 To edit confidential mappings:
 
 ```powershell
-python -m decrypt
-```
-
-Or use the equivalent script:
-
-```powershell
-.\scripts\decrypt.sh       # Linux/macOS
 .\scripts\decrypt.bat      # Windows
+.\scripts\decrypt.sh       # Linux/macOS
 ```
 
 **What happens:**
@@ -98,14 +82,14 @@ Or use the equivalent script:
 
 ```powershell
 # 1. Decrypt to edit
-python -m decrypt
+.\scripts\decrypt.bat      # Windows (or .\scripts\decrypt.sh)
 # [Prompted for password]
 
 # 2. Edit private.yaml with your editor
 # [Add new UUID mappings or update existing ones]
 
 # 3. Encrypt immediately after editing
-python -m encrypt
+.\scripts\encrypt.bat      # Windows (or .\scripts\encrypt.sh)
 
 # 4. Verify encrypted version
 ls -la private.yaml*       # Should show both files
@@ -199,14 +183,14 @@ If you lose the GPG private key or password:
 
 ### Encryption Errors
 
-If `python -m encrypt` fails:
+If `.\scripts\encrypt.bat` fails:
 
 1. Verify GPG is installed: `gpg --version`
 2. Check public key exists: `gpg --list-keys`
 3. Verify file permissions: `ls -la private.yaml`
 4. Check disk space
 
-If `python -m decrypt` fails:
+If `.\scripts\decrypt.bat` fails:
 
 1. Verify GPG is installed: `gpg --version`
 2. Check private key exists: `gpg --list-secret-keys`

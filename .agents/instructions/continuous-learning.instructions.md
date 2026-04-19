@@ -266,34 +266,3 @@ Stop and ask the user in these situations:
 7. **Missing reload source** (e.g., no bank email) — ask for clarification
 8. **Unknown food/drink items** in dining transaction — ask for item details
 9. **Any ambiguity in date, amount, payee, or posting** — ask; never guess
-
----
-
-## 📋 Continuous Improvement Process
-
-### Adding New Lessons
-
-1. **Discover a pattern** (through use or bug fix)
-2. **Document it here** as a dated bullet under the relevant workflow section
-3. **Integrate into canonical file** (SKILL.md, theme file, examples.md, or mapping YAML)
-4. **Replace lesson with pointer** (e.g., "Archived → See examples.md#section-name")
-5. **Keep this file concise** (single-screen target)
-
-### Pruning Outdated Patterns
-
-- Review lessons quarterly or when the system has stabilized
-- Move confirmed best practices into `SKILL.md` main sections
-- Remove lessons that are no longer relevant
-- Update examples with edge cases discovered
-
----
-
-## Related Documentation
-
-- [Agent Quick Start](./agent-quickstart.instructions.md) — Checklist for getting started
-- [add-transactions skill](../skills/add-transactions/SKILL.md) + lessons.md — Food, lending, specialized imports
-- [upsert-octopus-transactions skill](../skills/upsert-octopus-transactions/SKILL.md) + lessons.md — Two-pass workflow, duration rules
-- [edit-journals skill](../skills/edit-journals/SKILL.md) + lessons.md — Editing best practices
-- [Transaction Format](./transaction-format.instructions.md) — Canonical transaction structure & tags
-- [Editing Guidelines](./editing-guidelines.instructions.md) — Account/payee ordering, chronological rules
-- [Security](./security.instructions.md) — Confidential data handling

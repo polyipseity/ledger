@@ -5,53 +5,19 @@ description: Practical task guides for frequently performed operations including
 
 # Common Workflows
 
-**Note:** See `AGENTS.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
-
 - Asynchronous helper code should use AnyIO/Asyncer; do not import `asyncio` directly.
 
-Frequently performed operations organized into Agent Skills:
-
-## Adding Transactions
-
-**Skill:** [add-transactions](../skills/add-transactions/)
-
-Transcribe transactions from receipts, bank statements, OCR text with proper status markers and tagging.
-
-## Upserting Octopus Transactions
-
-**Skill:** [upsert-octopus-transactions](../skills/upsert-octopus-transactions/)
-
-Upsert (add or update) Octopus card transactions, duration metadata, and card reloads from app history.
-
-## Monthly Migration
-
-**Skill:** [monthly-migration](../skills/monthly-migration/)
-
-Close previous month and initialize new month with proper balance assertions.
-
-## Script Usage
-
-See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. Short: prefer `bun run <script>` from the repository root; if none exists, run Python scripts with `cwd=scripts/.`
+Skills for frequently performed operations are listed in `AGENTS.md`. See the relevant `SKILL.md` for each task.
 
 ## Pre-Commit Checklist (Husky + lint-staged)
 
-1. Format Markdown: `bun run markdownlint:fix` (optional: auto-fix)
+1. Format Markdown: `bun run markdownlint:fix`
 2. Format journals: `bun run format`
 3. Validate journals: `bun run check`
-4. Run tests: `bun run test` (Husky registers a `pre-push` hook that will run the test suite before pushing; run tests locally to avoid blocked pushes)
-5. If edited `private.yaml`: use `bun run encrypt` if available, otherwise `python -m scripts.encrypt` (set cwd)
+4. Run tests: `bun run test`
+5. If edited `private.yaml`: `bun run encrypt` (or `python -m scripts.encrypt` with `cwd=scripts/`)
 6. Review: `git status && git diff`
-7. Prepare hooks: `bun install` (registers Husky hooks via the `prepare` script; lint-staged is configured in `.lintstagedrc.mjs`). Note: `bun install` runs `prepare`, which runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. We removed `requirements.txt` to avoid duplication — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this will only install extras and will not add project packages to the environment.
-8. Commit: `git commit -S -m "chore: describe changes"`
+7. Install hooks: `bun install` (registers Husky hooks; runs `uv sync` for Python extras)
+8. Commit: `git commit -S -m "type(scope): message"`
 
-**Note:** When a `lint-staged` command needs the list of staged file paths (for example, formatting only staged files), prefer invoking the underlying command directly so the file list is forwarded (for example: `python -m scripts.format`). See `.agents/instructions/developer-workflows.instructions.md` for the canonical guidance.
-
-## Related Documentation
-
-- [add-transactions](../skills/add-transactions/) - Add transactions from raw data
-- [upsert-octopus-transactions](../skills/upsert-octopus-transactions/) - Upsert Octopus card transactions
-- [monthly-migration](../skills/monthly-migration/) - Monthly journal migration
-- [edit-journals](../skills/edit-journals/) - Edit journals with best practices
-- [validate-journals](../skills/validate-journals/) - Validate and format journals
-- [Developer Workflows](./developer-workflows.instructions.md) - Script patterns and Python conventions
-- [Continuous Learning & Common Pitfalls](./continuous-learning.instructions.md) - Lessons learned across all workflows
+**lint-staged note:** When a lint-staged command needs staged file paths, invoke the underlying command directly (e.g. `python -m scripts.format`) rather than `bun run format`, so file args are forwarded. See `developer-workflows.instructions.md` for details.

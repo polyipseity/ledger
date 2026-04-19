@@ -7,8 +7,6 @@ applyTo: "**/*.journal"
 
 # Editing Guidelines
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
-
 ## Account and Payee Directive Ordering
 
 When adding or editing `account` or `payee` directives in any journal or prelude file, always ensure that all such directives are listed in strict lexicographical (ASCII/Unicode) order. This applies to both new insertions and corrections of existing out-of-order lines. If a new directive is added, it must be inserted at the correct position to maintain this order. If any out-of-order lines are found, they must be moved to restore proper ordering as part of the edit.
@@ -39,12 +37,6 @@ See [edit-journals](../skills/edit-journals/) skill for complete guidance.
 - **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.agents/instructions/transaction-format.instructions.md` for the canonical rules.
 - **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.agents/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
 - When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
-
-### Testing ⚙️
-
-- When you modify scripts, instruction files, or any behaviour, add or update unit tests under `tests/` and ensure they pass locally via `bun run test`.
-- Tests should be written using `pytest` and follow existing patterns (use `pytest.mark.anyio` for async tests when needed). Prefer annotating filesystem fixtures as `tmp_path: PathLike[str]` in test signatures; convert `tmp_path` to `pathlib.Path` only when `Path` methods are required (for example `p = Path(tmp_path)`). When converting any path-like object to a `str` in tests or code, **always** use `os.fspath(path_like)` rather than `str(path_like)` so the filesystem path protocol is correctly honoured. Include edge cases and validation paths for instruction changes so any regressions are caught in CI.
-- CI and Husky `pre-push` will run the full test suite; ensure tests are reliable and fast where possible to avoid blocked pushes.
 
 ### Shared Expense and Repayment Pattern
 
@@ -80,12 +72,3 @@ Below are the most critical patterns specific to journal editing:
 - Unencrypted confidential files (encrypt before commit)
 - **Out-of-order transactions:** Never insert or leave transactions out of chronological order (by date, then by time). This is a critical error and must be corrected immediately.
 - Declaring payees anywhere except a `preludes/*.journal` file (never add `payee` lines to monthly or yearly journals). Adding payees out of lexicographical order, or failing to correct existing order mistakes.
-
-## Related Documentation
-
-- [edit-journals](../skills/edit-journals/) - Complete journal editing guidance
-- [add-transactions](../skills/add-transactions/) - Adding transactions from raw data
-- [validate-journals](../skills/validate-journals/) - Validation and formatting
-- [Transaction Format Conventions](./transaction-format.instructions.md) - Transaction structure
-- [Account Hierarchy](./account-hierarchy.instructions.md) - All available accounts
-- [Continuous Learning & Common Pitfalls](./continuous-learning.instructions.md) - Lessons learned and anti-patterns

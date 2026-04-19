@@ -5,10 +5,6 @@ description: "Match Octopus Wallet statement rows to journal transactions and up
 
 # Match Octopus Statement Transactions
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
-
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
-
 ## Purpose
 
 Locate each entry in a monthly Octopus Wallet statement and, where a unique match exists in the repository journals, update only the transaction's datetime metadata. Record unmatched rows in the summary.

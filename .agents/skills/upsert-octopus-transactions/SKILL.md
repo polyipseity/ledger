@@ -5,8 +5,6 @@ description: Strict, step-by-step workflow for upserting Octopus card transactio
 
 # Upsert Octopus Transactions Skill
 
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise command checklist.
-
 ## 🚩 Absolute Rules for Agents
 
 **You must follow every step below, in order, with no exceptions.**

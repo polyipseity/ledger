@@ -7,8 +7,6 @@ applyTo: "**/*.journal"
 
 # Transaction Format Conventions
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
-
 ## Payee and ID Mapping
 
 When transcribing a transaction:

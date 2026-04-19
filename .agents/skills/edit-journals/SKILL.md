@@ -7,9 +7,7 @@ description: Edit hledger journal files following best practices and conventions
 
 # Edit Journals Skill
 
-**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for workflow rules and a concise checklist.
-
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`).
 
 This skill provides comprehensive guidance for editing hledger journal files while maintaining consistency, validity, and adherence to project conventions.
 
@@ -70,19 +68,7 @@ include 2025-03/self.journal
 
 ### ❌ Do Not Commit Without Validation
 
-Always run `python -m check` before committing:
-
-```powershell
-# ❌ Bad: Direct commit
-git commit -m "Add transaction"
-
-# ✅ Good: Validate first
-python -m check
-python -m format
-git commit -m "Add transaction"
-```
-
-Invalid journals cause downstream problems.
+Always run `bun run format` then `bun run check` before committing. Invalid journals cause downstream problems.
 
 ### ❌ Do Not Use Inconsistent Formatting
 
@@ -137,7 +123,7 @@ tag activity
 
 ### ❌ Do Not Leave Unencrypted Confidential Files
 
-**Note:** Never commit unencrypted `private.yaml`. See `.agents/instructions/security.instructions.md` for the canonical encryption/decryption workflow and requirements.
+Never commit unencrypted `private.yaml`. See `security.instructions.md`.
 
 ### ❌ Do Not Remove Existing Accounts or Payees
 
@@ -170,33 +156,16 @@ Spaces break account parsing.
 
 ## Editing Workflow
 
-Recommended workflow for any journal edits:
-
 ```powershell
 # 1. Make edits to journal files
-# [Edit ledger/2025/2025-01/self.journal or other files]
-
-# 2. Format all journals
-python -m format
-
-# 3. Validate all journals
-python -m check
-
-# 4. If edited confidential data
-# [Decrypt, edit private.yaml, then...]
-python -m encrypt
-
-# 5. Review changes
-git status
-git diff
-
-# 6. Commit
-# Use `.agents/instructions/git-commits.instructions.md`. For ledger transaction commits use the ledger header and no body.
-git add .
-git commit -S -m "chore(edit): apply journal edits"
-
-# 7. Push
-git push
+# 2. Format
+bun run format
+# 3. Validate
+bun run check
+# 4. If edited private.yaml: bun run encrypt
+# 5. Review and commit
+git status && git diff
+git add . && git commit -S -m "ledger(self.journal): add N transaction(s)"
 ```
 
 ## Common Editing Tasks

@@ -7,11 +7,7 @@ description: Perform monthly journal migration using hledger close --migrate to 
 
 # Monthly Migration Skill
 
-**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` for workflow rules.
-
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and quick checklists; use the Todo List Tool for multi-step tasks.
-
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`).
 
 Guide for migrating journals at the start of each month.
 
@@ -66,23 +62,3 @@ For detailed examples and edge cases, see `.agents/instructions/developer-workfl
 cat ledger/2025/2025-12/self.journal | tail -50  # View closing
 cat ledger/2026/2026-01/self.journal | head -50  # View opening
 ```
-
-## Related Documentation
-
-- [Architecture](../../instructions/architecture.instructions.md) - Journal structure
-- [Common Workflows](../../instructions/common-workflows.instructions.md) - Other workflows
-- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices
-- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Lessons learned
-
-## Lessons Learned
-
-See `./lessons.md` for active learnings. For consolidated insights across all skills, see `.agents/instructions/continuous-learning.instructions.md`:
-
-Key patterns:
-
-- Always run migration for **both** `self.journal` and `self.alternatives.journal`
-- Ensure closing timestamps are 23:59:59 and opening timestamps are 00:00:00
-- Validate thoroughly before committing migration changes
-- Use todo list tool to track both journal migrations separately
-
-When new patterns emerge, document in `./lessons.md` and integrate into SKILL.md or examples.md.

@@ -6,8 +6,6 @@ description: Required software and tools that enable this accounting system, inc
 
 # Critical Dependencies
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
-
 Required software and tools that enable this accounting system.
 
 ## Required Software
@@ -33,13 +31,7 @@ Required software and tools that enable this accounting system.
 
 **What it is:** Programming language used for utility scripts.
 
-**Features used:**
-
-- **Modern syntax**: `match_args`, `kw_only`, `slots` in dataclasses
-- **Async/await**: Concurrent subprocess execution
-- **Type hints**: Full type annotations throughout. All code should be written and annotated so that Pylance configured with `typeCheckingMode: "strict"` produces no errors in CI or locally.
-- **No `Any`/`Unknown`**: Do **not** use `Any` or `Unknown` in type annotations. Use explicit types, small Protocols, or TypedDicts instead and document any temporary casts with a TODO to replace them with proper types.
-- **Docstrings**: All Python code (modules, classes, functions and tests) must include clear docstrings describing purpose and behaviour.
+**Features used:** Modern dataclass syntax (`match_args`, `kw_only`, `slots`), async/await for concurrent subprocess execution, full type annotations. See **Agent Code Conventions** in `AGENTS.md` for the complete coding conventions.
 
 **Installation:** Download from [python.org](https://python.org)
 
@@ -49,7 +41,7 @@ Required software and tools that enable this accounting system.
 
 ### anyio
 
-**What it is:** Async compatibility library for I/O operations.
+**What it is:** Async compatibility library providing `anyio.Path` for concurrent file I/O.
 
 **Installation:**
 
@@ -58,9 +50,7 @@ Required software and tools that enable this accounting system.
 uv sync
 ```
 
-**How it's used:** Provides async path objects (`anyio.Path`) for concurrent file I/O. For public APIs prefer `os.PathLike` and coerce `PathLike` to `anyio.Path` inside functions that perform async file operations. When a `PathLike` needs to be converted to a string, **always** use `os.fspath(path_like)` rather than calling `str(path_like)` directly; `os.fspath` is the canonical conversion that respects objects implementing the filesystem path protocol. Imports must be at module top-level; both `import ...` and `from ... import ...` forms are allowed at module top-level — prefer `from module import name` where practical (for example, `from os import fspath`) and never use inline/runtime imports.
-
-**Requirement in:** `pyproject.toml` (see `pyproject.toml` in the repository root)
+**Requirement in:** `pyproject.toml` (see repository root)
 
 ### GPG (GNU Privacy Guard)
 
@@ -97,7 +87,7 @@ uv sync
 
 ### Type checking
 
-**Why:** Fast editor and CI feedback for Python types. This repository uses **ty** for static type checking and **Ruff** for linting/formatting (Ruff is the single tool used for Python linting, formatting, and import-sorting; neither Black nor isort are used here). Run locally with `bun run check:py` (this runs ty alongside Ruff); CI runs the Python linters (`bun run check:py`).
+**Why:** Fast editor and CI feedback for Python types. Uses **ty** for type checking and **Ruff** for linting/formatting (neither Black nor isort). Run: `bun run check:py`.
 
 ### PowerShell (for Windows users)
 

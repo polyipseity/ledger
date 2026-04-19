@@ -5,8 +5,6 @@ description: Development workflows, utility scripts, code patterns, and testing/
 
 # Developer Workflows
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and use the Todo List Tool for multi-step tasks.
-
 ## Script Usage Policy
 
 **Always use bun script wrappers if available.**
@@ -70,24 +68,20 @@ Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals 
 
 ## Python Code Patterns
 
+Concrete script-specific patterns used in `scripts/`:
+
 - Frozen dataclasses: `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)`
 - Concurrency: `asyncio.BoundedSemaphore` limited to CPU count (or 4)
-- I/O: Accept `os.PathLike` for public API types; use `anyio.Path` or coerce `PathLike` to `anyio.Path` for internal async file operations (e.g., when using async `.open()` and other async path methods). When converting `PathLike` objects to `str` (for example, when passing paths to subprocesses or APIs that require plain strings), **always** use `os.fspath(path_like)` instead of `str(path_like)` so the filesystem path protocol is correctly honored. Imports must be at module top-level; both `import ...` and `from ... import ...` forms are allowed at module top-level — prefer `from module import name` where practical (for example, `from os import fspath`) and never use inline/runtime imports. This policy is enforced by Ruff's `import-outside-top-level` rule (PLC0415); run `bun run check:py` locally and in CI to validate.
-- Type hints & complete annotations: Use modern typing styles (PEP 585 / PEP 604). Complete type annotations are **MANDATORY** for all Python code, including function signatures and return types, public APIs, classes, dataclasses, and test functions (including their arguments and return types). Annotate local variables in tests and in complex functions where it improves clarity or static analysis. Use built-in generics (`dict`, `list`, `set`, `tuple`, `frozenset`) instead of `typing.Dict`, `typing.List`, etc. Import abstract base types from `collections.abc` (for example, `collections.abc.Awaitable`, `collections.abc.Iterable`, `collections.abc.Mapping`, `collections.abc.Sequence`, `collections.abc.Callable`) — do **not** import these ABC names from `typing`. Prefer `X | Y` for unions/optionals instead of `typing.Optional` when targeting supported Python versions.
-  - Strict typing compatibility: All new or edited code must be written and annotated so that **ty reports no diagnostics with strict settings (`[tool.ty.rules] all = "error"`)**. Strive for code that passes `ty` checks in CI and locally.
-  - No `Any`/`Unknown`: **Never** use `Any` or `Unknown` in type annotations. Instead, prefer explicit concrete types, small Protocols, TypedDicts, or `typing.cast` at call sites only if accompanied by an explanatory comment and a follow-up TODO to improve typing.
-- Docstrings: All Python modules, classes, functions, and tests MUST include clear module-level and object-level docstrings describing purpose, behaviour, and any non-obvious invariants or side effects. Tests must document their intent, expected preconditions and postconditions, and any non-standard fixtures. Ensure docstrings are concise and informative and include examples when the behaviour is not obvious.
-- Module exports: All Python modules in `scripts/` and all test modules/files MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) listing public symbols; use `()` if there are no exports. For test files, default to an empty tuple `()` since tests should not export public symbols. Do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`); import names normally and rely on `__all__` at the top of the module to make explicit which symbols are public.
 
-### Testing ✅
+All other code conventions (PathLike, type hints, docstrings, `__all__`, no `Any`, Ruff) are defined in **Agent Code Conventions** in `AGENTS.md`.
 
-- Tests are written using `pytest` and live in the `tests/` directory (files named `test_*.py`).
-- Test file layout: Create one test file per source file. Tests should mirror the source directory structure under `tests/` (for example, `tests/path/to/test_module.py` for `src/path/to/module.py`). Only split a source's tests into multiple files in very rare cases when a single test file would otherwise be excessively long.
-- Run the full test suite locally via `bun run test` (this invokes `uv run --locked pytest`). Use `bun run test:py` to run pytest directly if needed.
-- Include `pytest-asyncio` for async tests and `pytest-cov` for coverage reporting. Use `uv run --locked pytest --cov` to generate coverage output.
-- Async tests: When testing asynchronous code, always write tests as `async def` and decorate them with `@pytest.mark.anyio`; use `await` to run coroutines directly in the test body. Do **not** use event loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle under pytest and can conflict with pytest-asyncio’s event loop fixtures.
-- When changing scripts, instruction files, or validator behaviour, *add or update tests* that cover the change and ensure they pass locally before committing.
-- CI runs the test suite and Husky registers a `pre-push` hook that will run `bun run test` before pushing — run tests locally to avoid blocked pushes.
+### Testing
+
+- Run: `bun run test` (full suite) or `bun run test:py` (pytest only).
+- One test file per source file; mirror source structure under `tests/`.
+- Async tests: use `@pytest.mark.anyio` on `async def` test functions; never use `asyncio.run` or similar event-loop runners inside pytest.
+- Add or update tests whenever scripts, instructions, or validator behaviour change.
+- CI and Husky `pre-push` both run the test suite — run locally to avoid blocked pushes.
 
 ## Pre-Commit Validation (Husky + lint-staged)
 
@@ -98,18 +92,9 @@ bun run check         # Validate all journals and run all checks
 git commit -m "message"
 ```
 
-**Setup:** `prepare` now runs `uv sync` to install development extras declared in `pyproject.toml` using the project's `uv.lock`. In CI we run `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` as a single step to install Node and Python dependencies deterministically. We removed `requirements.txt` to avoid duplication: the canonical source of dependency metadata is `pyproject.toml` (use `uv sync` locally to reproduce the behaviour). Because `pyproject.toml` declares no installable packages, installing dev extras will not place project packages into the environment (it only installs extras).
-**Script commands: Always run from the `scripts/` directory**
+**Setup:** `bun install` runs `prepare`, which runs `uv sync` to install dev extras from `pyproject.toml`/`uv.lock`. CI uses `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev`. No `requirements.txt` — `pyproject.toml` is canonical.
 
-- For all Python scripts (e.g., `python -m check`, `python -m format`, `python -m depreciate`, `python -m shift`, `python -m replace`, `python -m encrypt`, `python -m decrypt`), **always set the working directory to `scripts/` using the tool's `cwd` parameter**. This applies to both direct Python invocations and all script wrappers (e.g., `./check`, `check.bat`, etc.).
-- **Never run scripts from the root directory or any other location.** Running from the wrong directory will cause include and file discovery errors.
-- Only use `cd` as a fallback if the tool does not support a working directory parameter. Never rely on the current directory being correct by default.
-
-**Critical:** If you run any script or wrapper from the wrong directory, you will encounter include errors, missing file errors, or incorrect results. Always double-check the working directory before running any script command.
-
-Validation checks:
-
-- accounts, assertions, autobalanced, balanced, commodities, ordereddates, parseable, payees, tags
+Validation checks run by `bun run check`: `accounts`, `assertions`, `autobalanced`, `balanced`, `commodities`, `ordereddates`, `parseable`, `payees`, `tags`.
 
 ## Commit Message Format
 

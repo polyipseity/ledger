@@ -8,8 +8,6 @@ applyTo: "**/*.py"
 
 This document establishes the convention for Python scripts and modules in the ledger project that expose entry points for direct execution. All scripts in `scripts/` and any `__main__.py` modules must follow this pattern.
 
-**Inheritance note:** This convention extends the parent repository's Python entry points convention (see `../../instructions/python-entry-points.instructions.md`). Local scripts follow the same `__main__ == "__main__"` pattern with Asyncer integration. Refer to the parent documentation for comprehensive guidance; this file provides ledger-specific context.
-
 ## Quick Pattern (Async)
 
 ```python

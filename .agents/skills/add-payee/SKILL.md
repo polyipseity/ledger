@@ -6,10 +6,6 @@ description: Add a new payee (merchant, person, organization, or UUID) to the co
 
 # Skill: Add Payee
 
-**Note:** See `AGENTS.md` and `.agents/instructions/agent-quickstart.instructions.md` for agent workflow rules and a concise checklist; use the Todo List Tool for multi-step tasks.
-
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
-
 **Payee directives must always be added to a `preludes/` journal file, never to monthly or yearly journals. If you encounter a strict payee error (e.g., 'payee ... has not been declared'), resolve it by adding the payee to the appropriate `preludes/` file as described below.**
 
 This skill describes how to add a new payee to the ledger system.
@@ -42,17 +38,5 @@ This skill describes how to add a new payee to the ledger system.
 ## Anti-Patterns
 
 - **Never add payees to monthly or yearly journals.** Always use a `preludes/` file.
-- Inserting payees out of order, or failing to correct existing order mistakes
-
-## Lessons Learned
-
-For consolidated lessons across all skills, see `.agents/instructions/continuous-learning.instructions.md`.
-
-Key pattern: Payees must **always** be kept in strict lexicographical (ASCII/Unicode) order. When adding or editing, scan the entire payee section and proactively correct any out-of-order entries. This prevents merge conflicts and ensures consistency.
-
-## Related Documentation
-
-- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md)
-- [Transaction Format Conventions](../../instructions/transaction-format.instructions.md)
-- [Architecture & File Organization](../../instructions/architecture.instructions.md)
-- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Lessons learned
+- Inserting payees out of order, or failing to correct existing order mistakes.
+- Payees must be in strict lexicographical (ASCII/Unicode) order. When adding, scan the entire payee section and correct any out-of-order entries proactively.

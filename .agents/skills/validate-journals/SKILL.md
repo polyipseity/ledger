@@ -5,9 +5,7 @@ description: Validate hledger journal files using check/format scripts. Includes
 
 # Validate Journals Skill
 
-**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`). See `AGENTS.md` for workflow rules.
-
-**Note:** See `.agents/instructions/developer-workflows.instructions.md` for canonical coding, testing, and formatting rules (type annotations, docstrings, `__all__`, test conventions). See `AGENTS.md` for agent workflow rules.
+**Note:** Use full path `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`).
 
 Validate journals to catch errors and ensure consistency before committing.
 
@@ -82,25 +80,3 @@ hledger -f ledger/index.journal register "assets:cash"
 - Keep preludes clean
 - When fixing month-end balances, validate the corrected month and the following month together
 - Always run `python -m check` before committing
-
-## Lessons Learned
-
-See `.agents/instructions/continuous-learning.instructions.md` for consolidated lessons and best practices. Key insight for this skill:
-
-**Format-then-check rule (2026-02-08):** Running `bun run format` before `bun run check` reduces validation failures by automatically fixing formatting issues. This reduces noise and makes debugging easier.
-
-**Common patterns:**
-
-- Missing prelude includes in monthly journals
-- Out-of-order transactions or accounts
-- Unbalanced postings
-- Missing timezone tags
-
-When patterns emerge, add to `./lessons.md` and integrate into SKILL.md main sections.
-
-## Related Documentation
-
-- [Developer Workflows](../../instructions/developer-workflows.instructions.md) - Script patterns
-- [Editing Guidelines](../../instructions/editing-guidelines.instructions.md) - Best practices
-- [Common Workflows](../../instructions/common-workflows.instructions.md) - Workflows overview
-- [Continuous Learning & Common Pitfalls](../../instructions/continuous-learning.instructions.md) - Consolidated lessons
