@@ -157,7 +157,7 @@ wheels = [
 [[package]]
 name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a"
 version = "0.0.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "anyio" },
     { name = "asyncer" },
