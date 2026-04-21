@@ -54,15 +54,16 @@
     cardno: "\\d{6}"
     tblno: "[0-9A-Z]{1,3}"
 "McDonald's":
+  # McDonald's receipts often include ORD #<order_no> and CSO #<csn>.
   orders:
     - [machine_txn, order_no, csn]
     - [order_no, csn]
     - [receipt_no, csn]
   regex:
     machine_txn: "[0-9A-Fa-f]{6}\\\\/\\\\d{1,5}"
-    order_no: "\\d{1,5}"
+    order_no: "(?:ORD\\s*#\\s*)?\\d{1,5}"
     receipt_no: "\\d{1,5}"
-    csn: "\\d{1,3}"
+    csn: "(?:CSO\\s*#\\s*)?\\d{1,3}"
 "Cafe 100%":
   orders:
     - [transaction_id, table_number]
