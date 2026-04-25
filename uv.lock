@@ -163,6 +163,10 @@ dependencies = [
     { name = "asyncer" },
     { name = "pydantic" },
     { name = "pydantic-yaml" },
+]
+
+[package.optional-dependencies]
+uvloop = [
     { name = "uvloop", marker = "sys_platform != 'win32'" },
     { name = "winloop", marker = "sys_platform == 'win32'" },
 ]
@@ -176,6 +180,9 @@ dev = [
     { name = "ruff" },
     { name = "ty" },
 ]
+uvloop = [
+    { name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a", extra = ["uvloop"] },
+]
 
 [package.metadata]
 requires-dist = [
@@ -183,9 +190,10 @@ requires-dist = [
     { name = "asyncer", specifier = ">=0.0.17" },
     { name = "pydantic", specifier = ">=2.12.0" },
     { name = "pydantic-yaml", specifier = ">=1.6.0" },
-    { name = "uvloop", marker = "sys_platform != 'win32'", specifier = ">=0.22.0" },
-    { name = "winloop", marker = "sys_platform == 'win32'", specifier = ">=0.5.0" },
+    { name = "uvloop", marker = "sys_platform != 'win32' and extra == 'uvloop'", specifier = ">=0.22.0" },
+    { name = "winloop", marker = "sys_platform == 'win32' and extra == 'uvloop'", specifier = ">=0.5.0" },
 ]
+provides-extras = ["uvloop"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -196,6 +204,7 @@ dev = [
     { name = "ruff", specifier = ">=0.15.0" },
     { name = "ty", specifier = ">=0.0.31" },
 ]
+uvloop = [{ name = "ledger-1d6d85b9-feff-49da-b257-90ad7359400a", extras = ["uvloop"] }]
 
 [[package]]
 name = "packaging"

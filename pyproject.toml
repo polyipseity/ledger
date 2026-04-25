@@ -14,6 +14,10 @@ dependencies = [
   "asyncer>=0.0.17",
   "pydantic>=2.12.0",
   "pydantic-yaml>=1.6.0",
+]
+
+[project.optional-dependencies]
+uvloop = [
   "uvloop>=0.22.0; platform_system != 'Windows'",
   "winloop>=0.5.0; platform_system == 'Windows'",
 ]
@@ -32,6 +36,7 @@ dev = [
   "ruff>=0.15.0",
   "ty>=0.0.31",
 ]
+uvloop = ["ledger-1d6d85b9-feff-49da-b257-90ad7359400a[uvloop]"]
 
 [tool.ty.environment]
 python-platform = "all"
@@ -68,6 +73,7 @@ line-length = 88
 extend-select = ["I", "PLC0415"]
 
 [tool.uv]
+default-groups = ["dev", "uvloop"]
 package = false
 required-version = ">=0.9.0,<0.11.0"
 
