@@ -194,7 +194,20 @@ Notes: Receipt itemizes 4 components under single paid line (33.00 base + 3 × 0
 
 Notes: When a receipt prints a separate voucher or e-coupon discount line, record it as a negative expense posting and preserve the final payment as a separate credit-card liability posting.
 
-#### D. American Diner with Zero-Priced Items (2026-04-17 breakfast)
+#### D. TamJai SamGor grouped zero-priced subitems (2026-04-22)
+
+```text
+2026-04-22 ! (3A, 000-0025) TamJai SamGor  ; activity: eating, eating: breakfast, time: 10:08:01, timezone: UTC+08:00
+    expenses:food and drinks:dining                                     33.00 HKD  ; food_or_drink: A4. 三哥醒晨早餐
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: A4醒晨早餐, food_or_drink: 炒蛋(大), food_or_drink: 烘底牛油多士(走牛油)
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 家鄉包米通粉
+    expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶 + 走攪棍
+    liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093      -33.00 HKD
+```
+
+Notes: When a receipt groups multiple zero-priced sub-items under a single base meal header, keep the grouping as one 0.00 HKD posting line with multiple `food_or_drink:` tags separated by commas. Use `+` syntax for modifiers tied to a drink.
+
+#### E. American Diner with Zero-Priced Items (2026-04-17 breakfast)
 
 ```text
 2026-04-17 (383356, K069) American Diner  ; activity: eating, eating: breakfast, time: 08:42:52, timezone: UTC+08:00

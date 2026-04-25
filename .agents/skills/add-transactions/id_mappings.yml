@@ -88,6 +88,13 @@
     receipt_id: "\\d{3}-\\d{6}"
     table_number: "\\d{1,3}"
 
+"台蔡滷肉飯":
+  orders:
+    - [receipt_id, table_number]
+  regex:
+    receipt_id: "C\\d+"
+    table_number: "C\\d+"
+
 "沖繩二段料理 (Antoshimo Cafe & Bakery)":
   orders:
     - [receipt_id, table_number]
@@ -200,7 +207,7 @@
     - [receipt_id, call_number, table_number]
     - [receipt_id, table_number]
   regex:
-    receipt_id: "(?:\\d{3}-)?\\d{4}"
+    receipt_id: "(?:(?:\\d{3}-)?\\d{4}|\\d{12})"
     call_number: "\\d{4}"
     table_number: "[0-9A-Z]{2,4}"
 
