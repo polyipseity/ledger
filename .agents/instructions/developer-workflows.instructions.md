@@ -92,7 +92,7 @@ bun run check         # Validate all journals and run all checks
 git commit -m "message"
 ```
 
-**Setup:** `bun install` runs `prepare`, which runs `uv sync` to install dev extras from `pyproject.toml`/`uv.lock`. CI uses `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev`. No `requirements.txt` — `pyproject.toml` is canonical.
+**Setup:** `bun install` runs `prepare`, which runs `uv sync` to install dev extras from `pyproject.toml`/`uv.lock`. CI uses `bun install --frozen-lockfile --ignore-scripts && uv sync --locked`. No `requirements.txt` — `pyproject.toml` is canonical.
 
 Validation checks run by `bun run check`: `accounts`, `assertions`, `autobalanced`, `balanced`, `commodities`, `ordereddates`, `parseable`, `payees`, `tags`.
 
