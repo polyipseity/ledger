@@ -188,7 +188,7 @@ Notes: Receipt itemizes 4 components under single paid line (33.00 base + 3 × 0
     expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 火腿豆腐雞湯米線
     expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 米線爽
     expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 熱咖啡 + 多奶 + 走攪棍
-    expenses:food and drinks:dining                                        -30.00 HKD  ; food_or_drink: 電子印花卡禮施 $30 早餐電子現金券
+    expenses:food and drinks:dining                                        -30.00 HKD  ; food_or_drink: [電子印花卡憧]赩 $30早餐電子現金券
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093            -3.00 HKD
 ```
 

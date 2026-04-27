@@ -126,9 +126,9 @@ Invoke "General Purpose" subagent with:
   - Current target journal content (so subagent can check for duplicates/ordering)
   - Transaction type classification (food, lending, currency, platform, etc.)
   - Explicit instruction: "Use the add-transactions skill (read `.agents/skills/add-transactions/SKILL.md` first)
-    to format this one transaction. Follow all theme files, mappings, and tag rules. 
+    to format this one transaction. Follow all theme files, mappings, and tag rules.
     You may read private.yaml and all mapping YAML files in the skill folder.
-    Return ONLY the formatted hledger transaction block (no file editing). 
+    Return ONLY the formatted hledger transaction block (no file editing).
     Validate that the entry is chronologically correct and doesn't duplicate existing items.
     Report any issues or ambiguities that need clarification."
   - References to relevant theme files for this transaction type
@@ -189,8 +189,8 @@ Main agent:
    - Reports validation status
 
 4. Main agent collects all results and marks todos as completed:
-   - Receipt A → "2024-01-05 * (Saizeriya | …) HKD X.XX [formatted entry]"
-   - Receipt B → "2024-01-08 * (Octopus | …) HKD Y.YY [formatted entry]"
+   - Receipt A → "2024-01-05 \* (Saizeriya | …) HKD X.XX [formatted entry]"
+   - Receipt B → "2024-01-08 \* (Octopus | …) HKD Y.YY [formatted entry]"
    - Edit 12345 → Updated entry with corrected date (2024-01-10)
 
 5. Main agent merges all entries:
@@ -329,6 +329,7 @@ For guidelines on integrating new lessons:
 Consolidated cross-theme reminders (key rules discovered through use):
 
 - Use the most specific account and contextually correct tags (`activity:`, `eating:`, etc.), and keep tag order/format aligned with `.agents/instructions/transaction-format.instructions.md`.
+- If a transaction uses `liabilities:credit cards:` for the payment posting, mark the purchase transaction pending with `!` to signal the outstanding liability to the issuer.
 - Always resolve payee + identifiers via `private.yaml` (UUIDs), `payee_mappings.yml` (name normalization), and `id_mappings.yml` (identifier order/regex).
 - For food entries: modifiers must be inline in `food_or_drink:` values, routine price reductions should be reflected in item amounts, and explicit receipt-printed voucher or cash-card discounts should be recorded as a separate negative expense posting with a `food_or_drink:` comment. Ordering-method descriptors are metadata (not posting lines).
 - If start/end timestamps are both present, add `duration:` and update existing entries rather than creating duplicates for end-time rows.

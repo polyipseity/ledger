@@ -4,7 +4,6 @@ description: Learn hledger transaction format, structure, tags, patterns, and fo
 applyTo: "**/*.journal"
 ---
 
-
 # Transaction Format Conventions
 
 ## Payee and ID Mapping
@@ -15,8 +14,8 @@ When transcribing a transaction:
 2. **If the merchant name or a similar entry is found in `private.yaml`, use the corresponding UUID as the payee.**
 3. **If not found, use the merchant name as the payee.**
 4. **For receipt/transaction identifiers:**
-    - Prepend all available identifiers (order number, receipt number, etc.) in parentheses at the start of the payee line.
-    - If an `id_mappings.yml` exists, follow its mapping for identifier formatting and order. If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
+   - Prepend all available identifiers (order number, receipt number, etc.) in parentheses at the start of the payee line.
+   - If an `id_mappings.yml` exists, follow its mapping for identifier formatting and order. If the payee is not in the mapping, update the mapping simultaneously when adding the entry.
 
 All payees (merchants, people, organizations, UUIDs) must be registered in the appropriate `preludes/*.journal` file using a line of the form:
 
@@ -41,6 +40,7 @@ YYYY-MM-DD [!|*] payee  ; activity: value, tag: value, timezone: UTC+08:00
   - `!` (exclamation) = pending/unclear
   - `*` (asterisk) = cleared/verified
   - None = normal transaction
+  - Use `!` for transactions that create a credit-card liability (`liabilities:credit cards:`), because these represent outstanding debt to the issuer until the liability is settled.
 - **Payee**: Name of merchant, person, or organization
 - **Comment tags**: Key-value pairs in format `tag: value`, semicolon-separated
 - **Posting lines**: Account and amount pairs, indented with spaces

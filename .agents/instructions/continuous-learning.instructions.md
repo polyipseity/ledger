@@ -68,7 +68,7 @@ bun run format
 **Variant commands** (use when specific subsets needed):
 
 - `bun run format:py` — Format Python only
-- `bun run format:md` — Format Markdown only  
+- `bun run format:md` — Format Markdown only
 - `bun run format:hledger` — Format journals only
 - `bun run check:py` — Validate Python types/linting only
 
@@ -91,12 +91,25 @@ bun run format
 
 ### Transaction Entry & Tagging
 
-| Anti-Pattern                                  | Symptom                                  | Fix                                                                                                     | Priority     |
-| --------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------ |
-| **Inconsistent decimal precision**            | Formatting/validation noise              | After `bun run format`: all amounts use 2 decimals (e.g., `50.00 HKD`)                                  | **HIGH**     |
-| **Missing or wrong status markers**           | Clarity issues; impacts lending tracking | Use `!` (pending) only for lending/borrowing; `*` (cleared) for verified; none for normal               | **MEDIUM**   |
-| **Duplicate transactions (same date+amount)** | Overstated balances; confusion           | In Pass 1 of upsert, match existing entries before adding new ones; check time within ±1.5 hrs          | **MEDIUM**   |
-| **Unencrypted `private.yaml` committed**      | Security breach                          | Always encrypt via `bun run encrypt` before commit; use `.agents/instructions/security.instructions.md` | **CRITICAL** |
+- **Inconsistent decimal precision**
+  - Symptom: Formatting/validation noise
+  - Fix: After `bun run format`: all amounts use 2 decimals (e.g., `50.00 HKD`)
+  - Priority: **HIGH**
+
+- **Missing or wrong status markers**
+  - Symptom: Clarity issues; impacts lending tracking
+  - Fix: Use `!` for credit-card liability purchases and other lending/borrowing originals; `*` for cleared verified debts; none for normal transactions
+  - Priority: **MEDIUM**
+
+- **Duplicate transactions (same date+amount)**
+  - Symptom: Overstated balances; confusion
+  - Fix: In Pass 1 of upsert, match existing entries before adding new ones; check time within ±1.5 hrs
+  - Priority: **MEDIUM**
+
+- **Unencrypted `private.yaml` committed**
+  - Symptom: Security breach
+  - Fix: Always encrypt via `bun run encrypt` before commit; use `.agents/instructions/security.instructions.md`
+  - Priority: **CRITICAL**
 
 ### Code & Documentation
 
@@ -151,6 +164,7 @@ bun run format
 
 - Genki Sushi entry: receipt/table pair ID format refined; always check `id_mappings.yml` for format rules
 - TamJai SamGor: base meal + modifier metadata (不要芽菜/不要韭菜/不要腐皮) must be explicit for all repeated combos
+- TamJai SamGor spelling: `砂砂` is frequently miswritten as `沙沙`; preserve the receipt spelling and use the canonical `砂砂` form in `food_or_drink:` tags when present
 
 **Saizeriya & American Diner (2026-04-08):**
 

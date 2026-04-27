@@ -41,6 +41,7 @@ If the expense is split on the spot among friends who are co-diners and settleme
 If the expense is paid by you but repayment is deferred or you expect reimbursement:
 
 - In the original transaction, itemize all expenses and add a `liabilities:` posting (e.g., `liabilities:loans:friends:<uuid>` or `liabilities:credit cards:` if credit was extended).
+- If the transaction uses `liabilities:credit cards:` for the payment posting, treat it as an outstanding credit obligation and mark the original transaction pending (`!`) until the liability is settled.
 - Mark the original transaction as pending (`!`) if repayment is outstanding.
 - When repaying, add a transaction debiting your asset and crediting the liability, asserting the balance to zero.
 - Use placeholders for new friends without UUIDs and update later.
