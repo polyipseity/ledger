@@ -47,6 +47,9 @@ elif (number of entries to add/edit) >= 2:
 - Use the Todo List Tool for all multi-step tasks and follow `AGENTS.md` workflow rules; see `.agents/instructions/agent-quickstart.instructions.md` for a concise command checklist.
 - Use canonical scripts for formatting/validation (`bun run format` then `bun run check`); see `.agents/instructions/developer-workflows.instructions.md`. These are run by the main agent after all subagents complete (not by subagents individually).
 - For food and restaurant receipts, preserve explicit printed itemization. Do not collapse a detailed receipt into a single subtotal posting when the receipt already shows individual item lines. Record each printed item or modifier with its own `food_or_drink:` comment, keep service charge as a separate `expenses:food and drinks:fees` posting, and keep the final payment posting separate.
+- When reading receipt images, OCR the text carefully and preserve the original printed characters exactly. Do not guess or normalize Chinese or other receipt text; use only the characters you can confirm from the image.
+- For credit-card-paid food and restaurant transactions, use the pending status marker `!` in the journal header.
+- When a receipt shows two different times, use the earlier time as the transaction `time:` and calculate `duration:` from the earlier time to the later time. Record both `time:` and `duration:` in the transaction header.
 - When adding tests for this skill, place them under a `tests_<hash>` subdirectory within the skill folder. The workspace `pyproject.toml` is already configured to discover any `.agents/skills/**/tests_*` directories, so new tests will run automatically during `bun run test`.
 - Update the theme/aspect files below when introducing new patterns—these are authoritative for type-specific rules.
 

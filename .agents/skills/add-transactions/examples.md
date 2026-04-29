@@ -164,6 +164,8 @@ These four transactions demonstrate the validated food transaction patterns: zer
 
 Notes: Receipt shows order time 21:45:48 → checkout ~22:21:33 = 35 minutes 45 seconds. Duration recorded in header between `activity:` and `eating:` tags.
 
+Notes: For receipts that print both an earlier order/start time and a later checkout time, use the earlier time for transaction `time:` and compute `duration:` from the earlier to later timestamp. For credit-card charges, mark the transaction pending with `!` in the header until the card payment is cleared.
+
 #### B. TamJai SamGor with Zero-Priced Modifiers and Duration (2026-04-16)
 
 ```text
