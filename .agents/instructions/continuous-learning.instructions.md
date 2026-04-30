@@ -164,6 +164,7 @@ bun run format
 
 - Genki Sushi entry: receipt/table pair ID format refined; always check `id_mappings.yml` for format rules
 - TamJai SamGor: base meal + modifier metadata (不要芽菜/不要韭菜/不要腐皮) must be explicit for all repeated combos
+- TamJai SamGor OCR errors: `蒟蒻麵` and `蜂巢豆腐` are commonly misread; preserve the exact printed characters and keep them as distinct item tags.
 - TamJai SamGor spelling: `砂砂` is frequently miswritten as `沙沙`; preserve the receipt spelling and use the canonical `砂砂` form in `food_or_drink:` tags when present
 
 **Saizeriya & American Diner (2026-04-08):**

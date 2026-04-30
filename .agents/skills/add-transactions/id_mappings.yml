@@ -70,6 +70,12 @@
   regex:
     transaction_id: "\\d{6,}"
     table_number: "\\d{1,3}"
+"Café de Coral":
+  orders:
+    - [receipt_id, table_number]
+  regex:
+    receipt_id: "\\d{6}"
+    table_number: "\\d{3}"
 "American Diner":
   orders:
     - [receipt_id, kiosk_code]

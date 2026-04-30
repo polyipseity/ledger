@@ -24,6 +24,7 @@ Use this file as a lightweight queue for unresolved learnings. The authoritative
 
 - 2026-04-19 — TamJai SamGor voucher discount pattern: separate negative expense posting for receipt-printed voucher usage, plus final credit-card liability payment.
 - 2026-04-25 — TamJai SamGor grouped zero-priced subitems: preserve the paid base meal line and record grouped zero-priced subitems on a single 0.00 HKD posting line with multiple `food_or_drink:` tags, using `+` only for drink modifiers.
+- 2026-05-01 — TamJai SamGor OCR itemization: `蒟蒻麵` and `蜂巢豆腐` are commonly misrecognized; preserve exact receipt text and record them as distinct `food_or_drink:` items.
 - 2026-04-25 — Sushiro receipts with explicit line-item pricing must preserve printed item lines as separate postings; do not use a generic subtotal posting when the receipt shows itemized menu costs and service charge.
 
 Integrated → `food_transactions.md`, `examples.md`, `SKILL.md`
