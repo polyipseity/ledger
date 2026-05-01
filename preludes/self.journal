@@ -182,7 +182,7 @@ account expenses:food and drinks:fruits                                         
 account expenses:food and drinks:snacks                                                           ; type: X
 account expenses:gaming                                                                           ; type: X
 account expenses:gaming:maimai                                                                    ; type: X
-account expenses:gifts                                                                            ; type: X  
+account expenses:gifts                                                                            ; type: X
 account expenses:gifts:friends                                                                    ; type: X
 account expenses:gifts:friends:56bddbcb-8229-4f8f-96d6-1d7d9ee09c9f                               ; type: X
 account expenses:gifts:friends:bfa32943-960d-4df1-9997-e2391f5551a1                               ; type: X
@@ -515,6 +515,7 @@ payee 一蘭 (Ichiran)
 payee 丸龜製麵
 payee 亞參雞飯 (Asam Chicken Rice)
 payee 何富記麵家
+payee 台蔡滷肉飯
 payee 同樂素食
 payee 嗦嗦 (DZô DZô)
 payee 城大食坊 (City Express)
