@@ -80,6 +80,7 @@ Use `= balance CURRENCY` on postings to assert the running balance after that po
 - **time**: Time of transaction in HH:MM or HH:MM:SS format
 - **timezone**: Always `UTC+08:00` (Hong Kong standard)
 - **duration**: ISO 8601 duration (e.g., `PT1H30M`)
+- **duration plausibility for meals**: For `activity: eating` transactions, omit `duration:` when the computed value is implausibly short for a meal (generally under about 1–2 minutes, default to omitting values `< PT2M`).
 - **item**: Specific item or product name
 - **food_or_drink**: Detailed food/beverage descriptions
 - **eating**: Meal type (breakfast, lunch, dinner, afternoon tea, snacks)

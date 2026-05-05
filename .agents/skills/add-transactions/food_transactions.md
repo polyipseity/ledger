@@ -30,6 +30,7 @@ This file contains rules, clarifications, and examples specific to food and rest
   - If the receipt uses `+` between what appears to be full menu items (especially in Chinese item names), treat those as separate items and reformat using commas instead of `+`.
   - A common Cafe 100% pattern shows a bundled set with several named components under one total amount; record each named component as a separate tag and use commas between them, reserving `+` only for true modifiers (ice level, sweetness, milk, etc.). See examples.md for a worked example.
   - TamJai SamGor receipts often include `蒟蒻麵` and `蜂巢豆腐`. These are frequently misread by OCR, so preserve the exact printed characters and record them as distinct `food_or_drink:` items rather than normalizing or merging them into the preceding line.
+- TamJai SamGor receipts may print `熱加啡` as an OCR artifact for `熱咖啡` (hot coffee). Always normalise this to `熱咖啡` since `加啡` is not a valid menu term and `熱咖啡` is the canonical item name used in all other journal entries.
 - Use `+` syntax only for modifiers (e.g. "hot coffee + more milk" → `food_or_drink: hot coffee + more milk`).
 - Remove parenthetical descriptors that are not part of the item name (e.g. "(辣)麥炸雞" → "麥炸雞").
 - Remove conjunction prefixes that are not part of the item name (e.g. "配朱古力" → "朱古力").
