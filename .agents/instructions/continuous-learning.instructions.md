@@ -166,6 +166,10 @@ bun run format
 - TamJai SamGor: base meal + modifier metadata (不要芽菜/不要韭菜/不要腐皮) must be explicit for all repeated combos
 - TamJai SamGor OCR errors: `蒟蒻麵` and `蜂巢豆腐` are commonly misread; preserve the exact printed characters and keep them as distinct item tags.
 - TamJai SamGor spelling: `砂砂` is frequently miswritten as `沙沙`; preserve the receipt spelling and use the canonical `砂砂` form in `food_or_drink:` tags when present
+- TamJai SamGor noodle OCR: `易通粉` is an OCR/transcription error for `湯通粉` (湯 = soup). Always use `湯通粉` when the receipt reads noodles in soup (e.g. `火腿忌廉雞蛋湯通粉`).
+- TamJai SamGor voucher label: Use `[電子印花卡憧]赩` (憧 + 赩), not `[電子印花卡憑証]旭` or other OCR variants. Match against existing journal entries to verify the canonical form.
+- Quantity notation: Use the Unicode multiplication sign `×` (U+00D7) with a digit, e.g. `火腿 ×2`, not `[x2]` or `x2`.
+- McDonald's mobile app orders use receipt ID format `DD-DDD-D` (e.g. `97-178-2`, `97-383-2`) — distinct from the regular `machine_txn/order_no/csn` formats. This is captured as `mobile_order_id` in `id_mappings.yml`.
 
 **Saizeriya & American Diner (2026-04-08):**
 
