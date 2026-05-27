@@ -169,20 +169,18 @@ def test_parse_period_invalid_raises() -> None:
 
 @pytest.mark.anyio
 async def test_run_hledger_missing(monkeypatch: pytest.MonkeyPatch) -> None:
-    """When the `hledger` executable is not found in PATH run_hledger should raise FileNotFoundError."""
+    """When hledger is not found anywhere, run_hledger should raise FileNotFoundError."""
 
-    def fake_which_none(prog: str) -> str | None:
-        """Return None to simulate `which` not finding the executable in PATH."""
-        return None
+    def fake_find_hledger() -> str:
+        """Simulate _find_hledger raising when no binary is available anywhere."""
+        raise FileNotFoundError(
+            "hledger executable not found in node_modules/.bin/ or PATH"
+        )
 
-    monkeypatch.setattr(journals, "which", fake_which_none)
-
-    async def run_it() -> None:
-        """Invoke run_hledger to exercise the missing-executable failure path."""
-        await journals.run_hledger("somefile", "print")
+    monkeypatch.setattr(journals, "_find_hledger", fake_find_hledger)
 
     with pytest.raises(FileNotFoundError):
-        await run_it()
+        await journals.run_hledger("somefile", "print")
 
 
 def test_format_journal_list_various() -> None:
@@ -289,11 +287,11 @@ async def test_run_hledger_handles_process_exit(
 
     monkeypatch.setattr(journals, "run_process", fake_run_process)
 
-    def fake_which(prog: str) -> str:
-        """Return a non-empty string to simulate an executable being found in PATH."""
+    def fake_find_hledger() -> str:
+        """Return a sentinel path to simulate a discovered hledger executable."""
         return "fake"
 
-    monkeypatch.setattr(journals, "which", fake_which)
+    monkeypatch.setattr(journals, "_find_hledger", fake_find_hledger)
 
     out, _err, _rc = await journals.run_hledger(
         "somefile", "print", raise_on_error=True

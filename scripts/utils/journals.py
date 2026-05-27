@@ -1,12 +1,14 @@
 """Journal discovery, date parsing and hledger subprocess helpers."""
 
 import logging
+import sys
 from calendar import monthrange
 from collections.abc import Callable, Iterable, Sequence
 from contextlib import suppress
 from datetime import datetime
 from glob import iglob
-from os import PathLike, cpu_count
+from os import PathLike, cpu_count, fspath
+from pathlib import Path as _StdPath
 from shutil import which
 from subprocess import DEVNULL, PIPE, CalledProcessError
 
@@ -314,6 +316,50 @@ def format_journal_list(
     return "\n".join(lines)
 
 
+def _managed_hledger_path() -> _StdPath:
+    """Return the filesystem path where the bun-managed hledger binary is installed.
+
+    The binary is placed at ``<repo_root>/node_modules/.bin/hledger[.exe]`` by
+    ``bun run hledger:install`` (``scripts/install-hledger.mjs``). This file
+    lives at ``scripts/utils/journals.py``, so the repo root is three ``parent``
+    steps up.
+    """
+    binary_name = "hledger.exe" if sys.platform == "win32" else "hledger"
+    return (
+        _StdPath(__file__).parent.parent.parent / "node_modules" / ".bin" / binary_name
+    )
+
+
+def _find_hledger() -> str:
+    """Locate the hledger executable, preferring the bun-managed project-local binary.
+
+    Search order:
+    1. ``<repo_root>/node_modules/.bin/hledger[.exe]`` — installed by
+       ``bun run hledger:install``.
+    2. Whatever ``shutil.which("hledger")`` finds on the system ``PATH``.
+
+    Returns
+    -------
+    str
+        Absolute path to the hledger executable as a ``str``.
+
+    Raises
+    ------
+    FileNotFoundError
+        If hledger is found neither in ``node_modules/.bin/`` nor on ``PATH``.
+    """
+    managed = _managed_hledger_path()
+    if managed.exists():
+        return fspath(managed)
+    found = which("hledger")
+    if found is None:
+        raise FileNotFoundError(
+            "hledger executable not found in node_modules/.bin/ or PATH; "
+            "run `bun run hledger:install` to install the managed binary"
+        )
+    return found
+
+
 async def run_hledger(
     journal: PathLike[str] | str,
     *args: str,
@@ -327,9 +373,7 @@ async def run_hledger(
     ``log_on_error`` is ``True`` both ``stdout`` and ``stderr`` are emitted
     to the module logger at ERROR level to aid diagnostics.
     """
-    hledger_prog = which("hledger")
-    if hledger_prog is None:
-        raise FileNotFoundError("hledger executable not found in PATH")
+    hledger_prog = _find_hledger()
 
     cli = (
         hledger_prog,
