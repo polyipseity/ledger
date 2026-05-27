@@ -79,7 +79,7 @@ Maintain consistent decimal and spacing:
 2025-01-19 Payment
     expenses:food                50 HKD      # Missing decimal
     assets:cash                  -50.0 HKD   # Only 1 decimal place
-    
+
 # ✅ Consistent (after python -m format)
 2025-01-19 Payment
     expenses:food                50.00 HKD

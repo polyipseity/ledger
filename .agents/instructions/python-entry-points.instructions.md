@@ -21,7 +21,7 @@ async def main(argv: list[str] | None = None) -> None:
     if argv is None:
         import sys
         argv = sys.argv[1:]
-    
+
     # application logic here
     pass
 
@@ -46,7 +46,7 @@ def main(argv: list[str] | None = None) -> None:
     if argv is None:
         import sys
         argv = sys.argv[1:]
-    
+
     # application logic here
     pass
 
@@ -100,10 +100,10 @@ if __name__ == "__main__":
 
    ```python
    """Validate journal structure and transaction formatting.
-   
+
    Usage:
        python -m scripts.validate --journal ledger/2024/2024-01/self.journal
-   
+
    Checks: date format, account hierarchy, amount consistency, etc.
    """
    ```
@@ -162,16 +162,16 @@ def main(argv: Sequence[str] | None = None) -> None:
     """Main entry point for validation."""
     if argv is None:
         argv = sys.argv[1:]
-    
+
     parser = argparse.ArgumentParser(description="Validate journal")
     parser.add_argument("--journal", required=True, help="Path to journal file")
     args = parser.parse_args(argv)
-    
+
     journal_path = Path(args.journal)
     if not journal_path.exists():
         print(f"Journal not found: {journal_path}", file=sys.stderr)
         return exit(3)
-    
+
     if validate_journal(journal_path):
         print("✓ Journal is valid")
         return exit(0)
@@ -219,16 +219,16 @@ async def main(argv: Sequence[str] | None = None) -> None:
     """Main async entry point."""
     if argv is None:
         argv = sys.argv[1:]
-    
+
     parser = argparse.ArgumentParser(description="Archive monthly transactions")
     parser.add_argument("--year", type=int, required=True)
     parser.add_argument("--month", type=int, required=True)
     args = parser.parse_args(argv)
-    
+
     if not (1 <= args.month <= 12):
         print(f"Invalid month: {args.month}", file=sys.stderr)
         return exit(2)
-    
+
     try:
         await process_monthly_archive(args.year, args.month)
         print(f"✓ Archived {args.year}-{args.month:02d}")

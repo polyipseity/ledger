@@ -118,7 +118,7 @@ hledger --version
 
 # Check Python
 python --version
-# Output: Python 3.11+ 
+# Output: Python 3.11+
 
 # Check anyio
 python -c "import anyio; print(anyio.__version__)"
