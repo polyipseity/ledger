@@ -20,16 +20,17 @@ argument-hint: Optional extras (e.g., ticket=ABC-123). To skip committing, pass 
    - Present the exact command to be run. If not executed, produce a best-effort commit message from available context and stop.
 
 2. **Compose commit message**
-   - Inspect Command 1 output and repository conventions (CONTRIBUTING.md, `.agents/`, `package.json`, `commitlint`, `.husky`, `CHANGELOG.md`, etc.).
-   - Produce a commit message with:
-     - Short subject (~50 chars)
-     - Optional body (each line **must be wrapped to 72 characters or fewer**; bullets allowed)
-     - Footer (BREAKING CHANGE / Refs / Ticket), including `${input:extra}` if provided
-   - **If the commit is rejected by commitlint due to line length or other formatting, rewrap and retry until the commit passes.**
-   - Prefer tooling-enforced rules. If unsure, default to Conventional Commits. **Strictly enforce commit header and body line length (72 chars max) as required by commitlint.**
-   - Do not show the proposed commit message to the user for confirmation before creating the commit. Proceed automatically to creating the commit using best-effort defaults and available context.
 
-3. **Create the commit**
+- Inspect Command 1 output and repository conventions (CONTRIBUTING.md, `.agents/`, `package.json`, `commitlint`, `prek.toml`, `CHANGELOG.md`, etc.).
+- Produce a commit message with:
+  - Short subject (~50 chars)
+  - Optional body (each line **must be wrapped to 72 characters or fewer**; bullets allowed)
+  - Footer (BREAKING CHANGE / Refs / Ticket), including `${input:extra}` if provided
+- **If the commit is rejected by commitlint due to line length or other formatting, rewrap and retry until the commit passes.**
+- Prefer tooling-enforced rules. If unsure, default to Conventional Commits. **Strictly enforce commit header and body line length (72 chars max) as required by commitlint.**
+- Do not show the proposed commit message to the user for confirmation before creating the commit. Proceed automatically to creating the commit using best-effort defaults and available context.
+
+1. **Create the commit**
    - If `${input:commitNow}` is `no`, skip this step and only present the message.
    - Otherwise, present the exact command to create the commit from stdin and print the new SHA. **Both commands must be run in the same shell command block to ensure correct context.** Use the correct heredoc/here-string syntax for the detected shell:
      - **PowerShell (Windows):**
@@ -57,7 +58,7 @@ argument-hint: Optional extras (e.g., ticket=ABC-123). To skip committing, pass 
 
    - If Command 2 fails due to quoting/heredoc syntax, retry up to 3 corrected forms. For other failures, report the error and do not modify the index.
 
-4. **Output**
+2. **Output**
    - 1–2 line summary: staged files and detected convention
    - Commit message block labelled `Commit message` (header/body/footer)
    - If Command 2 ran: `Commit result` with exit status and new commit SHA

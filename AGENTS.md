@@ -27,7 +27,7 @@ Personal accounting system using **hledger** (plain text accounting) to track fi
   - **Ledger journals** (`ledger/...`): hierarchical year/month journals. Monthly files contain transactions and include the prelude files.
   - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `bun` wrappers; if none exist run Python scripts with `cwd=scripts/.`
   - **Agent Skills** (`.agents/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
-  - **CI & hooks** (`.github/workflows/*`, Husky + lint-staged): run formatters, checks, and tests on push and pre-push.
+  - **CI & hooks** (`.github/workflows/*`, `prek.toml`): run formatters, checks, and tests on push and pre-push.
 
 - **Data flow**
   - Transaction entry → monthly journal → local validation/formatting (`bun run format` / `bun run check`) → PR and CI checks → commit/push
@@ -157,7 +157,7 @@ Skills:
 Instructions:
 
 - Security: [security.instructions.md](.agents/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- Husky + lint-staged: [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by Husky; run `bun install` to register hooks via the `prepare` script). The lint-staged configuration is stored in `.lintstagedrc.mjs`.
+- prek hooks: [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by `prek.toml`; run `bun install` to register hooks via the `prepare` script).
 
 ## VS Code Setup
 
@@ -165,7 +165,7 @@ Instructions:
 
 **Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`bun run markdownlint:fix`). Always format before commit.
 
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.agents/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — a Husky `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
+**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.agents/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — the `prek` `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
 
 **Todo List Tool Reminder:**
 
