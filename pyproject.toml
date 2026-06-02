@@ -12,14 +12,14 @@ readme = "README.md"
 dependencies = [
   "anyio>=4.12.0",
   "asyncer>=0.0.17",
-  "pydantic>=2.12.0",
+  "pydantic>=2.13.4",
   "pydantic-yaml>=1.6.0",
 ]
 
 [project.optional-dependencies]
 uvloop = [
   "uvloop>=0.22.0; platform_system != 'Windows'",
-  "winloop>=0.5.0; platform_system == 'Windows'",
+  "winloop>=0.6.3; platform_system == 'Windows'",
 ]
 
 [project.scripts]
@@ -29,12 +29,12 @@ repository = "https://github.com/polyipseity/ledger.git"
 
 [dependency-groups]
 dev = [
-  "hypothesis>=6.151.0",
+  "hypothesis>=6.154.1",
   "pytest>=9.0.3",
   "pytest-cov>=7.0.0",
   "pytest-xdist>=3.8.0",
-  "ruff>=0.15.0",
-  "ty>=0.0.31",
+  "ruff>=0.15.14",
+  "ty>=0.0.40",
 ]
 uvloop = ["ledger-1d6d85b9-feff-49da-b257-90ad7359400a[uvloop]"]
 
