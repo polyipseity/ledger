@@ -73,6 +73,8 @@ line-length = 88
 extend-select = ["I", "PLC0415"]
 
 [tool.uv]
+add-bounds = "exact"
+exclude-newer = "P5D"
 default-groups = ["dev", "uvloop"]
 package = false
 required-version = ">=0.11.0"

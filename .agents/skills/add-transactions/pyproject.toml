@@ -6,4 +6,7 @@ root = [".", "tests_61be1f7"]
 all = "error"
 
 [tool.uv]
+add-bounds = "exact"
+exclude-newer = "P5D"
 package = false
+required-version = ">=0.11.0"
