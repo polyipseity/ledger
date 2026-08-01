@@ -1,5 +1,5 @@
 [build-system]
-requires = ["uv_build>=0.11.0,<0.12"]
+requires = ["uv_build>=0.11.32,<0.12"]
 build-backend = "uv_build"
 
 [project]
@@ -10,7 +10,7 @@ description = "Personal ledger tooling"
 license = { file = "LICENSE.txt" }
 readme = "README.md"
 dependencies = [
-  "anyio>=4.14.1",
+  "anyio>=4.14.2",
   "asyncer>=0.0.18",
   "pydantic>=2.13.4",
   "pydantic-yaml>=1.7.0",
@@ -29,12 +29,12 @@ repository = "https://github.com/polyipseity/ledger.git"
 
 [dependency-groups]
 dev = [
-  "hypothesis>=6.155.7",
+  "hypothesis>=6.161.6",
   "pytest>=9.1.1",
   "pytest-cov>=7.0.0",
   "pytest-xdist>=3.8.0",
-  "ruff>=0.15.20",
-  "ty>=0.0.54",
+  "ruff>=0.16.0",
+  "ty>=0.0.63",
 ]
 uvloop = ["ledger-1d6d85b9-feff-49da-b257-90ad7359400a[uvloop]"]
 
