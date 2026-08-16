@@ -198,6 +198,12 @@
     receipt_no: "\\d{3}-\\d{5}"
     table_number: "[A-Z]\\d{1,2}"
 
+"日本城 (Japan Home Center)":
+  orders:
+    - [receipt_no]
+  regex:
+    receipt_no: "RST\\d{7}"
+
 "岡山一番店拉麵":
   orders:
     - [transaction_id, table_number]
