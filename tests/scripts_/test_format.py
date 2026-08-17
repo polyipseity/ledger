@@ -249,6 +249,50 @@ async def test__format_journal_check_true_unformatted(
 
 
 @pytest.mark.anyio
+async def test__format_journal_trailing_newline_normalized(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """The formatted file must end with exactly one newline for any body.
+
+    An empty ``hledger print`` body previously produced three trailing
+    newlines; this guards the normalization to a single trailing newline for
+    both empty and non-empty bodies.
+    """
+
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "self.journal"
+    await jpath.write_text('include "preludes/self.journal"\n\nold\n')
+
+    async def fake_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        """Fake hledger runner returning an empty body to exercise the edge case."""
+        return ("", "", 0)
+
+    monkeypatch.setattr(fmt, "run_hledger", fake_run_hledger)
+
+    class Session(JournalRunContext):
+        """Minimal session stub used in tests to capture and expose reported journals."""
+
+        def __init__(self) -> None:
+            """Initialize without any journals to avoid cache behaviour."""
+            super().__init__(Path(__file__), [])
+
+        @override
+        def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful formatting by adding `journal` to the reported set."""
+            self._reported.add(journal)
+
+    await fmt._format_journal(jpath, [], False, Session())
+
+    text = await jpath.read_text()
+    # exactly one trailing newline, never multiple
+    assert text.endswith("\n")
+    assert not text.endswith("\n\n")
+
+
+@pytest.mark.anyio
 async def test__format_journal_check_false_reports_success(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:

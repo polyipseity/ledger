@@ -137,7 +137,9 @@ async def _format_journal(
 """
 
         formatted_text = "\n".join(map(_sort_props, text.splitlines()))
-        return formatted_text
+        # Normalize to exactly one trailing newline regardless of body emptiness
+        # (an empty body would otherwise yield multiple trailing newlines).
+        return formatted_text.rstrip("\n") + "\n"
 
     changed = await file_update_if_changed(journal, updater)
     if changed and check:
