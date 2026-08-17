@@ -327,3 +327,79 @@ def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
     """Running the module as a script should call :func:`runnify` with the parser-invoked coroutine."""
     called = run_module_helper("scripts.check", ["scripts.check"])  # avoid pytest args
     assert called["ran"] is True
+
+
+@pytest.mark.anyio
+async def test_check_does_not_modify_journals(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """`check.main` must be read-only: it never writes to journal files.
+
+    This guards the invariant that the check script cannot introduce trailing
+    newline or other formatting changes to journals on disk.
+    """
+    repo = Path(tmp_path) / "ledger"
+    await (repo / "2024-01").mkdir(parents=True)
+    jpath = repo / "2024-01" / "a.journal"
+    original = (
+        'include "preludes/self.journal"\n\n2024-01-01 txn\n    a  1\n    b  -1\n'
+    )
+    await jpath.write_text(original)
+
+    async def fake_find(
+        folder: PathLike[str], files: object = None
+    ) -> Sequence[PathLike[str]]:
+        """Fake discovery returning the single test journal path for this case."""
+        return [jpath]
+
+    monkeypatch.setattr(check, "find_monthly_journals", fake_find)
+
+    async def fake_run_hledger(
+        journal: PathLike[str], *args: object
+    ) -> tuple[str, str, int]:
+        """Fake run_hledger that returns success without touching the file."""
+        return ("", "", 0)
+
+    monkeypatch.setattr(check, "run_hledger", fake_run_hledger)
+
+    class DummyRun:
+        """A minimal JournalRunContext stub used by tests to emulate session behaviour."""
+
+        def __init__(
+            self, script_id: PathLike[str], j: Sequence[PathLike[str]]
+        ) -> None:
+            """Initialize with a list of journals to process and empty reported/skipped lists."""
+            self.to_process = list(j)
+            self.skipped: list[PathLike[str]] = []
+            self._reported: list[PathLike[str]] = []
+
+        async def __aenter__(self) -> Self:
+            """Async context manager entry: return self for use in tests."""
+            return self
+
+        async def __aexit__(
+            self,
+            exc_type: type | None,
+            exc: BaseException | None,
+            tb: TracebackType | None,
+        ) -> bool:
+            """Async context manager exit: no cleanup required in tests."""
+            return False
+
+        def report_success(self, journal: PathLike[str]) -> None:
+            """Record a successful journal processing for later assertions."""
+            self._reported.append(journal)
+
+        @property
+        def reported(self) -> list[PathLike[str]]:
+            """Return the list of reported journals for test assertions."""
+            return self._reported
+
+    monkeypatch.setattr(check, "JournalRunContext", DummyRun)
+
+    with pytest.raises(SystemExit) as exc:
+        await check.main(check.Arguments(files=None))
+    assert exc.value.code == 0
+
+    # The journal on disk must be byte-for-byte unchanged.
+    assert await jpath.read_text() == original
