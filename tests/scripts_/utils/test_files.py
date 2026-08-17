@@ -120,11 +120,11 @@ async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) ->
 async def test_file_update_if_changed_normalizes_trailing_newlines(
     tmp_path: PathLike[str],
 ) -> None:
-    """The boundary must collapse multiple trailing newlines to exactly one.
+    """The boundary must guarantee exactly one terminating newline.
 
     This guards against updaters (e.g. an empty body) producing files that end
-    with several blank lines instead of a single terminating newline. Content
-    with zero or one trailing newline is left untouched.
+    with several blank lines, and against content without a trailing newline.
+    Every file written through the boundary ends with exactly one ``"\\n"``.
     """
     p = Path(tmp_path) / "journal.journal"
     await p.write_text("body\n")
@@ -147,12 +147,12 @@ async def test_file_update_if_changed_normalizes_trailing_newlines(
     assert text2 == "new\n"
     assert not text2.endswith("\n\n")
 
-    # Zero trailing newlines is preserved (no newline is added).
+    # Content without a trailing newline gains exactly one.
     p3 = Path(tmp_path) / "journal3.journal"
     await p3.write_text("nonewline")
     changed3 = await files.file_update_if_changed(p3, lambda s: s)
-    assert changed3 is False
-    assert await p3.read_text() == "nonewline"
+    assert changed3 is True
+    assert await p3.read_text() == "nonewline\n"
 
 
 # Property-based tests for files
@@ -172,16 +172,17 @@ async def test_file_update_if_changed_with_random_text(s: str) -> None:
         async with await p.open("w", encoding="UTF-8", newline="") as f:
             await f.write(s)
 
-        # The updater runs on normalized content (file uses newline="" internally)
+        # The boundary reads with universal newlines, reverses, then guarantees
+        # exactly one trailing newline.
         changed = await files.file_update_if_changed(p, lambda text: text[::-1])
         assert isinstance(changed, bool)
-        if changed:
-            # 1. Read the result (uses universal newlines by default)
-            actual = await p.read_text(encoding="UTF-8")
-            # 2. Normalize original input BEFORE reversing for expected result
-            expected = normalize(s)[::-1]
-            # 3. Compare normalized forms
-            assert normalize(actual) == normalize(expected)
+        read = normalize(s)
+        expected = files._ensure_single_trailing_newline(read[::-1])
+        # The changed flag reflects whether the normalized result differs from
+        # the normalized input; the on-disk content matches the expected result.
+        assert changed == (expected != read)
+        actual = await p.read_text(encoding="UTF-8")
+        assert normalize(actual) == normalize(expected)
 
 
 # Property test: updater semantics
@@ -252,6 +253,11 @@ async def test_file_update_if_changed_semantics(
     """
     orig, updater = pair
 
+    # Normalize newlines to avoid platform-specific CR/LF issues
+    def normalize(t: str) -> str:
+        """Normalize newlines to a single LF for cross-platform comparisons."""
+        return t.replace("\r\n", "\n").replace("\r", "\n")
+
     async with TemporaryDirectory() as td:
         p = Path(td) / "g.journal"
         # avoid any newline conversion when seeding the file for semantics tests
@@ -259,16 +265,12 @@ async def test_file_update_if_changed_semantics(
             await f.write(orig)
 
         changed = await files.file_update_if_changed(p, updater)
-        expected = updater(orig)
+        # The boundary reads with universal newlines, runs the updater, then
+        # guarantees exactly one trailing newline.
+        read = normalize(orig)
+        expected = files._ensure_single_trailing_newline(updater(read))
 
-        # Normalize newlines to avoid platform-specific CR/LF issues
-        def normalize(t: str) -> str:
-            """Normalize newlines to a single LF for cross-platform comparisons."""
-            return t.replace("\r\n", "\n").replace("\r", "\n")
-
-        if expected == orig:
-            assert changed is False
-            assert normalize(await p.read_text()) == normalize(orig)
-        else:
-            assert changed is True
-            assert normalize(await p.read_text()) == normalize(expected)
+        # The changed flag reflects whether the normalized result differs from
+        # the normalized input; the on-disk content matches the expected result.
+        assert changed == (expected != read)
+        assert normalize(await p.read_text()) == normalize(expected)

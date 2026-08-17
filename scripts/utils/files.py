@@ -3,7 +3,6 @@
 from collections.abc import Callable
 from inspect import currentframe, getframeinfo
 from os import PathLike
-from re import sub
 
 from anyio import Path
 
@@ -11,15 +10,15 @@ from anyio import Path
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
 
 
-def _collapse_trailing_newlines(text: str) -> str:
-    """Collapse two or more trailing newlines in `text` to a single newline.
+def _ensure_single_trailing_newline(text: str) -> str:
+    """Return `text` with exactly one terminating newline.
 
-    Content ending with zero or one newline is returned unchanged, so the
-    function never adds a trailing newline where none existed. This keeps
-    updater output free of multiple blank lines (e.g. an empty body) without
-    altering files that intentionally have no terminating newline.
+    Any run of trailing newlines is collapsed to a single ``"\n"`` and content
+    with no terminating newline gains one. This guarantees every file written
+    through the shared boundary ends with exactly one newline, regardless of
+    what the updater returned (e.g. an empty body or content without a newline).
     """
-    return sub(r"\n{2,}$", "\n", text)
+    return text.rstrip("\n") + "\n"
 
 
 def get_script_folder(depth: int = 0) -> PathLike[str]:
@@ -93,10 +92,10 @@ async def file_update_if_changed(
         await file.seek(0)
 
         text = updater(read)
-        # Collapse two or more trailing newlines to a single one so callers
-        # never emit multiple trailing newlines (e.g. an empty updater body),
-        # while leaving content with zero or one trailing newline untouched.
-        text = _collapse_trailing_newlines(text)
+        # Guarantee exactly one terminating newline so callers never emit
+        # multiple trailing newlines (e.g. an empty updater body) and files
+        # without a trailing newline gain one.
+        text = _ensure_single_trailing_newline(text)
         if text != read:
             await file.write(text)
             await file.truncate()
