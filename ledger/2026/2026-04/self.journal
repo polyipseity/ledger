@@ -924,6 +924,10 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 熱阿華田 + 走攪棍
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093      -33.00 HKD
 
+2026-04-29 (MKB9HN0Y4V, 692126416921, 912885) Apple  ; activity: service, time: 16:02:19, timezone: UTC+08:00
+    assets:deferred expenses:services:clouds:Apple                     8.10 HKD
+    assets:digital:Octopus:abb12fe5-9fea-4bc4-b062-5a393eea2be2       -8.10 HKD
+
 2026-04-29 (13/135424) 9da2b39f-64b4-4721-a033-b50e84a4a76d  ; activity: eating, eating: dinner, time: 20:17:37, timezone: UTC+08:00
     expenses:food and drinks:dining                                         30.00 HKD  ; food_or_drink: 兩送套餐
     expenses:food and drinks:dining                                          0.00 HKD  ; food_or_drink: 番茄洋蔥煮蛋條
