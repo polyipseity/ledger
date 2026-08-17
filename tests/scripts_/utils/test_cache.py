@@ -11,7 +11,7 @@ from hashlib import sha256
 from json import JSONDecodeError
 from os import PathLike, fspath, path
 from types import SimpleNamespace
-from typing import cast
+from typing import cast, override
 
 import pytest
 from anyio import Path
@@ -575,6 +575,7 @@ def test_evict_handles_malformed_timestamps_and_file_entries() -> None:
     class BadDatetime(datetime):
         """Datetime subclass whose timestamp method raises to simulate malformed timestamp."""
 
+        @override
         def timestamp(self) -> float:
             """Raise an exception when asked for a timestamp to simulate broken tz handling."""
             raise Exception("boom")

@@ -15,7 +15,7 @@ import sys
 from abc import ABC, abstractmethod
 from collections.abc import Callable
 from os import PathLike, fspath
-from typing import Any, Literal, Protocol, Self, overload
+from typing import Any, Literal, Protocol, Self, overload, override
 
 import asyncer
 import pytest
@@ -143,6 +143,11 @@ def async_file_factory() -> AsyncFileFactory:
     class DiskAsyncFilePath(AsyncPathBase):
         """An anyio.Path-like wrapper backed by a real filesystem path for tests."""
 
+        def __init__(self, path: PathLike[str]) -> None:
+            """Initialize with a real filesystem path for disk-backed tests."""
+            self._path = Path(path)
+            self.last_written: str | None = None
+
         class AsyncFile(AsyncFileBase):
             """A minimal async file object that wraps a real file on disk."""
 
@@ -150,28 +155,34 @@ def async_file_factory() -> AsyncFileFactory:
                 """Store a reference to the parent DiskAsyncFilePath."""
                 self._path = path
 
+            @override
             async def read(self) -> str:
                 """Read and return the file's text content asynchronously."""
                 return await self._path._path.read_text()
 
+            @override
             async def write(self, data: str) -> int:
                 """Write ``data`` to the backing file and return length written."""
                 self._path.last_written = data
                 await self._path._path.write_text(data)
                 return len(data)
 
+            @override
             async def seek(self, offset: int, whence: int = 0) -> int:
                 """No-op seek implementation for tests; returns 0."""
                 return 0
 
+            @override
             async def truncate(self) -> None:
                 """No-op truncate implementation for tests."""
                 return None
 
+            @override
             async def __aenter__(self) -> Self:
                 """Async context manager entry: returns the file object."""
                 return self
 
+            @override
             async def __aexit__(
                 self,
                 exc_type: type | None,
@@ -181,11 +192,7 @@ def async_file_factory() -> AsyncFileFactory:
                 """Async context manager exit: no special cleanup performed."""
                 return False
 
-        def __init__(self, path: PathLike[str]) -> None:
-            """Initialize with a real filesystem path for disk-backed tests."""
-            self._path = Path(path)
-            self.last_written: str | None = None
-
+        @override
         async def open(
             self,
             mode: str = "r+t",
@@ -206,28 +213,34 @@ def async_file_factory() -> AsyncFileFactory:
                 """Store a reference to the owning InMemoryAsyncFilePath."""
                 self._path = path
 
+            @override
             async def read(self) -> str:
                 """Return the current in-memory text contents."""
                 return self._path._text
 
+            @override
             async def write(self, data: str) -> int:
                 """Overwrite the in-memory text and return the number of bytes written."""
                 self._path.last_written = data
                 self._path._text = data
                 return len(data)
 
+            @override
             async def seek(self, offset: int, whence: int = 0) -> int:
                 """No-op seek implementation for in-memory file used in tests."""
                 return 0
 
+            @override
             async def truncate(self) -> None:
                 """No-op truncate implementation for in-memory file used in tests."""
                 return None
 
+            @override
             async def __aenter__(self) -> Self:
                 """Async context manager entry: returns the file object."""
                 return self
 
+            @override
             async def __aexit__(
                 self,
                 exc_type: type | None,
@@ -242,6 +255,7 @@ def async_file_factory() -> AsyncFileFactory:
             self._text = text
             self.last_written: str | None = None
 
+        @override
         async def open(
             self,
             mode: str = "r+t",
@@ -328,6 +342,7 @@ def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
             """Store the provided pytest.MonkeyPatch for later use."""
             self._monkeypatch = monkeypatch
 
+        @override
         def __call__(self, module_name: str, argv: list[str]) -> dict[str, bool]:
             """Run the specified module with a fake asyncer.runnify that records execution."""
             called: dict[str, bool] = {"ran": False}

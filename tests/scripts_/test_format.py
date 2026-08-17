@@ -7,7 +7,7 @@ formatting utilities (property tests use Hypothesis).
 from os import PathLike
 from subprocess import CalledProcessError
 from types import TracebackType
-from typing import Self
+from typing import Self, override
 
 import pytest
 from anyio import Path
@@ -234,6 +234,7 @@ async def test__format_journal_check_true_unformatted(
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
+        @override
         def report_success(self, journal: PathLike[str]) -> None:
             """Record a successful formatting by adding `journal` to the reported set."""
             # Record to the base class _reported set so `reported` property reflects it
@@ -279,6 +280,7 @@ async def test__format_journal_check_false_reports_success(
             # Avoid JournalRunContext cache behaviour; initialize with no journals
             super().__init__(Path(__file__), [])
 
+        @override
         def report_success(self, journal: PathLike[str]) -> None:
             """Record a successful formatting by adding `journal` to the reported set."""
             # Record to the base class _reported set so `reported` property reflects it
@@ -590,6 +592,7 @@ async def test__format_journal_propagates_hledger_error(
             """Initialize without any journals to avoid cache behaviour."""
             super().__init__(Path(__file__), [])
 
+        @override
         def report_success(self, journal: PathLike[str]) -> None:
             """Record a successful formatting by adding `journal` to the reported set."""
             self._reported.add(journal)

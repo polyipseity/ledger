@@ -27,7 +27,7 @@ hooks = [
   { id = "fix-byte-order-marker" },
   { id = "name-tests-test", args = [
     "--pytest-test-first",
-  ] },
+  ], exclude = "tests/utils\\.py$" },
   # Preserve markdown hard line breaks (common in docs)
   { id = "trailing-whitespace", args = [
     "--markdown-linebreak-ext=md,mdoc,mdown,mdx,mkd,mkdn,markdown,rmd",

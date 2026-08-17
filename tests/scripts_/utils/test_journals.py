@@ -9,6 +9,7 @@ import logging
 from datetime import datetime
 from os import PathLike, fspath
 from types import SimpleNamespace
+from typing import override
 
 import pytest
 from anyio import Path
@@ -195,6 +196,7 @@ def test_format_journal_list_various() -> None:
             self.parent = SimpleNamespace(name=parent)
             self.name = name
 
+        @override
         def __fspath__(self) -> str:
             """Return a string path representation like 'YYYY-MM/name' for testing."""
             return f"{self.parent.name}/{self.name}"
@@ -256,6 +258,7 @@ def test_filter_journals_skips_invalid_parent_names() -> None:
             self.parent = SimpleNamespace(name="not-a-date")
             self.name = "x.journal"
 
+        @override
         def __fspath__(self) -> str:
             """Return a string representation used to simulate a bad path."""
             return "bad"
