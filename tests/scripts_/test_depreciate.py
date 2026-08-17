@@ -13,7 +13,7 @@ from anyio import Path
 
 from scripts import depreciate
 
-from ..utils import RunModuleHelper
+from ..test_utils import RunModuleHelper
 
 """Public symbols exported by this module (none)."""
 __all__ = ()

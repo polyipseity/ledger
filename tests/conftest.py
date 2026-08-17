@@ -10,7 +10,7 @@ import pytest
 __all__ = ()
 
 """`pytest_plugins` is a special variable recognized by pytest to load fixtures from other modules."""
-pytest_plugins = ("tests.utils",)
+pytest_plugins = ("tests.test_utils",)
 
 
 @pytest.fixture

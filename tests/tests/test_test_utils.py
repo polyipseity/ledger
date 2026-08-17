@@ -12,7 +12,7 @@ from typing import Literal, cast
 import pytest
 from anyio import Path
 
-from ..utils import AsyncFileFactory, RunModuleHelper
+from ..test_utils import AsyncFileFactory, RunModuleHelper
 
 """Public symbols exported by this module (none)."""
 __all__ = ()
