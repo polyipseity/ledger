@@ -116,6 +116,45 @@ async def test_file_update_if_changed_true_and_false(tmp_path: PathLike[str]) ->
     assert await p.read_text() == "new\n"
 
 
+@pytest.mark.anyio
+async def test_file_update_if_changed_normalizes_trailing_newlines(
+    tmp_path: PathLike[str],
+) -> None:
+    """The boundary must collapse multiple trailing newlines to exactly one.
+
+    This guards against updaters (e.g. an empty body) producing files that end
+    with several blank lines instead of a single terminating newline. Content
+    with zero or one trailing newline is left untouched.
+    """
+    p = Path(tmp_path) / "journal.journal"
+    await p.write_text("body\n")
+
+    # Updater returns content with multiple trailing newlines; the boundary
+    # collapses them to one, so the on-disk result matches the existing file
+    # (no spurious change is written).
+    changed = await files.file_update_if_changed(p, lambda s: "body\n\n\n")
+    assert changed is False
+    text = await p.read_text()
+    assert text.endswith("\n")
+    assert not text.endswith("\n\n")
+
+    # A body that genuinely changes still collapses excess trailing newlines.
+    p2 = Path(tmp_path) / "journal2.journal"
+    await p2.write_text("old\n")
+    changed2 = await files.file_update_if_changed(p2, lambda s: "new\n\n\n")
+    assert changed2 is True
+    text2 = await p2.read_text()
+    assert text2 == "new\n"
+    assert not text2.endswith("\n\n")
+
+    # Zero trailing newlines is preserved (no newline is added).
+    p3 = Path(tmp_path) / "journal3.journal"
+    await p3.write_text("nonewline")
+    changed3 = await files.file_update_if_changed(p3, lambda s: s)
+    assert changed3 is False
+    assert await p3.read_text() == "nonewline"
+
+
 # Property-based tests for files
 @pytest.mark.anyio
 @settings(deadline=timedelta(seconds=1))  # increase deadline for async property tests

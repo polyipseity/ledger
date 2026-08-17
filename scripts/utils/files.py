@@ -3,11 +3,23 @@
 from collections.abc import Callable
 from inspect import currentframe, getframeinfo
 from os import PathLike
+from re import sub
 
 from anyio import Path
 
 """Public symbols exported by this module."""
 __all__ = ("get_script_folder", "get_ledger_folder", "file_update_if_changed")
+
+
+def _collapse_trailing_newlines(text: str) -> str:
+    """Collapse two or more trailing newlines in `text` to a single newline.
+
+    Content ending with zero or one newline is returned unchanged, so the
+    function never adds a trailing newline where none existed. This keeps
+    updater output free of multiple blank lines (e.g. an empty body) without
+    altering files that intentionally have no terminating newline.
+    """
+    return sub(r"\n{2,}$", "\n", text)
 
 
 def get_script_folder(depth: int = 0) -> PathLike[str]:
@@ -81,6 +93,10 @@ async def file_update_if_changed(
         await file.seek(0)
 
         text = updater(read)
+        # Collapse two or more trailing newlines to a single one so callers
+        # never emit multiple trailing newlines (e.g. an empty updater body),
+        # while leaving content with zero or one trailing newline untouched.
+        text = _collapse_trailing_newlines(text)
         if text != read:
             await file.write(text)
             await file.truncate()
