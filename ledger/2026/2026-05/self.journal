@@ -427,7 +427,7 @@ include ../../../preludes/self.journal
     expenses:food and drinks:dining                                    -30.00 HKD  ; food_or_drink: [電子印花卡] $30早餐電子現金券
     liabilities:credit cards:cd33f171-413c-4abb-9c24-3755f4aa4093       -6.00 HKD
 
-2026-05-28 (000-0182, 3B) TamJai SamBur  ; activity: eating, duration: PT36M52S, eating: afternoon tea, time: 15:25:01, timezone: UTC+08:00
+2026-05-28 (000-0182, 3B) TamJai SamGor  ; activity: eating, duration: PT36M52S, eating: afternoon tea, time: 15:25:01, timezone: UTC+08:00
     expenses:food and drinks:dining                                     33.00 HKD  ; food_or_drink: F. 三哥港式常餐
     expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 番茄湯通粉
     expenses:food and drinks:dining                                      0.00 HKD  ; food_or_drink: 炒蛋
