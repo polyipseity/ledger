@@ -17,12 +17,17 @@ Months before the current month need both boundaries, the current month needs
 only its opening, and later months must carry neither. On top of that presence
 rule, the boundaries are checked in content: the opening must sit first in the
 month and the closing last, every closing posting must assert a zero balance,
-every asset and liability account with a non-zero balance must be zeroed by the
-closing, and each month's opening must negate the closing of the month before
-it in the same journal family.
+every asset, cash, and liability account with a non-zero balance must be zeroed
+by the closing, and each month's opening must negate the closing of the month
+before it in the same journal family. A month whose journal cannot be read
+reports that one defect and breaks the chain, so its neighbours are never
+compared across the gap.
 
 The script is read-only by construction: it never writes a journal, never
-touches the run cache, and never repairs what it reports.
+touches the run cache, and never repairs what it reports. Every argument and
+every environment failure is an error, not a defect: the exit code is ``0`` for
+a clean chain and ``1`` for defects or for any error, which is printed as
+declared for ``--period``, ``--files``, and the derived current month.
 
 The current month comes from the committer date of the last commit
 (``git log -1 --format=%cI``) rather than the author date, because a rebase,
@@ -30,6 +35,7 @@ amend, or cherry-pick advances the committer date, so it tracks when the record
 actually landed, whereas an author date can survive a rebase for months.
 """
 
+import sys
 from argparse import ArgumentParser, Namespace
 from calendar import monthrange
 from collections import defaultdict
@@ -40,17 +46,21 @@ from enum import StrEnum
 from functools import wraps
 from logging import INFO, basicConfig, info
 from os import PathLike, fspath
-from pathlib import Path as _StdPath
+from pathlib import Path
 from re import Pattern, compile
 from subprocess import CalledProcessError, run
-from sys import argv, exit
 from typing import final
 
 from asyncer import runnify
 from pydantic import BaseModel, ConfigDict, RootModel, ValidationError
 
 from .utils.files import get_ledger_folder, get_script_folder
-from .utils.journals import find_monthly_journals, format_journal_list, run_hledger
+from .utils.journals import (
+    find_monthly_journals,
+    format_journal_list,
+    parse_period_start,
+    run_hledger,
+)
 
 """Public symbols exported by this module."""
 __all__ = (
@@ -61,6 +71,7 @@ __all__ = (
     "main0",
     "parser",
     "resolve_now_month",
+    "resolve_period",
     "verify_family",
 )
 
@@ -173,8 +184,9 @@ def resolve_now_month(explicit: str | None) -> str:
 
     Raises:
         ValueError: When ``explicit`` does not start with a ``YYYY-MM`` prefix.
-        RuntimeError: When git is missing, exits non-zero, or prints nothing,
-            since there is then no month to classify the journals against.
+        RuntimeError: When git is missing, exits non-zero, or prints something
+            that does not start with an ISO date, since there is then no month
+            to classify the journals against.
     """
     if explicit is not None:
         month = explicit[:7]
@@ -201,10 +213,44 @@ def resolve_now_month(explicit: str | None) -> str:
             f"git log exited {completed.returncode}: {_first_line(completed.stderr)}"
         )
     month = completed.stdout.strip()[:7]
-    if not month:
+    if _MONTH_PATTERN.fullmatch(month) is None:
         raise RuntimeError(
-            f"cannot determine the current month: git log printed no commit date in {root}"
+            "cannot determine the current month: git log printed no commit date "
+            f"in {root}: {completed.stdout.strip()!r}"
         )
+    return month
+
+
+def resolve_period(period: str | None) -> str | None:
+    """Return ``period`` normalised to the ``YYYY-MM`` month it names.
+
+    The value goes through :func:`scripts.utils.journals.parse_period_start`, so
+    it is also rejected when no calendar month carries that number, and it must
+    round-trip to the ``YYYY-MM`` prefix it was read from, so a bare ``YYYY`` is
+    rejected rather than widened to January.
+
+    Args:
+        period: The ``--period`` argument, or ``None`` for every month.
+
+    Returns:
+        The month to filter on, or ``None`` when ``period`` is absent.
+
+    Raises:
+        ValueError: When ``period`` is not a ``YYYY-MM`` month, because a typo
+            would otherwise select no journal at all and report a clean chain.
+    """
+    if period is None:
+        return None
+    month = period[:7]
+    try:
+        start = parse_period_start(period)
+    except ValueError as exc:
+        raise ValueError(f"--period {period!r} is not a YYYY-MM month") from exc
+    if (
+        _MONTH_PATTERN.fullmatch(month) is None
+        or f"{start.year:04d}-{start.month:02d}" != month
+    ):
+        raise ValueError(f"--period {period!r} is not a YYYY-MM month")
     return month
 
 
@@ -219,48 +265,57 @@ async def verify_family(
     of the month before it in the same chain. ``now_month`` decides which
     boundaries must be present, which may be present, and which must be absent.
 
+    A journal that cannot be read reports one ``UNREADABLE`` defect and breaks
+    its chain in both directions, so the months around the gap are never
+    compared with each other across it.
+
     The returned defects are sorted by month, journal, kind, and detail, so the
     report is stable regardless of the order the journals arrive in.
     """
-    groups: dict[str, list[_StdPath]] = defaultdict(list)
+    groups: dict[str, list[Path]] = defaultdict(list)
     for candidate in journals:
-        path = _StdPath(candidate)
+        path = Path(candidate)
         groups[path.name].append(path)
 
     defects: list[Defect] = []
     for name in sorted(groups):
-        chain: list[_Journal] = []
+        previous: _Journal | None = None
         for path in sorted(groups[name], key=lambda journal: journal.parent.name):
             try:
                 journal = await _load_journal(path)
             except _Unreadable as exc:
                 defects.append(_unreadable(path, exc.detail))
+                previous = None
                 continue
             defects.extend(_presence_defects(journal, now_month))
             defects.extend(_ordering_defects(journal))
+            linked = True
             if journal.closing is not None:
                 try:
                     closed_accounts = await _closed_accounts(path)
                 except _Unreadable as exc:
                     defects.append(_unreadable(path, exc.detail))
-                    chain.append(journal)
-                    continue
-                defects.extend(_assertion_defects(journal, journal.closing))
+                    linked = False
+                else:
+                    defects.extend(_assertion_defects(journal, journal.closing))
+                    defects.extend(
+                        _completeness_defects(journal, journal.closing, closed_accounts)
+                    )
+            if (
+                linked
+                and previous is not None
+                and previous.closing is not None
+                and journal.opening is not None
+            ):
                 defects.extend(
-                    _completeness_defects(journal, journal.closing, closed_accounts)
+                    _mismatch_defects(
+                        journal=journal,
+                        previous_month=previous.month,
+                        closing=previous.closing,
+                        opening=journal.opening,
+                    )
                 )
-            chain.append(journal)
-        for previous, current in zip(chain, chain[1:]):
-            if previous.closing is None or current.opening is None:
-                continue
-            defects.extend(
-                _mismatch_defects(
-                    journal=current,
-                    previous_month=previous.month,
-                    closing=previous.closing,
-                    opening=current.opening,
-                )
-            )
+            previous = journal if linked else None
     return tuple(
         sorted(
             defects,
@@ -380,14 +435,14 @@ class _Journal:
         closing: The closing balance transaction, when the month has one.
     """
 
-    path: _StdPath
+    path: Path
     month: str
     transactions: Sequence[_Transaction]
     opening: _Transaction | None
     closing: _Transaction | None
 
 
-async def _hledger_output(journal: _StdPath, *args: str) -> tuple[str, str, int]:
+async def _hledger_output(journal: Path, *args: str) -> tuple[str, str, int]:
     """Run hledger on ``journal`` and return its output, error text, and exit code.
 
     ``run_hledger`` is asked not to raise, but anyio's ``run_process`` raises
@@ -410,16 +465,24 @@ async def _hledger_output(journal: _StdPath, *args: str) -> tuple[str, str, int]
         return stdout.decode(), stderr.decode(), exc.returncode
 
 
-async def _load_journal(path: _StdPath) -> _Journal:
+async def _load_journal(path: Path) -> _Journal:
     """Return ``path`` parsed into boundary data.
 
     hledger runs without ``--strict`` because account declarations play no part
     in boundary arithmetic, so that a journal missing declarations still counts.
 
     Raises:
-        _Unreadable: When hledger fails, prints nothing, or prints something
+        _Unreadable: When the month directory is not named after a calendar
+            month, or when hledger fails, prints nothing, or prints something
             that is not a hledger journal document.
     """
+    month = path.parent.name
+    if _MONTH_PATTERN.fullmatch(month) is None:
+        raise _Unreadable(f"month directory {month!r} is not named YYYY-MM")
+    try:
+        _last_day(month)
+    except ValueError as exc:
+        raise _Unreadable(f"month directory {month!r} is not a calendar month") from exc
     stdout, stderr, code = await _hledger_output(path, "print", "-O", "json")
     if code != 0:
         raise _Unreadable(f"hledger print exited {code}: {_first_line(stderr)}")
@@ -434,14 +497,14 @@ async def _load_journal(path: _StdPath) -> _Journal:
     transactions = document.root
     return _Journal(
         path=path,
-        month=path.parent.name,
+        month=month,
         transactions=transactions,
         opening=_boundary(transactions, _OPENING_DESCRIPTION, last=False),
         closing=_boundary(transactions, _CLOSING_DESCRIPTION, last=True),
     )
 
 
-async def _closed_accounts(path: _StdPath) -> frozenset[str]:
+async def _closed_accounts(path: Path) -> frozenset[str]:
     """Return the accounts a closing must zero, read from hledger's account types.
 
     Raises:
@@ -505,8 +568,19 @@ def _presence_defects(journal: _Journal, now_month: str) -> Iterator[Defect]:
 def _ordering_defects(journal: _Journal) -> Iterator[Defect]:
     """Yield defects placing an existing boundary anywhere but the month's edge."""
     indexes = [transaction.tindex for transaction in journal.transactions]
-    year, month = journal.month.split("-")
-    last_day = f"{journal.month}-{monthrange(int(year), int(month))[1]:02d}"
+    last_day = _last_day(journal.month)
+    for description in (_OPENING_DESCRIPTION, _CLOSING_DESCRIPTION):
+        count = sum(
+            1
+            for transaction in journal.transactions
+            if transaction.tdescription == description
+        )
+        if count > 1:
+            yield _defect(
+                journal,
+                DefectKind.BOUNDARY_UNORDERED,
+                f"{count} {description} transactions",
+            )
     if journal.opening is not None:
         if journal.opening.tindex != min(indexes):
             yield _defect(
@@ -614,8 +688,10 @@ def _mismatch_defects(
     actual = _posting_totals([opening])
     for key in sorted(set(expected) | set(actual)):
         account, commodity = key
-        left = expected.get(key, Decimal(0))
-        right = actual.get(key, Decimal(0))
+        # The absent side is a zero at the present side's scale, so both halves
+        # of the message read alike (``0.00 HKD``, not ``0 HKD``).
+        left = expected[key] if key in expected else Decimal(0).quantize(actual[key])
+        right = actual[key] if key in actual else Decimal(0).quantize(expected[key])
         if left + right == 0:
             continue
         yield _defect(
@@ -663,6 +739,16 @@ def _tag(transaction: _Transaction, key: str) -> str | None:
     return None
 
 
+def _last_day(month: str) -> str:
+    """Return the last date of ``month`` as a ``YYYY-MM-DD`` string.
+
+    Raises:
+        ValueError: When ``month`` is not a calendar month.
+    """
+    year, _, number = month.partition("-")
+    return f"{month}-{monthrange(int(year), int(number))[1]:02d}"
+
+
 def _time_detail(description: str, time: str | None, expected: str) -> str:
     """Return the detail naming a boundary's ``time`` tag and the one it needs."""
     if time is None:
@@ -693,7 +779,7 @@ def _defect(journal: _Journal, kind: DefectKind, detail: str) -> Defect:
     )
 
 
-def _unreadable(path: _StdPath, detail: str) -> Defect:
+def _unreadable(path: Path, detail: str) -> Defect:
     """Build an unreadable defect for ``path``, whose month is its directory name."""
     return Defect(
         kind=DefectKind.UNREADABLE,
@@ -703,7 +789,7 @@ def _unreadable(path: _StdPath, detail: str) -> Defect:
     )
 
 
-def _display_path(path: _StdPath) -> str:
+def _display_path(path: Path) -> str:
     """Return ``path`` relative to the repository root when it lies inside it."""
     try:
         return fspath(path.relative_to(fspath(get_script_folder(depth=1))))
@@ -718,25 +804,35 @@ async def main(args: Arguments) -> None:
     discovered and narrowed by ``args.period`` and ``args.files``. Each defect
     is printed as one ``journal:month: kind: detail`` line before the exit code
     is decided, so a caller sees the whole report even when it fails.
+
+    Raises:
+        ValueError: When ``args.period`` is not a ``YYYY-MM`` month, or when a
+            name in ``args.files`` matches no journal of the selected period.
+            Either filter would otherwise select nothing and report a clean
+            chain, so both are rejected instead.
+        RuntimeError: When the current month cannot be determined.
     """
     now_month = resolve_now_month(args.now)
+    period = resolve_period(args.period)
     journals = list(await find_monthly_journals(get_ledger_folder(), None))
-    if args.period is not None:
+    if period is not None:
         journals = [
-            journal
-            for journal in journals
-            if _StdPath(journal).parent.name == args.period
+            journal for journal in journals if Path(journal).parent.name == period
         ]
     if args.files is not None:
         names = frozenset(args.files)
-        journals = [journal for journal in journals if _StdPath(journal).name in names]
+        journals = [journal for journal in journals if Path(journal).name in names]
+        unmatched = sorted(names - {Path(journal).name for journal in journals})
+        if unmatched:
+            listed = ", ".join(repr(name) for name in unmatched)
+            raise ValueError(f"--files {listed} matches no journal in the period")
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     defects = await verify_family(journals, now_month)
     for defect in defects:
         print(f"{defect.journal}:{defect.month}: {defect.kind}: {defect.detail}")
     info("%d boundary defect(s) for %s", len(defects), now_month)
-    exit(1 if defects else 0)
+    sys.exit(1 if defects else 0)
 
 
 def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
@@ -746,7 +842,7 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
     installs an ``invoke`` coroutine that builds :class:`Arguments` and forwards
     them to :func:`main`.
     """
-    prog = argv[0]
+    prog = sys.argv[0]
 
     parser = (ArgumentParser if parent is None else parent)(
         prog=prog,
@@ -795,10 +891,19 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
 
 async def main0() -> None:
-    """Entry point for running the script directly. Parses CLI arguments and invokes main()."""
+    """Entry point for running the script directly. Parses CLI arguments and invokes main().
+
+    An argument or environment error is printed as one ``error:`` line and exits
+    ``1``, the same code a defect report uses, so the exit code only ever says
+    whether the chain verified clean.
+    """
     basicConfig(level=INFO)
-    entry = parser().parse_args(argv[1:])
-    await entry.invoke(entry)
+    entry = parser().parse_args(sys.argv[1:])
+    try:
+        await entry.invoke(entry)
+    except (ValueError, RuntimeError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        sys.exit(1)
 
 
 def __main__() -> None:
