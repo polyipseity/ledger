@@ -23,7 +23,7 @@ A source prints a merchant, a person, an institution, or a transfer label that n
 8. **A UUID payee that prints identifiers needs its own entry.** The mapping's key is the payee string, so 5 of the 43 entries are keyed by a UUID.
 9. **An identifier the mapping expects and the source lacks is written `?`.** The gap stays visible in the payee line instead of shortening the group; one header in `ledger/**` uses it.
 10. **A number that identifies the account is not an identifier.** Wallet, card, and bank numbers never enter a payee line or an `id_mappings.yml` key, whatever else `../ingest-statement/SKILL.md` excludes them from; a receipt number and a card number can look alike, and the mapping's regex hints are not licence to record the second.
-11. **The table stays sorted and deduplicated, and a new id mapping is the owner's to confirm.** Rule 4 forbids an identity alias, rule 2 governs a new one, and an `id_mappings.yml` entry is written only once the owner confirms its order and shape.
+11. **The table stays sorted and deduplicated, and a new id mapping is the owner's to confirm.** Its 46 aliases ascend by alias, so a new one is inserted at its sorted place rather than appended or grouped under its source; rule 4 forbids an identity alias, rule 2 governs a new one, and an `id_mappings.yml` entry is written only once the owner confirms its order and shape.
 12. **The payee is written exactly as declared.** No branch, region, or terminal code is appended to it, and a name the declaration already carries is not stripped of it.
 
 ## Procedure
