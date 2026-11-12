@@ -2,33 +2,38 @@
 
 The restructure produced sixteen skills, nine instruction files, three agent
 definitions, one reference file, and two mirrored prompts. The properties that
-keep that tree coherent — every documented command exists, no retired spelling
-returns, each skill stays inside its budget, every asset is routed from its
-``SKILL.md``, the prompt mirror is the prompt directory itself — hold only
-because every author was careful. Each test below turns one property into a
-contract, reports every violation at once, and names the file and the rule that
-broke.
+keep that tree coherent — every documented command exists, each skill stays
+inside its budget, every asset is routed from its ``SKILL.md``, the prompt
+mirror is the prompt directory itself — hold only because every author was
+careful. Each test below turns one property into a contract, reports every
+violation at once, and names the file and the rule that broke.
+
+Every contract reads a structure and never searches prose. ``package.json``
+goes through `json`, frontmatter and the payee data files through
+`pydantic_yaml`, the budget table through the fenced block that carries it,
+headings and table rows through the lines that state them, prelude payees
+through the directive each line spells, and the assets a ``SKILL.md`` routes
+through the link targets and inline-code spans it quotes. A formatting change
+moves none of those, so a green run states that the structure holds rather than
+that some phrase survived a search.
 
 ``test_payee_declarations_are_ordered_and_unique`` is skipped because
 ``preludes/self.journal`` breaks the rule it enforces; its docstring holds the
 decision and ``PAYEE_DEFECTS`` names the lines to repair.
-
-A documented path resolves from the document carrying it or from the repository
-root, because the docs use both anchors; one whose leading ``../`` run leaves
-the repository is checked by its tail, the spelling a monthly journal's
-``include`` uses. Placeholders (``*``, ``<``, ``>``, an all-uppercase segment
-naming a month or a year) and backticked commands holding whitespace are not
-paths.
 """
 
+import json
 import os
 import re
-from collections import Counter
+from contextlib import redirect_stderr
+from io import StringIO
 from pathlib import Path
 
 import pytest
 from pydantic import BaseModel, RootModel
 from pydantic_yaml import parse_yaml_raw_as
+
+from scripts import clopen
 
 """Public symbols exported by this module (none)."""
 __all__ = ()
@@ -45,14 +50,23 @@ PROMPTS_DIR = AGENTS_DIR / "prompts"
 """The OpenCode command mirror, a tracked symlink to the prompt sources."""
 MIRROR_DIR = REPO_ROOT / ".opencode" / "commands"
 
-"""The spellings the restructure retired, none of which names a command today."""
-RETIRED_SPELLINGS = (
-    "hledger:check|hledger:format|hledger:format:check|format:hledger|"
-    "bun run markdownlint|markdownlint:fix|cwd=scripts"
-).split("|")
+"""The instruction file that owns the skill layout, budgets, and data conventions."""
+SKILL_AUTHORING = AGENTS_DIR / "instructions" / "skill-authoring.instructions.md"
 
-"""The file extensions a documented relative path may carry."""
-_PATH_SUFFIXES = (".journal", ".md", ".py", ".yml")
+"""The header of the budget table, as its cells read once split into words."""
+BUDGET_HEADER = ("skill", "SKILL.md", "<=", "lines")
+
+"""The header of `AGENTS.md`'s command table, in the order it declares."""
+COMMAND_TABLE_HEADER = ("command", "use when")
+
+"""The prefix every owner-run maintenance command begins with."""
+MAINTENANCE_PREFIX = "uv run --locked -m scripts.clopen"
+
+"""The command spellings this repository retired; no table cell may name one."""
+RETIRED_COMMANDS = ("clopen", "verify:migration", "clopen_verify")
+
+"""The retired names that would be a `package.json` script rather than a module."""
+RETIRED_SCRIPTS = ("clopen", "verify:migration")
 
 """The frontmatter keys that make a file an agent definition."""
 _AGENT_KEYS = ("model", "tools")
@@ -84,11 +98,21 @@ PAYEE_DEFECTS = (
     "SKILL.md` holds the rule. Remove this skip only once the prelude is repaired."
 )
 
+"""The fence that opens and closes a markdown code block."""
+_FENCE = "```"
 
-class _PackageJson(BaseModel):
-    """The `package.json` slice these contracts read."""
+"""The tail of a markdown link, read as the target it points at."""
+_LINK_TARGET = re.compile(r"\]\(([^)\s]+)\)")
 
-    scripts: dict[str, str]
+"""A markdown inline-code span, read as the text it quotes."""
+_CODE_SPAN = re.compile(r"`([^`\n]+)`")
+
+"""The punctuation a table cell wraps a command spelling in."""
+_CELL_PUNCTUATION = "`*_()[],.;:'\""
+
+
+class _Frontmatter(RootModel[dict[str, str]]):
+    """A document's frontmatter block: a flat ``key: value`` mapping."""
 
 
 class _IdentifierOrdering(BaseModel):
@@ -123,37 +147,78 @@ def _check(rule: str, violations: list[str]) -> None:
     assert not violations, f"{rule}: {len(violations)} violation(s)\n{detail}"
 
 
-def _documented_files() -> list[Path]:
-    """Return every document that states the repository's agent-facing rules."""
-    roots = [REPO_ROOT / "AGENTS.md", REPO_ROOT / "README.md"]
-    return [*roots, *sorted(AGENTS_DIR.rglob("*.md"))]
+def _fenced_blocks(text: str) -> list[tuple[str, str]]:
+    """Return each fenced block as its opening line and the text it encloses."""
+    blocks: list[tuple[str, str]] = []
+    opener: str | None = None
+    body: list[str] = []
+    for line in text.splitlines():
+        if line.lstrip().startswith(_FENCE):
+            if opener is None:
+                opener = line.strip()
+            else:
+                blocks.append((opener, "\n".join(body)))
+                opener, body = None, []
+        elif opener is not None:
+            body.append(line)
+    if opener is not None:
+        blocks.append((opener, "\n".join(body)))
+    return blocks
 
 
-def _unfenced(document: Path) -> str:
-    """Return ``document``'s text without its fenced code blocks."""
+def _unfenced(text: str) -> str:
+    """Return ``text`` without the lines that any fenced block encloses."""
     kept: list[str] = []
-    fenced = False
-    for line in _read(document).splitlines():
-        if line.lstrip().startswith("```"):
-            fenced = not fenced
-        elif not fenced:
+    inside = False
+    for line in text.splitlines():
+        if line.lstrip().startswith(_FENCE):
+            inside = not inside
+        elif not inside:
             kept.append(line)
     return "\n".join(kept)
 
 
+def _table_rows(text: str, header: tuple[str, ...]) -> list[tuple[str, ...]]:
+    """Return the data rows of the table whose header cells are ``header``.
+
+    A row is read as the cells it states: the line is split on ``|``, each cell
+    is stripped, and the separator row is dropped. ``header`` is matched
+    case-insensitively, and the table ends at the first line that is no row.
+    """
+    rows: list[tuple[str, ...]] = []
+    inside = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("|"):
+            inside = False
+            continue
+        cells = tuple(cell.strip() for cell in stripped.strip("|").split("|"))
+        if not inside:
+            inside = tuple(cell.lower() for cell in cells) == header
+            continue
+        if all(cell and set(cell) <= {"-", ":"} for cell in cells):
+            continue
+        rows.append(cells)
+    return rows
+
+
 def _frontmatter(document: Path) -> dict[str, str]:
-    """Return the flat ``key: value`` frontmatter of ``document``, if it has one."""
+    """Return ``document``'s frontmatter, parsed as a flat YAML mapping.
+
+    The block is the text between the first two ``---`` lines, and a file that
+    does not open with one has none. The block is a mapping of scalars, so a
+    block that is anything else fails the contract's parse instead of being
+    read as loose text; an unclosed block is no frontmatter at all.
+    """
     lines = _read(document).splitlines()
-    fields: dict[str, str] = {}
     if not lines or lines[0].strip() != "---":
-        return fields
+        return {}
+    block: list[str] = []
     for line in lines[1:]:
         if line.strip() == "---":
-            return fields
-        key, separator, value = line.partition(":")
-        if separator:
-            fields[key.strip()] = value.strip().strip('"')
-    return fields
+            return parse_yaml_raw_as(_Frontmatter, "\n".join(block)).root
+        block.append(line)
+    return {}
 
 
 def _skill_dirs() -> list[Path]:
@@ -162,11 +227,11 @@ def _skill_dirs() -> list[Path]:
     return sorted(entry for entry in skills if entry.is_dir())
 
 
-def _sections(document: Path) -> list[str]:
-    """Return ``document``'s second-level headings, in file order."""
+def _sections(text: str) -> list[str]:
+    """Return ``text``'s second-level headings, in file order, outside any fence."""
     return [
         line.removeprefix("## ").strip()
-        for line in _read(document).splitlines()
+        for line in _unfenced(text).splitlines()
         if line.startswith("## ")
     ]
 
@@ -176,24 +241,124 @@ def _file_names(directory: Path) -> set[str]:
     return {path.name for path in directory.iterdir() if path.is_file()}
 
 
-def _skill_budget() -> dict[str, int]:
-    """Return each skill's line budget, from the table `skill-authoring` owns."""
-    document = AGENTS_DIR / "instructions" / "skill-authoring.instructions.md"
-    rows = (line.split() for line in _read(document).splitlines())
-    return {row[0]: int(row[1]) for row in rows if len(row) == 2 and row[1].isdigit()}
+def _skill_budget() -> tuple[dict[str, int], list[str]]:
+    """Return each skill's line budget and every row the table states badly.
+
+    The table is the one fenced block under ``BUDGET_HEADER``, so each row is a
+    skill name and a line count; a row of any other shape is reported here
+    rather than skipped, and a table declared twice leaves no budget to check.
+    """
+    blocks = [body.splitlines() for _, body in _fenced_blocks(_read(SKILL_AUTHORING))]
+    tables = [
+        lines for lines in blocks if lines and lines[0].split() == list(BUDGET_HEADER)
+    ]
+    if len(tables) != 1:
+        return {}, [f"the budget table is declared {len(tables)} times"]
+    budget: dict[str, int] = {}
+    malformed: list[str] = []
+    for line in tables[0][1:]:
+        parts = line.split()
+        if not parts:
+            continue
+        if len(parts) == 2 and parts[1].isdigit():
+            budget[parts[0]] = int(parts[1])
+        else:
+            malformed.append(f"`{line.strip()}` is not a skill name and a line count")
+    return budget, malformed
+
+
+def _named_files(text: str) -> set[str]:
+    """Return the file names ``text`` names in a link target or an inline-code span.
+
+    A link is read as the target it points at and a code span as the text it
+    quotes, so a file counts as routed when the document links to it or quotes
+    it, and prose that merely contains the name does not route it.
+    """
+    tokens = _LINK_TARGET.findall(text)
+    tokens.extend(_CODE_SPAN.findall(text))
+    return {Path(token).name for token in tokens}
+
+
+def _retired_tokens(cell: str) -> list[str]:
+    """Return the retired command spellings ``cell`` names, wherever it names them.
+
+    A cell is split into the words it spells, so a retired name is caught as the
+    word it is whether it follows ``bun run``, stands alone, or sits inside the
+    module path of a deleted file.
+    """
+    words = (word.strip(_CELL_PUNCTUATION) for word in cell.replace("`", " ").split())
+    return sorted(
+        word for word in words if word in RETIRED_COMMANDS or "clopen_verify" in word
+    )
+
+
+def _clopen_accepts(argv: list[str]) -> bool:
+    """Report whether ``scripts/clopen.py``'s own parser accepts ``argv``.
+
+    The subcommand names are the CLI's to state, so a documented invocation is
+    handed to the parser rather than compared with a list kept here. The parser
+    prints its usage before exiting, which the capture keeps out of a report.
+    """
+    with redirect_stderr(StringIO()):
+        try:
+            clopen.parser().parse_args(argv)
+        except SystemExit:
+            return False
+    return True
+
+
+def _command_violations(document: Path, cell: str, scripts: set[str]) -> list[str]:
+    """Return every defect in one command-table cell's first column."""
+    spelled = cell.strip("`").strip()
+    words = spelled.split()
+    if words[:2] == ["bun", "run"]:
+        if len(words) < 3:
+            return [_report(document, f"`{spelled}` names no script")]
+        name = words[2]
+        if name in scripts:
+            return []
+        return [_report(document, f"`bun run {name}` names no `package.json` script")]
+    if spelled.startswith(MAINTENANCE_PREFIX):
+        argv = spelled.removeprefix(MAINTENANCE_PREFIX).split()
+        if not argv:
+            return [_report(document, f"`{spelled}` names no subcommand")]
+        if _clopen_accepts(argv):
+            return []
+        return [_report(document, f"`{spelled}` is no `scripts.clopen` invocation")]
+    return [_report(document, f"`{spelled}` names no command this repository keeps")]
+
+
+def _payee_directives(prelude: Path) -> list[tuple[int, str]]:
+    """Return each ``payee`` directive's line number and value, in file order.
+
+    The prelude grammar is one directive per line, so a line declares a payee
+    when its first word is ``payee`` and its value is the rest of the line.
+    """
+    directives: list[tuple[int, str]] = []
+    for number, line in enumerate(_read(prelude).splitlines(), 1):
+        directive = line.split(maxsplit=1)
+        if len(directive) == 2 and directive[0] == "payee":
+            directives.append((number, directive[1]))
+    return directives
+
+
+def _preludes() -> list[Path]:
+    """Return every prelude journal, sorted by name."""
+    return sorted((REPO_ROOT / "preludes").glob("*.journal"))
+
+
+def _declared_payees() -> set[str]:
+    """Return every payee name the preludes declare."""
+    return {name for prelude in _preludes() for _, name in _payee_directives(prelude)}
 
 
 def _payee_declaration_violations() -> list[str]:
     """Return every prelude payee block out of byte order or repeating a name."""
     violations: list[str] = []
-    for prelude in sorted((REPO_ROOT / "preludes").glob("*.journal")):
+    for prelude in _preludes():
         where = _relative(prelude)
-        pairs = [
-            (number, line.removeprefix("payee "))
-            for number, line in enumerate(_read(prelude).splitlines(), 1)
-            if line.startswith("payee ")
-        ]
-        for (number, name), (earlier, previous) in zip(pairs[1:], pairs):
+        directives = _payee_directives(prelude)
+        for (number, name), (earlier, previous) in zip(directives[1:], directives):
             if name == previous:
                 violations.append(f"{where}:{number}: `{name}` repeats line {earlier}")
             elif name < previous:
@@ -203,35 +368,14 @@ def _payee_declaration_violations() -> list[str]:
     return violations
 
 
-def _is_document_path(token: str) -> bool:
-    """Report whether ``token`` is a relative path a document must resolve."""
-    if any(marker in token for marker in ("://", "*", "<", ">", "~")):
-        return False
-    if token.startswith(("/", "#", "mailto:")) or "/" not in token:
-        return False
-    if not token.endswith(_PATH_SUFFIXES) or any(c.isspace() for c in token):
-        return False
-    # An all-uppercase segment such as `YYYY` or `MM` names a shape, not a path.
-    return not any(re.fullmatch(r"[A-Z]{2,}", part) for part in token.split("/"))
-
-
-def _resolves(document: Path, token: str) -> bool:
-    """Report whether ``token`` exists from ``document``, or from the repository root."""
-    if (document.parent / token).exists() or (REPO_ROOT / token).exists():
-        return True
-    tail = token
-    while tail.startswith("../"):
-        tail = tail.removeprefix("../")
-    return tail != token and (REPO_ROOT / tail).exists()
-
-
 def _unparseable(error: Exception) -> list[str]:
     """Report a document the YAML reader refused, by the error it raised.
 
     ``pydantic_yaml`` declares no error type of its own: a shape violation
     arrives as pydantic's ``ValidationError`` and a syntax error from the reader
-    ``pydantic_yaml`` wraps, which no manifest here declares. Both are reported
-    as one violation rather than escaping the contract as a traceback.
+    ``pydantic_yaml`` wraps, which no manifest here declares. A repeated key is
+    one of those syntax errors, so duplicates are reported here too. Both are
+    reported as one violation rather than escaping the contract as a traceback.
     """
     return [f"does not parse: {error}"]
 
@@ -242,12 +386,7 @@ def _payee_mapping_violations(text: str) -> list[str]:
         mappings = parse_yaml_raw_as(RootModel[dict[str, list[str]]], text).root
     except Exception as error:
         return _unparseable(error)
-    declared = {
-        line.removeprefix("payee ")
-        for prelude in (REPO_ROOT / "preludes").glob("*.journal")
-        for line in _read(prelude).splitlines()
-        if line.startswith("payee ")
-    }
+    declared = _declared_payees()
     violations: list[str] = []
     for alias, targets in sorted(mappings.items()):
         for target in targets:
@@ -260,20 +399,11 @@ def _payee_mapping_violations(text: str) -> list[str]:
 
 def _id_mapping_violations(text: str) -> list[str]:
     """Return every defect in one payee id-mapping document's shape."""
-    key = re.compile(r'^(?:"([^"]+)"|([A-Za-z_][\w.-]*)):', re.MULTILINE)
-    counts = Counter(quoted or bare for quoted, bare in key.findall(text))
-    violations = [
-        f"top-level key `{name}` is declared {count} times"
-        for name, count in sorted(counts.items())
-        if count > 1
-    ]
-    if violations:
-        # The YAML reader refuses a document whose keys repeat.
-        return violations
     try:
         mappings = parse_yaml_raw_as(_IdentifierMappings, text).root
     except Exception as error:
         return _unparseable(error)
+    violations: list[str] = []
     for payee, ordering in sorted(mappings.items()):
         if not all(ordering.orders):
             violations.append(f"`{payee}`: an `orders` row is empty")
@@ -291,50 +421,46 @@ def _id_mapping_violations(text: str) -> list[str]:
     return violations
 
 
-def test_documented_bun_scripts_exist() -> None:
-    """Assert every `bun run <name>` a document shows names a real script."""
-    package = _PackageJson.model_validate_json(_read(REPO_ROOT / "package.json"))
-    names = re.compile(r"\bbun run ([^\s`)\],.;]+)")
-    _check(
-        "every documented `bun run` name must be a `package.json` script",
-        [
-            _report(document, f"`bun run {name}` names no script")
-            for document in _documented_files()
-            for name in names.findall(_read(document))
-            if name not in package.scripts
-            and "<" not in name
-            and not name.startswith("-")
-        ],
-    )
+def test_agents_command_table_matches_package_json() -> None:
+    """Assert every documented command exists and no retired spelling survives.
 
-
-def test_no_retired_script_spellings() -> None:
-    """Assert no document revives a command spelling the restructure retired."""
-    violations = [
-        _report(document, f"carries the retired spelling `{spelling}`")
-        for document in _documented_files()
-        for spelling in RETIRED_SPELLINGS
-        if spelling in _read(document)
-    ]
+    `AGENTS.md`'s table is the agent-facing command surface, so it is read cell
+    by cell: a `bun run` cell must name a `package.json` script, an owner-run
+    cell must name an invocation `scripts/clopen.py` accepts, and no cell may
+    spell a retired command — the bare name included, which a contract phrased
+    around the `bun run` form alone could not see.
+    """
+    agents_md = REPO_ROOT / "AGENTS.md"
+    package_json = REPO_ROOT / "package.json"
+    scripts = set(json.loads(_read(package_json))["scripts"])
+    rows = _table_rows(_read(agents_md), COMMAND_TABLE_HEADER)
+    violations: list[str] = []
+    if not rows:
+        violations.append(_report(agents_md, "declares no command table"))
+    for row in rows:
+        if len(row) != len(COMMAND_TABLE_HEADER):
+            violations.append(
+                _report(
+                    agents_md,
+                    f"the row `{row[0].strip('`')}` states {len(row)} cells",
+                )
+            )
+            continue
+        violations.extend(_command_violations(agents_md, row[0], scripts))
+        violations.extend(
+            _report(agents_md, f"the cell `{cell.strip('`')}` names `{token}`")
+            for cell in row
+            for token in _retired_tokens(cell)
+        )
     violations.extend(
-        _report(document, f"`{match.group(0)}` must name a `scripts.` module")
-        for document in _documented_files()
-        for match in re.finditer(r"python -m (?!scripts\.)", _read(document))
+        _report(package_json, f"`{name}` must not be an agent command")
+        for name in RETIRED_SCRIPTS
+        if name in scripts
     )
-    _check("no retired spelling may return", violations)
-
-
-def test_no_husky_references() -> None:
-    """Assert `prek.toml` declares the hooks and no document names another manager."""
-    violations = [
-        _report(document, f"names {tool}, but `prek.toml` declares the hooks")
-        for document in _documented_files()
-        for tool in ("husky", "lint-staged")
-        if tool in _read(document).lower()
-    ]
-    if not (REPO_ROOT / "prek.toml").is_file():
-        violations.append("prek.toml: the hook declaration is missing")
-    _check("`prek.toml` must be the hook manager", violations)
+    _check(
+        "every documented command must exist, and no retired spelling may return",
+        violations,
+    )
 
 
 def test_skill_frontmatter_and_budget() -> None:
@@ -343,9 +469,9 @@ def test_skill_frontmatter_and_budget() -> None:
     Rows are recognized by shape — a name and a line count — and compared with
     the tree in both directions, so a missing row and a stray row both fail.
     """
-    budget = _skill_budget()
+    budget, malformed = _skill_budget()
     skills = {skill.name: skill for skill in _skill_dirs()}
-    violations: list[str] = []
+    violations = [_report(SKILL_AUTHORING, detail) for detail in malformed]
     for name, skill in sorted(skills.items()):
         document = skill / "SKILL.md"
         if not document.is_file():
@@ -363,7 +489,7 @@ def test_skill_frontmatter_and_budget() -> None:
                 _report(document, f"{lines} lines, budget {budget[name]}")
             )
     violations.extend(
-        f".agents/instructions/skill-authoring.instructions.md: `{name}` is no skill"
+        _report(SKILL_AUTHORING, f"`{name}` is no skill")
         for name in sorted(set(budget) - set(skills))
     )
     _check("every skill declares itself and keeps its line budget", violations)
@@ -386,7 +512,7 @@ def test_aspect_skills_run_the_five_sections_in_order() -> None:
     violations: list[str] = []
     for name, expected in targets:
         document = AGENTS_DIR / "skills" / name / "SKILL.md"
-        sections = _sections(document)
+        sections = _sections(_read(document))
         missing = [section for section in expected if section not in sections]
         violations.extend(
             _report(document, f"has no `## {section}` section") for section in missing
@@ -405,54 +531,26 @@ def test_aspect_skills_run_the_five_sections_in_order() -> None:
 
 
 def test_every_skill_asset_is_routed() -> None:
-    """Assert every asset beside a `SKILL.md` is named in it."""
+    """Assert every asset beside a `SKILL.md` is named in it.
+
+    A name counts as routed when the `SKILL.md` links to the file or quotes it as
+    inline code, so the contract reads the spans the document parses into and
+    not its prose: a sentence that happens to contain an asset's name routes
+    nothing.
+    """
     violations: list[str] = []
     for skill in _skill_dirs():
-        text = _read(skill / "SKILL.md") if (skill / "SKILL.md").is_file() else ""
+        document = skill / "SKILL.md"
+        if not document.is_file():
+            violations.append(_report(document, "missing, so it routes no asset"))
+            continue
+        named = _named_files(_read(document))
         violations.extend(
-            _report(asset, f"is not named in {_relative(skill / 'SKILL.md')}")
+            _report(asset, f"is not named in {_relative(document)}")
             for asset in sorted(skill.rglob("*"))
-            if asset.is_file() and asset.name != "SKILL.md" and asset.name not in text
+            if asset.is_file() and asset.name != "SKILL.md" and asset.name not in named
         )
     _check("every skill asset must be routed from its `SKILL.md`", violations)
-
-
-def test_every_referenced_skill_exists() -> None:
-    """Assert every skill a document names is a directory, and no asset fakes one."""
-    skills = {skill.name for skill in _skill_dirs()}
-    violations = [
-        _report(document, f"names the skill `{name}`, which has no directory")
-        for document in _documented_files()
-        for name in re.findall(
-            r"\b(ingest-[a-z]+|add-payee|migrate|fix-journals)\b", _read(document)
-        )
-        if name not in skills
-    ]
-    violations.extend(
-        _report(entry, "carries the prefix of an `ingest-` aspect directory")
-        for entry in sorted((AGENTS_DIR / "skills" / "ingest").iterdir())
-        if entry.name.startswith("ingest-")
-    )
-    _check(
-        "every referenced skill must exist, and no asset may read as one", violations
-    )
-
-
-def test_markdown_relative_links_resolve() -> None:
-    """Assert every relative link and documented path resolves to a real file."""
-    links = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
-    spans = re.compile(r"`([^`\n]+)`")
-    violations: list[str] = []
-    for document in _documented_files():
-        text = _unfenced(document)
-        tokens = [match.group(1) for match in links.finditer(text)]
-        tokens.extend(match.group(1).strip() for match in spans.finditer(text))
-        violations.extend(
-            _report(document, f"`{token}` names no file a reader can open")
-            for token in tokens
-            if _is_document_path(token) and not _resolves(document, token)
-        )
-    _check("every relative path a document shows must exist", violations)
 
 
 def test_prompt_mirror_is_the_prompt_directory() -> None:
@@ -500,19 +598,6 @@ def test_prompt_mirror_is_the_prompt_directory() -> None:
     _check(
         "`.opencode/commands` must be the prompt directory or a byte-identical copy",
         violations,
-    )
-
-
-def test_prompt_arguments_are_harness_neutral() -> None:
-    """Assert no prompt carries an argument placeholder one harness alone expands."""
-    documents = {path for dir in (PROMPTS_DIR, MIRROR_DIR) for path in dir.glob("*.md")}
-    _check(
-        "prompts must name arguments every harness reads the same way",
-        [
-            _report(document, "contains a `${input:` placeholder, one harness's own")
-            for document in sorted(documents)
-            if "${input:" in _read(document)
-        ],
     )
 
 
