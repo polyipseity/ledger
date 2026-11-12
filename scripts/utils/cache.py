@@ -3,6 +3,8 @@
 This module implements the simple per-script cache used by scripts. The
 cache file is placed in ``./__pycache__`` and its name is derived
 from the module's filename: ``{stem}.cache.json`` (for example: ``cache.cache.json``).
+Setting ``PI_LEDGER_CACHE_FILE`` moves it, which the test suite does so that a
+run never writes into the package tree.
 """
 
 from collections.abc import Iterable, Sequence
@@ -10,7 +12,7 @@ from datetime import datetime, timezone
 from hashlib import sha256
 from json import JSONDecodeError
 from logging import warning
-from os import PathLike, fspath, makedirs, walk
+from os import PathLike, environ, fspath, makedirs, walk
 from os.path import basename, dirname, isdir, join, relpath, splitext
 from typing import Self
 
@@ -30,6 +32,7 @@ __all__ = (
     "file_hash",
     "journal_hash",
     "script_key_from",
+    "CACHE_FILE_VARIABLE",
     "cache_file_path",
     "evict_old_scripts",
 )
@@ -79,11 +82,26 @@ class CacheModel(RootModel[dict[str, ScriptEntryModel]]):
     root: dict[str, ScriptEntryModel]
 
 
+"""Environment variable naming an alternate cache file."""
+CACHE_FILE_VARIABLE = "PI_LEDGER_CACHE_FILE"
+
+
 def cache_file_path() -> PathLike[str]:
-    """Return the Path of the cache file in ``./__pycache__``."""
-    cache_dir = join(dirname(__file__), "__pycache__")
-    makedirs(cache_dir, exist_ok=True)
-    return Path(join(cache_dir, _SCRIPT_CACHE_NAME))
+    """Return the Path of the cache file.
+
+    The path is the value of ``PI_LEDGER_CACHE_FILE`` when that variable is
+    set, which lets a test or another caller keep its cache writes out of the
+    package tree, and ``./__pycache__`` otherwise. The parent directory is
+    created when it is missing.
+    """
+    override = environ.get(CACHE_FILE_VARIABLE)
+    cache_file = (
+        Path(override)
+        if override is not None
+        else Path(join(dirname(__file__), "__pycache__", _SCRIPT_CACHE_NAME))
+    )
+    makedirs(fspath(cache_file.parent), exist_ok=True)
+    return cache_file
 
 
 async def read_script_cache() -> CacheModel:

@@ -21,8 +21,9 @@ applyTo: "**"
 
 ### Run cache
 
-`scripts/utils/cache.py` keeps one JSON cache at `scripts/utils/__pycache__/cache.cache.json`, divided by script key. A script wraps its per-journal work in `async with JournalRunContext(Path(__file__), journals) as run:` and reads `run.to_process` and `run.skipped` from it, calling `run.report_success(journal)` for each journal it finished. On exit the context records the content hashes, prunes old entries, and writes the file back; a run that raised updates only the script's `last_access`, so the journals stay pending.
+`scripts/utils/cache.py` keeps one JSON cache at `scripts/utils/__pycache__/cache.cache.json`, divided by script key, and `PI_LEDGER_CACHE_FILE` moves that file elsewhere. A script wraps its per-journal work in `async with JournalRunContext(Path(__file__), journals) as run:` and reads `run.to_process` and `run.skipped` from it, calling `run.report_success(journal)` for each journal it finished. On exit the context records the content hashes, prunes old entries, and writes the file back; a run that raised updates only the script's `last_access`, so the journals stay pending.
 
+- The test suite points `PI_LEDGER_CACHE_FILE` at `tmp_path` for every test, so a run never overwrites the cache the next real command reads.
 - A script key is `<script name>@<sha256 of the script>+preludes@<sha256 of preludes/>`, so editing a prelude invalidates the cached journals of every script.
 - A helper that derives a cache key from a script path fails fast with `FileNotFoundError` when that path cannot be opened for reading, and never falls back to a default key.
 - A journal's hash covers its text lines with leading and trailing blank lines trimmed, so a stray newline at either edge does not force reprocessing while interior spacing still does.
