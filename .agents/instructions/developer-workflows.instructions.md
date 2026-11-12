@@ -1,103 +1,56 @@
 ---
-name: Developer Workflows
-description: Development workflows, utility scripts, code patterns, and testing/validation practices.
+name: Developer workflows
+description: "Use when changing a script under scripts/, a prek hook in prek.toml, or the pytest suite under tests/."
+applyTo: "**"
 ---
 
-# Developer Workflows
+# Developer workflows
 
-## Script Usage Policy
+`AGENTS.md` owns the command names and how they are invoked; this file covers what runs behind them. Journal syntax is `transaction-format`, journal editing is `editing-guidelines`, and commit messages are `git-commits`.
 
-**Always use bun script wrappers if available.**
+## Script internals
 
-- For all operations, prefer `bun run <script>` (e.g., `bun run check`, `bun run format`, `bun run hledger:check`, `bun run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `python -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
-- **Exception for lint-staged:** when a command is invoked by `lint-staged` and must receive the list of staged file paths (for example, formatting only staged files), invoke the underlying command directly (for example `python -m scripts.format`) rather than `bun run <script>` so the staged file paths are forwarded as argv. `bun run` does not reliably forward arbitrary file arguments in this context. Recommended lint-staged invocations in this repository:
-  - **Markdown:** `markdownlint-cli2 --fix`
-  - **Prettier:** `prettier --write`
-  - **Python formatters:** run each as a separate command so each receives the file list:
-    - `uv run --locked ruff check --fix`
-    - `uv run --locked ruff format`
-  - **Journals:** `python -m scripts.format` (accepts file args)
+`scripts/` is one Python package: each top-level module is a command, `scripts/utils/` holds the shared helpers, and the modules import each other relatively (`from .utils.cache import JournalRunContext`), which is why they run only as modules of that package. `scripts/utils/files.py::get_ledger_folder` walks from the helper's own `__file__` up to the repository root and returns `<repo>/ledger`, so discovery does not depend on the process working directory, and a caller that wants another tree passes explicit journal paths, which `find_monthly_journals` returns already resolved.
 
-  Note: When listing multiple commands for the same glob in `lint-staged`, provide them as an array so each command is executed with the staged file list appended.
+- `find_monthly_journals` matches monthly journals with the glob `**/*[0-9]{4}-[0-9]{2}/*.journal` under the ledger folder; `find_all_journals` matches every `*.journal` under a folder.
+- `run_hledger` (`scripts/utils/journals.py`) invokes `hledger --file <journal> --strict <args>` and defaults `strict=True`, so every hledger call from a script is strict unless the caller opts out; a non-zero exit raises `CalledProcessError` unless the caller sets `raise_on_error=False`.
+- The hledger binary is the managed `node_modules/.bin/hledger` that `bun install` provisions. `PATH` is consulted only when that file is absent, and no binary at all raises `FileNotFoundError` instead of running a different one.
+- A helper that needs asynchronous file operations coerces the caller's `PathLike` to `anyio.Path` internally, so callers keep passing `pathlib` objects.
+- `Any` and `Unknown` appear only with an inline justification and a `# TODO` to narrow or remove them, because `ty` runs with every rule as an error.
+- An imported name keeps its own name, with no `ArgumentParser as _ArgParser` alias to keep it out of sight, and `__all__` alone decides what a module exports. The tuple sits at module top level, immediately after the docstring and imports, and is empty in a test module.
 
-  **Formatting policy change:** This repository uses **Ruff** as the single authority for Python formatting and import sorting (Ruff provides Black-compatible formatting and import ordering features). **Black** and **isort** are intentionally **not used**; do not add them to dependencies or workflow steps. Use `uv run --locked ruff format` and `uv run --locked ruff check --fix` for formatting and import sorting.
-- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.- Be mindful of shell syntax differences. In PowerShell, avoid Bash-style command patterns such as `cd /d ...` and heredoc blocks like `python - <<'PY'`; prefer `Set-Location` or using a temporary Python script file for multi-line diagnostics.
-- When creating temporary diagnostic journals, place them adjacent to the original monthly journal so relative `include` statements resolve correctly.- For `hledger close --migrate`, run from the repository root as well.
+### Run cache
 
-**Critical:** Always use the bun script wrapper if it exists. Only fall back to direct invocation or script wrappers if no bun script is available. Always double-check the working directory before running any script command.
+`scripts/utils/cache.py` keeps one JSON cache at `scripts/utils/__pycache__/cache.cache.json`, divided by script key. A script wraps its per-journal work in `async with JournalRunContext(Path(__file__), journals) as run:` and reads `run.to_process` and `run.skipped` from it, calling `run.report_success(journal)` for each journal it finished. On exit the context records the content hashes, prunes old entries, and writes the file back; a run that raised updates only the script's `last_access`, so the journals stay pending.
 
-### Validation and Formatting (fallback if no bun script)
+- A script key is `<script name>@<sha256 of the script>+preludes@<sha256 of preludes/>`, so editing a prelude invalidates the cached journals of every script.
+- A helper that derives a cache key from a script path fails fast with `FileNotFoundError` when that path cannot be opened for reading, and never falls back to a default key.
+- A journal's hash covers its text lines with leading and trailing blank lines trimmed, so a stray newline at either edge does not force reprocessing while interior spacing still does.
+- An unreadable or invalid cache file logs a warning and starts empty, and `evict_old_scripts` drops a script untouched for a day and a file entry untouched for thirty days.
+- `scripts/clopen.py` builds its context with `cache=False`, because a month boundary must always do the full work.
 
-- `python -m scripts.check` - Validate journals (hledger strict checking)
-- `python -m scripts.format` - Auto-format journals (hledger print, sort properties)
-- `python -m scripts.format --check` - Validate formatting without modifying
+### Concurrency
 
-### Modifications (fallback if no bun script)
+- The per-journal coroutines run through `gather_and_raise` (`scripts/utils/concurrency.py`), which wraps them in an `asyncer` task group and re-raises every failure as one `BaseExceptionGroup` carrying a per-command summary.
+- hledger subprocesses are throttled by a module-level `anyio.Semaphore(cpu_count() or 4)`.
 
-- `python -m scripts.depreciate [--from YYYY-MM] [--to YYYY-MM] ITEM AMOUNT CURRENCY` - Depreciate asset
-- `python -m scripts.shift [--from YYYY-MM] [--to YYYY-MM] ACCOUNT AMOUNT CURRENCY` - Shift balances
-- `python -m scripts.replace FIND REPLACE` - Find/replace across journals
+## Hook shapes
 
-### Security (fallback if no bun script)
+Hooks are declared in `prek.toml` and installed by `bun install`.
 
-- `python -m scripts.encrypt` - Encrypt private.yaml
-- `python -m scripts.decrypt` - Decrypt private.yaml.gpg
+- `commit-msg` runs commitlint, which is what rejects a malformed message before the commit exists.
+- `pre-commit` runs the pre-commit-hooks baseline (case conflicts, shebang executability, illegal Windows names, merge conflicts, symlinks, private keys, end-of-file and byte-order fixes, `name-tests-test` with `--pytest-test-first`, and `trailing-whitespace` with the Markdown line-break extension), `check-dependabot`, `check-github-workflows`, `markdownlint-cli2 --fix --no-globs`, `uv-lock`, `ruff-check --fix`, `ruff-format`, `ty`, `prettier --write` over the code and data files, and the journal formatter.
+- `pre-push` runs `bun run test` through the local `test-bun` hook, with `pass_filenames = false` and `always_run = true`, so a push runs the whole suite rather than the files it touches.
 
-## bun Tasks
+A hook that declares a `files` glob receives the matching paths appended to its command. The journal formatter declares `ledger/<year>/<year>-<month>/**/*.journal` and runs the `scripts.format` module under `uv run --locked`, whose positional `files` argument restricts the run to those journals; to format chosen journals, name them after the module, as `uv run --locked -m scripts.format <path>`. A hook that must ignore paths, such as the test hook, sets `pass_filenames = false`.
 
-- `bun install` - Install dependencies
-- `bun run check` - Validate journals and run all checks
-- `bun run format` - Run all formatters (journals, markdown, prettier, python)
-- `bun run hledger:check` - Validate journals
-- `bun run hledger:format` - Format journals
-- `bun run hledger:format:check` - Check journal formatting
-- `bun run check:md` - Markdown lint (when running on specific files, add `--no-globs` and list the filenames to avoid scanning the whole repo)
-- `bun run check:prettier` - Prettier check
-- `bun run check:py` - Python checks (ruff)
-- `bun run format:md` - Markdown auto-fix (add `--no-globs` with explicit filenames when targeting a subset)
-- `bun run format:prettier` - Prettier auto-fix
-- `bun run format:py` - Python auto-fix
-- `bun run commitlint` - Lint commit messages
+## Tests
 
-  Note: Prettier is invoked via CLI using explicit file globs in `package.json`. Lint-staged specifies file globs directly; we no longer export a shared `FILE_GLOBS` constant from `.prettierrc.mjs`. The Prettier file globs have been expanded to include additional file types (for example: astro, graphql, json5, mdx, svelte, vue, xml) to ensure broader formatting coverage.
+`tests/conftest.py` supplies the AnyIO backend `("asyncio", {"use_uvloop": True})` for every async test in the suite.
 
-## Monthly Journal Discovery
-
-Scripts use glob `**/*[0-9]{4}-[0-9]{2}/*.journal` to find all monthly journals recursively.
-
-## Python Code Patterns
-
-Concrete script-specific patterns used in `scripts/`:
-
-- Frozen dataclasses: `@dataclass(frozen=True, slots=True, kw_only=True, match_args=False)`
-- Concurrency: `asyncio.BoundedSemaphore` limited to CPU count (or 4)
-
-All other code conventions (PathLike, type hints, docstrings, `__all__`, no `Any`, Ruff) are defined in **Agent Code Conventions** in `AGENTS.md`.
-
-### Testing
-
-- Run: `bun run test` (full suite) or `bun run test:py` (pytest only).
-- One test file per source file; mirror source structure under `tests/`.
-- Async tests: use `@pytest.mark.anyio` on `async def` test functions; never use `asyncio.run` or similar event-loop runners inside pytest.
-- Add or update tests whenever scripts, instructions, or validator behaviour change.
-- CI and Husky `pre-push` both run the test suite — run locally to avoid blocked pushes.
-
-## Pre-Commit Validation (Husky + lint-staged)
-
-```powershell
-bun run format        # Run all formatters (formats files repo-wide)
-bun run check         # Validate all journals and run all checks
-# Fix any errors before commit
-git commit -m "message"
-```
-
-**Setup:** `bun install` runs `prepare`, which runs `uv sync` to install dev extras from `pyproject.toml`/`uv.lock`. CI uses `bun install --frozen-lockfile --ignore-scripts && uv sync --locked`. No `requirements.txt` — `pyproject.toml` is canonical.
-
-Validation checks run by `bun run check`: `accounts`, `assertions`, `autobalanced`, `balanced`, `commodities`, `ordereddates`, `parseable`, `payees`, `tags`.
-
-## Commit Message Format
-
-See [git-commits.instructions.md](./git-commits.instructions.md)
-
-For ledger transaction commits only: `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body)
+- A test module takes its name and place from the source module it covers: `tests/scripts_/test_check.py` covers `scripts/check.py`, `tests/scripts_/utils/test_journals.py` covers `scripts/utils/journals.py`, and `tests/tests/test_test_utils.py` covers the shared helper `tests/test_utils.py`.
+- `tests/docs/` holds the documentation-contract tests. They read the repository tree from their own location, `Path(__file__).parents[2]`, and assert what the docs claim about it.
+- An `async def` test carries `@pytest.mark.anyio`, and the event loop comes from the backend fixture rather than a runner inside the test.
+- A `tmp_path` parameter is annotated `PathLike[str]`, and the body wraps it as `Path(tmp_path)` when it needs a `pathlib` object.
+- `pyproject.toml` adds `-n auto` and `--dist=loadscope`, so the tests of one module share a worker, and coverage is reported by default.
+- `tests/test_module_exports.py` and `tests/test_docstrings.py` read the modules' ASTs and fail on a missing `__all__`, a missing module or exported-symbol docstring, or an undocumented top-level constant, so the conventions are enforced by the suite.
