@@ -4,9 +4,10 @@ The restructure produced sixteen skills, nine instruction files, three agent
 definitions, one reference file, and two mirrored prompts. The properties that
 keep that tree coherent — every documented command exists, no retired spelling
 returns, each skill stays inside its budget, every asset is routed from its
-``SKILL.md``, the prompt mirror stays byte-identical — hold only because every
-author was careful. Each test below turns one property into a contract, reports
-every violation at once, and names the file and the rule that broke.
+``SKILL.md``, the prompt mirror is the prompt directory itself — hold only
+because every author was careful. Each test below turns one property into a
+contract, reports every violation at once, and names the file and the rule that
+broke.
 
 ``test_payee_declarations_are_ordered_and_unique`` is skipped because
 ``preludes/self.journal`` breaks the rule it enforces; its docstring holds the
@@ -20,6 +21,7 @@ naming a month or a year) and backticked commands holding whitespace are not
 paths.
 """
 
+import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -54,6 +56,24 @@ _PATH_SUFFIXES = (".journal", ".md", ".py", ".yml")
 
 """The frontmatter keys that make a file an agent definition."""
 _AGENT_KEYS = ("model", "tools")
+
+"""The sections an `ingest-*` aspect runs, in the order `skill-authoring` states."""
+_ASPECT_SECTIONS = (
+    "When to use",
+    "Rules",
+    "Procedure",
+    "Worked example",
+    "Stop and ask",
+)
+
+"""The sections `add-payee` runs: the same five, with the questions before the example."""
+_PAYEE_SECTIONS = (
+    "When to use",
+    "Rules",
+    "Procedure",
+    "Stop and ask",
+    "Worked example",
+)
 
 """Why the payee-declaration contract is skipped, naming the lines to repair."""
 PAYEE_DEFECTS = (
@@ -140,6 +160,20 @@ def _skill_dirs() -> list[Path]:
     """Return every skill directory, sorted by name."""
     skills = (AGENTS_DIR / "skills").iterdir()
     return sorted(entry for entry in skills if entry.is_dir())
+
+
+def _sections(document: Path) -> list[str]:
+    """Return ``document``'s second-level headings, in file order."""
+    return [
+        line.removeprefix("## ").strip()
+        for line in _read(document).splitlines()
+        if line.startswith("## ")
+    ]
+
+
+def _file_names(directory: Path) -> set[str]:
+    """Return the names of the files one prompt directory holds."""
+    return {path.name for path in directory.iterdir() if path.is_file()}
 
 
 def _skill_budget() -> dict[str, int]:
@@ -335,6 +369,41 @@ def test_skill_frontmatter_and_budget() -> None:
     _check("every skill declares itself and keeps its line budget", violations)
 
 
+def test_aspect_skills_run_the_five_sections_in_order() -> None:
+    """Assert each aspect and `add-payee` runs its sections as the skeleton rule states.
+
+    `skill-authoring` fixes the order for the twelve aspects and for `add-payee`,
+    which puts its questions before its example, so thirteen skills are asserted;
+    `ingest`, `fix-journals`, and `migrate` are task-shaped and take the sections
+    their job needs, and a rule a test can assert must not live only in prose.
+    """
+    targets = [
+        (skill.name, _ASPECT_SECTIONS)
+        for skill in _skill_dirs()
+        if skill.name.startswith("ingest-")
+    ]
+    targets.append(("add-payee", _PAYEE_SECTIONS))
+    violations: list[str] = []
+    for name, expected in targets:
+        document = AGENTS_DIR / "skills" / name / "SKILL.md"
+        sections = _sections(document)
+        missing = [section for section in expected if section not in sections]
+        violations.extend(
+            _report(document, f"has no `## {section}` section") for section in missing
+        )
+        present = [section for section in sections if section in expected]
+        if not missing and present != list(expected):
+            violations.append(
+                _report(
+                    document,
+                    f"runs {', '.join(present)}; the rule states {', '.join(expected)}",
+                )
+            )
+    _check(
+        "each aspect and `add-payee` must run its five sections in order", violations
+    )
+
+
 def test_every_skill_asset_is_routed() -> None:
     """Assert every asset beside a `SKILL.md` is named in it."""
     violations: list[str] = []
@@ -386,23 +455,52 @@ def test_markdown_relative_links_resolve() -> None:
     _check("every relative path a document shows must exist", violations)
 
 
-def test_prompt_mirrors_are_identical() -> None:
-    """Assert `.opencode/commands` mirrors `.agents/prompts` byte for byte."""
+def test_prompt_mirror_is_the_prompt_directory() -> None:
+    """Assert `.opencode/commands` is the prompt directory, or a byte-identical copy.
+
+    The mirror is a tracked symlink, so reading both paths compares one inode
+    with itself and a byte comparison could never fail. The contract therefore
+    checks where a symlink points, and asks for matching names and bytes only
+    when the mirror is a real directory: replacing the link with a stale copy is
+    the regression, and it fails here.
+    """
     violations: list[str] = []
-    if not MIRROR_DIR.is_dir():
-        violations.append(_report(MIRROR_DIR, "the prompt mirror is missing"))
+    sources = _file_names(PROMPTS_DIR)
+    if not sources:
+        violations.append(_report(PROMPTS_DIR, "holds no prompt"))
+    if MIRROR_DIR.is_symlink():
+        if MIRROR_DIR.resolve() != PROMPTS_DIR.resolve():
+            violations.append(
+                _report(
+                    MIRROR_DIR,
+                    f"links to `{os.readlink(MIRROR_DIR)}`, not the prompt directory",
+                )
+            )
+    elif not MIRROR_DIR.is_dir():
+        violations.append(
+            _report(MIRROR_DIR, "is neither the prompt directory nor a copy of it")
+        )
     else:
-        names = {path.name for path in PROMPTS_DIR.iterdir() if path.is_file()}
-        names |= {path.name for path in MIRROR_DIR.iterdir() if path.is_file()}
-        for name in sorted(names):
-            source, mirror = PROMPTS_DIR / name, MIRROR_DIR / name
-            if not source.is_file():
-                violations.append(_report(mirror, "has no source prompt"))
-            elif not mirror.is_file():
-                violations.append(_report(source, "has no mirror"))
-            elif source.read_bytes() != mirror.read_bytes():
-                violations.append(_report(mirror, f"differs from its source `{name}`"))
-    _check("each prompt and its mirror must be byte-identical", violations)
+        mirrors = _file_names(MIRROR_DIR)
+        if not mirrors:
+            violations.append(_report(MIRROR_DIR, "holds no prompt"))
+        violations.extend(
+            _report(MIRROR_DIR / name, "has no source prompt")
+            for name in sorted(mirrors - sources)
+        )
+        violations.extend(
+            _report(PROMPTS_DIR / name, "has no mirror")
+            for name in sorted(sources - mirrors)
+        )
+        violations.extend(
+            _report(MIRROR_DIR / name, f"differs from its source `{name}`")
+            for name in sorted(sources & mirrors)
+            if (PROMPTS_DIR / name).read_bytes() != (MIRROR_DIR / name).read_bytes()
+        )
+    _check(
+        "`.opencode/commands` must be the prompt directory or a byte-identical copy",
+        violations,
+    )
 
 
 def test_prompt_arguments_are_harness_neutral() -> None:

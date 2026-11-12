@@ -63,3 +63,7 @@ preludes/
 ## Script discovery
 
 See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: `bun run <script>` from the repository root, or a Python module as `-m scripts.<mod>` from that same root, because the package imports relatively and any other working directory fails before it finds an include.
+
+## The agent layer
+
+Four directories under `.agents/` divide the work an agent is given: `skills/` carry the procedure for one task, `instructions/` carry the rules a file type obeys, `agents/` carry three narrow roles (entry writer, migrator, verifier), and `reference/` carries the account taxonomy as material rather than as a rule. Each member is added for a job the others do not do — a task for a skill, a file type for an instruction, a role for an agent — and a file that restates a rule another member already holds is the duplication `.agents/instructions/skill-authoring.instructions.md` names.
