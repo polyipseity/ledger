@@ -22,7 +22,7 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 7. **Extras follow the activity, not a checklist.** `eating:` names the meal rather than the cuisine; `duration:` appears only where the source bounds both ends of the span; `rate:` only where the transaction converts one commodity into another; `posted:` only where the source's own timestamp differs from the date the entry takes.
 8. **The receipt vocabulary stays on postings.** `food_or_drink:`, `item:`, `discount:`, `voucher:`, and `valid:` describe one posting and never reach a header, whereas a header's keys describe the event itself (`activity:`, `time:`, `timezone:`, `via:`, `transfer:`, `clopen:`).
 9. **A comma ends the part.** A value that needs one is written with `;` instead, and a `"` inside a value is written directly rather than escaped, because the formatter splits the comment on commas before it sorts the parts.
-10. **Every key name is declared before it is used.** The closed list is the `tag` lines of `preludes/index.journal` (shared) and `preludes/self.journal` (main stream); `bun run check:journal` fails a name outside it through `hledger check tags`. A needed name that is undeclared stops the entry until the owner adds the `tag` line.
+10. **Every key name is declared before it is used.** The closed list is the `tag` lines of `preludes/index.journal` together with those of the prelude of the stream the entry belongs to — `preludes/self.journal` for the main stream, `preludes/self.alternatives.journal` for the alternatives stream, which alone declares `collect`, `compute`, and `recycle`; `bun run check:journal` fails a name outside it through `hledger check tags`. A needed name that is undeclared stops the entry until the owner adds the `tag` line.
 11. **No prelude enumerates values, so borrow them.** Nothing declares the legal `activity:` or `eating:` values; the vocabulary is what `ledger/**` already writes, which makes searching for an existing term part of choosing one.
 
 ## Procedure
@@ -38,8 +38,8 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 
 ```hledger
 2025-03-04 Example Bookstore  ; activity: consumption, time: 15:20, timezone: UTC+08:00
-    expenses:education:books              80.00 HKD  ; item: textbook
-    assets:digital:Octopus cards:<uuid>  -80.00 HKD
+    expenses:education:books                  80.00 HKD  ; item: textbook
+    assets:digital:Octopus cards:<uuid>      -80.00 HKD
 ```
 
 ## Stop and ask

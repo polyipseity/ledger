@@ -17,7 +17,7 @@ A deduction for a bus, rail, ferry, tram, light-rail, minibus, taxi, or airplane
 2. **The mode picks the account.** `expenses:transport:buses`, `:trains` with `:high-speed` for a long-haul ticket, `:ferries`, `:light rail`, `:minibuses`, `:taxis`, `:trams`, or `:airplanes`, chosen from `../../instructions/account-hierarchy.instructions.md`. The amount never picks the mode.
 3. **A fare carries `activity: transport`.** A points redemption from the same program is a reward transaction rather than a fare.
 4. **A fare has no duration.** No `duration:` goes on a fare, and a later statement row that pairs with an existing fare entry never adds one: the fare has a start and no end.
-5. **The accrual rides in the same transaction.** An operator that credits points with the fare gets two extra postings on the same date, in the order expense, accrual, payment, revenue: `assets:accrued revenues:rewards` positive and `revenues:rewards` negative, both in the program's point commodity.
+5. **Each reward commodity accrues in its own pair.** An operator that credits points with the fare gets one accrual pair per reward commodity, on the same date, ordered expense, accruals, payment, revenues: `assets:accrued revenues:rewards` positive and `revenues:rewards` negative in each commodity.
 6. **Confirm the point commodity.** `_PT/E` is the common transit currency; any other program's commodity is checked in the prelude before use, and a program whose commodity is undeclared stops the entry.
 7. **Not every transit purchase accrues.** A public light bus fare and a vending-machine purchase accrue nothing; a vending drink is a food entry (`../ingest-food/SKILL.md`), so only a payee whose program is known gets an accrual pair.
 8. **A reload is a transfer.** It moves money between your own accounts and is never a transport expense.
@@ -36,10 +36,10 @@ A deduction for a bus, rail, ferry, tram, light-rail, minibus, taxi, or airplane
 
 ```hledger
 2025-03-04 Example Bus Operator  ; activity: transport, time: 08:15, timezone: UTC+08:00
-    expenses:transport:buses                                  6.00 HKD
-    assets:accrued revenues:rewards                           6.00 _PT/E
-    assets:digital:Octopus cards:<uuid>                      -6.00 HKD
-    revenues:rewards                                         -6.00 _PT/E
+    expenses:transport:buses                   6.00 HKD
+    assets:accrued revenues:rewards          6.00 _PT/E
+    assets:digital:Octopus cards:<uuid>       -6.00 HKD
+    revenues:rewards                        -6.00 _PT/E
 ```
 
 ## Stop and ask

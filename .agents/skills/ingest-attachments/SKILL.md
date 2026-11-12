@@ -35,8 +35,8 @@ A photographed receipt, a wallet or banking-app screenshot, a statement exported
 
 ```hledger
 2025-03-04 ! unknown  ; scan 0000.pdf, activity: consumption, time: 12:00, timezone: UTC+08:00
-    equity:unknown                      0.00 HKD
-    assets:digital:Octopus cards:<uuid> 0.00 HKD
+    equity:unknown                             0.00 HKD
+    assets:digital:Octopus cards:<uuid>        0.00 HKD
 ```
 
 ## Stop and ask

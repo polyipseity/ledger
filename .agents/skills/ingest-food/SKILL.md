@@ -19,11 +19,11 @@ A restaurant, cafe, canteen, takeaway, bakery, supermarket, or app order whose s
 4. **Modifiers attach; items do not.** Preparation adjustments join their base item inside one tag through the `+` separator (`奶茶 + 多奶`), and a modifier never stands alone. Two full-priced dishes never join with `+`; separate tags on one line are separated by commas.
 5. **Strip metadata, keep the name.** Drop ordering and service markers (`配`, `堂食`, `外賣`, `自取`, the set marker `餐`, `(早)`/`(午)`/`(晚)`, a stray leading `+`); every remaining printed character is the item name, item code included (`091421 LA BOULANGERIE BREAD`).
 6. **Split what the print separates.** A `・` between names, a receipt sub-item prefix (`--`, `+`), and a `配` connector that joins two named dishes each yield separate items rather than one joined name.
-7. **Quote and comma hygiene.** Write a `"` inside a tag value directly, never escaped; replace a comma inside one value with `;`; write a quantity as `×` plus a digit (`火腿 ×2`).
+7. **Quantities use `×`.** Write a count as `×` plus a digit (`火腿 ×2`); how a tag value carries a `"` or a comma is `../ingest-tags/SKILL.md`'s quoting rule.
 8. **No reading, no name.** An item you cannot read becomes `food_or_drink: (unknown)`, one per printed item, and no invented name ever replaces printed text.
 9. **A voucher is a negative expense.** A printed coupon, cash-card, or points-redemption line gets its own negative `expenses:food and drinks:dining` posting whose tag carries the printed label verbatim, with the payment posting left to cover the remainder.
 10. **Order time to settlement time.** `time:` is the printed order or print time, and `duration:` spans order to settlement when both are printed, at second precision (`PT36M52S`). Omit `duration:` below `PT2M`: a meal's dwell time is not a duration.
-11. **Split the bill at the table.** Each non-paying participant gets one `equity:friends:<uuid>` posting for their share and a matching negative expense posting; a friend who paid leaves `liabilities:loans:friends:<uuid>` for what you owe, settled through `../ingest-lending/SKILL.md`.
+11. **The payer decides the split.** When your own account paid the bill, the whole amount stays your expense and each other participant's share is one `equity:friends:<uuid>` posting, with no negative expense line. When someone else paid it, no payment posting appears: every other participant's share becomes a negative expense posting for each account its portion touches, and your own share is the one `equity:friends:<uuid>` posting. A friend advancing money you will repay as a loan is `../ingest-lending/SKILL.md`'s.
 12. **The printed language wins.** Keep each name in the language it was printed in, with `../ingest/food_translations.yml` supplying an approved replacement. Nothing else is translated.
 
 ## Procedure
@@ -40,12 +40,12 @@ A restaurant, cafe, canteen, takeaway, bakery, supermarket, or app order whose s
 
 ```hledger
 2025-03-04 (000-000000, 1A) Example Noodle House  ; activity: eating, duration: PT25M10S, eating: lunch, time: 12:30:00, timezone: UTC+08:00
-    expenses:food and drinks:dining                     40.00 HKD  ; food_or_drink: 招牌湯麵
-    expenses:food and drinks:dining                      0.00 HKD  ; food_or_drink: 熱奶茶 + 多奶
-    expenses:food and drinks:fees                        4.00 HKD  ; food_or_drink: 10% service charge
-    expenses:food and drinks:dining                    -20.00 HKD  ; food_or_drink: [電子現金券] $20 午餐券
-    equity:friends:<uuid>                              -12.00 HKD
-    assets:digital:Octopus cards:<uuid>                -12.00 HKD
+    expenses:food and drinks:dining           40.00 HKD  ; food_or_drink: 招牌湯麵
+    expenses:food and drinks:dining            0.00 HKD  ; food_or_drink: 熱奶茶 + 多奶
+    expenses:food and drinks:fees              4.00 HKD  ; food_or_drink: 10% service charge
+    expenses:food and drinks:dining          -20.00 HKD  ; food_or_drink: [電子現金券] $20 午餐券
+    equity:friends:<uuid>                    -12.00 HKD  ; friend's share
+    assets:digital:Octopus cards:<uuid>      -12.00 HKD
 ```
 
 ## Stop and ask
