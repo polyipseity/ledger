@@ -17,7 +17,7 @@ Take these fields off the source before anything is written, and note for each w
 
 ## Target journal
 
-`ledger/<year>/<year>-<month>/<name>.journal`, and the month is the transaction's own date — the day the money moved, never the day the material was read or handed over. The monthly tree holds two file names, 102 `self.journal` and 47 `self.alternatives.journal`, and every one of the ledger's 6,862 transactions sits in a file named for its own month.
+`ledger/<year>/<year>-<month>/<name>.journal`, and the month is the transaction's own date — the day the money moved, never the day the material was read or handed over. The monthly tree holds two file names, `self.journal` and `self.alternatives.journal`, and every transaction sits in a file named for its own month.
 
 - **The liquid stream is the default.** `self.journal` takes banks, cash, cards, wallets, rewards, and objects; `self.alternatives.journal` takes the illiquid holdings alone, and `../../instructions/alternatives-journal.instructions.md` draws the line.
 - **A year file, `ledger/index.journal`, and the preludes take no transaction.** The first two include and the third declares; `../../instructions/architecture.instructions.md` holds the tree and `../../instructions/editing-guidelines.instructions.md` the placement rules.
@@ -27,20 +27,21 @@ Take these fields off the source before anything is written, and note for each w
 Four actions, decided per claim, each with the test that selects it:
 
 1. **no action** when an existing entry already encodes every claim the source supplies — the same date, amount, payee, items, identifiers, and timing metadata. Report the matched entry and edit nothing.
-2. **update** when a match exists and the source adds or corrects a field: seconds on `time:`, a `duration:`, item lines, a printed identifier, a payee mapping, an amount. Patch the minimum lines and preserve every line the source does not contradict; which fields a match may touch is the matching aspect's to say, and `../ingest-statement/SKILL.md` and `../ingest-octopus/SKILL.md` both state it for their own rows.
+2. **update** when a match exists and the source adds or corrects a field: seconds on `time:`, a `duration:`, item lines, a printed identifier, a payee mapping, an amount the source contradicts. Patch the minimum lines and preserve every line the source does not contradict; which fields a match may touch is the matching aspect's to say, and `../ingest-statement/SKILL.md` and `../ingest-octopus/SKILL.md` both state it for their own rows.
 3. **add** when no entry in the ledger accounts for the claim.
-4. **remove** only when the entry is wrong and no source supports it, always through `../ingest-remove/SKILL.md`, whose evidence test and balance sweep run before anything is deleted.
+4. **remove** only for a duplicate, a source the owner has withdrawn, or an entry no source can repair, always through `../ingest-remove/SKILL.md`, whose evidence test and balance sweep run before anything is deleted.
+
+**A contradicting amount is an update.** The entry and the source still describe one claim, so the value is corrected in place; removal is reserved for a claim that should not exist at all, and the matching procedure below is what keeps a different merchant's entry out of that correction.
 
 The run is idempotent by construction: a second pass over the same source reports zero add and zero update rows, and a claim that asks for an action it already took means the first pass's entry cannot be identified, which is a defect rather than a row to skip.
 
 ## Matching procedure
 
-1. Take the candidates from the managed binary, `node_modules/.bin/hledger print -f ledger/index.journal -O json`, narrowed to the claim's date. When the journal will not parse, `rg -n` the month's file instead and hand the parse failure to `../fix-journals/SKILL.md`.
-2. Match on the date and the signed amount. A candidate that disagrees on either is not a candidate, and a claim with no candidate is an **add**.
+1. Take the candidates from the managed binary, scoped to the claim's own day: `node_modules/.bin/hledger print -f ledger/index.journal -O json 'date:<YYYY-MM-DD>'`. When the journal will not parse, fall back to `rg -n -e '<YYYY-MM-DD>' -e '<printed amount>'` over the month's file, and hand the parse failure to `../fix-journals/SKILL.md`.
+2. Key the match on the date, the signed amount, and the payee the claim resolves to (`../ingest-payee/SKILL.md`). The amount is the one on the posting the money moved through — the bank, card, wallet, or cash side — never the entry's first or largest posting, because the source's one figure reaches the entry twice, positive on the expense side and negative on the side that paid, so "the entry's amount" names one posting rather than a sum. A candidate that disagrees on the date or the amount is not a candidate, and a claim with no candidate is an **add**; one that agrees on both while the payee disagrees stops the row instead, because one of the two is wrong.
 3. Match the time at the tolerance its class allows: the printed minute for transport, and ±90 minutes from the printed time for dining and shopping. A statement row follows the weaker order `../ingest-statement/SKILL.md` sets out, and a reload is never matched by a window at all (`../ingest-octopus/SKILL.md`).
 4. Re-read each surviving candidate's header line before acting. No decision rests on a read taken earlier in the run.
 5. Pair one entry with one source row and one source row with one entry. A claim that several candidates fit equally stops the batch, and so does a second row reaching an entry another row already claimed — `./owner-notes.md` holds both cases.
-6. A second run over the same source must reach the same pairings. A claim that pairs differently is reported, never written twice.
 
 ## Aspect routing table
 
@@ -59,7 +60,7 @@ The run is idempotent by construction: a second pass over the same source report
 | a photo, PDF, screenshot, or the OCR text taken from one | `../ingest-attachments/SKILL.md` |
 | an existing entry to delete | `../ingest-remove/SKILL.md` |
 
-Read this file, then exactly the aspects the route names — a photographed receipt routes twice, `../ingest-attachments/SKILL.md` for the page and `../ingest-food/SKILL.md` for its lines — and never all twelve. A rule that holds for one class of transaction belongs in that aspect, not here.
+Read this file, then exactly the aspects the route names — a photographed receipt routes twice, `../ingest-attachments/SKILL.md` for the page and `../ingest-food/SKILL.md` for its lines, and a wallet statement row routes twice as well, `../ingest-statement/SKILL.md` for the credit and `../ingest-octopus/SKILL.md` for the card leg — and never all twelve. A rule that holds for one class of transaction belongs in that aspect, not here.
 
 ## Batching and delegation
 
@@ -86,5 +87,6 @@ A merchant, an alias, an identifier shape, or an item translation that the sourc
 - `./id_mappings.yml` — each mapped payee's identifier order, with regex hints for the shapes it accepts.
 - `./food_translations.yml` — item translations, added only with the owner's approval.
 - `./examples.md` — the shared bank of worked examples, one per shape the aspects describe; read the case matching the aspect before writing rather than reconstructing it from a finished entry.
+- `./owner-notes.md` — the report's columns, the confidentiality rule, and the cases that stop a batch and ask.
 
 Nothing in this directory is named with the `ingest-` prefix, because that prefix names the aspect skill directories beside it and a file wearing one reads as a skill to every reference check.

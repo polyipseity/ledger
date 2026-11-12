@@ -18,9 +18,9 @@ One table per run, in source order, one row per source row, and a row that stopp
 
 Below the table:
 
-- **A seconds-only update is not listed.** A row that adds seconds to a `time:` holding none changes nothing else, so it is applied quietly and the run reports the count. A change that moves a minute, an hour, or a date shows both datetimes, before and after.
-- **An unmatched row stays in the table** with its reason: no candidate at all, several candidates that the amount and the payee do not separate, or a row held for a question below. It is never dropped to make the table look finished.
-- **A removal is quoted verbatim** — the entry's own lines, its file, and the balances that depended on it — because the report is what lets the owner put it back.
+- **A change too fine for the table follows its aspect's rule.** A seconds-only update is applied quietly, per `../ingest-statement/SKILL.md`, so the table does not list it; a change that moves a minute, an hour, or a date shows both datetimes, before and after.
+- **An unmatched row stays in the table** with its reason: no candidate at all, several candidates that the amount, the payee, and the time do not separate, or a row held for a question below. It is never dropped to make the table look finished.
+- **A removal is quoted as `../ingest-remove/SKILL.md` requires**, because the report is what lets the owner put the entry back.
 - **Every question is a bullet under the table**, naming the source row it holds; nothing is deferred without one.
 
 ## Confidentiality
@@ -31,7 +31,9 @@ The table carries UUIDs, the aspects' generic payees, and its own amounts. It ne
 
 - A printed name that no `./payee_mappings.yml` alias, `private.yaml` pair, or prelude declaration covers.
 - An alias with several targets that the row's amount, items, and venue do not separate.
-- Several candidate entries that the amount and the time do not reduce to one.
+- Several candidate entries that the amount, the payee, and the time do not reduce to one.
+- A row whose amount matches an entry while its name points elsewhere, since one of the two is wrong.
+- A second source row that reaches an entry another source row already claimed.
 - An aggregate total that matches no single posting, or matches several payers' shares.
 - An item the source prints in a form no approved translation covers.
 - A reload with no credit behind it, or a credit with no reload.
