@@ -15,7 +15,7 @@ This skill adds one `payee` declaration to a prelude file. What a journal's paye
 
 ## Rules
 
-1. **A `payee` line lives in a prelude, never in a journal.** `preludes/self.journal` takes the main stream's merchants, people, institutions, and UUIDs, and `preludes/self.alternatives.journal` an alternatives-only payee. The three prelude files declare 265 payees between them, and no journal under `ledger/**` declares one.
+1. **A `payee` line lives in a prelude, never in a journal.** `preludes/self.journal` takes the main stream's merchants, people, institutions, and UUIDs, and `preludes/self.alternatives.journal` an alternatives-only payee. The three prelude files declare every payee between them, and no journal under `ledger/**` declares one.
 2. **`preludes/index.journal` gains none of them.** Its six declarations are the structural names that generated blocks and transfers carry — `opening balances`, `closing balances`, `self`, `unknown`, `adjustment`, `depreciation`.
 3. **Insert at the name's own byte-lexicographic place.** The declarations form one alphabetical block, so the new line goes between the two it sorts between; digits and `*`-masked names sort by those characters, and a UUID by its first hex digit rather than beside the person it names.
 4. **Add one line; ordering that is already broken is not this change's.** The insertion goes into its sorted position, `../../instructions/editing-guidelines.instructions.md` owns the ordering convention, and no neighbour is re-sorted to meet it. An inversion you notice is reported rather than repaired inside an unrelated edit, because restoring existing order is a change of its own. Nothing is reflowed, and no existing line is deleted or renamed as part of adding one.
@@ -26,7 +26,7 @@ This skill adds one `payee` declaration to a prelude file. What a journal's paye
 
 1. Read the block and find the name's neighbours: `rg -n '^payee ' preludes/self.journal`, or the alternatives prelude when the entry lands there.
 2. Insert `payee <name>` between them, touching no other line; `./examples.md` shows the same insertion for a simple name.
-3. Run `bun run check:journal`, then `bun run format:journal`. The check is a compound over the whole ledger and takes no file argument.
+3. Run `bun run check:journal`: a compound over the whole ledger that takes no file argument, and the only automated check a prelude edit gets — it fails on a payee no prelude declares, though not on one merely out of order. The formatter covers the monthly journals alone, so it cannot rewrite a prelude and is not run for one.
 4. Confirm the line is there exactly once, in place: `rg -n '^payee <name>$' preludes/self.journal`.
 
 ## Stop and ask
