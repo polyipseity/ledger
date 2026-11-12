@@ -6,6 +6,6 @@ This file contains short, non-confidential examples for registering payees in `p
 
 1. Open `preludes/self.journal` and find the payee block.
 2. Insert `payee Acme Coffee` between the two declarations it sorts between, in strict lexicographic order.
-3. Run `bun run check:journal`, then `bun run format:journal`.
+3. Run `bun run check:journal`.
 
 (Keep examples short and non-confidential.)

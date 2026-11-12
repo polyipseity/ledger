@@ -29,7 +29,7 @@ A photographed receipt, a wallet or banking-app screenshot, a statement exported
 3. Resolve the payee (`../ingest-payee/SKILL.md`) and the printed key set (`../ingest/id_mappings.yml`).
 4. Build each entry, leaving the metadata to `../ingest-tags/SKILL.md` and the itemization to the aspect that owns the accounts involved.
 5. Flag every page you could not read, quoting both readings.
-6. Hand the entries to `../ingest/SKILL.md` and the unprocessed attachments to the report; the check loop is `../fix-journals/SKILL.md`.
+6. Hand the entries to `../ingest/SKILL.md` and the unprocessed attachments to the report; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

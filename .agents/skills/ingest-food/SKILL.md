@@ -34,7 +34,7 @@ A restaurant, cafe, canteen, takeaway, bakery, supermarket, or app order whose s
 4. Add the fee postings, then the printed voucher line, then any split.
 5. Close the block as rule 11 splits it: a payment posting for the remainder when your own account paid, and none when someone else paid.
 6. Derive `time:` and `duration:` from the printed timestamps.
-7. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
+7. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

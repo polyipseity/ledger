@@ -31,7 +31,7 @@ A source that lends money, borrows it, repays it, or splits a bill with friends:
 3. Choose the shape: a plain expense, (a), (b), (c), or a settlement of an earlier loan.
 4. Write the block in the ledger's posting order with the marker rule 2 allows.
 5. For a settlement, zero the loan account with its assertion and flip the originating entry to `*`.
-6. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
+6. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

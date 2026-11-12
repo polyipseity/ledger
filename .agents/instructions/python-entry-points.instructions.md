@@ -62,7 +62,7 @@ if __name__ == "__main__":
 
 ## Ledger-Specific Rules
 
-1. **Script location & invocation**: All utility scripts live in `scripts/` and are run via `bun run <script>` when a wrapper exists, or `uv run -m scripts.<cmd>` otherwise. Always set `cwd=scripts/` when invoking from Python tooling.
+1. **Script location & invocation**: All utility scripts live in `scripts/` and are run via `bun run <script>` when a wrapper exists, or `uv run --locked -m scripts.<cmd>` otherwise. The module is imported relatively, so the repository root is the only working directory that resolves it.
 
 2. **Argument handling**: If a script accepts arguments (e.g., for transaction filtering, account selection), pass them through the `argv` parameter in `main()`. Include argument parsing (argparse or manual) inside `main()` to keep it testable.
 

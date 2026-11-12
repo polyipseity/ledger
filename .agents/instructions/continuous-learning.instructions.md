@@ -20,28 +20,27 @@ This file consolidates lessons, anti-patterns, and continuous improvements disco
 **Rule:**
 
 - **Always prefer `bun run <script>`** from repo root (sets up environment automatically)
-- **Only use `python -m scripts.<cmd>` when no `bun run <script>` wrapper exists**
-- **When using Python directly, set `cwd=scripts/`** in tool parameters
-- **For `hledger close --migrate`, run from repo root**
+- **Only use `python -m scripts.<cmd>` when no `bun run <script>` wrapper exists**, from that same root
+- **Month boundaries come from `bun run clopen <YYYY-MM>`**, run from the repository root
 - When creating temporary journals for diagnosis, put the temp file in the same journal directory or run hledger from that directory so relative `include` paths resolve correctly.
 - When running multi-line Python or shell diagnostics, be mindful of the current shell. Avoid Bash-style heredoc syntax such as `python - <<'PY'` in PowerShell and prefer `python -c` or a temp script file instead.
 
 **Examples of wrong vs. right:**
 
 ```powershell
-# ❌ Wrong: python script from wrong directory
-python -m format
+# ❌ Wrong: module run outside the package root
+cd scripts && python -m scripts.format
 
 # ✅ Right: Use bun wrapper from repo root
 bun run format
 
-# ✅ Right: Python direct with correct cwd
-# Tool: set cwd=scripts/, then run: python -m format
+# ✅ Right: Python direct, module form from the repo root
+uv run --locked -m scripts.format
 ```
 
 **Antipattern registry:**
 
-- Running `python -m check` from repo root (fails to find includes)
+- Running the module from a subdirectory such as `scripts/`, which fails with `attempted relative import with no known parent package`
 - Using `ux run ...` or other shortcuts (not reliable)
 - Assuming the current directory is correct without checking
 
@@ -57,11 +56,11 @@ bun run format
 
 ### Pre-commit Validation Checklist
 
-1. **Format Markdown** (if editing instructions): `bun run markdownlint:fix`
+1. **Format Markdown** (if editing instructions): `bun run format:md`
 2. **Format journals**: `bun run format`
 3. **Validate journals**: `bun run check`
 4. **Run tests**: `bun run test` (if editing code or instructions)
-5. **Encrypt secrets**: `bun run encrypt` (if modified `private.yaml`)
+5. **Encrypt secrets**: `scripts/encrypt.sh` (if modified `private.yaml`)
 6. **Stage & review**: `git status && git diff`
 7. **Commit**: Follow `.agents/instructions/git-commits.instructions.md`
 
@@ -69,7 +68,7 @@ bun run format
 
 - `bun run format:py` — Format Python only
 - `bun run format:md` — Format Markdown only
-- `bun run format:hledger` — Format journals only
+- `bun run format:journal` — Format journals only
 - `bun run check:py` — Validate Python types/linting only
 
 ---
@@ -82,7 +81,7 @@ bun run format
 | --------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
 | **Editing year-level journals**               | Transactions out of monthly hierarchy                     | Always edit `ledger/YYYY/YYYY-MM/*.journal`; year files are includes only                                           | **CRITICAL** |
 | **Out-of-chronological-order transactions**   | Validation fails; reports out-of-order; hledger confusion | Always insert transactions in strict date+time order; use `.agents/instructions/transaction-format.instructions.md` | **CRITICAL** |
-| **Missing timezone tags**                     | Ambiguous transaction times; breaks reporting             | Every transaction MUST have `timezone: UTC+08:00` in comment                                                        | **CRITICAL** |
+| **Missing timezone tags**                     | Ambiguous transaction times; breaks reporting             | Record the zone the source printed, as `.agents/instructions/transaction-format.instructions.md` sets out           | **CRITICAL** |
 | **Payees declared in monthly journals**       | Duplicate payees; validation fails                        | **Always** declare payees in `preludes/self.journal` only, alphabetized                                             | **CRITICAL** |
 | **Payees out of lexicographical order**       | Merge conflicts; maintenance issues                       | Check entire payee section; insert any new payee in correct ASCII order                                             | **HIGH**     |
 | **Accounts out of lexicographical order**     | Same as payees                                            | Check entire account section; move any out-of-order entries                                                         | **HIGH**     |
@@ -108,7 +107,7 @@ bun run format
 
 - **Unencrypted `private.yaml` committed**
   - Symptom: Security breach
-  - Fix: Always encrypt via `bun run encrypt` before commit; use `.agents/instructions/security.instructions.md`
+  - Fix: Always encrypt via `scripts/encrypt.sh` before commit; use `.agents/instructions/security.instructions.md`
   - Priority: **CRITICAL**
 
 ### Code & Documentation
@@ -179,7 +178,7 @@ bun run format
 **Food transaction pattern validation (2026-04-18):**
 
 - **Zero-priced itemization consistency:** TamJai SamGor (04-16) and American Diner (04-17) validated pattern: each bundled meal component gets its own posting line + `food_or_drink:` tag, even if zero-priced. Saizeriya entries (04-15, 04-18) show simple two-line structure (2 paid items + 1 payment). Consistency rule: preserve receipt structure exactly—do not collapse or group postings beyond what's printed. See `food_transactions.md` for detailed rule.
-- **Duration precision:** TamJai (04-16) PT36M52S (order 10:27:01 → checkout ~11:03:53) and Saizeriya (04-18) PT30M38S (order 12:27:18 → checkout ~12:57:56) validate second-level precision. Always calculate from receipt timestamps + explicit UTC+08:00 timezone tag. Format as ISO-8601 `duration:` in transaction header. See `food_transactions.md` for rule.
+- **Duration precision:** TamJai (04-16) PT36M52S (order 10:27:01 → checkout ~11:03:53) and Saizeriya (04-18) PT30M38S (order 12:27:18 → checkout ~12:57:56) validate second-level precision. Always calculate from receipt timestamps plus the explicit `timezone:` tag the source supports. Format as ISO-8601 `duration:` in transaction header. See `food_transactions.md` for rule.
 - **Duration plausibility guard:** For `activity: eating`, omit `duration:` when the computed meal duration is implausibly short (roughly under 1–2 minutes; default `< PT2M`). This avoids recording terminal-processing gaps as meal durations when receipts only expose near-simultaneous timestamps.
 - **Shared expense equity vs. liability:** HKUST ramen (04-17) demonstrates immediate same-day split: itemizes dining + drinks postings, then adds single `equity:friends:4491140b-7e34-48fe-8e3d-aca591ed6d6e` posting with -50.50 HKD (negative = friend's share offset). Contrast with deferred reimbursements (2026-04-04 DZô DZô on credit): use `liabilities:credit cards:` + pending `!` marker + settlement assertion. See `lending_borrowing_transactions.md` for distinction rule.
 - **Food tag language preservation:** Saizeriya entries preserve Italian-style names (意式野菜烤蛋, A香蒜辣汁野菌西蘭花), American Diner preserves Chinese + dish-code (G.鮮蘑菇炒蛋). No translation without approval. See `food_transactions.md` for rule.

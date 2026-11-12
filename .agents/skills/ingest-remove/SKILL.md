@@ -26,7 +26,7 @@ An entry duplicates one already booked, carries an amount the source contradicts
 
 1. State the entry, the condition it meets, and the evidence, then wait for the owner.
 2. Walk the dependants of rule 3, and route a boundary case to `../migrate/SKILL.md`.
-3. Delete the block and nothing else, run the checks of rule 7, then report the block verbatim with their outcome.
+3. Delete the block and nothing else, run the checks of rule 7, then report the block verbatim with their outcome; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

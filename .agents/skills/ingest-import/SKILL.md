@@ -33,7 +33,7 @@ A statement export, a bank alert, a platform report, an app history, or a month 
 2. Extract each row mechanically and turn it into a claim carrying the fields rule 3 lists.
 3. Split a row that carries two movements into two claims that keep their shared reference.
 4. Report every row that would not parse, as the source renders it.
-5. Hand the claims to `../ingest/SKILL.md` in source order, one at a time.
+5. Hand the claims to `../ingest/SKILL.md` in source order, one at a time; the bank of worked blocks is `../ingest/examples.md`.
 6. Account for every claim as rule 8 requires, and report how many were entries, updates, and no-ops.
 7. Re-read the same source and confirm every claim now resolves to no action.
 

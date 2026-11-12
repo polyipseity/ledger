@@ -78,7 +78,7 @@ Use `= balance CURRENCY` on postings to assert the running balance after that po
 
 - **activity**: Type of activity (eating, transport, tutoring, fees, transfer, repayment, etc.)
 - **time**: Time of transaction in HH:MM or HH:MM:SS format
-- **timezone**: Always `UTC+08:00` (Hong Kong standard)
+- **timezone**: The zone the source printed its moment in — `UTC+08:00` for a home-zone source, the printed zone kept as-is for a document from elsewhere
 - **duration**: ISO 8601 duration (e.g., `PT1H30M`)
 - **duration plausibility for meals**: For `activity: eating` transactions, omit `duration:` when the computed value is implausibly short for a meal (generally under about 1–2 minutes, default to omitting values `< PT2M`).
 - **item**: Specific item or product name
@@ -105,8 +105,8 @@ Use `= balance CURRENCY` on postings to assert the running balance after that po
 
 **Timezone Convention:**
 
-- Consistently use `UTC+08:00` (Hong Kong time) in all timezone tags
-- Always include timezone in metadata for transaction timestamps
+- `timezone:` records the zone the source printed its moment in, never a zone the time has been converted into.
+- Include the timezone in the metadata of every transaction that carries a printed time.
 
 **Posting Order:**
 

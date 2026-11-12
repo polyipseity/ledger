@@ -33,7 +33,7 @@ A source prints a merchant, a person, an institution, or a transfer label that n
 3. Resolve a multi-target alias from the row, and stop where the row does not decide.
 4. Set the identifiers in the order `id_mappings.yml` gives, `?` for a missing one.
 5. Check the payee is declared; anything the table or the preludes lack is rule 2's to settle.
-6. Hand the resolved payee line to `../ingest/SKILL.md`, and run the check loop through `../fix-journals/SKILL.md`.
+6. Hand the resolved payee line to `../ingest/SKILL.md`, and run the check loop through `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

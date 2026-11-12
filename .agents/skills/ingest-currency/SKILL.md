@@ -28,7 +28,7 @@ A source that exchanges one commodity for another: a bank or card foreign-exchan
 2. Match the pair to a declared `equity:conversions` account.
 3. Write one leg per commodity, each carrying the amount that side of the conversion moves, with the rate on the leg the source prices.
 4. Add the fee posting, then the accounts the money moved between, and set the activity to `transfer`, since value moves between your own holdings.
-5. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
+5. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

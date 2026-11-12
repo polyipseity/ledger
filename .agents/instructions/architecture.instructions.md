@@ -90,4 +90,4 @@ Always use relative paths with consistent depth (`../` repeated 3 times for mont
 
 ## Script Usage
 
-See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: prefer `bun run <script>` from the repository root; if no bun wrapper exists, run Python scripts with `cwd=scripts/` to avoid include and discovery errors.
+See `.agents/instructions/developer-workflows.instructions.md` for the canonical script usage policy. In short: `bun run <script>` from the repository root, or a Python module as `-m scripts.<mod>` from that same root, because the package imports relatively and any other working directory fails before it finds an include.

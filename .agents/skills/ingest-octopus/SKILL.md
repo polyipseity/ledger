@@ -31,7 +31,7 @@ An app history, the card's own statement, a screenshot, or an emailed receipt fo
 1. Read the source and take the merchant name as printed, the signed amount, the printed date and time, and any reference.
 2. Resolve the payee through the mapping, and stop on a missing or undecided one.
 3. Decide purchase or reload: a transfer name, or a wallet-to-card movement, makes it a reload.
-4. Match and update a purchase through `../ingest-statement/SKILL.md`'s order, then hand the block to `../ingest/SKILL.md` for the action decision.
+4. Match and update a purchase through `../ingest-statement/SKILL.md`'s order, then hand the block to `../ingest/SKILL.md` for the action decision; the bank of worked blocks is `../ingest/examples.md`.
 5. Find the credit a reload shares, then update or book both legs by rules 4–6.
 6. Write the `duration:` and the finer time only on the fields the row actually adds.
 7. Report every row as updated, added, unchanged, or stopped, and run the check loop through `../fix-journals/SKILL.md`.

@@ -29,7 +29,7 @@ A notice, export, or API record from a payment platform — Stripe, PayPal, Squa
 2. Mask the counterparty, resolve its payee through `../ingest/payee_mappings.yml`, and hand a record with no mapped payee to `../ingest-payee/SKILL.md`.
 3. Select the platform asset and the fee accounts; a fee with no account is a question rather than a new account.
 4. Write the sale or the payout with the identifiers in mapped order, applying rules 1–9.
-5. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
+5. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

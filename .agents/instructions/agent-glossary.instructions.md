@@ -11,11 +11,11 @@ This short glossary lists concise definitions and canonical reminders for agents
 - Status markers: `!` = pending, `*` = cleared; use only where specified by the skill (e.g., lending/borrowing patterns).
 - Prelude include: Monthly journals must start with `include ../../../preludes/self.journal` (or the alternatives prelude for alternatives journals).
 - Journal path format: Use full paths: `ledger/[year]/[year]-[month]/[name].journal`.
-- Scripts & working directory: Prefer `bun run <script>` from repo root; when invoking Python directly, set `cwd=scripts/`. See `.agents/instructions/agent-quickstart.instructions.md` for a concise checklist of the most-used commands and gotchas.
+- Scripts & working directory: `bun run <script>` from the repository root, or `-m scripts.<mod>` from that same root. See `.agents/instructions/agent-quickstart.instructions.md` for a concise checklist of the most-used commands and gotchas.
 - Formatting & validation: Run `bun run format` then `bun run check` before committing; fix errors first.
 - Ledger commits: Use `ledger(<journal-list>): add N / edit M transaction(s)` for transaction commits — **single-line header only**.
-- Migration: Run `hledger close --migrate` for monthly migration and copy opening/closing transactions into the correct monthly files.
-- Confidential data: Never commit unencrypted `private.yaml`; use `python -m encrypt` / `python -m decrypt` per security instructions.
+- Migration: `bun run clopen <YYYY-MM>` writes the closing and the next opening. See `.agents/skills/migrate/SKILL.md`.
+- Confidential data: Never commit unencrypted `private.yaml`; decrypt and encrypt with `scripts/decrypt.sh` and `scripts/encrypt.sh` per security instructions.
 - Two-pass upserts (Octopus flow): Pass 1 = match & update existing journal entries only; Pass 2 = add unmatched transactions only.
 
 Keep this file short and scan it when you need quick reminders while working in skills.

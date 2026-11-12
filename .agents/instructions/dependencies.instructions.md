@@ -16,9 +16,9 @@ Required software and tools that enable this accounting system.
 
 **How it's used:**
 
-- Validates journal syntax and correctness (`python -m check` uses `hledger --strict`)
-- Formats journals into canonical format (`python -m format` uses `hledger print`)
-- Generates migration transactions (`hledger close --migrate` for monthly boundaries)
+- Validates journal syntax and correctness (`uv run --locked -m scripts.check` runs `hledger --strict`)
+- Formats journals into canonical format (`uv run --locked -m scripts.format` uses `hledger print`)
+- Derives the month boundary blocks (`uv run --locked -m scripts.clopen` sums the month's own balances)
 - Supports powerful queries and reporting (can query with `hledger [options] ACCOUNTS`)
 
 **Installation:** Download from [hledger.org](https://hledger.org) or install via package manager

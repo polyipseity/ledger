@@ -32,7 +32,7 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 3. Move every item, discount, and voucher detail onto the posting it belongs to.
 4. Check each key name against the `tag` lines, and each value against a term `ledger/**` already writes.
 5. Order the keys as rule 2 leaves them, then write the block.
-6. Hand the block to `../ingest/SKILL.md`; the check loop is `../fix-journals/SKILL.md`.
+6. Hand the block to `../ingest/SKILL.md`; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

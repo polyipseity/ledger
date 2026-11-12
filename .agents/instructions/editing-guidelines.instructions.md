@@ -9,9 +9,9 @@ applyTo: "**/*.journal"
 
 ## Account and Payee Directive Ordering
 
-When adding or editing `account` or `payee` directives in any journal or prelude file, always ensure that all such directives are listed in strict lexicographical (ASCII/Unicode) order. This applies to both new insertions and corrections of existing out-of-order lines. If a new directive is added, it must be inserted at the correct position to maintain this order. If any out-of-order lines are found, they must be moved to restore proper ordering as part of the edit.
+`account` and `payee` directives are listed in strict lexicographical (ASCII/Unicode) order, and a new directive is inserted at the position it sorts into. Restoring an order that is already broken is its own change: an inversion you notice is reported and repaired separately, never re-sorted inside the edit that found it.
 
-This rule applies to all account, payee, and similar declaration blocks, regardless of account type or hierarchy depth. This ensures consistency, reduces merge conflicts, and supports automated validation tools.
+The rule covers every declaration block, regardless of account type or hierarchy depth, so a new account also joins the correct position within its own section.
 
 **Example:**
 
@@ -21,11 +21,11 @@ account equity:friends:dcc61afa-699f-4927-8ec5-8179d50f87d2 ; type: E
 account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc ; type: E
 ```
 
-**Do not** append new accounts to the end of the block or leave out-of-order lines uncorrected.
+**Do not** append a new account to the end of the block.
 
 ## Script Usage for Validation/Formatting
 
-**Scripts & validation**: See `.agents/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `bun run check`/`bun run format`; if running Python directly, set `cwd=scripts/.`
+**Scripts & validation**: See `.agents/instructions/developer-workflows.instructions.md` for canonical guidance. Short: `bun run check` and `bun run format` from the repository root, or `uv run --locked -m scripts.<mod>` from that same root.
 
 - Include preludes in monthly journals
 - Maintain balance assertions
@@ -55,7 +55,7 @@ For new friends without UUIDs:
 
 - Use a placeholder and update the prelude and transactions once the UUID is assigned.
 
-This pattern ensures correct tracking of group expenses, liabilities, and repayments, and should be followed for all shared expense and group payment situations. See also the add-transactions and lending/borrowing skills for more details.
+This pattern ensures correct tracking of group expenses, liabilities, and repayments, and should be followed for all shared expense and group payment situations. See also `.agents/skills/ingest-lending/SKILL.md` and `.agents/skills/ingest/SKILL.md` for more details.
 
 ## Anti-Patterns to Avoid
 
@@ -65,7 +65,7 @@ Below are the most critical patterns specific to journal editing:
 
 - Manually editing year-level journals (use monthly journals only)
 - Committing without validation (`bun run format && bun run check`)
-- Missing timezone tags (always use UTC+08:00)
+- Missing timezone tags (record the zone the source printed; `.agents/instructions/transaction-format.instructions.md` states the rule)
 - Spaces in account names (use colons)
 - Unencrypted confidential files (encrypt before commit)
 - **Out-of-order transactions:** Never insert or leave transactions out of chronological order (by date, then by time). This is a critical error and must be corrected immediately.

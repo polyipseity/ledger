@@ -30,7 +30,7 @@ A deduction for a bus, rail, ferry, tram, light-rail, minibus, taxi, or airplane
 3. Select the transport subaccount for the mode.
 4. Answer the reward question for this operator and this fare.
 5. Write the block with the expense, then the accrual pairs rule 5 calls for, then the payment.
-6. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
+6. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 
 ## Worked example
 

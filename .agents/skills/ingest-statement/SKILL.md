@@ -30,7 +30,7 @@ A wallet statement, a card statement, a bank alert, or an app history handed ove
 3. Resolve the match by rule 2, stopping at the first hit that survives rule 3.
 4. Apply the seconds-only update, or report the coarser change and wait for confirmation.
 5. Hand a credit's wallet side to `../ingest-octopus/SKILL.md` before moving to the next row.
-6. Report every unmatched and ambiguous row with its reason, then hand the entries this aspect cannot place to `../ingest/SKILL.md`.
+6. Report every unmatched and ambiguous row with its reason, then hand the entries this aspect cannot place to `../ingest/SKILL.md`; the bank of worked blocks is `../ingest/examples.md`.
 7. Run the check loop through `../fix-journals/SKILL.md` once the batch is settled.
 
 ## Worked example
