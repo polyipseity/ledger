@@ -13,9 +13,9 @@ Type hints:
 import runpy
 import sys
 from abc import ABC, abstractmethod
-from collections.abc import Callable
+from collections.abc import Callable, Coroutine
 from os import PathLike, fspath
-from typing import Any, Literal, Protocol, Self, overload, override
+from typing import Literal, ParamSpec, Protocol, Self, overload, override
 
 import asyncer
 import pytest
@@ -28,6 +28,9 @@ __all__ = (
     "async_file_factory",
     "run_module_helper",
 )
+
+"""Parameters of the async function the `runnify` stand-in wraps."""
+_P = ParamSpec("_P")
 
 
 class AsyncFileBase(ABC):
@@ -348,13 +351,15 @@ def run_module_helper(monkeypatch: pytest.MonkeyPatch) -> RunModuleHelper:
             called: dict[str, bool] = {"ran": False}
 
             def fake_runnify(
-                async_func: Callable[..., Any], *_args: object, **_kwargs: object
-            ) -> Callable[..., Any]:
+                async_func: Callable[_P, Coroutine[object, object, object]],
+                *_args: object,
+                **_kwargs: object,
+            ) -> Callable[_P, None]:
                 """Fake asyncer.runnify replacement that marks the module as run and
                 returns a wrapper that closes the coroutine to avoid warnings."""
                 called["ran"] = True
 
-                def wrapper(*args: Any, **kwargs: Any) -> None:
+                def wrapper(*args: _P.args, **kwargs: _P.kwargs) -> None:
                     """Wrapper that closes the coroutine from the async function."""
                     try:
                         coro = async_func(*args, **kwargs)
