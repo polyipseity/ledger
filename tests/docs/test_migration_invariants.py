@@ -9,9 +9,9 @@ outlives the person who measured it.
 
 import pytest
 
-from scripts.clopen_verify import resolve_now_month, verify_family
+from scripts.clopen import verify_family
 from scripts.utils.files import get_ledger_folder
-from scripts.utils.journals import find_monthly_journals
+from scripts.utils.journals import find_monthly_journals, resolve_now_month
 
 """Public symbols exported by this module (none)."""
 __all__ = ()
@@ -29,9 +29,9 @@ SKIP_REASON = (
 async def test_repository_boundary_chain_is_complete() -> None:
     """Assert that every monthly journal of this repository is boundary-clean.
 
-    The current month is derived the way ``scripts.clopen_verify`` derives it
-    when ``--now`` is omitted, and the journals are the ones ``main`` discovers,
-    so this test cannot disagree with ``bun run verify:migration``. Any defect
+    The current month is derived the way ``scripts.clopen`` derives it when
+    ``--now`` is omitted, and the journals are the ones ``verify`` discovers, so
+    this test cannot disagree with ``bun run verify:migration``. Any defect
     fails the test with the same ``journal:month: kind: detail`` lines the
     command prints.
     """
