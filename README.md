@@ -25,7 +25,7 @@ The shell and batch files beside each Python module (`scripts/check.sh`, `script
 
 Run `format` before `check`, since the second only reports what the first has already fixed. The hooks do overlapping work — a pre-commit pass formats and type-checks, a pre-push pass runs the suite — so a clean `bun run format` and `bun run check` keep a commit quiet, and `bun run test` keeps a push quiet.
 
-CI (`.github/workflows/ci.yml`) installs the same way, then runs `bun run test` and `bun run build`; the build step chains the full check, since there is nothing to compile.
+CI (`.github/workflows/ci.yml`) installs the same way, then runs `bun run test` and a build step that chains the full check, since there is nothing to compile.
 
 [`AGENTS.md`](AGENTS.md) holds the full command table, one row per task, with guidance on when to reach for each.
 
