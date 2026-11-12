@@ -30,10 +30,10 @@ The tool computes the boundary with hledger's own `close` and writes the result 
 
 | where | header | postings |
 | --- | --- | --- |
-| appended to the month that ended | its last date, `closing balances` | every account in scope, amount negated, `= 0.00 <CUR>`, then one `equity:opening/closing balances` line per commodity |
-| inserted into the month after it | its first date, `opening balances` | the same accounts with the same figures, `= <amount> <CUR>`, then one `equity:opening/closing balances` line per commodity |
+| appended to the month that ended | its last date, `closing balances` | every account in scope, amount negated, `= 0.00 <CUR>`, then the net on `equity:opening/closing balances` |
+| inserted into the month after it | its first date, `opening balances` | the same accounts with the same figures, `= <amount> <CUR>`, then the net on `equity:opening/closing balances` |
 
-Both headers carry `clopen:`, `time:` (`23:59:59` closing, `00:00:00` opening), and `timezone: UTC+08:00`, and the formatter sorts those tags. The closing is appended to the end of its journal; the opening is inserted after the last `include` line, so the prelude still loads first. When the next month's journal does not exist, it is created with the current one's `include` lines and the opening.
+Both headers carry `clopen:`, `time:` (`23:59:59` closing, `00:00:00` opening), and `timezone: UTC+08:00`, and the formatter sorts those tags. The net lands on `equity:opening/closing balances` in one of two forms, both of them normal output: a single line with no amount, which hledger infers, or one line per commodity with the amount written out. A block showing either form is never rewritten to match the other. The closing is appended to the end of its journal; the opening is inserted after the last `include` line, so the prelude still loads first. When the next month's journal does not exist, it is created with the current one's `include` lines and the opening.
 
 ## What clopen refuses
 
@@ -46,11 +46,13 @@ It processes each journal on its own, so a refusal in one journal family does no
 
 ## Journal families
 
-`self.journal` and `self.alternatives.journal` are separate families with separate chains, and a boundary is only ever compared with the boundary of the same filename in the neighbouring month. `--only <filename>` restricts a run to one family and may be repeated; a bare run covers every family the month has. One month can therefore be migrated in one family and not the other, and a family that was dormant for a month must not be resurrected silently: when the month's journal exists but the family was never used in it, name the other family with `--only` rather than letting a bare run create a boundary for a journal nobody is keeping. The verifier reports each family independently.
+`self.journal` and `self.alternatives.journal` are separate families with separate chains, and a boundary is only ever compared with the boundary in the previous journal of the same family — the previous one that exists, since a month the family skips keeps the link across the gap, and only an unreadable journal breaks it. `--only <filename>` restricts a run to one family and may be repeated; a bare run covers every family the month has. One month can therefore be migrated in one family and not the other, and a family that was dormant for a month must not be resurrected silently: when the month's journal exists but the family was never used in it, name the other family with `--only` rather than letting a bare run create a boundary for a journal nobody is keeping. The verifier reports each family independently.
+
+A family whose last journal carries an opening and no closing is the case this skill cannot settle: closing that month revives the family with a new journal, and excluding it leaves a `missing_closing` the verifier never stops reporting, so the chain can never reach zero. Ask the owner whether the family continues or its trailing boundary month is dropped, and report the question instead of choosing.
 
 ## Future months
 
-A month after the current month may exist as a scaffold — the `include` lines and nothing else — and must carry no boundary transaction: a closing there would assert balances that month cannot know, and an opening there would restore a closing that does not exist. `bun run verify:migration` reports either as `unexpected_boundary`. The current month is the month of the last commit's committer date, so `clopen` is run for the month that ended and never for the month in progress, which would leave an opening in the month after it. `--now <YYYY-MM>` overrides that month when the commit date names the wrong one: pass it the month in progress, never the month just closed, which would turn the opening just written into a future month's boundary.
+A month after the current month may exist as a scaffold — the `include` lines and nothing else — and must carry no boundary transaction: a closing there would assert balances that month cannot know, and an opening there would restore a closing that does not exist. `bun run verify:migration` reports either as `unexpected_boundary`. `clopen` is run for the month that ended and never for the month in progress, which would leave an opening in the month after it. The current month is the month of the last commit's committer date; `--now <YYYY-MM>` overrides it when that date names the wrong one: pass it the month in progress, never the month just closed, which would turn the opening just written into a future month's boundary.
 
 ## Never hand-copy output
 
