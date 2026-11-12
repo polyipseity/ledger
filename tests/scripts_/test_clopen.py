@@ -67,7 +67,7 @@ async def test_clopen_happy_path(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
@@ -139,7 +139,7 @@ async def test_clopen_existing_closing_errors(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 1
@@ -170,7 +170,7 @@ async def test_clopen_existing_opening_errors(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 1
@@ -199,7 +199,7 @@ async def test_clopen_missing_next_journal_appends_closing(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
@@ -251,7 +251,7 @@ async def test_clopen_alt_missing_next_still_processes_main(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
@@ -317,17 +317,17 @@ async def test_clopen_no_journals(
     # no folders created at all
     monkeypatch.setattr(clopen, "get_ledger_folder", lambda: ledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
 
 
 @pytest.mark.anyio
-async def test_only_restricts_processed_journals(
+async def test_files_restrict_processed_journals(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    """``only`` restricts the run to the named journal of the period."""
+    """``files`` restricts the run to the named journal of the period."""
 
     ledger: Path = Path(tmp_path) / "ledger"
     await (ledger / "2026" / "2026-02").mkdir(parents=True)
@@ -354,7 +354,7 @@ async def test_only_restricts_processed_journals(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02", only=("self.journal",))
+    args = clopen.Arguments(command="close", period="2026-02", files=("self.journal",))
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
@@ -367,7 +367,7 @@ async def test_only_restricts_processed_journals(
 
 
 @pytest.mark.anyio
-async def test_only_unmatched_name_processes_the_rest(
+async def test_files_unmatched_name_processes_the_rest(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """A name matching no journal must not raise nor block the other names."""
@@ -395,7 +395,9 @@ async def test_only_unmatched_name_processes_the_rest(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(
-        period="2026-02", only=("self.investments.journal", "self.journal")
+        command="close",
+        period="2026-02",
+        files=("self.investments.journal", "self.journal"),
     )
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
@@ -407,10 +409,10 @@ async def test_only_unmatched_name_processes_the_rest(
 
 
 @pytest.mark.anyio
-async def test_only_empty_sequence_processes_nothing(
+async def test_files_empty_sequence_processes_nothing(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    """An empty ``only`` sequence processes no journal at all."""
+    """An empty ``files`` sequence processes no journal at all."""
 
     ledger: Path = Path(tmp_path) / "ledger"
     await (ledger / "2026" / "2026-02").mkdir(parents=True)
@@ -436,7 +438,7 @@ async def test_only_empty_sequence_processes_nothing(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02", only=())
+    args = clopen.Arguments(command="close", period="2026-02", files=())
     with pytest.raises(SystemExit) as exc:
         await clopen.main(args)
     assert exc.value.code == 0
@@ -507,7 +509,7 @@ async def test_clopen_disables_cache(
 
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
-    args = clopen.Arguments(period="2026-02")
+    args = clopen.Arguments(command="close", period="2026-02")
     with pytest.raises(SystemExit):
         await clopen.main(args)
     assert called.get("cache") is False
@@ -526,19 +528,20 @@ async def test_parser_invokes_main(monkeypatch: pytest.MonkeyPatch) -> None:
 
     monkeypatch.setattr(clopen, "main", fake_main)
     p: ArgumentParser = clopen.parser()
-    ns: Namespace = p.parse_args(["2026-02"])
+    ns: Namespace = p.parse_args(["close", "2026-02"])
 
     # the invoke coroutine returns None
     await ns.invoke(ns)
     assert isinstance(called.get("args"), clopen.Arguments)
+    assert called["args"].command == "close"
     assert called["args"].period == "2026-02"
 
 
 @pytest.mark.anyio
-async def test_parser_accepts_repeatable_only(
+async def test_parser_collects_journal_filenames(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    """Each ``--only`` occurrence adds one journal filename to ``Arguments``."""
+    """Each journal filename after the period is collected into ``Arguments``."""
 
     called: dict[str, clopen.Arguments] = {}
 
@@ -550,12 +553,58 @@ async def test_parser_accepts_repeatable_only(
     monkeypatch.setattr(clopen, "main", fake_main)
     p: ArgumentParser = clopen.parser()
     ns: Namespace = p.parse_args(
-        ["2026-02", "--only", "self.journal", "--only", "self.alternatives.journal"]
+        ["close", "2026-02", "self.journal", "self.alternatives.journal"]
     )
 
     await ns.invoke(ns)
+    assert called["args"].command == "close"
     assert called["args"].period == "2026-02"
-    assert called["args"].only == ("self.journal", "self.alternatives.journal")
+    assert called["args"].files == ("self.journal", "self.alternatives.journal")
+
+
+def test_close_parses_period_and_files() -> None:
+    """The close subcommand accepts a period and journal filenames."""
+
+    args = clopen.parser().parse_args(
+        ["close", "2026-06", "ledger/2026/2026-06/self.journal"]
+    )
+    assert args.command == "close"
+    assert args.period == "2026-06"
+    assert args.files == ["ledger/2026/2026-06/self.journal"]
+
+
+def test_verify_parses_its_three_arguments() -> None:
+    """The declared verify subcommand takes a period, filenames, and ``--now``."""
+
+    args = clopen.parser().parse_args(
+        ["verify", "2026-06", "self.journal", "--now", "2026-11"]
+    )
+    assert args.command == "verify"
+    assert args.period == "2026-06"
+    assert args.files == ["self.journal"]
+    assert args.now == "2026-11"
+
+    bare = clopen.parser().parse_args(["verify"])
+    assert (bare.period, bare.files, bare.now) == (None, [], None)
+
+
+def test_no_subcommand_exits_two(capsys: pytest.CaptureFixture[str]) -> None:
+    """Running the tool with no subcommand prints usage and exits 2."""
+
+    with pytest.raises(SystemExit) as excinfo:
+        clopen.parser().parse_args([])
+    assert excinfo.value.code == 2
+    usage = capsys.readouterr().err
+    assert "close" in usage
+    assert "verify" in usage
+
+
+@pytest.mark.anyio
+async def test_verify_subcommand_refuses_until_implemented() -> None:
+    """The declared verify subcommand refuses instead of running the wrong path."""
+
+    with pytest.raises(NotImplementedError, match="verify"):
+        await clopen.main(clopen.Arguments(command="verify", now="2026-11"))
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
@@ -564,5 +613,5 @@ def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
     This mirrors the tests present for the other helper scripts.
     """
 
-    called = run_module_helper("scripts.clopen", ["scripts.clopen", "2026-02"])
+    called = run_module_helper("scripts.clopen", ["scripts.clopen", "close", "2026-02"])
     assert called["ran"] is True

@@ -1,19 +1,23 @@
 """Create closing and opening balance entries for monthly journals.
 
 This script runs ``hledger close --explicit --show-costs --clopen`` on each
-journal file for the supplied period, or on the subset of those files named by
-``--only``, and writes the resulting closing transaction to the end of the
-existing journal. The corresponding opening transaction is prepended to the
+journal file for the supplied period, or on the subset of those files named on
+the command line, and writes the resulting closing transaction to the end of
+the existing journal. The corresponding opening transaction is prepended to the
 beginning of the *next* month's journal after any ``include`` directives.
 
-``--only`` names a journal filename such as ``self.journal`` rather than a
-path, and may be repeated. Restricting the run keeps a repair from touching a
-journal family the month never used.
+A journal filename such as ``self.journal`` names a journal rather than a path.
+Restricting the run keeps a repair from touching a journal family the month
+never used.
 
 Usage example:
 
-    python -m scripts.clopen 2026-02
-    python -m scripts.clopen 2026-02 --only self.journal
+    python -m scripts.clopen close 2026-02
+    python -m scripts.clopen close 2026-02 self.journal
+
+``close`` is the implemented subcommand. ``verify`` is declared beside it and
+reports boundary defects once its implementation moves here from
+``scripts/clopen_verify.py``.
 
 The script performs safety checks before writing:
 
@@ -36,7 +40,7 @@ The implementation mirrors the style of the other helper scripts in
 
 from argparse import ArgumentParser, Namespace
 from calendar import monthrange
-from collections.abc import Callable, Sequence
+from collections.abc import Callable
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
@@ -58,7 +62,7 @@ from .utils.journals import (
 )
 
 """Public symbols exported by this module."""
-__all__ = ("Arguments", "main", "parser")
+__all__ = ("Arguments", "close", "main", "parser")
 
 
 @final
@@ -77,18 +81,25 @@ class Arguments:
     """Command-line arguments container for :mod:`scripts.clopen`.
 
     Attributes:
+        command: The subcommand to run, ``"close"`` or ``"verify"``.
         period: A year-month string (e.g. ``"2026-02"``) specifying which
-            monthly folder to process. The script will operate on every
-            ``*.journal`` file found under the corresponding ``ledger/YYYY/YYYY-MM``
-            directory, unless ``only`` narrows that set.
-        only: Journal filenames (e.g. ``"self.journal"``, not paths) to
+            monthly folder to process. ``close`` requires it, and operates on
+            every ``*.journal`` file found under the corresponding
+            ``ledger/YYYY/YYYY-MM`` directory unless ``files`` narrows that set.
+            ``verify`` treats ``None`` as every month.
+        files: Journal filenames (e.g. ``"self.journal"``, not paths) to
             restrict processing to. ``None`` processes every journal of the
             period; an empty sequence processes nothing. A name that matches
-            no journal of the period is ignored.
+            no journal of the period is ignored by ``close``.
+        now: The month ``verify`` treats as current, as ``YYYY-MM`` or an ISO
+            date. ``None`` derives it from the last commit date. ``close``
+            ignores it.
     """
 
-    period: str
-    only: Sequence[str] | None = None
+    command: str
+    period: str | None = None
+    files: tuple[str, ...] | None = None
+    now: str | None = None
 
 
 async def _process_journal(journal: PathLike[str]) -> None:
@@ -276,14 +287,21 @@ async def _process_journal(journal: PathLike[str]) -> None:
         await Path(next_journal).write_text(content)
 
 
-async def main(args: Arguments) -> None:
-    """Entry point for ``scripts.clopen``.
+async def close(args: Arguments) -> None:
+    """Close ``args.period`` and open the month that follows it.
 
     The function discovers journals for the supplied period, keeps the ones
-    named by ``args.only`` when it is set, runs the processing helper for each,
+    named by ``args.files`` when it is set, runs the processing helper for each,
     and exits with code ``0`` on success. Any failure during journal processing
     causes the script to exit with ``1``.
+
+    Raises:
+        ValueError: When ``args.period`` is absent. The parser requires the
+            positional, so only a programmatic caller can reach this.
     """
+
+    if args.period is None:
+        raise ValueError("close needs a month to close")
 
     folder = get_ledger_folder()
 
@@ -297,9 +315,9 @@ async def main(args: Arguments) -> None:
     last_day = monthrange(start.year, start.month)[1]
     end = start.replace(day=last_day, hour=23, minute=59, second=59, microsecond=999999)
     journals = filter_journals_between(journals, start, end)
-    if args.only is not None:
-        only_names = frozenset(args.only)
-        journals = [journal for journal in journals if Path(journal).name in only_names]
+    if args.files is not None:
+        names = frozenset(args.files)
+        journals = [journal for journal in journals if Path(journal).name in names]
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     async with JournalRunContext(Path(__file__), journals, cache=False) as run:
@@ -322,37 +340,80 @@ async def main(args: Arguments) -> None:
     exit(0)
 
 
+async def main(args: Arguments) -> None:
+    """Dispatch to the subcommand named by ``args.command``.
+
+    Raises:
+        NotImplementedError: When the subcommand is ``verify``. The parser
+            declares it so the command surface is fixed before its
+            implementation moves here from ``scripts/clopen_verify.py``.
+    """
+
+    if args.command == "close":
+        await close(args)
+        return
+    raise NotImplementedError(f"the {args.command!r} subcommand is not implemented")
+
+
 def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Construct and return the CLI ArgumentParser for the clopen script.
 
-    The parser adds a positional ``period`` argument and a repeatable ``--only``
-    option, then installs an ``invoke`` coroutine that constructs
-    :class:`Arguments` and forwards them to :func:`main`.
+    The parser declares two subcommands. ``close`` takes the month to close and
+    the journal filenames that restrict the run; ``verify`` takes the same two
+    and ``--now``. One ``invoke`` coroutine, installed as a parser default,
+    builds :class:`Arguments` from whichever subcommand ran and forwards them to
+    :func:`main`.
     """
 
-    prog = argv[0]
-
     parser = (ArgumentParser if parent is None else parent)(
-        prog=prog,
-        description="create closing/opening balance entries for a given period",
+        prog="clopen",
+        description="close a month and open the next, or verify month boundaries",
         add_help=True,
         allow_abbrev=False,
-        exit_on_error=False,
     )
 
-    parser.add_argument(
-        "period",
-        help="year-month to process (e.g. 2026-02)",
+    subcommands = parser.add_subparsers(dest="command", required=True)
+
+    close_parser = subcommands.add_parser(
+        "close", help="write a closing balance and the next opening balance"
     )
-    parser.add_argument(
-        "--only",
-        action="append",
+    close_parser.add_argument("period", help="year-month to close (e.g. 2026-02)")
+    close_parser.add_argument(
+        "files",
+        nargs="*",
         metavar="JOURNAL",
         help=(
             "journal filename to process, such as self.journal (not a path); "
-            "repeat to name more than one"
+            "every journal of the month when omitted"
         ),
     )
+
+    verify_parser = subcommands.add_parser("verify", help="report boundary defects")
+    verify_parser.add_argument(
+        "period",
+        nargs="?",
+        help="year-month to verify (e.g. 2026-06); every month when omitted",
+    )
+    verify_parser.add_argument(
+        "files",
+        nargs="*",
+        metavar="JOURNAL",
+        help=(
+            "journal filename to verify, such as self.journal (not a path); "
+            "every journal when omitted"
+        ),
+    )
+    verify_parser.add_argument(
+        "--now",
+        dest="now",
+        help=(
+            "current month as YYYY-MM or an ISO date, which decides whether the "
+            "latest months must be closed; derived from the last commit date "
+            "when omitted"
+        ),
+    )
+
+    parser.set_defaults(now=None)
 
     @wraps(main)
     async def invoke(ns: Namespace) -> None:
@@ -360,8 +421,10 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
 
         await main(
             Arguments(
+                command=ns.command,
                 period=ns.period,
-                only=None if ns.only is None else tuple(ns.only),
+                files=None if not ns.files else tuple(ns.files),
+                now=ns.now,
             )
         )
 
