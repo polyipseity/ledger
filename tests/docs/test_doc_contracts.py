@@ -16,10 +16,6 @@ through the directive each line spells, and the assets a ``SKILL.md`` routes
 through the link targets and inline-code spans it quotes. A formatting change
 moves none of those, so a green run states that the structure holds rather than
 that some phrase survived a search.
-
-``test_payee_declarations_are_ordered_and_unique`` is skipped because
-``preludes/self.journal`` breaks the rule it enforces; its docstring holds the
-decision and ``PAYEE_DEFECTS`` names the lines to repair.
 """
 
 import json
@@ -29,7 +25,6 @@ from contextlib import redirect_stderr
 from io import StringIO
 from pathlib import Path
 
-import pytest
 from pydantic import BaseModel, RootModel
 from pydantic_yaml import parse_yaml_raw_as
 
@@ -87,15 +82,6 @@ _PAYEE_SECTIONS = (
     "Procedure",
     "Stop and ask",
     "Worked example",
-)
-
-"""Why the payee-declaration contract is skipped, naming the lines to repair."""
-PAYEE_DEFECTS = (
-    "`preludes/self.journal` declares `payee Oliver's Super Sandwiches` twice "
-    "(lines 438-439) and breaks byte order at lines 518-519, where "
-    "`payee 日本城 (Japan Home Center)` precedes `payee 丸龜製麵`. Both are "
-    "owner-visible defects no hledger check reports, and `.agents/skills/add-payee/"
-    "SKILL.md` holds the rule. Remove this skip only once the prelude is repaired."
 )
 
 """The fence that opens and closes a markdown code block."""
@@ -669,22 +655,12 @@ def test_id_mapping_shapes() -> None:
     )
 
 
-@pytest.mark.skip(reason=PAYEE_DEFECTS)
 def test_payee_declarations_are_ordered_and_unique() -> None:
     """Assert each prelude's payee block is in strict byte order and free of repeats.
 
     The contract covers both properties because `.agents/skills/add-payee/SKILL.md`
     mandates them together, and the duplicate is the more dangerous of the two:
     two declarations of one merchant is how a payee silently splits in two.
-
-    The decision recorded here is to keep the whole contract and skip it rather
-    than scope it to order alone, because `preludes/self.journal` breaks both
-    today — ``Oliver's Super Sandwiches`` twice at lines 438-439, and
-    ``日本城 (Japan Home Center)`` sorted before ``丸龜製麵`` at lines 518-519 —
-    and neither defect is a test defect. Both are owner-visible prelude defects
-    that no hledger check reports; ``PAYEE_DEFECTS`` repeats the lines in the
-    skip reason, and lifting the skip without repairing the prelude fails with
-    every offending line.
     """
     _check(
         "every prelude's `payee` declarations must be in strict byte order and unique",
