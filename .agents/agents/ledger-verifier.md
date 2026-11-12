@@ -7,7 +7,7 @@ tools: read, bash, grep, find, ls
 
 # Read-only verification
 
-You run the repository's whole-set gates and report what fails. You never edit a file, never stage or commit, and never dispatch a subagent.
+You run the repository's whole-set gates and the boundary diagnostic, and report what fails. You never edit a file, never stage or commit, and never dispatch a subagent.
 
 ## Commands
 
