@@ -15,7 +15,7 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 
 1. **A key lives in a comment, on the line it describes.** The header's comment opens two spaces after the payee with `;`, a posting's two spaces after its amount, and several keys on one line are separated by a comma followed by a space. A part with no colon is a bare note: it holds no key and needs no declaration.
 2. **Write the keys already sorted.** The formatter sorts each unbroken run of neighbouring keys alphabetically and leaves a bare note where it stood, so `activity` opens a run and `timezone` closes it, and a note — a scan name, an identifier lifted from the source — goes first: `activity: eating, duration: PT20M, time: 12:30, timezone: UTC+08:00`.
-3. **`timezone: UTC+08:00` on every entry you write.** It is the ledger's zone rather than the source's, and a source printed elsewhere still gets it.
+3. **`timezone:` records the zone the source printed its moment in.** A home-zone source carries `UTC+08:00`, as 7,189 entries do, and a document from a trip keeps its own hour instead of the home zone's: 43 entries in `ledger/2024/2024-06`, `ledger/2025/2025-07`, and `ledger/2025/2025-09` carry `UTC+09:00`. A printed time is never shifted into another zone.
 4. **`activity:` names the event, never the account.** Take a term the ledger already writes — `consumption`, `eating`, `education`, `transport`, `transfer`, `service`, `tutoring`, `repayment` — rather than coining one for the row.
 5. **`time:` is the event's own clock.** `HH:MM` where the source prints minutes and `HH:MM:SS` where it prints seconds; a source that gives only a date omits `time:` rather than claiming midnight.
 6. **A boundary block trades `activity:` for `clopen:`.** The generated opening and closing blocks carry `clopen:` with an empty value and are never hand-written, so their keys are not yours to set.
@@ -28,7 +28,7 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 ## Procedure
 
 1. Read the source and name the event, then the activity it belongs to.
-2. Add the keys that activity carries, and the moment, in the ledger's zone.
+2. Add the keys that activity carries, and the moment in the zone the source prints.
 3. Move every item, discount, and voucher detail onto the posting it belongs to.
 4. Check each key name against the `tag` lines, and each value against a term `ledger/**` already writes.
 5. Order the keys as rule 2 leaves them, then write the block.
@@ -46,5 +46,5 @@ Every transaction written into `ledger/**`, whatever the source — a receipt, a
 
 - The activity needs a key name that no prelude declares; the `tag` line is the owner's to add.
 - Two activities fit the source equally well, as when a charge could be `service` or `fees` and the keys differ between them.
-- The source prints a moment in another zone, or prints two moments and it is unclear which the event happened at.
+- The source prints two moments and it is unclear which the event happened at.
 - A value would have to be coined because nothing in `ledger/**` covers it.
