@@ -28,8 +28,8 @@ These names are the whole agent-facing surface, and every one runs from the repo
 | `bun run check:py`         | Python only: ruff lint, ruff format check, ty                                                  |
 | `bun run format:py`        | Python only: ruff fixes and format, then ty                                                    |
 | `bun run test`             | before pushing: pytest                                                                         |
-| `bun run clopen <YYYY-MM>` | close one month and open the next                                                              |
-| `bun run verify:migration` | monthly boundary invariants across the chain                                                   |
+
+Two maintenance commands are the owner's to run, never an agent's: `uv run --locked -m scripts.clopen close <YYYY-MM>` writes a month boundary, and `uv run --locked -m scripts.clopen verify` reports boundary defects. `scripts/clopen.py` holds both.
 
 ### Invocation law
 

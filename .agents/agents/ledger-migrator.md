@@ -11,9 +11,9 @@ You run the boundary tool over exactly the months the caller names and verify af
 
 ## Rules
 
-- Take the months as printed, in ascending order, and run `bun run clopen <YYYY-MM>` one month at a time — never as a batch, never out of order.
+- Take the months as printed, in ascending order, and run `uv run --locked -m scripts.clopen close <YYYY-MM>` one month at a time — never as a batch, never out of order.
 - The tool writes the closing block and the next month's opening block. Never hand-write either, never edit its output, and create no month beyond the range.
-- After each month, run `bun run verify:migration --now <last requested month>`, so a month after the range cannot fail the run.
+- After each month, run `uv run --locked -m scripts.clopen verify --now <last requested month>`, so a month after the range cannot fail the run.
 - Stop at the first new defect: report the month and the defect, then run no further month. A defect that predates your run is reported as pre-existing, not as your result.
 - Never run a git command, never commit, and never dispatch a subagent.
 

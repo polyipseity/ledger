@@ -39,10 +39,10 @@ Two repairs are another skill's decision, not this one's. An amount the source c
 
 ## Boundary balances
 
-The check suite says nothing about the chain between months. `bun run verify:migration` does: one line per defect in the form `journal:month: kind: detail`, and exit 1 while any defect stands.
+The check suite says nothing about the chain between months. `uv run --locked -m scripts.clopen verify` does: one line per defect in the form `journal:month: kind: detail`, and exit 1 while any defect stands.
 
 - **The kinds**: `missing_opening`, `missing_closing`, `unexpected_boundary`, `closing_not_zero`, `closing_incomplete`, `opening_mismatch`, `boundary_unordered`, `unreadable`.
-- **A wrong closing invalidates the next month's opening.** Repair both sides in one change, then re-run `bun run verify:migration` over the whole chain.
+- **A wrong closing invalidates the next month's opening.** Repair both sides in one change, then re-run `uv run --locked -m scripts.clopen verify` over the whole chain.
 - **The scope of a closing** is every account whose hledger type is Asset, Liability, or Cash, which is what `hledger accounts --types` reports. Expenses and revenues are never unclosed, and `equity:opening/closing balances` is never required in a closing; a `closing_incomplete` line naming an expense or revenue account is not a defect, and a repair must not invent one.
 - **Diagnose with the same register call**, `-I` on the account the defect names, and compare the two months' figures.
 - **A boundary defect goes to `../migrate/SKILL.md`** once it is diagnosed. This skill reports it and hands off; it never hand-writes an opening or a closing.

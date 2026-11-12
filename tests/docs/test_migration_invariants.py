@@ -18,8 +18,9 @@ __all__ = ()
 
 """Why this test is skipped, in the terms the owner needs to lift it."""
 SKIP_REASON = (
-    "monthly boundary chain unrepaired: `bun run verify:migration` still reports "
-    "defects, and `.agents/skills/migrate/SKILL.md` holds the repair procedure. "
+    "monthly boundary chain unrepaired: "
+    "`uv run --locked -m scripts.clopen verify` still reports defects, and "
+    "`.agents/skills/migrate/SKILL.md` holds the repair procedure. "
     "Remove this skip only after that command reports no defects."
 )
 
@@ -31,7 +32,7 @@ async def test_repository_boundary_chain_is_complete() -> None:
 
     The current month is derived the way ``scripts.clopen`` derives it when
     ``--now`` is omitted, and the journals are the ones ``verify`` discovers, so
-    this test cannot disagree with ``bun run verify:migration``. Any defect
+    this test cannot disagree with ``scripts.clopen verify``. Any defect
     fails the test with the same ``journal:month: kind: detail`` lines the
     command prints.
     """

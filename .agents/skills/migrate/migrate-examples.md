@@ -4,7 +4,7 @@ Two boundaries in the shape the tool writes them, and one month whose closing we
 
 ## A clean month
 
-`bun run clopen 2025-12` appends the closing to `ledger/2025/2025-12/self.journal` and inserts the opening into `ledger/2026/2026-01/self.journal` after its `include` line, creating that journal from the December one's `include` lines when it does not exist yet.
+`uv run --locked -m scripts.clopen close 2025-12` appends the closing to `ledger/2025/2025-12/self.journal` and inserts the opening into `ledger/2026/2026-01/self.journal` after its `include` line, creating that journal from the December one's `include` lines when it does not exist yet.
 
 ```hledger
 2025-12-31 closing balances  ; clopen: , time: 23:59:59, timezone: UTC+08:00
@@ -20,7 +20,7 @@ Two boundaries in the shape the tool writes them, and one month whose closing we
     equity:opening/closing balances
 ```
 
-`bun run verify:migration` reports no defect for these two months, and `bun run check` passes on the reflowed file.
+`uv run --locked -m scripts.clopen verify` reports no defect for these two months, and `bun run check` passes on the reflowed file.
 
 ## A missing closing
 
@@ -30,4 +30,4 @@ The same December journal, holding those three balances and no boundary, verifie
 ledger/2025/2025-12/self.journal:2025-12: missing_closing: no closing balances transaction
 ```
 
-`bun run clopen 2025-12` then writes the pair above, `bun run format:journal` reflows it, and the verifier reports no defect. The opening is written in the same run as the closing, so the pair never exists half-made; `./migrate-repair.md` has the case where it already did.
+`uv run --locked -m scripts.clopen close 2025-12` then writes the pair above, `bun run format:journal` reflows it, and the verifier reports no defect. The opening is written in the same run as the closing, so the pair never exists half-made; `./migrate-repair.md` has the case where it already did.

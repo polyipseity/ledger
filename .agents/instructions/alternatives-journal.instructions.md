@@ -23,7 +23,7 @@ applyTo: "**/*.alternatives.journal"
 
 ## Boundaries are per journal filename
 
-`self.journal` and `self.alternatives.journal` are separate families with separate chains: each month's closing and the next month's opening are generated within one filename, and a family that skips a month keeps its chain across the gap. `bun run clopen <YYYY-MM> --only <filename>` restricts a run to one family, which is how a dormant family stays dormant; `../skills/migrate/SKILL.md` holds the procedure and its repair.
+`self.journal` and `self.alternatives.journal` are separate families with separate chains: each month's closing and the next month's opening are generated within one filename, and a family that skips a month keeps its chain across the gap. `uv run --locked -m scripts.clopen close <YYYY-MM> <filename>` restricts a run to one family, which is how a dormant family stays dormant; `../skills/migrate/SKILL.md` holds the procedure and its repair.
 
 ## Privacy
 
