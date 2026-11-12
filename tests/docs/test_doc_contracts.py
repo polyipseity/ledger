@@ -25,8 +25,7 @@ from collections import Counter
 from pathlib import Path
 
 import pytest
-import ruamel.yaml
-from pydantic import BaseModel, RootModel, ValidationError
+from pydantic import BaseModel, RootModel
 from pydantic_yaml import parse_yaml_raw_as
 
 """Public symbols exported by this module (none)."""
@@ -192,12 +191,23 @@ def _resolves(document: Path, token: str) -> bool:
     return tail != token and (REPO_ROOT / tail).exists()
 
 
+def _unparseable(error: Exception) -> list[str]:
+    """Report a document the YAML reader refused, by the error it raised.
+
+    ``pydantic_yaml`` declares no error type of its own: a shape violation
+    arrives as pydantic's ``ValidationError`` and a syntax error from the reader
+    ``pydantic_yaml`` wraps, which no manifest here declares. Both are reported
+    as one violation rather than escaping the contract as a traceback.
+    """
+    return [f"does not parse: {error}"]
+
+
 def _payee_mapping_violations(text: str) -> list[str]:
     """Return every mapping whose target no prelude declares or that maps to itself."""
     try:
         mappings = parse_yaml_raw_as(RootModel[dict[str, list[str]]], text).root
-    except (ruamel.yaml.YAMLError, ValidationError) as error:
-        return [f"does not parse: {error}"]
+    except Exception as error:
+        return _unparseable(error)
     declared = {
         line.removeprefix("payee ")
         for prelude in (REPO_ROOT / "preludes").glob("*.journal")
@@ -228,8 +238,8 @@ def _id_mapping_violations(text: str) -> list[str]:
         return violations
     try:
         mappings = parse_yaml_raw_as(_IdentifierMappings, text).root
-    except (ruamel.yaml.YAMLError, ValidationError) as error:
-        return [f"does not parse: {error}"]
+    except Exception as error:
+        return _unparseable(error)
     for payee, ordering in sorted(mappings.items()):
         if not all(ordering.orders):
             violations.append(f"`{payee}`: an `orders` row is empty")
