@@ -70,6 +70,7 @@ Each row is `.agents/instructions/<name>.instructions.md`. `.agents/reference/` 
 - `editing-guidelines` — ordering, the smallest safe edit, assertions, and the journal anti-patterns.
 - `git-commits` — commit types, message format, and the ledger transaction header.
 - `security` — confidential data, encryption, and UUID privacy.
+- `skill-authoring` — the budgets, the section skeleton, and the one-rule-one-file boundary every skill obeys.
 - `transaction-format` — hledger syntax, status markers, alignment, assertions, and posting order.
 
 ## Code conventions
