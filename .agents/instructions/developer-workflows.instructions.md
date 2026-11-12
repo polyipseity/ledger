@@ -51,7 +51,7 @@ A hook that declares a `files` glob receives the matching paths appended to its 
 `tests/conftest.py` supplies the AnyIO backend `("asyncio", {"use_uvloop": True})` for every async test in the suite.
 
 - A test module takes its name and place from the source module it covers: `tests/scripts_/test_check.py` covers `scripts/check.py`, `tests/scripts_/utils/test_journals.py` covers `scripts/utils/journals.py`, and `tests/tests/test_test_utils.py` covers the shared helper `tests/test_utils.py`.
-- Documentation-contract tests belong under `tests/docs/`; they read the repository tree from their own location and assert what the docs claim about it.
+- Documentation-contract and repository-state tests belong under `tests/docs/`; they read the repository tree from their own location and assert either what the docs claim about it or an invariant the tree itself must hold.
 - A test imports its module and calls `main` directly rather than spawning it as a subprocess; a test that has to exercise the entry point goes through `run_module_helper` (`tests/test_utils.py`), which runs the module under a faked `asyncer.runnify`.
 - An `async def` test carries `@pytest.mark.anyio`, and the event loop comes from the backend fixture rather than a runner inside the test.
 - A `tmp_path` parameter is annotated `PathLike[str]`, and the body wraps it as `Path(tmp_path)` when it needs a `pathlib` object.

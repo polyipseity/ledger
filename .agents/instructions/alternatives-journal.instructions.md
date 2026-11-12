@@ -1,7 +1,7 @@
 ---
 name: Alternatives Journal Tracking
 description: "Use when deciding whether a holding belongs in the illiquid alternatives stream rather than the main journal."
-applyTo: "ledger/**/self.alternatives.journal"
+applyTo: "**/*.alternatives.journal"
 ---
 
 # Alternatives journal

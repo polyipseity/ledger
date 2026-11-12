@@ -1,6 +1,7 @@
 ---
 name: Critical Dependencies
 description: "Use when a tool is missing, a version is wrong, or a script cannot find hledger, Python, the lockfile, or gpg."
+applyTo: "**"
 ---
 
 # Dependencies

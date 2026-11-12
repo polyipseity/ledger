@@ -1,6 +1,7 @@
 ---
 name: Git Commit Conventions
 description: Conventional commit rules for repository contributions and explicit rules for ledger transaction commits made by agents.
+applyTo: "**"
 ---
 
 # Git commit conventions

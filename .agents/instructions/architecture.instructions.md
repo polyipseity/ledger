@@ -1,6 +1,7 @@
 ---
 name: Architecture & File Organization
 description: "Use when placing a journal, an include, or a prelude declaration: the tree, the include chain, and the monthly file pattern."
+applyTo: "ledger/**"
 ---
 
 

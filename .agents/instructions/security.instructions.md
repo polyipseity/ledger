@@ -1,7 +1,7 @@
 ---
 name: Security Practices
 description: Guidance for handling confidential data in this personal accounting system, including private.yaml encryption/decryption and UUID usage for privacy.
-applyTo: "private.yaml*"
+applyTo: "**"
 ---
 
 
