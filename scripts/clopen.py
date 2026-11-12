@@ -31,7 +31,7 @@ The implementation mirrors the style of the other helper scripts in
 
 from argparse import ArgumentParser, Namespace
 from calendar import monthrange
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from dataclasses import dataclass
 from functools import wraps
 from logging import INFO, basicConfig, info
@@ -75,10 +75,14 @@ class Arguments:
         period: A year-month string (e.g. ``"2026-02"``) specifying which
             monthly folder to process. The script will operate on every
             ``*.journal`` file found under the corresponding ``ledger/YYYY/YYYY-MM``
-            directory.
+            directory, unless ``only`` narrows that set.
+        only: Journal filenames (e.g. ``"self.journal"``, not paths) to
+            restrict processing to. ``None`` processes every journal of the
+            period. A name that matches no journal of the period is ignored.
     """
 
     period: str
+    only: Sequence[str] | None = None
 
 
 async def _process_journal(journal: PathLike[str]) -> None:
@@ -269,9 +273,10 @@ async def _process_journal(journal: PathLike[str]) -> None:
 async def main(args: Arguments) -> None:
     """Entry point for ``scripts.clopen``.
 
-    The function discovers journals for the supplied period, runs the
-    processing helper for each, and exits with code ``0`` on success. Any
-    failure during journal processing causes the script to exit with ``1``.
+    The function discovers journals for the supplied period, keeps the ones
+    named by ``args.only`` when it is set, runs the processing helper for each,
+    and exits with code ``0`` on success. Any failure during journal processing
+    causes the script to exit with ``1``.
     """
 
     folder = get_ledger_folder()
@@ -286,6 +291,9 @@ async def main(args: Arguments) -> None:
     last_day = monthrange(start.year, start.month)[1]
     end = start.replace(day=last_day, hour=23, minute=59, second=59, microsecond=999999)
     journals = filter_journals_between(journals, start, end)
+    if args.only is not None:
+        only_names = frozenset(args.only)
+        journals = [journal for journal in journals if Path(journal).name in only_names]
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     async with JournalRunContext(Path(__file__), journals, cache=False) as run:
@@ -311,9 +319,9 @@ async def main(args: Arguments) -> None:
 def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParser:
     """Construct and return the CLI ArgumentParser for the clopen script.
 
-    The parser adds a single positional ``period`` argument and installs an
-    ``invoke`` coroutine that constructs :class:`Arguments` and forwards them to
-    :func:`main`.
+    The parser adds a positional ``period`` argument and a repeatable ``--only``
+    option, then installs an ``invoke`` coroutine that constructs
+    :class:`Arguments` and forwards them to :func:`main`.
     """
 
     prog = argv[0]
@@ -330,12 +338,26 @@ def parser(parent: Callable[..., ArgumentParser] | None = None) -> ArgumentParse
         "period",
         help="year-month to process (e.g. 2026-02)",
     )
+    parser.add_argument(
+        "--only",
+        action="append",
+        metavar="JOURNAL",
+        help=(
+            "journal filename to process, such as self.journal (not a path); "
+            "repeat to name more than one"
+        ),
+    )
 
     @wraps(main)
     async def invoke(ns: Namespace) -> None:
         """Adapter used as ``argparse`` callback to run :func:`main`."""
 
-        await main(Arguments(period=ns.period))
+        await main(
+            Arguments(
+                period=ns.period,
+                only=None if ns.only is None else tuple(ns.only),
+            )
+        )
 
     parser.set_defaults(invoke=invoke)
     return parser

@@ -324,6 +324,89 @@ async def test_clopen_no_journals(
 
 
 @pytest.mark.anyio
+async def test_only_restricts_processed_journals(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """``only`` restricts the run to the named journal of the period."""
+
+    ledger: Path = Path(tmp_path) / "ledger"
+    await (ledger / "2026" / "2026-02").mkdir(parents=True)
+    await (ledger / "2026" / "2026-03").mkdir(parents=True)
+
+    old_j: Path = ledger / "2026" / "2026-02" / "self.journal"
+    new_j: Path = ledger / "2026" / "2026-03" / "self.journal"
+    old_alt: Path = ledger / "2026" / "2026-02" / "self.alternatives.journal"
+    new_alt: Path = ledger / "2026" / "2026-03" / "self.alternatives.journal"
+
+    for path in (old_j, new_j):
+        await path.write_text('include "preludes/self.journal"\n')
+    for path in (old_alt, new_alt):
+        await path.write_text('include "preludes/self.alternatives.journal"\n')
+    old_alt_before = await old_alt.read_text()
+    new_alt_before = await new_alt.read_text()
+
+    monkeypatch.setattr(clopen, "get_ledger_folder", lambda: ledger)
+
+    async def fake_run_hledger(journal: PathLike[str], *args: object):
+        """Return canned closing/opening output for ``journal``."""
+
+        return (f"{CLOSING_TX}\n\n{OPENING_TX}\n", "", 0)
+
+    monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
+
+    args = clopen.Arguments(period="2026-02", only=("self.journal",))
+    with pytest.raises(SystemExit) as exc:
+        await clopen.main(args)
+    assert exc.value.code == 0
+
+    assert "2026-02-28 closing balances" in await old_j.read_text()
+    assert "2026-03-01 opening balances" in await new_j.read_text()
+    # the alternatives journals are left byte-identical
+    assert await old_alt.read_text() == old_alt_before
+    assert await new_alt.read_text() == new_alt_before
+
+
+@pytest.mark.anyio
+async def test_only_unmatched_name_processes_the_rest(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """A name matching no journal must not raise nor block the other names."""
+
+    ledger: Path = Path(tmp_path) / "ledger"
+    await (ledger / "2026" / "2026-02").mkdir(parents=True)
+    await (ledger / "2026" / "2026-03").mkdir(parents=True)
+
+    old_j: Path = ledger / "2026" / "2026-02" / "self.journal"
+    new_j: Path = ledger / "2026" / "2026-03" / "self.journal"
+    old_alt: Path = ledger / "2026" / "2026-02" / "self.alternatives.journal"
+
+    await old_j.write_text('include "preludes/self.journal"\n')
+    await new_j.write_text('include "preludes/self.journal"\n')
+    await old_alt.write_text('include "preludes/self.alternatives.journal"\n')
+    old_alt_before = await old_alt.read_text()
+
+    monkeypatch.setattr(clopen, "get_ledger_folder", lambda: ledger)
+
+    async def fake_run_hledger(journal: PathLike[str], *args: object):
+        """Return canned closing/opening output for ``journal``."""
+
+        return (f"{CLOSING_TX}\n\n{OPENING_TX}\n", "", 0)
+
+    monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
+
+    args = clopen.Arguments(
+        period="2026-02", only=("self.investments.journal", "self.journal")
+    )
+    with pytest.raises(SystemExit) as exc:
+        await clopen.main(args)
+    assert exc.value.code == 0
+
+    assert "2026-02-28 closing balances" in await old_j.read_text()
+    assert "2026-03-01 opening balances" in await new_j.read_text()
+    assert await old_alt.read_text() == old_alt_before
+
+
+@pytest.mark.anyio
 async def test_clopen_disables_cache(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
@@ -410,6 +493,30 @@ async def test_parser_invokes_main(monkeypatch: pytest.MonkeyPatch) -> None:
     await ns.invoke(ns)
     assert isinstance(called.get("args"), clopen.Arguments)
     assert called["args"].period == "2026-02"
+
+
+@pytest.mark.anyio
+async def test_parser_accepts_repeatable_only(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Each ``--only`` occurrence adds one journal filename to ``Arguments``."""
+
+    called: dict[str, clopen.Arguments] = {}
+
+    async def fake_main(args: clopen.Arguments) -> None:
+        """Capture the arguments passed by the parser's ``invoke`` callback."""
+
+        called["args"] = args
+
+    monkeypatch.setattr(clopen, "main", fake_main)
+    p: ArgumentParser = clopen.parser()
+    ns: Namespace = p.parse_args(
+        ["2026-02", "--only", "self.journal", "--only", "self.alternatives.journal"]
+    )
+
+    await ns.invoke(ns)
+    assert called["args"].period == "2026-02"
+    assert called["args"].only == ("self.journal", "self.alternatives.journal")
 
 
 def test_module_main_invokes_run(run_module_helper: RunModuleHelper) -> None:
