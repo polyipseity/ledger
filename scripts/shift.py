@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Shift account balances within monthly journal files.
 
 This script adjusts account balances found in monthly journal files by a

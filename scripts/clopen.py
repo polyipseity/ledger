@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Create closing and opening balance entries, and verify the boundary chain.
 
 ``close`` runs ``hledger close --explicit --show-costs --clopen`` on each

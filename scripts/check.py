@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Run `hledger check` against monthly journal files.
 
 This script runs a comprehensive set of `hledger check` subcommands

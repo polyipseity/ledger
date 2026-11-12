@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Add depreciation entries to monthly journals.
 
 This script inserts per-item depreciation lines into the end of monthly
