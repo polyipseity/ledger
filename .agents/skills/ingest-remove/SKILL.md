@@ -15,18 +15,16 @@ An entry duplicates one already booked, carries an amount the source contradicts
 
 1. **The owner decides, and the run reports.** The case goes out with its evidence and the run stops at that entry; nothing removes a second entry by inference.
 2. **Wrong, not merely thin.** Three conditions above delete — a duplicate, an amount the source contradicts, a withdrawn source — and the wrong-month case belongs to a move. An entry that under-records its source is corrected through `../ingest/SKILL.md`, and one whose document cannot be found stays until the owner says the claim was never made.
-3. **Find every dependant before deleting.** The month's closing block, the next month's opening, every later `= balance` assertion naming an account the entry touched, and any shared bill's other half: the ledger holds 357 postings across the `equity:friends*` accounts in 33 files and 228 `liabilities:loans:` postings.
-4. **Assertions do not repair themselves.** The closing block's amounts encode the month, so a deletion upstream of one leaves its `= 0.00` contradicted by the computed balance, and `bun run check:journal` fails on it.
-5. **A boundary block is never hand-edited.** `scripts/clopen.py` writes the month's opening and closing and tags both `clopen:`; if the entry to remove is one of them, or the closing has to be recomputed, continue in `../migrate/SKILL.md`.
-6. **Delete the whole block, never a posting.** Header, comment, and all postings go together: a transaction left with one posting either fails as unbalanced or, when that posting elides its amount, passes while booking a zero nobody claimed.
-7. **Then verify the files, and the boundary only when it moved.** Name the touched journals to `uv run --locked -m scripts.check` by repository-relative path (`ledger/2025/2025-03/self.journal`), because it resolves each argument against the working directory rather than the ledger folder, and `bun run check:journal` needs no such care since it hands its arguments to the formatter and checks every journal anyway. When the deletion moved a boundary, `uv run --locked -m scripts.clopen_verify --period <YYYY-MM> --files <name>` scopes the chain to that month and matches the bare file name (`self.journal`) against the period's journals, and only the bare `bun run verify:migration` needs comparing against the run made before the deletion.
-8. **Report the block, and compensate nowhere.** The report carries the file, date, payee, and amount verbatim so the owner can restore it; no neighbouring amount is edited to absorb the gap and no assertion is loosened to pass.
+3. **Find every dependant before deleting, and expect no assertion to repair itself.** The month's closing block, the next month's opening, every later `= balance` assertion naming an account the entry touched, and any shared bill's other half — a shared bill or a loan reaches past the month it was booked in, so the dependants are found by account rather than by reading one month. The closing block's amounts encode the month, so a deletion upstream of one leaves its `= 0.00` contradicted by the computed balance, and `bun run check:journal` fails on it.
+4. **A boundary block is never hand-edited.** `scripts/clopen.py` writes the month's opening and closing and tags both `clopen:`; if the entry to remove is one of them, or the closing has to be recomputed, continue in `../migrate/SKILL.md`.
+5. **Delete the whole block, never a posting.** Header, comment, and all postings go together: a transaction left with one posting either fails as unbalanced or, when that posting elides its amount, passes while booking a zero nobody claimed.
+6. **Then verify the files, and the boundary only when it moved.** Name the touched journals to `uv run --locked -m scripts.check` by repository-relative path (`ledger/2025/2025-03/self.journal`), because it resolves each argument against the working directory rather than the ledger folder, and `bun run check:journal` needs no such care since it hands its arguments to the formatter and checks every journal anyway. When the deletion moved a boundary, `uv run --locked -m scripts.clopen_verify --period <YYYY-MM> --files <name>` scopes the chain to that month and matches the bare file name (`self.journal`) against the period's journals, and only the bare `bun run verify:migration` needs comparing against the run made before the deletion.
+7. **Report the block, and compensate nowhere.** The report carries the file, date, payee, and amount verbatim so the owner can restore it; no neighbouring amount is edited to absorb the gap and no assertion is loosened to pass.
 
 ## Procedure
 
-1. State the entry, the condition it meets, and the evidence, then wait for the owner.
-2. Walk the dependants of rule 3, and route a boundary case to `../migrate/SKILL.md`.
-3. Delete the block and nothing else, run the checks of rule 7, then report the block verbatim with their outcome; `../ingest/examples.md` has no removal block, so the shape comes from this skill's own rules.
+1. State the entry, the condition it meets, and the evidence — the dependants of rule 3 walked, with a boundary case routed to `../migrate/SKILL.md` — then wait for the owner.
+2. Delete the block and nothing else, run the checks of rule 6, then report the block verbatim with their outcome; `../ingest/examples.md` has no removal block, so the shape comes from this skill's own rules.
 
 ## Worked example
 
@@ -44,7 +42,6 @@ One claim reached the journal twice: the first block is the entry the source fir
 
 ## Stop and ask
 
-- The entry looks wrong and no document contradicts it.
+- The entry looks wrong and no document contradicts it, or another entry carries the same claim and nothing says which of the two is the stray.
 - Removing it would move a closing balance or the next opening.
-- Another entry carries the same claim, so which of the two is the stray is undecided.
 - The claim is one half of a shared bill or a loan whose settlement is still open.
