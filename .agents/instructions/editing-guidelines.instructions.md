@@ -23,8 +23,6 @@ account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc ; type: E
 
 **Do not** append new accounts to the end of the block or leave out-of-order lines uncorrected.
 
-See [edit-journals](../skills/edit-journals/) skill for complete guidance.
-
 ## Script Usage for Validation/Formatting
 
 **Scripts & validation**: See `.agents/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `bun run check`/`bun run format`; if running Python directly, set `cwd=scripts/.`
