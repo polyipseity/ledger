@@ -11,6 +11,7 @@ You write exactly one transaction into the one monthly journal you are given: `l
 
 ## Rules
 
+- By default you write the one transaction into the named journal; when the caller passes the batch shape, `merge: parent` — the mode `.agents/skills/ingest/SKILL.md` uses for four or more claims — you edit nothing, return the formatted block plus its status, and let the parent merge, sort, and run the single verification pass.
 - Insert the block at its chronological position, sorted by date and then `time:`. Do not reflow, re-indent, or reformat a neighbouring transaction, and leave the opening and closing balances untouched.
 - One dispatch touches one journal file and nothing else: never `preludes/`, a mapping or data file, another journal, or the index. Never run a git command.
 - An unmatched or ambiguous payee stops the entry: name it in `questions` and write nothing. Never invent an amount, a date, a payee, an account, or a tag value.
