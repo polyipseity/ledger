@@ -28,8 +28,8 @@ These names are the whole agent-facing surface, and every one runs from the repo
 | `bun run check:py`         | Python only: ruff lint, ruff format check, ty                                                  |
 | `bun run format:py`        | Python only: ruff fixes and format, then ty                                                    |
 | `bun run test`             | before pushing: pytest                                                                         |
-| `bun run clopen <YYYY-MM>` | close one month and open the next (added in a later task of this restructure)                  |
-| `bun run verify:migration` | monthly boundary invariants across the chain (added in a later task of this restructure)       |
+| `bun run clopen <YYYY-MM>` | close one month and open the next                                                              |
+| `bun run verify:migration` | monthly boundary invariants across the chain                                                   |
 
 ### Invocation law
 
