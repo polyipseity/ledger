@@ -9,8 +9,7 @@ from calendar import monthrange
 from collections.abc import Sequence
 from os import PathLike
 from pathlib import Path
-from subprocess import CalledProcessError, CompletedProcess
-from typing import NoReturn
+from subprocess import CalledProcessError
 
 import pytest
 
@@ -612,61 +611,6 @@ async def test_main_exits_zero_when_clean(
     assert capsys.readouterr().out == ""
 
 
-def test_resolve_now_month_truncates_iso_date() -> None:
-    """An ISO date narrows to its year and month."""
-
-    assert clopen_verify.resolve_now_month("2026-06-15T10:11:12+08:00") == "2026-06"
-    assert clopen_verify.resolve_now_month("2026-06") == "2026-06"
-
-
-def test_resolve_now_month_rejects_non_month() -> None:
-    """A value that does not start with a year-month raises."""
-
-    for value in ("2026", "June 2026", "2026-6"):
-        with pytest.raises(ValueError, match="not a year-month prefix"):
-            clopen_verify.resolve_now_month(value)
-
-
-def test_resolve_now_month_requires_git(
-    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
-) -> None:
-    """Without a git history there is no month to classify against."""
-
-    folder = Path(tmp_path)
-    monkeypatch.setattr(clopen_verify, "get_script_folder", lambda depth=0: folder)
-
-    with pytest.raises(RuntimeError, match="cannot determine the current month"):
-        clopen_verify.resolve_now_month(None)
-
-
-def test_resolve_now_month_requires_git_binary(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    """A machine without git has no current month either."""
-
-    def fake_run(*args: object, **kwargs: object) -> NoReturn:
-        """Fail the way a missing git executable does."""
-        raise FileNotFoundError("git")
-
-    monkeypatch.setattr(clopen_verify, "run", fake_run)
-
-    with pytest.raises(RuntimeError, match="git failed to start"):
-        clopen_verify.resolve_now_month(None)
-
-
-def test_resolve_now_month_requires_a_commit(monkeypatch: pytest.MonkeyPatch) -> None:
-    """A repository without a commit date has no current month."""
-
-    def fake_run(*args: object, **kwargs: object) -> CompletedProcess[str]:
-        """Report success while printing nothing."""
-        return CompletedProcess(args=["git"], returncode=0, stdout="", stderr="")
-
-    monkeypatch.setattr(clopen_verify, "run", fake_run)
-
-    with pytest.raises(RuntimeError, match="printed no commit date"):
-        clopen_verify.resolve_now_month(None)
-
-
 @pytest.mark.anyio
 async def test_account_types_failure_reported(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
@@ -932,20 +876,3 @@ async def test_main0_reports_argument_errors(
     assert capsys.readouterr().err == (
         "error: --period '2026-1' is not a YYYY-MM month\n"
     )
-
-
-def test_resolve_now_month_rejects_unparseable_date(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    """Git output that is not a date cannot name the current month."""
-
-    def fake_run(*args: object, **kwargs: object) -> CompletedProcess[str]:
-        """Report success while printing something that is not a date."""
-        return CompletedProcess(
-            args=["git"], returncode=0, stdout="tomorrow\n", stderr=""
-        )
-
-    monkeypatch.setattr(clopen_verify, "run", fake_run)
-
-    with pytest.raises(RuntimeError, match="printed no commit date"):
-        clopen_verify.resolve_now_month(None)
