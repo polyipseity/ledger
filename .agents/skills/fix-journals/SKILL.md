@@ -15,6 +15,8 @@ This skill turns one failing check into the smallest edit that makes it pass. It
 4. Re-run `bun run check:journal`. A second failure is the next defect, not the same one twice.
 5. When the check is clean, run `bun run format:journal` once. It repeats the check and then rewrites the journals into canonical form, so it runs after the last fix; it can never repair a parse error.
 
+A formatting diff is not a check failure and never reaches the table: `bun run check:journal` ends with a check-only pass of the formatter, so a diff it reports has no check name, no cause to classify, and one fix — `bun run format:journal`.
+
 Both bun forms take no file argument and always cover the whole journal set. Scope a check to one file with the module form and a repository-relative path: `uv run --locked -m scripts.check ledger/<year>/<year>-<month>/self.journal`.
 
 **Diagnosis journals.** To see what a check prints, write a self-contained scratch journal under `/tmp` with its own `account`, `payee`, `tag`, and `commodity` declarations and no `include`, and run `node_modules/.bin/hledger --strict --file <scratch> check <check>` against it; nothing is created inside the repository for this. To reproduce a real journal's failure, copy that journal beside itself in `ledger/<year>/<year>-<month>/`, because its `include ../../../preludes/self.journal` is relative: a copy in `/tmp` resolves against the wrong directory and fails with a missing-include error that has nothing to do with the defect. Delete the copy before committing.
@@ -24,7 +26,7 @@ Both bun forms take no file argument and always cover the whole journal set. Sco
 | check | what hledger prints | usual cause here | minimal fix |
 | --- | --- | --- | --- |
 | `parseable` | `This is not a valid date, please fix it.`, or `unexpected newline` / `expecting '*', '=', or amount (for a balance assertion or assignment)` | a header the parser cannot read, or a posting or tag cut off mid-token | restore the syntax; the formatter cannot help, so it is not run to "see what happens" |
-| `accounts` | `account "expenses:food and drinks:dining" has not been declared.` | a new account used before it is declared, or a typo in a deep account name | declare it in `preludes/self.journal` in the existing style, or correct the name; never invent a parallel account |
+| `accounts` | `account "expenses:food and drinks:dining" has not been declared.` | a new account used before it is declared, or a typo in a deep account name | search the declared names with `node_modules/.bin/hledger accounts --declared -f ledger/index.journal \| rg '<search>'`, then declare the account in `preludes/self.journal` in the existing style or correct the name to a declared one; never invent a parallel account |
 | `payees` | `payee "Another Merchant" has not been declared.` | a merchant spelled differently from its declared `payee` line | register it (`../add-payee/SKILL.md`) or correct the spelling |
 | `tags` | `tag "eatingtype" has not been declared.` | a tag name, or an enumerated value, that the preludes do not declare | declare it, or correct it to a declared one |
 | `commodities` | `commodity "USD" has not been declared.` | a commodity with no `commodity` directive, or a wrong symbol | declare it in the preludes, or fix the symbol |
