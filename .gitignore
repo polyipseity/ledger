@@ -469,6 +469,4 @@ vite.config.ts.timestamp-*
 
 # self {
 /private.yaml
-# agent harness scratch (delegates, background tasks)
-/.pi/
 # }
