@@ -4,195 +4,58 @@ description: Guidance for handling confidential data in this personal accounting
 applyTo: "**"
 ---
 
+# Security practices
 
-# Security Practices
+**The agent never encrypts, never decrypts, and never commits confidential data.** Opening `private.yaml`, re-encrypting it, and the commit that carries `private.yaml.gpg` are the owner's actions. The agent's part is the placeholder it can name without the value, and the question it asks when it needs more.
 
-Guidance for handling confidential data in this personal accounting system.
+## Which file holds the secrets
 
-## private.yaml File Management
+The [private.yaml.gpg](../../private.yaml.gpg) file carries the mapping of UUIDs to confidential strings, encrypted and tracked. It decrypts to `private.yaml`, which sits beside it in the owner's working copy only:
 
-### Purpose and Structure
+- **Account numbers**: real bank account numbers and card numbers
+- **Personal names**: full names of individuals, family members
+- **Locations**: home address, workplace, sensitive locations
+- **Institution names**: real names of banks, insurance companies, employers
+- **Contact information**: phone numbers, email addresses
 
-The [private.yaml.gpg](../../private.yaml.gpg) file carries the mapping of UUIDs to confidential strings, encrypted; it decrypts to `private.yaml`, which sits beside it in the owner's working copy only, and the repository never carries the plaintext:
+Only the ciphertext is committed. `.gitignore` excludes `private.yaml` and keeps excluding it; the plaintext is the owner's alone, and a copy of it in the working tree is never staged, quoted, or attached to a report.
 
-- **Account numbers**: Real bank account numbers, card numbers
-- **Personal names**: Full names of individuals, family members
-- **Locations**: Home address, workplace, sensitive locations
-- **Institution names**: Real names of banks, insurance companies, employers
-- **Contact information**: Phone numbers, email addresses
+## What the journals carry
 
-This separation allows journals to remain readable and shareable (with UUIDs as placeholders) while keeping sensitive information encrypted.
-
-### Security Requirements
-
-**CRITICAL: Only commit encrypted `private.yaml.gpg`**
-
-- Unencrypted `private.yaml` must never be committed or pushed
-- Ensure `.gitignore` contains `private.yaml` (but not `private.yaml.gpg`)
-- Never inline confidential values in journals, code, or commits—use UUID placeholders only
-- Always encrypt immediately after editing `private.yaml`
-
-## Encryption Workflow
-
-### Encrypting Private Data
-
-After editing `private.yaml` locally:
-
-```powershell
-.\scripts\encrypt.bat      # Windows
-.\scripts\encrypt.sh       # Linux/macOS
-```
-
-**What happens:**
-
-1. Script reads the unencrypted `private.yaml`
-2. Uses GPG to encrypt it to `private.yaml.gpg`
-3. Leaves `private.yaml` on disk unencrypted; only `private.yaml.gpg` is committed
-4. Safe to commit `private.yaml.gpg` to repository
-
-**Requirements:**
-
-- GPG installed and in PATH
-- Non-password-protected GPG public key available
-- Recipient key specified in script configuration
-
-### Decrypting Private Data
-
-To edit confidential mappings:
-
-```powershell
-.\scripts\decrypt.bat      # Windows
-.\scripts\decrypt.sh       # Linux/macOS
-```
-
-**What happens:**
-
-1. Script reads `private.yaml.gpg`
-2. Prompts for GPG key password
-3. Decrypts and overwrites `private.yaml` locally
-4. **WARNING**: Leaves decrypted file on disk until encrypted again
-
-**Requirements:**
-
-- GPG installed and in PATH
-- Password-protected GPG private key available
-- Correct password for private key
-
-### Encryption/Decryption Workflow Example
-
-```powershell
-# 1. Decrypt to edit
-.\scripts\decrypt.bat      # Windows (or .\scripts\decrypt.sh)
-# [Prompted for password]
-
-# 2. Edit private.yaml with your editor
-# [Add new UUID mappings or update existing ones]
-
-# 3. Encrypt immediately after editing
-.\scripts\encrypt.bat      # Windows (or .\scripts\encrypt.sh)
-
-# 4. Verify encrypted version
-ls -la private.yaml*       # Should show both files
-git status                 # Should show only private.yaml.gpg as modified
-
-# 5. Commit the encrypted version
-git add private.yaml.gpg
-git commit -m "Update confidential data mappings"
-```
-
-## UUID Usage
-
-### How UUIDs Replace Confidential Data
-
-Throughout journals, sensitive information is replaced with UUIDs:
+Journals and docs name a payee or an account by UUID placeholder, so an entry reads the same whether or not the reader can resolve it:
 
 ```hledger
-# Journal entry (public, safe to share)
 2025-01-19 Generic Cafe
-    expenses:food and drinks:dining    50.00 HKD
-    assets:banks:<bank-uuid>          -50.00 HKD
+    expenses:food and drinks:dining       50.00 HKD
+    assets:banks:<bank-uuid>             -50.00 HKD
 ```
 
-The `<bank-uuid>` placeholder is an actual UUID that maps to:
+The `<bank-uuid>` placeholder stands for a UUID whose pair sits in `private.yaml`. A confidential value never enters a journal, a document, a commit message, or a test fixture; what enters is the UUID, and `.agents/skills/add-payee/SKILL.md` declares the prelude line that carries it.
 
-```yaml
-<bank-uuid>: "Account 123-456789 at Bank XYZ"
-```
+- **One entity keeps one UUID.** Reuse the pair a prelude already carries instead of minting a second one, so the ledger's history resolves consistently.
+- **A new confidential entity needs a new UUID**, and that pair is the owner's to add, because adding it means decrypting and re-encrypting.
 
-**Stored in**: `private.yaml` (encrypted as `private.yaml.gpg`)
+## A mapping change is the owner's
 
-### UUID Benefits
+When an entry needs a name the mapping does not hold, the agent stops and asks, naming what the owner has to add: the confidential string, the UUID the entry will carry, and where the pair belongs. The owner decrypts, adds the pair, re-encrypts, and commits the ciphertext. The agent never edits `private.yaml`, never runs a decrypt or encrypt step, and never commits the mapping.
 
-1. **Readable journals**: UUIDs are concise and consistent
-2. **Privacy**: Can share journals without exposing account details
-3. **Security**: Confidential mappings isolated in encrypted file
-4. **Flexibility**: Can change confidential details without re-editing all journals
-5. **Traceability**: UUIDs maintain referential integrity across time
+`.agents/skills/add-payee/SKILL.md` is where that request is made from, and it holds the declaration the prelude then needs.
 
-### UUID Consistency
+## When the agent stops and asks
 
-- **Payees**: Use same UUID for repeated counterparties
-- **Accounts**: Use same UUID for same account across multiple journals
-- **Conventions**: See [preludes/self.journal](../../preludes/self.journal) for existing UUID definitions
-- **New UUIDs**: Generate new UUID only for new entities, reuse existing ones otherwise
+- A printed name looks confidential — a person, an institution, an account or card number — and `private.yaml` is the only place it could be resolved.
+- A UUID in a prelude or a journal resolves to no pair the agent can see, and the task needs the name rather than the placeholder.
+- A mapping change is required, since the owner adds the pair and the agent never does.
+- A commit would include `private.yaml`, or a file whose content came out of it.
 
-## Best Practices
+What the agent may read instead is always at hand: the UUID a journal already carries, or the placeholder a prelude declares. Neither is a secret, and neither is decrypted.
 
-### For Editing Confidential Data
+## Sharing
 
-1. **Decrypt minimally**: Only decrypt when actively editing
-2. **Encrypt immediately**: After finishing edits, encrypt right away
-3. **Verify encryption**: Confirm `private.yaml.gpg` changed before committing
-4. **Secure key**: Keep GPG private key password secure and memorized
-5. **Test decryption**: Periodically verify you can decrypt to catch key issues early
-6. **Backup key**: Keep secure backup of GPG private key (separate from repository)
+A journal handed outside the repository keeps its UUIDs and loses nothing: the recipient can read every entry and cannot resolve a name. Say so when handing one over, and never attach `private.yaml`, a decrypted copy, or a screenshot of either.
 
-### For Sharing Journals
+## Recovery and diagnosis
 
-1. **Only share journals with UUIDs**: Never share with decrypted private.yaml
-2. **Share public-safe copies**: Create journals with UUIDs intact
-3. **Note limitations**: When sharing, document that recipient cannot resolve UUIDs
-4. **Version control**: Always commit encrypted `private.yaml.gpg`, never unencrypted version
-
-### For Repository Maintenance
-
-1. **Verify .gitignore**: Confirm `private.yaml` is ignored, `private.yaml.gpg` is tracked
-2. **Check git history**: Search for accidental `private.yaml` commits:
-
-   ```powershell
-   git log --all --full-history -- private.yaml
-   ```
-
-3. **Monitor changes**: Before committing, verify only `private.yaml.gpg` appears in `git status`
-4. **Encryption verification**: Confirm `private.yaml.gpg` is binary and reasonably sized for encryption overhead
-
-## Recovery and Troubleshooting
-
-### Lost Decryption Access
-
-If you lose the GPG private key or password:
-
-1. All confidential mappings in `private.yaml.gpg` become inaccessible
-2. Journals with UUIDs remain valid but unmapped
-3. Recovery requires either:
-   - Finding the lost key/password
-   - Re-creating mappings in a new `private.yaml` and encrypting
-   - Reverting to an earlier commit with accessible encryption
-
-**Prevention**: Maintain secure backup of private key and password in separate location.
-
-### Encryption Errors
-
-If `.\scripts\encrypt.bat` fails:
-
-1. Verify GPG is installed: `gpg --version`
-2. Check public key exists: `gpg --list-keys`
-3. Verify file permissions: `ls -la private.yaml`
-4. Check disk space
-
-If `.\scripts\decrypt.bat` fails:
-
-1. Verify GPG is installed: `gpg --version`
-2. Check private key exists: `gpg --list-secret-keys`
-3. Ensure `private.yaml.gpg` exists and is readable
-4. Verify password is correct
+- **A lost key or passphrase** makes every mapping in `private.yaml.gpg` unreadable. The journals stay valid and their UUIDs simply stop resolving. Recovery is the owner's: restore the key from their backup, or rebuild the pairs and encrypt a new file.
+- **`gpg: decryption failed: No secret key`** means the owner's private key is not in this keyring. No agent-side fix exists; `.agents/instructions/dependencies.instructions.md` holds the tool surface, so report the message and stop.
+- **A pair that resolves to nothing** is a question for the owner, never a value to invent or approximate.
