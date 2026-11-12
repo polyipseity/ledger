@@ -1,6 +1,6 @@
 ---
 name: ledger-verifier
-description: Read-only verification of journals and month boundaries. Runs the check, format-check, and migration-verifier commands and reports defects with file and transaction. Never edits.
+description: "Read-only verification of journals and month boundaries. Runs the check, format-check, and the boundary diagnostic `uv run --locked -m scripts.clopen verify`, reporting defects with file and transaction. Never edits."
 model: inherit
 tools: read, bash, grep, find, ls
 ---

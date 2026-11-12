@@ -70,31 +70,20 @@ from collections import defaultdict
 from collections.abc import Callable, Iterable, Iterator, Sequence
 from dataclasses import dataclass
 from decimal import Decimal
+from enum import StrEnum
 from functools import wraps
 from logging import INFO, basicConfig, info
-from os import PathLike
+from os import PathLike, fspath
 from pathlib import Path as StdPath
 from typing import final
 
 from anyio import Path
 from asyncer import runnify
+from pydantic import BaseModel, ConfigDict, RootModel, ValidationError
 
 from .utils.cache import JournalRunContext
-from .utils.files import file_update_if_changed, get_ledger_folder
-from .utils.hledger import (
-    CLOSING_DESCRIPTION,
-    OPENING_DESCRIPTION,
-    DefectKind,
-    Journal,
-    Transaction,
-    Unreadable,
-    display_path,
-    first_line,
-    hledger_output,
-    last_day,
-    load_journal,
-    money,
-)
+from .utils.files import file_update_if_changed, get_ledger_folder, get_script_folder
+from .utils.hledger import MONTH_PATTERN, first_line, run_hledger
 from .utils.journals import (
     filter_journals_between,
     find_monthly_journals,
@@ -102,7 +91,6 @@ from .utils.journals import (
     parse_period_start,
     resolve_now_month,
     resolve_period,
-    run_hledger,
 )
 
 """Public symbols exported by this module."""
@@ -133,6 +121,225 @@ _CLOSED_TYPES = frozenset({"A", "C", "L"})
 _MISSING_OPENING = "no opening balances transaction"
 """Detail reported when a month that requires a closing balance has none."""
 _MISSING_CLOSING = "no closing balances transaction"
+
+"""Description of the transaction that carries a month's opening balances."""
+OPENING_DESCRIPTION = "opening balances"
+
+"""Description of the transaction that carries a month's closing balances."""
+CLOSING_DESCRIPTION = "closing balances"
+
+
+class Quantity(BaseModel):
+    """Exact decimal quantity as hledger reports it."""
+
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
+    decimalMantissa: int
+    decimalPlaces: int
+
+    @property
+    def value(self) -> Decimal:
+        """Return the quantity as an exact decimal."""
+        return Decimal(self.decimalMantissa).scaleb(-self.decimalPlaces)
+
+    @property
+    def zero(self) -> Decimal:
+        """Return zero at the same scale as the quantity, for reporting."""
+        return Decimal(0).scaleb(-self.decimalPlaces)
+
+
+class Amount(BaseModel):
+    """One commodity amount inside a posting or a balance assertion."""
+
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
+    acommodity: str
+    aquantity: Quantity
+
+
+class BalanceAssertion(BaseModel):
+    """Balance assertion attached to a closing posting."""
+
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
+    baamount: Amount
+
+
+class Posting(BaseModel):
+    """One posting of a transaction."""
+
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
+    paccount: str
+    pamount: list[Amount]
+    pbalanceassertion: BalanceAssertion | None = None
+
+
+class Transaction(BaseModel):
+    """One transaction as ``hledger print -O json`` reports it.
+
+    ``tindex`` is hledger's journal-order index, the only reliable ordering
+    signal: the time of day lives in the ``time`` tag, not in ``tdate``.
+    """
+
+    model_config = ConfigDict(extra="ignore", frozen=True)
+
+    tdate: str
+    tdescription: str
+    tindex: int
+    tpostings: list[Posting]
+    ttags: list[tuple[str, str]]
+
+
+class JournalDocument(RootModel[list[Transaction]]):
+    """Top-level JSON document of one journal, holding its transactions."""
+
+
+@final
+@dataclass(
+    init=True,
+    repr=True,
+    eq=True,
+    order=False,
+    unsafe_hash=False,
+    frozen=True,
+    match_args=True,
+    kw_only=True,
+    slots=True,
+)
+class Journal:
+    """A monthly journal reduced to the transactions the scripts inspect.
+
+    Attributes:
+        path: The journal file on disk.
+        month: The ``YYYY-MM`` month taken from the journal's directory name.
+        transactions: Every transaction, in journal order.
+        opening: The opening balance transaction, when the month has one.
+        closing: The closing balance transaction, when the month has one.
+    """
+
+    path: StdPath
+    month: str
+    transactions: Sequence[Transaction]
+    opening: Transaction | None
+    closing: Transaction | None
+
+
+@final
+class Unreadable(Exception):
+    """A journal whose contents could not be read.
+
+    Attributes:
+        detail: The reason, ready to become an :attr:`DefectKind.UNREADABLE`
+            defect detail.
+    """
+
+    detail: str
+
+    def __init__(self, detail: str) -> None:
+        """Store ``detail`` as the reason the journal could not be read."""
+        super().__init__(detail)
+        self.detail = detail
+
+
+async def hledger_output(journal: PathLike[str], *args: str) -> tuple[str, str, int]:
+    """Run hledger on ``journal`` and return its output, error text, and exit code.
+
+    The run never raises and is never strict: a broken journal must become a
+    reported defect rather than a crash, and account declarations play no part
+    in what a caller of this helper reads.
+    """
+    return await run_hledger(
+        journal,
+        *args,
+        strict=False,
+        raise_on_error=False,
+        log_on_error=False,
+    )
+
+
+async def load_journal(path: StdPath) -> Journal:
+    """Return ``path`` parsed into the boundary data the verifier inspects.
+
+    hledger runs without ``--strict`` because account declarations play no part
+    in balance arithmetic, so that a journal missing declarations still counts.
+
+    Args:
+        path: The monthly journal to read, whose parent directory names the
+            month.
+
+    Returns:
+        The journal's transactions with its opening and closing balance
+        transactions picked out.
+
+    Raises:
+        Unreadable: When the month directory is not named after a calendar
+            month, or when hledger fails, prints nothing, or prints something
+            that is not a hledger journal document.
+    """
+    month = path.parent.name
+    if MONTH_PATTERN.fullmatch(month) is None:
+        raise Unreadable(f"month directory {month!r} is not named YYYY-MM")
+    try:
+        last_day(month)
+    except ValueError as exc:
+        raise Unreadable(f"month directory {month!r} is not a calendar month") from exc
+    stdout, stderr, code = await hledger_output(path, "print", "-O", "json")
+    if code != 0:
+        raise Unreadable(f"hledger print exited {code}: {first_line(stderr)}")
+    if not stdout.strip():
+        raise Unreadable("hledger print produced no output")
+    try:
+        document = JournalDocument.model_validate_json(stdout)
+    except ValidationError as exc:
+        raise Unreadable(
+            f"hledger print produced an unexpected document: {first_line(str(exc))}"
+        ) from exc
+    transactions = document.root
+    return Journal(
+        path=path,
+        month=month,
+        transactions=transactions,
+        opening=_boundary(transactions, OPENING_DESCRIPTION, last=False),
+        closing=_boundary(transactions, CLOSING_DESCRIPTION, last=True),
+    )
+
+
+def _boundary(
+    transactions: Sequence[Transaction], description: str, *, last: bool
+) -> Transaction | None:
+    """Return the boundary transaction described by ``description``, if any."""
+    matches = [
+        transaction
+        for transaction in transactions
+        if transaction.tdescription == description
+    ]
+    if not matches:
+        return None
+    return matches[-1] if last else matches[0]
+
+
+def last_day(month: str) -> str:
+    """Return the last date of ``month`` as a ``YYYY-MM-DD`` string.
+
+    Raises:
+        ValueError: When ``month`` is not a calendar month.
+    """
+    year, _, number = month.partition("-")
+    return f"{month}-{monthrange(int(year), int(number))[1]:02d}"
+
+
+def money(amount: Amount) -> str:
+    """Return ``amount`` as an exact quantity followed by its commodity."""
+    return f"{amount.aquantity.value} {amount.acommodity}"
+
+
+def display_path(path: StdPath) -> str:
+    """Return ``path`` relative to the repository root when it lies inside it."""
+    try:
+        return fspath(path.relative_to(fspath(get_script_folder(depth=1))))
+    except ValueError:
+        return fspath(path)
 
 
 @final
@@ -357,13 +564,13 @@ async def _process_journal(journal: PathLike[str]) -> None:
         await Path(next_journal).write_text(content)
 
 
-async def close(args: Arguments) -> None:
+async def close(args: Arguments) -> int:
     """Close ``args.period`` and open the month that follows it.
 
     The function discovers journals for the supplied period, keeps the ones
-    named by ``args.files`` when it is set, runs the processing helper for each,
-    and exits with code ``0`` on success. Any failure during journal processing
-    causes the script to exit with ``1``.
+    named by ``args.files`` when it is set, and runs the processing helper for
+    each. It returns ``0`` when every journal was processed and ``1`` when any
+    of them failed; the caller exits with that code.
 
     Raises:
         ValueError: When ``args.period`` is absent. The parser requires the
@@ -407,9 +614,21 @@ async def close(args: Arguments) -> None:
                 overall_error = True
                 info("error processing %s: %s", journal, e)
         if overall_error:
-            sys.exit(1)
+            return 1
+    return 0
 
-    sys.exit(0)
+
+class DefectKind(StrEnum):
+    """Kind of monthly boundary defect a verifier reports."""
+
+    MISSING_OPENING = "missing_opening"
+    MISSING_CLOSING = "missing_closing"
+    UNEXPECTED_BOUNDARY = "unexpected_boundary"
+    CLOSING_NOT_ZERO = "closing_not_zero"
+    CLOSING_INCOMPLETE = "closing_incomplete"
+    OPENING_MISMATCH = "opening_mismatch"
+    BOUNDARY_UNORDERED = "boundary_unordered"
+    UNREADABLE = "unreadable"
 
 
 @final
@@ -793,7 +1012,9 @@ async def verify(args: Arguments) -> int:
         unmatched = sorted(names - {StdPath(journal).name for journal in journals})
         if unmatched:
             listed = ", ".join(repr(name) for name in unmatched)
-            raise ValueError(f"--files {listed} matches no journal in the period")
+            raise ValueError(
+                f"journal filename {listed} matches no journal in the period"
+            )
     info("journals:\n%s", format_journal_list(journals, max_items=8))
 
     defects = await verify_family(journals, now_month)
@@ -804,16 +1025,10 @@ async def verify(args: Arguments) -> int:
 
 
 async def main(args: Arguments) -> int:
-    """Dispatch to the subcommand named by ``args.command`` and return its code.
-
-    Returns:
-        The exit code the subcommand reports. ``close`` exits through
-        :func:`sys.exit` itself, so it never returns a code here.
-    """
+    """Return the exit code the subcommand named by ``args.command`` reports."""
 
     if args.command == "close":
-        await close(args)
-        return 0
+        return await close(args)
     return await verify(args)
 
 

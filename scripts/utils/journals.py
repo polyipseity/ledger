@@ -328,12 +328,12 @@ def resolve_period(period: str | None) -> str | None:
     try:
         start = parse_period_start(period)
     except ValueError as exc:
-        raise ValueError(f"--period {period!r} is not a YYYY-MM month") from exc
+        raise ValueError(f"period {period!r} is not a YYYY-MM month") from exc
     if (
         MONTH_PATTERN.fullmatch(month) is None
         or f"{start.year:04d}-{start.month:02d}" != month
     ):
-        raise ValueError(f"--period {period!r} is not a YYYY-MM month")
+        raise ValueError(f"period {period!r} is not a YYYY-MM month")
     return month
 
 

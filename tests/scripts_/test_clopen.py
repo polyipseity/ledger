@@ -15,7 +15,6 @@ from pathlib import Path as StdPath
 import pytest
 from anyio import Path
 
-import scripts.utils.hledger as hmod
 from scripts import clopen
 
 from ..test_utils import RunModuleHelper
@@ -73,9 +72,7 @@ async def test_clopen_happy_path(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     contents_old = await old_j.read_text()
     assert "2026-02-28 closing balances" in contents_old
@@ -145,9 +142,7 @@ async def test_clopen_existing_closing_errors(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 1
+    assert await clopen.main(args) == 1
 
 
 @pytest.mark.anyio
@@ -176,9 +171,7 @@ async def test_clopen_existing_opening_errors(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 1
+    assert await clopen.main(args) == 1
 
 
 @pytest.mark.anyio
@@ -205,9 +198,7 @@ async def test_clopen_missing_next_journal_appends_closing(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     text = await old_j.read_text()
     assert "2026-02-28 closing balances" in text
@@ -257,9 +248,7 @@ async def test_clopen_alt_missing_next_still_processes_main(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     # both journals should have closing entries
     alt_text = await (
@@ -323,9 +312,7 @@ async def test_clopen_no_journals(
     monkeypatch.setattr(clopen, "get_ledger_folder", lambda: ledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
 
 @pytest.mark.anyio
@@ -360,9 +347,7 @@ async def test_files_restrict_processed_journals(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02", files=("self.journal",))
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     assert "2026-02-28 closing balances" in await old_j.read_text()
     assert "2026-03-01 opening balances" in await new_j.read_text()
@@ -404,9 +389,7 @@ async def test_files_unmatched_name_processes_the_rest(
         period="2026-02",
         files=("self.investments.journal", "self.journal"),
     )
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     assert "2026-02-28 closing balances" in await old_j.read_text()
     assert "2026-03-01 opening balances" in await new_j.read_text()
@@ -444,9 +427,7 @@ async def test_files_empty_sequence_processes_nothing(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02", files=())
-    with pytest.raises(SystemExit) as exc:
-        await clopen.main(args)
-    assert exc.value.code == 0
+    assert await clopen.main(args) == 0
 
     for path, text in before.items():
         assert await path.read_text() == text
@@ -515,8 +496,7 @@ async def test_clopen_disables_cache(
     monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     args = clopen.Arguments(command="close", period="2026-02")
-    with pytest.raises(SystemExit):
-        await clopen.main(args)
+    await clopen.main(args)
     assert called.get("cache") is False
 
 
@@ -1231,7 +1211,7 @@ async def test_account_types_failure_reported(
 
     folder = StdPath(tmp_path) / "ledger" / "2026"
     april = _write_journal(folder, "2026-04", _CLEAN_APRIL)
-    real_run_hledger = hmod.run_hledger
+    real_run_hledger = clopen.run_hledger
 
     async def fake_run_hledger(
         journal: PathLike[str] | str,
@@ -1251,7 +1231,7 @@ async def test_account_types_failure_reported(
             log_on_error=log_on_error,
         )
 
-    monkeypatch.setattr(hmod, "run_hledger", fake_run_hledger)
+    monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     defects = await clopen.verify_family([april], "2026-06")
 
@@ -1288,7 +1268,7 @@ async def test_invalid_hledger_output_reported(
         """Return the given output as if hledger had printed it."""
         return stdout, "", 0
 
-    monkeypatch.setattr(hmod, "run_hledger", fake_run_hledger)
+    monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
 
     defects = await clopen.verify_family([april], "2026-06")
 
@@ -1442,7 +1422,7 @@ async def test_verify_rejects_malformed_period(
 
     monkeypatch.setattr(clopen, "get_ledger_folder", lambda: StdPath(tmp_path))
 
-    with pytest.raises(ValueError, match="--period '2026-1' is not a YYYY-MM month"):
+    with pytest.raises(ValueError, match="period '2026-1' is not a YYYY-MM month"):
         await clopen.verify(
             clopen.Arguments(command="verify", period="2026-1", now="2026-11")
         )
@@ -1460,7 +1440,9 @@ async def test_verify_rejects_unknown_file(
         clopen, "get_ledger_folder", lambda: StdPath(tmp_path) / "ledger"
     )
 
-    with pytest.raises(ValueError, match="--files 'ledger/2026/2026-06/self.journal'"):
+    with pytest.raises(
+        ValueError, match="journal filename 'ledger/2026/2026-06/self.journal'"
+    ):
         await clopen.verify(
             clopen.Arguments(
                 command="verify",
@@ -1486,5 +1468,5 @@ async def test_main0_reports_argument_errors(
 
     assert exit_info.value.code == 1
     assert capsys.readouterr().err == (
-        "error: --period '2026-1' is not a YYYY-MM month\n"
+        "error: period '2026-1' is not a YYYY-MM month\n"
     )

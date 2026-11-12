@@ -13,9 +13,9 @@ goes through `json`, frontmatter and the payee data files through
 `pydantic_yaml`, the budget table through the fenced block that carries it,
 headings and table rows through the lines that state them, prelude payees
 through the directive each line spells, and the assets a ``SKILL.md`` routes
-through the link targets and inline-code spans it quotes. A formatting change
-moves none of those, so a green run states that the structure holds rather than
-that some phrase survived a search.
+and the paths a document names through the link targets and inline-code spans
+it quotes. A formatting change moves none of those, so a green run states that
+the structure holds rather than that some phrase survived a search.
 """
 
 import json
@@ -23,6 +23,7 @@ import os
 import re
 from contextlib import redirect_stderr
 from io import StringIO
+from os import PathLike
 from pathlib import Path
 
 from pydantic import BaseModel, RootModel
@@ -95,6 +96,15 @@ _CODE_SPAN = re.compile(r"`([^`\n]+)`")
 
 """The punctuation a table cell wraps a command spelling in."""
 _CELL_PUNCTUATION = "`*_()[],.;:'\""
+
+"""The link prefixes that name no repository path."""
+_PATH_EXEMPT_PREFIXES = ("#", "http://", "https://", "mailto:")
+
+"""Characters that make an inline-code span a placeholder rather than a path."""
+_PLACEHOLDER = set("<>*?{}~$|\\")
+
+"""A leading path segment shaped like a directory of this repository."""
+_REPO_SEGMENT = re.compile(r"^\.?[a-z][a-z0-9_.-]*$")
 
 
 class _Frontmatter(RootModel[dict[str, str]]):
@@ -263,6 +273,67 @@ def _named_files(text: str) -> set[str]:
     tokens = _LINK_TARGET.findall(text)
     tokens.extend(_CODE_SPAN.findall(text))
     return {Path(token).name for token in tokens}
+
+
+def _path_documents() -> list[Path]:
+    """Return the agent-facing documents whose paths must resolve."""
+    return [
+        REPO_ROOT / "AGENTS.md",
+        REPO_ROOT / "README.md",
+        *sorted(AGENTS_DIR.rglob("*.md")),
+    ]
+
+
+def _span_names_a_path(span: str) -> bool:
+    """Report whether an inline-code span reads as a repository path.
+
+    A span is a path when it carries two segments, no whitespace or placeholder
+    character, and a leading segment spelled like a directory of this
+    repository. An account name, a commodity pair, a command, a bare directory
+    name, and a ``YYYY`` template each fail one of those, so they are read as
+    what they are rather than resolved as files.
+    """
+    target = span.partition("::")[0]
+    if "/" not in target.strip("/") or any(character.isspace() for character in target):
+        return False
+    if any(character in _PLACEHOLDER or character == ":" for character in target):
+        return False
+    return bool(_REPO_SEGMENT.fullmatch(target.split("/", 1)[0]))
+
+
+def _resolves(document: Path, token: str) -> bool:
+    """Report whether ``token`` names a path that exists.
+
+    A relative target resolves against the document's own directory first and
+    against the repository root second, so a link written from a nested skill
+    and a path quoted the way a reader would type it both count. A target that
+    begins with parent-directory segments is also tried with those stripped,
+    because a document may quote a path the way a journal three levels down
+    would spell it.
+    """
+    target = token.partition("::")[0].partition("#")[0]
+    if not target:
+        return True
+    if (document.parent / target).exists() or (REPO_ROOT / target).exists():
+        return True
+    stripped = target
+    while stripped.startswith(("../", "./")):
+        stripped = stripped.partition("/")[2]
+    return (REPO_ROOT / stripped).exists()
+
+
+def _path_violations(document: Path) -> list[str]:
+    """Return every relative path ``document`` names that cannot be opened."""
+    text = _read(document)
+    tokens = _LINK_TARGET.findall(text)
+    tokens.extend(span for span in _CODE_SPAN.findall(text) if _span_names_a_path(span))
+    return [
+        _report(document, f"`{token}` names no path")
+        for token in tokens
+        if "YYYY" not in token
+        and not token.startswith(_PATH_EXEMPT_PREFIXES)
+        and not _resolves(document, token)
+    ]
 
 
 def _retired_tokens(cell: str) -> list[str]:
@@ -607,7 +678,24 @@ def test_no_agent_frontmatter_in_skill_dirs() -> None:
         for key in _AGENT_KEYS
         if key in _frontmatter(document)
     ]
-    for document in sorted((AGENTS_DIR / "agents").glob("*.md")):
+    violations.extend(_agent_violations(AGENTS_DIR / "agents"))
+    _check(
+        "agent definitions live in `.agents/agents/` and take `model: inherit`",
+        violations,
+    )
+
+
+def _agent_violations(directory: Path) -> list[str]:
+    """Return every agent definition missing its name, description, or scope.
+
+    A directory holding no agent definition is itself a violation, so deleting
+    the definitions cannot turn the contract green.
+    """
+    documents = sorted(directory.glob("*.md"))
+    if not documents:
+        return [f"{directory}: holds no agent definition"]
+    violations: list[str] = []
+    for document in documents:
         fields = _frontmatter(document)
         violations.extend(
             _report(document, f"frontmatter `{key}` is missing")
@@ -617,22 +705,64 @@ def test_no_agent_frontmatter_in_skill_dirs() -> None:
         model = fields.get("model", "absent")
         if model != "inherit":
             violations.append(_report(document, f"`model` is `{model}`, not `inherit`"))
-    _check(
-        "agent definitions live in `.agents/agents/` and take `model: inherit`",
-        violations,
-    )
+    return violations
+
+
+def _instruction_violations(directory: Path) -> list[str]:
+    """Return every instruction file that does not declare what and where it is.
+
+    A directory holding no instruction file is itself a violation, so deleting
+    the instruction tree cannot turn the contract green.
+    """
+    documents = sorted(directory.glob("*.md"))
+    if not documents:
+        return [f"{directory}: holds no instruction file"]
+    return [
+        _report(document, f"frontmatter `{key}` is missing or empty")
+        for document in documents
+        for key in ("name", "description", "applyTo")
+        if not _frontmatter(document).get(key)
+    ]
 
 
 def test_instructions_have_apply_to() -> None:
     """Assert every instruction file declares a name, a description, and a scope."""
-    documents = sorted((AGENTS_DIR / "instructions").glob("*.md"))
     _check(
         "every instruction file must declare what it is and where it applies",
+        _instruction_violations(AGENTS_DIR / "instructions"),
+    )
+
+
+def test_emptied_document_trees_fail_their_contracts(
+    tmp_path: PathLike[str],
+) -> None:
+    """Point both document contracts at an empty tree and assert they report it.
+
+    An instruction tree and an agent directory both reach their contracts as a
+    set of documents, so an emptied tree has to fail loudly rather than pass
+    with nothing to check.
+    """
+    empty = Path(tmp_path)
+    assert _instruction_violations(empty)
+    assert _agent_violations(empty)
+
+
+def test_document_paths_resolve() -> None:
+    """Assert every relative path an agent-facing document names can be opened.
+
+    The documents are `AGENTS.md`, `README.md`, and every markdown file under
+    `.agents/`. A path is a link target, or an inline-code span that reads as
+    one: a fragment, a URL, and a span carrying a placeholder (`<name>`, a
+    `YYYY` template) name no file by construction and are exempt.
+    """
+    documents = _path_documents()
+    assert documents
+    _check(
+        "every relative path a document names must resolve",
         [
-            _report(document, f"frontmatter `{key}` is missing or empty")
+            violation
             for document in documents
-            for key in ("name", "description", "applyTo")
-            if not _frontmatter(document).get(key)
+            for violation in _path_violations(document)
         ],
     )
 

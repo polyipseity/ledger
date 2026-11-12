@@ -29,7 +29,7 @@ These names are the whole agent-facing surface, and every one runs from the repo
 | `bun run format:py`        | Python only: ruff fixes and format, then ty                                                    |
 | `bun run test`             | before pushing: pytest                                                                         |
 
-The two maintenance commands are the owner's decision, not an agent's: `uv run --locked -m scripts.clopen close <YYYY-MM>` runs when the owner runs it, or when the owner dispatches an agent with a named range (`ledger-migrator`, which never chooses its own), and `uv run --locked -m scripts.clopen verify` is a read-only diagnostic that `ledger-verifier` may run freely, never a gate and never part of ordinary entry work; `scripts/clopen.py` holds both. Neither runs on an agent's own initiative: the chain is red today by design, so an agent that notices a boundary defect reports it and stops.
+The boundary tool is `scripts/clopen.py`, and it holds two commands. `close` is the owner's decision: `uv run --locked -m scripts.clopen close <YYYY-MM>` runs when the owner runs it, or when the owner dispatches an agent with a named range (`ledger-migrator`, which never chooses its own range). `verify` is a read-only diagnostic any agent may run, ordinary entry work included: `uv run --locked -m scripts.clopen verify` reports the boundary chain and is never a gate and never a green signal. The chain is red today by design, so an agent that notices a boundary defect reports it and stops.
 
 ### Invocation law
 
