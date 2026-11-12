@@ -32,6 +32,7 @@ applyTo: "**"
 
 ### Concurrency
 
+- **AnyIO and asyncer, never `asyncio`.** Async helper code takes its primitives from `anyio` and its task groups and bridging from `asyncer`; `asyncio` is not imported directly.
 - The per-journal coroutines run through `gather_and_raise` (`scripts/utils/concurrency.py`), which wraps them in an `asyncer` task group and re-raises every failure as one `BaseExceptionGroup` carrying a per-command summary.
 - hledger subprocesses are throttled by a module-level `anyio.Semaphore(cpu_count() or 4)`.
 
@@ -51,6 +52,7 @@ A hook that declares a `files` glob receives the matching paths appended to its 
 
 - A test module takes its name and place from the source module it covers: `tests/scripts_/test_check.py` covers `scripts/check.py`, `tests/scripts_/utils/test_journals.py` covers `scripts/utils/journals.py`, and `tests/tests/test_test_utils.py` covers the shared helper `tests/test_utils.py`.
 - Documentation-contract tests belong under `tests/docs/`; they read the repository tree from their own location and assert what the docs claim about it.
+- A test imports its module and calls `main` directly rather than spawning it as a subprocess; a test that has to exercise the entry point goes through `run_module_helper` (`tests/test_utils.py`), which runs the module under a faked `asyncer.runnify`.
 - An `async def` test carries `@pytest.mark.anyio`, and the event loop comes from the backend fixture rather than a runner inside the test.
 - A `tmp_path` parameter is annotated `PathLike[str]`, and the body wraps it as `Path(tmp_path)` when it needs a `pathlib` object.
 - `pyproject.toml` adds `-n=auto` and `--dist=loadscope`, so the tests of one module share a worker, and coverage is reported by default.

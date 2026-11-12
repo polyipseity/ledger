@@ -1,5 +1,6 @@
 include index.journal
 
+; account taxonomy: see .agents/reference/account-hierarchy.md
 account assets:accrued revenues:education                                                         ; type: A
 account assets:accrued revenues:education:scholarships                                            ; type: A
 account assets:accrued revenues:incomes                                                           ; type: A

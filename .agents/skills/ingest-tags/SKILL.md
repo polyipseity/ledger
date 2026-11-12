@@ -5,7 +5,7 @@ description: Rules for the metadata tags on an hledger entry — which comment k
 
 # ingest-tags
 
-This aspect decides the metadata a transaction carries: the comment keys its activity requires, the order they survive formatting in, and whether a key or a value may be used at all. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns the key vocabulary and the surrounding syntax; `../../instructions/editing-guidelines.instructions.md` owns placement and declaration order; `../fix-journals/SKILL.md` owns the check loop. Meal timing is `../ingest-food/SKILL.md`'s and the reward postings of a fare are `../ingest-transport/SKILL.md`'s.
+This aspect decides the metadata a transaction carries: the comment keys its activity requires, the order they survive formatting in, and whether a key or a value may be used at all. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns the comment syntax and the entry shape; `../../instructions/editing-guidelines.instructions.md` owns placement and declaration order; `../fix-journals/SKILL.md` owns the check loop. Meal timing is `../ingest-food/SKILL.md`'s and the reward postings of a fare are `../ingest-transport/SKILL.md`'s.
 
 ## When to use
 

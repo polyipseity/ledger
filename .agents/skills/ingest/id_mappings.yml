@@ -91,6 +91,7 @@
   regex:
     receipt_id: "\\d{18,20}"
 "Saizeriya":
+  # QR-order metadata lines are not identifiers; only the receipt id and the table number are recorded.
   orders:
     - [receipt_id, table_number]
   regex:

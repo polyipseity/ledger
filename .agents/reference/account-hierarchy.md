@@ -1,31 +1,12 @@
----
-name: Account Hierarchy & Meanings
-description: Complete documentation of all account types (50+) across assets, equity, liabilities, expenses, and revenues with their purposes and meanings.
----
+# Account hierarchy
 
-# Account Hierarchy & Meanings
+Reference material, not rules: every account the preludes declare, and what it means. The `account` directives in [`preludes/self.journal`](../../preludes/self.journal) and [`preludes/self.alternatives.journal`](../../preludes/self.alternatives.journal) are the canonical list, [`architecture.instructions.md`](../instructions/architecture.instructions.md) holds the journal layout, and a transaction's own account choice is its aspect skill's.
 
-This file provides annotations and explanations for accounts declared in the canonical prelude files (see `preludes/`).
+Nothing here adds or removes an account. A new account is extrapolated from this taxonomy: place it under the most specific existing parent, keep its UUID subaccount under the parent that names the kind of holding (`liabilities:loans:colleagues:<uuid>`), and follow the naming of its siblings.
 
-**Instructions for agents:**
+## Asset accounts
 
-- Do not add or remove accounts here. The canonical list is in the prelude files.
-- Use this file only for documentation, explanations, and usage notes.
-- When a new account is requested, extrapolate its correct parent and type by following the hierarchy and naming conventions below. Place new UUID-based accounts under the most specific parent (e.g., `liabilities:loans:colleagues:<uuid>` for a new colleague loan).
-- If unsure, infer the most likely parent and type by analogy to similar accounts in this file and the canonical prelude.
-
-## Example annotation
-
-- `liabilities:loans:colleagues` — Loans from colleagues. Each subaccount is a UUID for privacy. See `preludes/self.journal` for the full list.
-- `liabilities:loans:colleagues:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` — Loan from colleague (UUID anonymized). Use for tracking loans from this specific colleague. All postings and repayments should reference this account. See canonical declaration in `preludes/self.journal`.
-
----
-
-Complete documentation of all account types and their purposes, organized by the five major accounting categories.
-
-## Asset Accounts
-
-Assets represent what you own or are owed.
+Assets are what you own or are owed.
 
 - **assets:accumulated depreciation**: Contra-asset tracking depreciation of owned objects. Net of this account against objects gives book value.
 - **assets:accrued revenues**: Income earned but not yet received (education scholarships, insurance payouts, tutoring fees awaiting collection)
@@ -38,7 +19,7 @@ Assets represent what you own or are owed.
   - Stripe (online payment processor accounts)
   - Game Zone (arcade/gaming venue accounts)
   - University accounts (campus meal plans, library, etc.)
-- **assets:loans**: Money lent to friends/clients with balance assertions tracking what's owed back
+- **assets:loans**: Money lent to friends/clients, with balance assertions tracking what is owed back
 - **assets:objects**: Physical owned items with depreciation tracking:
   - Clothing (apparel and accessories)
   - Consumer electronics (devices, accessories)
@@ -50,44 +31,44 @@ Assets represent what you own or are owed.
   - Club points/e-currency (membership program points)
 - **assets:trusts**: Trust or retirement accounts (retirement master trust accounts identified by account numbers)
 
-## Equity Accounts
+## Equity accounts
 
-Equity represents ownership or net worth components.
+Equity is ownership and net worth components.
 
-- **equity:conversions**: Currency and point conversion tracking with rate metadata. Each conversion pair (e.g., HKD-USD, HKD-_PT/D) has dual-side accounts to track rates and balances.
-- **equity:external:self.alternatives**: Links to alternative scenario tracking when using separate alternatives journal. Maintains connection between main and alternatives journals.
-- **equity:friends**: Informal debts and credits with friends (money borrowed from/lent to friends, shared expenses)
+- **equity:conversions**: Currency and point conversion tracking, with rate metadata. Each conversion pair (e.g., HKD-USD, HKD-_PT/D) has dual-side accounts to track rates and balances.
+- **equity:external:self.alternatives**: Links to alternative-scenario tracking in the separate alternatives journal. Maintains the connection between the two streams.
+- **equity:friends**: Informal debts and credits with friends (money borrowed from or lent to friends, shared expenses)
 - **equity:kins**: Family-related equity including:
   - Special gifts from family members
   - Family member-specific sub-accounts
   - Family financial arrangements
-- **equity:organizations**: Institutional relationships (e.g., university as equity holder for scholarship relationships)
-- **equity:unaccounted**: Balancing account for reconciliation differences. When totals don't balance, differences are placed here temporarily.
-- **equity:opening/closing balances**: Monthly journal boundary transactions that mark the transition between months
-- **equity:unknown**: Unidentified transaction counterparties when source/destination isn't clear
+- **equity:organizations**: Institutional relationships (e.g., a university as equity holder for a scholarship relationship)
+- **equity:unaccounted**: Balancing account for reconciliation differences. When totals do not balance, the difference is placed here temporarily.
+- **equity:opening/closing balances**: The monthly boundary transactions that mark the transition between months
+- **equity:unknown**: Unidentified counterparties, when the source or destination is not clear
 
-## Liability Accounts
+## Liability accounts
 
-Liabilities represent what you owe.
+Liabilities are what you owe.
 
 - **liabilities:accrued expenses**: Expenses incurred but not yet paid:
   - Insurance premiums (health, life, liability)
   - Utility levies or surcharges
   - Internet/telecom service bills
-- **liabilities:credit cards**: Credit card balances with UUID identifiers for specific cards. Tracks amount owed to card issuers.
+- **liabilities:credit cards**: Credit card balances, with UUID identifiers for specific cards. Tracks the amount owed to card issuers.
 - **liabilities:deferred revenues**: Income received but not yet earned (e.g., prepaid services, advance payments)
-- **liabilities:loans**: Money borrowed from friends or colleagues with balance assertions tracking repayment status
+- **liabilities:loans**: Money borrowed from friends or colleagues, with balance assertions tracking repayment status
 
-## Expense Accounts
+## Expense accounts
 
-Expenses represent money spent.
+Expenses are money spent.
 
-- **expenses:depreciation**: Periodic depreciation entries for owned assets (opposite side of assets:accumulated depreciation)
+- **expenses:depreciation**: Periodic depreciation entries for owned assets (the opposite side of `assets:accumulated depreciation`)
 - **expenses:education**: Education-related spending:
   - Books (textbooks, reference books)
   - Tuition (course fees, enrollment fees)
   - Incidental (school supplies, exam fees)
-- **expenses:fees**: Various fees:
+- **expenses:fees**: Fees of every kind:
   - Banking fees (account maintenance, transaction fees)
   - Payment processing fees (currency conversion, payment system fees)
   - Government fees (application, registration)
@@ -98,7 +79,7 @@ Expenses represent money spent.
   - Fruits (produce purchases)
   - Snacks (packaged food items)
   - Use detailed `food_or_drink:` tags for specific items
-- **expenses:gaming**: Gaming/entertainment:
+- **expenses:gaming**: Gaming and entertainment:
   - Arcade games (maimai, other rhythm games)
   - Gaming venues
 - **expenses:healthcare**: Medical spending:
@@ -122,18 +103,18 @@ Expenses represent money spent.
   - Taxis (licensed taxis)
   - Trams (electric trams)
   - Airplanes (flights)
-- **expenses:writeoffs**: Removing items from books:
+- **expenses:writeoffs**: Removing items from the books:
   - Expired vouchers (no longer redeemable)
   - Lost items (items no longer recoverable)
 
-## Revenue Accounts
+## Revenue accounts
 
-Revenues represent money earned.
+Revenues are money earned.
 
 - **revenues:donations**: Money received as donations:
   - GitHub Sponsors (sponsorship donations)
   - Buy Me a Coffee (crowdfunding tips)
-- **revenues:education:scholarships**: Academic scholarships with reward identifiers tracking award sources
+- **revenues:education:scholarships**: Academic scholarships, with reward identifiers tracking the award source
 - **revenues:incomes**: General income:
   - Tutoring (private teaching)
   - Work (employment, freelance)
@@ -144,15 +125,15 @@ Revenues represent money earned.
   - Bank interest (savings account interest)
   - Investment interest
 - **revenues:rewards**: Loyalty program rewards:
-  - Credit card points (converted to cash/statement credit)
+  - Credit card points (converted to cash or statement credit)
   - Store loyalty rewards
   - Competition prizes (contest winnings)
 
-## Account ID Format
+## Account ID format
 
 Many accounts use UUIDs as identifiers:
 
-- **Purpose**: Maintain privacy by separating account identifiers from confidential details
-- **Mapping**: See `private.yaml` (encrypted as `private.yaml.gpg`) for UUID → confidential string mappings
-- **Example**: `assets:banks:<bank-uuid>` resolves to actual bank name through private mapping
-- **Usage**: UUIDs appear consistently as payees and account identifiers throughout journals
+- **Purpose**: keep account identifiers separate from confidential details
+- **Mapping**: `private.yaml` (encrypted as `private.yaml.gpg`) holds the UUID-to-string pairs
+- **Example**: `assets:banks:<bank-uuid>` resolves to the real bank name through that mapping
+- **Usage**: the same UUID appears as a payee and as an account identifier throughout the journals

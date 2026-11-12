@@ -5,7 +5,7 @@ description: Rules for transcribing a platform sale and its payout into hledger 
 
 # ingest-platform
 
-This aspect decides what a digital-platform source contributes: how a sale divides into revenue, fee, and balance, what a payout moves, and which of the platform's identifiers reach the payee line. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns syntax, `../../instructions/account-hierarchy.instructions.md` the accounts, `../ingest-tags/SKILL.md` the tags, and `../fix-journals/SKILL.md` the check loop. A sale settled in a second commodity is `../ingest-currency/SKILL.md`'s.
+This aspect decides what a digital-platform source contributes: how a sale divides into revenue, fee, and balance, what a payout moves, and which of the platform's identifiers reach the payee line. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns syntax, `../../reference/account-hierarchy.md` the accounts, `../ingest-tags/SKILL.md` the tags, and `../fix-journals/SKILL.md` the check loop. A sale settled in a second commodity is `../ingest-currency/SKILL.md`'s.
 
 ## When to use
 

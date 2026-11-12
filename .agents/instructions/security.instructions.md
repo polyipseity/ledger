@@ -47,7 +47,7 @@ After editing `private.yaml` locally:
 
 1. Script reads the unencrypted `private.yaml`
 2. Uses GPG to encrypt it to `private.yaml.gpg`
-3. Overwrites original with encrypted version
+3. Leaves `private.yaml` on disk unencrypted; only `private.yaml.gpg` is committed
 4. Safe to commit `private.yaml.gpg` to repository
 
 **Requirements:**

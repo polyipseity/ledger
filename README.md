@@ -44,3 +44,19 @@ Touch the mappings only when you are adding or changing one: decrypt with the `s
 In VS Code with Copilot Chat, enable `chat.useAgentsMdFile` and leave `chat.useNestedAgentsMdFiles` disabled, so the single root `AGENTS.md` is the file that loads as context.
 
 Markdown is linted by `markdownlint-cli2` and formatted by Prettier, configured by `.markdownlint-cli2.mjs`, `.markdownlint.jsonc`, `.prettierrc.mjs`, and `.editorconfig`. `bun run check:md` lints them, and `bun run format:md` applies the linter's fixes.
+
+## Troubleshooting
+
+**`hledger` is missing.** `bun install` provisions it into `node_modules/.bin/hledger`, and every script prefers that file over anything on your `PATH`. When provisioning did not finish, `bun run hledger:install` writes the binary and `--force` replaces a partial or wrong-version download. To use a hand-installed hledger instead, install one from [hledger.org](https://hledger.org) or with `brew install hledger` on macOS and `apt install hledger` on Debian and Ubuntu.
+
+**The Python interpreter is too old.** `pyproject.toml` requires 3.13 or newer, and `uv sync` downloads a matching interpreter when none is installed. If it refuses the one it finds, install a known-good version with `uv python install 3.13` and run `uv sync` again.
+
+**`uv sync` did not finish.** It provisions the runtime dependencies and the dev group that `ruff`, `ty`, and `pytest` come from, so a partial sync fails the Python checks. Run `uv sync` by hand to see its error; `--locked` reproduces what CI installs from `uv.lock`.
+
+**`gpg` is missing.** Install it with `brew install gnupg` on macOS, `apt install gnupg` on Debian and Ubuntu, or an installer from [gnupg.org](https://www.gnupg.org) on Windows.
+
+**`gpg` has no key for the mappings.** `gpg --list-secret-keys` shows the keys this machine holds; `gpg --gen-key` creates one. `scripts/encrypt.sh` encrypts to the recipient its own line names, so a key that is not that recipient produces a mapping nothing here can open, and `scripts/decrypt.sh` prompts for the passphrase of a key that is.
+
+**A task cannot find `bun`, `uv`, or `gpg`.** Every task reads `PATH`. `command -v bun uv gpg` names the ones your shell resolves.
+
+**The shell scripts will not run on Windows.** Each module that ships a wrapper has a `.sh` and a `.bat` one side by side; both change to the repository root themselves, so either runs from any directory. There is no PowerShell script left to need an execution policy.

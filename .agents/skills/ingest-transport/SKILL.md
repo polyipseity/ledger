@@ -14,7 +14,7 @@ A deduction for a bus, rail, ferry, tram, light-rail, minibus, taxi, or airplane
 ## Rules
 
 1. **The operator is mapped before the entry exists.** Resolve it through `../ingest/payee_mappings.yml`; an operator with no mapping, or with several candidates and nothing in the row to separate them, goes to `../ingest-payee/SKILL.md`.
-2. **The mode picks the account.** `expenses:transport:buses`, `:trains` with `:high-speed` for a long-haul ticket, `:ferries`, `:light rail`, `:minibuses`, `:taxis`, `:trams`, or `:airplanes`, chosen from `../../instructions/account-hierarchy.instructions.md`. The amount never picks the mode.
+2. **The mode picks the account.** `expenses:transport:buses`, `:trains` with `:high-speed` for a long-haul ticket, `:ferries`, `:light rail`, `:minibuses`, `:taxis`, `:trams`, or `:airplanes`, chosen from `../../reference/account-hierarchy.md`. The amount never picks the mode.
 3. **A fare carries `activity: transport`.** A points redemption from the same program is a reward transaction rather than a fare.
 4. **A fare has no duration.** No `duration:` goes on a fare, and a later statement row that pairs with an existing fare entry never adds one: the fare has a start and no end.
 5. **Each reward commodity accrues in its own pair.** An operator that credits points with the fare gets one accrual pair per reward commodity, on the same date, ordered expense, accruals, payment, revenues: `assets:accrued revenues:rewards` positive and `revenues:rewards` negative in each commodity.

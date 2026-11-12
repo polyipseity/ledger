@@ -56,7 +56,7 @@ A month after the current month may exist as a scaffold — the `include` lines 
 
 ## Never hand-copy output
 
-Never transcribe the output of `hledger close --migrate` into a journal, never type a boundary transaction in an editor, and never migrate two months in one step: each opening is the previous closing negated, so a batch hides which of the two a wrong figure came from. The tool exists because hand-copying lost postings, and the months it left unclosed in this repository still have to be repaired one pair at a time.
+Never transcribe another tool's boundary output into a journal, never type a boundary transaction in an editor, and never migrate two months in one step: each opening is the previous closing negated, so a batch hides which of the two a wrong figure came from. The tool exists because hand-copying lost postings, and the months it left unclosed in this repository still have to be repaired one pair at a time.
 
 ## Verification and report
 

@@ -5,7 +5,7 @@ description: Rules for transcribing loans, repayments, and shared bills into hle
 
 # ingest-lending
 
-This aspect decides what a loan, a repayment, or a bill shared with friends contributes: which account holds the balance, when a status marker is warranted, and which of the ledger's three sharing shapes the source calls for. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns the syntax, `../../instructions/account-hierarchy.instructions.md` the accounts, and `../fix-journals/SKILL.md` the check loop. A bill's printed items are `../ingest-food/SKILL.md`'s and its tags are `../ingest-tags/SKILL.md`'s.
+This aspect decides what a loan, a repayment, or a bill shared with friends contributes: which account holds the balance, when a status marker is warranted, and which of the ledger's three sharing shapes the source calls for. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns the syntax, `../../reference/account-hierarchy.md` the accounts, and `../fix-journals/SKILL.md` the check loop. A bill's printed items are `../ingest-food/SKILL.md`'s and its tags are `../ingest-tags/SKILL.md`'s.
 
 ## When to use
 
@@ -21,7 +21,7 @@ A source that lends money, borrows it, repays it, or splits a bill with friends:
 6. **Shape (c), an advance you will repay.** The advanced amount lands on `liabilities:loans:friends:<uuid>` with its assertion instead of `equity:friends`: `2026-01-01` 沙嗲王 puts the whole bill there and writes no `equity:friends` line, while `2026-01-24` 快樂小羊 writes positive `equity:friends` lines for two co-diners beside a liability for the friend's advance. Those two disagree about where co-diners' shares belong, so this rule states only what both support — the advance sits on the liability with an assertion — and a source where co-diners' shares and a friend's advance meet goes to the owner.
 7. **A repayment entry, not the direction, tells a split from a loan.** Both directions of a split use `equity:friends`; what selects the loan accounts is a debt cleared by its own transfer. `2025-11-09` Saizeriya books a friend's share on `assets:loans:friends:<uuid>` with a `*` and a repayment later that evening, while TenRen's Tea books its friend's share on `equity:friends` with neither. A source that does not say whether the money comes back goes to the owner.
 8. **The payee is what the entry is about.** A bill keeps the venue's payee; a lending or repayment entry takes the counterparty's `<uuid>` with `activity: lending` or `activity: repayment`, as `2026-04-01` and `2026-01-27` do. `activity: repayment` is wider than loans — it also settles credit-card bills and collects loans you made — so the tag alone never implies a friend.
-9. **Interest is its own posting.** A charge for the loan itself never joins the principal, so the loan account still clears to zero on the amount actually lent or advanced; which account carries the interest is `../../instructions/account-hierarchy.instructions.md`'s.
+9. **Interest is its own posting.** A charge for the loan itself never joins the principal, so the loan account still clears to zero on the amount actually lent or advanced; which account carries the interest is `../../reference/account-hierarchy.md`'s.
 10. **Shares are printed or agreed, never averaged.** An amount, a share, or a direction the source does not give is a question rather than a rounding.
 
 ## Procedure
