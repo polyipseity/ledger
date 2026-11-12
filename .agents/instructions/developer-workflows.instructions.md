@@ -12,7 +12,7 @@ applyTo: "**"
 
 `scripts/` is one Python package: each top-level module is a command, `scripts/utils/` holds the shared helpers, and the modules import each other relatively (`from .utils.cache import JournalRunContext`), which is why they run only as modules of that package. `scripts/utils/files.py::get_ledger_folder` walks from the helper's own `__file__` up to the repository root and returns `<repo>/ledger`, so discovery does not depend on the process working directory, and a caller that wants another tree passes explicit journal paths, which `find_monthly_journals` returns already resolved.
 
-- `find_monthly_journals` matches monthly journals with the glob `**/*[0-9]{4}-[0-9]{2}/*.journal` under the ledger folder; `find_all_journals` matches every `*.journal` under a folder.
+- `find_monthly_journals` matches monthly journals under the ledger folder with a glob of the form `**/*<YYYY>-<MM>/*.journal`; `find_all_journals` matches every `*.journal` under a folder.
 - `run_hledger` (`scripts/utils/journals.py`) invokes `hledger --file <journal> --strict <args>` and defaults `strict=True`, so every hledger call from a script is strict unless the caller opts out; a non-zero exit raises `CalledProcessError` unless the caller sets `raise_on_error=False`.
 - The hledger binary is the managed `node_modules/.bin/hledger` that `bun install` provisions. `PATH` is consulted only when that file is absent, and no binary at all raises `FileNotFoundError` instead of running a different one.
 - A helper that needs asynchronous file operations coerces the caller's `PathLike` to `anyio.Path` internally, so callers keep passing `pathlib` objects.
@@ -26,7 +26,8 @@ applyTo: "**"
 - A script key is `<script name>@<sha256 of the script>+preludes@<sha256 of preludes/>`, so editing a prelude invalidates the cached journals of every script.
 - A helper that derives a cache key from a script path fails fast with `FileNotFoundError` when that path cannot be opened for reading, and never falls back to a default key.
 - A journal's hash covers its text lines with leading and trailing blank lines trimmed, so a stray newline at either edge does not force reprocessing while interior spacing still does.
-- An unreadable or invalid cache file logs a warning and starts empty, and `evict_old_scripts` drops a script untouched for a day and a file entry untouched for thirty days.
+- A missing or blank cache file reads as an empty cache, an invalid one logs a warning and starts empty, and any other read error propagates to the caller.
+- `evict_old_scripts` drops a script untouched for a day and a file entry untouched for thirty days.
 - `scripts/clopen.py` builds its context with `cache=False`, because a month boundary must always do the full work.
 
 ### Concurrency
@@ -49,8 +50,8 @@ A hook that declares a `files` glob receives the matching paths appended to its 
 `tests/conftest.py` supplies the AnyIO backend `("asyncio", {"use_uvloop": True})` for every async test in the suite.
 
 - A test module takes its name and place from the source module it covers: `tests/scripts_/test_check.py` covers `scripts/check.py`, `tests/scripts_/utils/test_journals.py` covers `scripts/utils/journals.py`, and `tests/tests/test_test_utils.py` covers the shared helper `tests/test_utils.py`.
-- `tests/docs/` holds the documentation-contract tests. They read the repository tree from their own location, `Path(__file__).parents[2]`, and assert what the docs claim about it.
+- Documentation-contract tests belong under `tests/docs/`; they read the repository tree from their own location and assert what the docs claim about it.
 - An `async def` test carries `@pytest.mark.anyio`, and the event loop comes from the backend fixture rather than a runner inside the test.
 - A `tmp_path` parameter is annotated `PathLike[str]`, and the body wraps it as `Path(tmp_path)` when it needs a `pathlib` object.
-- `pyproject.toml` adds `-n auto` and `--dist=loadscope`, so the tests of one module share a worker, and coverage is reported by default.
+- `pyproject.toml` adds `-n=auto` and `--dist=loadscope`, so the tests of one module share a worker, and coverage is reported by default.
 - `tests/test_module_exports.py` and `tests/test_docstrings.py` read the modules' ASTs and fail on a missing `__all__`, a missing module or exported-symbol docstring, or an undocumented top-level constant, so the conventions are enforced by the suite.
