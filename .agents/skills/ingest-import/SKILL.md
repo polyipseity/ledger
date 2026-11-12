@@ -5,7 +5,7 @@ description: Rules for importing an external source into hledger — locating it
 
 # ingest-import
 
-This aspect decides how an outside source becomes claims the ledger can act on: where the source is, how a row is parsed, what a row must carry before anyone writes to a journal, and how the import shows that repeating it changes nothing. `ingest` owns matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns syntax, `../ingest-tags/SKILL.md` the tags, and `../fix-journals/SKILL.md` the check loop. What a claim becomes is an aspect skill's: `../ingest-food/SKILL.md`, `../ingest-transport/SKILL.md`, `../ingest-lending/SKILL.md`, `../ingest-currency/SKILL.md`, `../ingest-platform/SKILL.md`, `../ingest-octopus/SKILL.md`.
+This aspect decides how an outside source becomes claims the ledger can act on: where the source is, how a row is parsed, what a row must carry before anyone writes to a journal, and how the import shows that repeating it changes nothing. `ingest` owns matching, the add/update/no-op decision, and the validation gate; `../../instructions/transaction-format.instructions.md` owns syntax, `../ingest-tags/SKILL.md` the tags, and `../fix-journals/SKILL.md` the check loop. What a claim becomes is an aspect skill's: `../ingest-food/SKILL.md`, `../ingest-transport/SKILL.md`, `../ingest-lending/SKILL.md`, `../ingest-currency/SKILL.md`, `../ingest-platform/SKILL.md`, `../ingest-octopus/SKILL.md`. The tag vocabulary — including which value a reload or a payout takes — is `../ingest-tags/SKILL.md`'s, so the example's `activity: reload` shows one value the ledger has written rather than a rule.
 
 ## When to use
 
@@ -24,8 +24,8 @@ A statement export, a bank alert, a platform report, an app history, or a month 
 9. **A CSV export is read by its header.** The column names decide what each field is, a column the file does not explain is reported rather than guessed, and the running-balance column checks the row above instead of becoming a posting.
 10. **An email body is prose.** The amount, the reference, and the event's time are read out of its text, the message's own arrival time is not the event's time, and a token the provider repeats in every message identifies nothing.
 11. **An app export is a screen, not a ledger.** A paginated history gives the counterparty, the amount, and the printed time, often no reference at all; take what it prints and let matching work from the date, the amount, and the time.
-12. **A bank push is one message and two movements.** The bank-to-wallet transfer and the wallet-to-card reload carry one amount seconds apart, so both are booked or neither; both legs' shape is `../ingest-octopus/SKILL.md`'s.
-13. **The eDDA reference is the FRN, not the debtor token.** A provider's debtor-reference token repeats in every message it sends, so it identifies nothing: match on the FRN or transfer identifier with the timestamp and amount, and never record the debtor token in a journal or in `../ingest/id_mappings.yml`.
+12. **A bank push is one message and two movements, and no more than claims.** The bank-to-wallet transfer and the wallet-to-card reload carry one amount seconds apart, so this skill's parse yields two claims; whether that pair is booked at all, how each leg is matched, and how close in time a match may be are `../ingest-octopus/SKILL.md`'s, which decides them once for every reload.
+13. **The eDDA reference is the FRN, not the debtor token.** A provider's debtor-reference token repeats in every message it sends, so it identifies nothing: the FRN or transfer identifier is the reference to carry, and the debtor token never reaches a journal or `../ingest/id_mappings.yml`. Which carried references a match may combine belongs to `../ingest-octopus/SKILL.md`.
 
 ## Procedure
 

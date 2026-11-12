@@ -15,10 +15,10 @@ A notice, export, or API record from a payment platform — Stripe, PayPal, Squa
 
 1. **A sale is three amounts.** The gross sits on the revenue account in the commodity the counterparty paid, the platform's own fee sits on its fee account, and only the net reaches the platform asset; the gross is never posted as received, and a fee never nets into revenue.
 2. **A payout is a transfer.** Equal and opposite amounts on the platform asset and the bank, with revenue untouched, because the money earned its revenue at the sale.
-3. **The payout asserts the balance it leaves.** The platform posting carries `= 0.00 <CUR>` when the payout empties the account and the remaining balance when it does not; a zero written to tidy a line fails the check.
-4. **The sale's payee is the counterparty, the payout's is the platform.** A sale names the donor or buyer, masked to one `*` per hidden character with only an address's `@`, dot, and TLD left legible; a payout names the platform itself, never the transaction type.
+3. **The payout assertion records the balance it leaves.** Nine of the ledger's seventeen payouts assert `= 0.00 <CUR>` after emptying the platform account, `2025-06-09` asserts the remainder a later sale left behind, and seven assert nothing — the four 2023 payouts with an elided leg and `2026-01-26`, `2026-01-30`, `2026-02-04`. Write an assertion only from the running balance you have just read, and leave the slot empty rather than inventing a number.
+4. **The sale's payee is the counterparty, the payout's is the platform.** A sale names the donor or buyer under a mask that replaces every hidden character with `*`: an address keeps only its `@`, the dot, and the TLD (`*********@*******.com`), and a name is masked whole in each form it appears, parenthesised or not (`**** (***********)`). A payout names the platform itself, never the transaction type.
 5. **Identifiers keep the mapped order.** `../ingest/id_mappings.yml` orders each platform's identifiers; a bank-account identifier and a payout trace code never appear, and an identifier the source omits shortens the list rather than being invented.
-6. **A refund reverses; it never expenses.** Money returned to a counterparty takes the platform asset down and puts the revenue back with a positive revenue posting, undoing the sale it reverses.
+6. **A refund reverses; it never expenses — and it is untested.** Money returned to a counterparty takes the platform asset down and puts the revenue back with a positive revenue posting, undoing the sale it reverses. No refund, chargeback, or reversal exists in `ledger/**`, so this shape has never been checked against a written entry: bring it to the owner before it is written.
 7. **Only a settled movement is booked.** A pending, authorised, failed, or reversed row is not a posting, and a platform balance the platform's own statement does not show is never booked.
 8. **A sale carries `*`; a payout carries no marker**, as every sale and payout in `ledger/**` does.
 9. **The event's clock, not the document's.** A document's generation stamp, an export's run time, and the day a file was downloaded are none of them the sale's or the payout's own date and time.
@@ -52,5 +52,5 @@ A notice, export, or API record from a payment platform — Stripe, PayPal, Squa
 - A fee, tax, or adjustment with no declared account.
 - A payout that does not equal what the sales left on the platform.
 - A counterparty whose mask would still identify it, or a platform with no prelude `payee` line.
-- A refund, a chargeback, or a negative payout: `ledger/**` holds none yet, so nothing here says how one is shaped.
+- A refund, a chargeback, or a negative payout: rule 6 is the only answer here, and it is untested, so the owner confirms the shape before the entry exists.
 - A currency or rate the source does not print, leaving the gross and the net incomparable.
