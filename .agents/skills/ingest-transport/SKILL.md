@@ -5,7 +5,7 @@ description: Rules for transcribing fares, tolls, and transit reward accruals in
 
 # ingest-transport
 
-This aspect decides how one fare-shaped charge becomes postings: which transport subaccount the mode selects, whether the operator's reward program adds an accrual pair, and which metadata a fare carries. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; journal syntax and posting shape are `../../instructions/transaction-format.instructions.md`'s, and placement is `../../instructions/editing-guidelines.instructions.md`'s.
+This aspect decides how one fare-shaped charge becomes postings: which transport subaccount the mode selects, whether the operator's reward program adds accruals, and which metadata a fare carries. `ingest` owns intake, matching, the add/update/no-op decision, and the validation gate; journal syntax and posting shape are `../../instructions/transaction-format.instructions.md`'s, and placement is `../../instructions/editing-guidelines.instructions.md`'s.
 
 ## When to use
 
@@ -29,7 +29,7 @@ A deduction for a bus, rail, ferry, tram, light-rail, minibus, taxi, or airplane
 2. Resolve the operator's payee, and hand an unmapped one to `../ingest-payee/SKILL.md`.
 3. Select the transport subaccount for the mode.
 4. Answer the reward question for this operator and this fare.
-5. Write the block with the expense, then the accrual pair when rule 5 applies, then the payment.
+5. Write the block with the expense, then the accrual pairs rule 5 calls for, then the payment.
 6. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
 
 ## Worked example

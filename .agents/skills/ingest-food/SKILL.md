@@ -21,7 +21,7 @@ A restaurant, cafe, canteen, takeaway, bakery, supermarket, or app order whose s
 6. **Split what the print separates.** A `・` between names, a receipt sub-item prefix (`--`, `+`), and a `配` connector that joins two named dishes each yield separate items rather than one joined name.
 7. **Quantities use `×`.** Write a count as `×` plus a digit (`火腿 ×2`); how a tag value carries a `"` or a comma is `../ingest-tags/SKILL.md`'s quoting rule.
 8. **No reading, no name.** An item you cannot read becomes `food_or_drink: (unknown)`, one per printed item, and no invented name ever replaces printed text.
-9. **A voucher is a negative expense.** A printed coupon, cash-card, or points-redemption line gets its own negative `expenses:food and drinks:dining` posting whose tag carries the printed label verbatim, with the payment posting left to cover the remainder.
+9. **A voucher is a negative expense.** A printed coupon, cash-card, or points-redemption line gets its own negative `expenses:food and drinks:dining` posting whose tag carries the printed label verbatim, leaving the remainder to whatever settled the bill (rule 11).
 10. **Order time to settlement time.** `time:` is the printed order or print time, and `duration:` spans order to settlement when both are printed, at second precision (`PT36M52S`). Omit `duration:` below `PT2M`: a meal's dwell time is not a duration.
 11. **The payer decides the split.** When your own account paid the bill, the whole amount stays your expense and each other participant's share is one `equity:friends:<uuid>` posting, with no negative expense line. When someone else paid it, no payment posting appears: every other participant's share becomes a negative expense posting for each account its portion touches, and your own share is the one `equity:friends:<uuid>` posting. A friend advancing money you will repay as a loan is `../ingest-lending/SKILL.md`'s.
 12. **The printed language wins.** Keep each name in the language it was printed in, with `../ingest/food_translations.yml` supplying an approved replacement. Nothing else is translated.
@@ -32,7 +32,7 @@ A restaurant, cafe, canteen, takeaway, bakery, supermarket, or app order whose s
 2. Resolve the payee through `../ingest/payee_mappings.yml` and order the printed identifiers by `../ingest/id_mappings.yml`.
 3. Turn the printed lines into postings in printed order, applying rules 1–8.
 4. Add the fee postings, then the printed voucher line, then any split.
-5. Close the block with the payment posting for what was actually paid.
+5. Close the block as rule 11 splits it: a payment posting for the remainder when your own account paid, and none when someone else paid.
 6. Derive `time:` and `duration:` from the printed timestamps.
 7. Hand the block to `../ingest/SKILL.md` for the action decision; the check loop is `../fix-journals/SKILL.md`.
 
