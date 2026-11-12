@@ -18,10 +18,9 @@ __all__ = ()
 
 """Why this test is skipped, in the terms the owner needs to lift it."""
 SKIP_REASON = (
-    "monthly boundary chain unrepaired: 2026-06 has no closing transaction and "
-    "2026-07..2026-11 have neither opening nor closing; see the migrate skill and "
-    "the plan's Phase 7. Remove this skip only after `bun run verify:migration` "
-    "reports no defects."
+    "monthly boundary chain unrepaired: `bun run verify:migration` still reports "
+    "defects, and `.agents/skills/migrate/SKILL.md` holds the repair procedure. "
+    "Remove this skip only after that command reports no defects."
 )
 
 
