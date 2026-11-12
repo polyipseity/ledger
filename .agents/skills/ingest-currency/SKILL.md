@@ -13,14 +13,14 @@ A source that exchanges one commodity for another: a bank or card foreign-exchan
 
 ## Rules
 
-1. **Every conversion is one pair.** One posting per commodity on `equity:conversions:<PAIR>`, inside the transaction that moved the money — a payout, a redemption, an exchange — rather than in an entry of its own, as the `2026-01-19` payout and the `2026-04-13` redemption carry theirs.
+1. **Every conversion is one pair.** One posting per commodity on `equity:conversions:<PAIR>`, inside the transaction that moved the money — a sale, a redemption, an exchange — rather than in an entry of its own, as the `2026-01-19` sale and the `2026-04-13` redemption carry theirs.
 2. **The pair name is a declared account.** `<PAIR>` is the two commodities in the order `preludes/self.journal` declares them (`HKD-USD`, `EUR-HKD`, `HKD-KRW`, `HKD-_PT/B`, `HKD-_PT/D`, `_PT/E-_PT/F`); a pair with no `account` line stops the entry.
-3. **Each commodity balances across the entry, and the pair account keeps a balance.** The two legs sit in different commodities, so they never offset each other: what must cancel is each commodity across the whole transaction, and `bun run check:journal` is the gate that proves it. No `= 0.00` assertion goes on a conversion posting, because the pair subaccount accumulates — `2026-01` opens with 502.16 USD on `equity:conversions:HKD-USD:USD`, and a `HKD-KRW` conversion pairs 2 014.84 HKD with 348 208.33 KRW.
+3. **Each commodity balances across the entry, and the pair account keeps a balance.** The two legs sit in different commodities, so they never offset each other: what must cancel is each commodity across the whole transaction, and `bun run check:journal` is the gate that proves it. No `= 0.00` assertion goes on a conversion posting, because the pair subaccount accumulates — `2026-01` opens with 502.16 USD on `equity:conversions:HKD-USD:USD`, and `2025-07-09`'s `HKD-KRW` conversion pairs 85.01 HKD with 14 500.00 KRW.
 4. **`rate:` is copied, not computed.** Write the rate the source prints on the conversion posting it prices; never divide two rounded amounts into a rate the source never gave, and never rescale one — the `HKD-USD` entries carry HKD per USD while the `_PT/E-_PT/F` entry carries `_PT/F` per `_PT/E`, each as its source printed it.
 5. **A conversion is not an expense.** Nothing about the exchange itself lands in `expenses:*`; the postings beside the pair are the account that gave up one commodity and the one that took the other.
-6. **A fee is its own posting.** A commission or spread charged beside the exchange goes on the payment-fee account — `expenses:fees:Stripe` and `expenses:fees:Buy Me a Coffee` in the `2026-01-19` payout — never folded into a leg, which would corrupt the rate.
+6. **A fee is its own posting.** A commission or spread charged beside the exchange goes on the payment-fee account — `expenses:fees:Stripe` and `expenses:fees:Buy Me a Coffee` in the `2026-01-19` sale — never folded into a leg, which would corrupt the rate.
 7. **Points convert the same way.** A points-for-currency or point-to-point conversion takes the same pair, with `rate: 1` where the source converts one for one (`2026-04-13` turns `_PT/D` into HKD that way), and each points commodity stays in the account that holds it.
-8. **A conversion contributes no marker.** The entry's own event decides its marker — the `2026-01-19` payout is `*` as a sale, the `2026-04-13` redemption carries none — and the conversion legs never warrant one of their own.
+8. **A conversion contributes no marker.** The entry's own event decides its marker — the `2026-01-19` sale is `*`, the `2026-04-13` redemption carries none — and the conversion legs never warrant one of their own.
 
 ## Procedure
 
