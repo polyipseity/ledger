@@ -1,6 +1,6 @@
-# Add Transactions — Canonical Examples
+# Ingest — canonical examples
 
-This file collects canonical, non-confidential worked examples for the Add Transactions skill. Use these for guidance, tests, and to standardize examples across aspect files.
+This file collects canonical, non-confidential worked examples for the ingest skill. Use these for guidance, tests, and to standardize examples across aspect skills.
 
 ## 1. Food: Drink with Modifiers
 
@@ -469,4 +469,4 @@ H. Reimbursement / refund treated as gift (settlement, not revenue)
 
 Notes: - Use `equity:friends` for reimbursements/settlements; treat true gifts as `equity:friends`/`equity:kins` (never `revenues:`). - When you collect and redistribute a pool, track temporary balances under `equity:friends` until settled.
 
-For additional edge cases and tests, update `./examples.md` and notify maintainers; keep all examples non-confidential and use placeholder UUIDs and randomized IDs. If a new worked example is added, also add a short note to `./lessons.md` explaining why the example was introduced.
+For additional edge cases and tests, update `./examples.md` and notify maintainers; keep all examples non-confidential and use placeholder UUIDs and randomized IDs. A new worked example is added to the file as it stands, with no separate note beside it.
