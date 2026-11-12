@@ -14,7 +14,7 @@ Skills for frequently performed operations are listed in `AGENTS.md`. See the re
 1. Format: `bun run format`
 2. Validate: `bun run check`
 3. Run tests: `bun run test`
-4. If edited `private.yaml`: `scripts/encrypt.sh`
+4. If `private.yaml` was edited: the owner re-encrypts it; stop and ask.
 5. Review: `git status && git diff`
 6. Install hooks: `bun install` (provisions Python dependencies, the managed hledger binary, and the prek hooks)
 7. Commit: `git commit -S -m "type(scope): message"`

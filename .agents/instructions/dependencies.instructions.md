@@ -18,7 +18,7 @@ Required software and tools that enable this accounting system.
 
 - Validates journal syntax and correctness (`uv run --locked -m scripts.check` runs `hledger --strict`)
 - Formats journals into canonical format (`uv run --locked -m scripts.format` uses `hledger print`)
-- Derives the month boundary blocks (`uv run --locked -m scripts.clopen` sums the month's own balances)
+- Writes the month boundary blocks (`uv run --locked -m scripts.clopen` runs `hledger close --explicit --show-costs --clopen` on each journal)
 - Supports powerful queries and reporting (can query with `hledger [options] ACCOUNTS`)
 
 **Installation:** Download from [hledger.org](https://hledger.org) or install via package manager

@@ -34,7 +34,7 @@ These names are the whole agent-facing surface, and every one runs from the repo
 ### Invocation law
 
 - `bun run <name>` from the repository root, always. It is the only invocation an agent uses, no other spelling of a command is a substitute, and a `bun run` name outside the table is not part of an agent workflow.
-- Python runs only as `-m scripts.<mod>` from the repository root. A check narrowed to particular files names them there by repository-relative path, `uv run --locked -m scripts.check ledger/<year>/<year>-<month>/self.journal`, because the bun check composes the checker and the formatter, so a file argument reaches the formatter while the checker still covers the whole ledger. The modules are imported relatively, so any other working directory fails with `attempted relative import with no known parent package`.
+- Python runs only as `-m scripts.<mod>` from the repository root. A check narrowed to particular files names them there by repository-relative path, `uv run --locked -m scripts.check ledger/<year>/<year>-<month>/self.journal`, because the bun check composes the checker and the formatter, so a file argument reaches the formatter while the checker still covers the whole ledger. The modules are imported relatively, so a run from another working directory reports `No module named 'scripts'`, and running a file by path instead of as a module fails with `attempted relative import with no known parent package`.
 - The shell and batch files beside each Python module are conveniences for humans without bun or uv. They change directory themselves, so agents never call them.
 - Hooks come from `prek` (`prek.toml`): a commit-msg hook lints the message, pre-commit hooks format and type-check, and pre-push runs `bun run test`.
 

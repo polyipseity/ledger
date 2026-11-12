@@ -40,7 +40,7 @@ uv run --locked -m scripts.format
 
 **Antipattern registry:**
 
-- Running the module from a subdirectory such as `scripts/`, which fails with `attempted relative import with no known parent package`
+- Running the module from a subdirectory such as `scripts/`, which fails with `ModuleNotFoundError: No module named 'scripts'`
 - Using `ux run ...` or other shortcuts (not reliable)
 - Assuming the current directory is correct without checking
 
@@ -60,7 +60,7 @@ uv run --locked -m scripts.format
 2. **Format journals**: `bun run format`
 3. **Validate journals**: `bun run check`
 4. **Run tests**: `bun run test` (if editing code or instructions)
-5. **Encrypt secrets**: `scripts/encrypt.sh` (if modified `private.yaml`)
+5. **Encrypt secrets**: the owner re-encrypts `private.yaml`; stop and ask if you modified it
 6. **Stage & review**: `git status && git diff`
 7. **Commit**: Follow `.agents/instructions/git-commits.instructions.md`
 
@@ -107,7 +107,7 @@ uv run --locked -m scripts.format
 
 - **Unencrypted `private.yaml` committed**
   - Symptom: Security breach
-  - Fix: Always encrypt via `scripts/encrypt.sh` before commit; use `.agents/instructions/security.instructions.md`
+  - Fix: The owner re-encrypts it before commit; the agent stops and asks. See `.agents/instructions/security.instructions.md`
   - Priority: **CRITICAL**
 
 ### Code & Documentation

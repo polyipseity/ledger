@@ -22,7 +22,7 @@ This file is a concise checklist for AI agents working in this repository. Read 
 - Validate journals: `bun run check:journal`, or `uv run --locked -m scripts.check` from the repository root.
 - Format journals: `bun run format:journal`, or `uv run --locked -m scripts.format` from the repository root.
 - Discover monthly journals (scripts use this glob): `**/*[0-9]{4}-[0-9]{2}/*.journal`.
-- Encrypt/decrypt secrets: `scripts/encrypt.sh` / `scripts/decrypt.sh` (use `private.yaml.gpg` only when authorized).
+- Encrypt/decrypt secrets: an owner action. `private.yaml` is the owner's to open and re-encrypt; an agent that needs a mapping resolved stops and asks. See `.agents/instructions/security.instructions.md`.
 
 ## Project-specific rules & gotchas
 

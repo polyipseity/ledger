@@ -34,7 +34,7 @@ account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc ; type: E
 - Maintain opening/closing patterns
 - **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.agents/instructions/transaction-format.instructions.md` for the canonical rules.
 - **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.agents/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
-- When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
+- When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines.
 
 ### Shared Expense and Repayment Pattern
 
@@ -69,4 +69,4 @@ Below are the most critical patterns specific to journal editing:
 - Spaces in account names (use colons)
 - Unencrypted confidential files (encrypt before commit)
 - **Out-of-order transactions:** Never insert or leave transactions out of chronological order (by date, then by time). This is a critical error and must be corrected immediately.
-- Declaring payees anywhere except a `preludes/*.journal` file (never add `payee` lines to monthly or yearly journals). Adding payees out of lexicographical order, or failing to correct existing order mistakes.
+- Declaring payees anywhere except a `preludes/*.journal` file (never add `payee` lines to monthly or yearly journals).

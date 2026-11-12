@@ -15,7 +15,7 @@ This short glossary lists concise definitions and canonical reminders for agents
 - Formatting & validation: Run `bun run format` then `bun run check` before committing; fix errors first.
 - Ledger commits: Use `ledger(<journal-list>): add N / edit M transaction(s)` for transaction commits — **single-line header only**.
 - Migration: `bun run clopen <YYYY-MM>` writes the closing and the next opening. See `.agents/skills/migrate/SKILL.md`.
-- Confidential data: Never commit unencrypted `private.yaml`; decrypt and encrypt with `scripts/decrypt.sh` and `scripts/encrypt.sh` per security instructions.
+- Confidential data: Never commit unencrypted `private.yaml`; decrypting and encrypting it is the owner's, so an agent that needs a mapping resolved stops and asks. See `.agents/instructions/security.instructions.md`.
 - Two-pass upserts (Octopus flow): Pass 1 = match & update existing journal entries only; Pass 2 = add unmatched transactions only.
 
 Keep this file short and scan it when you need quick reminders while working in skills.
