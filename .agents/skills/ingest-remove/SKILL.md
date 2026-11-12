@@ -9,17 +9,17 @@ Removal is the rare action: an entry exists because a source claimed it, so it g
 
 ## When to use
 
-An entry duplicates one already booked, carries an amount the source contradicts, sits in a month the source's date does not support, or rests on a source the owner has withdrawn. Nothing weaker qualifies — an entry missing a `duration:`, an item, or an identifier is incomplete, and incompleteness is an update.
+An entry duplicates one already booked, carries an amount the source contradicts, sits in a month the source's date does not support, or rests on a source the owner has withdrawn. A wrong month is a move rather than a deletion: the row is re-entered at its own date in the same change, or the case stops and asks. Nothing weaker qualifies — an entry missing a `duration:`, an item, or an identifier is incomplete, and incompleteness is an update.
 
 ## Rules
 
 1. **The owner decides, and the run reports.** The case goes out with its evidence and the run stops at that entry; nothing removes a second entry by inference.
 2. **Wrong, not merely thin.** Only the four conditions above qualify: an entry that under-records its source is corrected through `../ingest/SKILL.md`, and one whose document cannot be found stays until the owner says the claim was never made.
-3. **Find every dependant before deleting.** The month's closing block, the next month's opening, every later `= balance` assertion naming an account the entry touched, and any shared bill's other half: the ledger holds 357 `equity:friends:` postings across 33 files and 228 `liabilities:loans:` postings.
+3. **Find every dependant before deleting.** The month's closing block, the next month's opening, every later `= balance` assertion naming an account the entry touched, and any shared bill's other half: the ledger holds 357 postings across the `equity:friends*` accounts in 33 files and 228 `liabilities:loans:` postings.
 4. **Assertions do not repair themselves.** The closing block's amounts encode the month, so a deletion upstream of one leaves its `= 0.00` contradicted by the computed balance, and `bun run check:journal` fails on it.
 5. **A boundary block is never hand-edited.** `scripts/clopen.py` writes the month's opening and closing and tags both `clopen:`; if the entry to remove is one of them, or the closing has to be recomputed, continue in `../migrate/SKILL.md`.
 6. **Delete the whole block, never a posting.** Header, comment, and all postings go together: a transaction left with one posting either fails as unbalanced or, when that posting elides its amount, passes while booking a zero nobody claimed.
-7. **Then verify.** `bun run check:journal` for the touched files, and `bun run verify:migration` as well when a boundary moved, read against the run made before the deletion, since it reports the whole chain rather than the month.
+7. **Then verify the files, and the boundary only when it moved.** `uv run --locked -m scripts.check <file>` names the touched journals, since `bun run check:journal` hands its arguments to the formatter and checks every journal anyway; when the deletion moved a boundary, `uv run --locked -m scripts.clopen_verify --period <YYYY-MM> --files <name>.journal` scopes the chain to that month, and only the bare `bun run verify:migration` needs comparing against the run made before the deletion.
 8. **Report the block, and compensate nowhere.** The report carries the file, date, payee, and amount verbatim so the owner can restore it; no neighbouring amount is edited to absorb the gap and no assertion is loosened to pass.
 
 ## Procedure
