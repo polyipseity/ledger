@@ -13,7 +13,7 @@ Guidance for handling confidential data in this personal accounting system.
 
 ### Purpose and Structure
 
-The [private.yaml](../../private.yaml) file contains a mapping of UUIDs to confidential strings:
+The [private.yaml.gpg](../../private.yaml.gpg) file carries the mapping of UUIDs to confidential strings, encrypted; it decrypts to `private.yaml`, which sits beside it in the owner's working copy only, and the repository never carries the plaintext:
 
 - **Account numbers**: Real bank account numbers, card numbers
 - **Personal names**: Full names of individuals, family members
