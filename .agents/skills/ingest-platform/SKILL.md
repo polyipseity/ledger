@@ -35,13 +35,16 @@ A notice, export, or API record from a payment platform — Stripe, PayPal, Squa
 
 ```hledger
 2025-03-04 * (0000000000, pi_000000000000000000000000) ********@*******.com  ; activity: donation, time: 10:12:03, timezone: UTC+08:00
-    assets:digital:Stripe:<uuid>                    96.00 HKD
-    expenses:fees:Stripe                             4.00 HKD
-    revenues:donations:Buy Me a Coffee:<uuid>     -100.00 HKD
+    revenues:donations:Buy Me a Coffee:<uuid>       -5.00 USD
+    equity:conversions:HKD-USD:USD                   5.00 USD  ; rate: 7.80000
+    equity:conversions:HKD-USD:HKD                 -39.00 HKD
+    expenses:fees:Buy Me a Coffee                    1.00 HKD
+    expenses:fees:Stripe                             2.00 HKD
+    assets:digital:Stripe:<uuid>                    36.00 HKD
 
 2025-03-06 (FRN20250306PAYC0100000000000, po_000000000000000000000000) Stripe  ; activity: payout, time: 15:10:10, timezone: UTC+08:00
-    assets:banks:<bank-uuid>:HKD savings       96.00 HKD
-    assets:digital:Stripe:<uuid>              -96.00 HKD = 0.00 HKD
+    assets:banks:<bank-uuid>:HKD savings       36.00 HKD
+    assets:digital:Stripe:<uuid>              -36.00 HKD = 0.00 HKD
 ```
 
 ## Stop and ask
