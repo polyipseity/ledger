@@ -61,7 +61,7 @@ addopts = [
   "-n=auto",
   "--strict-markers",
 ]
-testpaths = [".agents/skills/**/tests_*", "tests"]
+testpaths = ["tests"]
 python_files = "test_*.py"
 
 [tool.ruff]
