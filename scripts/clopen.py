@@ -1,14 +1,19 @@
 """Create closing and opening balance entries for monthly journals.
 
 This script runs ``hledger close --explicit --show-costs --clopen`` on each
-journal file for the supplied period and writes the resulting closing
-transaction to the end of the existing journal. The corresponding opening
-transaction is prepended to the beginning of the *next* month's journal after
-any ``include`` directives.
+journal file for the supplied period, or on the subset of those files named by
+``--only``, and writes the resulting closing transaction to the end of the
+existing journal. The corresponding opening transaction is prepended to the
+beginning of the *next* month's journal after any ``include`` directives.
+
+``--only`` names a journal filename such as ``self.journal`` rather than a
+path, and may be repeated. Restricting the run keeps a repair from touching a
+journal family the month never used.
 
 Usage example:
 
     python -m scripts.clopen 2026-02
+    python -m scripts.clopen 2026-02 --only self.journal
 
 The script performs safety checks before writing:
 
@@ -78,7 +83,8 @@ class Arguments:
             directory, unless ``only`` narrows that set.
         only: Journal filenames (e.g. ``"self.journal"``, not paths) to
             restrict processing to. ``None`` processes every journal of the
-            period. A name that matches no journal of the period is ignored.
+            period; an empty sequence processes nothing. A name that matches
+            no journal of the period is ignored.
     """
 
     period: str

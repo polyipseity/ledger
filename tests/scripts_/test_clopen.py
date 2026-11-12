@@ -407,6 +407,45 @@ async def test_only_unmatched_name_processes_the_rest(
 
 
 @pytest.mark.anyio
+async def test_only_empty_sequence_processes_nothing(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """An empty ``only`` sequence processes no journal at all."""
+
+    ledger: Path = Path(tmp_path) / "ledger"
+    await (ledger / "2026" / "2026-02").mkdir(parents=True)
+    await (ledger / "2026" / "2026-03").mkdir(parents=True)
+
+    old_j: Path = ledger / "2026" / "2026-02" / "self.journal"
+    new_j: Path = ledger / "2026" / "2026-03" / "self.journal"
+    old_alt: Path = ledger / "2026" / "2026-02" / "self.alternatives.journal"
+    new_alt: Path = ledger / "2026" / "2026-03" / "self.alternatives.journal"
+
+    for path in (old_j, new_j):
+        await path.write_text('include "preludes/self.journal"\n')
+    for path in (old_alt, new_alt):
+        await path.write_text('include "preludes/self.alternatives.journal"\n')
+    before = {path: await path.read_text() for path in (old_j, new_j, old_alt, new_alt)}
+
+    monkeypatch.setattr(clopen, "get_ledger_folder", lambda: ledger)
+
+    async def fake_run_hledger(journal: PathLike[str], *args: object):
+        """Return canned closing/opening output for ``journal``."""
+
+        return (f"{CLOSING_TX}\n\n{OPENING_TX}\n", "", 0)
+
+    monkeypatch.setattr(clopen, "run_hledger", fake_run_hledger)
+
+    args = clopen.Arguments(period="2026-02", only=())
+    with pytest.raises(SystemExit) as exc:
+        await clopen.main(args)
+    assert exc.value.code == 0
+
+    for path, text in before.items():
+        assert await path.read_text() == text
+
+
+@pytest.mark.anyio
 async def test_clopen_disables_cache(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> None:
