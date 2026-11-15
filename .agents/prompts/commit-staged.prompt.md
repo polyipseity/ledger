@@ -8,6 +8,8 @@ argument-hint: Optional extras (e.g., ticket=ABC-123). To skip committing, pass 
 
 **Never ask for confirmation or clarification. Always proceed automatically using best-effort defaults and available context.**
 
+**Argument text:** `${@:-}` is whatever the caller passed with the prompt. If it contains `commitNow=no`, produce the commit message only and do not commit; any other text is extra guidance to apply.
+
 ## Workflow
 
 1. **Read staged changes**
@@ -25,13 +27,13 @@ argument-hint: Optional extras (e.g., ticket=ABC-123). To skip committing, pass 
 - Produce a commit message with:
   - Short subject (~50 chars)
   - Optional body (each line **must be wrapped to 72 characters or fewer**; bullets allowed)
-  - Footer (BREAKING CHANGE / Refs / Ticket), including `${input:extra}` if provided
+  - Footer (BREAKING CHANGE / Refs / Ticket), including the argument text `${@:-}` when it carries guidance to record
 - **If the commit is rejected by commitlint due to line length or other formatting, rewrap and retry until the commit passes.**
 - Prefer tooling-enforced rules. If unsure, default to Conventional Commits. **Strictly enforce commit header and body line length (72 chars max) as required by commitlint.**
 - Do not show the proposed commit message to the user for confirmation before creating the commit. Proceed automatically to creating the commit using best-effort defaults and available context.
 
 1. **Create the commit**
-   - If `${input:commitNow}` is `no`, skip this step and only present the message.
+   - If the argument text contains `commitNow=no`, skip this step and only present the message.
    - Otherwise, present the exact command to create the commit from stdin and print the new SHA. **Both commands must be run in the same shell command block to ensure correct context.** Use the correct heredoc/here-string syntax for the detected shell:
      - **PowerShell (Windows):**
 
@@ -72,7 +74,6 @@ argument-hint: Optional extras (e.g., ticket=ABC-123). To skip committing, pass 
 
 ## Inputs
 
-- `${input:extra}` — optional extra text for footer
-- `${input:commitNow}` — `no` to skip committing; default is to commit
+- `${@:-}` — the caller's argument text: `commitNow=no` produces the commit message only, and any other text is extra guidance to apply
 
 End of prompt.

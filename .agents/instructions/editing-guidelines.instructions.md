@@ -1,74 +1,47 @@
 ---
 name: Editing Guidelines
-description: Best practices for editing and maintaining personal ledger journals.
+description: "Use when editing a journal: ordering, the smallest safe edit, assertion placement, account and tag choice, and the anti-patterns that make a check fail."
 applyTo: "**/*.journal"
 ---
 
+# Editing guidelines
 
-# Editing Guidelines
+An edit obeys the syntax canon in `transaction-format.instructions.md`, takes an account's meaning from `../reference/account-hierarchy.md`, and leaves one class of transaction's shape to its aspect skill (`../skills/ingest/SKILL.md` routes). This file holds what every journal edit obeys, whatever it touches.
 
-## Account and Payee Directive Ordering
+## Ordering
 
-When adding or editing `account` or `payee` directives in any journal or prelude file, always ensure that all such directives are listed in strict lexicographical (ASCII/Unicode) order. This applies to both new insertions and corrections of existing out-of-order lines. If a new directive is added, it must be inserted at the correct position to maintain this order. If any out-of-order lines are found, they must be moved to restore proper ordering as part of the edit.
+- **A declaration goes to the position it sorts into.** `account` and `payee` directives form one block each, in strict lexicographical (ASCII/Unicode) order, and the rule covers every block at every hierarchy depth, so a new account also lands in the right place inside its own section.
+- **A transaction goes where its date and time put it.** Every file runs its transactions in date-then-time order.
+- **Restoring an order that is already broken is its own change.** An insertion never re-sorts its neighbours: an inversion you notice is reported rather than repaired inside an unrelated edit, because re-sorting lines nobody touched makes the diff unreadable. Repair it in a change of its own, or through `../skills/fix-journals/SKILL.md` when the check fails on it.
+- **Nothing else moves.** No neighbouring declaration is reflowed, renamed, or deleted on the way past, and a diff touching a line the edit does not need is a defect.
 
-This rule applies to all account, payee, and similar declaration blocks, regardless of account type or hierarchy depth. This ensures consistency, reduces merge conflicts, and supports automated validation tools.
+## The smallest edit
 
-**Example:**
+- One defect, one edit: the lines the fix needs, and no others. Reformatting a whole file to make a small edit is forbidden by `../skills/fix-journals/SKILL.md` as well.
+- An edit is followed by `bun run format` and then `bun run check`, both from the repository root; `AGENTS.md` holds the command table and the invocation law.
 
-```hledger
-account equity:friends:bfa32943-960d-4df1-9997-e2391f5551a1 ; type: E
-account equity:friends:dcc61afa-699f-4927-8ec5-8179d50f87d2 ; type: E
-account equity:friends:e058a619-cd7a-4ef6-a859-3825f15e8cbc ; type: E
-```
+## Balance assertions
 
-**Do not** append new accounts to the end of the block or leave out-of-order lines uncorrected.
+- A loan and its settlement carry one, and the boundary blocks assert every account they touch; `transaction-format.instructions.md` places it and `../skills/ingest-lending/SKILL.md` decides which amount it states.
+- A closing block asserts every account it closes to zero, and the next month's opening restores exactly those balances, so a corrected closing is repaired together with the opening it feeds (`../skills/fix-journals/SKILL.md`, `../skills/migrate/SKILL.md`).
+- An assertion is never weakened, commented out, or dropped to make the check pass; recompute it from the account's running balance.
 
-See [edit-journals](../skills/edit-journals/) skill for complete guidance.
+## An entry's accounts and tags
 
-## Script Usage for Validation/Formatting
+- The account is the most specific one a prelude declares. A consumable stays an expense; a long-lived item becomes an `assets:objects` entry with depreciation metadata (`../reference/account-hierarchy.md`).
+- Every account, payee, and comment key is declared before it is used, and a name that is missing stops the edit until the owner adds it. `../skills/add-payee/SKILL.md` declares a payee and `../skills/ingest-tags/SKILL.md` settles a key.
 
-**Scripts & validation**: See `.agents/instructions/developer-workflows.instructions.md` for canonical guidance. Short: prefer `bun run check`/`bun run format`; if running Python directly, set `cwd=scripts/.`
+## Anti-patterns
 
-- Include preludes in monthly journals
-- Maintain balance assertions
-- Tag all transactions appropriately
-- Format and validate before committing
-- Maintain opening/closing patterns
-- **Chronological order:** Always insert transactions in strict chronological order (date, then time). See `.agents/instructions/transaction-format.instructions.md` for the canonical rules.
-- **Payees:** Register payees in `preludes/*.journal` (alphabetized). See `.agents/skills/add-payee/SKILL.md` and `transaction-format.instructions.md` for details.
-- When adding or moving account declarations in any prelude file, always insert the new account in strict lexicographical (ASCII/Unicode) order within its section. Never remove or alter unrelated lines. Before inserting, check the entire section to ensure correct placement and move any out-of-order entries if found.
-
-### Shared Expense and Repayment Pattern
-
-When a friend pays for a group meal or shared expense, the original transaction must:
-
-- Itemize all expenses as usual.
-- Add `equity:friends:<uuid>` lines for each friend's share (including yourself if you are not the payer).
-- Add negative expense lines for the total of others' shares to offset the full amount.
-- Add a `liabilities:loans:friends:<uuid>` line for the total amount paid by the friend for others, with a balance assertion (e.g., `= -654.00 HKD`).
-- Annotate lines for clarity (e.g., `; paid by friend, other's share`).
-
-When you repay the friend:
-
-- Add a transaction debiting your asset account and crediting the liability, asserting the balance to zero (e.g., `= 0.00 HKD`).
-- Include all relevant reference numbers and tags.
-
-For new friends without UUIDs:
-
-- Use a placeholder and update the prelude and transactions once the UUID is assigned.
-
-This pattern ensures correct tracking of group expenses, liabilities, and repayments, and should be followed for all shared expense and group payment situations. See also the add-transactions and lending/borrowing skills for more details.
-
-## Anti-Patterns to Avoid
-
-**For comprehensive anti-patterns reference, see [continuous-learning.instructions.md](./continuous-learning.instructions.md)** — consolidated guide to pitfalls and lessons learned across all skills.
-
-Below are the most critical patterns specific to journal editing:
-
-- Manually editing year-level journals (use monthly journals only)
-- Committing without validation (`bun run format && bun run check`)
-- Missing timezone tags (always use UTC+08:00)
-- Spaces in account names (use colons)
-- Unencrypted confidential files (encrypt before commit)
-- **Out-of-order transactions:** Never insert or leave transactions out of chronological order (by date, then by time). This is a critical error and must be corrected immediately.
-- Declaring payees anywhere except a `preludes/*.journal` file (never add `payee` lines to monthly or yearly journals). Adding payees out of lexicographical order, or failing to correct existing order mistakes.
+| anti-pattern | rule and fix |
+| --- | --- |
+| a transaction in a year-level journal, `ledger/index.journal`, or a prelude | only a monthly journal takes one (`architecture.instructions.md`) |
+| a monthly journal without its stream's prelude include | `include ../../../preludes/self.journal` opens a liquid month and `include ../../../preludes/self.alternatives.journal` an illiquid one (`architecture.instructions.md`) |
+| a transaction out of date-then-time order | move the whole block to its place; never change its date to satisfy the order (`../skills/fix-journals/SKILL.md`) |
+| a `payee` line, or an `account` line, declared in a journal | declarations live in a prelude (`../skills/add-payee/SKILL.md`) |
+| a declaration left out of order | ordering above: repaired in its own change |
+| a balance assertion weakened or dropped to pass the check | recompute it from the register (`../skills/fix-journals/SKILL.md`) |
+| an opening or closing block typed, copied, or hand-corrected | generated by `scripts/clopen.py` (`../skills/migrate/SKILL.md`) |
+| a month's closing corrected without the next month's opening | repair both sides in one change (`../skills/fix-journals/SKILL.md`) |
+| a journal formatted while it does not parse | fix the syntax first; the formatter cannot help (`../skills/fix-journals/SKILL.md`) |
+| a confidential name written into a journal, or `private.yaml` edited by an agent | `security.instructions.md` |

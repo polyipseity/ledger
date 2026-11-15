@@ -67,7 +67,7 @@ async def test_journal_run_context_skipped_non_file_entry_replaced(
 async def _patch_cache_to(
     tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
 ) -> Path:
-    """Monkeypatch cmod.cache_file_path to point to a temp file under tmp_path.
+    """Point the run cache at a temp file under tmp_path.
 
     Also ensure the parent directory exists so writes do not fail.
     """
@@ -75,12 +75,7 @@ async def _patch_cache_to(
     target = pycache / "test.cache.json"
     # ensure parent directory exists (anyio.Path doesn't create intermediate dirs)
     await pycache.mkdir(parents=True, exist_ok=True)
-
-    def fake_cache_file_path() -> Path:
-        """Return the temporary cache path used in tests."""
-        return target
-
-    monkeypatch.setattr(cmod, "cache_file_path", fake_cache_file_path)
+    monkeypatch.setenv(cmod.CACHE_FILE_VARIABLE, fspath(target))
     return target
 
 
@@ -591,12 +586,17 @@ def test_evict_handles_malformed_timestamps_and_file_entries() -> None:
     assert "a" not in cache.root["s2@x"].files
 
 
-def test_cache_file_path_creates_dir(tmp_path: PathLike[str]) -> None:
-    """Calling `cache_file_path` should create the `__pycache__` directory if missing."""
-    p = cmod.cache_file_path()
-    # Ensure the directory exists
+def test_cache_file_path_honours_the_override(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """The cache file sits in the package `__pycache__` unless the variable moves it."""
+    monkeypatch.delenv(cmod.CACHE_FILE_VARIABLE)
+    assert path.basename(path.dirname(cmod.cache_file_path())) == "__pycache__"
 
-    assert path.basename(path.dirname(p)) == "__pycache__"
+    target = Path(tmp_path) / "elsewhere" / "cache.cache.json"
+    monkeypatch.setenv(cmod.CACHE_FILE_VARIABLE, fspath(target))
+    assert fspath(cmod.cache_file_path()) == fspath(target)
+    assert path.isdir(path.dirname(fspath(target)))
 
 
 @pytest.mark.anyio
@@ -640,12 +640,8 @@ async def test_read_script_cache_handles_json_decode_error(
     async with await target.open(mode="w+t", encoding="utf-8") as fh:
         await fh.write("{invalid: }")
 
-    # monkeypatch the cache_file_path to point to our file
-    def fake_cache_file_path2() -> Path:
-        """Return the target cache path used to simulate invalid JSON reads."""
-        return target
-
-    monkeypatch.setattr(cmod, "cache_file_path", fake_cache_file_path2)
+    # point the run cache at the file holding invalid JSON
+    monkeypatch.setenv(cmod.CACHE_FILE_VARIABLE, fspath(target))
 
     # Force model_validate_json to raise JSONDecodeError explicitly
     def raiser(text: str):

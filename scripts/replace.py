@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Replace text across all journal files in the repository.
 
 This script scans every `*.journal` file and replaces occurrences of the

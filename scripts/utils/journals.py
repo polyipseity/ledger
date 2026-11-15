@@ -1,22 +1,18 @@
-"""Journal discovery, date parsing and hledger subprocess helpers."""
+"""Journal discovery, date parsing, and period resolution helpers."""
 
-import logging
-import sys
 from calendar import monthrange
 from collections.abc import Callable, Iterable, Sequence
 from contextlib import suppress
 from datetime import datetime
 from glob import iglob
-from os import PathLike, cpu_count, fspath
-from pathlib import Path as _StdPath
-from shutil import which
-from subprocess import DEVNULL, PIPE, CalledProcessError
+from os import PathLike, fspath
+from subprocess import run
 
-from anyio import Path, Semaphore, run_process
+from anyio import Path
 from asyncer import SoonValue, create_task_group
 
-"""Module-level logger for journal discovery and hledger subprocess helpers."""
-logger = logging.getLogger(__name__)
+from .files import get_script_folder
+from .hledger import MONTH_PATTERN, first_line, run_hledger
 
 """Public symbols exported by this module."""
 __all__ = (
@@ -27,13 +23,12 @@ __all__ = (
     "filter_journals_between",
     "parse_period_start",
     "parse_period_end",
+    "resolve_now_month",
+    "resolve_period",
     "parse_amount",
     "format_journal_list",
     "run_hledger",
 )
-
-"""Limits concurrent hledger subprocess invocations to avoid resource exhaustion."""
-_SUBPROCESS_SEMAPHORE = Semaphore(cpu_count() or 4)
 
 """Default number of decimal places for amount formatting in journal output."""
 DEFAULT_AMOUNT_DECIMAL_PLACES = 2
@@ -259,6 +254,89 @@ def parse_period_end(date_string: str) -> datetime:
         raise
 
 
+def resolve_now_month(explicit: str | None) -> str:
+    """Return the ``YYYY-MM`` month separating closed months from future ones.
+
+    An explicit value wins after checking that it starts with a four-digit
+    year, a dash, and a two-digit month, and is truncated to those seven
+    characters. Without one, the committer date of the last commit supplies the
+    month, read from the repository root.
+
+    Args:
+        explicit: The requested month, or ``None`` to derive it.
+
+    Raises:
+        ValueError: When ``explicit`` does not start with a ``YYYY-MM`` prefix.
+        RuntimeError: When git is missing, exits non-zero, or prints something
+            that does not start with an ISO date, since there is then no month
+            to classify the journals against.
+    """
+    if explicit is not None:
+        month = explicit[:7]
+        if MONTH_PATTERN.fullmatch(month) is None:
+            raise ValueError(f"not a year-month prefix: {explicit!r}")
+        return month
+
+    root = fspath(get_script_folder(depth=2))
+    try:
+        completed = run(
+            ("git", "log", "-1", "--format=%cI"),
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except OSError as exc:
+        raise RuntimeError(
+            f"cannot determine the current month: git failed to start in {root}: {exc}"
+        ) from exc
+    if completed.returncode != 0:
+        raise RuntimeError(
+            "cannot determine the current month: "
+            f"git log exited {completed.returncode}: {first_line(completed.stderr)}"
+        )
+    month = completed.stdout.strip()[:7]
+    if MONTH_PATTERN.fullmatch(month) is None:
+        raise RuntimeError(
+            "cannot determine the current month: git log printed no commit date "
+            f"in {root}: {completed.stdout.strip()!r}"
+        )
+    return month
+
+
+def resolve_period(period: str | None) -> str | None:
+    """Return ``period`` normalised to the ``YYYY-MM`` month it names.
+
+    The value goes through :func:`parse_period_start`, so it is also rejected
+    when no calendar month carries that number, and it must round-trip to the
+    ``YYYY-MM`` prefix it was read from, so a bare ``YYYY`` is rejected rather
+    than widened to January.
+
+    Args:
+        period: The requested month, or ``None`` for every month.
+
+    Returns:
+        The month to filter on, or ``None`` when ``period`` is absent.
+
+    Raises:
+        ValueError: When ``period`` is not a ``YYYY-MM`` month, because a typo
+            would otherwise select no journal at all and report a clean chain.
+    """
+    if period is None:
+        return None
+    month = period[:7]
+    try:
+        start = parse_period_start(period)
+    except ValueError as exc:
+        raise ValueError(f"period {period!r} is not a YYYY-MM month") from exc
+    if (
+        MONTH_PATTERN.fullmatch(month) is None
+        or f"{start.year:04d}-{start.month:02d}" != month
+    ):
+        raise ValueError(f"period {period!r} is not a YYYY-MM month")
+    return month
+
+
 def parse_amount(float_str: str) -> float:
     """Parse a human-formatted amount string into a float.
 
@@ -314,97 +392,3 @@ def format_journal_list(
     if count > max_items:
         lines.append(f"  ... ({count - max_items} more)")
     return "\n".join(lines)
-
-
-def _managed_hledger_path() -> _StdPath:
-    """Return the filesystem path where the bun-managed hledger binary is installed.
-
-    The binary is placed at ``<repo_root>/node_modules/.bin/hledger[.exe]`` by
-    ``bun run hledger:install`` (``scripts/install-hledger.mjs``). This file
-    lives at ``scripts/utils/journals.py``, so the repo root is three ``parent``
-    steps up.
-    """
-    binary_name = "hledger.exe" if sys.platform == "win32" else "hledger"
-    return (
-        _StdPath(__file__).parent.parent.parent / "node_modules" / ".bin" / binary_name
-    )
-
-
-def _find_hledger() -> str:
-    """Locate the hledger executable, preferring the bun-managed project-local binary.
-
-    Search order:
-    1. ``<repo_root>/node_modules/.bin/hledger[.exe]`` — installed by
-       ``bun run hledger:install``.
-    2. Whatever ``shutil.which("hledger")`` finds on the system ``PATH``.
-
-    Returns
-    -------
-    str
-        Absolute path to the hledger executable as a ``str``.
-
-    Raises
-    ------
-    FileNotFoundError
-        If hledger is found neither in ``node_modules/.bin/`` nor on ``PATH``.
-    """
-    managed = _managed_hledger_path()
-    if managed.exists():
-        return fspath(managed)
-    found = which("hledger")
-    if found is None:
-        raise FileNotFoundError(
-            "hledger executable not found in node_modules/.bin/ or PATH; "
-            "run `bun run hledger:install` to install the managed binary"
-        )
-    return found
-
-
-async def run_hledger(
-    journal: PathLike[str] | str,
-    *args: str,
-    raise_on_error: bool = True,
-    strict: bool = True,
-    log_on_error: bool = True,
-) -> tuple[str, str, int]:
-    """Run `hledger --file <journal> [--strict] <*args>` and return (stdout, stderr, returncode).
-
-    When the hledger process exits with a non-zero return code and
-    ``log_on_error`` is ``True`` both ``stdout`` and ``stderr`` are emitted
-    to the module logger at ERROR level to aid diagnostics.
-    """
-    hledger_prog = _find_hledger()
-
-    cli = (
-        hledger_prog,
-        "--file",
-        journal,
-        *(("--strict",) if strict else ()),
-        *args,
-    )
-    async with _SUBPROCESS_SEMAPHORE:
-        proc = await run_process(
-            cli,
-            stdin=DEVNULL,
-            stdout=PIPE,
-            stderr=PIPE,
-        )
-        stdout = proc.stdout.decode().replace("\r\n", "\n")
-        stderr = proc.stderr.decode().replace("\r\n", "\n")
-        returncode = proc.returncode
-        if returncode and log_on_error:
-            logger.error(
-                "hledger %r exited with returncode=%d\nstdout:\n%s\nstderr:\n%s",
-                cli,
-                returncode,
-                stdout,
-                stderr,
-            )
-        if raise_on_error and returncode:
-            raise CalledProcessError(
-                returncode,
-                cli,
-                output=stdout,
-                stderr=stderr,
-            )
-        return stdout, stderr, returncode

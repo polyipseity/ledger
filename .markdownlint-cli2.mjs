@@ -1,5 +1,5 @@
-// Shared markdown file globs. Exported so other configs (for example,
-// lint-staged) can reuse the same list and avoid duplication.
+// Shared markdown file globs. Exported so other configs can reuse the same
+// list and avoid duplication.
 export const FILE_GLOB = "**/*.{md,mdoc,mdown,mdx,mkd,mkdn,markdown,rmd}";
 
 // Re-export the default object with the same shape as before but referencing

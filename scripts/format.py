@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """Format journal files using `hledger print` output.
 
 This module uses `hledger print` to obtain a canonical representation of a

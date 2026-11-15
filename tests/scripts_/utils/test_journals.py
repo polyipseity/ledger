@@ -5,11 +5,11 @@ module also verifies journal file discovery, inclusive filtering by period,
 and user-friendly listing helpers.
 """
 
-import logging
 from datetime import datetime
 from os import PathLike, fspath
+from subprocess import CompletedProcess
 from types import SimpleNamespace
-from typing import override
+from typing import NoReturn, override
 
 import pytest
 from anyio import Path
@@ -168,20 +168,76 @@ def test_parse_period_invalid_raises() -> None:
         journals.parse_period_end("also-bad")
 
 
-@pytest.mark.anyio
-async def test_run_hledger_missing(monkeypatch: pytest.MonkeyPatch) -> None:
-    """When hledger is not found anywhere, run_hledger should raise FileNotFoundError."""
+def test_resolve_now_month_truncates_iso_date() -> None:
+    """An ISO date narrows to its year and month."""
 
-    def fake_find_hledger() -> str:
-        """Simulate _find_hledger raising when no binary is available anywhere."""
-        raise FileNotFoundError(
-            "hledger executable not found in node_modules/.bin/ or PATH"
+    assert journals.resolve_now_month("2026-06-15T10:11:12+08:00") == "2026-06"
+    assert journals.resolve_now_month("2026-06") == "2026-06"
+
+
+def test_resolve_now_month_rejects_non_month() -> None:
+    """A value that does not start with a year-month raises."""
+
+    for value in ("2026", "June 2026", "2026-6"):
+        with pytest.raises(ValueError, match="not a year-month prefix"):
+            journals.resolve_now_month(value)
+
+
+def test_resolve_now_month_requires_git(
+    tmp_path: PathLike[str], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Without a git history there is no month to classify against."""
+
+    folder = Path(tmp_path)
+    monkeypatch.setattr(journals, "get_script_folder", lambda depth=0: folder)
+
+    with pytest.raises(RuntimeError, match="cannot determine the current month"):
+        journals.resolve_now_month(None)
+
+
+def test_resolve_now_month_requires_git_binary(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """A machine without git has no current month either."""
+
+    def fake_run(*args: object, **kwargs: object) -> NoReturn:
+        """Fail the way a missing git executable does."""
+        raise FileNotFoundError("git")
+
+    monkeypatch.setattr(journals, "run", fake_run)
+
+    with pytest.raises(RuntimeError, match="git failed to start"):
+        journals.resolve_now_month(None)
+
+
+def test_resolve_now_month_requires_a_commit(monkeypatch: pytest.MonkeyPatch) -> None:
+    """A repository without a commit date has no current month."""
+
+    def fake_run(*args: object, **kwargs: object) -> CompletedProcess[str]:
+        """Report success while printing nothing."""
+        return CompletedProcess(args=["git"], returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr(journals, "run", fake_run)
+
+    with pytest.raises(RuntimeError, match="printed no commit date"):
+        journals.resolve_now_month(None)
+
+
+def test_resolve_now_month_rejects_unparseable_date(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Git output that is not a date cannot name the current month."""
+
+    def fake_run(*args: object, **kwargs: object) -> CompletedProcess[str]:
+        """Report success while printing something that is not a date."""
+        return CompletedProcess(
+            args=["git"], returncode=0, stdout="tomorrow\n", stderr=""
         )
 
-    monkeypatch.setattr(journals, "_find_hledger", fake_find_hledger)
+    monkeypatch.setattr(journals, "run", fake_run)
 
-    with pytest.raises(FileNotFoundError):
-        await journals.run_hledger("somefile", "print")
+    with pytest.raises(RuntimeError, match="printed no commit date"):
+        journals.resolve_now_month(None)
 
 
 def test_format_journal_list_various() -> None:
@@ -265,74 +321,3 @@ def test_filter_journals_skips_invalid_parent_names() -> None:
 
     out = journals.filter_journals_between([Fake()], None, None)
     assert out == []
-
-
-@pytest.mark.anyio
-async def test_run_hledger_handles_process_exit(
-    monkeypatch: pytest.MonkeyPatch,
-    caplog: pytest.LogCaptureFixture,
-) -> None:
-    """Simulate subprocess success and failure for `run_hledger` using a fake process."""
-
-    class FakeRunProcessResult:
-        """Minimal object emulating anyio's run_process result."""
-
-        def __init__(self, out: bytes, err: bytes, rc: int) -> None:
-            """Initialize fake process result properties for stdout/stderr/returncode."""
-            self.stdout = out
-            self.stderr = err
-            self.returncode = rc
-
-    async def fake_run_process(*args: object, **kwargs: object) -> FakeRunProcessResult:
-        """Return a fake process result to simulate anyio subprocess execution."""
-        # return a process with zero returncode to exercise success path
-        return FakeRunProcessResult(b"ok\n", b"", 0)
-
-    monkeypatch.setattr(journals, "run_process", fake_run_process)
-
-    def fake_find_hledger() -> str:
-        """Return a sentinel path to simulate a discovered hledger executable."""
-        return "fake"
-
-    monkeypatch.setattr(journals, "_find_hledger", fake_find_hledger)
-
-    out, _err, _rc = await journals.run_hledger(
-        "somefile", "print", raise_on_error=True
-    )
-    assert "ok" in out
-
-    # Now simulate non-zero return code which should raise when raise_on_error=True
-    async def fake_run_process_bad(
-        *args: object, **kwargs: object
-    ) -> FakeRunProcessResult:
-        """Return a fake process result with non-zero returncode and stderr to exercise error logging."""
-        return FakeRunProcessResult(
-            b"586061c8-6f1a-4e6c-96fa-fc3521e833b0\n",
-            b"fa27ffae-770c-48b3-a232-ad63b23a9415\n",
-            2,
-        )
-
-    monkeypatch.setattr(journals, "run_process", fake_run_process_bad)
-
-    with caplog.at_level(logging.ERROR):
-        with pytest.raises(Exception):
-            await journals.run_hledger("somefile", "print", raise_on_error=True)
-        # stderr should be logged
-        assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in caplog.text
-        # stdout should also be included in the log
-        assert "586061c8-6f1a-4e6c-96fa-fc3521e833b0" in caplog.text
-
-    caplog.clear()
-    out, err, rc = await journals.run_hledger("somefile", "print", raise_on_error=False)
-    assert rc == 2
-    assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in err
-    # when not raising, the error should still have been logged
-    assert "fa27ffae-770c-48b3-a232-ad63b23a9415" in caplog.text
-
-    caplog.clear()
-    out, err, rc = await journals.run_hledger(
-        "somefile", "print", raise_on_error=False, log_on_error=False
-    )
-    assert rc == 2
-    # logging disabled: no records
-    assert caplog.text == ""

@@ -8,6 +8,8 @@ argument-hint: added=3 edited=2 (optional extras; see below)"
 
 **Never ask for confirmation or clarification. Always proceed automatically using best-effort defaults and available context.**
 
+**Argument text:** `${@:-}` is whatever the caller passed with the prompt. If it contains `commitNow=no`, produce the commit message only and do not commit; any other text is extra guidance to apply.
+
 ## Workflow
 
 1. **Read staged changes**
@@ -25,7 +27,7 @@ argument-hint: added=3 edited=2 (optional extras; see below)"
    - If multiple, join with comma (`,`).
 
 3. **Get transaction counts**
-   - The user must provide the number of transactions added and/or edited, either via input fields or as `added=N edited=M` in `${input:extra}`.
+   - The user must provide the number of transactions added and/or edited, as `added=N edited=M` in the argument text `${@:-}`.
    - If only added or only edited, omit the other part from the commit message.
    - If neither is provided, stop and report an error.
 
@@ -41,6 +43,7 @@ argument-hint: added=3 edited=2 (optional extras; see below)"
    - **No commit body.**
 
 5. **Create the commit**
+   - If the argument text contains `commitNow=no`, skip this step and only present the message.
    - Present the exact command to create the commit from stdin and print the new SHA. Use the correct heredoc/here-string syntax for the detected shell:
      - **PowerShell (Windows):**
 
@@ -75,13 +78,10 @@ argument-hint: added=3 edited=2 (optional extras; see below)"
 
 ## Inputs
 
-- `${input:added}` — number of transactions added (optional; can be in extra)
-- `${input:edited}` — number of transactions edited (optional; can be in extra)
-- `${input:extra}` — may contain `added=N edited=M` (parsed if present)
-- `${input:commitNow}` — `no` to skip committing; default is to commit
+- `${@:-}` — the caller's argument text: `added=N` and `edited=M` set the counts, `commitNow=no` produces the commit message only, and any other text is extra guidance to apply
 
 ---
 
 **Prompt:**
 
-Commit the currently staged changes using the strict ledger transaction commit format. Detect affected journal files from the staged file list (excluding `preludes/` and non-`.journal` files). Get the number of transactions added and/or edited from user input or `${input:extra}`. Then, generate a commit message in the required format and commit the staged changes with that message. Do not include a commit body or any extra lines.
+Commit the currently staged changes using the strict ledger transaction commit format. Detect affected journal files from the staged file list (excluding `preludes/` and non-`.journal` files). Get the number of transactions added and/or edited from the argument text `${@:-}`. Then, generate a commit message in the required format and commit the staged changes with that message. Do not include a commit body or any extra lines.

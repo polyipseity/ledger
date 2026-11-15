@@ -1,176 +1,102 @@
-<!-- markdownlint-disable MD013 MD036 -->
+# Personal ledger — agent instructions
 
-# Personal Ledger Project - Instructions
+**Never write confidential data into this repository.** Journals and docs name payees and accounts by UUID placeholder, with generic names and example amounts; the real names, account numbers, and institutions live only in the encrypted `private.yaml.gpg`. Do not decrypt or print it unless the owner explicitly authorizes it.
 
-**IMPORTANT: This documentation must not contain confidential information.** All examples should use non-confidential placeholders (UUIDs, generic names, example amounts) instead of real account numbers, personal names, locations, or actual financial data. Confidential mappings are stored in the encrypted `private.yaml.gpg` file only.
+**Ask when a value is ambiguous; never invent an amount, a date, a payee, an account, or a tag value.**
 
-## 🚩 Agent Workflow Reminders
+## Repository shape
 
-**Read relevant skill files before use.** When a user asks you to perform a skill, read its SKILL.md in full before doing any work.
+- `ledger/` — hledger journals, all reachable from `ledger/index.journal`. Transactions go in the monthly file `ledger/<year>/<year>-<month>/<name>.journal`, whose month is the transaction date. `self.journal` tracks liquid assets, `self.alternatives.journal` illiquid ones, and each stream includes its own prelude.
+- `preludes/` — the single source of account, commodity, payee, and tag definitions.
+- `scripts/` — Python utilities and `scripts/utils/`. Relative imports mean a module runs only as `-m scripts.<mod>` from the repository root.
+- `.agents/skills/` — task playbooks; read the matching `SKILL.md` in full before starting.
+- `.agents/instructions/` — rule files, loaded by the paths each one targets; indexed below.
+- `.github/workflows/`, `prek.toml` — CI and git hooks. `bun install` provisions Python dependencies, the managed hledger binary, and the hooks.
 
-**Use the Todo List Tool for multi-step tasks.** Plan steps, mark one step `in-progress`, complete it, then continue. Keep the todo list updated and concise.
+## Commands
 
-**Ask instead of guessing.** If anything is ambiguous, pause and request clarification rather than making assumptions.
+These names are the whole agent-facing surface, and every one runs from the repository root.
 
-**Commit only when asked.** Unless the user explicitly requests a commit, you may finish after validating and do not need to stage or push any changes. This preference is documented in relevant skill instructions.
+| command                    | use when                                                                                       |
+| -------------------------- | ---------------------------------------------------------------------------------------------- |
+| `bun run check`            | before every commit; the full gate (`check:journal`, `check:md`, `check:prettier`, `check:py`) |
+| `bun run format`           | after any edit, before `check` (`format:journal`, `format:md`, `format:prettier`, `format:py`) |
+| `bun run check:journal`    | journal edits only: strict hledger check, then a formatting check                              |
+| `bun run format:journal`   | journal edits only: strict check, then reflow                                                  |
+| `bun run check:md`         | markdown docs only                                                                             |
+| `bun run format:md`        | markdown docs only, with fixes                                                                 |
+| `bun run check:py`         | Python only: ruff lint, ruff format check, ty                                                  |
+| `bun run format:py`        | Python only: ruff fixes and format, then ty                                                    |
+| `bun run test`             | before pushing: pytest                                                                         |
 
-## Project Overview
+The boundary tool is `scripts/clopen.py`, and it holds two commands. `close` is the owner's decision: `uv run --locked -m scripts.clopen close <YYYY-MM>` runs when the owner runs it, or when the owner dispatches an agent with a named range (`ledger-migrator`, which never chooses its own range). `verify` is a read-only diagnostic any agent may run, ordinary entry work included: `uv run --locked -m scripts.clopen verify` reports the boundary chain and is never a gate and never a green signal. The chain is red today by design, so an agent that notices a boundary defect reports it and stops.
 
-Personal accounting system using **hledger** (plain text accounting) to track financial transactions organized by year/month.
+### Invocation law
 
-**Journal file path format:** All journal files are located under the `ledger/` directory, with the format `ledger/[year]/[year]-[month]/[name].journal` (e.g., `ledger/2024/2024-01/self.journal`).
+- `bun run <name>` from the repository root, always. It is the only invocation an agent uses, no other spelling of a command is a substitute, and a `bun run` name outside the table is not part of an agent workflow.
+- Python runs only as `-m scripts.<mod>` from the repository root. A check narrowed to particular files names them there by repository-relative path, `uv run --locked -m scripts.check ledger/<year>/<year>-<month>/self.journal`, because the bun check composes the checker and the formatter, so a file argument reaches the formatter while the checker still covers the whole ledger. The modules are imported relatively, so a run from another working directory reports `No module named 'scripts'`, and running a file by path instead of as a module fails with `attempted relative import with no known parent package`.
+- The shell and batch files beside each Python module are conveniences for humans without bun or uv. They change directory themselves, so agents never call them.
+- Hooks come from `prek` (`prek.toml`): a commit-msg hook lints the message, pre-commit hooks format and type-check, and pre-push runs `bun run test`.
 
-## Big-picture architecture 🔧
+## Skills
 
-- **Components**
-  - **Preludes** (`preludes/*.journal`): single source of truth for accounts, commodities, payees, and tag definitions.
-  - **Ledger journals** (`ledger/...`): hierarchical year/month journals. Monthly files contain transactions and include the prelude files.
-  - **Scripts** (`scripts/`): utilities for formatting, validation, migration, encryption/decryption, and bulk edits. Prefer `bun` wrappers; if none exist run Python scripts with `cwd=scripts/.`
-  - **Agent Skills** (`.agents/skills/*`): task-specific guidance (read the `SKILL.md` before performing a task).
-  - **CI & hooks** (`.github/workflows/*`, `prek.toml`): run formatters, checks, and tests on push and pre-push.
+Each row is a directory under `.agents/skills/`; read its `SKILL.md` in full, and treat its stop-and-ask list as binding rather than guessing. `ingest` routes to the twelve `ingest-*` aspects, one per class of transaction.
 
-- **Data flow**
-  - Transaction entry → monthly journal → local validation/formatting (`bun run format` / `bun run check`) → PR and CI checks → commit/push
-  - Monthly close and migration uses `hledger close --migrate` (run from repo root) and helper scripts in `scripts/` when needed.
+- `add-payee` — register a payee, or its confidential UUID, in the prelude in strict lexicographic order.
+- `fix-journals` — turn one failing journal check into the smallest edit that makes it pass.
+- `ingest` — settle what one piece of outside material becomes: the entries its claims match, the action each takes, and the run's report.
+- `ingest-attachments` — what a scan, photo, or PDF may be transcribed into, and the printed text alone.
+- `ingest-currency` — a conversion's equity pair, the printed rate, and the postings around them.
+- `ingest-food` — a receipt's printed itemization, modifiers, fees, vouchers, and meal timing.
+- `ingest-import` — locating an outside source, parsing it mechanically, and proving a second run adds nothing.
+- `ingest-lending` — loans, repayments, and shared bills, including the three friend-sharing shapes.
+- `ingest-octopus` — card rows: the mandatory payee mapping, the reload pair, and updating an entry without rewriting it.
+- `ingest-payee` — resolving a printed name to a declared payee, its UUID mask, and the identifiers ahead of it.
+- `ingest-platform` — a platform sale's gross, fee, and net, and the payout that empties the balance.
+- `ingest-remove` — removing a wrong entry: its evidence, the balances that depend on it, and the report that restores it.
+- `ingest-statement` — matching a statement row to an entry that exists: the match order and the rows that stop the batch.
+- `ingest-tags` — the comment keys an entry requires, the order they keep, and the prelude line that makes one legal.
+- `ingest-transport` — fares, tolls, and transit reward accruals: the mode account and the cases that carry no duration.
+- `migrate` — close a month and open the next, and repair a boundary chain that is already broken.
 
-- **Key constraints & common pitfalls**
-  - **Always** use `bun run <script>` when a wrapper exists. If not, run Python scripts with the working directory set to `scripts/` (tools that accept `cwd` should use that parameter).
-  - **Do not** decrypt or expose `private.yaml` contents unless explicitly authorized. Encrypted secrets live in `private.yaml.gpg`.
-  - Code conventions matter: use `os.PathLike`, timezone-aware UTC datetimes, complete type annotations, `__all__` exports, and Ruff for formatting (see Agent Code Conventions below).
-  - Running scripts from the wrong directory is the most common agent error — double-check `cwd` every time.
+## Instructions
 
-## Agent Quick Start ✅
+Each row is `.agents/instructions/<name>.instructions.md`. `.agents/reference/` holds the account taxonomy as reference material rather than rules.
 
-1. **Read the skill**: Open the relevant `.agents/skills/<task>/SKILL.md` and follow it strictly. These files are the canonical instruction for task scope and non-guessing rules.
-2. **Install deps**: Run `bun install` once; the `prepare` script runs `uv sync` to provision Python dev extras.
-3. **Format & validate locally**: `bun run format && bun run check` (fix issues before committing).
-4. **Run scripts properly**: Prefer `bun run <script>`; if not available, run `uv run -m scripts.<cmd>` with `cwd=scripts/.`
-5. **Make small, tested changes**: Add or update tests under `tests/` that mirror the source layout for any code changes.
-   - **If you edit instruction files or SKILLs**, add or update tests that cover the new behaviour, and update `AGENTS.md`/the relevant `SKILL.md` or examples as needed.
-6. **Commit rules**: Follow `.agents/instructions/git-commits.instructions.md`. For journal changes, use `ledger(<list>): add N / edit M transaction(s)` (single-line header, no body). Prefer wrapping commit message body lines to **72 characters** or fewer for readability and buffer; note commitlint enforces a hard **100-character** maximum.
-7. **Use the Todo List Tool** for multi-step work and ask clarification questions rather than guessing when ambiguous
+- `alternatives-journal` — when a holding belongs in the illiquid stream instead of the main one.
+- `architecture` — journal hierarchy, includes, and file organization.
+- `dependencies` — the four tools an agent needs, and what to do when one is missing.
+- `developer-workflows` — script internals, tests, and hook invocation shapes.
+- `editing-guidelines` — ordering, the smallest safe edit, assertions, and the journal anti-patterns.
+- `git-commits` — commit types, message format, and the ledger transaction header.
+- `security` — confidential data, encryption, and UUID privacy.
+- `skill-authoring` — the budgets, the section skeleton, and the one-rule-one-file boundary every skill obeys.
+- `transaction-format` — hledger syntax, status markers, alignment, assertions, and posting order.
 
-If anything is unclear about these steps, ask a short clarifying question before proceeding.
+## Code conventions
 
-## Documentation Structure
+- Path parameters take `os.PathLike` and are annotated `PathLike[str]`; tests annotate `tmp_path` the same way. Convert a path to a string with `os.fspath`, never `str`.
+- Datetimes are timezone-aware: `datetime.now(timezone.utc)`, never `utcnow()`.
+- Imports stay at module top level; Ruff's `import-outside-top-level` rule rejects inline ones.
+- Every module under `scripts/` and every test module declares `__all__`; tests use `()`.
+- Generic types are built in (`dict`, `list`, `tuple`) with ABCs from `collections.abc`, unions as `X | Y`, and `Self` for instance-returning methods.
+- Modules, classes, functions, and tests carry docstrings and complete annotations. `ty` runs with every rule as an error, so `Any` and `Unknown` need an inline justification.
+- Ruff is the only Python formatter and import sorter; `black` and `isort` stay out of the toolchain.
+- No legacy cache compatibility branches; a format upgrade replaces the old one.
+- Async tests are `async def` with `@pytest.mark.anyio`; no event-loop runner such as `asyncio.run`.
+- A script exposes `main(argv)`, a `__main__()` wrapper, and the `if __name__ == "__main__"` guard, with `runnify` for async entry points.
+- Exit codes: `0` success, `1` error, `2` usage, `3` file or IO failure.
+- Tests mirror the source tree, one file per source file, under `tests/`; new behaviour gets a test in the same change.
 
-**Core instructions** (`.agents/instructions/`):
+## Journal invariants
 
-**Learning & Continuous Improvement:**
+- Syntax, status markers (`!` pending, `*` cleared), and posting order live in `transaction-format`, the comment keys in `ingest-tags`, and the editing rules in `editing-guidelines`.
+- Every month opens with an `opening balances` transaction and closes with a `closing balances` one. The closing zeroes and asserts every account whose hledger type is Asset, Liability, or Cash — expenses and revenues never take a posting in it — and it never requires an `equity:opening/closing balances` line; the next month's opening restores exactly those balances, so the two months must agree. The `migrate` skill holds the invariant and its repair.
+- Closing and opening balances are generated by the boundary tool (`scripts/clopen.py`), never hand-written or copied from another tool's output. The `migrate` skill holds the procedure.
 
-- [continuous-learning.instructions.md](.agents/instructions/continuous-learning.instructions.md) – **START HERE for lessons, anti-patterns, and best practices.** Consolidated guide to all discoveries, recurring issues, and proven solutions across skills and workflows. Replaces scattered `lessons.md` files with unified reference.
+## Commit policy
 
-**Foundation & Reference:**
-
-- [agent-quickstart.instructions.md](.agents/instructions/agent-quickstart.instructions.md) – A one-page checklist for AI agents with quick commands, gotchas, and example workflows to get productive immediately.
-- [agent-glossary.instructions.md](.agents/instructions/agent-glossary.instructions.md) – Short, canonical definitions of common agent terms and quick reminders used by skills and instructions.
-- [transaction-format.instructions.md](.agents/instructions/transaction-format.instructions.md) – Comprehensive guide to hledger transaction syntax, required and optional tags, formatting conventions, and pattern usage for accurate and readable journal entries.
-- [account-hierarchy.instructions.md](.agents/instructions/account-hierarchy.instructions.md) – Complete documentation of all account types (over 50), including their purposes, relationships, and meanings within the asset, liability, equity, expense, and revenue categories.
-- [editing-guidelines.instructions.md](.agents/instructions/editing-guidelines.instructions.md) – Best practices for editing, formatting, and maintaining journal files, with chronological ordering, payee/account registration, and structure guidelines.
-
-**System & Development:**
-
-- [architecture.instructions.md](.agents/instructions/architecture.instructions.md) – Details the ledger file hierarchy, include patterns, and organizational structure for all journal files, ensuring consistency and discoverability across the system.
-- [developer-workflows.instructions.md](.agents/instructions/developer-workflows.instructions.md) – Covers script execution (working directory rules), Python usage patterns, testing procedures, and automation best practices for maintaining and extending the ledger system.
-- [dependencies.instructions.md](.agents/instructions/dependencies.instructions.md) – Lists all required software and tools (hledger, Python, GPG), with installation and troubleshooting guidance for a reliable accounting environment.
-
-**Specialized Topics:**
-
-- [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) – Step-by-step guides for frequently performed ledger operations, including transaction entry, monthly migration, and script usage, to streamline routine tasks.
-- [security.instructions.md](.agents/instructions/security.instructions.md) – Instructions for encryption, UUID privacy, and secure handling of confidential data, ensuring privacy and compliance throughout the ledger.
-- [alternatives-journal.instructions.md](.agents/instructions/alternatives-journal.instructions.md) – Explains the distinction between liquid and illiquid asset tracking, and how to manage alternative journals for crypto and non-cash assets.
-- [git-commits.instructions.md](.agents/instructions/git-commits.instructions.md) – Explicit conventional commit rules and agent commit conventions for all repository contributions, including ledger transaction commit requirements.
-
-Agent Skills (`.agents/skills/`):
-
-- [add-transactions](.agents/skills/add-transactions/SKILL.md) – Transcribe and enter transactions from raw data sources (including general automation of structured transaction imports, e.g. Octopus eDDA top-ups from email) with correct status, tags, accounts, and deduplication. For multi-entry requests (2+ transactions), uses a separate subagent per transaction to enable parallelization and focused scope.
-- [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/SKILL.md) – Add or update Octopus card transactions from app history, including transport and reloads, with proper mapping.
-- [match-octopus-statement-transactions](.agents/skills/match-octopus-statement-transactions/SKILL.md) – Match Octopus Wallet statement rows to journal transactions and update transaction datetimes for accuracy.
-- [monthly-migration](.agents/skills/monthly-migration/SKILL.md) – Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
-- [edit-journals](.agents/skills/edit-journals/SKILL.md) – Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
-- [validate-journals](.agents/skills/validate-journals/SKILL.md) – Validate and format hledger journals before commit using check/format scripts for consistency.
-
-## Agent Code Conventions
-
-Please follow these coding conventions in agent edits and new scripts. They are enforced to keep the codebase consistent and easy to review:
-
-- Use `os.PathLike` for file/script identifiers and `PathLike[str]` in tests:
-  - Public APIs that accept filesystem paths (for example, `JournalRunContext`) **must** accept an `os.PathLike` (for example, a `pathlib.Path`) — do not accept plain `str` paths. Call sites should pass `Path(__file__)` or another `os.PathLike` instance and annotate parameters as `PathLike[str]` where appropriate.
-  - Tests: always prefer `tmp_path: PathLike[str]` in `pytest` test signatures (not `Any` or untyped). When a `pathlib.Path` instance is required in a test body do `p = Path(tmp_path)` (or `Path(os.fspath(tmp_path))`)—this keeps fixtures type-stable and explicit for static analysis.
-  - When a function needs to perform asynchronous file operations it may coerce the provided `PathLike` to an `anyio.Path` internally (e.g., `import anyio; path = anyio.Path(path_like)`) so runtime async helpers work consistently.
-  - When converting any path-like or path-object to a `str` for downstream APIs or subprocess commands, **always** use `os.fspath(path_like)` (or `from os import fspath; fspath(path_like)`) rather than `str(path_like)`. `os.fspath` is the canonical, protocol-aware conversion and ensures compatibility with `pathlib.Path` and other `__fspath__` implementers.
-  - Document accepted path types in the function docstring and use `PathLike[str]` in type hints for public parameters. The script identifier must be a readable file — helpers that derive cache keys will fail-fast with `FileNotFoundError` if the path cannot be opened for reading.
-- Use timezone-aware UTC datetimes:
-  - Avoid `datetime.utcnow()`; instead use `datetime.now(timezone.utc)` and store or format ISO timestamps from timezone-aware objects.
-- Imports must be at module top-level (no inline/runtime imports):
-  - Both `import module` and `from module import name` forms are allowed at module top-level. Prefer `from module import name` at module top-level where it makes uses explicit and easier to statically analyse (for example, `from hashlib import sha256`, `from json import loads, dumps`).
-  - Do not use inline or runtime imports (for example inside functions or exception handlers). This policy is enforced by Ruff's `import-outside-top-level` rule (PLC0415). - Type hints & PEP 585: Use modern built-in generic types (PEP 585) and `collections.abc` *for abstract base classes* in all new code and agent guidance. Use `dict`, `list`, `set`, `tuple`, `frozenset` etc. instead of `typing.Dict`, `typing.List`, etc. and import ABCs from `collections.abc` (for example, `collections.abc.Awaitable`, `collections.abc.Iterable`, `collections.abc.Mapping`, `collections.abc.Sequence`, `collections.abc.Callable`) — do **not** import these ABC names from `typing`. When appropriate, use the PEP 604 union operator (`X | Y`) for optionals/union types instead of `typing.Optional`. Keep `Self` from `typing` for instance-returning methods (for example: `def clone(self) -> Self:`); when supporting Python versions older than 3.11, use `typing_extensions.Self`.
-- Docstrings & complete type annotations: All Python modules, classes, functions, and tests MUST include clear module-level docstrings and complete type annotations for public APIs and test functions (including arguments and return types). Tests SHOULD also add type annotations for local variables and important intermediate values where it improves clarity or static checking. Prefer PEP 585 / PEP 604 styles and use `collections.abc` where appropriate. Code must be written so that **ty reports no diagnostics under strict settings (`[tool.ty.rules] all = "error"`)**. Avoid using `Any` or `Unknown` in type annotations; prefer explicit types, Protocols, or TypedDicts. Exception: `Any` or `Unknown` may be used only when there is a very strong, documented justification (for example, interfacing with untyped third-party libraries or representing truly dynamic/opaque data structures). When such a use is necessary, add an inline comment explaining the justification and include a `# TODO` to narrow or remove the `Any` later; ensure these cases are reviewed during code review.
-- No legacy cache compatibility in new code paths:
-  - Where cache formats or APIs were upgraded, new code should not re-introduce legacy compatibility branches. Keep cache formats structured and document upgrades.
-- Be explicit with public exports:
-  - Keep `__all__` tuples up-to-date for modules under `scripts/`.
-- Async testing: When writing tests for asynchronous code, prefer `async def` test functions decorated with `@pytest.mark.anyio` and use `await` to run coroutines directly. Do **not** use event-loop runners such as `asyncio.run`, `asyncio.get_event_loop().run_until_complete`, `anyio.run`, or similar — they are brittle when used inside pytest and may conflict with pytest-asyncio's event loop fixtures.
-
-These conventions are lightweight but help keep agent-generated edits consistent and easy to review.
-
-## Key Concepts
-
-**Status markers**: `!` = pending (awaiting confirmation), `*` = cleared (verified), no marker = normal
-
-**Journal types**: `self.journal` (liquid assets), `self.alternatives.journal` (illiquid/crypto)
-
-**Journal file naming reminder:** Always use the full path `ledger/[year]/[year]-[month]/[name].journal` when referring to monthly journals, not just `[year]/[year]-[month]/[name].journal`.
-
-**Script commands: Always use bun script wrappers if available**
-
-- For all operations, prefer `bun run <script>` (e.g., `bun run check`, `bun run format`, `bun run hledger:check`, `bun run hledger:format`, etc.) from the repository root. This ensures the correct environment, dependencies, and working directory are set automatically.
-- Only use direct Python invocations (e.g., `uv run -m scripts.check`) or script wrappers in `scripts/` (e.g., `./check`, `check.bat`) if no bun script is available for the required operation. When using these, always set the working directory to `scripts/` using the tool's `cwd` parameter.
-- **Never run scripts from the wrong directory.** Running from the wrong location will cause include errors, missing file errors, or incorrect results.
-- For `hledger close --migrate`, run from the repository root as well.
-
-**Formatting/tooling note:** We use **Ruff** exclusively for Python formatting and import sorting (it covers Black and isort features). **Do not** add or rely on `black` or `isort` in CI, scripts, or dev-dependencies; prefer `uv run --locked ruff format` and `uv run --locked ruff check --fix` (or the equivalent bun script wrappers).
-
-**Critical:** Always use the bun script wrapper if it exists. Only fall back to direct invocation or script wrappers if no bun script is available. Always double-check the working directory before running any script command.
-
-**Module exports:** All Python modules in `scripts/` and all test modules/files MUST define a module-level `__all__` tuple at the beginning of the module (immediately after the module docstring and imports) to explicitly control the module's public exports. For test files (for example, files under `tests/` and files named `test_*.py`), default to an empty tuple `()` — tests should not export public symbols. If a module has no public exports, use an empty tuple `()`. Keep `__all__` tuples up-to-date and place them at the top-level of the file; do not use underscore-prefixed aliases for imported names to hide them (for example, `ArgumentParser as _ArgParser`). Instead import names normally and use `__all__` to control what the module exports.
-
-**Final Reminder:**
-
-**Agents must always check and set the working directory to `scripts/` for all script commands and wrappers.** This is the most common source of agent errors. Never assume the current directory is correct—always set it explicitly.
-
-**Use `uv` for Python dependency management and installs.** Prefer `uv sync` for project-based installs and commit `uv.lock` for reproducible installs.
-
-Note: `bun install` triggers the `prepare` script which runs `uv sync` to install development extras declared in `pyproject.toml` using the new PEP 722 dependency group syntax and the project lockfile `uv.lock`. In CI we run `bun install --frozen-lockfile --ignore-scripts && uv sync --locked --all-extras --dev` in a single step to install Node and Python dependencies deterministically. `requirements.txt` has been removed — `pyproject.toml` is the canonical source of dependency metadata. Because `pyproject.toml` declares no installable packages, this only installs extras and will not add project packages to the environment (the install is project-scoped and respects `uv.lock`).
-
-## Quick Start
-
-Skills:
-
-- [add-payee](.agents/skills/add-payee/): Add or update payee information in the ledger, including payee aliases and mappings.
-- [add-transactions](.agents/skills/add-transactions/): Transcribe transactions from raw data (receipts, statements, OCR, and any structured machine-readable source such as Octopus eDDA top-up emails) into hledger journal format with correct status, tags, accounts, and deduplication. For multi-entry requests (2+ transactions), delegates each entry to a separate subagent for parallelizable processing.
-- [upsert-octopus-transactions](.agents/skills/upsert-octopus-transactions/): Upsert (add or update) Octopus card transactions from app history, including transport and reloads, and update durations.
-- [monthly-migration](.agents/skills/monthly-migration/): Perform monthly closing and migration using hledger --migrate, ensuring correct opening balances and assertions.
-- [edit-journals](.agents/skills/edit-journals/): Edit hledger journal files following best practices for structure, includes, assertions, and formatting.
-- [validate-journals](.agents/skills/validate-journals/): Validate and format hledger journals before commit using check/format scripts.
-
-Instructions:
-
-- Security: [security.instructions.md](.agents/instructions/security.instructions.md) — Guidance for handling confidential data, encryption, and UUID privacy.
-- prek hooks: [common-workflows.instructions.md](.agents/instructions/common-workflows.instructions.md) — Step-by-step local pre-commit checklist and common ledger workflows (hooks are managed by `prek.toml`; run `bun install` to register hooks via the `prepare` script).
-
-## VS Code Setup
-
-**Chat configuration**: Enable `chat.useAgentsMdFile` in settings. Leave `chat.useNestedAgentsMdFiles` disabled (single root AGENTS.md). Use "Chat: Configure Instructions" to verify active files.
-
-**Markdown formatting**: Use `.editorconfig` (UTF-8, 2-space indent) and `.markdownlint.jsonc`. Markdown linting covers multiple extensions (for example: `.md`, `.mdx`, `.mdown`, `.rmd`) via the CLI's globs. Format via VS Code extension or CLI (`bun run markdownlint:fix`). Always format before commit.
-
-**Agent commits**: Agents and automation (including bots and assistants) MUST follow the repository's Git commit conventions described in `.agents/instructions/git-commits.instructions.md`. **Commit body lines MUST be ≤100 characters to pass commitlint (commitlint will block commits over this limit). Agents SHOULD prefer wrapping to 72 characters or fewer for readability and buffer; if a commit is rejected, agents must rewrap and retry until commitlint passes.** Before making commits, agents must run the repository formatting and validation steps using the bun script wrappers (e.g., `bun run format`, `bun run check`) and use Conventional Commits for commit headers. Additionally, run the test suite locally with `bun run test` before pushing — the `prek` `pre-push` hook runs `bun run test` and will block pushes on test failures. When modifying production code (for example: Python modules under `scripts/`, CLI scripts, instruction files, or any code that affects runtime behaviour), agents **MUST** add or update tests that cover the changes. If a change affects existing behaviour, update existing tests accordingly rather than removing coverage silently. Test files should follow the convention: one test file per source file, mirroring the source directory structure under `tests/`. Only split tests in very rare cases when a single test file would otherwise be excessively long.
-
-**Todo List Tool Reminder:**
-
-- Before starting any multi-step or complex change, use the todo list tool to break down the work into actionable steps.
-- Mark each step as in-progress and completed as you proceed.
-- Update the todo list after each change to ensure nothing is forgotten.
-
-When an agent has a motivation or rationale for a non-ledger change, include that rationale in the commit body. Do NOT include bodies for `ledger(...)` transaction commits — those must remain a single-line header to stay machine-parseable.
+- Conventional Commits; `.agents/instructions/git-commits.instructions.md` is the rule file, and the commit-msg hook enforces it.
+- A commit that changes transactions is a single line, `ledger(<journals>): add N / edit M transaction(s)`, with no body.
+- Run `bun run format`, then `bun run check` before committing; run `bun run test` before pushing, and the pre-push hook runs it too.
+- Commit only when the owner asks; otherwise stop after validating.
